@@ -21239,7 +21239,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* Dictionary_2_System_Collection
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 79341
+// Method Definition Index: 79342
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR DynamicArrayPool_1_t829DE81173CAED07B100B59827EA57DE55F865A5* DynamicArrayPool_1_get_Shared_m54DE079CD77DC6469CFBFDAEBC3F406118FCC691_gshared (const RuntimeMethod* method) 
 {
 	{
@@ -21249,7 +21249,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR DynamicArrayPool_1_t829DE81173CAED07B100B5982
 		return L_0;
 	}
 }
-// Method Definition Index: 79342
+// Method Definition Index: 79343
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DynamicArrayPool_1_set_Shared_m3637FF7D840E1CEA5B8745430692FD5A5D15966F_gshared (DynamicArrayPool_1_t829DE81173CAED07B100B59827EA57DE55F865A5* ___0_value, const RuntimeMethod* method) 
 {
 	{
@@ -21261,7 +21261,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DynamicArrayPool_1_set_Shared_m3637FF7D8
 		return;
 	}
 }
-// Method Definition Index: 79343
+// Method Definition Index: 79344
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DynamicArrayPool_1__ctor_m5F3DC7DFA6AEEEE9FC137FBA69C6D9A025896EB7_gshared (DynamicArrayPool_1_t829DE81173CAED07B100B59827EA57DE55F865A5* __this, int32_t ___0_startingLength, const RuntimeMethod* method) 
 {
 	{
@@ -21280,7 +21280,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DynamicArrayPool_1__ctor_m5F3DC7DFA6AEEE
 		return;
 	}
 }
-// Method Definition Index: 79344
+// Method Definition Index: 79345
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* DynamicArrayPool_1_Rent_m72B8863888F25B101BDC6B11F16082571B00D6A7_gshared (DynamicArrayPool_1_t829DE81173CAED07B100B59827EA57DE55F865A5* __this, const RuntimeMethod* method) 
 {
 	{
@@ -21294,7 +21294,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A8261
 		return L_2;
 	}
 }
-// Method Definition Index: 79345
+// Method Definition Index: 79346
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DynamicArrayPool_1_Return_m6954B10FCDFEF921D8717953ADAFA9F761963A36_gshared (DynamicArrayPool_1_t829DE81173CAED07B100B59827EA57DE55F865A5* __this, ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* ___0_array, const RuntimeMethod* method) 
 {
 	{
@@ -21307,7 +21307,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DynamicArrayPool_1_Return_m6954B10FCDFEF
 		return;
 	}
 }
-// Method Definition Index: 79346
+// Method Definition Index: 79347
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DynamicArrayPool_1_EnsureCapacity_m92FF32F0B975925701D57A1480597C09113C2E7F_gshared (DynamicArrayPool_1_t829DE81173CAED07B100B59827EA57DE55F865A5* __this, ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031** ___0_buffer, int32_t ___1_offset, int32_t ___2_appendLength, const RuntimeMethod* method) 
 {
 	int32_t V_0 = 0;
@@ -21446,7 +21446,7 @@ IL_007c:
 		return;
 	}
 }
-// Method Definition Index: 79347
+// Method Definition Index: 79348
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DynamicArrayPool_1__cctor_m6191E1ED0D119C166A269AB8E94D7DCA46003732_gshared (const RuntimeMethod* method) 
 {
 	{
@@ -21466,7 +21466,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DynamicArrayPool_1__cctor_m6191E1ED0D119
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 79341
+// Method Definition Index: 79342
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR DynamicArrayPool_1_tD2F8EA2BD738D568823712EF27ADD1FAE17AF425* DynamicArrayPool_1_get_Shared_m605802F483CD7C54CBA2E6DC41B95F861774029D_gshared (const RuntimeMethod* method) 
 {
 	{
@@ -21476,7 +21476,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR DynamicArrayPool_1_tD2F8EA2BD738D568823712EF2
 		return L_0;
 	}
 }
-// Method Definition Index: 79342
+// Method Definition Index: 79343
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DynamicArrayPool_1_set_Shared_mB69EDC5093C9E3A3670C484D2F9FC51B7D78F6F1_gshared (DynamicArrayPool_1_tD2F8EA2BD738D568823712EF27ADD1FAE17AF425* ___0_value, const RuntimeMethod* method) 
 {
 	{
@@ -21488,7 +21488,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DynamicArrayPool_1_set_Shared_mB69EDC509
 		return;
 	}
 }
-// Method Definition Index: 79343
+// Method Definition Index: 79344
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DynamicArrayPool_1__ctor_mE3CB004B2E51699CFD896D91231ABD85DD12BBBC_gshared (DynamicArrayPool_1_tD2F8EA2BD738D568823712EF27ADD1FAE17AF425* __this, int32_t ___0_startingLength, const RuntimeMethod* method) 
 {
 	{
@@ -21507,7 +21507,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DynamicArrayPool_1__ctor_mE3CB004B2E5169
 		return;
 	}
 }
-// Method Definition Index: 79344
+// Method Definition Index: 79345
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR __Il2CppFullySharedGenericTypeU5BU5D_tCAB6D060972DD49223A834B7EEFEB9FE2D003BEC* DynamicArrayPool_1_Rent_mC40FF25E339D672266963B5382368340F2C7D488_gshared (DynamicArrayPool_1_tD2F8EA2BD738D568823712EF27ADD1FAE17AF425* __this, const RuntimeMethod* method) 
 {
 	{
@@ -21521,7 +21521,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR __Il2CppFullySharedGenericTypeU5BU5D_tCAB6D06
 		return L_2;
 	}
 }
-// Method Definition Index: 79345
+// Method Definition Index: 79346
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DynamicArrayPool_1_Return_m01E1636B446F1CB81CFB18141E5B22C02DDECE3C_gshared (DynamicArrayPool_1_tD2F8EA2BD738D568823712EF27ADD1FAE17AF425* __this, __Il2CppFullySharedGenericTypeU5BU5D_tCAB6D060972DD49223A834B7EEFEB9FE2D003BEC* ___0_array, const RuntimeMethod* method) 
 {
 	{
@@ -21534,7 +21534,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DynamicArrayPool_1_Return_m01E1636B446F1
 		return;
 	}
 }
-// Method Definition Index: 79346
+// Method Definition Index: 79347
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DynamicArrayPool_1_EnsureCapacity_mCE825B4CC9D293C2E0736351625E10A48B85AE33_gshared (DynamicArrayPool_1_tD2F8EA2BD738D568823712EF27ADD1FAE17AF425* __this, __Il2CppFullySharedGenericTypeU5BU5D_tCAB6D060972DD49223A834B7EEFEB9FE2D003BEC** ___0_buffer, int32_t ___1_offset, int32_t ___2_appendLength, const RuntimeMethod* method) 
 {
 	int32_t V_0 = 0;
@@ -21673,7 +21673,7 @@ IL_007c:
 		return;
 	}
 }
-// Method Definition Index: 79347
+// Method Definition Index: 79348
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DynamicArrayPool_1__cctor_m3977C628E49AAD0DDC6FE2DE5F23A735D97A44A4_gshared (const RuntimeMethod* method) 
 {
 	{

@@ -28360,7 +28360,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DynamicArray_1_BumpVersion_m25D680123AB9
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 78788
+// Method Definition Index: 78789
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DynamicFormatter_1__ctor_m2FA2F24AB436FE0AC424A71A35A2E09048D698CC_gshared (DynamicFormatter_1_tA92EA5E049FB0F2E190CD623F6731DE83E01DBC3* __this, const RuntimeMethod* method) 
 {
 	{
@@ -28370,7 +28370,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DynamicFormatter_1__ctor_m2FA2F24AB436FE
 		return;
 	}
 }
-// Method Definition Index: 78789
+// Method Definition Index: 78790
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool DynamicFormatter_1_Deserialize_m13EFD1270E3C7E5F9380D9864F7DA2208841F643_gshared (DynamicFormatter_1_tA92EA5E049FB0F2E190CD623F6731DE83E01DBC3* __this, JsonReader_tC309CFE30F38792D0E9F8D388FC2519EC4C23609* ___0_reader, RuntimeObject* ___1_formatterResolver, const RuntimeMethod* method) 
 {
 	{
@@ -28380,7 +28380,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool DynamicFormatter_1_Deserialize_m13EFD127
 		IL2CPP_RAISE_MANAGED_EXCEPTION(L_0, method);
 	}
 }
-// Method Definition Index: 78790
+// Method Definition Index: 78791
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DynamicFormatter_1_Serialize_m24B70A3289F1D9EA51180DD8D7CB3FE9FA957078_gshared (DynamicFormatter_1_tA92EA5E049FB0F2E190CD623F6731DE83E01DBC3* __this, JsonWriter_t76E122B737DD79975E835A95D9F85B09D0792EA2* ___0_writer, bool ___1_value, RuntimeObject* ___2_formatterResolver, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -28411,7 +28411,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DynamicFormatter_1_Serialize_m24B70A3289
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 78788
+// Method Definition Index: 78789
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DynamicFormatter_1__ctor_m0553F9C463FEDD68E7853DB39A46DCAEB68817E6_gshared (DynamicFormatter_1_tF09ADCF5EFBEA908DE5A4D1CB4E4A3E6C79674B8* __this, const RuntimeMethod* method) 
 {
 	{
@@ -28421,7 +28421,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DynamicFormatter_1__ctor_m0553F9C463FEDD
 		return;
 	}
 }
-// Method Definition Index: 78789
+// Method Definition Index: 78790
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR uint8_t DynamicFormatter_1_Deserialize_m1C464352BED24BB6D5540F27CEC122AC7523035C_gshared (DynamicFormatter_1_tF09ADCF5EFBEA908DE5A4D1CB4E4A3E6C79674B8* __this, JsonReader_tC309CFE30F38792D0E9F8D388FC2519EC4C23609* ___0_reader, RuntimeObject* ___1_formatterResolver, const RuntimeMethod* method) 
 {
 	{
@@ -28431,7 +28431,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR uint8_t DynamicFormatter_1_Deserialize_m1C464
 		IL2CPP_RAISE_MANAGED_EXCEPTION(L_0, method);
 	}
 }
-// Method Definition Index: 78790
+// Method Definition Index: 78791
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DynamicFormatter_1_Serialize_m63A477426B04AA88131F609924EEF085DE66D1CF_gshared (DynamicFormatter_1_tF09ADCF5EFBEA908DE5A4D1CB4E4A3E6C79674B8* __this, JsonWriter_t76E122B737DD79975E835A95D9F85B09D0792EA2* ___0_writer, uint8_t ___1_value, RuntimeObject* ___2_formatterResolver, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -28462,7 +28462,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DynamicFormatter_1_Serialize_m63A477426B
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 78788
+// Method Definition Index: 78789
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DynamicFormatter_1__ctor_m45C82B2589045B62759CC9EAB271E0BCE20558F3_gshared (DynamicFormatter_1_tA32D5D8D1234FB01F41A11EE008F94952A82B1A5* __this, const RuntimeMethod* method) 
 {
 	{
@@ -28472,7 +28472,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DynamicFormatter_1__ctor_m45C82B2589045B
 		return;
 	}
 }
-// Method Definition Index: 78789
+// Method Definition Index: 78790
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Il2CppChar DynamicFormatter_1_Deserialize_m44C31A0F1F668E584AB7179BF69AF9B67CB5E1EC_gshared (DynamicFormatter_1_tA32D5D8D1234FB01F41A11EE008F94952A82B1A5* __this, JsonReader_tC309CFE30F38792D0E9F8D388FC2519EC4C23609* ___0_reader, RuntimeObject* ___1_formatterResolver, const RuntimeMethod* method) 
 {
 	{
@@ -28482,7 +28482,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Il2CppChar DynamicFormatter_1_Deserialize_m44
 		IL2CPP_RAISE_MANAGED_EXCEPTION(L_0, method);
 	}
 }
-// Method Definition Index: 78790
+// Method Definition Index: 78791
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DynamicFormatter_1_Serialize_mCF16DADFB860078F68B6DDD085E85EA088A21E0F_gshared (DynamicFormatter_1_tA32D5D8D1234FB01F41A11EE008F94952A82B1A5* __this, JsonWriter_t76E122B737DD79975E835A95D9F85B09D0792EA2* ___0_writer, Il2CppChar ___1_value, RuntimeObject* ___2_formatterResolver, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -28513,7 +28513,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DynamicFormatter_1_Serialize_mCF16DADFB8
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 78788
+// Method Definition Index: 78789
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DynamicFormatter_1__ctor_mE6CDA938D7ED8B8B9E806E1BAA8C4C9606CC9289_gshared (DynamicFormatter_1_tA91D750933C1D6049E6E37C5DC7F2EBF560BC4F8* __this, const RuntimeMethod* method) 
 {
 	{
@@ -28523,7 +28523,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DynamicFormatter_1__ctor_mE6CDA938D7ED8B
 		return;
 	}
 }
-// Method Definition Index: 78789
+// Method Definition Index: 78790
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR DateTime_t66193957C73913903DDAD89FEDC46139BCA5802D DynamicFormatter_1_Deserialize_mF0E1E2740065EFF7321AE52E3B41E23F7C1E3EAC_gshared (DynamicFormatter_1_tA91D750933C1D6049E6E37C5DC7F2EBF560BC4F8* __this, JsonReader_tC309CFE30F38792D0E9F8D388FC2519EC4C23609* ___0_reader, RuntimeObject* ___1_formatterResolver, const RuntimeMethod* method) 
 {
 	{
@@ -28533,7 +28533,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR DateTime_t66193957C73913903DDAD89FEDC46139BCA
 		IL2CPP_RAISE_MANAGED_EXCEPTION(L_0, method);
 	}
 }
-// Method Definition Index: 78790
+// Method Definition Index: 78791
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DynamicFormatter_1_Serialize_m7D9F7153F097584C9CBDFE265AADA8130E73F430_gshared (DynamicFormatter_1_tA91D750933C1D6049E6E37C5DC7F2EBF560BC4F8* __this, JsonWriter_t76E122B737DD79975E835A95D9F85B09D0792EA2* ___0_writer, DateTime_t66193957C73913903DDAD89FEDC46139BCA5802D ___1_value, RuntimeObject* ___2_formatterResolver, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -28564,7 +28564,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DynamicFormatter_1_Serialize_m7D9F7153F0
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 78788
+// Method Definition Index: 78789
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DynamicFormatter_1__ctor_mFD26A058C79E14754F626D2E15AE2E55DB07863B_gshared (DynamicFormatter_1_tA77CE763FEAE9DFB0A8ECB7084352B20078EF5A3* __this, const RuntimeMethod* method) 
 {
 	{
@@ -28574,7 +28574,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DynamicFormatter_1__ctor_mFD26A058C79E14
 		return;
 	}
 }
-// Method Definition Index: 78789
+// Method Definition Index: 78790
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR double DynamicFormatter_1_Deserialize_m59676452811E87135BF2225A03130A79066563C3_gshared (DynamicFormatter_1_tA77CE763FEAE9DFB0A8ECB7084352B20078EF5A3* __this, JsonReader_tC309CFE30F38792D0E9F8D388FC2519EC4C23609* ___0_reader, RuntimeObject* ___1_formatterResolver, const RuntimeMethod* method) 
 {
 	{
@@ -28584,7 +28584,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR double DynamicFormatter_1_Deserialize_m596764
 		IL2CPP_RAISE_MANAGED_EXCEPTION(L_0, method);
 	}
 }
-// Method Definition Index: 78790
+// Method Definition Index: 78791
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DynamicFormatter_1_Serialize_m4C3CE47621DD2E2A540CE864DF8F60393A127B2F_gshared (DynamicFormatter_1_tA77CE763FEAE9DFB0A8ECB7084352B20078EF5A3* __this, JsonWriter_t76E122B737DD79975E835A95D9F85B09D0792EA2* ___0_writer, double ___1_value, RuntimeObject* ___2_formatterResolver, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -28615,7 +28615,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DynamicFormatter_1_Serialize_m4C3CE47621
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 78788
+// Method Definition Index: 78789
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DynamicFormatter_1__ctor_m618162B727CF3C9A473A28C5D0BF38A1F12433E7_gshared (DynamicFormatter_1_tFBC619378BA33E36D46BDAE8FF5BA15E6BC3A6EF* __this, const RuntimeMethod* method) 
 {
 	{
@@ -28625,7 +28625,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DynamicFormatter_1__ctor_m618162B727CF3C
 		return;
 	}
 }
-// Method Definition Index: 78789
+// Method Definition Index: 78790
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int16_t DynamicFormatter_1_Deserialize_m2018AC0B25F49C1D29D76F647802EE447469A3DD_gshared (DynamicFormatter_1_tFBC619378BA33E36D46BDAE8FF5BA15E6BC3A6EF* __this, JsonReader_tC309CFE30F38792D0E9F8D388FC2519EC4C23609* ___0_reader, RuntimeObject* ___1_formatterResolver, const RuntimeMethod* method) 
 {
 	{
@@ -28635,7 +28635,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int16_t DynamicFormatter_1_Deserialize_m2018A
 		IL2CPP_RAISE_MANAGED_EXCEPTION(L_0, method);
 	}
 }
-// Method Definition Index: 78790
+// Method Definition Index: 78791
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DynamicFormatter_1_Serialize_m3F10B3650775178EE14C91DF1AF33A616B819AC1_gshared (DynamicFormatter_1_tFBC619378BA33E36D46BDAE8FF5BA15E6BC3A6EF* __this, JsonWriter_t76E122B737DD79975E835A95D9F85B09D0792EA2* ___0_writer, int16_t ___1_value, RuntimeObject* ___2_formatterResolver, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -28666,7 +28666,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DynamicFormatter_1_Serialize_m3F10B36507
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 78788
+// Method Definition Index: 78789
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DynamicFormatter_1__ctor_mF78D25098C42C17C0E59F14C9C5C9EE1F9343627_gshared (DynamicFormatter_1_t5A2144650AAA9F55F7744B554DD5D09C125BC374* __this, const RuntimeMethod* method) 
 {
 	{
@@ -28676,7 +28676,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DynamicFormatter_1__ctor_mF78D25098C42C1
 		return;
 	}
 }
-// Method Definition Index: 78789
+// Method Definition Index: 78790
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t DynamicFormatter_1_Deserialize_m831AA765046D574C089AC5E0C4CCE606FACEFCC5_gshared (DynamicFormatter_1_t5A2144650AAA9F55F7744B554DD5D09C125BC374* __this, JsonReader_tC309CFE30F38792D0E9F8D388FC2519EC4C23609* ___0_reader, RuntimeObject* ___1_formatterResolver, const RuntimeMethod* method) 
 {
 	{
@@ -28686,7 +28686,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t DynamicFormatter_1_Deserialize_m831AA
 		IL2CPP_RAISE_MANAGED_EXCEPTION(L_0, method);
 	}
 }
-// Method Definition Index: 78790
+// Method Definition Index: 78791
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DynamicFormatter_1_Serialize_m5149D95D90B4B4F0EFE6BDC742711B154D8CAB2A_gshared (DynamicFormatter_1_t5A2144650AAA9F55F7744B554DD5D09C125BC374* __this, JsonWriter_t76E122B737DD79975E835A95D9F85B09D0792EA2* ___0_writer, int32_t ___1_value, RuntimeObject* ___2_formatterResolver, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -28717,7 +28717,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DynamicFormatter_1_Serialize_m5149D95D90
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 78788
+// Method Definition Index: 78789
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DynamicFormatter_1__ctor_m20F066837B16C0CB80A021D9D700311DBB21ED5F_gshared (DynamicFormatter_1_t89540176659971543891EFB7DE9A1DD240F13A6F* __this, const RuntimeMethod* method) 
 {
 	{
@@ -28727,7 +28727,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DynamicFormatter_1__ctor_m20F066837B16C0
 		return;
 	}
 }
-// Method Definition Index: 78789
+// Method Definition Index: 78790
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int64_t DynamicFormatter_1_Deserialize_mB6A9D9A1820D4C64A46D6AF4A33855E4D797451B_gshared (DynamicFormatter_1_t89540176659971543891EFB7DE9A1DD240F13A6F* __this, JsonReader_tC309CFE30F38792D0E9F8D388FC2519EC4C23609* ___0_reader, RuntimeObject* ___1_formatterResolver, const RuntimeMethod* method) 
 {
 	{
@@ -28737,7 +28737,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int64_t DynamicFormatter_1_Deserialize_mB6A9D
 		IL2CPP_RAISE_MANAGED_EXCEPTION(L_0, method);
 	}
 }
-// Method Definition Index: 78790
+// Method Definition Index: 78791
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DynamicFormatter_1_Serialize_mC5F09C80145188C9F1BAE882C7A3B6EF6ABEC127_gshared (DynamicFormatter_1_t89540176659971543891EFB7DE9A1DD240F13A6F* __this, JsonWriter_t76E122B737DD79975E835A95D9F85B09D0792EA2* ___0_writer, int64_t ___1_value, RuntimeObject* ___2_formatterResolver, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -28768,7 +28768,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DynamicFormatter_1_Serialize_mC5F09C8014
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 78788
+// Method Definition Index: 78789
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DynamicFormatter_1__ctor_mD257861BB7D29398129AEF653F3F4164503095E1_gshared (DynamicFormatter_1_t77A187D7AAB218F00A33FB1276541C0724F141AB* __this, const RuntimeMethod* method) 
 {
 	{
@@ -28778,7 +28778,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DynamicFormatter_1__ctor_mD257861BB7D293
 		return;
 	}
 }
-// Method Definition Index: 78789
+// Method Definition Index: 78790
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR NetworkId_tD5FA0360D2F8AE544493A7D1A6C7C90B28735CE7 DynamicFormatter_1_Deserialize_mE7006AFDF306B3715215345E5CCE00CB77035328_gshared (DynamicFormatter_1_t77A187D7AAB218F00A33FB1276541C0724F141AB* __this, JsonReader_tC309CFE30F38792D0E9F8D388FC2519EC4C23609* ___0_reader, RuntimeObject* ___1_formatterResolver, const RuntimeMethod* method) 
 {
 	{
@@ -28788,7 +28788,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR NetworkId_tD5FA0360D2F8AE544493A7D1A6C7C90B28
 		IL2CPP_RAISE_MANAGED_EXCEPTION(L_0, method);
 	}
 }
-// Method Definition Index: 78790
+// Method Definition Index: 78791
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DynamicFormatter_1_Serialize_mB29BAACA529E27E8E93F3A93C513E9F91205AFEA_gshared (DynamicFormatter_1_t77A187D7AAB218F00A33FB1276541C0724F141AB* __this, JsonWriter_t76E122B737DD79975E835A95D9F85B09D0792EA2* ___0_writer, NetworkId_tD5FA0360D2F8AE544493A7D1A6C7C90B28735CE7 ___1_value, RuntimeObject* ___2_formatterResolver, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -28819,7 +28819,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DynamicFormatter_1_Serialize_mB29BAACA52
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 78788
+// Method Definition Index: 78789
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DynamicFormatter_1__ctor_m6A3EE589869B342FADDD645ABC49542E89CE5BFD_gshared (DynamicFormatter_1_tDDB337F1FCD56B1BEF30A78C48A6128B8CD5A36D* __this, const RuntimeMethod* method) 
 {
 	{
@@ -28829,7 +28829,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DynamicFormatter_1__ctor_m6A3EE589869B34
 		return;
 	}
 }
-// Method Definition Index: 78789
+// Method Definition Index: 78790
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* DynamicFormatter_1_Deserialize_m3D64BDBE7177FAC64B0AE3F253A21CDCA2F9F73B_gshared (DynamicFormatter_1_tDDB337F1FCD56B1BEF30A78C48A6128B8CD5A36D* __this, JsonReader_tC309CFE30F38792D0E9F8D388FC2519EC4C23609* ___0_reader, RuntimeObject* ___1_formatterResolver, const RuntimeMethod* method) 
 {
 	{
@@ -28839,7 +28839,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* DynamicFormatter_1_Deserialize
 		IL2CPP_RAISE_MANAGED_EXCEPTION(L_0, method);
 	}
 }
-// Method Definition Index: 78790
+// Method Definition Index: 78791
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DynamicFormatter_1_Serialize_mAAC41355FE5C28DB172F5D9AE44EB54CE553EC71_gshared (DynamicFormatter_1_tDDB337F1FCD56B1BEF30A78C48A6128B8CD5A36D* __this, JsonWriter_t76E122B737DD79975E835A95D9F85B09D0792EA2* ___0_writer, RuntimeObject* ___1_value, RuntimeObject* ___2_formatterResolver, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -28868,7 +28868,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DynamicFormatter_1_Serialize_mAAC41355FE
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 78788
+// Method Definition Index: 78789
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DynamicFormatter_1__ctor_m59060B7C5086463C0A68EE7E593EB2A7262ED2FC_gshared (DynamicFormatter_1_t3287C43CCED7E55B5A13E2C7576B167388176AA4* __this, const RuntimeMethod* method) 
 {
 	{
@@ -28878,7 +28878,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DynamicFormatter_1__ctor_m59060B7C508646
 		return;
 	}
 }
-// Method Definition Index: 78789
+// Method Definition Index: 78790
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int8_t DynamicFormatter_1_Deserialize_m2F66F7FBA8C000A0D19F1B86AAE670735DED46E4_gshared (DynamicFormatter_1_t3287C43CCED7E55B5A13E2C7576B167388176AA4* __this, JsonReader_tC309CFE30F38792D0E9F8D388FC2519EC4C23609* ___0_reader, RuntimeObject* ___1_formatterResolver, const RuntimeMethod* method) 
 {
 	{
@@ -28888,7 +28888,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int8_t DynamicFormatter_1_Deserialize_m2F66F7
 		IL2CPP_RAISE_MANAGED_EXCEPTION(L_0, method);
 	}
 }
-// Method Definition Index: 78790
+// Method Definition Index: 78791
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DynamicFormatter_1_Serialize_m5894B91718DC403982EE3D05062F3F0E4A0BAAD8_gshared (DynamicFormatter_1_t3287C43CCED7E55B5A13E2C7576B167388176AA4* __this, JsonWriter_t76E122B737DD79975E835A95D9F85B09D0792EA2* ___0_writer, int8_t ___1_value, RuntimeObject* ___2_formatterResolver, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -28919,7 +28919,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DynamicFormatter_1_Serialize_m5894B91718
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 78788
+// Method Definition Index: 78789
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DynamicFormatter_1__ctor_mFF661E799007022C74A3D2FD05D75744A2C0823F_gshared (DynamicFormatter_1_t532B52683076CF3D8D300F192E043B369E4C061B* __this, const RuntimeMethod* method) 
 {
 	{
@@ -28929,7 +28929,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DynamicFormatter_1__ctor_mFF661E79900702
 		return;
 	}
 }
-// Method Definition Index: 78789
+// Method Definition Index: 78790
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR float DynamicFormatter_1_Deserialize_m82091050062212756BDED90B0E68768D3335D59C_gshared (DynamicFormatter_1_t532B52683076CF3D8D300F192E043B369E4C061B* __this, JsonReader_tC309CFE30F38792D0E9F8D388FC2519EC4C23609* ___0_reader, RuntimeObject* ___1_formatterResolver, const RuntimeMethod* method) 
 {
 	{
@@ -28939,7 +28939,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR float DynamicFormatter_1_Deserialize_m8209105
 		IL2CPP_RAISE_MANAGED_EXCEPTION(L_0, method);
 	}
 }
-// Method Definition Index: 78790
+// Method Definition Index: 78791
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DynamicFormatter_1_Serialize_mD25C96C61310ECB158F25DF0A08887846D3480FB_gshared (DynamicFormatter_1_t532B52683076CF3D8D300F192E043B369E4C061B* __this, JsonWriter_t76E122B737DD79975E835A95D9F85B09D0792EA2* ___0_writer, float ___1_value, RuntimeObject* ___2_formatterResolver, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -28970,7 +28970,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DynamicFormatter_1_Serialize_mD25C96C613
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 78788
+// Method Definition Index: 78789
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DynamicFormatter_1__ctor_mCE0F4C85D968C4884D4F434FE70A394E88193903_gshared (DynamicFormatter_1_tEE26ABD286A2B8F31C04EAD550E28A0BCB27AC20* __this, const RuntimeMethod* method) 
 {
 	{
@@ -28980,7 +28980,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DynamicFormatter_1__ctor_mCE0F4C85D968C4
 		return;
 	}
 }
-// Method Definition Index: 78789
+// Method Definition Index: 78790
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR uint16_t DynamicFormatter_1_Deserialize_m5ED4D293FBCA2B71B8F9052195AB59D518BC6352_gshared (DynamicFormatter_1_tEE26ABD286A2B8F31C04EAD550E28A0BCB27AC20* __this, JsonReader_tC309CFE30F38792D0E9F8D388FC2519EC4C23609* ___0_reader, RuntimeObject* ___1_formatterResolver, const RuntimeMethod* method) 
 {
 	{
@@ -28990,7 +28990,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR uint16_t DynamicFormatter_1_Deserialize_m5ED4
 		IL2CPP_RAISE_MANAGED_EXCEPTION(L_0, method);
 	}
 }
-// Method Definition Index: 78790
+// Method Definition Index: 78791
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DynamicFormatter_1_Serialize_m60D27FF7C6112722679E4C070F9F6FF5030994DC_gshared (DynamicFormatter_1_tEE26ABD286A2B8F31C04EAD550E28A0BCB27AC20* __this, JsonWriter_t76E122B737DD79975E835A95D9F85B09D0792EA2* ___0_writer, uint16_t ___1_value, RuntimeObject* ___2_formatterResolver, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -29021,7 +29021,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DynamicFormatter_1_Serialize_m60D27FF7C6
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 78788
+// Method Definition Index: 78789
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DynamicFormatter_1__ctor_m330B5B79D857DD3CEFFA7D9693E973BCDE4AF88B_gshared (DynamicFormatter_1_tE928AEB0F7209C5A840B0291B42ECF1392F81B2B* __this, const RuntimeMethod* method) 
 {
 	{
@@ -29031,7 +29031,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DynamicFormatter_1__ctor_m330B5B79D857DD
 		return;
 	}
 }
-// Method Definition Index: 78789
+// Method Definition Index: 78790
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR uint32_t DynamicFormatter_1_Deserialize_m2C52F2590EC6617E2E5B1A73A23DA985E0BEA7A3_gshared (DynamicFormatter_1_tE928AEB0F7209C5A840B0291B42ECF1392F81B2B* __this, JsonReader_tC309CFE30F38792D0E9F8D388FC2519EC4C23609* ___0_reader, RuntimeObject* ___1_formatterResolver, const RuntimeMethod* method) 
 {
 	{
@@ -29041,7 +29041,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR uint32_t DynamicFormatter_1_Deserialize_m2C52
 		IL2CPP_RAISE_MANAGED_EXCEPTION(L_0, method);
 	}
 }
-// Method Definition Index: 78790
+// Method Definition Index: 78791
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DynamicFormatter_1_Serialize_mE9436354725E8C5CEBE6E87CC9100BF44CD369C7_gshared (DynamicFormatter_1_tE928AEB0F7209C5A840B0291B42ECF1392F81B2B* __this, JsonWriter_t76E122B737DD79975E835A95D9F85B09D0792EA2* ___0_writer, uint32_t ___1_value, RuntimeObject* ___2_formatterResolver, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -29072,7 +29072,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DynamicFormatter_1_Serialize_mE943635472
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 78788
+// Method Definition Index: 78789
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DynamicFormatter_1__ctor_m8C739F2F0FC0DA9903C6752B0A432024765A9477_gshared (DynamicFormatter_1_t4BF6C9A6AF61390CDFED7A13BB077884459FBE5B* __this, const RuntimeMethod* method) 
 {
 	{
@@ -29082,7 +29082,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DynamicFormatter_1__ctor_m8C739F2F0FC0DA
 		return;
 	}
 }
-// Method Definition Index: 78789
+// Method Definition Index: 78790
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR uint64_t DynamicFormatter_1_Deserialize_m87AD7C97ADA4B3374DD84E85F55E9185DAC95480_gshared (DynamicFormatter_1_t4BF6C9A6AF61390CDFED7A13BB077884459FBE5B* __this, JsonReader_tC309CFE30F38792D0E9F8D388FC2519EC4C23609* ___0_reader, RuntimeObject* ___1_formatterResolver, const RuntimeMethod* method) 
 {
 	{
@@ -29092,7 +29092,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR uint64_t DynamicFormatter_1_Deserialize_m87AD
 		IL2CPP_RAISE_MANAGED_EXCEPTION(L_0, method);
 	}
 }
-// Method Definition Index: 78790
+// Method Definition Index: 78791
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DynamicFormatter_1_Serialize_m93F3BB786C3D9386384BA79A9D21BD0194972159_gshared (DynamicFormatter_1_t4BF6C9A6AF61390CDFED7A13BB077884459FBE5B* __this, JsonWriter_t76E122B737DD79975E835A95D9F85B09D0792EA2* ___0_writer, uint64_t ___1_value, RuntimeObject* ___2_formatterResolver, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -29123,7 +29123,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DynamicFormatter_1_Serialize_m93F3BB786C
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 78788
+// Method Definition Index: 78789
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DynamicFormatter_1__ctor_mC6B431EC4339E1EC3BFB885308D638EC97AB3555_gshared (DynamicFormatter_1_t84FC15895F012F3BC79B391C6BA47F547686C05F* __this, const RuntimeMethod* method) 
 {
 	{
@@ -29133,7 +29133,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DynamicFormatter_1__ctor_mC6B431EC4339E1
 		return;
 	}
 }
-// Method Definition Index: 78789
+// Method Definition Index: 78790
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DynamicFormatter_1_Deserialize_m996513877F85558D9F386212DE46ADBF1961407F_gshared (DynamicFormatter_1_t84FC15895F012F3BC79B391C6BA47F547686C05F* __this, JsonReader_tC309CFE30F38792D0E9F8D388FC2519EC4C23609* ___0_reader, RuntimeObject* ___1_formatterResolver, Il2CppFullySharedGenericAny* il2cppRetVal, const RuntimeMethod* method) 
 {
 	{
@@ -29143,7 +29143,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DynamicFormatter_1_Deserialize_m99651387
 		IL2CPP_RAISE_MANAGED_EXCEPTION(L_0, method);
 	}
 }
-// Method Definition Index: 78790
+// Method Definition Index: 78791
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DynamicFormatter_1_Serialize_mAD9CB0221DF5A95C94C8A3479A694293DB8F00E8_gshared (DynamicFormatter_1_t84FC15895F012F3BC79B391C6BA47F547686C05F* __this, JsonWriter_t76E122B737DD79975E835A95D9F85B09D0792EA2* ___0_writer, Il2CppFullySharedGenericAny ___1_value, RuntimeObject* ___2_formatterResolver, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -39436,7 +39436,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void EmptyData__cctor_m8B40D3C1F5727150086953
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 84594
+// Method Definition Index: 84595
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void EmptyEnumerable_1__cctor_m64517BDEC66366F475DF90F4C436CC9784BD4FE2_gshared (const RuntimeMethod* method) 
 {
 	{
@@ -39454,7 +39454,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void EmptyEnumerable_1__cctor_m64517BDEC66366
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 84594
+// Method Definition Index: 84595
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void EmptyEnumerable_1__cctor_mA5F0D538BBD6AAB4CE33B937FB30179E88A17C53_gshared (const RuntimeMethod* method) 
 {
 	{
@@ -39472,7 +39472,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void EmptyEnumerable_1__cctor_mA5F0D538BBD6AA
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 84594
+// Method Definition Index: 84595
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void EmptyEnumerable_1__cctor_mF43E0A91F939568F94E076C5D37765945E3A175D_gshared (const RuntimeMethod* method) 
 {
 	{
@@ -50567,7 +50567,7 @@ IL_0034:
 		return;
 	}
 }
-// Method Definition Index: 84742
+// Method Definition Index: 84743
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t HashSet_1_get_Count_mB717B519B4FBD92488427A6798B491B5FA5FB185_gshared_inline (HashSet_1_t4A2F2B74276D0AD3ED0F873045BD61E9504ECAE2* __this, const RuntimeMethod* method) 
 {
 	{

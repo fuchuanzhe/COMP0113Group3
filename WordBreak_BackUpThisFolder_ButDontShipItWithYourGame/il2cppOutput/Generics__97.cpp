@@ -6916,7 +6916,7 @@ inline void Buffer_Memmove_TisByte_t94D9231AC217BE4D2E004C4CD32DF6D099EA41A3_mB1
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 79822
+// Method Definition Index: 79823
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Int64U5BU5D_tAEDFCBDB5414E2A140A6F34C0538BF97FCF67A1D* MarshallingArray_1_ToArray_mB36298123B5B848205FA918BD5343E2108848153_gshared (MarshallingArray_1_t2ED3FB5945B2209AB8540C6BCA85C4B86418E609* __this, const RuntimeMethod* method) 
 {
 	{
@@ -6940,7 +6940,7 @@ IL2CPP_EXTERN_C  Int64U5BU5D_tAEDFCBDB5414E2A140A6F34C0538BF97FCF67A1D* Marshall
 	_returnValue = MarshallingArray_1_ToArray_mB36298123B5B848205FA918BD5343E2108848153(_thisAdjusted, method);
 	return _returnValue;
 }
-// Method Definition Index: 79823
+// Method Definition Index: 79824
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR MarshallingArray_1_t2ED3FB5945B2209AB8540C6BCA85C4B86418E609 MarshallingArray_1_op_Implicit_m2D3FC41E8856D2C7E1509C224CE530020A3CDCD8_gshared (Int64U5BU5D_tAEDFCBDB5414E2A140A6F34C0538BF97FCF67A1D* ___0_src, const RuntimeMethod* method) 
 {
 	MarshallingArray_1_t2ED3FB5945B2209AB8540C6BCA85C4B86418E609 V_0;
@@ -6962,7 +6962,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR MarshallingArray_1_t2ED3FB5945B2209AB8540C6BC
 		return L_3;
 	}
 }
-// Method Definition Index: 79824
+// Method Definition Index: 79825
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MarshallingArray_1_Dispose_m06D05FE1015A977EAC32C5FA5666C16A60C082C1_gshared (MarshallingArray_1_t2ED3FB5945B2209AB8540C6BCA85C4B86418E609* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -6999,7 +6999,7 @@ IL2CPP_EXTERN_C  void MarshallingArray_1_Dispose_m06D05FE1015A977EAC32C5FA5666C1
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 79822
+// Method Definition Index: 79823
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR IntPtrU5BU5D_tFD177F8C806A6921AD7150264CCC62FA00CAD832* MarshallingArray_1_ToArray_mDEB9BEFB534E8AA965F3230E112B64E821FF8E42_gshared (MarshallingArray_1_t201C4D66026887C428830F15CDC5D30E0168F857* __this, const RuntimeMethod* method) 
 {
 	{
@@ -7023,7 +7023,7 @@ IL2CPP_EXTERN_C  IntPtrU5BU5D_tFD177F8C806A6921AD7150264CCC62FA00CAD832* Marshal
 	_returnValue = MarshallingArray_1_ToArray_mDEB9BEFB534E8AA965F3230E112B64E821FF8E42(_thisAdjusted, method);
 	return _returnValue;
 }
-// Method Definition Index: 79823
+// Method Definition Index: 79824
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR MarshallingArray_1_t201C4D66026887C428830F15CDC5D30E0168F857 MarshallingArray_1_op_Implicit_mC47A810B523EB15E804BC8EC681ED9FB28D4D3A4_gshared (IntPtrU5BU5D_tFD177F8C806A6921AD7150264CCC62FA00CAD832* ___0_src, const RuntimeMethod* method) 
 {
 	MarshallingArray_1_t201C4D66026887C428830F15CDC5D30E0168F857 V_0;
@@ -7045,7 +7045,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR MarshallingArray_1_t201C4D66026887C428830F15C
 		return L_3;
 	}
 }
-// Method Definition Index: 79824
+// Method Definition Index: 79825
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MarshallingArray_1_Dispose_mE3E3778B0E9D1BC422A871E6A8703E9706E7C32A_gshared (MarshallingArray_1_t201C4D66026887C428830F15CDC5D30E0168F857* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -7082,7 +7082,7 @@ IL2CPP_EXTERN_C  void MarshallingArray_1_Dispose_mE3E3778B0E9D1BC422A871E6A8703E
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 79822
+// Method Definition Index: 79823
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RTCRtpCodecCapabilityInternalU5BU5D_t5AFC47CAC1081B5E0435FCA69C2D26267A4E535A* MarshallingArray_1_ToArray_mEC3EBFDAE65BA13F6B909C8C6250645E71AA3040_gshared (MarshallingArray_1_tBA2171F8BED66AC54893C1771E6FF877372415A8* __this, const RuntimeMethod* method) 
 {
 	{
@@ -7106,7 +7106,7 @@ IL2CPP_EXTERN_C  RTCRtpCodecCapabilityInternalU5BU5D_t5AFC47CAC1081B5E0435FCA69C
 	_returnValue = MarshallingArray_1_ToArray_mEC3EBFDAE65BA13F6B909C8C6250645E71AA3040(_thisAdjusted, method);
 	return _returnValue;
 }
-// Method Definition Index: 79823
+// Method Definition Index: 79824
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR MarshallingArray_1_tBA2171F8BED66AC54893C1771E6FF877372415A8 MarshallingArray_1_op_Implicit_mA049BD928647DAB0B7164E0E22E49DA9839F281D_gshared (RTCRtpCodecCapabilityInternalU5BU5D_t5AFC47CAC1081B5E0435FCA69C2D26267A4E535A* ___0_src, const RuntimeMethod* method) 
 {
 	MarshallingArray_1_tBA2171F8BED66AC54893C1771E6FF877372415A8 V_0;
@@ -7128,7 +7128,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR MarshallingArray_1_tBA2171F8BED66AC54893C1771
 		return L_3;
 	}
 }
-// Method Definition Index: 79824
+// Method Definition Index: 79825
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MarshallingArray_1_Dispose_m6BA09654161B1FBBBB9CF09D109DAE89D3897786_gshared (MarshallingArray_1_tBA2171F8BED66AC54893C1771E6FF877372415A8* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -7165,7 +7165,7 @@ IL2CPP_EXTERN_C  void MarshallingArray_1_Dispose_m6BA09654161B1FBBBB9CF09D109DAE
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 79822
+// Method Definition Index: 79823
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RTCRtpCodecParametersInternalU5BU5D_t97F35885419BCC0864210EE585F47C75E7B826B9* MarshallingArray_1_ToArray_m1744527FC57556301655D1AD3299FB44F62C0C6B_gshared (MarshallingArray_1_t83A785EDC9A8BD2248D2D0E5F8E4937A368F44EE* __this, const RuntimeMethod* method) 
 {
 	{
@@ -7189,7 +7189,7 @@ IL2CPP_EXTERN_C  RTCRtpCodecParametersInternalU5BU5D_t97F35885419BCC0864210EE585
 	_returnValue = MarshallingArray_1_ToArray_m1744527FC57556301655D1AD3299FB44F62C0C6B(_thisAdjusted, method);
 	return _returnValue;
 }
-// Method Definition Index: 79823
+// Method Definition Index: 79824
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR MarshallingArray_1_t83A785EDC9A8BD2248D2D0E5F8E4937A368F44EE MarshallingArray_1_op_Implicit_m4A7D9645C8DA0650F1B9B4BBF2BA07C4D05406F1_gshared (RTCRtpCodecParametersInternalU5BU5D_t97F35885419BCC0864210EE585F47C75E7B826B9* ___0_src, const RuntimeMethod* method) 
 {
 	MarshallingArray_1_t83A785EDC9A8BD2248D2D0E5F8E4937A368F44EE V_0;
@@ -7211,7 +7211,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR MarshallingArray_1_t83A785EDC9A8BD2248D2D0E5F
 		return L_3;
 	}
 }
-// Method Definition Index: 79824
+// Method Definition Index: 79825
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MarshallingArray_1_Dispose_m38715F5DDE6B84601496CDE6AF8B56E613FB91DB_gshared (MarshallingArray_1_t83A785EDC9A8BD2248D2D0E5F8E4937A368F44EE* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -7248,7 +7248,7 @@ IL2CPP_EXTERN_C  void MarshallingArray_1_Dispose_m38715F5DDE6B84601496CDE6AF8B56
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 79822
+// Method Definition Index: 79823
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RTCRtpEncodingParametersInternalU5BU5D_t42E2C10211D9575DE6015B23BEFD5379703704AB* MarshallingArray_1_ToArray_mCCC15CBCEFF1C04B475263FEF7DBD73E2FFFF3D0_gshared (MarshallingArray_1_t376555BAE71EEC27AAA84D82B4B195A45F1A96E6* __this, const RuntimeMethod* method) 
 {
 	{
@@ -7272,7 +7272,7 @@ IL2CPP_EXTERN_C  RTCRtpEncodingParametersInternalU5BU5D_t42E2C10211D9575DE6015B2
 	_returnValue = MarshallingArray_1_ToArray_mCCC15CBCEFF1C04B475263FEF7DBD73E2FFFF3D0(_thisAdjusted, method);
 	return _returnValue;
 }
-// Method Definition Index: 79823
+// Method Definition Index: 79824
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR MarshallingArray_1_t376555BAE71EEC27AAA84D82B4B195A45F1A96E6 MarshallingArray_1_op_Implicit_m8E5848F67A035740B81DAA6F28C97E41C75A9767_gshared (RTCRtpEncodingParametersInternalU5BU5D_t42E2C10211D9575DE6015B23BEFD5379703704AB* ___0_src, const RuntimeMethod* method) 
 {
 	MarshallingArray_1_t376555BAE71EEC27AAA84D82B4B195A45F1A96E6 V_0;
@@ -7294,7 +7294,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR MarshallingArray_1_t376555BAE71EEC27AAA84D82B
 		return L_3;
 	}
 }
-// Method Definition Index: 79824
+// Method Definition Index: 79825
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MarshallingArray_1_Dispose_m6E8FDA192DEC238E8C23E4A0122A26006C050850_gshared (MarshallingArray_1_t376555BAE71EEC27AAA84D82B4B195A45F1A96E6* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -7331,7 +7331,7 @@ IL2CPP_EXTERN_C  void MarshallingArray_1_Dispose_m6E8FDA192DEC238E8C23E4A0122A26
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 79822
+// Method Definition Index: 79823
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RTCRtpHeaderExtensionCapabilityInternalU5BU5D_t1EFE174BDF1CAB3B471E621AE60382581B30F701* MarshallingArray_1_ToArray_m114A766EDCC1E9FC7863335242183F791DEBD2CF_gshared (MarshallingArray_1_t4C03EBD7C399C1968D9FE6D5C993F177FBE598C7* __this, const RuntimeMethod* method) 
 {
 	{
@@ -7355,7 +7355,7 @@ IL2CPP_EXTERN_C  RTCRtpHeaderExtensionCapabilityInternalU5BU5D_t1EFE174BDF1CAB3B
 	_returnValue = MarshallingArray_1_ToArray_m114A766EDCC1E9FC7863335242183F791DEBD2CF(_thisAdjusted, method);
 	return _returnValue;
 }
-// Method Definition Index: 79823
+// Method Definition Index: 79824
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR MarshallingArray_1_t4C03EBD7C399C1968D9FE6D5C993F177FBE598C7 MarshallingArray_1_op_Implicit_m45A7A81F43B60BEABEF23A1B4D07D5FA6EBD6E59_gshared (RTCRtpHeaderExtensionCapabilityInternalU5BU5D_t1EFE174BDF1CAB3B471E621AE60382581B30F701* ___0_src, const RuntimeMethod* method) 
 {
 	MarshallingArray_1_t4C03EBD7C399C1968D9FE6D5C993F177FBE598C7 V_0;
@@ -7377,7 +7377,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR MarshallingArray_1_t4C03EBD7C399C1968D9FE6D5C
 		return L_3;
 	}
 }
-// Method Definition Index: 79824
+// Method Definition Index: 79825
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MarshallingArray_1_Dispose_m70C1406B3922885491C6B906C73A55907864B5CC_gshared (MarshallingArray_1_t4C03EBD7C399C1968D9FE6D5C993F177FBE598C7* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -7414,7 +7414,7 @@ IL2CPP_EXTERN_C  void MarshallingArray_1_Dispose_m70C1406B3922885491C6B906C73A55
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 79822
+// Method Definition Index: 79823
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RTCRtpHeaderExtensionParametersInternalU5BU5D_t2E4BD74B2373A1872B8421EE0918669A609F04BF* MarshallingArray_1_ToArray_m8BD78C779012A6FE9629A3EF534AE52F57293D30_gshared (MarshallingArray_1_t7EE9DDC9D45743948C0AF72806A903D7F6B82B91* __this, const RuntimeMethod* method) 
 {
 	{
@@ -7438,7 +7438,7 @@ IL2CPP_EXTERN_C  RTCRtpHeaderExtensionParametersInternalU5BU5D_t2E4BD74B2373A187
 	_returnValue = MarshallingArray_1_ToArray_m8BD78C779012A6FE9629A3EF534AE52F57293D30(_thisAdjusted, method);
 	return _returnValue;
 }
-// Method Definition Index: 79823
+// Method Definition Index: 79824
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR MarshallingArray_1_t7EE9DDC9D45743948C0AF72806A903D7F6B82B91 MarshallingArray_1_op_Implicit_m570E77D9E7D849E14F3039A7992BC5DBB213B3F5_gshared (RTCRtpHeaderExtensionParametersInternalU5BU5D_t2E4BD74B2373A1872B8421EE0918669A609F04BF* ___0_src, const RuntimeMethod* method) 
 {
 	MarshallingArray_1_t7EE9DDC9D45743948C0AF72806A903D7F6B82B91 V_0;
@@ -7460,7 +7460,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR MarshallingArray_1_t7EE9DDC9D45743948C0AF7280
 		return L_3;
 	}
 }
-// Method Definition Index: 79824
+// Method Definition Index: 79825
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MarshallingArray_1_Dispose_mAE25C8AD4D29B490888C4CF21F5CFC3F9E716314_gshared (MarshallingArray_1_t7EE9DDC9D45743948C0AF72806A903D7F6B82B91* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -7497,7 +7497,7 @@ IL2CPP_EXTERN_C  void MarshallingArray_1_Dispose_mAE25C8AD4D29B490888C4CF21F5CFC
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 79822
+// Method Definition Index: 79823
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR __Il2CppFullySharedGenericStructTypeU5BU5D_tF3B929B6E80D0A8C109178E11CE8FF9957B014C1* MarshallingArray_1_ToArray_mAB8540D3E342F6035B82DB56D8FE6FA2D2FB3663_gshared (MarshallingArray_1_t3ADB900AF8CC5BE90AE9A11FEDDEBA31D3BEC5CD* __this, const RuntimeMethod* method) 
 {
 	{
@@ -7521,7 +7521,7 @@ IL2CPP_EXTERN_C  __Il2CppFullySharedGenericStructTypeU5BU5D_tF3B929B6E80D0A8C109
 	_returnValue = MarshallingArray_1_ToArray_mAB8540D3E342F6035B82DB56D8FE6FA2D2FB3663(_thisAdjusted, method);
 	return _returnValue;
 }
-// Method Definition Index: 79823
+// Method Definition Index: 79824
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR MarshallingArray_1_t3ADB900AF8CC5BE90AE9A11FEDDEBA31D3BEC5CD MarshallingArray_1_op_Implicit_m1FEB71BCE883C0C4340FA480B21BD40D297F49C6_gshared (__Il2CppFullySharedGenericStructTypeU5BU5D_tF3B929B6E80D0A8C109178E11CE8FF9957B014C1* ___0_src, const RuntimeMethod* method) 
 {
 	MarshallingArray_1_t3ADB900AF8CC5BE90AE9A11FEDDEBA31D3BEC5CD V_0;
@@ -7543,7 +7543,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR MarshallingArray_1_t3ADB900AF8CC5BE90AE9A11FE
 		return L_3;
 	}
 }
-// Method Definition Index: 79824
+// Method Definition Index: 79825
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MarshallingArray_1_Dispose_mCA5879EF87971889A96279338C74608E7EC87CCF_gshared (MarshallingArray_1_t3ADB900AF8CC5BE90AE9A11FEDDEBA31D3BEC5CD* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -10987,7 +10987,7 @@ IL2CPP_EXTERN_C  NativeArray_1_tA250DFA6F2B09B543458A4231692763973E84C57 NativeA
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 63868
+// Method Definition Index: 63869
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NativeArrayStaticId_1__cctor_m67213AA7112EE9BCD68829DC44441438CB42950A_gshared (const RuntimeMethod* method) 
 {
 	{
