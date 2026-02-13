@@ -8,7 +8,16 @@ public class NetworkedObject : MonoBehaviour
 
     private struct Message
     {
+        public bool isActive;
         public Vector3 position;
+        public Quaternion rotation;
+
+        public Message(Transform transform, bool isActive)
+        {
+            this.position = transform.position;
+            this.rotation = transform.rotation;
+            this.isActive = isActive;
+        }
     }
 
     void Start()
@@ -21,17 +30,22 @@ public class NetworkedObject : MonoBehaviour
         if(lastPosition != transform.localPosition)
         {
             lastPosition = transform.localPosition;
-            context.SendJson(new Message()
-            {
-                position = transform.localPosition
-            });
+            context.SendJson(new Message(transform, gameObject.activeSelf));
         }
     }
 
     public void ProcessMessage(ReferenceCountedSceneGraphMessage message)
     {
         var m = message.FromJson<Message>();
+        gameObject.SetActive(m.isActive);
+
         transform.localPosition = m.position;
         lastPosition = transform.localPosition;
+        transform.rotation = m.rotation;
+    }
+
+    public void BroadcastActiveSelf(bool isActive)
+    {
+        context.SendJson(new Message(transform, isActive));
     }
 }

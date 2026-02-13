@@ -5228,7 +5228,7 @@ inline void DynamicArrayPool_1_EnsureCapacity_m92FF32F0B975925701D57A1480597C091
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 68273
+// Method Definition Index: 68276
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FormatterCache_1__cctor_mDE2BED933BC58A78975AFA3808DC3FE5CD3B0CF8_gshared (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -5260,7 +5260,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FormatterCache_1__cctor_mDE2BED933BC58A7
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 78810
+// Method Definition Index: 78813
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FormatterCache_1__cctor_mCD5F9DC6E3E8B186A643F7D4D01C9776E62627A3_gshared (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -5340,7 +5340,7 @@ IL_0021:
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 78768
+// Method Definition Index: 78771
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FormatterCache_1__cctor_mFDCE0FB6415DB56CFCF83D7FCF1224DB5511800B_gshared (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -5515,7 +5515,7 @@ IL_00b8:
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 78772
+// Method Definition Index: 78775
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FormatterCache_1__cctor_m47E110401F1FD41B8AD6C321E7E05F2A2D708D28_gshared (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -5547,7 +5547,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FormatterCache_1__cctor_m47E110401F1FD41
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 78784
+// Method Definition Index: 78787
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FormatterCache_1__cctor_m3B8CE1EF60331C20FCACD1AA63361E690E722B8C_gshared (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -5832,7 +5832,7 @@ IL_00dc:
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 78806
+// Method Definition Index: 78809
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FormatterCache_1__cctor_m608BE99A0ECCB5DA92B0F7FE1A49CAAD2A8C1158_gshared (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -5886,7 +5886,7 @@ IL_0022:
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 78788
+// Method Definition Index: 78791
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FormatterCache_1__cctor_m54035AF39947D2CA6A9265649EC067DD1C70B64E_gshared (const RuntimeMethod* method) 
 {
 	{
@@ -5907,7 +5907,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FormatterCache_1__cctor_m54035AF39947D2C
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 78797
+// Method Definition Index: 78800
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FormatterCache_1__cctor_mC4940BB538910F37BF2118745EDED96B0D5DFBE6_gshared (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -6060,7 +6060,7 @@ IL_009d:
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 78801
+// Method Definition Index: 78804
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FormatterCache_1__cctor_mF3D18393803E5491572CB50190289DFECB0BF764_gshared (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -6213,7 +6213,7 @@ IL_009d:
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 68273
+// Method Definition Index: 68276
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FormatterCache_1__cctor_mDB9D1D5D58337F8A15CA640A5D9380F013A2D8C9_gshared (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -6245,7 +6245,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FormatterCache_1__cctor_mDB9D1D5D58337F8
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 78810
+// Method Definition Index: 78813
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FormatterCache_1__cctor_m48BDEC50BC4AA0C2B66E5C01498982C90345DC68_gshared (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -6325,7 +6325,7 @@ IL_0021:
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 78768
+// Method Definition Index: 78771
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FormatterCache_1__cctor_mE4D082B80F2142CDC01C00B70602FD18318E5333_gshared (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -6500,7 +6500,7 @@ IL_00b8:
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 78772
+// Method Definition Index: 78775
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FormatterCache_1__cctor_mE6154EFD726F1440DE9427FAAF7AF5463E2B7BE9_gshared (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -6532,7 +6532,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FormatterCache_1__cctor_mE6154EFD726F144
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 78784
+// Method Definition Index: 78787
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FormatterCache_1__cctor_m04B5ADD17F8397CF9000CBC058C81780A62A22C7_gshared (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -6817,7 +6817,7 @@ IL_00dc:
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 78806
+// Method Definition Index: 78809
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FormatterCache_1__cctor_m83727263EB388801FBCA15FC3098E37F4DB00CED_gshared (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -6871,7 +6871,7 @@ IL_0022:
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 78788
+// Method Definition Index: 78791
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FormatterCache_1__cctor_m63F3590347D321B326AEADB5D25E0BAF27642C68_gshared (const RuntimeMethod* method) 
 {
 	{
@@ -6892,7 +6892,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FormatterCache_1__cctor_m63F3590347D321B
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 78797
+// Method Definition Index: 78800
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FormatterCache_1__cctor_m36673A4BBD7760FC5BB16B39E708C3641F356640_gshared (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -7045,7 +7045,7 @@ IL_009d:
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 78801
+// Method Definition Index: 78804
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FormatterCache_1__cctor_m510A8F7BBCDC5F51ECACAA2D9F3E2AA4E79A42F3_gshared (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -7198,7 +7198,7 @@ IL_009d:
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 68273
+// Method Definition Index: 68276
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FormatterCache_1__cctor_mC0B5CF41BB8E42F9B6B055D2CBCB4E0CD85DB127_gshared (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -7230,7 +7230,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FormatterCache_1__cctor_mC0B5CF41BB8E42F
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 78810
+// Method Definition Index: 78813
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FormatterCache_1__cctor_m438C66A44E66A97AF0C6FA5E5FA612E07F6E8A65_gshared (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -7310,7 +7310,7 @@ IL_0021:
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 79064
+// Method Definition Index: 79067
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FourDimentionalArrayFormatter_1_Serialize_m4CF2FAC00855A7C749F0A7AE1B168A12D0A8F9F3_gshared (FourDimentionalArrayFormatter_1_t453887609BD9D042E8EC59F325CF455172D9CE41* __this, JsonWriter_t76E122B737DD79975E835A95D9F85B09D0792EA2* ___0_writer, __Il2CppFullySharedGenericTypeU5BU2CU2CU2CU5D_t3F79C62FB6240A178E58DBCC608875E81604CDFA* ___1_value, RuntimeObject* ___2_formatterResolver, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -7582,7 +7582,7 @@ IL_00d9:
 		return;
 	}
 }
-// Method Definition Index: 79065
+// Method Definition Index: 79068
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR __Il2CppFullySharedGenericTypeU5BU2CU2CU2CU5D_t3F79C62FB6240A178E58DBCC608875E81604CDFA* FourDimentionalArrayFormatter_1_Deserialize_m41D74886C5C087EC3A80E29431DC7344AA9593AD_gshared (FourDimentionalArrayFormatter_1_t453887609BD9D042E8EC59F325CF455172D9CE41* __this, JsonReader_tC309CFE30F38792D0E9F8D388FC2519EC4C23609* ___0_reader, RuntimeObject* ___1_formatterResolver, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -7995,7 +7995,7 @@ IL_0179:
 		return L_71;
 	}
 }
-// Method Definition Index: 79066
+// Method Definition Index: 79069
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FourDimentionalArrayFormatter_1__ctor_m48771C2F8E963C04CB0E57B22720B99202853933_gshared (FourDimentionalArrayFormatter_1_t453887609BD9D042E8EC59F325CF455172D9CE41* __this, const RuntimeMethod* method) 
 {
 	{
@@ -28477,7 +28477,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* Func_4_Invoke_m9BAD5BBD30933FE
 #ifdef __clang__
 #pragma clang diagnostic pop
 #endif
-// Method Definition Index: 78596
+// Method Definition Index: 78599
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Type_t* JsonFormatterAttribute_get_FormatterType_m0BE4D064771A96ED62075767DB292AA7E1E4908B_inline (JsonFormatterAttribute_t30AE41C1C01F9A44A3B13FB0C31B644CA7B7E69B* __this, const RuntimeMethod* method) 
 {
 	{
@@ -28486,7 +28486,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Type_t* JsonFormatterAttribute_ge
 		return L_0;
 	}
 }
-// Method Definition Index: 78598
+// Method Definition Index: 78601
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* JsonFormatterAttribute_get_Arguments_m0F0355CF953996E623B3927B1F6FEE9482444BE8_inline (JsonFormatterAttribute_t30AE41C1C01F9A44A3B13FB0C31B644CA7B7E69B* __this, const RuntimeMethod* method) 
 {
 	{
@@ -28495,7 +28495,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR ObjectU5BU5D_t8061030B0A12A55D5AD
 		return L_0;
 	}
 }
-// Method Definition Index: 78744
+// Method Definition Index: 78747
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void JsonWriter_WriteNull_m1CCDF931D743F8CA2E69D69BEE65DC50132EEA42_inline (JsonWriter_t76E122B737DD79975E835A95D9F85B09D0792EA2* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -28537,7 +28537,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void JsonWriter_WriteNull_m1CCDF9
 		return;
 	}
 }
-// Method Definition Index: 78736
+// Method Definition Index: 78739
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void JsonWriter_WriteBeginArray_m9029F704D0CE6E1DE4AAEBA82DCAEE77396A9A02_inline (JsonWriter_t76E122B737DD79975E835A95D9F85B09D0792EA2* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -28566,7 +28566,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void JsonWriter_WriteBeginArray_m
 		return;
 	}
 }
-// Method Definition Index: 78740
+// Method Definition Index: 78743
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void JsonWriter_WriteValueSeparator_mE1EC17720F202C6B9013536FA78F6D7D1FA4E7D5_inline (JsonWriter_t76E122B737DD79975E835A95D9F85B09D0792EA2* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -28595,7 +28595,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void JsonWriter_WriteValueSeparat
 		return;
 	}
 }
-// Method Definition Index: 78737
+// Method Definition Index: 78740
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void JsonWriter_WriteEndArray_m1667DEEEC3B9E804EF6727A7491D700E4DFC7DBA_inline (JsonWriter_t76E122B737DD79975E835A95D9F85B09D0792EA2* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -28652,7 +28652,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR VoidTaskResult_t73B628B764C6668DA
 	typedef VoidTaskResult_t73B628B764C6668DAAAE2D37BD6FC07BCA27A5AC (*FunctionPointerType) (RuntimeObject*, RuntimeObject*, RuntimeObject*, const RuntimeMethod*);
 	return ((FunctionPointerType)__this->___invoke_impl)((Il2CppObject*)__this->___method_code, ___0_arg1, ___1_arg2, reinterpret_cast<RuntimeMethod*>(__this->___method));
 }
-// Method Definition Index: 79349
+// Method Definition Index: 79352
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void BinaryUtil_EnsureCapacity_mBF0A62A1154D32F0C3AABCDD7E8F8D9A3D5F87A3_inline (ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031** ___0_bytes, int32_t ___1_offset, int32_t ___2_appendLength, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;

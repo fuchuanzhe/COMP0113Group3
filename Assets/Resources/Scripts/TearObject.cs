@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class TearObject : MonoBehaviour
 {
@@ -20,8 +21,7 @@ public class TearObject : MonoBehaviour
     [Header("State (read by LetterSpawner)")]
     public bool isTeared { get; private set; }          
     public Vector3 tearCenter { get; private set; }     
-    public string word { get; private set; }            // Word to spawn
-
+    public string word { get; private set; }
     bool _armed;
     float _armedAt;
 
@@ -33,14 +33,18 @@ public class TearObject : MonoBehaviour
     void Awake()
     {
         if (!grab) grab = GetComponent<UnityEngine.XR.Interaction.Toolkit.Interactables.XRGrabInteractable>();
-        // Set word based on object name
-        //word = CleanName(gameObject.name).ToUpperInvariant();
         word = gameObject.name.ToUpperInvariant();
     }
 
     void Update()
     {
         if (isTeared || grab == null) return;
+
+        if (Keyboard.current != null && Keyboard.current.enterKey.wasPressedThisFrame)
+        {
+            DebugTear();
+            return;
+        }
 
         var list = grab.interactorsSelecting;
         if (list == null || list.Count < 2)
@@ -67,6 +71,29 @@ public class TearObject : MonoBehaviour
             DoTear(a, b, posA, posB);
         }
     }
+    void DebugTear()
+    {
+        isTeared = true;
+
+        tearCenter = transform.position;
+
+        if (spawnHalves && HalfPrefabA && HalfPrefabB)
+        {
+            Vector3 dir = transform.right;
+            SpawnHalves(transform.position - dir * 0.05f,
+                        transform.position + dir * 0.05f);
+        }
+
+        LetterSpawner.Instance?.SpawnWord(word, tearCenter);
+
+        // Network deactivate
+        var networkObj = GetComponent<NetworkedObject>();
+        if (networkObj != null)
+            networkObj.BroadcastActiveSelf(false);
+
+        gameObject.SetActive(false);
+    }
+
 
     Vector3 GetInteractorPos(UnityEngine.XR.Interaction.Toolkit.Interactors.IXRSelectInteractor interactor)
     {
@@ -95,8 +122,13 @@ public class TearObject : MonoBehaviour
             SpawnHalves(posA, posB);
         }
 
-        // Deactivate original object after tearing.
+        LetterSpawner.Instance?.SpawnWord(word, tearCenter);
+        
+        var networkObj = GetComponent<NetworkedObject>();
+        if (networkObj != null)
+            networkObj.BroadcastActiveSelf(false);
         gameObject.SetActive(false);
+
     }
 
     void SpawnHalves(Vector3 posA, Vector3 posB)
@@ -128,10 +160,4 @@ public class TearObject : MonoBehaviour
         if (rb)
             rb.linearVelocity = velocity;
     }
-
-    // static string CleanName(string n)
-    // {
-    //     if (string.IsNullOrWhiteSpace(n)) return "";
-    //     return n.Replace("(Clone)", "").Trim();
-    // }
 }
