@@ -25,6 +25,7 @@ IL2CPP_EXTERN_C_CONST Il2CppCodeGenModule g_System_Runtime_Serialization_CodeGen
 IL2CPP_EXTERN_C_CONST Il2CppCodeGenModule g_System_Xml_CodeGenModule;
 IL2CPP_EXTERN_C_CONST Il2CppCodeGenModule g_Ubiq_CodeGenModule;
 IL2CPP_EXTERN_C_CONST Il2CppCodeGenModule g_Ubiq_Demo_CodeGenModule;
+IL2CPP_EXTERN_C_CONST Il2CppCodeGenModule g_Ubiq_Examples_CodeGenModule;
 IL2CPP_EXTERN_C_CONST Il2CppCodeGenModule g_Ubiq_Logging_Utf8Json_CodeGenModule;
 IL2CPP_EXTERN_C_CONST Il2CppCodeGenModule g_Ubiq_Voip_Implementations_CodeGenModule;
 IL2CPP_EXTERN_C_CONST Il2CppCodeGenModule g_Ubiq_Voip_Implementations_Unity_CodeGenModule;
@@ -103,7 +104,7 @@ IL2CPP_EXTERN_C_CONST Il2CppCodeGenModule g_Unity_XR_OpenXR_Features_RuntimeDebu
 IL2CPP_EXTERN_C_CONST Il2CppCodeGenModule g___Generated_CodeGenModule;
 IL2CPP_EXTERN_C_CONST Il2CppCodeGenModule g_mscorlib_CodeGenModule;
 IL2CPP_EXTERN_C const Il2CppCodeGenModule* g_CodeGenModules[];
-const Il2CppCodeGenModule* g_CodeGenModules[87] = 
+const Il2CppCodeGenModule* g_CodeGenModules[88] = 
 {
 	(&g_AssemblyU2DCSharp_CodeGenModule),
 	(&g_Mono_Security_CodeGenModule),
@@ -115,6 +116,7 @@ const Il2CppCodeGenModule* g_CodeGenModules[87] =
 	(&g_System_Xml_CodeGenModule),
 	(&g_Ubiq_CodeGenModule),
 	(&g_Ubiq_Demo_CodeGenModule),
+	(&g_Ubiq_Examples_CodeGenModule),
 	(&g_Ubiq_Logging_Utf8Json_CodeGenModule),
 	(&g_Ubiq_Voip_Implementations_CodeGenModule),
 	(&g_Ubiq_Voip_Implementations_Unity_CodeGenModule),
@@ -198,20 +200,20 @@ const Il2CppCodeRegistration g_CodeRegistration =
 {
 	144,
 	g_ReversePInvokeWrapperPointers,
-	130636,
+	130658,
 	g_Il2CppGenericMethodPointers,
 	g_Il2CppGenericAdjustorThunks,
-	28168,
+	28180,
 	g_Il2CppInvokerPointers,
 	4012,
 	g_UnresolvedVirtualMethodPointers,
 	g_UnresolvedInstanceMethodPointers,
 	g_UnresolvedStaticMethodPointers,
-	1149,
+	1152,
 	g_Il2CppInteropData,
 	0,
 	NULL,
-	87,
+	88,
 	g_CodeGenModules,
 };
 IL2CPP_EXTERN_C_CONST Il2CppMetadataRegistration g_MetadataRegistration;

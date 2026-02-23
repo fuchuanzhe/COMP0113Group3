@@ -83,6 +83,7 @@ public class LetterSpawner : MonoBehaviour
             yield return null;
         }
         yield return null;
+        yield return null;
         obj.BroadcastPosAndRot();
     }
 }

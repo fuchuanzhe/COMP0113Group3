@@ -22,7 +22,7 @@ public class AssignSeats : MonoBehaviour
         });
 
         roomClient.OnPeerAdded.AddListener(_ => Check());
-        roomClient.OnPeerRemoved.AddListener(_ => Check());
+        roomClient.OnPeerRemoved.AddListener(_ => CleanupSeats());
     }
 
     private void Check()
@@ -44,9 +44,35 @@ public class AssignSeats : MonoBehaviour
         var allUuids = roomClient.Peers.Select(p => p.uuid).Append(roomClient.Me.uuid).OrderBy(x => x).ToList();
         int index = Mathf.Clamp(allUuids.IndexOf(roomClient.Me.uuid), 0, seats.Length - 1);
 
+        string key = $"seat_{index}";
+
+        // TO BE HANDLED: may cause problem if players > seats 
+        while (!string.IsNullOrEmpty(roomClient.Room[key]))
+        {
+            index = (index + 1) % seats.Length;
+            key = $"seat_{index}";
+        }
         avatarRoot.position = seats[index].position;
         avatarRoot.rotation = seats[index].rotation;
 
+        roomClient.Room[key] = roomClient.Me.uuid;  
+
         Debug.Log($"Assigned seat {index}.");
+    }
+
+    private void CleanupSeats()
+    {
+        var activeUuids = roomClient.Peers.Select(p => p.uuid).Append(roomClient.Me.uuid).OrderBy(x => x).ToList();
+
+        for (int i = 0; i < seats.Length; i++)
+        {
+            string key = $"seat_{i}";
+            string occupant = roomClient.Room[key];
+
+            if (!string.IsNullOrEmpty(occupant) && !activeUuids.Contains(occupant))
+            {
+                roomClient.Room[key] = "";
+            }
+        }
     }
 }

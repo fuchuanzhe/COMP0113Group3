@@ -24,6 +24,7 @@ public class TearObject : MonoBehaviour
     public string word { get; private set; }
     bool _armed;
     float _armedAt;
+    public AudioClip clip;
 
     void Reset()
     {
@@ -85,7 +86,7 @@ public class TearObject : MonoBehaviour
         }
 
         LetterSpawner.Instance?.SpawnWord(word, tearCenter);
-
+        AudioSource.PlayClipAtPoint(clip, transform.position);
         // Network deactivate
         var networkObj = GetComponent<NetworkedObject>();
         if (networkObj != null)
@@ -123,12 +124,11 @@ public class TearObject : MonoBehaviour
         }
 
         LetterSpawner.Instance?.SpawnWord(word, tearCenter);
-        
+        AudioSource.PlayClipAtPoint(clip, transform.position);
         var networkObj = GetComponent<NetworkedObject>();
-        if (networkObj != null)
-            networkObj.BroadcastActiveSelf(false);
+        networkObj.BroadcastActiveSelf(false);
         gameObject.SetActive(false);
-
+        Destroy(gameObject);
     }
 
     void SpawnHalves(Vector3 posA, Vector3 posB)

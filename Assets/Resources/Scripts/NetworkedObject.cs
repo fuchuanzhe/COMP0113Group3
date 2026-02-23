@@ -1,11 +1,16 @@
 using UnityEngine;
 using Ubiq.Messaging;
+using Ubiq.Rooms;
+using UnityEngine.XR.Interaction.Toolkit;
+using UnityEngine.XR.Interaction.Toolkit.Interactables;
 
 public class NetworkedObject : MonoBehaviour
 {
     private NetworkContext context;
+    private RoomClient roomClient;
     private Vector3 lastPosition;
-
+    private string id;
+    private XRGrabInteractable grab;
     private struct Message
     {
         public bool isActive;
@@ -20,14 +25,53 @@ public class NetworkedObject : MonoBehaviour
         }
     }
 
+    private string LocalId => roomClient.Me.uuid;
+    private string currentOwner;
+
     void Start()
     {
         context = NetworkScene.Register(this);
+        roomClient = FindAnyObjectByType<RoomClient>();
+        id = NetworkId.Create(this).ToString();
+
+        grab = GetComponent<XRGrabInteractable>();
+        if (grab != null)
+        {
+            grab.selectEntered.AddListener(OnGrab);
+            grab.selectExited.AddListener(OnRelease);
+        }
+        roomClient.OnRoomUpdated.AddListener(OnRoomUpdated);
+    }
+
+    private bool IsOwner()
+    {
+        return currentOwner == LocalId;
+    }
+
+    private void OnGrab(SelectEnterEventArgs args)
+    {
+        if (!string.IsNullOrEmpty(currentOwner) && currentOwner != LocalId)
+        {
+            var interactor = args.interactorObject;
+            grab.interactionManager.SelectExit(interactor, grab);
+            return;
+        }
+        roomClient.Room[id] = LocalId;
+    }
+
+    private void OnRelease(SelectExitEventArgs args)
+    {
+        if (currentOwner == LocalId) roomClient.Room[id] = "";
+    }
+
+    private void OnRoomUpdated(IRoom room)
+    {
+        currentOwner = roomClient.Room[id];
     }
 
     void Update()
     {
-        if(lastPosition != transform.localPosition)
+        if(IsOwner() && lastPosition != transform.localPosition)
         {
             lastPosition = transform.localPosition;
             context.SendJson(new Message(transform, gameObject.activeSelf));
