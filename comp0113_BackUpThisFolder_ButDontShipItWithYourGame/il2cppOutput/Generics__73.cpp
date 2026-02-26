@@ -57,6 +57,13 @@ struct InvokerActionInvoker4<T1*, T2*, T3*, T4*>
 		method->invoker_method(methodPtr, method, obj, params, params[3]);
 	}
 };
+struct ConstrainedActionInvoker0
+{
+	static inline void Invoke (RuntimeClass* type, const RuntimeMethod* constrainedMethod, void* boxBuffer, void* obj)
+	{
+		il2cpp_codegen_runtime_constrained_call(type, constrainedMethod, boxBuffer, obj, NULL, NULL);
+	}
+};
 
 struct Dictionary_2_t5887FE20B6476939FAE41CAF24B3AD7856A40432;
 struct Dictionary_2_t1032E1650E28EB165B6746710F283881AE1D175A;
@@ -106,6 +113,7 @@ struct Dictionary_2_t4A0148843FDD82FE00634A604A772FC4EE3A0379;
 struct Dictionary_2_tD63EB1AE0932E2A4B7488F4CBA95C4C7520684F1;
 struct Dictionary_2_t433D1FE2CDB69C9F583F79D5252A34112439D0AD;
 struct Dictionary_2_t645C7B1DAE2D839B52A5E387C165CE13D5465B00;
+struct ExecuteJobFunction_t4097B1CB286619BF21D763B780301632ECD7472A;
 struct ExecuteJobFunction_t2A91C4914E48632C10A6694A7A164647C717BF90;
 struct ExecuteJobFunction_tE0FD609CBA30E264D807752E1ADC10FBB9AD3856;
 struct ExecuteJobFunction_t83786F78DE9941CB3DBCE09FDFDEB1CC7BEAF1FF;
@@ -1592,6 +1600,26 @@ struct Enumerator_t5A027953D647D8819B20995746D7FD211CB2299C
 	int32_t ____version;
 	int64_t ____currentKey;
 };
+struct JobStruct_1_tBBD5EB084129BE15181E5CBC03DFA067AF4EA1E3 
+{
+	union
+	{
+		struct
+		{
+		};
+		uint8_t JobStruct_1_t907E38C5F9ABC420CAA6B6695A2E335208350571__padding[1];
+	};
+};
+struct JobStruct_1_t7DA9941879B20347789683661078D0F3B528FA92 
+{
+	union
+	{
+		struct
+		{
+		};
+		uint8_t JobStruct_1_t907E38C5F9ABC420CAA6B6695A2E335208350571__padding[1];
+	};
+};
 struct JobStruct_1_t991D9919F0467821B9AA3F6C283A7962DD7A5746 
 {
 	union
@@ -2003,6 +2031,16 @@ struct AllocatorHandle_t3CA09720B1F89F91A8DDBA95E74C28A1EC3E3148
 {
 	uint16_t ___Index;
 	uint16_t ___Version;
+};
+struct DummyJob_t50C3B74B58010EF7C493FD54DE47FA89000811CF 
+{
+	union
+	{
+		struct
+		{
+		};
+		uint8_t DummyJob_t50C3B74B58010EF7C493FD54DE47FA89000811CF__padding[1];
+	};
 };
 struct CellStreamingScratchBufferLayout_t9C3A198B967DCECDB79C97C05BEFAEA74E70077E 
 {
@@ -2923,6 +2961,12 @@ struct Enumerator_tB9D4CA64A6A75AE1590458FF5142BA48BC6AC9C8
 	int32_t ____version;
 	ValueTuple_2_tBC19AE73793D615D180F320AB46A541EF61AFBF9 ____currentKey;
 };
+struct ExecuteJobFunction_tEB2DB472090D9B49DDA26E79725E7B11C72221A1  : public MulticastDelegate_t
+{
+};
+struct ExecuteJobFunction_t4097B1CB286619BF21D763B780301632ECD7472A  : public MulticastDelegate_t
+{
+};
 struct ExecuteJobFunction_t83786F78DE9941CB3DBCE09FDFDEB1CC7BEAF1FF  : public MulticastDelegate_t
 {
 };
@@ -3217,6 +3261,14 @@ struct ExecuteJobFunction_t9001D08D7F640B4D461381CFB1E786AE300EC5C5  : public Mu
 };
 struct ExecuteJobFunction_tDEBE668CBD37C529206B5E52BE8552F0AE63BF78  : public MulticastDelegate_t
 {
+};
+struct JobStruct_1_tBBD5EB084129BE15181E5CBC03DFA067AF4EA1E3_StaticFields
+{
+	SharedStatic_1_t33583FDAFE4C36D5BA68FE6F5444170BB42F98C0 ___jobReflectionData;
+};
+struct JobStruct_1_t7DA9941879B20347789683661078D0F3B528FA92_StaticFields
+{
+	SharedStatic_1_t33583FDAFE4C36D5BA68FE6F5444170BB42F98C0 ___jobReflectionData;
 };
 struct JobStruct_1_t991D9919F0467821B9AA3F6C283A7962DD7A5746_StaticFields
 {
@@ -5966,6 +6018,8 @@ struct EntryU5BU5D_tEB41C94D728A2A116E7C01CCB2ACEBA8AD296C60  : public RuntimeAr
 
 
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR intptr_t* SharedStatic_1_get_Data_m42DD928B26C146E0D920D5348F2CEBC3C7F21C3D_gshared (SharedStatic_1_t33583FDAFE4C36D5BA68FE6F5444170BB42F98C0* __this, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ExecuteJobFunction__ctor_m67C79E9C986881D688742040F7893666A615EA1D_gshared (ExecuteJobFunction_t4097B1CB286619BF21D763B780301632ECD7472A* __this, RuntimeObject* ___0_object, intptr_t ___1_method, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR SharedStatic_1_t33583FDAFE4C36D5BA68FE6F5444170BB42F98C0 SharedStatic_1_GetOrCreate_TisJobStruct_1_t7DA9941879B20347789683661078D0F3B528FA92_m01EFED6B6764D334970A76EAB32105EB0104C932_gshared (uint32_t ___0_alignment, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ExecuteJobFunction__ctor_mFB38072F3135CDD27E2D8C77B27BBDB311CFFAB0_gshared (ExecuteJobFunction_t2A91C4914E48632C10A6694A7A164647C717BF90* __this, RuntimeObject* ___0_object, intptr_t ___1_method, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR SharedStatic_1_t33583FDAFE4C36D5BA68FE6F5444170BB42F98C0 SharedStatic_1_GetOrCreate_TisJobStruct_1_t991D9919F0467821B9AA3F6C283A7962DD7A5746_m40C2643C8BD73F9229E8A1A957232E93860A93B2_gshared (uint32_t ___0_alignment, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ExecuteJobFunction__ctor_m1405D5CCBFC032754717C02D1B180E277A7C1244_gshared (ExecuteJobFunction_tE0FD609CBA30E264D807752E1ADC10FBB9AD3856* __this, RuntimeObject* ___0_object, intptr_t ___1_method, const RuntimeMethod* method) ;
@@ -6189,11 +6243,20 @@ inline intptr_t* SharedStatic_1_get_Data_m42DD928B26C146E0D920D5348F2CEBC3C7F21C
 }
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR bool IntPtr_op_Equality_m7D9CDCDE9DC2A0C2C614633F4921E90187FAB271_inline (intptr_t ___0_value1, intptr_t ___1_value2, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Type_t* Type_GetTypeFromHandle_m6062B81682F79A4D6DF2640692EE6D9987858C57 (RuntimeTypeHandle_t332A452B8B6179E4469B69525D0FE82A88030F7B ___0_handle, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR intptr_t JobsUtility_CreateJobReflectionData_m17265DED7C2DBB0B2130896E2B8AC4CF5BD7FCE7 (Type_t* ___0_type, RuntimeObject* ___1_managedJobFunction0, RuntimeObject* ___2_managedJobFunction1, RuntimeObject* ___3_managedJobFunction2, const RuntimeMethod* method) ;
+inline void ExecuteJobFunction__ctor_m67C79E9C986881D688742040F7893666A615EA1D (ExecuteJobFunction_t4097B1CB286619BF21D763B780301632ECD7472A* __this, RuntimeObject* ___0_object, intptr_t ___1_method, const RuntimeMethod* method)
+{
+	((  void (*) (ExecuteJobFunction_t4097B1CB286619BF21D763B780301632ECD7472A*, RuntimeObject*, intptr_t, const RuntimeMethod*))ExecuteJobFunction__ctor_m67C79E9C986881D688742040F7893666A615EA1D_gshared)(__this, ___0_object, ___1_method, method);
+}
+IL2CPP_EXTERN_C IL2CPP_NO_INLINE IL2CPP_METHOD_ATTR void DummyJob_Execute_mFD529845FB6001C124D6E93F4CB30AC87842D085 (DummyJob_t50C3B74B58010EF7C493FD54DE47FA89000811CF* IL2CPP_PARAMETER_RESTRICT __this, const RuntimeMethod* method) ;
+inline SharedStatic_1_t33583FDAFE4C36D5BA68FE6F5444170BB42F98C0 SharedStatic_1_GetOrCreate_TisJobStruct_1_t7DA9941879B20347789683661078D0F3B528FA92_m01EFED6B6764D334970A76EAB32105EB0104C932 (uint32_t ___0_alignment, const RuntimeMethod* method)
+{
+	return ((  SharedStatic_1_t33583FDAFE4C36D5BA68FE6F5444170BB42F98C0 (*) (uint32_t, const RuntimeMethod*))SharedStatic_1_GetOrCreate_TisJobStruct_1_t7DA9941879B20347789683661078D0F3B528FA92_m01EFED6B6764D334970A76EAB32105EB0104C932_gshared)(___0_alignment, method);
+}
 inline void ExecuteJobFunction__ctor_mFB38072F3135CDD27E2D8C77B27BBDB311CFFAB0 (ExecuteJobFunction_t2A91C4914E48632C10A6694A7A164647C717BF90* __this, RuntimeObject* ___0_object, intptr_t ___1_method, const RuntimeMethod* method)
 {
 	((  void (*) (ExecuteJobFunction_t2A91C4914E48632C10A6694A7A164647C717BF90*, RuntimeObject*, intptr_t, const RuntimeMethod*))ExecuteJobFunction__ctor_mFB38072F3135CDD27E2D8C77B27BBDB311CFFAB0_gshared)(__this, ___0_object, ___1_method, method);
 }
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR intptr_t JobsUtility_CreateJobReflectionData_m17265DED7C2DBB0B2130896E2B8AC4CF5BD7FCE7 (Type_t* ___0_type, RuntimeObject* ___1_managedJobFunction0, RuntimeObject* ___2_managedJobFunction1, RuntimeObject* ___3_managedJobFunction2, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_NO_INLINE IL2CPP_METHOD_ATTR void DrawCallJob_Execute_m772E79CB22259A292B0C7852DE63822BB3C62345 (DrawCallJob_t3EA2ABC822AD5DF50675A5B437DAB927DB95215D* IL2CPP_PARAMETER_RESTRICT __this, const RuntimeMethod* method) ;
 inline SharedStatic_1_t33583FDAFE4C36D5BA68FE6F5444170BB42F98C0 SharedStatic_1_GetOrCreate_TisJobStruct_1_t991D9919F0467821B9AA3F6C283A7962DD7A5746_m40C2643C8BD73F9229E8A1A957232E93860A93B2 (uint32_t ___0_alignment, const RuntimeMethod* method)
 {
@@ -7078,7 +7141,150 @@ inline void KeyCollection_CopyTo_m69D73959CF06C2CEC6BA95710B33F8305721D713 (KeyC
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 41091
+// Method Definition Index: 41094
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void JobStruct_1_Initialize_mD68D59DF663CF622AC5A988FFEEF432CF320F77A_gshared (const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&SharedStatic_1_get_Data_m42DD928B26C146E0D920D5348F2CEBC3C7F21C3D_RuntimeMethod_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	bool V_0 = false;
+	{
+		il2cpp_codegen_runtime_class_init_inline(il2cpp_rgctx_data(InitializedTypeInfo(method->klass)->rgctx_data, 1));
+		intptr_t* L_0;
+		L_0 = SharedStatic_1_get_Data_m42DD928B26C146E0D920D5348F2CEBC3C7F21C3D((&((JobStruct_1_tBBD5EB084129BE15181E5CBC03DFA067AF4EA1E3_StaticFields*)il2cpp_codegen_static_fields_for(il2cpp_rgctx_data(InitializedTypeInfo(method->klass)->rgctx_data, 1)))->___jobReflectionData), SharedStatic_1_get_Data_m42DD928B26C146E0D920D5348F2CEBC3C7F21C3D_RuntimeMethod_var);
+		intptr_t L_1 = *((intptr_t*)L_0);
+		bool L_2;
+		L_2 = IntPtr_op_Equality_m7D9CDCDE9DC2A0C2C614633F4921E90187FAB271_inline(L_1, 0, NULL);
+		V_0 = L_2;
+		bool L_3 = V_0;
+		if (!L_3)
+		{
+			goto IL_0042;
+		}
+	}
+	{
+		il2cpp_codegen_runtime_class_init_inline(il2cpp_rgctx_data(InitializedTypeInfo(method->klass)->rgctx_data, 1));
+		intptr_t* L_4;
+		L_4 = SharedStatic_1_get_Data_m42DD928B26C146E0D920D5348F2CEBC3C7F21C3D((&((JobStruct_1_tBBD5EB084129BE15181E5CBC03DFA067AF4EA1E3_StaticFields*)il2cpp_codegen_static_fields_for(il2cpp_rgctx_data(InitializedTypeInfo(method->klass)->rgctx_data, 1)))->___jobReflectionData), SharedStatic_1_get_Data_m42DD928B26C146E0D920D5348F2CEBC3C7F21C3D_RuntimeMethod_var);
+		RuntimeTypeHandle_t332A452B8B6179E4469B69525D0FE82A88030F7B L_5 = { reinterpret_cast<intptr_t> (il2cpp_rgctx_type(InitializedTypeInfo(method->klass)->rgctx_data, 2)) };
+		il2cpp_codegen_runtime_class_init_inline(il2cpp_defaults.systemtype_class);
+		Type_t* L_6;
+		L_6 = Type_GetTypeFromHandle_m6062B81682F79A4D6DF2640692EE6D9987858C57(L_5, NULL);
+		ExecuteJobFunction_tEB2DB472090D9B49DDA26E79725E7B11C72221A1* L_7 = (ExecuteJobFunction_tEB2DB472090D9B49DDA26E79725E7B11C72221A1*)il2cpp_codegen_object_new(il2cpp_rgctx_data(InitializedTypeInfo(method->klass)->rgctx_data, 4));
+		((  void (*) (ExecuteJobFunction_tEB2DB472090D9B49DDA26E79725E7B11C72221A1*, RuntimeObject*, intptr_t, const RuntimeMethod*))il2cpp_codegen_get_direct_method_pointer(il2cpp_rgctx_method(InitializedTypeInfo(method->klass)->rgctx_data, 5)))(L_7, NULL, (intptr_t)((void*)il2cpp_rgctx_method(InitializedTypeInfo(method->klass)->rgctx_data, 3)), il2cpp_rgctx_method(InitializedTypeInfo(method->klass)->rgctx_data, 5));
+		intptr_t L_8;
+		L_8 = JobsUtility_CreateJobReflectionData_m17265DED7C2DBB0B2130896E2B8AC4CF5BD7FCE7(L_6, (RuntimeObject*)L_7, NULL, NULL, NULL);
+		*((intptr_t*)L_4) = (intptr_t)L_8;
+	}
+
+IL_0042:
+	{
+		return;
+	}
+}
+// Method Definition Index: 41095
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void JobStruct_1_Execute_mB729E51A77249BAE4ED11B27FCDF75B23A46E4AD_gshared (Il2CppFullySharedGenericStruct* ___0_data, intptr_t ___1_additionalPtr, intptr_t ___2_bufferRangePatchData, JobRanges_t5A1CDFF3E0DB1197050E1E28617B517C15AF6DC3* ___3_ranges, int32_t ___4_jobIndex, const RuntimeMethod* method) 
+{
+	void* L_1 = alloca(Il2CppFakeBoxBuffer::SizeNeededFor(il2cpp_rgctx_data(InitializedTypeInfo(method->klass)->rgctx_data, 7)));
+	{
+		Il2CppFullySharedGenericStruct* L_0 = ___0_data;
+		ConstrainedActionInvoker0::Invoke(il2cpp_rgctx_data(InitializedTypeInfo(method->klass)->rgctx_data, 7), il2cpp_rgctx_method(InitializedTypeInfo(method->klass)->rgctx_data, 8), L_1, (void*)L_0);
+		return;
+	}
+}
+// Method Definition Index: 41096
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void JobStruct_1__cctor_m44B87E61721729ADE176667ED80FA440823623CE_gshared (const RuntimeMethod* method) 
+{
+	{
+		SharedStatic_1_t33583FDAFE4C36D5BA68FE6F5444170BB42F98C0 L_0;
+		L_0 = ((  SharedStatic_1_t33583FDAFE4C36D5BA68FE6F5444170BB42F98C0 (*) (uint32_t, const RuntimeMethod*))il2cpp_codegen_get_direct_method_pointer(il2cpp_rgctx_method(InitializedTypeInfo(method->klass)->rgctx_data, 9)))((uint32_t)0, il2cpp_rgctx_method(InitializedTypeInfo(method->klass)->rgctx_data, 9));
+		((JobStruct_1_tBBD5EB084129BE15181E5CBC03DFA067AF4EA1E3_StaticFields*)il2cpp_codegen_static_fields_for(il2cpp_rgctx_data(InitializedTypeInfo(method->klass)->rgctx_data, 1)))->___jobReflectionData = L_0;
+		return;
+	}
+}
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+// Method Definition Index: 41094
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void JobStruct_1_Initialize_m30FE84AEAF607E7983054046E8AA93F128BB8166_gshared (const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&SharedStatic_1_get_Data_m42DD928B26C146E0D920D5348F2CEBC3C7F21C3D_RuntimeMethod_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	bool V_0 = false;
+	{
+		il2cpp_codegen_runtime_class_init_inline(il2cpp_rgctx_data(InitializedTypeInfo(method->klass)->rgctx_data, 1));
+		intptr_t* L_0;
+		L_0 = SharedStatic_1_get_Data_m42DD928B26C146E0D920D5348F2CEBC3C7F21C3D((&((JobStruct_1_t7DA9941879B20347789683661078D0F3B528FA92_StaticFields*)il2cpp_codegen_static_fields_for(il2cpp_rgctx_data(InitializedTypeInfo(method->klass)->rgctx_data, 1)))->___jobReflectionData), SharedStatic_1_get_Data_m42DD928B26C146E0D920D5348F2CEBC3C7F21C3D_RuntimeMethod_var);
+		intptr_t L_1 = *((intptr_t*)L_0);
+		bool L_2;
+		L_2 = IntPtr_op_Equality_m7D9CDCDE9DC2A0C2C614633F4921E90187FAB271_inline(L_1, 0, NULL);
+		V_0 = L_2;
+		bool L_3 = V_0;
+		if (!L_3)
+		{
+			goto IL_0042;
+		}
+	}
+	{
+		il2cpp_codegen_runtime_class_init_inline(il2cpp_rgctx_data(InitializedTypeInfo(method->klass)->rgctx_data, 1));
+		intptr_t* L_4;
+		L_4 = SharedStatic_1_get_Data_m42DD928B26C146E0D920D5348F2CEBC3C7F21C3D((&((JobStruct_1_t7DA9941879B20347789683661078D0F3B528FA92_StaticFields*)il2cpp_codegen_static_fields_for(il2cpp_rgctx_data(InitializedTypeInfo(method->klass)->rgctx_data, 1)))->___jobReflectionData), SharedStatic_1_get_Data_m42DD928B26C146E0D920D5348F2CEBC3C7F21C3D_RuntimeMethod_var);
+		RuntimeTypeHandle_t332A452B8B6179E4469B69525D0FE82A88030F7B L_5 = { reinterpret_cast<intptr_t> (il2cpp_rgctx_type(InitializedTypeInfo(method->klass)->rgctx_data, 2)) };
+		il2cpp_codegen_runtime_class_init_inline(il2cpp_defaults.systemtype_class);
+		Type_t* L_6;
+		L_6 = Type_GetTypeFromHandle_m6062B81682F79A4D6DF2640692EE6D9987858C57(L_5, NULL);
+		ExecuteJobFunction_t4097B1CB286619BF21D763B780301632ECD7472A* L_7 = (ExecuteJobFunction_t4097B1CB286619BF21D763B780301632ECD7472A*)il2cpp_codegen_object_new(il2cpp_rgctx_data(InitializedTypeInfo(method->klass)->rgctx_data, 4));
+		ExecuteJobFunction__ctor_m67C79E9C986881D688742040F7893666A615EA1D(L_7, NULL, (intptr_t)((void*)il2cpp_rgctx_method(InitializedTypeInfo(method->klass)->rgctx_data, 3)), il2cpp_rgctx_method(InitializedTypeInfo(method->klass)->rgctx_data, 5));
+		intptr_t L_8;
+		L_8 = JobsUtility_CreateJobReflectionData_m17265DED7C2DBB0B2130896E2B8AC4CF5BD7FCE7(L_6, (RuntimeObject*)L_7, NULL, NULL, NULL);
+		*((intptr_t*)L_4) = (intptr_t)L_8;
+	}
+
+IL_0042:
+	{
+		return;
+	}
+}
+// Method Definition Index: 41095
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void JobStruct_1_Execute_m66BEDE92B30DA27E7270908813482ED2ADEBC346_gshared (DummyJob_t50C3B74B58010EF7C493FD54DE47FA89000811CF* ___0_data, intptr_t ___1_additionalPtr, intptr_t ___2_bufferRangePatchData, JobRanges_t5A1CDFF3E0DB1197050E1E28617B517C15AF6DC3* ___3_ranges, int32_t ___4_jobIndex, const RuntimeMethod* method) 
+{
+	{
+		DummyJob_t50C3B74B58010EF7C493FD54DE47FA89000811CF* L_0 = ___0_data;
+		DummyJob_Execute_mFD529845FB6001C124D6E93F4CB30AC87842D085(L_0, il2cpp_rgctx_method(InitializedTypeInfo(method->klass)->rgctx_data, 8));
+		return;
+	}
+}
+// Method Definition Index: 41096
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void JobStruct_1__cctor_m2F19F411E0A328BC35B8FCD9557AA9409B12D070_gshared (const RuntimeMethod* method) 
+{
+	{
+		SharedStatic_1_t33583FDAFE4C36D5BA68FE6F5444170BB42F98C0 L_0;
+		L_0 = SharedStatic_1_GetOrCreate_TisJobStruct_1_t7DA9941879B20347789683661078D0F3B528FA92_m01EFED6B6764D334970A76EAB32105EB0104C932((uint32_t)0, il2cpp_rgctx_method(InitializedTypeInfo(method->klass)->rgctx_data, 9));
+		((JobStruct_1_t7DA9941879B20347789683661078D0F3B528FA92_StaticFields*)il2cpp_codegen_static_fields_for(il2cpp_rgctx_data(InitializedTypeInfo(method->klass)->rgctx_data, 1)))->___jobReflectionData = L_0;
+		return;
+	}
+}
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+// Method Definition Index: 41094
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void JobStruct_1_Initialize_m7EB9202E9FB29D7E43D7A744F5955FF7F88FBAA4_gshared (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -7122,7 +7328,7 @@ IL_0042:
 		return;
 	}
 }
-// Method Definition Index: 41092
+// Method Definition Index: 41095
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void JobStruct_1_Execute_m752838475EE8F2556E6EDF874DAC18736DC71C01_gshared (DrawCallJob_t3EA2ABC822AD5DF50675A5B437DAB927DB95215D* ___0_data, intptr_t ___1_additionalPtr, intptr_t ___2_bufferRangePatchData, JobRanges_t5A1CDFF3E0DB1197050E1E28617B517C15AF6DC3* ___3_ranges, int32_t ___4_jobIndex, const RuntimeMethod* method) 
 {
 	{
@@ -7131,7 +7337,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void JobStruct_1_Execute_m752838475EE8F2556E6
 		return;
 	}
 }
-// Method Definition Index: 41093
+// Method Definition Index: 41096
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void JobStruct_1__cctor_m7624D29D05F7174CEC0BF60C238D5FA9147F8D80_gshared (const RuntimeMethod* method) 
 {
 	{
@@ -7149,7 +7355,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void JobStruct_1__cctor_m7624D29D05F7174CEC0B
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 41091
+// Method Definition Index: 41094
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void JobStruct_1_Initialize_m39B129120A52DD3883A210A865F6D870BDF40D7A_gshared (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -7193,7 +7399,7 @@ IL_0042:
 		return;
 	}
 }
-// Method Definition Index: 41092
+// Method Definition Index: 41095
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void JobStruct_1_Execute_mA8F267B96DC82219D755C2A4CEF2030512CC0D78_gshared (ComputeInstancesOffsetAndResizeInstancesArrayJob_tAC7DC0467C6B3BCB1818A4AF66A822EA0F5DB2B8* ___0_data, intptr_t ___1_additionalPtr, intptr_t ___2_bufferRangePatchData, JobRanges_t5A1CDFF3E0DB1197050E1E28617B517C15AF6DC3* ___3_ranges, int32_t ___4_jobIndex, const RuntimeMethod* method) 
 {
 	{
@@ -7202,7 +7408,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void JobStruct_1_Execute_mA8F267B96DC82219D75
 		return;
 	}
 }
-// Method Definition Index: 41093
+// Method Definition Index: 41096
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void JobStruct_1__cctor_m397CB91DB5F0BF79FFE8D6E00A65A73791844BBA_gshared (const RuntimeMethod* method) 
 {
 	{
@@ -7220,7 +7426,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void JobStruct_1__cctor_m397CB91DB5F0BF79FFE8
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 41091
+// Method Definition Index: 41094
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void JobStruct_1_Initialize_m8441506830B8E0EFF702C8C467151ADBB7D406AB_gshared (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -7264,7 +7470,7 @@ IL_0042:
 		return;
 	}
 }
-// Method Definition Index: 41092
+// Method Definition Index: 41095
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void JobStruct_1_Execute_m64F72A52E56B62F794AE8158B3323B799BA7CABC_gshared (LightProbesQueryDisposeJob_tAE57295DD9973A7109271F8114F063D36C5C489C* ___0_data, intptr_t ___1_additionalPtr, intptr_t ___2_bufferRangePatchData, JobRanges_t5A1CDFF3E0DB1197050E1E28617B517C15AF6DC3* ___3_ranges, int32_t ___4_jobIndex, const RuntimeMethod* method) 
 {
 	{
@@ -7273,7 +7479,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void JobStruct_1_Execute_m64F72A52E56B62F794A
 		return;
 	}
 }
-// Method Definition Index: 41093
+// Method Definition Index: 41096
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void JobStruct_1__cctor_mC32CEB7814E92E7518428AD1B3BD028DD10CA65A_gshared (const RuntimeMethod* method) 
 {
 	{
@@ -7291,7 +7497,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void JobStruct_1__cctor_mC32CEB7814E92E751842
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 41091
+// Method Definition Index: 41094
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void JobStruct_1_Initialize_m039EED5D3DB4D044287E93FA09B81CD944266228_gshared (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -7335,7 +7541,7 @@ IL_0042:
 		return;
 	}
 }
-// Method Definition Index: 41092
+// Method Definition Index: 41095
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void JobStruct_1_Execute_mE4152A87DE1561E8B2EC2827333B9386FFC688BA_gshared (ConstructJob_tAB939BE2717219C96873C3255F3284782D9B44F4* ___0_data, intptr_t ___1_additionalPtr, intptr_t ___2_bufferRangePatchData, JobRanges_t5A1CDFF3E0DB1197050E1E28617B517C15AF6DC3* ___3_ranges, int32_t ___4_jobIndex, const RuntimeMethod* method) 
 {
 	{
@@ -7344,7 +7550,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void JobStruct_1_Execute_mE4152A87DE1561E8B2E
 		return;
 	}
 }
-// Method Definition Index: 41093
+// Method Definition Index: 41096
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void JobStruct_1__cctor_m97716BA8F3866ED55B446330519F2792B5182EDD_gshared (const RuntimeMethod* method) 
 {
 	{
@@ -7362,7 +7568,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void JobStruct_1__cctor_m97716BA8F3866ED55B44
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 41091
+// Method Definition Index: 41094
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void JobStruct_1_Initialize_m1CDDE6C5F689B160BF00A20B7FCA07AB4668566F_gshared (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -7406,7 +7612,7 @@ IL_0042:
 		return;
 	}
 }
-// Method Definition Index: 41092
+// Method Definition Index: 41095
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void JobStruct_1_Execute_mCE9B03A8FA4F616F9C23BBA4001317E43B185F09_gshared (ConstructJobList_t9B7D7E4828A1206B525AB228F2A5C31DE9C55707* ___0_data, intptr_t ___1_additionalPtr, intptr_t ___2_bufferRangePatchData, JobRanges_t5A1CDFF3E0DB1197050E1E28617B517C15AF6DC3* ___3_ranges, int32_t ___4_jobIndex, const RuntimeMethod* method) 
 {
 	{
@@ -7415,7 +7621,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void JobStruct_1_Execute_mCE9B03A8FA4F616F9C2
 		return;
 	}
 }
-// Method Definition Index: 41093
+// Method Definition Index: 41096
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void JobStruct_1__cctor_mC71CE178F1C8F986A9FC5157493A988ED82BC65A_gshared (const RuntimeMethod* method) 
 {
 	{
@@ -7433,7 +7639,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void JobStruct_1__cctor_mC71CE178F1C8F986A9FC
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 41091
+// Method Definition Index: 41094
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void JobStruct_1_Initialize_m205AE8A0CFF6F8F96FC855F5882C319B2C6405C8_gshared (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -7477,7 +7683,7 @@ IL_0042:
 		return;
 	}
 }
-// Method Definition Index: 41092
+// Method Definition Index: 41095
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void JobStruct_1_Execute_m5AE8D5B11903017FDA72A91669BA47FD9980BED1_gshared (AddSimulationBoneBurst_t39B85FCB5FC717CB51279B16229E6A0E15EF4E99* ___0_data, intptr_t ___1_additionalPtr, intptr_t ___2_bufferRangePatchData, JobRanges_t5A1CDFF3E0DB1197050E1E28617B517C15AF6DC3* ___3_ranges, int32_t ___4_jobIndex, const RuntimeMethod* method) 
 {
 	{
@@ -7486,7 +7692,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void JobStruct_1_Execute_m5AE8D5B11903017FDA7
 		return;
 	}
 }
-// Method Definition Index: 41093
+// Method Definition Index: 41096
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void JobStruct_1__cctor_mE48B1A725C3350FEC332DD0818C91EC6C04C9B39_gshared (const RuntimeMethod* method) 
 {
 	{
@@ -7504,7 +7710,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void JobStruct_1__cctor_mE48B1A725C3350FEC332
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 41091
+// Method Definition Index: 41094
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void JobStruct_1_Initialize_mBA8CB3048A750CDD69A8A91DC50E187F1D975D27_gshared (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -7548,7 +7754,7 @@ IL_0042:
 		return;
 	}
 }
-// Method Definition Index: 41092
+// Method Definition Index: 41095
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void JobStruct_1_Execute_mE738EA875D0CDBB35FEBCD458E065B6ED57F289D_gshared (ExtractVelocitiesBurst_tAFCE255749A150F490C0E4C1BEA9147705C74DA3* ___0_data, intptr_t ___1_additionalPtr, intptr_t ___2_bufferRangePatchData, JobRanges_t5A1CDFF3E0DB1197050E1E28617B517C15AF6DC3* ___3_ranges, int32_t ___4_jobIndex, const RuntimeMethod* method) 
 {
 	{
@@ -7557,7 +7763,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void JobStruct_1_Execute_mE738EA875D0CDBB35FE
 		return;
 	}
 }
-// Method Definition Index: 41093
+// Method Definition Index: 41096
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void JobStruct_1__cctor_mAC362FA890B7E0B18D5451519972733369D37A93_gshared (const RuntimeMethod* method) 
 {
 	{
@@ -7575,7 +7781,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void JobStruct_1__cctor_mAC362FA890B7E0B18D54
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 41091
+// Method Definition Index: 41094
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void JobStruct_1_Initialize_m525F14C5C98BF2678CC088B211E05681EA838F62_gshared (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -7619,7 +7825,7 @@ IL_0042:
 		return;
 	}
 }
-// Method Definition Index: 41092
+// Method Definition Index: 41095
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void JobStruct_1_Execute_m619A1BBB4F80A6A256E6B41B5F7017BE4FCD416B_gshared (ConstructJob_t55C543914D2A5CE4D61B4BB4B27D1524950920F1* ___0_data, intptr_t ___1_additionalPtr, intptr_t ___2_bufferRangePatchData, JobRanges_t5A1CDFF3E0DB1197050E1E28617B517C15AF6DC3* ___3_ranges, int32_t ___4_jobIndex, const RuntimeMethod* method) 
 {
 	{
@@ -7628,7 +7834,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void JobStruct_1_Execute_m619A1BBB4F80A6A256E
 		return;
 	}
 }
-// Method Definition Index: 41093
+// Method Definition Index: 41096
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void JobStruct_1__cctor_mEA92261CC3390A83E96A7FC47BA2B7201B71FCF1_gshared (const RuntimeMethod* method) 
 {
 	{
@@ -7646,7 +7852,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void JobStruct_1__cctor_mEA92261CC3390A83E96A
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 41091
+// Method Definition Index: 41094
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void JobStruct_1_Initialize_mB688C5D1C0541E4CB371B0010803958D5C3CE2D8_gshared (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -7690,7 +7896,7 @@ IL_0042:
 		return;
 	}
 }
-// Method Definition Index: 41092
+// Method Definition Index: 41095
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void JobStruct_1_Execute_m8BC4D0892CE1B7D99109F22239418EB0CD9188D7_gshared (ConstructJobList_t3EA9493BA14A6EAF46D2C6B1EFE5727F3048778F* ___0_data, intptr_t ___1_additionalPtr, intptr_t ___2_bufferRangePatchData, JobRanges_t5A1CDFF3E0DB1197050E1E28617B517C15AF6DC3* ___3_ranges, int32_t ___4_jobIndex, const RuntimeMethod* method) 
 {
 	{
@@ -7699,7 +7905,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void JobStruct_1_Execute_m8BC4D0892CE1B7D9910
 		return;
 	}
 }
-// Method Definition Index: 41093
+// Method Definition Index: 41096
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void JobStruct_1__cctor_mF7F72AC187877C0E7319E856E67EFD929C0A88B6_gshared (const RuntimeMethod* method) 
 {
 	{
@@ -7717,7 +7923,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void JobStruct_1__cctor_mF7F72AC187877C0E7319
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 41091
+// Method Definition Index: 41094
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void JobStruct_1_Initialize_mD380F76EA0D9F49B19C52D2F585E994B0011E559_gshared (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -7761,7 +7967,7 @@ IL_0042:
 		return;
 	}
 }
-// Method Definition Index: 41092
+// Method Definition Index: 41095
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void JobStruct_1_Execute_m8B0E80B79C4FF5AE57B1BB5A68106CBD8FCFBB69_gshared (DisposeJob_t04680DC488B637A98BCED625FD3BD6F85EC6D467* ___0_data, intptr_t ___1_additionalPtr, intptr_t ___2_bufferRangePatchData, JobRanges_t5A1CDFF3E0DB1197050E1E28617B517C15AF6DC3* ___3_ranges, int32_t ___4_jobIndex, const RuntimeMethod* method) 
 {
 	{
@@ -7770,7 +7976,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void JobStruct_1_Execute_m8B0E80B79C4FF5AE57B
 		return;
 	}
 }
-// Method Definition Index: 41093
+// Method Definition Index: 41096
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void JobStruct_1__cctor_mC6356F599F4A3E220D5260BA0576C0B1D0A0B768_gshared (const RuntimeMethod* method) 
 {
 	{
@@ -7819,7 +8025,7 @@ bool JsonDeserializeFunc_1_Invoke_m39C988126B1FB658CFEBCC025F17C11977306E2A_Open
 	typedef bool (*FunctionPointerType) (JsonReader_tC309CFE30F38792D0E9F8D388FC2519EC4C23609*, RuntimeObject*, const RuntimeMethod*);
 	return ((FunctionPointerType)__this->___method_ptr)(___0_reader, ___1_resolver, method);
 }
-// Method Definition Index: 78607
+// Method Definition Index: 78622
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void JsonDeserializeFunc_1__ctor_m2CAD21A4491966ADF73BFA6C55314AB0657828EE_gshared (JsonDeserializeFunc_1_tC0B71A53BF4D5F76A8760D422054E1B8D9963399* __this, RuntimeObject* ___0_object, intptr_t ___1_method, const RuntimeMethod* method) 
 {
 	__this->___method_ptr = (intptr_t)il2cpp_codegen_get_method_pointer((RuntimeMethod*)___1_method);
@@ -7856,13 +8062,13 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void JsonDeserializeFunc_1__ctor_m2CAD21A4491
 	}
 	__this->___extra_arg = (intptr_t)&JsonDeserializeFunc_1_Invoke_m39C988126B1FB658CFEBCC025F17C11977306E2A_Multicast;
 }
-// Method Definition Index: 78608
+// Method Definition Index: 78623
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool JsonDeserializeFunc_1_Invoke_m39C988126B1FB658CFEBCC025F17C11977306E2A_gshared (JsonDeserializeFunc_1_tC0B71A53BF4D5F76A8760D422054E1B8D9963399* __this, JsonReader_tC309CFE30F38792D0E9F8D388FC2519EC4C23609* ___0_reader, RuntimeObject* ___1_resolver, const RuntimeMethod* method) 
 {
 	typedef bool (*FunctionPointerType) (RuntimeObject*, JsonReader_tC309CFE30F38792D0E9F8D388FC2519EC4C23609*, RuntimeObject*, const RuntimeMethod*);
 	return ((FunctionPointerType)__this->___invoke_impl)((Il2CppObject*)__this->___method_code, ___0_reader, ___1_resolver, reinterpret_cast<RuntimeMethod*>(__this->___method));
 }
-// Method Definition Index: 78609
+// Method Definition Index: 78624
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* JsonDeserializeFunc_1_BeginInvoke_mF79A12E9DC70F30BB46E499D16901F605181C093_gshared (JsonDeserializeFunc_1_tC0B71A53BF4D5F76A8760D422054E1B8D9963399* __this, JsonReader_tC309CFE30F38792D0E9F8D388FC2519EC4C23609* ___0_reader, RuntimeObject* ___1_resolver, AsyncCallback_t7FEF460CBDCFB9C5FA2EF776984778B9A4145F4C* ___2_callback, RuntimeObject* ___3_object, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -7876,7 +8082,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* JsonDeserializeFunc_1_BeginInv
 	__d_args[1] = ___1_resolver;
 	return (RuntimeObject*)il2cpp_codegen_delegate_begin_invoke((RuntimeDelegate*)__this, __d_args, (RuntimeDelegate*)___2_callback, (RuntimeObject*)___3_object);
 }
-// Method Definition Index: 78610
+// Method Definition Index: 78625
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool JsonDeserializeFunc_1_EndInvoke_m39BB039E4E790701592F71B2C1B249EAB13C0C92_gshared (JsonDeserializeFunc_1_tC0B71A53BF4D5F76A8760D422054E1B8D9963399* __this, JsonReader_tC309CFE30F38792D0E9F8D388FC2519EC4C23609* ___0_reader, RuntimeObject* ___1_result, const RuntimeMethod* method) 
 {
 	void* ___out_args[] = {
@@ -7916,7 +8122,7 @@ uint8_t JsonDeserializeFunc_1_Invoke_mB9CF543EF9A6A5D9B3B5D106397B011937ABB6BA_O
 	typedef uint8_t (*FunctionPointerType) (JsonReader_tC309CFE30F38792D0E9F8D388FC2519EC4C23609*, RuntimeObject*, const RuntimeMethod*);
 	return ((FunctionPointerType)__this->___method_ptr)(___0_reader, ___1_resolver, method);
 }
-// Method Definition Index: 78607
+// Method Definition Index: 78622
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void JsonDeserializeFunc_1__ctor_m9FD78DB7108442880B09494E0EA0E7098A25D402_gshared (JsonDeserializeFunc_1_t571C5BCE43D069F9BC00B31D32FC487DE18CE20E* __this, RuntimeObject* ___0_object, intptr_t ___1_method, const RuntimeMethod* method) 
 {
 	__this->___method_ptr = (intptr_t)il2cpp_codegen_get_method_pointer((RuntimeMethod*)___1_method);
@@ -7953,13 +8159,13 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void JsonDeserializeFunc_1__ctor_m9FD78DB7108
 	}
 	__this->___extra_arg = (intptr_t)&JsonDeserializeFunc_1_Invoke_mB9CF543EF9A6A5D9B3B5D106397B011937ABB6BA_Multicast;
 }
-// Method Definition Index: 78608
+// Method Definition Index: 78623
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR uint8_t JsonDeserializeFunc_1_Invoke_mB9CF543EF9A6A5D9B3B5D106397B011937ABB6BA_gshared (JsonDeserializeFunc_1_t571C5BCE43D069F9BC00B31D32FC487DE18CE20E* __this, JsonReader_tC309CFE30F38792D0E9F8D388FC2519EC4C23609* ___0_reader, RuntimeObject* ___1_resolver, const RuntimeMethod* method) 
 {
 	typedef uint8_t (*FunctionPointerType) (RuntimeObject*, JsonReader_tC309CFE30F38792D0E9F8D388FC2519EC4C23609*, RuntimeObject*, const RuntimeMethod*);
 	return ((FunctionPointerType)__this->___invoke_impl)((Il2CppObject*)__this->___method_code, ___0_reader, ___1_resolver, reinterpret_cast<RuntimeMethod*>(__this->___method));
 }
-// Method Definition Index: 78609
+// Method Definition Index: 78624
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* JsonDeserializeFunc_1_BeginInvoke_mF6C1B1880AE10DBDA4921CA0F12264DD159BD081_gshared (JsonDeserializeFunc_1_t571C5BCE43D069F9BC00B31D32FC487DE18CE20E* __this, JsonReader_tC309CFE30F38792D0E9F8D388FC2519EC4C23609* ___0_reader, RuntimeObject* ___1_resolver, AsyncCallback_t7FEF460CBDCFB9C5FA2EF776984778B9A4145F4C* ___2_callback, RuntimeObject* ___3_object, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -7973,7 +8179,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* JsonDeserializeFunc_1_BeginInv
 	__d_args[1] = ___1_resolver;
 	return (RuntimeObject*)il2cpp_codegen_delegate_begin_invoke((RuntimeDelegate*)__this, __d_args, (RuntimeDelegate*)___2_callback, (RuntimeObject*)___3_object);
 }
-// Method Definition Index: 78610
+// Method Definition Index: 78625
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR uint8_t JsonDeserializeFunc_1_EndInvoke_m20F606B604CC8F58BEA91D873E924777C540F500_gshared (JsonDeserializeFunc_1_t571C5BCE43D069F9BC00B31D32FC487DE18CE20E* __this, JsonReader_tC309CFE30F38792D0E9F8D388FC2519EC4C23609* ___0_reader, RuntimeObject* ___1_result, const RuntimeMethod* method) 
 {
 	void* ___out_args[] = {
@@ -8013,7 +8219,7 @@ Il2CppChar JsonDeserializeFunc_1_Invoke_mBE06D34E351345029BBF751B477F45264B4679D
 	typedef Il2CppChar (*FunctionPointerType) (JsonReader_tC309CFE30F38792D0E9F8D388FC2519EC4C23609*, RuntimeObject*, const RuntimeMethod*);
 	return ((FunctionPointerType)__this->___method_ptr)(___0_reader, ___1_resolver, method);
 }
-// Method Definition Index: 78607
+// Method Definition Index: 78622
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void JsonDeserializeFunc_1__ctor_m785F6FC6B23C9302308BFC0760777D5730D688FD_gshared (JsonDeserializeFunc_1_tBBC015E1EF18932E7EE11573D46627DC9EC7402A* __this, RuntimeObject* ___0_object, intptr_t ___1_method, const RuntimeMethod* method) 
 {
 	__this->___method_ptr = (intptr_t)il2cpp_codegen_get_method_pointer((RuntimeMethod*)___1_method);
@@ -8050,13 +8256,13 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void JsonDeserializeFunc_1__ctor_m785F6FC6B23
 	}
 	__this->___extra_arg = (intptr_t)&JsonDeserializeFunc_1_Invoke_mBE06D34E351345029BBF751B477F45264B4679DB_Multicast;
 }
-// Method Definition Index: 78608
+// Method Definition Index: 78623
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Il2CppChar JsonDeserializeFunc_1_Invoke_mBE06D34E351345029BBF751B477F45264B4679DB_gshared (JsonDeserializeFunc_1_tBBC015E1EF18932E7EE11573D46627DC9EC7402A* __this, JsonReader_tC309CFE30F38792D0E9F8D388FC2519EC4C23609* ___0_reader, RuntimeObject* ___1_resolver, const RuntimeMethod* method) 
 {
 	typedef Il2CppChar (*FunctionPointerType) (RuntimeObject*, JsonReader_tC309CFE30F38792D0E9F8D388FC2519EC4C23609*, RuntimeObject*, const RuntimeMethod*);
 	return ((FunctionPointerType)__this->___invoke_impl)((Il2CppObject*)__this->___method_code, ___0_reader, ___1_resolver, reinterpret_cast<RuntimeMethod*>(__this->___method));
 }
-// Method Definition Index: 78609
+// Method Definition Index: 78624
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* JsonDeserializeFunc_1_BeginInvoke_mBA6B1D1D218CFC220001D51A58757164476E4407_gshared (JsonDeserializeFunc_1_tBBC015E1EF18932E7EE11573D46627DC9EC7402A* __this, JsonReader_tC309CFE30F38792D0E9F8D388FC2519EC4C23609* ___0_reader, RuntimeObject* ___1_resolver, AsyncCallback_t7FEF460CBDCFB9C5FA2EF776984778B9A4145F4C* ___2_callback, RuntimeObject* ___3_object, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -8070,7 +8276,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* JsonDeserializeFunc_1_BeginInv
 	__d_args[1] = ___1_resolver;
 	return (RuntimeObject*)il2cpp_codegen_delegate_begin_invoke((RuntimeDelegate*)__this, __d_args, (RuntimeDelegate*)___2_callback, (RuntimeObject*)___3_object);
 }
-// Method Definition Index: 78610
+// Method Definition Index: 78625
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Il2CppChar JsonDeserializeFunc_1_EndInvoke_mE420DC0012FF854D8DE84676FFC80912142744C7_gshared (JsonDeserializeFunc_1_tBBC015E1EF18932E7EE11573D46627DC9EC7402A* __this, JsonReader_tC309CFE30F38792D0E9F8D388FC2519EC4C23609* ___0_reader, RuntimeObject* ___1_result, const RuntimeMethod* method) 
 {
 	void* ___out_args[] = {
@@ -8111,7 +8317,7 @@ DateTime_t66193957C73913903DDAD89FEDC46139BCA5802D JsonDeserializeFunc_1_Invoke_
 	typedef DateTime_t66193957C73913903DDAD89FEDC46139BCA5802D (*FunctionPointerType) (JsonReader_tC309CFE30F38792D0E9F8D388FC2519EC4C23609*, RuntimeObject*, const RuntimeMethod*);
 	return ((FunctionPointerType)__this->___method_ptr)(___0_reader, ___1_resolver, method);
 }
-// Method Definition Index: 78607
+// Method Definition Index: 78622
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void JsonDeserializeFunc_1__ctor_mC8665133B31E86EC4731D3D9551893186A93A7B6_gshared (JsonDeserializeFunc_1_t891F372BFF66070A18F643182FCC83B73250D840* __this, RuntimeObject* ___0_object, intptr_t ___1_method, const RuntimeMethod* method) 
 {
 	__this->___method_ptr = (intptr_t)il2cpp_codegen_get_method_pointer((RuntimeMethod*)___1_method);
@@ -8148,13 +8354,13 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void JsonDeserializeFunc_1__ctor_mC8665133B31
 	}
 	__this->___extra_arg = (intptr_t)&JsonDeserializeFunc_1_Invoke_mC02CA5C88C4F7E7B956DFAB6AAAE1E9E3C111444_Multicast;
 }
-// Method Definition Index: 78608
+// Method Definition Index: 78623
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR DateTime_t66193957C73913903DDAD89FEDC46139BCA5802D JsonDeserializeFunc_1_Invoke_mC02CA5C88C4F7E7B956DFAB6AAAE1E9E3C111444_gshared (JsonDeserializeFunc_1_t891F372BFF66070A18F643182FCC83B73250D840* __this, JsonReader_tC309CFE30F38792D0E9F8D388FC2519EC4C23609* ___0_reader, RuntimeObject* ___1_resolver, const RuntimeMethod* method) 
 {
 	typedef DateTime_t66193957C73913903DDAD89FEDC46139BCA5802D (*FunctionPointerType) (RuntimeObject*, JsonReader_tC309CFE30F38792D0E9F8D388FC2519EC4C23609*, RuntimeObject*, const RuntimeMethod*);
 	return ((FunctionPointerType)__this->___invoke_impl)((Il2CppObject*)__this->___method_code, ___0_reader, ___1_resolver, reinterpret_cast<RuntimeMethod*>(__this->___method));
 }
-// Method Definition Index: 78609
+// Method Definition Index: 78624
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* JsonDeserializeFunc_1_BeginInvoke_mBA6974E950AEB560B271C73A5E11756BD8F5EDB3_gshared (JsonDeserializeFunc_1_t891F372BFF66070A18F643182FCC83B73250D840* __this, JsonReader_tC309CFE30F38792D0E9F8D388FC2519EC4C23609* ___0_reader, RuntimeObject* ___1_resolver, AsyncCallback_t7FEF460CBDCFB9C5FA2EF776984778B9A4145F4C* ___2_callback, RuntimeObject* ___3_object, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -8168,7 +8374,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* JsonDeserializeFunc_1_BeginInv
 	__d_args[1] = ___1_resolver;
 	return (RuntimeObject*)il2cpp_codegen_delegate_begin_invoke((RuntimeDelegate*)__this, __d_args, (RuntimeDelegate*)___2_callback, (RuntimeObject*)___3_object);
 }
-// Method Definition Index: 78610
+// Method Definition Index: 78625
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR DateTime_t66193957C73913903DDAD89FEDC46139BCA5802D JsonDeserializeFunc_1_EndInvoke_m685A07712DDEC6709A7AD4D30C1D04C8CA350414_gshared (JsonDeserializeFunc_1_t891F372BFF66070A18F643182FCC83B73250D840* __this, JsonReader_tC309CFE30F38792D0E9F8D388FC2519EC4C23609* ___0_reader, RuntimeObject* ___1_result, const RuntimeMethod* method) 
 {
 	void* ___out_args[] = {
@@ -8208,7 +8414,7 @@ double JsonDeserializeFunc_1_Invoke_m917607FA5CEE6BB07589EA55B1A045FD13B33BD8_Op
 	typedef double (*FunctionPointerType) (JsonReader_tC309CFE30F38792D0E9F8D388FC2519EC4C23609*, RuntimeObject*, const RuntimeMethod*);
 	return ((FunctionPointerType)__this->___method_ptr)(___0_reader, ___1_resolver, method);
 }
-// Method Definition Index: 78607
+// Method Definition Index: 78622
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void JsonDeserializeFunc_1__ctor_m5EC3B726F9892832B2C566E220B63093D654CEBA_gshared (JsonDeserializeFunc_1_t2DE729C028CC6F90BAEE238B895DF50B5D0E045C* __this, RuntimeObject* ___0_object, intptr_t ___1_method, const RuntimeMethod* method) 
 {
 	__this->___method_ptr = (intptr_t)il2cpp_codegen_get_method_pointer((RuntimeMethod*)___1_method);
@@ -8245,13 +8451,13 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void JsonDeserializeFunc_1__ctor_m5EC3B726F98
 	}
 	__this->___extra_arg = (intptr_t)&JsonDeserializeFunc_1_Invoke_m917607FA5CEE6BB07589EA55B1A045FD13B33BD8_Multicast;
 }
-// Method Definition Index: 78608
+// Method Definition Index: 78623
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR double JsonDeserializeFunc_1_Invoke_m917607FA5CEE6BB07589EA55B1A045FD13B33BD8_gshared (JsonDeserializeFunc_1_t2DE729C028CC6F90BAEE238B895DF50B5D0E045C* __this, JsonReader_tC309CFE30F38792D0E9F8D388FC2519EC4C23609* ___0_reader, RuntimeObject* ___1_resolver, const RuntimeMethod* method) 
 {
 	typedef double (*FunctionPointerType) (RuntimeObject*, JsonReader_tC309CFE30F38792D0E9F8D388FC2519EC4C23609*, RuntimeObject*, const RuntimeMethod*);
 	return ((FunctionPointerType)__this->___invoke_impl)((Il2CppObject*)__this->___method_code, ___0_reader, ___1_resolver, reinterpret_cast<RuntimeMethod*>(__this->___method));
 }
-// Method Definition Index: 78609
+// Method Definition Index: 78624
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* JsonDeserializeFunc_1_BeginInvoke_mD04F673CD92AB649A3AE5885D278C2588A8F37EE_gshared (JsonDeserializeFunc_1_t2DE729C028CC6F90BAEE238B895DF50B5D0E045C* __this, JsonReader_tC309CFE30F38792D0E9F8D388FC2519EC4C23609* ___0_reader, RuntimeObject* ___1_resolver, AsyncCallback_t7FEF460CBDCFB9C5FA2EF776984778B9A4145F4C* ___2_callback, RuntimeObject* ___3_object, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -8265,7 +8471,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* JsonDeserializeFunc_1_BeginInv
 	__d_args[1] = ___1_resolver;
 	return (RuntimeObject*)il2cpp_codegen_delegate_begin_invoke((RuntimeDelegate*)__this, __d_args, (RuntimeDelegate*)___2_callback, (RuntimeObject*)___3_object);
 }
-// Method Definition Index: 78610
+// Method Definition Index: 78625
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR double JsonDeserializeFunc_1_EndInvoke_m9E75C7FDD36774B9AFBC01719DF322C9DE011322_gshared (JsonDeserializeFunc_1_t2DE729C028CC6F90BAEE238B895DF50B5D0E045C* __this, JsonReader_tC309CFE30F38792D0E9F8D388FC2519EC4C23609* ___0_reader, RuntimeObject* ___1_result, const RuntimeMethod* method) 
 {
 	void* ___out_args[] = {
@@ -8305,7 +8511,7 @@ int16_t JsonDeserializeFunc_1_Invoke_m3D75C010910610286895BDABD51CD352633F732C_O
 	typedef int16_t (*FunctionPointerType) (JsonReader_tC309CFE30F38792D0E9F8D388FC2519EC4C23609*, RuntimeObject*, const RuntimeMethod*);
 	return ((FunctionPointerType)__this->___method_ptr)(___0_reader, ___1_resolver, method);
 }
-// Method Definition Index: 78607
+// Method Definition Index: 78622
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void JsonDeserializeFunc_1__ctor_m4276EC3CF48554F46A7E2BB8301293CABCB48DFA_gshared (JsonDeserializeFunc_1_t6C85CD91C8D1EA574107FE772A5846F5279B11E1* __this, RuntimeObject* ___0_object, intptr_t ___1_method, const RuntimeMethod* method) 
 {
 	__this->___method_ptr = (intptr_t)il2cpp_codegen_get_method_pointer((RuntimeMethod*)___1_method);
@@ -8342,13 +8548,13 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void JsonDeserializeFunc_1__ctor_m4276EC3CF48
 	}
 	__this->___extra_arg = (intptr_t)&JsonDeserializeFunc_1_Invoke_m3D75C010910610286895BDABD51CD352633F732C_Multicast;
 }
-// Method Definition Index: 78608
+// Method Definition Index: 78623
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int16_t JsonDeserializeFunc_1_Invoke_m3D75C010910610286895BDABD51CD352633F732C_gshared (JsonDeserializeFunc_1_t6C85CD91C8D1EA574107FE772A5846F5279B11E1* __this, JsonReader_tC309CFE30F38792D0E9F8D388FC2519EC4C23609* ___0_reader, RuntimeObject* ___1_resolver, const RuntimeMethod* method) 
 {
 	typedef int16_t (*FunctionPointerType) (RuntimeObject*, JsonReader_tC309CFE30F38792D0E9F8D388FC2519EC4C23609*, RuntimeObject*, const RuntimeMethod*);
 	return ((FunctionPointerType)__this->___invoke_impl)((Il2CppObject*)__this->___method_code, ___0_reader, ___1_resolver, reinterpret_cast<RuntimeMethod*>(__this->___method));
 }
-// Method Definition Index: 78609
+// Method Definition Index: 78624
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* JsonDeserializeFunc_1_BeginInvoke_m4241C18A7ECA319891EB0E0686DF242CF395A597_gshared (JsonDeserializeFunc_1_t6C85CD91C8D1EA574107FE772A5846F5279B11E1* __this, JsonReader_tC309CFE30F38792D0E9F8D388FC2519EC4C23609* ___0_reader, RuntimeObject* ___1_resolver, AsyncCallback_t7FEF460CBDCFB9C5FA2EF776984778B9A4145F4C* ___2_callback, RuntimeObject* ___3_object, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -8362,7 +8568,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* JsonDeserializeFunc_1_BeginInv
 	__d_args[1] = ___1_resolver;
 	return (RuntimeObject*)il2cpp_codegen_delegate_begin_invoke((RuntimeDelegate*)__this, __d_args, (RuntimeDelegate*)___2_callback, (RuntimeObject*)___3_object);
 }
-// Method Definition Index: 78610
+// Method Definition Index: 78625
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int16_t JsonDeserializeFunc_1_EndInvoke_mBDD39403D00E30D37A0CD5260A21F3ACF1FFBA00_gshared (JsonDeserializeFunc_1_t6C85CD91C8D1EA574107FE772A5846F5279B11E1* __this, JsonReader_tC309CFE30F38792D0E9F8D388FC2519EC4C23609* ___0_reader, RuntimeObject* ___1_result, const RuntimeMethod* method) 
 {
 	void* ___out_args[] = {
@@ -8402,7 +8608,7 @@ int32_t JsonDeserializeFunc_1_Invoke_m5534595AA36847BA8D52F6F7CE1322BCEE644C6A_O
 	typedef int32_t (*FunctionPointerType) (JsonReader_tC309CFE30F38792D0E9F8D388FC2519EC4C23609*, RuntimeObject*, const RuntimeMethod*);
 	return ((FunctionPointerType)__this->___method_ptr)(___0_reader, ___1_resolver, method);
 }
-// Method Definition Index: 78607
+// Method Definition Index: 78622
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void JsonDeserializeFunc_1__ctor_m4C44C2B39062689F958166CA2D20C6D2C0DFE58B_gshared (JsonDeserializeFunc_1_tBFD2D2A5314CC215C8AAB84D5D3DFE9619C5B2A1* __this, RuntimeObject* ___0_object, intptr_t ___1_method, const RuntimeMethod* method) 
 {
 	__this->___method_ptr = (intptr_t)il2cpp_codegen_get_method_pointer((RuntimeMethod*)___1_method);
@@ -8439,13 +8645,13 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void JsonDeserializeFunc_1__ctor_m4C44C2B3906
 	}
 	__this->___extra_arg = (intptr_t)&JsonDeserializeFunc_1_Invoke_m5534595AA36847BA8D52F6F7CE1322BCEE644C6A_Multicast;
 }
-// Method Definition Index: 78608
+// Method Definition Index: 78623
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t JsonDeserializeFunc_1_Invoke_m5534595AA36847BA8D52F6F7CE1322BCEE644C6A_gshared (JsonDeserializeFunc_1_tBFD2D2A5314CC215C8AAB84D5D3DFE9619C5B2A1* __this, JsonReader_tC309CFE30F38792D0E9F8D388FC2519EC4C23609* ___0_reader, RuntimeObject* ___1_resolver, const RuntimeMethod* method) 
 {
 	typedef int32_t (*FunctionPointerType) (RuntimeObject*, JsonReader_tC309CFE30F38792D0E9F8D388FC2519EC4C23609*, RuntimeObject*, const RuntimeMethod*);
 	return ((FunctionPointerType)__this->___invoke_impl)((Il2CppObject*)__this->___method_code, ___0_reader, ___1_resolver, reinterpret_cast<RuntimeMethod*>(__this->___method));
 }
-// Method Definition Index: 78609
+// Method Definition Index: 78624
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* JsonDeserializeFunc_1_BeginInvoke_mCD56A06B37D7EA659598161166A491ADB6C76F83_gshared (JsonDeserializeFunc_1_tBFD2D2A5314CC215C8AAB84D5D3DFE9619C5B2A1* __this, JsonReader_tC309CFE30F38792D0E9F8D388FC2519EC4C23609* ___0_reader, RuntimeObject* ___1_resolver, AsyncCallback_t7FEF460CBDCFB9C5FA2EF776984778B9A4145F4C* ___2_callback, RuntimeObject* ___3_object, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -8459,7 +8665,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* JsonDeserializeFunc_1_BeginInv
 	__d_args[1] = ___1_resolver;
 	return (RuntimeObject*)il2cpp_codegen_delegate_begin_invoke((RuntimeDelegate*)__this, __d_args, (RuntimeDelegate*)___2_callback, (RuntimeObject*)___3_object);
 }
-// Method Definition Index: 78610
+// Method Definition Index: 78625
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t JsonDeserializeFunc_1_EndInvoke_m23CD59D41EAACB7F034D0FD9526178970406B910_gshared (JsonDeserializeFunc_1_tBFD2D2A5314CC215C8AAB84D5D3DFE9619C5B2A1* __this, JsonReader_tC309CFE30F38792D0E9F8D388FC2519EC4C23609* ___0_reader, RuntimeObject* ___1_result, const RuntimeMethod* method) 
 {
 	void* ___out_args[] = {
@@ -8499,7 +8705,7 @@ int64_t JsonDeserializeFunc_1_Invoke_m1270ADC873424160F3C1BC61C024A90877558E12_O
 	typedef int64_t (*FunctionPointerType) (JsonReader_tC309CFE30F38792D0E9F8D388FC2519EC4C23609*, RuntimeObject*, const RuntimeMethod*);
 	return ((FunctionPointerType)__this->___method_ptr)(___0_reader, ___1_resolver, method);
 }
-// Method Definition Index: 78607
+// Method Definition Index: 78622
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void JsonDeserializeFunc_1__ctor_m40D66DAA96904976C4952759A94E9BBDBC526D54_gshared (JsonDeserializeFunc_1_t821D0373C86EDB86CAEFC6F8E014D4D09BEB8527* __this, RuntimeObject* ___0_object, intptr_t ___1_method, const RuntimeMethod* method) 
 {
 	__this->___method_ptr = (intptr_t)il2cpp_codegen_get_method_pointer((RuntimeMethod*)___1_method);
@@ -8536,13 +8742,13 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void JsonDeserializeFunc_1__ctor_m40D66DAA969
 	}
 	__this->___extra_arg = (intptr_t)&JsonDeserializeFunc_1_Invoke_m1270ADC873424160F3C1BC61C024A90877558E12_Multicast;
 }
-// Method Definition Index: 78608
+// Method Definition Index: 78623
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int64_t JsonDeserializeFunc_1_Invoke_m1270ADC873424160F3C1BC61C024A90877558E12_gshared (JsonDeserializeFunc_1_t821D0373C86EDB86CAEFC6F8E014D4D09BEB8527* __this, JsonReader_tC309CFE30F38792D0E9F8D388FC2519EC4C23609* ___0_reader, RuntimeObject* ___1_resolver, const RuntimeMethod* method) 
 {
 	typedef int64_t (*FunctionPointerType) (RuntimeObject*, JsonReader_tC309CFE30F38792D0E9F8D388FC2519EC4C23609*, RuntimeObject*, const RuntimeMethod*);
 	return ((FunctionPointerType)__this->___invoke_impl)((Il2CppObject*)__this->___method_code, ___0_reader, ___1_resolver, reinterpret_cast<RuntimeMethod*>(__this->___method));
 }
-// Method Definition Index: 78609
+// Method Definition Index: 78624
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* JsonDeserializeFunc_1_BeginInvoke_mC131F83A646B0AF3EEA0525F2B76859A2F600875_gshared (JsonDeserializeFunc_1_t821D0373C86EDB86CAEFC6F8E014D4D09BEB8527* __this, JsonReader_tC309CFE30F38792D0E9F8D388FC2519EC4C23609* ___0_reader, RuntimeObject* ___1_resolver, AsyncCallback_t7FEF460CBDCFB9C5FA2EF776984778B9A4145F4C* ___2_callback, RuntimeObject* ___3_object, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -8556,7 +8762,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* JsonDeserializeFunc_1_BeginInv
 	__d_args[1] = ___1_resolver;
 	return (RuntimeObject*)il2cpp_codegen_delegate_begin_invoke((RuntimeDelegate*)__this, __d_args, (RuntimeDelegate*)___2_callback, (RuntimeObject*)___3_object);
 }
-// Method Definition Index: 78610
+// Method Definition Index: 78625
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int64_t JsonDeserializeFunc_1_EndInvoke_mB45261B75076D2131254A01883E5A1977C6DE851_gshared (JsonDeserializeFunc_1_t821D0373C86EDB86CAEFC6F8E014D4D09BEB8527* __this, JsonReader_tC309CFE30F38792D0E9F8D388FC2519EC4C23609* ___0_reader, RuntimeObject* ___1_result, const RuntimeMethod* method) 
 {
 	void* ___out_args[] = {
@@ -8597,7 +8803,7 @@ NetworkId_tD5FA0360D2F8AE544493A7D1A6C7C90B28735CE7 JsonDeserializeFunc_1_Invoke
 	typedef NetworkId_tD5FA0360D2F8AE544493A7D1A6C7C90B28735CE7 (*FunctionPointerType) (JsonReader_tC309CFE30F38792D0E9F8D388FC2519EC4C23609*, RuntimeObject*, const RuntimeMethod*);
 	return ((FunctionPointerType)__this->___method_ptr)(___0_reader, ___1_resolver, method);
 }
-// Method Definition Index: 78607
+// Method Definition Index: 78622
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void JsonDeserializeFunc_1__ctor_mBF742D4EB562F586A5B19871CCE31EF05522D984_gshared (JsonDeserializeFunc_1_tE1758753A393E0790B82F2E9180B8EBF4F1DD5CA* __this, RuntimeObject* ___0_object, intptr_t ___1_method, const RuntimeMethod* method) 
 {
 	__this->___method_ptr = (intptr_t)il2cpp_codegen_get_method_pointer((RuntimeMethod*)___1_method);
@@ -8634,13 +8840,13 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void JsonDeserializeFunc_1__ctor_mBF742D4EB56
 	}
 	__this->___extra_arg = (intptr_t)&JsonDeserializeFunc_1_Invoke_mF76F589C1C9380918608E6A504EB41E423A5E6AB_Multicast;
 }
-// Method Definition Index: 78608
+// Method Definition Index: 78623
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR NetworkId_tD5FA0360D2F8AE544493A7D1A6C7C90B28735CE7 JsonDeserializeFunc_1_Invoke_mF76F589C1C9380918608E6A504EB41E423A5E6AB_gshared (JsonDeserializeFunc_1_tE1758753A393E0790B82F2E9180B8EBF4F1DD5CA* __this, JsonReader_tC309CFE30F38792D0E9F8D388FC2519EC4C23609* ___0_reader, RuntimeObject* ___1_resolver, const RuntimeMethod* method) 
 {
 	typedef NetworkId_tD5FA0360D2F8AE544493A7D1A6C7C90B28735CE7 (*FunctionPointerType) (RuntimeObject*, JsonReader_tC309CFE30F38792D0E9F8D388FC2519EC4C23609*, RuntimeObject*, const RuntimeMethod*);
 	return ((FunctionPointerType)__this->___invoke_impl)((Il2CppObject*)__this->___method_code, ___0_reader, ___1_resolver, reinterpret_cast<RuntimeMethod*>(__this->___method));
 }
-// Method Definition Index: 78609
+// Method Definition Index: 78624
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* JsonDeserializeFunc_1_BeginInvoke_m9102CE4A70D41388478F770D568D339D8B2F77E1_gshared (JsonDeserializeFunc_1_tE1758753A393E0790B82F2E9180B8EBF4F1DD5CA* __this, JsonReader_tC309CFE30F38792D0E9F8D388FC2519EC4C23609* ___0_reader, RuntimeObject* ___1_resolver, AsyncCallback_t7FEF460CBDCFB9C5FA2EF776984778B9A4145F4C* ___2_callback, RuntimeObject* ___3_object, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -8654,7 +8860,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* JsonDeserializeFunc_1_BeginInv
 	__d_args[1] = ___1_resolver;
 	return (RuntimeObject*)il2cpp_codegen_delegate_begin_invoke((RuntimeDelegate*)__this, __d_args, (RuntimeDelegate*)___2_callback, (RuntimeObject*)___3_object);
 }
-// Method Definition Index: 78610
+// Method Definition Index: 78625
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR NetworkId_tD5FA0360D2F8AE544493A7D1A6C7C90B28735CE7 JsonDeserializeFunc_1_EndInvoke_m3322BBA19D7E88EA41AA3417D5FCAAA2458F9945_gshared (JsonDeserializeFunc_1_tE1758753A393E0790B82F2E9180B8EBF4F1DD5CA* __this, JsonReader_tC309CFE30F38792D0E9F8D388FC2519EC4C23609* ___0_reader, RuntimeObject* ___1_result, const RuntimeMethod* method) 
 {
 	void* ___out_args[] = {
@@ -8694,7 +8900,7 @@ RuntimeObject* JsonDeserializeFunc_1_Invoke_m0BC70EE055D7A7DA115170ED9B916823119
 	typedef RuntimeObject* (*FunctionPointerType) (JsonReader_tC309CFE30F38792D0E9F8D388FC2519EC4C23609*, RuntimeObject*, const RuntimeMethod*);
 	return ((FunctionPointerType)__this->___method_ptr)(___0_reader, ___1_resolver, method);
 }
-// Method Definition Index: 78607
+// Method Definition Index: 78622
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void JsonDeserializeFunc_1__ctor_mA2BF27084ACBF42EBB25A855810CF33B5879E99B_gshared (JsonDeserializeFunc_1_t392DD54FCD0E5FAFB342F71BCF69E82144416CDC* __this, RuntimeObject* ___0_object, intptr_t ___1_method, const RuntimeMethod* method) 
 {
 	__this->___method_ptr = (intptr_t)il2cpp_codegen_get_method_pointer((RuntimeMethod*)___1_method);
@@ -8731,13 +8937,13 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void JsonDeserializeFunc_1__ctor_mA2BF27084AC
 	}
 	__this->___extra_arg = (intptr_t)&JsonDeserializeFunc_1_Invoke_m0BC70EE055D7A7DA115170ED9B91682311952166_Multicast;
 }
-// Method Definition Index: 78608
+// Method Definition Index: 78623
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* JsonDeserializeFunc_1_Invoke_m0BC70EE055D7A7DA115170ED9B91682311952166_gshared (JsonDeserializeFunc_1_t392DD54FCD0E5FAFB342F71BCF69E82144416CDC* __this, JsonReader_tC309CFE30F38792D0E9F8D388FC2519EC4C23609* ___0_reader, RuntimeObject* ___1_resolver, const RuntimeMethod* method) 
 {
 	typedef RuntimeObject* (*FunctionPointerType) (RuntimeObject*, JsonReader_tC309CFE30F38792D0E9F8D388FC2519EC4C23609*, RuntimeObject*, const RuntimeMethod*);
 	return ((FunctionPointerType)__this->___invoke_impl)((Il2CppObject*)__this->___method_code, ___0_reader, ___1_resolver, reinterpret_cast<RuntimeMethod*>(__this->___method));
 }
-// Method Definition Index: 78609
+// Method Definition Index: 78624
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* JsonDeserializeFunc_1_BeginInvoke_m5EB40F258E2224C673C2EDF084D92058F45D2D1E_gshared (JsonDeserializeFunc_1_t392DD54FCD0E5FAFB342F71BCF69E82144416CDC* __this, JsonReader_tC309CFE30F38792D0E9F8D388FC2519EC4C23609* ___0_reader, RuntimeObject* ___1_resolver, AsyncCallback_t7FEF460CBDCFB9C5FA2EF776984778B9A4145F4C* ___2_callback, RuntimeObject* ___3_object, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -8751,7 +8957,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* JsonDeserializeFunc_1_BeginInv
 	__d_args[1] = ___1_resolver;
 	return (RuntimeObject*)il2cpp_codegen_delegate_begin_invoke((RuntimeDelegate*)__this, __d_args, (RuntimeDelegate*)___2_callback, (RuntimeObject*)___3_object);
 }
-// Method Definition Index: 78610
+// Method Definition Index: 78625
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* JsonDeserializeFunc_1_EndInvoke_mD2DC396FAA63E5C14761DF8895C6A67860E0E040_gshared (JsonDeserializeFunc_1_t392DD54FCD0E5FAFB342F71BCF69E82144416CDC* __this, JsonReader_tC309CFE30F38792D0E9F8D388FC2519EC4C23609* ___0_reader, RuntimeObject* ___1_result, const RuntimeMethod* method) 
 {
 	void* ___out_args[] = {
@@ -8791,7 +8997,7 @@ int8_t JsonDeserializeFunc_1_Invoke_m1D14F2FA5249E5903645318C3749961C705EE089_Op
 	typedef int8_t (*FunctionPointerType) (JsonReader_tC309CFE30F38792D0E9F8D388FC2519EC4C23609*, RuntimeObject*, const RuntimeMethod*);
 	return ((FunctionPointerType)__this->___method_ptr)(___0_reader, ___1_resolver, method);
 }
-// Method Definition Index: 78607
+// Method Definition Index: 78622
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void JsonDeserializeFunc_1__ctor_mFC3346B06C75C4875D1E39A10DBC8AFC65C4C1F5_gshared (JsonDeserializeFunc_1_tBB668CC86579621CD2269E5FCAD796C06CC8EE2E* __this, RuntimeObject* ___0_object, intptr_t ___1_method, const RuntimeMethod* method) 
 {
 	__this->___method_ptr = (intptr_t)il2cpp_codegen_get_method_pointer((RuntimeMethod*)___1_method);
@@ -8828,13 +9034,13 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void JsonDeserializeFunc_1__ctor_mFC3346B06C7
 	}
 	__this->___extra_arg = (intptr_t)&JsonDeserializeFunc_1_Invoke_m1D14F2FA5249E5903645318C3749961C705EE089_Multicast;
 }
-// Method Definition Index: 78608
+// Method Definition Index: 78623
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int8_t JsonDeserializeFunc_1_Invoke_m1D14F2FA5249E5903645318C3749961C705EE089_gshared (JsonDeserializeFunc_1_tBB668CC86579621CD2269E5FCAD796C06CC8EE2E* __this, JsonReader_tC309CFE30F38792D0E9F8D388FC2519EC4C23609* ___0_reader, RuntimeObject* ___1_resolver, const RuntimeMethod* method) 
 {
 	typedef int8_t (*FunctionPointerType) (RuntimeObject*, JsonReader_tC309CFE30F38792D0E9F8D388FC2519EC4C23609*, RuntimeObject*, const RuntimeMethod*);
 	return ((FunctionPointerType)__this->___invoke_impl)((Il2CppObject*)__this->___method_code, ___0_reader, ___1_resolver, reinterpret_cast<RuntimeMethod*>(__this->___method));
 }
-// Method Definition Index: 78609
+// Method Definition Index: 78624
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* JsonDeserializeFunc_1_BeginInvoke_m51ADD0C5BE26CBAEB8CC9D671C26C1F81310F098_gshared (JsonDeserializeFunc_1_tBB668CC86579621CD2269E5FCAD796C06CC8EE2E* __this, JsonReader_tC309CFE30F38792D0E9F8D388FC2519EC4C23609* ___0_reader, RuntimeObject* ___1_resolver, AsyncCallback_t7FEF460CBDCFB9C5FA2EF776984778B9A4145F4C* ___2_callback, RuntimeObject* ___3_object, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -8848,7 +9054,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* JsonDeserializeFunc_1_BeginInv
 	__d_args[1] = ___1_resolver;
 	return (RuntimeObject*)il2cpp_codegen_delegate_begin_invoke((RuntimeDelegate*)__this, __d_args, (RuntimeDelegate*)___2_callback, (RuntimeObject*)___3_object);
 }
-// Method Definition Index: 78610
+// Method Definition Index: 78625
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int8_t JsonDeserializeFunc_1_EndInvoke_m5AD87064BA4FBE5CF08DE24A453484B9F669FDC9_gshared (JsonDeserializeFunc_1_tBB668CC86579621CD2269E5FCAD796C06CC8EE2E* __this, JsonReader_tC309CFE30F38792D0E9F8D388FC2519EC4C23609* ___0_reader, RuntimeObject* ___1_result, const RuntimeMethod* method) 
 {
 	void* ___out_args[] = {
@@ -8888,7 +9094,7 @@ float JsonDeserializeFunc_1_Invoke_mA1B59BF55B66713DD912B68528F38BEC60BC2890_Ope
 	typedef float (*FunctionPointerType) (JsonReader_tC309CFE30F38792D0E9F8D388FC2519EC4C23609*, RuntimeObject*, const RuntimeMethod*);
 	return ((FunctionPointerType)__this->___method_ptr)(___0_reader, ___1_resolver, method);
 }
-// Method Definition Index: 78607
+// Method Definition Index: 78622
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void JsonDeserializeFunc_1__ctor_m255864559047EE17E61EC9565DCFC5C9866FCDFB_gshared (JsonDeserializeFunc_1_tD231C11D30BC8163C93A7856B71EFC91D97A1B29* __this, RuntimeObject* ___0_object, intptr_t ___1_method, const RuntimeMethod* method) 
 {
 	__this->___method_ptr = (intptr_t)il2cpp_codegen_get_method_pointer((RuntimeMethod*)___1_method);
@@ -8925,13 +9131,13 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void JsonDeserializeFunc_1__ctor_m25586455904
 	}
 	__this->___extra_arg = (intptr_t)&JsonDeserializeFunc_1_Invoke_mA1B59BF55B66713DD912B68528F38BEC60BC2890_Multicast;
 }
-// Method Definition Index: 78608
+// Method Definition Index: 78623
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR float JsonDeserializeFunc_1_Invoke_mA1B59BF55B66713DD912B68528F38BEC60BC2890_gshared (JsonDeserializeFunc_1_tD231C11D30BC8163C93A7856B71EFC91D97A1B29* __this, JsonReader_tC309CFE30F38792D0E9F8D388FC2519EC4C23609* ___0_reader, RuntimeObject* ___1_resolver, const RuntimeMethod* method) 
 {
 	typedef float (*FunctionPointerType) (RuntimeObject*, JsonReader_tC309CFE30F38792D0E9F8D388FC2519EC4C23609*, RuntimeObject*, const RuntimeMethod*);
 	return ((FunctionPointerType)__this->___invoke_impl)((Il2CppObject*)__this->___method_code, ___0_reader, ___1_resolver, reinterpret_cast<RuntimeMethod*>(__this->___method));
 }
-// Method Definition Index: 78609
+// Method Definition Index: 78624
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* JsonDeserializeFunc_1_BeginInvoke_m0522106EA2AAA52BD6E250F8AA8E5D52AE08A6D9_gshared (JsonDeserializeFunc_1_tD231C11D30BC8163C93A7856B71EFC91D97A1B29* __this, JsonReader_tC309CFE30F38792D0E9F8D388FC2519EC4C23609* ___0_reader, RuntimeObject* ___1_resolver, AsyncCallback_t7FEF460CBDCFB9C5FA2EF776984778B9A4145F4C* ___2_callback, RuntimeObject* ___3_object, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -8945,7 +9151,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* JsonDeserializeFunc_1_BeginInv
 	__d_args[1] = ___1_resolver;
 	return (RuntimeObject*)il2cpp_codegen_delegate_begin_invoke((RuntimeDelegate*)__this, __d_args, (RuntimeDelegate*)___2_callback, (RuntimeObject*)___3_object);
 }
-// Method Definition Index: 78610
+// Method Definition Index: 78625
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR float JsonDeserializeFunc_1_EndInvoke_m1BFA3DDEC15B686B8BE67113C5A84D100A39DAF7_gshared (JsonDeserializeFunc_1_tD231C11D30BC8163C93A7856B71EFC91D97A1B29* __this, JsonReader_tC309CFE30F38792D0E9F8D388FC2519EC4C23609* ___0_reader, RuntimeObject* ___1_result, const RuntimeMethod* method) 
 {
 	void* ___out_args[] = {
@@ -8985,7 +9191,7 @@ uint16_t JsonDeserializeFunc_1_Invoke_m921FE5068DBCD6D79813DCDB48A401C8C8078E84_
 	typedef uint16_t (*FunctionPointerType) (JsonReader_tC309CFE30F38792D0E9F8D388FC2519EC4C23609*, RuntimeObject*, const RuntimeMethod*);
 	return ((FunctionPointerType)__this->___method_ptr)(___0_reader, ___1_resolver, method);
 }
-// Method Definition Index: 78607
+// Method Definition Index: 78622
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void JsonDeserializeFunc_1__ctor_mC5A028DA392E2748B63093699C6B7F2932C25E1F_gshared (JsonDeserializeFunc_1_t0CE4C4E1631B2803527711D73DE23AF1E55148AD* __this, RuntimeObject* ___0_object, intptr_t ___1_method, const RuntimeMethod* method) 
 {
 	__this->___method_ptr = (intptr_t)il2cpp_codegen_get_method_pointer((RuntimeMethod*)___1_method);
@@ -9022,13 +9228,13 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void JsonDeserializeFunc_1__ctor_mC5A028DA392
 	}
 	__this->___extra_arg = (intptr_t)&JsonDeserializeFunc_1_Invoke_m921FE5068DBCD6D79813DCDB48A401C8C8078E84_Multicast;
 }
-// Method Definition Index: 78608
+// Method Definition Index: 78623
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR uint16_t JsonDeserializeFunc_1_Invoke_m921FE5068DBCD6D79813DCDB48A401C8C8078E84_gshared (JsonDeserializeFunc_1_t0CE4C4E1631B2803527711D73DE23AF1E55148AD* __this, JsonReader_tC309CFE30F38792D0E9F8D388FC2519EC4C23609* ___0_reader, RuntimeObject* ___1_resolver, const RuntimeMethod* method) 
 {
 	typedef uint16_t (*FunctionPointerType) (RuntimeObject*, JsonReader_tC309CFE30F38792D0E9F8D388FC2519EC4C23609*, RuntimeObject*, const RuntimeMethod*);
 	return ((FunctionPointerType)__this->___invoke_impl)((Il2CppObject*)__this->___method_code, ___0_reader, ___1_resolver, reinterpret_cast<RuntimeMethod*>(__this->___method));
 }
-// Method Definition Index: 78609
+// Method Definition Index: 78624
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* JsonDeserializeFunc_1_BeginInvoke_m83EE68F28C8879997065C18F04604CE0457D7C45_gshared (JsonDeserializeFunc_1_t0CE4C4E1631B2803527711D73DE23AF1E55148AD* __this, JsonReader_tC309CFE30F38792D0E9F8D388FC2519EC4C23609* ___0_reader, RuntimeObject* ___1_resolver, AsyncCallback_t7FEF460CBDCFB9C5FA2EF776984778B9A4145F4C* ___2_callback, RuntimeObject* ___3_object, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -9042,7 +9248,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* JsonDeserializeFunc_1_BeginInv
 	__d_args[1] = ___1_resolver;
 	return (RuntimeObject*)il2cpp_codegen_delegate_begin_invoke((RuntimeDelegate*)__this, __d_args, (RuntimeDelegate*)___2_callback, (RuntimeObject*)___3_object);
 }
-// Method Definition Index: 78610
+// Method Definition Index: 78625
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR uint16_t JsonDeserializeFunc_1_EndInvoke_mA928E738D8BF42E91A48F743BCD0042192AA03C5_gshared (JsonDeserializeFunc_1_t0CE4C4E1631B2803527711D73DE23AF1E55148AD* __this, JsonReader_tC309CFE30F38792D0E9F8D388FC2519EC4C23609* ___0_reader, RuntimeObject* ___1_result, const RuntimeMethod* method) 
 {
 	void* ___out_args[] = {
@@ -9082,7 +9288,7 @@ uint32_t JsonDeserializeFunc_1_Invoke_mC19A002257E800E6BD0B8E78DB5A2E37ACE22579_
 	typedef uint32_t (*FunctionPointerType) (JsonReader_tC309CFE30F38792D0E9F8D388FC2519EC4C23609*, RuntimeObject*, const RuntimeMethod*);
 	return ((FunctionPointerType)__this->___method_ptr)(___0_reader, ___1_resolver, method);
 }
-// Method Definition Index: 78607
+// Method Definition Index: 78622
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void JsonDeserializeFunc_1__ctor_mD5C3C9A3B0385DE5A5A2A0EAE9F736980AC7C2AB_gshared (JsonDeserializeFunc_1_tA994BEF7CBC403604D0A215E1809DBE633C556A2* __this, RuntimeObject* ___0_object, intptr_t ___1_method, const RuntimeMethod* method) 
 {
 	__this->___method_ptr = (intptr_t)il2cpp_codegen_get_method_pointer((RuntimeMethod*)___1_method);
@@ -9119,13 +9325,13 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void JsonDeserializeFunc_1__ctor_mD5C3C9A3B03
 	}
 	__this->___extra_arg = (intptr_t)&JsonDeserializeFunc_1_Invoke_mC19A002257E800E6BD0B8E78DB5A2E37ACE22579_Multicast;
 }
-// Method Definition Index: 78608
+// Method Definition Index: 78623
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR uint32_t JsonDeserializeFunc_1_Invoke_mC19A002257E800E6BD0B8E78DB5A2E37ACE22579_gshared (JsonDeserializeFunc_1_tA994BEF7CBC403604D0A215E1809DBE633C556A2* __this, JsonReader_tC309CFE30F38792D0E9F8D388FC2519EC4C23609* ___0_reader, RuntimeObject* ___1_resolver, const RuntimeMethod* method) 
 {
 	typedef uint32_t (*FunctionPointerType) (RuntimeObject*, JsonReader_tC309CFE30F38792D0E9F8D388FC2519EC4C23609*, RuntimeObject*, const RuntimeMethod*);
 	return ((FunctionPointerType)__this->___invoke_impl)((Il2CppObject*)__this->___method_code, ___0_reader, ___1_resolver, reinterpret_cast<RuntimeMethod*>(__this->___method));
 }
-// Method Definition Index: 78609
+// Method Definition Index: 78624
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* JsonDeserializeFunc_1_BeginInvoke_m200248B88AD963E875CCD98A26F01C6130CCDC40_gshared (JsonDeserializeFunc_1_tA994BEF7CBC403604D0A215E1809DBE633C556A2* __this, JsonReader_tC309CFE30F38792D0E9F8D388FC2519EC4C23609* ___0_reader, RuntimeObject* ___1_resolver, AsyncCallback_t7FEF460CBDCFB9C5FA2EF776984778B9A4145F4C* ___2_callback, RuntimeObject* ___3_object, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -9139,7 +9345,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* JsonDeserializeFunc_1_BeginInv
 	__d_args[1] = ___1_resolver;
 	return (RuntimeObject*)il2cpp_codegen_delegate_begin_invoke((RuntimeDelegate*)__this, __d_args, (RuntimeDelegate*)___2_callback, (RuntimeObject*)___3_object);
 }
-// Method Definition Index: 78610
+// Method Definition Index: 78625
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR uint32_t JsonDeserializeFunc_1_EndInvoke_m068320C4E25998E60AC8B0EB4AC0BCC261A9B84E_gshared (JsonDeserializeFunc_1_tA994BEF7CBC403604D0A215E1809DBE633C556A2* __this, JsonReader_tC309CFE30F38792D0E9F8D388FC2519EC4C23609* ___0_reader, RuntimeObject* ___1_result, const RuntimeMethod* method) 
 {
 	void* ___out_args[] = {
@@ -9179,7 +9385,7 @@ uint64_t JsonDeserializeFunc_1_Invoke_m875E2B53A83D6238246D07B538A39622B3E5F84B_
 	typedef uint64_t (*FunctionPointerType) (JsonReader_tC309CFE30F38792D0E9F8D388FC2519EC4C23609*, RuntimeObject*, const RuntimeMethod*);
 	return ((FunctionPointerType)__this->___method_ptr)(___0_reader, ___1_resolver, method);
 }
-// Method Definition Index: 78607
+// Method Definition Index: 78622
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void JsonDeserializeFunc_1__ctor_m0B2A7433E8FA3EBBD1BD7079F539230E38CAAA95_gshared (JsonDeserializeFunc_1_tF2D3FBD1FE385FD3982436ABDE96B82DA9647E22* __this, RuntimeObject* ___0_object, intptr_t ___1_method, const RuntimeMethod* method) 
 {
 	__this->___method_ptr = (intptr_t)il2cpp_codegen_get_method_pointer((RuntimeMethod*)___1_method);
@@ -9216,13 +9422,13 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void JsonDeserializeFunc_1__ctor_m0B2A7433E8F
 	}
 	__this->___extra_arg = (intptr_t)&JsonDeserializeFunc_1_Invoke_m875E2B53A83D6238246D07B538A39622B3E5F84B_Multicast;
 }
-// Method Definition Index: 78608
+// Method Definition Index: 78623
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR uint64_t JsonDeserializeFunc_1_Invoke_m875E2B53A83D6238246D07B538A39622B3E5F84B_gshared (JsonDeserializeFunc_1_tF2D3FBD1FE385FD3982436ABDE96B82DA9647E22* __this, JsonReader_tC309CFE30F38792D0E9F8D388FC2519EC4C23609* ___0_reader, RuntimeObject* ___1_resolver, const RuntimeMethod* method) 
 {
 	typedef uint64_t (*FunctionPointerType) (RuntimeObject*, JsonReader_tC309CFE30F38792D0E9F8D388FC2519EC4C23609*, RuntimeObject*, const RuntimeMethod*);
 	return ((FunctionPointerType)__this->___invoke_impl)((Il2CppObject*)__this->___method_code, ___0_reader, ___1_resolver, reinterpret_cast<RuntimeMethod*>(__this->___method));
 }
-// Method Definition Index: 78609
+// Method Definition Index: 78624
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* JsonDeserializeFunc_1_BeginInvoke_mFD1FBA3CAB1AAFBD62A5EAB1A01D1DCD2670C2D6_gshared (JsonDeserializeFunc_1_tF2D3FBD1FE385FD3982436ABDE96B82DA9647E22* __this, JsonReader_tC309CFE30F38792D0E9F8D388FC2519EC4C23609* ___0_reader, RuntimeObject* ___1_resolver, AsyncCallback_t7FEF460CBDCFB9C5FA2EF776984778B9A4145F4C* ___2_callback, RuntimeObject* ___3_object, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -9236,7 +9442,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* JsonDeserializeFunc_1_BeginInv
 	__d_args[1] = ___1_resolver;
 	return (RuntimeObject*)il2cpp_codegen_delegate_begin_invoke((RuntimeDelegate*)__this, __d_args, (RuntimeDelegate*)___2_callback, (RuntimeObject*)___3_object);
 }
-// Method Definition Index: 78610
+// Method Definition Index: 78625
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR uint64_t JsonDeserializeFunc_1_EndInvoke_m57CC98B86C246AE03DC21633F854EBB2524881B3_gshared (JsonDeserializeFunc_1_tF2D3FBD1FE385FD3982436ABDE96B82DA9647E22* __this, JsonReader_tC309CFE30F38792D0E9F8D388FC2519EC4C23609* ___0_reader, RuntimeObject* ___1_result, const RuntimeMethod* method) 
 {
 	void* ___out_args[] = {
@@ -9280,7 +9486,7 @@ void JsonDeserializeFunc_1_Invoke_m839BE908D0BB62CD3F3D94AB55926B667E8FBF49_Open
 {
 	InvokerActionInvoker2< RuntimeObject*, Il2CppFullySharedGenericAny* >::Invoke((Il2CppMethodPointer)__this->___method_ptr, method, ___0_reader, ___1_resolver, il2cppRetVal);
 }
-// Method Definition Index: 78607
+// Method Definition Index: 78622
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void JsonDeserializeFunc_1__ctor_m68599CFAB457B76098D603E36F9D9E7B4492D546_gshared (JsonDeserializeFunc_1_tBC8EEA8AEB3C7F04A4D3500EDA1E49D040E1000B* __this, RuntimeObject* ___0_object, intptr_t ___1_method, const RuntimeMethod* method) 
 {
 	__this->___method_ptr = (intptr_t)il2cpp_codegen_get_method_pointer((RuntimeMethod*)___1_method);
@@ -9313,13 +9519,13 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void JsonDeserializeFunc_1__ctor_m68599CFAB45
 	}
 	__this->___extra_arg = (intptr_t)&JsonDeserializeFunc_1_Invoke_m839BE908D0BB62CD3F3D94AB55926B667E8FBF49_Multicast;
 }
-// Method Definition Index: 78608
+// Method Definition Index: 78623
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void JsonDeserializeFunc_1_Invoke_m839BE908D0BB62CD3F3D94AB55926B667E8FBF49_gshared (JsonDeserializeFunc_1_tBC8EEA8AEB3C7F04A4D3500EDA1E49D040E1000B* __this, JsonReader_tC309CFE30F38792D0E9F8D388FC2519EC4C23609* ___0_reader, RuntimeObject* ___1_resolver, Il2CppFullySharedGenericAny* il2cppRetVal, const RuntimeMethod* method) 
 {
 	typedef void (*FunctionPointerType) (RuntimeObject*, JsonReader_tC309CFE30F38792D0E9F8D388FC2519EC4C23609*, RuntimeObject*, Il2CppFullySharedGenericAny*, const RuntimeMethod*);
 	((FunctionPointerType)__this->___invoke_impl)((Il2CppObject*)__this->___method_code, ___0_reader, ___1_resolver, il2cppRetVal, reinterpret_cast<RuntimeMethod*>(__this->___method));
 }
-// Method Definition Index: 78609
+// Method Definition Index: 78624
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* JsonDeserializeFunc_1_BeginInvoke_mD08EBA91F2DE20550AB8CF769F6524D0AF670EE0_gshared (JsonDeserializeFunc_1_tBC8EEA8AEB3C7F04A4D3500EDA1E49D040E1000B* __this, JsonReader_tC309CFE30F38792D0E9F8D388FC2519EC4C23609* ___0_reader, RuntimeObject* ___1_resolver, AsyncCallback_t7FEF460CBDCFB9C5FA2EF776984778B9A4145F4C* ___2_callback, RuntimeObject* ___3_object, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -9333,7 +9539,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* JsonDeserializeFunc_1_BeginInv
 	__d_args[1] = ___1_resolver;
 	return (RuntimeObject*)il2cpp_codegen_delegate_begin_invoke((RuntimeDelegate*)__this, __d_args, (RuntimeDelegate*)___2_callback, (RuntimeObject*)___3_object);
 }
-// Method Definition Index: 78610
+// Method Definition Index: 78625
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void JsonDeserializeFunc_1_EndInvoke_mE614BDFE4C43AE3EAC1BDE21E0405A24EA3F7C4A_gshared (JsonDeserializeFunc_1_tBC8EEA8AEB3C7F04A4D3500EDA1E49D040E1000B* __this, JsonReader_tC309CFE30F38792D0E9F8D388FC2519EC4C23609* ___0_reader, RuntimeObject* ___1_result, Il2CppFullySharedGenericAny* il2cppRetVal, const RuntimeMethod* method) 
 {
 	void* ___out_args[] = {
@@ -9375,7 +9581,7 @@ void JsonSerializeAction_1_Invoke_m1E13BB47AFCD76682EFA48C874DCBB24B856FC9D_Open
 	typedef void (*FunctionPointerType) (JsonWriter_t76E122B737DD79975E835A95D9F85B09D0792EA2*, bool, RuntimeObject*, const RuntimeMethod*);
 	((FunctionPointerType)__this->___method_ptr)(___0_writer, ___1_value, ___2_resolver, method);
 }
-// Method Definition Index: 78603
+// Method Definition Index: 78618
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void JsonSerializeAction_1__ctor_m1B803A2EE33DC020C87D4282303FC306780A7292_gshared (JsonSerializeAction_1_t6FEE6760173C0468592C8D605A546B8074D4E103* __this, RuntimeObject* ___0_object, intptr_t ___1_method, const RuntimeMethod* method) 
 {
 	__this->___method_ptr = (intptr_t)il2cpp_codegen_get_method_pointer((RuntimeMethod*)___1_method);
@@ -9412,13 +9618,13 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void JsonSerializeAction_1__ctor_m1B803A2EE33
 	}
 	__this->___extra_arg = (intptr_t)&JsonSerializeAction_1_Invoke_m1E13BB47AFCD76682EFA48C874DCBB24B856FC9D_Multicast;
 }
-// Method Definition Index: 78604
+// Method Definition Index: 78619
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void JsonSerializeAction_1_Invoke_m1E13BB47AFCD76682EFA48C874DCBB24B856FC9D_gshared (JsonSerializeAction_1_t6FEE6760173C0468592C8D605A546B8074D4E103* __this, JsonWriter_t76E122B737DD79975E835A95D9F85B09D0792EA2* ___0_writer, bool ___1_value, RuntimeObject* ___2_resolver, const RuntimeMethod* method) 
 {
 	typedef void (*FunctionPointerType) (RuntimeObject*, JsonWriter_t76E122B737DD79975E835A95D9F85B09D0792EA2*, bool, RuntimeObject*, const RuntimeMethod*);
 	((FunctionPointerType)__this->___invoke_impl)((Il2CppObject*)__this->___method_code, ___0_writer, ___1_value, ___2_resolver, reinterpret_cast<RuntimeMethod*>(__this->___method));
 }
-// Method Definition Index: 78605
+// Method Definition Index: 78620
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* JsonSerializeAction_1_BeginInvoke_mC3B0ED89C7C10059F60763DB94AD597D675359F9_gshared (JsonSerializeAction_1_t6FEE6760173C0468592C8D605A546B8074D4E103* __this, JsonWriter_t76E122B737DD79975E835A95D9F85B09D0792EA2* ___0_writer, bool ___1_value, RuntimeObject* ___2_resolver, AsyncCallback_t7FEF460CBDCFB9C5FA2EF776984778B9A4145F4C* ___3_callback, RuntimeObject* ___4_object, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -9433,7 +9639,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* JsonSerializeAction_1_BeginInv
 	__d_args[2] = ___2_resolver;
 	return (RuntimeObject*)il2cpp_codegen_delegate_begin_invoke((RuntimeDelegate*)__this, __d_args, (RuntimeDelegate*)___3_callback, (RuntimeObject*)___4_object);
 }
-// Method Definition Index: 78606
+// Method Definition Index: 78621
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void JsonSerializeAction_1_EndInvoke_m330DB4122FEAD9334E811B7EDFF42E62A67AED35_gshared (JsonSerializeAction_1_t6FEE6760173C0468592C8D605A546B8074D4E103* __this, JsonWriter_t76E122B737DD79975E835A95D9F85B09D0792EA2* ___0_writer, RuntimeObject* ___1_result, const RuntimeMethod* method) 
 {
 	void* ___out_args[] = {
@@ -9470,7 +9676,7 @@ void JsonSerializeAction_1_Invoke_mDAFDEC73C0565784A27CEC9E2FC7AE45DCCE3A1B_Open
 	typedef void (*FunctionPointerType) (JsonWriter_t76E122B737DD79975E835A95D9F85B09D0792EA2*, uint8_t, RuntimeObject*, const RuntimeMethod*);
 	((FunctionPointerType)__this->___method_ptr)(___0_writer, ___1_value, ___2_resolver, method);
 }
-// Method Definition Index: 78603
+// Method Definition Index: 78618
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void JsonSerializeAction_1__ctor_mDD327B137FA81D57532E0F39CA57BACB06AD957D_gshared (JsonSerializeAction_1_tA086E7693C866BB76D5B91484EBFE3C794F4D114* __this, RuntimeObject* ___0_object, intptr_t ___1_method, const RuntimeMethod* method) 
 {
 	__this->___method_ptr = (intptr_t)il2cpp_codegen_get_method_pointer((RuntimeMethod*)___1_method);
@@ -9507,13 +9713,13 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void JsonSerializeAction_1__ctor_mDD327B137FA
 	}
 	__this->___extra_arg = (intptr_t)&JsonSerializeAction_1_Invoke_mDAFDEC73C0565784A27CEC9E2FC7AE45DCCE3A1B_Multicast;
 }
-// Method Definition Index: 78604
+// Method Definition Index: 78619
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void JsonSerializeAction_1_Invoke_mDAFDEC73C0565784A27CEC9E2FC7AE45DCCE3A1B_gshared (JsonSerializeAction_1_tA086E7693C866BB76D5B91484EBFE3C794F4D114* __this, JsonWriter_t76E122B737DD79975E835A95D9F85B09D0792EA2* ___0_writer, uint8_t ___1_value, RuntimeObject* ___2_resolver, const RuntimeMethod* method) 
 {
 	typedef void (*FunctionPointerType) (RuntimeObject*, JsonWriter_t76E122B737DD79975E835A95D9F85B09D0792EA2*, uint8_t, RuntimeObject*, const RuntimeMethod*);
 	((FunctionPointerType)__this->___invoke_impl)((Il2CppObject*)__this->___method_code, ___0_writer, ___1_value, ___2_resolver, reinterpret_cast<RuntimeMethod*>(__this->___method));
 }
-// Method Definition Index: 78605
+// Method Definition Index: 78620
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* JsonSerializeAction_1_BeginInvoke_mE57EF4757760982826F5E1BBEFB5FDD371191B0B_gshared (JsonSerializeAction_1_tA086E7693C866BB76D5B91484EBFE3C794F4D114* __this, JsonWriter_t76E122B737DD79975E835A95D9F85B09D0792EA2* ___0_writer, uint8_t ___1_value, RuntimeObject* ___2_resolver, AsyncCallback_t7FEF460CBDCFB9C5FA2EF776984778B9A4145F4C* ___3_callback, RuntimeObject* ___4_object, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -9528,7 +9734,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* JsonSerializeAction_1_BeginInv
 	__d_args[2] = ___2_resolver;
 	return (RuntimeObject*)il2cpp_codegen_delegate_begin_invoke((RuntimeDelegate*)__this, __d_args, (RuntimeDelegate*)___3_callback, (RuntimeObject*)___4_object);
 }
-// Method Definition Index: 78606
+// Method Definition Index: 78621
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void JsonSerializeAction_1_EndInvoke_m2132B1AE6D4FE0073EC19419C50FFB11D8997742_gshared (JsonSerializeAction_1_tA086E7693C866BB76D5B91484EBFE3C794F4D114* __this, JsonWriter_t76E122B737DD79975E835A95D9F85B09D0792EA2* ___0_writer, RuntimeObject* ___1_result, const RuntimeMethod* method) 
 {
 	void* ___out_args[] = {
@@ -9565,7 +9771,7 @@ void JsonSerializeAction_1_Invoke_mB3329BC2836DE2570557EE24F689C2E8BD476B0F_Open
 	typedef void (*FunctionPointerType) (JsonWriter_t76E122B737DD79975E835A95D9F85B09D0792EA2*, Il2CppChar, RuntimeObject*, const RuntimeMethod*);
 	((FunctionPointerType)__this->___method_ptr)(___0_writer, ___1_value, ___2_resolver, method);
 }
-// Method Definition Index: 78603
+// Method Definition Index: 78618
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void JsonSerializeAction_1__ctor_mCCE820736031CF16FF2816B92B65CBB556263243_gshared (JsonSerializeAction_1_t7EA2301219ED7EC195D28A619D981DAE957149FD* __this, RuntimeObject* ___0_object, intptr_t ___1_method, const RuntimeMethod* method) 
 {
 	__this->___method_ptr = (intptr_t)il2cpp_codegen_get_method_pointer((RuntimeMethod*)___1_method);
@@ -9602,13 +9808,13 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void JsonSerializeAction_1__ctor_mCCE82073603
 	}
 	__this->___extra_arg = (intptr_t)&JsonSerializeAction_1_Invoke_mB3329BC2836DE2570557EE24F689C2E8BD476B0F_Multicast;
 }
-// Method Definition Index: 78604
+// Method Definition Index: 78619
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void JsonSerializeAction_1_Invoke_mB3329BC2836DE2570557EE24F689C2E8BD476B0F_gshared (JsonSerializeAction_1_t7EA2301219ED7EC195D28A619D981DAE957149FD* __this, JsonWriter_t76E122B737DD79975E835A95D9F85B09D0792EA2* ___0_writer, Il2CppChar ___1_value, RuntimeObject* ___2_resolver, const RuntimeMethod* method) 
 {
 	typedef void (*FunctionPointerType) (RuntimeObject*, JsonWriter_t76E122B737DD79975E835A95D9F85B09D0792EA2*, Il2CppChar, RuntimeObject*, const RuntimeMethod*);
 	((FunctionPointerType)__this->___invoke_impl)((Il2CppObject*)__this->___method_code, ___0_writer, ___1_value, ___2_resolver, reinterpret_cast<RuntimeMethod*>(__this->___method));
 }
-// Method Definition Index: 78605
+// Method Definition Index: 78620
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* JsonSerializeAction_1_BeginInvoke_m1DA7FBE3B3ABC8BFA5E77097A87635084919B82B_gshared (JsonSerializeAction_1_t7EA2301219ED7EC195D28A619D981DAE957149FD* __this, JsonWriter_t76E122B737DD79975E835A95D9F85B09D0792EA2* ___0_writer, Il2CppChar ___1_value, RuntimeObject* ___2_resolver, AsyncCallback_t7FEF460CBDCFB9C5FA2EF776984778B9A4145F4C* ___3_callback, RuntimeObject* ___4_object, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -9623,7 +9829,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* JsonSerializeAction_1_BeginInv
 	__d_args[2] = ___2_resolver;
 	return (RuntimeObject*)il2cpp_codegen_delegate_begin_invoke((RuntimeDelegate*)__this, __d_args, (RuntimeDelegate*)___3_callback, (RuntimeObject*)___4_object);
 }
-// Method Definition Index: 78606
+// Method Definition Index: 78621
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void JsonSerializeAction_1_EndInvoke_mBF94623E0212626F226BBB6663EAD3E2FA61BDCB_gshared (JsonSerializeAction_1_t7EA2301219ED7EC195D28A619D981DAE957149FD* __this, JsonWriter_t76E122B737DD79975E835A95D9F85B09D0792EA2* ___0_writer, RuntimeObject* ___1_result, const RuntimeMethod* method) 
 {
 	void* ___out_args[] = {
@@ -9660,7 +9866,7 @@ void JsonSerializeAction_1_Invoke_mE5AE39A1857EC36E98EC2318D62E386187835360_Open
 	typedef void (*FunctionPointerType) (JsonWriter_t76E122B737DD79975E835A95D9F85B09D0792EA2*, DateTime_t66193957C73913903DDAD89FEDC46139BCA5802D, RuntimeObject*, const RuntimeMethod*);
 	((FunctionPointerType)__this->___method_ptr)(___0_writer, ___1_value, ___2_resolver, method);
 }
-// Method Definition Index: 78603
+// Method Definition Index: 78618
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void JsonSerializeAction_1__ctor_m75D2E85F9338B99B490E390988F5227B90869C9F_gshared (JsonSerializeAction_1_t52E2A209F81CC00F65B6801C2956A03F22C43355* __this, RuntimeObject* ___0_object, intptr_t ___1_method, const RuntimeMethod* method) 
 {
 	__this->___method_ptr = (intptr_t)il2cpp_codegen_get_method_pointer((RuntimeMethod*)___1_method);
@@ -9697,13 +9903,13 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void JsonSerializeAction_1__ctor_m75D2E85F933
 	}
 	__this->___extra_arg = (intptr_t)&JsonSerializeAction_1_Invoke_mE5AE39A1857EC36E98EC2318D62E386187835360_Multicast;
 }
-// Method Definition Index: 78604
+// Method Definition Index: 78619
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void JsonSerializeAction_1_Invoke_mE5AE39A1857EC36E98EC2318D62E386187835360_gshared (JsonSerializeAction_1_t52E2A209F81CC00F65B6801C2956A03F22C43355* __this, JsonWriter_t76E122B737DD79975E835A95D9F85B09D0792EA2* ___0_writer, DateTime_t66193957C73913903DDAD89FEDC46139BCA5802D ___1_value, RuntimeObject* ___2_resolver, const RuntimeMethod* method) 
 {
 	typedef void (*FunctionPointerType) (RuntimeObject*, JsonWriter_t76E122B737DD79975E835A95D9F85B09D0792EA2*, DateTime_t66193957C73913903DDAD89FEDC46139BCA5802D, RuntimeObject*, const RuntimeMethod*);
 	((FunctionPointerType)__this->___invoke_impl)((Il2CppObject*)__this->___method_code, ___0_writer, ___1_value, ___2_resolver, reinterpret_cast<RuntimeMethod*>(__this->___method));
 }
-// Method Definition Index: 78605
+// Method Definition Index: 78620
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* JsonSerializeAction_1_BeginInvoke_m4F51E9F1A5341723419427DE260475CB7E2BB04B_gshared (JsonSerializeAction_1_t52E2A209F81CC00F65B6801C2956A03F22C43355* __this, JsonWriter_t76E122B737DD79975E835A95D9F85B09D0792EA2* ___0_writer, DateTime_t66193957C73913903DDAD89FEDC46139BCA5802D ___1_value, RuntimeObject* ___2_resolver, AsyncCallback_t7FEF460CBDCFB9C5FA2EF776984778B9A4145F4C* ___3_callback, RuntimeObject* ___4_object, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -9719,7 +9925,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* JsonSerializeAction_1_BeginInv
 	__d_args[2] = ___2_resolver;
 	return (RuntimeObject*)il2cpp_codegen_delegate_begin_invoke((RuntimeDelegate*)__this, __d_args, (RuntimeDelegate*)___3_callback, (RuntimeObject*)___4_object);
 }
-// Method Definition Index: 78606
+// Method Definition Index: 78621
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void JsonSerializeAction_1_EndInvoke_m24020B55395E74895904DC71BA6C5046DD47B0D6_gshared (JsonSerializeAction_1_t52E2A209F81CC00F65B6801C2956A03F22C43355* __this, JsonWriter_t76E122B737DD79975E835A95D9F85B09D0792EA2* ___0_writer, RuntimeObject* ___1_result, const RuntimeMethod* method) 
 {
 	void* ___out_args[] = {
@@ -9756,7 +9962,7 @@ void JsonSerializeAction_1_Invoke_m9C5982E59B72F2074F592BB394081271CDB33DEB_Open
 	typedef void (*FunctionPointerType) (JsonWriter_t76E122B737DD79975E835A95D9F85B09D0792EA2*, double, RuntimeObject*, const RuntimeMethod*);
 	((FunctionPointerType)__this->___method_ptr)(___0_writer, ___1_value, ___2_resolver, method);
 }
-// Method Definition Index: 78603
+// Method Definition Index: 78618
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void JsonSerializeAction_1__ctor_m0F23FE4FE3448BE834DDB710AC6EE44D86225F2B_gshared (JsonSerializeAction_1_t71D67F1EF2D17618E672DA481E7336EFDD57A5D1* __this, RuntimeObject* ___0_object, intptr_t ___1_method, const RuntimeMethod* method) 
 {
 	__this->___method_ptr = (intptr_t)il2cpp_codegen_get_method_pointer((RuntimeMethod*)___1_method);
@@ -9793,13 +9999,13 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void JsonSerializeAction_1__ctor_m0F23FE4FE34
 	}
 	__this->___extra_arg = (intptr_t)&JsonSerializeAction_1_Invoke_m9C5982E59B72F2074F592BB394081271CDB33DEB_Multicast;
 }
-// Method Definition Index: 78604
+// Method Definition Index: 78619
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void JsonSerializeAction_1_Invoke_m9C5982E59B72F2074F592BB394081271CDB33DEB_gshared (JsonSerializeAction_1_t71D67F1EF2D17618E672DA481E7336EFDD57A5D1* __this, JsonWriter_t76E122B737DD79975E835A95D9F85B09D0792EA2* ___0_writer, double ___1_value, RuntimeObject* ___2_resolver, const RuntimeMethod* method) 
 {
 	typedef void (*FunctionPointerType) (RuntimeObject*, JsonWriter_t76E122B737DD79975E835A95D9F85B09D0792EA2*, double, RuntimeObject*, const RuntimeMethod*);
 	((FunctionPointerType)__this->___invoke_impl)((Il2CppObject*)__this->___method_code, ___0_writer, ___1_value, ___2_resolver, reinterpret_cast<RuntimeMethod*>(__this->___method));
 }
-// Method Definition Index: 78605
+// Method Definition Index: 78620
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* JsonSerializeAction_1_BeginInvoke_m8100A00AB46F1CF1566B558814A610A2D09583BE_gshared (JsonSerializeAction_1_t71D67F1EF2D17618E672DA481E7336EFDD57A5D1* __this, JsonWriter_t76E122B737DD79975E835A95D9F85B09D0792EA2* ___0_writer, double ___1_value, RuntimeObject* ___2_resolver, AsyncCallback_t7FEF460CBDCFB9C5FA2EF776984778B9A4145F4C* ___3_callback, RuntimeObject* ___4_object, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -9814,7 +10020,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* JsonSerializeAction_1_BeginInv
 	__d_args[2] = ___2_resolver;
 	return (RuntimeObject*)il2cpp_codegen_delegate_begin_invoke((RuntimeDelegate*)__this, __d_args, (RuntimeDelegate*)___3_callback, (RuntimeObject*)___4_object);
 }
-// Method Definition Index: 78606
+// Method Definition Index: 78621
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void JsonSerializeAction_1_EndInvoke_m75302B1207B0082CC759053AB5CE23FBC77CC1BE_gshared (JsonSerializeAction_1_t71D67F1EF2D17618E672DA481E7336EFDD57A5D1* __this, JsonWriter_t76E122B737DD79975E835A95D9F85B09D0792EA2* ___0_writer, RuntimeObject* ___1_result, const RuntimeMethod* method) 
 {
 	void* ___out_args[] = {
@@ -9851,7 +10057,7 @@ void JsonSerializeAction_1_Invoke_m9B030DB1C7F5109A964DC874E40B2F2012030893_Open
 	typedef void (*FunctionPointerType) (JsonWriter_t76E122B737DD79975E835A95D9F85B09D0792EA2*, int16_t, RuntimeObject*, const RuntimeMethod*);
 	((FunctionPointerType)__this->___method_ptr)(___0_writer, ___1_value, ___2_resolver, method);
 }
-// Method Definition Index: 78603
+// Method Definition Index: 78618
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void JsonSerializeAction_1__ctor_m72E89F16D7B28AE0C281012029423E3D668FED03_gshared (JsonSerializeAction_1_tF3084BC123689162078E4361A34563664746718F* __this, RuntimeObject* ___0_object, intptr_t ___1_method, const RuntimeMethod* method) 
 {
 	__this->___method_ptr = (intptr_t)il2cpp_codegen_get_method_pointer((RuntimeMethod*)___1_method);
@@ -9888,13 +10094,13 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void JsonSerializeAction_1__ctor_m72E89F16D7B
 	}
 	__this->___extra_arg = (intptr_t)&JsonSerializeAction_1_Invoke_m9B030DB1C7F5109A964DC874E40B2F2012030893_Multicast;
 }
-// Method Definition Index: 78604
+// Method Definition Index: 78619
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void JsonSerializeAction_1_Invoke_m9B030DB1C7F5109A964DC874E40B2F2012030893_gshared (JsonSerializeAction_1_tF3084BC123689162078E4361A34563664746718F* __this, JsonWriter_t76E122B737DD79975E835A95D9F85B09D0792EA2* ___0_writer, int16_t ___1_value, RuntimeObject* ___2_resolver, const RuntimeMethod* method) 
 {
 	typedef void (*FunctionPointerType) (RuntimeObject*, JsonWriter_t76E122B737DD79975E835A95D9F85B09D0792EA2*, int16_t, RuntimeObject*, const RuntimeMethod*);
 	((FunctionPointerType)__this->___invoke_impl)((Il2CppObject*)__this->___method_code, ___0_writer, ___1_value, ___2_resolver, reinterpret_cast<RuntimeMethod*>(__this->___method));
 }
-// Method Definition Index: 78605
+// Method Definition Index: 78620
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* JsonSerializeAction_1_BeginInvoke_mE892E29D38E18417CF36FCB8545EABF9FE97E3B0_gshared (JsonSerializeAction_1_tF3084BC123689162078E4361A34563664746718F* __this, JsonWriter_t76E122B737DD79975E835A95D9F85B09D0792EA2* ___0_writer, int16_t ___1_value, RuntimeObject* ___2_resolver, AsyncCallback_t7FEF460CBDCFB9C5FA2EF776984778B9A4145F4C* ___3_callback, RuntimeObject* ___4_object, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -9909,7 +10115,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* JsonSerializeAction_1_BeginInv
 	__d_args[2] = ___2_resolver;
 	return (RuntimeObject*)il2cpp_codegen_delegate_begin_invoke((RuntimeDelegate*)__this, __d_args, (RuntimeDelegate*)___3_callback, (RuntimeObject*)___4_object);
 }
-// Method Definition Index: 78606
+// Method Definition Index: 78621
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void JsonSerializeAction_1_EndInvoke_mBFA10F50BC0C8BCDBC50F8556901E11DFBF7C848_gshared (JsonSerializeAction_1_tF3084BC123689162078E4361A34563664746718F* __this, JsonWriter_t76E122B737DD79975E835A95D9F85B09D0792EA2* ___0_writer, RuntimeObject* ___1_result, const RuntimeMethod* method) 
 {
 	void* ___out_args[] = {
@@ -9946,7 +10152,7 @@ void JsonSerializeAction_1_Invoke_m5FF23CA4D81168D48D7ED10705861BAB3C8971C3_Open
 	typedef void (*FunctionPointerType) (JsonWriter_t76E122B737DD79975E835A95D9F85B09D0792EA2*, int32_t, RuntimeObject*, const RuntimeMethod*);
 	((FunctionPointerType)__this->___method_ptr)(___0_writer, ___1_value, ___2_resolver, method);
 }
-// Method Definition Index: 78603
+// Method Definition Index: 78618
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void JsonSerializeAction_1__ctor_m9202617D9A3771FBBDA6E937FEA61FD43E438360_gshared (JsonSerializeAction_1_tDFC2F96EDE6B8747ADCED03030C223C004CFD7BA* __this, RuntimeObject* ___0_object, intptr_t ___1_method, const RuntimeMethod* method) 
 {
 	__this->___method_ptr = (intptr_t)il2cpp_codegen_get_method_pointer((RuntimeMethod*)___1_method);
@@ -9983,13 +10189,13 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void JsonSerializeAction_1__ctor_m9202617D9A3
 	}
 	__this->___extra_arg = (intptr_t)&JsonSerializeAction_1_Invoke_m5FF23CA4D81168D48D7ED10705861BAB3C8971C3_Multicast;
 }
-// Method Definition Index: 78604
+// Method Definition Index: 78619
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void JsonSerializeAction_1_Invoke_m5FF23CA4D81168D48D7ED10705861BAB3C8971C3_gshared (JsonSerializeAction_1_tDFC2F96EDE6B8747ADCED03030C223C004CFD7BA* __this, JsonWriter_t76E122B737DD79975E835A95D9F85B09D0792EA2* ___0_writer, int32_t ___1_value, RuntimeObject* ___2_resolver, const RuntimeMethod* method) 
 {
 	typedef void (*FunctionPointerType) (RuntimeObject*, JsonWriter_t76E122B737DD79975E835A95D9F85B09D0792EA2*, int32_t, RuntimeObject*, const RuntimeMethod*);
 	((FunctionPointerType)__this->___invoke_impl)((Il2CppObject*)__this->___method_code, ___0_writer, ___1_value, ___2_resolver, reinterpret_cast<RuntimeMethod*>(__this->___method));
 }
-// Method Definition Index: 78605
+// Method Definition Index: 78620
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* JsonSerializeAction_1_BeginInvoke_mF41F0E23DBF8897E281D2449A6F1319A2925D416_gshared (JsonSerializeAction_1_tDFC2F96EDE6B8747ADCED03030C223C004CFD7BA* __this, JsonWriter_t76E122B737DD79975E835A95D9F85B09D0792EA2* ___0_writer, int32_t ___1_value, RuntimeObject* ___2_resolver, AsyncCallback_t7FEF460CBDCFB9C5FA2EF776984778B9A4145F4C* ___3_callback, RuntimeObject* ___4_object, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -10004,7 +10210,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* JsonSerializeAction_1_BeginInv
 	__d_args[2] = ___2_resolver;
 	return (RuntimeObject*)il2cpp_codegen_delegate_begin_invoke((RuntimeDelegate*)__this, __d_args, (RuntimeDelegate*)___3_callback, (RuntimeObject*)___4_object);
 }
-// Method Definition Index: 78606
+// Method Definition Index: 78621
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void JsonSerializeAction_1_EndInvoke_m4F1BC84784AE47A832BC56D4EC28398A725CC19D_gshared (JsonSerializeAction_1_tDFC2F96EDE6B8747ADCED03030C223C004CFD7BA* __this, JsonWriter_t76E122B737DD79975E835A95D9F85B09D0792EA2* ___0_writer, RuntimeObject* ___1_result, const RuntimeMethod* method) 
 {
 	void* ___out_args[] = {
@@ -10041,7 +10247,7 @@ void JsonSerializeAction_1_Invoke_mFB7844C9944008DA2D1CDF8CCB043F4413C20C00_Open
 	typedef void (*FunctionPointerType) (JsonWriter_t76E122B737DD79975E835A95D9F85B09D0792EA2*, int64_t, RuntimeObject*, const RuntimeMethod*);
 	((FunctionPointerType)__this->___method_ptr)(___0_writer, ___1_value, ___2_resolver, method);
 }
-// Method Definition Index: 78603
+// Method Definition Index: 78618
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void JsonSerializeAction_1__ctor_mB4D96026C5C1381356F0F3A1D0101538EF1B91D6_gshared (JsonSerializeAction_1_t10583CA31CD3397FC2BF623605C143FAF120A904* __this, RuntimeObject* ___0_object, intptr_t ___1_method, const RuntimeMethod* method) 
 {
 	__this->___method_ptr = (intptr_t)il2cpp_codegen_get_method_pointer((RuntimeMethod*)___1_method);
@@ -10078,13 +10284,13 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void JsonSerializeAction_1__ctor_mB4D96026C5C
 	}
 	__this->___extra_arg = (intptr_t)&JsonSerializeAction_1_Invoke_mFB7844C9944008DA2D1CDF8CCB043F4413C20C00_Multicast;
 }
-// Method Definition Index: 78604
+// Method Definition Index: 78619
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void JsonSerializeAction_1_Invoke_mFB7844C9944008DA2D1CDF8CCB043F4413C20C00_gshared (JsonSerializeAction_1_t10583CA31CD3397FC2BF623605C143FAF120A904* __this, JsonWriter_t76E122B737DD79975E835A95D9F85B09D0792EA2* ___0_writer, int64_t ___1_value, RuntimeObject* ___2_resolver, const RuntimeMethod* method) 
 {
 	typedef void (*FunctionPointerType) (RuntimeObject*, JsonWriter_t76E122B737DD79975E835A95D9F85B09D0792EA2*, int64_t, RuntimeObject*, const RuntimeMethod*);
 	((FunctionPointerType)__this->___invoke_impl)((Il2CppObject*)__this->___method_code, ___0_writer, ___1_value, ___2_resolver, reinterpret_cast<RuntimeMethod*>(__this->___method));
 }
-// Method Definition Index: 78605
+// Method Definition Index: 78620
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* JsonSerializeAction_1_BeginInvoke_mE07D52F037C6118902EA21FD5146A4CEEF8C12C5_gshared (JsonSerializeAction_1_t10583CA31CD3397FC2BF623605C143FAF120A904* __this, JsonWriter_t76E122B737DD79975E835A95D9F85B09D0792EA2* ___0_writer, int64_t ___1_value, RuntimeObject* ___2_resolver, AsyncCallback_t7FEF460CBDCFB9C5FA2EF776984778B9A4145F4C* ___3_callback, RuntimeObject* ___4_object, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -10099,7 +10305,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* JsonSerializeAction_1_BeginInv
 	__d_args[2] = ___2_resolver;
 	return (RuntimeObject*)il2cpp_codegen_delegate_begin_invoke((RuntimeDelegate*)__this, __d_args, (RuntimeDelegate*)___3_callback, (RuntimeObject*)___4_object);
 }
-// Method Definition Index: 78606
+// Method Definition Index: 78621
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void JsonSerializeAction_1_EndInvoke_mCE1F21DE4D1E8F0CAB0564B5673E20AE86F4E686_gshared (JsonSerializeAction_1_t10583CA31CD3397FC2BF623605C143FAF120A904* __this, JsonWriter_t76E122B737DD79975E835A95D9F85B09D0792EA2* ___0_writer, RuntimeObject* ___1_result, const RuntimeMethod* method) 
 {
 	void* ___out_args[] = {
@@ -10136,7 +10342,7 @@ void JsonSerializeAction_1_Invoke_m9CBFA9D8F2F253B03DC4D4071881107447532A8C_Open
 	typedef void (*FunctionPointerType) (JsonWriter_t76E122B737DD79975E835A95D9F85B09D0792EA2*, NetworkId_tD5FA0360D2F8AE544493A7D1A6C7C90B28735CE7, RuntimeObject*, const RuntimeMethod*);
 	((FunctionPointerType)__this->___method_ptr)(___0_writer, ___1_value, ___2_resolver, method);
 }
-// Method Definition Index: 78603
+// Method Definition Index: 78618
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void JsonSerializeAction_1__ctor_m24C76D3C6D8F806A9702EF4E12E89B0AC8E6104E_gshared (JsonSerializeAction_1_tFAF5BEC23B9C351DA9E4349E8625CE15685C6991* __this, RuntimeObject* ___0_object, intptr_t ___1_method, const RuntimeMethod* method) 
 {
 	__this->___method_ptr = (intptr_t)il2cpp_codegen_get_method_pointer((RuntimeMethod*)___1_method);
@@ -10173,13 +10379,13 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void JsonSerializeAction_1__ctor_m24C76D3C6D8
 	}
 	__this->___extra_arg = (intptr_t)&JsonSerializeAction_1_Invoke_m9CBFA9D8F2F253B03DC4D4071881107447532A8C_Multicast;
 }
-// Method Definition Index: 78604
+// Method Definition Index: 78619
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void JsonSerializeAction_1_Invoke_m9CBFA9D8F2F253B03DC4D4071881107447532A8C_gshared (JsonSerializeAction_1_tFAF5BEC23B9C351DA9E4349E8625CE15685C6991* __this, JsonWriter_t76E122B737DD79975E835A95D9F85B09D0792EA2* ___0_writer, NetworkId_tD5FA0360D2F8AE544493A7D1A6C7C90B28735CE7 ___1_value, RuntimeObject* ___2_resolver, const RuntimeMethod* method) 
 {
 	typedef void (*FunctionPointerType) (RuntimeObject*, JsonWriter_t76E122B737DD79975E835A95D9F85B09D0792EA2*, NetworkId_tD5FA0360D2F8AE544493A7D1A6C7C90B28735CE7, RuntimeObject*, const RuntimeMethod*);
 	((FunctionPointerType)__this->___invoke_impl)((Il2CppObject*)__this->___method_code, ___0_writer, ___1_value, ___2_resolver, reinterpret_cast<RuntimeMethod*>(__this->___method));
 }
-// Method Definition Index: 78605
+// Method Definition Index: 78620
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* JsonSerializeAction_1_BeginInvoke_m6F3151BE5C30B974AD927B54BC3DA6AB928DB736_gshared (JsonSerializeAction_1_tFAF5BEC23B9C351DA9E4349E8625CE15685C6991* __this, JsonWriter_t76E122B737DD79975E835A95D9F85B09D0792EA2* ___0_writer, NetworkId_tD5FA0360D2F8AE544493A7D1A6C7C90B28735CE7 ___1_value, RuntimeObject* ___2_resolver, AsyncCallback_t7FEF460CBDCFB9C5FA2EF776984778B9A4145F4C* ___3_callback, RuntimeObject* ___4_object, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -10195,7 +10401,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* JsonSerializeAction_1_BeginInv
 	__d_args[2] = ___2_resolver;
 	return (RuntimeObject*)il2cpp_codegen_delegate_begin_invoke((RuntimeDelegate*)__this, __d_args, (RuntimeDelegate*)___3_callback, (RuntimeObject*)___4_object);
 }
-// Method Definition Index: 78606
+// Method Definition Index: 78621
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void JsonSerializeAction_1_EndInvoke_m644E6ADE66FED18A9BC4C4F607842523534C398F_gshared (JsonSerializeAction_1_tFAF5BEC23B9C351DA9E4349E8625CE15685C6991* __this, JsonWriter_t76E122B737DD79975E835A95D9F85B09D0792EA2* ___0_writer, RuntimeObject* ___1_result, const RuntimeMethod* method) 
 {
 	void* ___out_args[] = {
@@ -10232,7 +10438,7 @@ void JsonSerializeAction_1_Invoke_mF5AD6B70DB33B377F68A9451B6073858007F4EA4_Open
 	typedef void (*FunctionPointerType) (JsonWriter_t76E122B737DD79975E835A95D9F85B09D0792EA2*, RuntimeObject*, RuntimeObject*, const RuntimeMethod*);
 	((FunctionPointerType)__this->___method_ptr)(___0_writer, ___1_value, ___2_resolver, method);
 }
-// Method Definition Index: 78603
+// Method Definition Index: 78618
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void JsonSerializeAction_1__ctor_mF91E44220B619BCAAB2FEE8A6AE2054B1A2FEB5A_gshared (JsonSerializeAction_1_tB1FC54DA11C060697344A112E09ECFEFAC79C15B* __this, RuntimeObject* ___0_object, intptr_t ___1_method, const RuntimeMethod* method) 
 {
 	__this->___method_ptr = (intptr_t)il2cpp_codegen_get_method_pointer((RuntimeMethod*)___1_method);
@@ -10269,13 +10475,13 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void JsonSerializeAction_1__ctor_mF91E44220B6
 	}
 	__this->___extra_arg = (intptr_t)&JsonSerializeAction_1_Invoke_mF5AD6B70DB33B377F68A9451B6073858007F4EA4_Multicast;
 }
-// Method Definition Index: 78604
+// Method Definition Index: 78619
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void JsonSerializeAction_1_Invoke_mF5AD6B70DB33B377F68A9451B6073858007F4EA4_gshared (JsonSerializeAction_1_tB1FC54DA11C060697344A112E09ECFEFAC79C15B* __this, JsonWriter_t76E122B737DD79975E835A95D9F85B09D0792EA2* ___0_writer, RuntimeObject* ___1_value, RuntimeObject* ___2_resolver, const RuntimeMethod* method) 
 {
 	typedef void (*FunctionPointerType) (RuntimeObject*, JsonWriter_t76E122B737DD79975E835A95D9F85B09D0792EA2*, RuntimeObject*, RuntimeObject*, const RuntimeMethod*);
 	((FunctionPointerType)__this->___invoke_impl)((Il2CppObject*)__this->___method_code, ___0_writer, ___1_value, ___2_resolver, reinterpret_cast<RuntimeMethod*>(__this->___method));
 }
-// Method Definition Index: 78605
+// Method Definition Index: 78620
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* JsonSerializeAction_1_BeginInvoke_mC55C365644FBC688B7BCF21375F35E2547E8F166_gshared (JsonSerializeAction_1_tB1FC54DA11C060697344A112E09ECFEFAC79C15B* __this, JsonWriter_t76E122B737DD79975E835A95D9F85B09D0792EA2* ___0_writer, RuntimeObject* ___1_value, RuntimeObject* ___2_resolver, AsyncCallback_t7FEF460CBDCFB9C5FA2EF776984778B9A4145F4C* ___3_callback, RuntimeObject* ___4_object, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -10290,7 +10496,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* JsonSerializeAction_1_BeginInv
 	__d_args[2] = ___2_resolver;
 	return (RuntimeObject*)il2cpp_codegen_delegate_begin_invoke((RuntimeDelegate*)__this, __d_args, (RuntimeDelegate*)___3_callback, (RuntimeObject*)___4_object);
 }
-// Method Definition Index: 78606
+// Method Definition Index: 78621
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void JsonSerializeAction_1_EndInvoke_mFF324E6A1E3BBF13E416D71D4F604731725C9EE2_gshared (JsonSerializeAction_1_tB1FC54DA11C060697344A112E09ECFEFAC79C15B* __this, JsonWriter_t76E122B737DD79975E835A95D9F85B09D0792EA2* ___0_writer, RuntimeObject* ___1_result, const RuntimeMethod* method) 
 {
 	void* ___out_args[] = {
@@ -10327,7 +10533,7 @@ void JsonSerializeAction_1_Invoke_m492D9366F414261EF90D5491DE3006229C332B62_Open
 	typedef void (*FunctionPointerType) (JsonWriter_t76E122B737DD79975E835A95D9F85B09D0792EA2*, int8_t, RuntimeObject*, const RuntimeMethod*);
 	((FunctionPointerType)__this->___method_ptr)(___0_writer, ___1_value, ___2_resolver, method);
 }
-// Method Definition Index: 78603
+// Method Definition Index: 78618
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void JsonSerializeAction_1__ctor_mA6A1D55C791ECA8A6C016B2EBE87265444F0115F_gshared (JsonSerializeAction_1_tE4CD6E5088E05473459CA154CF3CBD1529EBD826* __this, RuntimeObject* ___0_object, intptr_t ___1_method, const RuntimeMethod* method) 
 {
 	__this->___method_ptr = (intptr_t)il2cpp_codegen_get_method_pointer((RuntimeMethod*)___1_method);
@@ -10364,13 +10570,13 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void JsonSerializeAction_1__ctor_mA6A1D55C791
 	}
 	__this->___extra_arg = (intptr_t)&JsonSerializeAction_1_Invoke_m492D9366F414261EF90D5491DE3006229C332B62_Multicast;
 }
-// Method Definition Index: 78604
+// Method Definition Index: 78619
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void JsonSerializeAction_1_Invoke_m492D9366F414261EF90D5491DE3006229C332B62_gshared (JsonSerializeAction_1_tE4CD6E5088E05473459CA154CF3CBD1529EBD826* __this, JsonWriter_t76E122B737DD79975E835A95D9F85B09D0792EA2* ___0_writer, int8_t ___1_value, RuntimeObject* ___2_resolver, const RuntimeMethod* method) 
 {
 	typedef void (*FunctionPointerType) (RuntimeObject*, JsonWriter_t76E122B737DD79975E835A95D9F85B09D0792EA2*, int8_t, RuntimeObject*, const RuntimeMethod*);
 	((FunctionPointerType)__this->___invoke_impl)((Il2CppObject*)__this->___method_code, ___0_writer, ___1_value, ___2_resolver, reinterpret_cast<RuntimeMethod*>(__this->___method));
 }
-// Method Definition Index: 78605
+// Method Definition Index: 78620
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* JsonSerializeAction_1_BeginInvoke_mE34025E1D46D9A0269B12758CEF07E4C15C76284_gshared (JsonSerializeAction_1_tE4CD6E5088E05473459CA154CF3CBD1529EBD826* __this, JsonWriter_t76E122B737DD79975E835A95D9F85B09D0792EA2* ___0_writer, int8_t ___1_value, RuntimeObject* ___2_resolver, AsyncCallback_t7FEF460CBDCFB9C5FA2EF776984778B9A4145F4C* ___3_callback, RuntimeObject* ___4_object, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -10385,7 +10591,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* JsonSerializeAction_1_BeginInv
 	__d_args[2] = ___2_resolver;
 	return (RuntimeObject*)il2cpp_codegen_delegate_begin_invoke((RuntimeDelegate*)__this, __d_args, (RuntimeDelegate*)___3_callback, (RuntimeObject*)___4_object);
 }
-// Method Definition Index: 78606
+// Method Definition Index: 78621
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void JsonSerializeAction_1_EndInvoke_mE47A44B8A0C4F72E595DAD914E70F6433E0EF412_gshared (JsonSerializeAction_1_tE4CD6E5088E05473459CA154CF3CBD1529EBD826* __this, JsonWriter_t76E122B737DD79975E835A95D9F85B09D0792EA2* ___0_writer, RuntimeObject* ___1_result, const RuntimeMethod* method) 
 {
 	void* ___out_args[] = {
@@ -10422,7 +10628,7 @@ void JsonSerializeAction_1_Invoke_mFCF0F0C57A0C6E0976055E1F2F1452B53368949B_Open
 	typedef void (*FunctionPointerType) (JsonWriter_t76E122B737DD79975E835A95D9F85B09D0792EA2*, float, RuntimeObject*, const RuntimeMethod*);
 	((FunctionPointerType)__this->___method_ptr)(___0_writer, ___1_value, ___2_resolver, method);
 }
-// Method Definition Index: 78603
+// Method Definition Index: 78618
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void JsonSerializeAction_1__ctor_m3EE4CA5F3250D05AE06A31B69745733C224C9A75_gshared (JsonSerializeAction_1_tC4125BC021BE8C3FA294ADAA8C59E1B745EABADE* __this, RuntimeObject* ___0_object, intptr_t ___1_method, const RuntimeMethod* method) 
 {
 	__this->___method_ptr = (intptr_t)il2cpp_codegen_get_method_pointer((RuntimeMethod*)___1_method);
@@ -10459,13 +10665,13 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void JsonSerializeAction_1__ctor_m3EE4CA5F325
 	}
 	__this->___extra_arg = (intptr_t)&JsonSerializeAction_1_Invoke_mFCF0F0C57A0C6E0976055E1F2F1452B53368949B_Multicast;
 }
-// Method Definition Index: 78604
+// Method Definition Index: 78619
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void JsonSerializeAction_1_Invoke_mFCF0F0C57A0C6E0976055E1F2F1452B53368949B_gshared (JsonSerializeAction_1_tC4125BC021BE8C3FA294ADAA8C59E1B745EABADE* __this, JsonWriter_t76E122B737DD79975E835A95D9F85B09D0792EA2* ___0_writer, float ___1_value, RuntimeObject* ___2_resolver, const RuntimeMethod* method) 
 {
 	typedef void (*FunctionPointerType) (RuntimeObject*, JsonWriter_t76E122B737DD79975E835A95D9F85B09D0792EA2*, float, RuntimeObject*, const RuntimeMethod*);
 	((FunctionPointerType)__this->___invoke_impl)((Il2CppObject*)__this->___method_code, ___0_writer, ___1_value, ___2_resolver, reinterpret_cast<RuntimeMethod*>(__this->___method));
 }
-// Method Definition Index: 78605
+// Method Definition Index: 78620
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* JsonSerializeAction_1_BeginInvoke_m4CEFA7E52B612E294CA66DAEA913BC1EEE6E32D3_gshared (JsonSerializeAction_1_tC4125BC021BE8C3FA294ADAA8C59E1B745EABADE* __this, JsonWriter_t76E122B737DD79975E835A95D9F85B09D0792EA2* ___0_writer, float ___1_value, RuntimeObject* ___2_resolver, AsyncCallback_t7FEF460CBDCFB9C5FA2EF776984778B9A4145F4C* ___3_callback, RuntimeObject* ___4_object, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -10480,7 +10686,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* JsonSerializeAction_1_BeginInv
 	__d_args[2] = ___2_resolver;
 	return (RuntimeObject*)il2cpp_codegen_delegate_begin_invoke((RuntimeDelegate*)__this, __d_args, (RuntimeDelegate*)___3_callback, (RuntimeObject*)___4_object);
 }
-// Method Definition Index: 78606
+// Method Definition Index: 78621
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void JsonSerializeAction_1_EndInvoke_m8F6747C88FE7E85F3C89B9D92601DF6E58273CAA_gshared (JsonSerializeAction_1_tC4125BC021BE8C3FA294ADAA8C59E1B745EABADE* __this, JsonWriter_t76E122B737DD79975E835A95D9F85B09D0792EA2* ___0_writer, RuntimeObject* ___1_result, const RuntimeMethod* method) 
 {
 	void* ___out_args[] = {
@@ -10517,7 +10723,7 @@ void JsonSerializeAction_1_Invoke_m99BCB6F80B656E1EB87645CE20563B69144B9842_Open
 	typedef void (*FunctionPointerType) (JsonWriter_t76E122B737DD79975E835A95D9F85B09D0792EA2*, uint16_t, RuntimeObject*, const RuntimeMethod*);
 	((FunctionPointerType)__this->___method_ptr)(___0_writer, ___1_value, ___2_resolver, method);
 }
-// Method Definition Index: 78603
+// Method Definition Index: 78618
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void JsonSerializeAction_1__ctor_mF20520EB666734D82CA1D2BBCA558A4ECD1AB767_gshared (JsonSerializeAction_1_tA24F4AEB85CF2522B9F6A202E06365CA7280AF02* __this, RuntimeObject* ___0_object, intptr_t ___1_method, const RuntimeMethod* method) 
 {
 	__this->___method_ptr = (intptr_t)il2cpp_codegen_get_method_pointer((RuntimeMethod*)___1_method);
@@ -10554,13 +10760,13 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void JsonSerializeAction_1__ctor_mF20520EB666
 	}
 	__this->___extra_arg = (intptr_t)&JsonSerializeAction_1_Invoke_m99BCB6F80B656E1EB87645CE20563B69144B9842_Multicast;
 }
-// Method Definition Index: 78604
+// Method Definition Index: 78619
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void JsonSerializeAction_1_Invoke_m99BCB6F80B656E1EB87645CE20563B69144B9842_gshared (JsonSerializeAction_1_tA24F4AEB85CF2522B9F6A202E06365CA7280AF02* __this, JsonWriter_t76E122B737DD79975E835A95D9F85B09D0792EA2* ___0_writer, uint16_t ___1_value, RuntimeObject* ___2_resolver, const RuntimeMethod* method) 
 {
 	typedef void (*FunctionPointerType) (RuntimeObject*, JsonWriter_t76E122B737DD79975E835A95D9F85B09D0792EA2*, uint16_t, RuntimeObject*, const RuntimeMethod*);
 	((FunctionPointerType)__this->___invoke_impl)((Il2CppObject*)__this->___method_code, ___0_writer, ___1_value, ___2_resolver, reinterpret_cast<RuntimeMethod*>(__this->___method));
 }
-// Method Definition Index: 78605
+// Method Definition Index: 78620
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* JsonSerializeAction_1_BeginInvoke_mAF6EDFEE4734E5744BF9C21FF2DD0ECEF5F1A4F1_gshared (JsonSerializeAction_1_tA24F4AEB85CF2522B9F6A202E06365CA7280AF02* __this, JsonWriter_t76E122B737DD79975E835A95D9F85B09D0792EA2* ___0_writer, uint16_t ___1_value, RuntimeObject* ___2_resolver, AsyncCallback_t7FEF460CBDCFB9C5FA2EF776984778B9A4145F4C* ___3_callback, RuntimeObject* ___4_object, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -10575,7 +10781,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* JsonSerializeAction_1_BeginInv
 	__d_args[2] = ___2_resolver;
 	return (RuntimeObject*)il2cpp_codegen_delegate_begin_invoke((RuntimeDelegate*)__this, __d_args, (RuntimeDelegate*)___3_callback, (RuntimeObject*)___4_object);
 }
-// Method Definition Index: 78606
+// Method Definition Index: 78621
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void JsonSerializeAction_1_EndInvoke_mFC8211D47EAF942326903D9818E295956321097F_gshared (JsonSerializeAction_1_tA24F4AEB85CF2522B9F6A202E06365CA7280AF02* __this, JsonWriter_t76E122B737DD79975E835A95D9F85B09D0792EA2* ___0_writer, RuntimeObject* ___1_result, const RuntimeMethod* method) 
 {
 	void* ___out_args[] = {
@@ -10612,7 +10818,7 @@ void JsonSerializeAction_1_Invoke_m70928FA1D6673A98370DC2418CD4C6AD432DD2D5_Open
 	typedef void (*FunctionPointerType) (JsonWriter_t76E122B737DD79975E835A95D9F85B09D0792EA2*, uint32_t, RuntimeObject*, const RuntimeMethod*);
 	((FunctionPointerType)__this->___method_ptr)(___0_writer, ___1_value, ___2_resolver, method);
 }
-// Method Definition Index: 78603
+// Method Definition Index: 78618
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void JsonSerializeAction_1__ctor_mC3479B9F9FBC8682BA3092D886C54A30D6D2BA33_gshared (JsonSerializeAction_1_tA86A26B2AC81FD79C4395735BAFED96E737A20FC* __this, RuntimeObject* ___0_object, intptr_t ___1_method, const RuntimeMethod* method) 
 {
 	__this->___method_ptr = (intptr_t)il2cpp_codegen_get_method_pointer((RuntimeMethod*)___1_method);
@@ -10649,13 +10855,13 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void JsonSerializeAction_1__ctor_mC3479B9F9FB
 	}
 	__this->___extra_arg = (intptr_t)&JsonSerializeAction_1_Invoke_m70928FA1D6673A98370DC2418CD4C6AD432DD2D5_Multicast;
 }
-// Method Definition Index: 78604
+// Method Definition Index: 78619
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void JsonSerializeAction_1_Invoke_m70928FA1D6673A98370DC2418CD4C6AD432DD2D5_gshared (JsonSerializeAction_1_tA86A26B2AC81FD79C4395735BAFED96E737A20FC* __this, JsonWriter_t76E122B737DD79975E835A95D9F85B09D0792EA2* ___0_writer, uint32_t ___1_value, RuntimeObject* ___2_resolver, const RuntimeMethod* method) 
 {
 	typedef void (*FunctionPointerType) (RuntimeObject*, JsonWriter_t76E122B737DD79975E835A95D9F85B09D0792EA2*, uint32_t, RuntimeObject*, const RuntimeMethod*);
 	((FunctionPointerType)__this->___invoke_impl)((Il2CppObject*)__this->___method_code, ___0_writer, ___1_value, ___2_resolver, reinterpret_cast<RuntimeMethod*>(__this->___method));
 }
-// Method Definition Index: 78605
+// Method Definition Index: 78620
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* JsonSerializeAction_1_BeginInvoke_m23557893A8D13A2E78274BD433C86850DE9CBCE2_gshared (JsonSerializeAction_1_tA86A26B2AC81FD79C4395735BAFED96E737A20FC* __this, JsonWriter_t76E122B737DD79975E835A95D9F85B09D0792EA2* ___0_writer, uint32_t ___1_value, RuntimeObject* ___2_resolver, AsyncCallback_t7FEF460CBDCFB9C5FA2EF776984778B9A4145F4C* ___3_callback, RuntimeObject* ___4_object, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -10670,7 +10876,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* JsonSerializeAction_1_BeginInv
 	__d_args[2] = ___2_resolver;
 	return (RuntimeObject*)il2cpp_codegen_delegate_begin_invoke((RuntimeDelegate*)__this, __d_args, (RuntimeDelegate*)___3_callback, (RuntimeObject*)___4_object);
 }
-// Method Definition Index: 78606
+// Method Definition Index: 78621
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void JsonSerializeAction_1_EndInvoke_m6A9ACA243943FF3A554966281863A961610AFF48_gshared (JsonSerializeAction_1_tA86A26B2AC81FD79C4395735BAFED96E737A20FC* __this, JsonWriter_t76E122B737DD79975E835A95D9F85B09D0792EA2* ___0_writer, RuntimeObject* ___1_result, const RuntimeMethod* method) 
 {
 	void* ___out_args[] = {
@@ -10707,7 +10913,7 @@ void JsonSerializeAction_1_Invoke_mADFCEEE0F4D8E0FC7F71D4E5922CBB0C587CDE1C_Open
 	typedef void (*FunctionPointerType) (JsonWriter_t76E122B737DD79975E835A95D9F85B09D0792EA2*, uint64_t, RuntimeObject*, const RuntimeMethod*);
 	((FunctionPointerType)__this->___method_ptr)(___0_writer, ___1_value, ___2_resolver, method);
 }
-// Method Definition Index: 78603
+// Method Definition Index: 78618
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void JsonSerializeAction_1__ctor_m866C076E4259A03BC1CC29C880A0C477BE5E052C_gshared (JsonSerializeAction_1_tE93AB186672651289314A6BC5AA75A0CC71CAB05* __this, RuntimeObject* ___0_object, intptr_t ___1_method, const RuntimeMethod* method) 
 {
 	__this->___method_ptr = (intptr_t)il2cpp_codegen_get_method_pointer((RuntimeMethod*)___1_method);
@@ -10744,13 +10950,13 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void JsonSerializeAction_1__ctor_m866C076E425
 	}
 	__this->___extra_arg = (intptr_t)&JsonSerializeAction_1_Invoke_mADFCEEE0F4D8E0FC7F71D4E5922CBB0C587CDE1C_Multicast;
 }
-// Method Definition Index: 78604
+// Method Definition Index: 78619
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void JsonSerializeAction_1_Invoke_mADFCEEE0F4D8E0FC7F71D4E5922CBB0C587CDE1C_gshared (JsonSerializeAction_1_tE93AB186672651289314A6BC5AA75A0CC71CAB05* __this, JsonWriter_t76E122B737DD79975E835A95D9F85B09D0792EA2* ___0_writer, uint64_t ___1_value, RuntimeObject* ___2_resolver, const RuntimeMethod* method) 
 {
 	typedef void (*FunctionPointerType) (RuntimeObject*, JsonWriter_t76E122B737DD79975E835A95D9F85B09D0792EA2*, uint64_t, RuntimeObject*, const RuntimeMethod*);
 	((FunctionPointerType)__this->___invoke_impl)((Il2CppObject*)__this->___method_code, ___0_writer, ___1_value, ___2_resolver, reinterpret_cast<RuntimeMethod*>(__this->___method));
 }
-// Method Definition Index: 78605
+// Method Definition Index: 78620
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* JsonSerializeAction_1_BeginInvoke_m9A084F08842B7AB499622DF6CD3649FB12AE6C54_gshared (JsonSerializeAction_1_tE93AB186672651289314A6BC5AA75A0CC71CAB05* __this, JsonWriter_t76E122B737DD79975E835A95D9F85B09D0792EA2* ___0_writer, uint64_t ___1_value, RuntimeObject* ___2_resolver, AsyncCallback_t7FEF460CBDCFB9C5FA2EF776984778B9A4145F4C* ___3_callback, RuntimeObject* ___4_object, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -10765,7 +10971,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* JsonSerializeAction_1_BeginInv
 	__d_args[2] = ___2_resolver;
 	return (RuntimeObject*)il2cpp_codegen_delegate_begin_invoke((RuntimeDelegate*)__this, __d_args, (RuntimeDelegate*)___3_callback, (RuntimeObject*)___4_object);
 }
-// Method Definition Index: 78606
+// Method Definition Index: 78621
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void JsonSerializeAction_1_EndInvoke_mE8894E1013F49C33691F9F74CD917F03D72D6C08_gshared (JsonSerializeAction_1_tE93AB186672651289314A6BC5AA75A0CC71CAB05* __this, JsonWriter_t76E122B737DD79975E835A95D9F85B09D0792EA2* ___0_writer, RuntimeObject* ___1_result, const RuntimeMethod* method) 
 {
 	void* ___out_args[] = {
@@ -10808,7 +11014,7 @@ void JsonSerializeAction_1_Invoke_mD845D00B97D7AFC5C661AF63BF8B7F801AAD662F_Open
 {
 	InvokerActionInvoker2< Il2CppFullySharedGenericAny, RuntimeObject* >::Invoke((Il2CppMethodPointer)__this->___method_ptr, method, ___0_writer, ___1_value, ___2_resolver);
 }
-// Method Definition Index: 78603
+// Method Definition Index: 78618
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void JsonSerializeAction_1__ctor_m9BE7DB5CF6AE7F2931C0D5D9FA27080B3D5E6E92_gshared (JsonSerializeAction_1_tB6700C130532C2DA3003FE34AB1B9F9D535D6179* __this, RuntimeObject* ___0_object, intptr_t ___1_method, const RuntimeMethod* method) 
 {
 	__this->___method_ptr = (intptr_t)il2cpp_codegen_get_method_pointer((RuntimeMethod*)___1_method);
@@ -10841,13 +11047,13 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void JsonSerializeAction_1__ctor_m9BE7DB5CF6A
 	}
 	__this->___extra_arg = (intptr_t)&JsonSerializeAction_1_Invoke_mD845D00B97D7AFC5C661AF63BF8B7F801AAD662F_Multicast;
 }
-// Method Definition Index: 78604
+// Method Definition Index: 78619
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void JsonSerializeAction_1_Invoke_mD845D00B97D7AFC5C661AF63BF8B7F801AAD662F_gshared (JsonSerializeAction_1_tB6700C130532C2DA3003FE34AB1B9F9D535D6179* __this, JsonWriter_t76E122B737DD79975E835A95D9F85B09D0792EA2* ___0_writer, Il2CppFullySharedGenericAny ___1_value, RuntimeObject* ___2_resolver, const RuntimeMethod* method) 
 {
 	typedef void (*FunctionPointerType) (RuntimeObject*, JsonWriter_t76E122B737DD79975E835A95D9F85B09D0792EA2*, Il2CppFullySharedGenericAny, RuntimeObject*, const RuntimeMethod*);
 	((FunctionPointerType)__this->___invoke_impl)((Il2CppObject*)__this->___method_code, ___0_writer, ___1_value, ___2_resolver, reinterpret_cast<RuntimeMethod*>(__this->___method));
 }
-// Method Definition Index: 78605
+// Method Definition Index: 78620
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* JsonSerializeAction_1_BeginInvoke_m93441EE5F5C795220BB001D257B169EC1DDA829D_gshared (JsonSerializeAction_1_tB6700C130532C2DA3003FE34AB1B9F9D535D6179* __this, JsonWriter_t76E122B737DD79975E835A95D9F85B09D0792EA2* ___0_writer, Il2CppFullySharedGenericAny ___1_value, RuntimeObject* ___2_resolver, AsyncCallback_t7FEF460CBDCFB9C5FA2EF776984778B9A4145F4C* ___3_callback, RuntimeObject* ___4_object, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -10863,7 +11069,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* JsonSerializeAction_1_BeginInv
 	__d_args[2] = ___2_resolver;
 	return (RuntimeObject*)il2cpp_codegen_delegate_begin_invoke((RuntimeDelegate*)__this, __d_args, (RuntimeDelegate*)___3_callback, (RuntimeObject*)___4_object);
 }
-// Method Definition Index: 78606
+// Method Definition Index: 78621
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void JsonSerializeAction_1_EndInvoke_m0A50155D1E222481301D0971EFA82D14DF413930_gshared (JsonSerializeAction_1_tB6700C130532C2DA3003FE34AB1B9F9D535D6179* __this, JsonWriter_t76E122B737DD79975E835A95D9F85B09D0792EA2* ___0_writer, RuntimeObject* ___1_result, const RuntimeMethod* method) 
 {
 	void* ___out_args[] = {
@@ -10879,7 +11085,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void JsonSerializeAction_1_EndInvoke_m0A50155
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 63916
+// Method Definition Index: 63931
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR KVPair_2_t289A62AF6AB4F1FD80F1977C4D6C802052A8BADC KVPair_2_get_Null_m8DBECDEC86B8C7E8013F037D79E92BBA9B806535_gshared (const RuntimeMethod* method) 
 {
 	KVPair_2_t289A62AF6AB4F1FD80F1977C4D6C802052A8BADC V_0;
@@ -10892,7 +11098,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR KVPair_2_t289A62AF6AB4F1FD80F1977C4D6C802052A
 		return L_0;
 	}
 }
-// Method Definition Index: 63917
+// Method Definition Index: 63932
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t KVPair_2_get_Key_m164ABF64B3546739DCAAC8739B80C54CCCF282D8_gshared (KVPair_2_t289A62AF6AB4F1FD80F1977C4D6C802052A8BADC* __this, const RuntimeMethod* method) 
 {
 	int32_t V_0 = 0;
@@ -10932,7 +11138,7 @@ IL2CPP_EXTERN_C  int32_t KVPair_2_get_Key_m164ABF64B3546739DCAAC8739B80C54CCCF28
 	_returnValue = KVPair_2_get_Key_m164ABF64B3546739DCAAC8739B80C54CCCF282D8(_thisAdjusted, method);
 	return _returnValue;
 }
-// Method Definition Index: 63918
+// Method Definition Index: 63933
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t* KVPair_2_get_Value_m0B1B55DB40AF78F68D4802958B1625CFED722B34_gshared (KVPair_2_t289A62AF6AB4F1FD80F1977C4D6C802052A8BADC* __this, const RuntimeMethod* method) 
 {
 	{
@@ -10956,7 +11162,7 @@ IL2CPP_EXTERN_C  int32_t* KVPair_2_get_Value_m0B1B55DB40AF78F68D4802958B1625CFED
 	_returnValue = KVPair_2_get_Value_m0B1B55DB40AF78F68D4802958B1625CFED722B34(_thisAdjusted, method);
 	return _returnValue;
 }
-// Method Definition Index: 63919
+// Method Definition Index: 63934
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool KVPair_2_GetKeyValue_mD94A90FC6A43D3F6497625B4E72D98397F836B3D_gshared (KVPair_2_t289A62AF6AB4F1FD80F1977C4D6C802052A8BADC* __this, int32_t* ___0_key, int32_t* ___1_value, const RuntimeMethod* method) 
 {
 	{
@@ -11019,7 +11225,7 @@ IL2CPP_EXTERN_C  bool KVPair_2_GetKeyValue_mD94A90FC6A43D3F6497625B4E72D98397F83
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 63916
+// Method Definition Index: 63931
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR KVPair_2_t0AEDA423F28A99925D673F30335AEAC3C9A482DA KVPair_2_get_Null_m95F67B3B164BEA5086D3EA24F6A309DCEC2FD3E0_gshared (const RuntimeMethod* method) 
 {
 	KVPair_2_t0AEDA423F28A99925D673F30335AEAC3C9A482DA V_0;
@@ -11032,7 +11238,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR KVPair_2_t0AEDA423F28A99925D673F30335AEAC3C9A
 		return L_0;
 	}
 }
-// Method Definition Index: 63917
+// Method Definition Index: 63932
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void KVPair_2_get_Key_mED89D3602B012281C2C837349C34191B0875115C_gshared (KVPair_2_t0AEDA423F28A99925D673F30335AEAC3C9A482DA* __this, Il2CppFullySharedGenericStruct* il2cppRetVal, const RuntimeMethod* method) 
 {
 	const uint32_t SizeOf_TKey_t1C23B5C5206ECE6876F6A933C5393052C3A6D7CF = il2cpp_codegen_sizeof(il2cpp_rgctx_data_no_init(InitializedTypeInfo(method->klass)->rgctx_data, 4));
@@ -11077,7 +11283,7 @@ IL2CPP_EXTERN_C  void KVPair_2_get_Key_mED89D3602B012281C2C837349C34191B0875115C
 	KVPair_2_get_Key_mED89D3602B012281C2C837349C34191B0875115C(_thisAdjusted, il2cppRetVal, method);
 	return;
 }
-// Method Definition Index: 63918
+// Method Definition Index: 63933
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Il2CppFullySharedGenericStruct* KVPair_2_get_Value_mC94F9A68A6FADF40DC6A14F23C4FF284241A6D88_gshared (KVPair_2_t0AEDA423F28A99925D673F30335AEAC3C9A482DA* __this, const RuntimeMethod* method) 
 {
 	const uint32_t SizeOf_TValue_t07BAD9681A6887A56CE27B7BA46659F1E8B4AA45 = il2cpp_codegen_sizeof(il2cpp_rgctx_data_no_init(InitializedTypeInfo(method->klass)->rgctx_data, 5));
@@ -11102,7 +11308,7 @@ IL2CPP_EXTERN_C  Il2CppFullySharedGenericStruct* KVPair_2_get_Value_mC94F9A68A6F
 	_returnValue = KVPair_2_get_Value_mC94F9A68A6FADF40DC6A14F23C4FF284241A6D88(_thisAdjusted, method);
 	return _returnValue;
 }
-// Method Definition Index: 63919
+// Method Definition Index: 63934
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool KVPair_2_GetKeyValue_m43218BA6923AF63C42703F1422152DA798742288_gshared (KVPair_2_t0AEDA423F28A99925D673F30335AEAC3C9A482DA* __this, Il2CppFullySharedGenericStruct* ___0_key, Il2CppFullySharedGenericStruct* ___1_value, const RuntimeMethod* method) 
 {
 	const uint32_t SizeOf_TKey_t1C23B5C5206ECE6876F6A933C5393052C3A6D7CF = il2cpp_codegen_sizeof(il2cpp_rgctx_data_no_init(InitializedTypeInfo(method->klass)->rgctx_data, 4));
@@ -32982,7 +33188,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR bool IntPtr_op_Equality_m7D9CDCDE
 		return (bool)((((intptr_t)L_0) == ((intptr_t)L_1))? 1 : 0);
 	}
 }
-// Method Definition Index: 41458
+// Method Definition Index: 41461
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t* UnsafeUtility_AsRef_TisInt32_t680FF22E76F6EFAD4375103CBBFFA0421349384C_mF01FDF0EACCFED286E93933B693A2BE11A6A8946_gshared_inline (void* ___0_ptr, const RuntimeMethod* method) 
 {
 	{
@@ -32990,7 +33196,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t* UnsafeUtility_AsRef_TisI
 		return (int32_t*)(L_0);
 	}
 }
-// Method Definition Index: 41450
+// Method Definition Index: 41453
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t UnsafeUtility_ReadArrayElement_TisInt32_t680FF22E76F6EFAD4375103CBBFFA0421349384C_mFBA66C06ECEB0A2BC1AAE634B6E6BB436F957084_gshared_inline (void* ___0_source, int32_t ___1_index, const RuntimeMethod* method) 
 {
 	{
