@@ -1,25 +1,25 @@
-using System.Collections.Generic;
 using UnityEngine;
+using System.Collections.Generic;
 
 public class BlockFootprint : MonoBehaviour
 {
-    public List<Vector2Int> Cells = new List<Vector2Int> { Vector2Int.zero };
-
-    public Vector3 WorldHalfExtents = new Vector3(0.05f, 0.05f, 0.05f);
+    // one letter only occpuies one cell
+    public List<Vector2Int> Cells = new() { Vector2Int.zero };
     public Transform forwardRef;
 
-    public float CurrentYawDeg
-    {
-        get
-        {
-            var e = transform.rotation.eulerAngles;
-            return e.y;
-        }
-    }
+    [HideInInspector] public Vector2 worldSizeXZ;     // world scale
+    [HideInInspector] public Vector3 WorldHalfExtents; // for overlapping detection
 
-    void Awake()
+    public void RecalculateFromCollider()
     {
         var col = GetComponentInChildren<Collider>();
-        if (col) WorldHalfExtents = col.bounds.extents;
+        if (!col) return;
+
+        var size = col.bounds.size;
+        worldSizeXZ = new Vector2(size.x, size.z);
+        WorldHalfExtents = col.bounds.extents;
     }
+
+    void Awake() => RecalculateFromCollider();
+    void OnValidate() => RecalculateFromCollider();
 }

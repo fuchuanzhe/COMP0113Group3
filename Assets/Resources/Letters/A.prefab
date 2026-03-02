@@ -295,6 +295,37 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.02568, y: 0.0036400012, z: 0.025680006}
   m_Center: {x: 0.00045999978, y: -0.00018000008, z: 0.0004599999}
+--- !u!1 &2476345340551309560
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3125646148522100213}
+  m_Layer: 0
+  m_Name: FowardRef
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3125646148522100213
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2476345340551309560}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0.69885755, y: 0.0021035743, z: -0.0021529263, w: -0.71525455}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 5471461211701440086}
+  m_LocalEulerAnglesHint: {x: 271.372, y: -14.55, z: 14.554}
 --- !u!1 &5719533374404805825
 GameObject:
   m_ObjectHideFlags: 0
@@ -307,6 +338,8 @@ GameObject:
   - component: {fileID: 6732403207937038459}
   - component: {fileID: 2041336456458862345}
   - component: {fileID: 272557160313583282}
+  - component: {fileID: -6409469707284303769}
+  - component: {fileID: -5263846304431820449}
   m_Layer: 0
   m_Name: A
   m_TagString: Untagged
@@ -329,6 +362,7 @@ Transform:
   m_Children:
   - {fileID: 7240890843383427531}
   - {fileID: 4743608425498028117}
+  - {fileID: 3125646148522100213}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!54 &6732403207937038459
@@ -492,3 +526,31 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e680bebc1057249d8a73a8f852c599f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SpawnableObject
+--- !u!114 &-6409469707284303769
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5719533374404805825}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e8c8216354e7fbe4aa5c28dfe6484134, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::BlockFootprint
+  Cells:
+  - {x: 0, y: 0}
+  WorldHalfExtents: {x: 0.05, y: 0.05, z: 0.05}
+  forwardRef: {fileID: 3125646148522100213}
+--- !u!114 &-5263846304431820449
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5719533374404805825}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e017df32671f69e4594e4fa3e2ddf474, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SnapOnRelease

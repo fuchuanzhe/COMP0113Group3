@@ -22,13 +22,12 @@ public class SnapOnRelease : MonoBehaviour
         var rb = GetComponent<Rigidbody>();
         if (rb) rb.isKinematic = false;
 
-        if (currentZone) currentZone.Unmark(transform);
+        if (currentZone) currentZone.Unmark(transform); // clear the occupation
     }
 
     void OnReleased(SelectExitEventArgs args)
     {
         if (!currentZone) return;
-
 
         var col = GetComponentInChildren<Collider>();
         Vector3 desired = col ? col.bounds.center : transform.position;

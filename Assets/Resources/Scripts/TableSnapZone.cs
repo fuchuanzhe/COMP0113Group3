@@ -6,7 +6,7 @@ public class TableSnapZone : MonoBehaviour
     [Header("Grid")]
     public Transform gridOrigin;
     public Vector2 cellSize = new Vector2(0.1f, 0.1f);   // X,Z
-    public Vector2Int gridSize = new Vector2Int(10, 10); // 10x10
+    public Vector2Int gridSize = new Vector2Int(10, 10); // 10x10, adjust this in the inspector
     public float snapY = 0.0f;                           // relative to Grid Origin
     public int searchRadiusCells = 4;
 
@@ -16,14 +16,33 @@ public class TableSnapZone : MonoBehaviour
 
     private readonly Dictionary<Vector2Int, Transform> occupied = new();
 
+    [Header("Debug Gizmos")]
+    public bool drawGridGizmos = true;
+    public bool drawCellCenters = true;
+    public float centerDotRadius = 0.01f;
+    public bool drawLastPlacement = true;
+
+    private bool _hasLast;
+    private Vector3 _lastDesiredWorld;
+    private Vector2Int _lastDesiredCell;
+    private Vector2Int _lastChosenCell;
+    private Pose _lastChosenPose;
+
     public bool TryPlace(BlockFootprint footprint, Vector3 desiredWorldPoint, Transform objectRoot)
     {
-        Vector2Int desiredCell = WorldToCell(desiredWorldPoint);
+        _hasLast = true;    // released position
+        _lastDesiredWorld = desiredWorldPoint;
+        _lastDesiredCell = WorldToCell(desiredWorldPoint);
+
+        Vector2Int desiredCell = _lastDesiredCell;
 
         if (!FindNearestValidCell(footprint, desiredCell, out Vector2Int chosenCell))
             return false;
 
         Pose pose = CellToPose(chosenCell, footprint);
+
+        _lastChosenCell = chosenCell;
+        _lastChosenPose = pose;
 
         if (!PassOverlapCheck(footprint, pose, objectRoot))
             return false;
@@ -36,14 +55,22 @@ public class TableSnapZone : MonoBehaviour
     Vector2Int WorldToCell(Vector3 world)
     {
         Vector3 local = gridOrigin.InverseTransformPoint(world);
-        int x = Mathf.RoundToInt(local.x / cellSize.x);
-        int z = Mathf.RoundToInt(local.z / cellSize.y);
+
+        int cx = Mathf.FloorToInt(local.x / cellSize.x);
+        int cz = Mathf.FloorToInt(local.z / cellSize.y);
+
+        int x = cx + gridSize.x / 2;
+        int z = cz + gridSize.y / 2;
+
         return new Vector2Int(x, z);
     }
 
     Pose CellToPose(Vector2Int cell, BlockFootprint footprint)
     {
-        Vector3 localPos = new Vector3(cell.x * cellSize.x, snapY, cell.y * cellSize.y);
+        int cx = cell.x - gridSize.x / 2;
+        int cz = cell.y - gridSize.y / 2;
+
+        Vector3 localPos = new Vector3((cx + 0.5f) * cellSize.x, snapY, (cz + 0.5f) * cellSize.y);
         Vector3 worldPos = gridOrigin.TransformPoint(localPos);
 
         Quaternion rot;
@@ -154,4 +181,72 @@ public class TableSnapZone : MonoBehaviour
             if (kv.Value == root) toRemove.Add(kv.Key);
         foreach (var k in toRemove) occupied.Remove(k);
     }
+
+    // Visualize the grid
+    private void OnDrawGizmosSelected()
+    {
+        if (!drawGridGizmos || gridOrigin == null) return;
+
+        float yLift = 0.002f;
+
+        int halfX = gridSize.x / 2;
+        int halfZ = gridSize.y / 2;
+
+        Vector3 OriginToWorld(float lx, float lz)
+        {
+            Vector3 local = new Vector3(lx, snapY, lz);
+            Vector3 w = gridOrigin.TransformPoint(local);
+            w.y = gridOrigin.position.y + snapY + yLift;
+            return w;
+        }
+
+        // draw boundaries
+        for (int ix = 0; ix <= gridSize.x; ix++)
+        {
+            int cx = ix - halfX;
+            float lx = cx * cellSize.x;
+            float lz0 = (-halfZ) * cellSize.y;
+            float lz1 = (gridSize.y - halfZ) * cellSize.y;
+
+            Gizmos.DrawLine(OriginToWorld(lx, lz0), OriginToWorld(lx, lz1));
+        }
+
+        for (int iz = 0; iz <= gridSize.y; iz++)
+        {
+            int cz = iz - halfZ;
+            float lz = cz * cellSize.y;
+            float lx0 = (-halfX) * cellSize.x;
+            float lx1 = (gridSize.x - halfX) * cellSize.x;
+
+            Gizmos.DrawLine(OriginToWorld(lx0, lz), OriginToWorld(lx1, lz));
+        }
+
+        // draw centre points
+        if (drawCellCenters)
+        {
+            for (int x = 0; x < gridSize.x; x++)
+                for (int z = 0; z < gridSize.y; z++)
+                {
+                    int cx = x - halfX;
+                    int cz = z - halfZ;
+
+                    float centerX = (cx + 0.5f) * cellSize.x;
+                    float centerZ = (cz + 0.5f) * cellSize.y;
+
+                    Vector3 p = OriginToWorld(centerX, centerZ);
+                    Gizmos.DrawCube(p, Vector3.one * centerDotRadius);
+                }
+        }
+
+        // draw desired / chosen
+        if (drawLastPlacement && _hasLast)
+        {
+            Gizmos.DrawSphere(_lastDesiredWorld, centerDotRadius * 1.2f);
+            Gizmos.DrawSphere(_lastChosenPose.position, centerDotRadius * 1.8f);
+            Gizmos.DrawLine(_lastDesiredWorld, _lastChosenPose.position);
+        }
+    }
+
+    
+
 }
