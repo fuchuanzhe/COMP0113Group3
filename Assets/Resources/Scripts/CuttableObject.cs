@@ -11,6 +11,13 @@ public class CuttableObject : MonoBehaviour
 
     public bool IsCut { get; private set; }
 
+    public string word { get; private set; }
+
+    void Awake()
+    {
+        word = gameObject.name.ToUpperInvariant();
+    }
+
     public void DoCut(Vector3 cutCenter, Vector3 planeNormal, Vector3 initialVelocity)
     {
         if (IsCut) return;
@@ -18,7 +25,12 @@ public class CuttableObject : MonoBehaviour
 
         if (!halfPrefabA || !halfPrefabB)
         {
-            Debug.LogWarning($"[CuttableObject] Missing half prefabs on {name}");
+            Debug.LogWarning($"[CuttableObject] Missing half prefabs on {name}. Will destroy/deactivate without spawning halves.");
+
+            LetterSpawner.Instance?.SpawnWord(word, cutCenter);
+
+            if (destroyOriginal) Destroy(gameObject);
+            else gameObject.SetActive(false);
             return;
         }
 
@@ -33,6 +45,8 @@ public class CuttableObject : MonoBehaviour
 
         SetupHalf(a,  initialVelocity + offset.normalized * 0.2f);
         SetupHalf(b,  initialVelocity - offset.normalized * 0.2f);
+
+        LetterSpawner.Instance?.SpawnWord(word, cutCenter);
 
         if (destroyOriginal) Destroy(gameObject);
         else gameObject.SetActive(false);
