@@ -1008,17 +1008,13 @@
         "dependencies": [
           {
             "name": "ParticleSystem",
-            "scenes": [
-              "Assets/Scenes/MainScene.unity"
-            ],
+            "scenes": [],
             "dependencyType": 0,
             "icon": null
           },
           {
             "name": "ParticleSystemRenderer",
-            "scenes": [
-              "Assets/Scenes/MainScene.unity"
-            ],
+            "scenes": [],
             "dependencyType": 0,
             "icon": null
           }
@@ -1037,9 +1033,7 @@
           },
           {
             "name": "CapsuleCollider",
-            "scenes": [
-              "Assets/Scenes/MainScene.unity"
-            ],
+            "scenes": [],
             "dependencyType": 0,
             "icon": null
           },
