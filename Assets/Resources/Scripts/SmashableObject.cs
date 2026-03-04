@@ -59,6 +59,9 @@ public class SmashableObject : MonoBehaviour
         }
 
         LetterSpawner.Instance?.SpawnWord(word, hitPoint);
+        var networkObj = GetComponent<DualNetworkedObject>();
+        if (networkObj != null)
+            networkObj.BroadcastActiveSelf(false);
 
         if (destroyOriginal) Destroy(gameObject);
         else gameObject.SetActive(false);
