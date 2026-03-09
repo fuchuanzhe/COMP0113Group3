@@ -13,6 +13,7 @@ public class WordScanManager : MonoBehaviour
     public bool allowVertical = false;
     public int minWordLength = 2;
 
+    public ScoreManager scoreManager;
     public void ScanWords()
     {
         if (tableZone == null || validator == null)
@@ -84,6 +85,10 @@ public class WordScanManager : MonoBehaviour
             if (validator.CheckWord(word))
             {
                 Debug.Log($"Valid word: {word}");
+
+                int points = word.Length;
+                if (scoreManager != null)
+                    scoreManager.AddPlayer1Score(points);
 
                 foreach (var tile in wordTiles)
                 {
