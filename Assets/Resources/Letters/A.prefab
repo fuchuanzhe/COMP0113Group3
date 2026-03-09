@@ -340,6 +340,7 @@ GameObject:
   - component: {fileID: 272557160313583282}
   - component: {fileID: -6409469707284303769}
   - component: {fileID: -5263846304431820449}
+  - component: {fileID: 4498851895113247415}
   m_Layer: 0
   m_Name: A
   m_TagString: Untagged
@@ -540,8 +541,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::BlockFootprint
   Cells:
   - {x: 0, y: 0}
-  WorldHalfExtents: {x: 0.05, y: 0.05, z: 0.05}
   forwardRef: {fileID: 3125646148522100213}
+  worldSizeXZ: {x: 0, y: 0}
+  WorldHalfExtents: {x: 0, y: 0, z: 0}
 --- !u!114 &-5263846304431820449
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -554,3 +556,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e017df32671f69e4594e4fa3e2ddf474, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SnapOnRelease
+--- !u!114 &4498851895113247415
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5719533374404805825}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d1ad5d6e0f1811541b3fc2bb8b54285b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: '::'
+  letter: A
+  letterText: {fileID: 2577298899198917003}

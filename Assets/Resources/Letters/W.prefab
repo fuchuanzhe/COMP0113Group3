@@ -12,6 +12,10 @@ PrefabInstance:
       propertyPath: m_text
       value: W
       objectReference: {fileID: 0}
+    - target: {fileID: 4498851895113247415, guid: f3e7e40d9653246de99b4f15ec45925a, type: 3}
+      propertyPath: letter
+      value: W
+      objectReference: {fileID: 0}
     - target: {fileID: 5471461211701440086, guid: f3e7e40d9653246de99b4f15ec45925a, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0

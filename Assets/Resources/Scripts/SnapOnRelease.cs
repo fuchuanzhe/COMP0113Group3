@@ -7,11 +7,15 @@ public class SnapOnRelease : MonoBehaviour
     private TableSnapZone currentZone;
     private XRGrabInteractable grab;
     private BlockFootprint footprint;
+    private LetterTile letterTile;
+
+    public bool IsSnappedOnTable { get; private set; }
 
     void Awake()
     {
         grab = GetComponent<XRGrabInteractable>();
         footprint = GetComponent<BlockFootprint>();
+        letterTile = GetComponent<LetterTile>();
 
         grab.selectExited.AddListener(OnReleased);
         grab.selectEntered.AddListener(OnPicked);
@@ -22,7 +26,13 @@ public class SnapOnRelease : MonoBehaviour
         var rb = GetComponent<Rigidbody>();
         if (rb) rb.isKinematic = false;
 
-        if (currentZone) currentZone.Unmark(transform); // clear the occupation
+        if (currentZone) currentZone.Unmark(transform);
+
+        IsSnappedOnTable = false;
+
+        // 拿起来时恢复原色
+        if (letterTile != null)
+            letterTile.RestoreOriginalColor();
     }
 
     void OnReleased(SelectExitEventArgs args)
@@ -31,14 +41,19 @@ public class SnapOnRelease : MonoBehaviour
 
         var col = GetComponentInChildren<Collider>();
         Vector3 desired = col ? col.bounds.center : transform.position;
-        desired.y = currentZone.gridOrigin.position.y; // only x and z
+        desired.y = currentZone.gridOrigin.position.y;
 
         bool ok = currentZone.TryPlace(footprint, desired, transform);
         if (!ok)
         {
-            // if the table is full, not snapped
             var rb = GetComponent<Rigidbody>();
             if (rb) rb.isKinematic = false;
+
+            IsSnappedOnTable = false;
+        }
+        else
+        {
+            IsSnappedOnTable = true;
         }
     }
 

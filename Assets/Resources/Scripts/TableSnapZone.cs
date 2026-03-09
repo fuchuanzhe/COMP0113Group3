@@ -52,7 +52,7 @@ public class TableSnapZone : MonoBehaviour
         return true;
     }
 
-    Vector2Int WorldToCell(Vector3 world)
+    public Vector2Int WorldToCell(Vector3 world)
     {
         Vector3 local = gridOrigin.InverseTransformPoint(world);
 
