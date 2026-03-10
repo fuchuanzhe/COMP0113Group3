@@ -11,7 +11,7 @@ public class TearObject : MonoBehaviour
     public float armDelay = 0.08f;
 
     [Header("Spawn Halves (optional)")]
-    public bool spawnHalves = true;
+    public bool spawnHalves = false;
     public GameObject HalfPrefabA;
     public GameObject HalfPrefabB;
     public float spawnOffset = 0.02f;
@@ -124,7 +124,10 @@ public class TearObject : MonoBehaviour
         }
 
         LetterSpawner.Instance?.SpawnWord(word, tearCenter);
-        AudioSource.PlayClipAtPoint(clip, transform.position);
+        if(clip != null)
+        {
+            AudioSource.PlayClipAtPoint(clip, transform.position);
+        }
         var networkObj = GetComponent<NetworkedObject>();
         networkObj.BroadcastActiveSelf(false);
         gameObject.SetActive(false);
