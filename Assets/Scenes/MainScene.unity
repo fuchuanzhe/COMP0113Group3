@@ -21947,7 +21947,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 920771031410391865, guid: ce18fb1bfda024936973ca895c2667f2, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -9.45
+      value: -10.3
       objectReference: {fileID: 0}
     - target: {fileID: 920771031410391865, guid: ce18fb1bfda024936973ca895c2667f2, type: 3}
       propertyPath: m_LocalRotation.w
@@ -21977,9 +21977,57 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4916032099292324327, guid: ce18fb1bfda024936973ca895c2667f2, type: 3}
+      propertyPath: redUI.titleText
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4916032099292324327, guid: ce18fb1bfda024936973ca895c2667f2, type: 3}
+      propertyPath: blueUI.titleText
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4916032099292324327, guid: ce18fb1bfda024936973ca895c2667f2, type: 3}
+      propertyPath: redUI.chefSlotText
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4916032099292324327, guid: ce18fb1bfda024936973ca895c2667f2, type: 3}
+      propertyPath: blueUI.chefSlotText
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4916032099292324327, guid: ce18fb1bfda024936973ca895c2667f2, type: 3}
+      propertyPath: redUI.butcherSlotText
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4916032099292324327, guid: ce18fb1bfda024936973ca895c2667f2, type: 3}
+      propertyPath: blueUI.butcherSlotText
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 5356468101686502811, guid: ce18fb1bfda024936973ca895c2667f2, type: 3}
       propertyPath: m_Name
       value: WaitingRoom
+      objectReference: {fileID: 0}
+    - target: {fileID: 5930801629012419606, guid: ce18fb1bfda024936973ca895c2667f2, type: 3}
+      propertyPath: redUI.titleText
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 5930801629012419606, guid: ce18fb1bfda024936973ca895c2667f2, type: 3}
+      propertyPath: blueUI.titleText
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 5930801629012419606, guid: ce18fb1bfda024936973ca895c2667f2, type: 3}
+      propertyPath: redUI.chefSlotText
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 5930801629012419606, guid: ce18fb1bfda024936973ca895c2667f2, type: 3}
+      propertyPath: blueUI.chefSlotText
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 5930801629012419606, guid: ce18fb1bfda024936973ca895c2667f2, type: 3}
+      propertyPath: redUI.butcherSlotText
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 5930801629012419606, guid: ce18fb1bfda024936973ca895c2667f2, type: 3}
+      propertyPath: blueUI.butcherSlotText
+      value: 
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
