@@ -1089,7 +1089,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void RoomClient_Join_m4A6D5CDB4FBC72BFD1DAC3D
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 89564
+// Method Definition Index: 89578
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR MonoScriptData_t29E6F8CABA0F51572325219BF516E1117E9420E2 UnitySourceGeneratedAssemblyMonoScriptTypes_v1_Get_m05006E635E3D2B92B5165E819006CB7EBDBB8C13 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -1123,7 +1123,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR MonoScriptData_t29E6F8CABA0F51572325219BF516E
 		return L_6;
 	}
 }
-// Method Definition Index: 89565
+// Method Definition Index: 89579
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void UnitySourceGeneratedAssemblyMonoScriptTypes_v1__ctor_m2C5B5566D5D3876AE54F048B95A9A1066A5F7A3D (UnitySourceGeneratedAssemblyMonoScriptTypes_v1_t6370D0CBAD07AE4D2007702BDB418662D329DFD9* __this, const RuntimeMethod* method) 
 {
 	{
@@ -1209,7 +1209,7 @@ IL2CPP_EXTERN_C void MonoScriptData_t29E6F8CABA0F51572325219BF516E1117E9420E2_ma
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 89566
+// Method Definition Index: 89580
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR NetworkId_tD5FA0360D2F8AE544493A7D1A6C7C90B28735CE7 Firework_get_NetworkId_m35FF4BC10C1B402B7DFC896ABC65F6140DA4141C (Firework_tCD30D777E501AD8DF31AF37620EB6424EEBAA39A* __this, const RuntimeMethod* method) 
 {
 	{
@@ -1218,7 +1218,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR NetworkId_tD5FA0360D2F8AE544493A7D1A6C7C90B28
 		return L_0;
 	}
 }
-// Method Definition Index: 89567
+// Method Definition Index: 89581
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Firework_set_NetworkId_mB9489B3FD85718C5578AE3ABD8B97BA573734995 (Firework_tCD30D777E501AD8DF31AF37620EB6424EEBAA39A* __this, NetworkId_tD5FA0360D2F8AE544493A7D1A6C7C90B28735CE7 ___0_value, const RuntimeMethod* method) 
 {
 	{
@@ -1228,7 +1228,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Firework_set_NetworkId_mB9489B3FD85718C5
 		return;
 	}
 }
-// Method Definition Index: 89568
+// Method Definition Index: 89582
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Firework_Awake_m80B860A837B4F98978B641D65067EF587683CE5A (Firework_tCD30D777E501AD8DF31AF37620EB6424EEBAA39A* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -1255,7 +1255,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Firework_Awake_m80B860A837B4F98978B641D6
 		return;
 	}
 }
-// Method Definition Index: 89569
+// Method Definition Index: 89583
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Firework_Start_m9F1A1DB32E913B4D01756D502C4BA486179CF3F1 (Firework_tCD30D777E501AD8DF31AF37620EB6424EEBAA39A* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -1291,7 +1291,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Firework_Start_m9F1A1DB32E913B4D01756D50
 		return;
 	}
 }
-// Method Definition Index: 89570
+// Method Definition Index: 89584
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Firework_Interactable_SelectExited_m5FC43E69568728EA6B4546D101F9FEC72A00A437 (Firework_tCD30D777E501AD8DF31AF37620EB6424EEBAA39A* __this, SelectExitEventArgs_t56125CE0360D37AC0B50EB6066B5AB5957EF559A* ___0_eventArgs, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -1345,7 +1345,7 @@ IL_0009:
 		return;
 	}
 }
-// Method Definition Index: 89571
+// Method Definition Index: 89585
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Firework_FixedUpdate_m2490E9B02A472312F32711B5CCEB4FDDEC1B7CC2 (Firework_tCD30D777E501AD8DF31AF37620EB6424EEBAA39A* __this, const RuntimeMethod* method) 
 {
 	{
@@ -1478,7 +1478,7 @@ IL_00bc:
 		return;
 	}
 }
-// Method Definition Index: 89572
+// Method Definition Index: 89586
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Firework_SendMessage_m3C4838CF184B65F378B7938F0AFB1A3BD652EB3C (Firework_tCD30D777E501AD8DF31AF37620EB6424EEBAA39A* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -1514,7 +1514,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Firework_SendMessage_m3C4838CF184B65F378
 		return;
 	}
 }
-// Method Definition Index: 89573
+// Method Definition Index: 89587
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Firework_ProcessMessage_m492CF3E0715B528869DBABE5F804CB394D39BF9F (Firework_tCD30D777E501AD8DF31AF37620EB6424EEBAA39A* __this, ReferenceCountedSceneGraphMessage_tC9DC0F8B3261AD62C7AEAE4C30AAB5D876E08F34 ___0_message, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -1565,7 +1565,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Firework_ProcessMessage_m492CF3E0715B528
 		return;
 	}
 }
-// Method Definition Index: 89574
+// Method Definition Index: 89588
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Firework__ctor_m266F90E4902654CF5ADA6D3D525D533B222C7CE5 (Firework_tCD30D777E501AD8DF31AF37620EB6424EEBAA39A* __this, const RuntimeMethod* method) 
 {
 	{
@@ -1625,7 +1625,7 @@ IL2CPP_EXTERN_C void Message_tA0664CF3C7654927F4CB1DEE5C7C03BA0B2A243B_marshal_c
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 89575
+// Method Definition Index: 89589
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FireworksBox_Start_mC0C14886FBE123B947282A64748E2775FDBA151C (FireworksBox_t512B135AD385C0EE599BD41843F90DAFF10D0B58* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -1668,7 +1668,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FireworksBox_Start_mC0C14886FBE123B94728
 		return;
 	}
 }
-// Method Definition Index: 89576
+// Method Definition Index: 89590
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FireworksBox_OnDestroy_m52A226C94C1840F09B794D2E302552A571151748 (FireworksBox_t512B135AD385C0EE599BD41843F90DAFF10D0B58* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -1693,7 +1693,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FireworksBox_OnDestroy_m52A226C94C1840F0
 		return;
 	}
 }
-// Method Definition Index: 89577
+// Method Definition Index: 89591
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FireworksBox_XRGrabInteractable_SelectEntered_mEB84F6FB6F6CC6A93D14DC859487CEBF07CAE887 (FireworksBox_t512B135AD385C0EE599BD41843F90DAFF10D0B58* __this, SelectEnterEventArgs_t9220B1E6A9BB5A847C0476949ACE0182430BB938* ___0_eventArgs, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -1792,7 +1792,7 @@ IL_0070:
 		return;
 	}
 }
-// Method Definition Index: 89578
+// Method Definition Index: 89592
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FireworksBox__ctor_mFDF80422AE230AA89369581F47C0C1F15DA567D7 (FireworksBox_t512B135AD385C0EE599BD41843F90DAFF10D0B58* __this, const RuntimeMethod* method) 
 {
 	{
@@ -1808,7 +1808,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FireworksBox__ctor_mFDF80422AE230AA89369
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 89579
+// Method Definition Index: 89593
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void JoinAllRoomClients_Start_m1961A3CAEA6D6994C62BFDE77F5A8E9EB04C729C (JoinAllRoomClients_t0746875514E33569A0C8B57A0EB8159DF71408DB* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -1868,7 +1868,7 @@ IL_001e:
 		return;
 	}
 }
-// Method Definition Index: 89580
+// Method Definition Index: 89594
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void JoinAllRoomClients__ctor_m0494D0EF92B01B222FC73E46B0EAD9F88B515231 (JoinAllRoomClients_t0746875514E33569A0C8B57A0EB8159DF71408DB* __this, const RuntimeMethod* method) 
 {
 	{
