@@ -1,6 +1,8 @@
+using System.Collections;
 using System.Collections.Generic;
 using System.IO;
 using UnityEngine;
+using UnityEngine.Networking;
 
 public class WordValidator : MonoBehaviour
 {
@@ -8,16 +10,21 @@ public class WordValidator : MonoBehaviour
 
     void Awake()
     {
-        LoadLocalDictionary();
+        StartCoroutine(LoadLocalDictionary());
     }
 
-    private void LoadLocalDictionary()
+    IEnumerator LoadLocalDictionary()
     {
         string path = Path.Combine(Application.streamingAssetsPath, "dictionary.txt");
 
-        if (File.Exists(path))
+        UnityWebRequest www = UnityWebRequest.Get(path);
+        yield return www.SendWebRequest();
+
+        if (www.result == UnityWebRequest.Result.Success)
         {
-            string[] lines = File.ReadAllLines(path);
+            string text = www.downloadHandler.text;
+            string[] lines = text.Split('\n');
+
             foreach (var word in lines)
             {
                 if (!string.IsNullOrWhiteSpace(word))
@@ -25,11 +32,12 @@ public class WordValidator : MonoBehaviour
                     _dictionary.Add(word.Trim().ToLower());
                 }
             }
-            Debug.Log($"<color=green>Dictionary Loaded!</color> Count: {_dictionary.Count}");
+
+            Debug.Log($"Dictionary Loaded! Count: {_dictionary.Count}");
         }
         else
         {
-            Debug.LogError($"Dictionary file not found at: {path}");
+            Debug.LogError("Dictionary load failed: " + www.error);
         }
     }
 
