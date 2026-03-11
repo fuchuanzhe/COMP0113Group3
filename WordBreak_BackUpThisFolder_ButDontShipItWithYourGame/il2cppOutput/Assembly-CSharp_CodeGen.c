@@ -25,6 +25,12 @@ extern void BlockFootprint_RecalculateFromCollider_m9BF6D43791C07531AD0779CA96FB
 extern void BlockFootprint_Awake_mE36C999AE9D12D68EC9740623E31FC4A360B1E0C (void);
 extern void BlockFootprint_OnValidate_m500B0919DE83D6194C9062BB2AD3C6A5B3ACAC36 (void);
 extern void BlockFootprint__ctor_mBB2F8B8EBA1B45C4F5F51440E0F4E1FA7D54C6B5 (void);
+extern void BlockGrab_Awake_m764C529E2D2BF4F4AD0EBE13CA582F5951F8086F (void);
+extern void BlockGrab_OnEnable_mD8D03B80C49F5A498F3EAE472FAA2CB68DD20AA2 (void);
+extern void BlockGrab_OnDisable_m2BDFF0290FE64F8C7E5FCAC3F0DA74618F7D2900 (void);
+extern void BlockGrab_OnGrabAttempt_m7FD515867E8DE4F06A6E6AA34AEAA634AD8FD66D (void);
+extern void BlockGrab_ForceRelease_m5553000F4E2631CF13A1F51DEDE53BFB5D7DA682 (void);
+extern void BlockGrab__ctor_m161E793A045851833A6C260CE5176E145E2D327A (void);
 extern void ControllerPressableButton_Awake_m9334E1786A831CC871B15F318EEA062628A78E9D (void);
 extern void ControllerPressableButton_OnDestroy_m9E67EA2F3DF5ACCA45C28A8F2660579DEE895E57 (void);
 extern void ControllerPressableButton_OnSelectEntered_m2BC33366BA0DE23127F4AD518468D4F82F255ABC (void);
@@ -228,7 +234,7 @@ extern void WordValidator_CheckWord_m55775AC32D645FFE2013D64CD40BE1D344CE718E (v
 extern void WordValidator__ctor_mAA73498223200E64AB7F986AB43C9732EE59A7D4 (void);
 extern void UnitySourceGeneratedAssemblyMonoScriptTypes_v1_Get_mBEB95BEB954BB63E9710BBC7AD5E78C4CB0A0033 (void);
 extern void UnitySourceGeneratedAssemblyMonoScriptTypes_v1__ctor_mE70FB23ACC1EA12ABC948AA22C2E78B2D0AA39B1 (void);
-static Il2CppMethodPointer s_methodPointers[227] = 
+static Il2CppMethodPointer s_methodPointers[233] = 
 {
 	AssignSeats_Start_m356359995EC02405407AA056466DA69551574EB6,
 	AssignSeats_Check_mFC9F13E5CD27EB3DE07C2EA3E68338BA31612206,
@@ -248,6 +254,12 @@ static Il2CppMethodPointer s_methodPointers[227] =
 	BlockFootprint_Awake_mE36C999AE9D12D68EC9740623E31FC4A360B1E0C,
 	BlockFootprint_OnValidate_m500B0919DE83D6194C9062BB2AD3C6A5B3ACAC36,
 	BlockFootprint__ctor_mBB2F8B8EBA1B45C4F5F51440E0F4E1FA7D54C6B5,
+	BlockGrab_Awake_m764C529E2D2BF4F4AD0EBE13CA582F5951F8086F,
+	BlockGrab_OnEnable_mD8D03B80C49F5A498F3EAE472FAA2CB68DD20AA2,
+	BlockGrab_OnDisable_m2BDFF0290FE64F8C7E5FCAC3F0DA74618F7D2900,
+	BlockGrab_OnGrabAttempt_m7FD515867E8DE4F06A6E6AA34AEAA634AD8FD66D,
+	BlockGrab_ForceRelease_m5553000F4E2631CF13A1F51DEDE53BFB5D7DA682,
+	BlockGrab__ctor_m161E793A045851833A6C260CE5176E145E2D327A,
 	ControllerPressableButton_Awake_m9334E1786A831CC871B15F318EEA062628A78E9D,
 	ControllerPressableButton_OnDestroy_m9E67EA2F3DF5ACCA45C28A8F2660579DEE895E57,
 	ControllerPressableButton_OnSelectEntered_m2BC33366BA0DE23127F4AD518468D4F82F255ABC,
@@ -464,12 +476,12 @@ extern void Message__ctor_m9433B40C1B38C35240247F9C79BF9814EC50E398_AdjustorThun
 extern void Message__ctor_m2A32F8A1910A4954FCC180F48AEDDEF1BE185901_AdjustorThunk (void);
 static Il2CppTokenAdjustorThunkPair s_adjustorThunks[4] = 
 {
-	{ 0x0600002F, Message__ctor_m2551F8735D818DACF27AE524D81CB6F30888A365_AdjustorThunk },
-	{ 0x0600003A, Message__ctor_m5BBC6E74AF14B06FC775F5BE3B4BBC61256E6EF4_AdjustorThunk },
-	{ 0x06000072, Message__ctor_m9433B40C1B38C35240247F9C79BF9814EC50E398_AdjustorThunk },
-	{ 0x060000A1, Message__ctor_m2A32F8A1910A4954FCC180F48AEDDEF1BE185901_AdjustorThunk },
+	{ 0x06000035, Message__ctor_m2551F8735D818DACF27AE524D81CB6F30888A365_AdjustorThunk },
+	{ 0x06000040, Message__ctor_m5BBC6E74AF14B06FC775F5BE3B4BBC61256E6EF4_AdjustorThunk },
+	{ 0x06000078, Message__ctor_m9433B40C1B38C35240247F9C79BF9814EC50E398_AdjustorThunk },
+	{ 0x060000A7, Message__ctor_m2A32F8A1910A4954FCC180F48AEDDEF1BE185901_AdjustorThunk },
 };
-static const int32_t s_InvokerIndices[227] = 
+static const int32_t s_InvokerIndices[233] = 
 {
 	16469,
 	16469,
@@ -488,6 +500,12 @@ static const int32_t s_InvokerIndices[227] =
 	16469,
 	16469,
 	16469,
+	16469,
+	16469,
+	16469,
+	16469,
+	12534,
+	12534,
 	16469,
 	16469,
 	16469,
@@ -701,8 +719,8 @@ static const int32_t s_InvokerIndices[227] =
 };
 static const Il2CppTokenRangePair s_rgctxIndices[2] = 
 {
-	{ 0x0200000D, { 0, 10 } },
-	{ 0x02000010, { 10, 10 } },
+	{ 0x0200000E, { 0, 10 } },
+	{ 0x02000011, { 10, 10 } },
 };
 extern const uint32_t g_rgctx_ListPool_1_t24C35A23B263139BD9072377076261DFC935E37A;
 extern const uint32_t g_rgctx_Stack_1_t5DA2D760C755267721D5273AB3FD5313F228478D;
@@ -751,7 +769,7 @@ IL2CPP_EXTERN_C const Il2CppCodeGenModule g_AssemblyU2DCSharp_CodeGenModule;
 const Il2CppCodeGenModule g_AssemblyU2DCSharp_CodeGenModule = 
 {
 	"Assembly-CSharp.dll",
-	227,
+	233,
 	s_methodPointers,
 	4,
 	s_adjustorThunks,
