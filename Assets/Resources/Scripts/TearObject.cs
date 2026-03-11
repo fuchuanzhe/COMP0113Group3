@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
+using System.Text.RegularExpressions;
 
 public class TearObject : MonoBehaviour
 {
@@ -34,7 +35,8 @@ public class TearObject : MonoBehaviour
     void Awake()
     {
         if (!grab) grab = GetComponent<UnityEngine.XR.Interaction.Toolkit.Interactables.XRGrabInteractable>();
-        word = gameObject.name.ToUpperInvariant();
+        // word = gameObject.name.ToUpperInvariant();
+        word = Regex.Replace(gameObject.name.ToUpperInvariant(), "[^A-Z]", "");
     }
 
     void Update()

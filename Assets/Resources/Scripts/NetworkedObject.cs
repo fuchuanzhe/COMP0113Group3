@@ -71,9 +71,9 @@ public class NetworkedObject : MonoBehaviour
 
     void Update()
     {
-        if(IsOwner() && lastPosition != transform.localPosition)
+        if(IsOwner() && lastPosition != transform.position)
         {
-            lastPosition = transform.localPosition;
+            lastPosition = transform.position;
             context.SendJson(new Message(transform, gameObject.activeSelf));
         }
     }
@@ -83,8 +83,8 @@ public class NetworkedObject : MonoBehaviour
         var m = message.FromJson<Message>();
         gameObject.SetActive(m.isActive);
 
-        transform.localPosition = m.position;
-        lastPosition = transform.localPosition;
+        transform.position = m.position;
+        lastPosition = transform.position;
         transform.rotation = m.rotation;
     }
 

@@ -320,7 +320,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 9c46f1d6dfbe4417fabcb6787f246a30, type: 3}
       propertyPath: m_Name
-      value: cabinet
+      value: cabinet2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2339,8 +2339,8 @@ Rigidbody:
     m_Bits: 0
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
-  m_UseGravity: 1
-  m_IsKinematic: 0
+  m_UseGravity: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
@@ -2845,8 +2845,8 @@ Rigidbody:
     m_Bits: 0
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
-  m_UseGravity: 1
-  m_IsKinematic: 0
+  m_UseGravity: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
@@ -3114,7 +3114,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: c0ddc9368702344f7927f2a2b744aa79, type: 3}
       propertyPath: m_Name
-      value: cabinet
+      value: cabinet3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -3225,7 +3225,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 3142addefd02d4faab4ea2312a0ad7e2, type: 3}
       propertyPath: m_Name
-      value: counter
+      value: counter6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -3294,6 +3294,7 @@ GameObject:
   m_Component:
   - component: {fileID: 380020980}
   - component: {fileID: 380020979}
+  - component: {fileID: 380020981}
   m_Layer: 0
   m_Name: SeatsManager
   m_TagString: Untagged
@@ -3316,10 +3317,11 @@ MonoBehaviour:
   requiredPlayers: 2
   seats:
   - {fileID: 1819352974}
-  - {fileID: 1328795554}
   - {fileID: 1566898511}
+  - {fileID: 1328795554}
   - {fileID: 1547045251}
   avatarRoot: {fileID: 991322266}
+  occupation: {fileID: 380020981}
 --- !u!4 &380020980
 Transform:
   m_ObjectHideFlags: 0
@@ -3334,11 +3336,23 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1819352974}
-  - {fileID: 1328795554}
   - {fileID: 1566898511}
+  - {fileID: 1328795554}
   - {fileID: 1547045251}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &380020981
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 380020978}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cc6d06069e27e462f85434d030125fa0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerOccupation
 --- !u!1 &380078388 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 1c06835c2bc494a118027a58ff0b5f77, type: 3}
@@ -4027,7 +4041,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 9ddaaf27600184ff4abc9b3273fe77ef, type: 3}
       propertyPath: m_Name
-      value: counter
+      value: counter3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -4190,7 +4204,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 61de76b22b8a6409c9a5134bbaebc585, type: 3}
       propertyPath: m_Name
-      value: counter
+      value: counter2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -4596,7 +4610,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 7de2cb0d0498f4f2bb862d8227981992, type: 3}
       propertyPath: m_Name
-      value: tree
+      value: tree2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -4887,7 +4901,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 13223c4c8920b4b9a8a08f3eb5a9a85f, type: 3}
       propertyPath: m_Name
-      value: bowl
+      value: bowl2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -5955,8 +5969,8 @@ Rigidbody:
     m_Bits: 0
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
-  m_UseGravity: 1
-  m_IsKinematic: 0
+  m_UseGravity: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
@@ -6073,7 +6087,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 3142addefd02d4faab4ea2312a0ad7e2, type: 3}
       propertyPath: m_Name
-      value: counter
+      value: counter4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -10422,7 +10436,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 1146e58dc86214cea901e9f9aefc43f1, type: 3}
       propertyPath: m_Name
-      value: apple
+      value: apple3
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 1146e58dc86214cea901e9f9aefc43f1, type: 3}
       propertyPath: m_IsActive
@@ -11478,7 +11492,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 7de2cb0d0498f4f2bb862d8227981992, type: 3}
       propertyPath: m_Name
-      value: tree
+      value: tree3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -12134,6 +12148,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 3437851253807196484, guid: 4311400ab1ebc486b933a68aa9f84dde, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1453269009}
+    - targetCorrespondingSourceObject: {fileID: 3437851253807196484, guid: 4311400ab1ebc486b933a68aa9f84dde, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1453269013}
     - targetCorrespondingSourceObject: {fileID: 5556196789426237326, guid: 4311400ab1ebc486b933a68aa9f84dde, type: 3}
       insertIndex: -1
       addedObject: {fileID: 661443622}
@@ -12367,7 +12384,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1328795554}
   m_Layer: 0
-  m_Name: Seat1
+  m_Name: Seat2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -13654,6 +13671,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 948b468fc8ee44bd8932737bd815acc8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NetworkedObject
+--- !u!114 &1453269013
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1453269004}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 486bb8b5b27434ba99d3412355f122b9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::OccupationRestriction
+  allowedOccupation: 1
 --- !u!1001 &1456236744
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -13716,7 +13746,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 3142addefd02d4faab4ea2312a0ad7e2, type: 3}
       propertyPath: m_Name
-      value: counter
+      value: counter5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -15299,7 +15329,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1566898511}
   m_Layer: 0
-  m_Name: Seat2
+  m_Name: Seat1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -15342,6 +15372,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 948b468fc8ee44bd8932737bd815acc8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NetworkedObject
+--- !u!114 &1568364016
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1568364007}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 486bb8b5b27434ba99d3412355f122b9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::OccupationRestriction
+  allowedOccupation: 2
 --- !u!1 &1573533305 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1465964380924731407, guid: 6db42094e420c437abc7ae0cacbcd479, type: 3}
@@ -18849,7 +18892,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 1146e58dc86214cea901e9f9aefc43f1, type: 3}
       propertyPath: m_Name
-      value: apple
+      value: apple2
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 1146e58dc86214cea901e9f9aefc43f1, type: 3}
       propertyPath: m_IsActive
@@ -21717,7 +21760,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 1146e58dc86214cea901e9f9aefc43f1, type: 3}
       propertyPath: m_Name
-      value: apple
+      value: apple4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -22056,6 +22099,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 8741620073519883171, guid: 877888606b4c74a8e9ef7ac1acdbfd54, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1568364012}
+    - targetCorrespondingSourceObject: {fileID: 8741620073519883171, guid: 877888606b4c74a8e9ef7ac1acdbfd54, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1568364016}
     - targetCorrespondingSourceObject: {fileID: 9215011708911706321, guid: 877888606b4c74a8e9ef7ac1acdbfd54, type: 3}
       insertIndex: -1
       addedObject: {fileID: 301389540}

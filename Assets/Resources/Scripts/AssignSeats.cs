@@ -9,6 +9,7 @@ public class AssignSeats : MonoBehaviour
     public Transform avatarRoot;
     private RoomClient roomClient;
     private bool started;
+    public PlayerOccupation occupation;
 
     private void Start()
     {
@@ -23,6 +24,7 @@ public class AssignSeats : MonoBehaviour
 
         roomClient.OnPeerAdded.AddListener(_ => Check());
         roomClient.OnPeerRemoved.AddListener(_ => CleanupSeats());
+        occupation = GetComponent<PlayerOccupation>();
     }
 
     private void Check()
@@ -52,12 +54,16 @@ public class AssignSeats : MonoBehaviour
             index = (index + 1) % seats.Length;
             key = $"seat_{index}";
         }
+
+        occupation.SetFromSeatIndex(index);
+
         avatarRoot.position = seats[index].position;
         avatarRoot.rotation = seats[index].rotation;
 
         roomClient.Room[key] = roomClient.Me.uuid;  
 
         Debug.Log($"Assigned seat {index}.");
+        Debug.Log($"Assigned occupation {occupation.MyOccupation}.");
     }
 
     private void CleanupSeats()

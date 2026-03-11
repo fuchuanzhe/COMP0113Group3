@@ -82,9 +82,9 @@ public class DualNetworkedObject : MonoBehaviour
         }
 
         rb.constraints = RigidbodyConstraints.None;
-        if (lastPosition != transform.localPosition)
+        if (lastPosition != transform.position)
         {
-            lastPosition = transform.localPosition;
+            lastPosition = transform.position;
             context.SendJson(new Message(transform, gameObject.activeSelf));
         }
     }
@@ -94,8 +94,8 @@ public class DualNetworkedObject : MonoBehaviour
         var m = message.FromJson<Message>();
         gameObject.SetActive(m.isActive);
         
-        transform.localPosition = m.position;
-        lastPosition = transform.localPosition;
+        transform.position = m.position;
+        lastPosition = transform.position;
         transform.rotation = m.rotation;
     }
 
