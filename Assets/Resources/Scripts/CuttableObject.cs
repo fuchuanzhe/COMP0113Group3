@@ -22,12 +22,15 @@ public class CuttableObject : MonoBehaviour
     {
         if (IsCut) return;
         IsCut = true;
+        var networkObj = GetComponent<NetworkedObject>();
 
         if (!halfPrefabA || !halfPrefabB)
         {
             Debug.LogWarning($"[CuttableObject] Missing half prefabs on {name}. Will destroy/deactivate without spawning halves.");
 
             LetterSpawner.Instance?.SpawnWord(word, cutCenter);
+            if (networkObj != null)
+            networkObj.BroadcastActiveSelf(false);
 
             if (destroyOriginal) Destroy(gameObject);
             else gameObject.SetActive(false);
@@ -47,7 +50,6 @@ public class CuttableObject : MonoBehaviour
         SetupHalf(b,  initialVelocity - offset.normalized * 0.2f);
 
         LetterSpawner.Instance?.SpawnWord(word, cutCenter);
-        var networkObj = GetComponent<NetworkedObject>();
         if (networkObj != null)
             networkObj.BroadcastActiveSelf(false);
 

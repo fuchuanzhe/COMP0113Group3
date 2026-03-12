@@ -116,6 +116,10 @@ public class WordScanManager : MonoBehaviour
                     if (tableZone != null)
                         tableZone.Unmark(tile.transform);
 
+                    // networking
+                    var spawnObj = tile.gameObject.GetComponent<SpawnableObject>();
+                    spawnObj.BroadcastActiveSelf(false);
+                    tile.gameObject.SetActive(false);
                     Destroy(tile.gameObject);
                 }
             }

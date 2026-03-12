@@ -20078,10 +20078,10 @@ struct WordScanManager_t5DFA8AA7ED2E7C3224B27D3CA0955AC965052C11  : public MonoB
 {
 	TableSnapZone_t98DB6E46409D9D63B767218E4B11C273A4015EA7* ___tableZone;
 	WordValidator_t0FC7E088593716BE97A671FBE4A3B870B7C72FA2* ___validator;
+	ScoreManager_t86D4A06D4B38717B8C529883F37DA25BA5750F39* ___scoreManager;
 	bool ___allowHorizontal;
 	bool ___allowVertical;
 	int32_t ___minWordLength;
-	ScoreManager_t86D4A06D4B38717B8C529883F37DA25BA5750F39* ___scoreManager;
 };
 struct WordValidator_t0FC7E088593716BE97A671FBE4A3B870B7C72FA2  : public MonoBehaviour_t532A11E69716D348D8AA7F854AFCBFCB8AD17F71
 {
@@ -22816,7 +22816,7 @@ struct U3CU3Ec_tEB482C1FAD595BD51A47BEA4EDB9F1CF1D9085E9_StaticFields
 struct U3CU3Ec_t3022502319866C96FEA49E8F5B080A1E31507577_StaticFields
 {
 	U3CU3Ec_t3022502319866C96FEA49E8F5B080A1E31507577* ___U3CU3E9;
-	Func_2_tD405B678AA6269AE97FB3582F3158147036EDDB2* ___U3CU3E9__7_0;
+	Func_2_tD405B678AA6269AE97FB3582F3158147036EDDB2* ___U3CU3E9__8_0;
 };
 struct CalculateBaseCurlThumb_00000153U24BurstDirectCall_t70087E2BBD175F8556A063A2D059563ACA315D35_StaticFields
 {
@@ -27182,10 +27182,10 @@ IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable10749[1] =
 	static_cast<int32_t>(offsetof(WordCheckButton_t2544D051B00D657D084BA9069E817885FA4DFBCB, ___wordScanManager)),};
 IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable10750[2] = 
 {
-	static_cast<int32_t>(offsetof(U3CU3Ec_t3022502319866C96FEA49E8F5B080A1E31507577_StaticFields, ___U3CU3E9)),static_cast<int32_t>(offsetof(U3CU3Ec_t3022502319866C96FEA49E8F5B080A1E31507577_StaticFields, ___U3CU3E9__7_0)),};
+	static_cast<int32_t>(offsetof(U3CU3Ec_t3022502319866C96FEA49E8F5B080A1E31507577_StaticFields, ___U3CU3E9)),static_cast<int32_t>(offsetof(U3CU3Ec_t3022502319866C96FEA49E8F5B080A1E31507577_StaticFields, ___U3CU3E9__8_0)),};
 IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable10751[6] = 
 {
-	static_cast<int32_t>(offsetof(WordScanManager_t5DFA8AA7ED2E7C3224B27D3CA0955AC965052C11, ___tableZone)),static_cast<int32_t>(offsetof(WordScanManager_t5DFA8AA7ED2E7C3224B27D3CA0955AC965052C11, ___validator)),static_cast<int32_t>(offsetof(WordScanManager_t5DFA8AA7ED2E7C3224B27D3CA0955AC965052C11, ___allowHorizontal)),static_cast<int32_t>(offsetof(WordScanManager_t5DFA8AA7ED2E7C3224B27D3CA0955AC965052C11, ___allowVertical)),static_cast<int32_t>(offsetof(WordScanManager_t5DFA8AA7ED2E7C3224B27D3CA0955AC965052C11, ___minWordLength)),static_cast<int32_t>(offsetof(WordScanManager_t5DFA8AA7ED2E7C3224B27D3CA0955AC965052C11, ___scoreManager)),};
+	static_cast<int32_t>(offsetof(WordScanManager_t5DFA8AA7ED2E7C3224B27D3CA0955AC965052C11, ___tableZone)),static_cast<int32_t>(offsetof(WordScanManager_t5DFA8AA7ED2E7C3224B27D3CA0955AC965052C11, ___validator)),static_cast<int32_t>(offsetof(WordScanManager_t5DFA8AA7ED2E7C3224B27D3CA0955AC965052C11, ___scoreManager)),static_cast<int32_t>(offsetof(WordScanManager_t5DFA8AA7ED2E7C3224B27D3CA0955AC965052C11, ___allowHorizontal)),static_cast<int32_t>(offsetof(WordScanManager_t5DFA8AA7ED2E7C3224B27D3CA0955AC965052C11, ___allowVertical)),static_cast<int32_t>(offsetof(WordScanManager_t5DFA8AA7ED2E7C3224B27D3CA0955AC965052C11, ___minWordLength)),};
 IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable10752[4] = 
 {
 	static_cast<int32_t>(offsetof(U3CLoadLocalDictionaryU3Ed__2_tECD5F87132D9F1B46535E2A2ED4337AA88A6AE76, ___U3CU3E1__state)),static_cast<int32_t>(offsetof(U3CLoadLocalDictionaryU3Ed__2_tECD5F87132D9F1B46535E2A2ED4337AA88A6AE76, ___U3CU3E2__current)),static_cast<int32_t>(offsetof(U3CLoadLocalDictionaryU3Ed__2_tECD5F87132D9F1B46535E2A2ED4337AA88A6AE76, ___U3CU3E4__this)),static_cast<int32_t>(offsetof(U3CLoadLocalDictionaryU3Ed__2_tECD5F87132D9F1B46535E2A2ED4337AA88A6AE76, ___U3CwwwU3E5__2)),};

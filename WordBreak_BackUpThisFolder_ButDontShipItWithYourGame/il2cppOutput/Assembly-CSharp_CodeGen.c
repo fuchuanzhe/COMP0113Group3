@@ -225,11 +225,12 @@ extern void TearObject__ctor_m3A4BFE49BF087AFE3F8913F2092E187B4DDCD363 (void);
 extern void WordCheckButton_TriggerWordCheck_m95AA311F0105CBE450329871A43E4B1C8ED2BB69 (void);
 extern void WordCheckButton__ctor_m6F27EE783DD483B0CAA2363B8175E99A7A9243DE (void);
 extern void WordScanManager_ScanWords_m1FD4DEB672A4C57259B856F3AEE078665089A01C (void);
+extern void WordScanManager_IsInsideGrid_mA361D8005CA6A8B125A99D6C1FAA6F7980C1FFC1 (void);
 extern void WordScanManager_ScanDirection_m6E154F32D3313344C4481DA302CE19D8476D1B77 (void);
 extern void WordScanManager__ctor_m0604227BA0D14F729230853480C2C8997F132AC7 (void);
 extern void U3CU3Ec__cctor_mF8C7D598D8B032EECF11E0978380BF8F928D3D49 (void);
 extern void U3CU3Ec__ctor_mEA6CB45D314E4289800540F993F224862B91AA19 (void);
-extern void U3CU3Ec_U3CScanDirectionU3Eb__7_0_m2E4A5F98120C923143630AB172044265C766DE27 (void);
+extern void U3CU3Ec_U3CScanDirectionU3Eb__8_0_mC62839B4B441BF16F53E23132D634660E4F28CFD (void);
 extern void WordValidator_Awake_m249EC81D2CDC5FE6AAF0B3A8B5E20AF521731BD4 (void);
 extern void WordValidator_LoadLocalDictionary_m3452A706B0C3817FEEF71F652F8BA784644E6A79 (void);
 extern void WordValidator_CheckWord_m55775AC32D645FFE2013D64CD40BE1D344CE718E (void);
@@ -242,7 +243,7 @@ extern void U3CLoadLocalDictionaryU3Ed__2_System_Collections_IEnumerator_Reset_m
 extern void U3CLoadLocalDictionaryU3Ed__2_System_Collections_IEnumerator_get_Current_mF1AC9350A43BFBC9D4A69336B71FF925408A4784 (void);
 extern void UnitySourceGeneratedAssemblyMonoScriptTypes_v1_Get_mBEB95BEB954BB63E9710BBC7AD5E78C4CB0A0033 (void);
 extern void UnitySourceGeneratedAssemblyMonoScriptTypes_v1__ctor_mE70FB23ACC1EA12ABC948AA22C2E78B2D0AA39B1 (void);
-static Il2CppMethodPointer s_methodPointers[241] = 
+static Il2CppMethodPointer s_methodPointers[242] = 
 {
 	AssignSeats_Start_m356359995EC02405407AA056466DA69551574EB6,
 	AssignSeats_Check_mFC9F13E5CD27EB3DE07C2EA3E68338BA31612206,
@@ -468,11 +469,12 @@ static Il2CppMethodPointer s_methodPointers[241] =
 	WordCheckButton_TriggerWordCheck_m95AA311F0105CBE450329871A43E4B1C8ED2BB69,
 	WordCheckButton__ctor_m6F27EE783DD483B0CAA2363B8175E99A7A9243DE,
 	WordScanManager_ScanWords_m1FD4DEB672A4C57259B856F3AEE078665089A01C,
+	WordScanManager_IsInsideGrid_mA361D8005CA6A8B125A99D6C1FAA6F7980C1FFC1,
 	WordScanManager_ScanDirection_m6E154F32D3313344C4481DA302CE19D8476D1B77,
 	WordScanManager__ctor_m0604227BA0D14F729230853480C2C8997F132AC7,
 	U3CU3Ec__cctor_mF8C7D598D8B032EECF11E0978380BF8F928D3D49,
 	U3CU3Ec__ctor_mEA6CB45D314E4289800540F993F224862B91AA19,
-	U3CU3Ec_U3CScanDirectionU3Eb__7_0_m2E4A5F98120C923143630AB172044265C766DE27,
+	U3CU3Ec_U3CScanDirectionU3Eb__8_0_mC62839B4B441BF16F53E23132D634660E4F28CFD,
 	WordValidator_Awake_m249EC81D2CDC5FE6AAF0B3A8B5E20AF521731BD4,
 	WordValidator_LoadLocalDictionary_m3452A706B0C3817FEEF71F652F8BA784644E6A79,
 	WordValidator_CheckWord_m55775AC32D645FFE2013D64CD40BE1D344CE718E,
@@ -499,7 +501,7 @@ static Il2CppTokenAdjustorThunkPair s_adjustorThunks[5] =
 	{ 0x06000091, Message__ctor_m99540459A60C891E65502A4536F361625DE443AC_AdjustorThunk },
 	{ 0x060000A9, Message__ctor_m2A32F8A1910A4954FCC180F48AEDDEF1BE185901_AdjustorThunk },
 };
-static const int32_t s_InvokerIndices[241] = 
+static const int32_t s_InvokerIndices[242] = 
 {
 	16471,
 	16471,
@@ -725,6 +727,7 @@ static const int32_t s_InvokerIndices[241] =
 	16471,
 	16471,
 	16471,
+	9081,
 	2904,
 	16471,
 	28149,
@@ -795,7 +798,7 @@ IL2CPP_EXTERN_C const Il2CppCodeGenModule g_AssemblyU2DCSharp_CodeGenModule;
 const Il2CppCodeGenModule g_AssemblyU2DCSharp_CodeGenModule = 
 {
 	"Assembly-CSharp.dll",
-	241,
+	242,
 	s_methodPointers,
 	5,
 	s_adjustorThunks,

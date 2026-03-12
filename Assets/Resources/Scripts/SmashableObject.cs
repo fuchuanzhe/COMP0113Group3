@@ -59,7 +59,7 @@ public class SmashableObject : MonoBehaviour
         }
 
         LetterSpawner.Instance?.SpawnWord(word, hitPoint);
-        var networkObj = GetComponent<DualNetworkedObject>();
+        var networkObj = GetComponent<NetworkedObject>();
         if (networkObj != null)
             networkObj.BroadcastActiveSelf(false);
 
