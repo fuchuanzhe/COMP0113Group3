@@ -1,6 +1,7 @@
 using System.Linq;
 using UnityEngine;
 using Ubiq.Rooms;
+using Ubiq.Messaging;
 
 public class AssignSeats : MonoBehaviour
 {
@@ -11,18 +12,31 @@ public class AssignSeats : MonoBehaviour
     private bool started;
     public PlayerOccupation occupation;
 
+    private NetworkContext context;
+    private struct Message
+    {
+        public bool start;
+
+        public Message(bool start)
+        {
+            this.start = start;
+        }
+    }
+
+
     private void Start()
     {
+        context = NetworkScene.Register(this);
         roomClient = RoomClient.Find(this);
 
         roomClient.OnJoinedRoom.AddListener(_ =>
         {
             started = false;
             Debug.Log("Joined");
-            Check();
+            // Check();
         });
 
-        roomClient.OnPeerAdded.AddListener(_ => Check());
+        // roomClient.OnPeerAdded.AddListener(_ => Check());
         roomClient.OnPeerRemoved.AddListener(_ => CleanupSeats());
         occupation = GetComponent<PlayerOccupation>();
     }
@@ -37,6 +51,26 @@ public class AssignSeats : MonoBehaviour
         if (!started && total >= requiredPlayers)
         {
             started = true;
+            MoveToSeats();
+        }
+    }
+
+    public void GameStart()
+    {
+        if (!started)
+        {
+            started = true;
+            MoveToSeats();
+            context.SendJson(new Message(true));
+        }
+    }
+
+    public void ProcessMessage(ReferenceCountedSceneGraphMessage message)
+    {
+        var m = message.FromJson<Message>();
+        if (m.start)
+        {
+            started = m.start;
             MoveToSeats();
         }
     }
