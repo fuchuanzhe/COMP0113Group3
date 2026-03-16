@@ -26364,9 +26364,12 @@ MonoBehaviour:
   tableZone: {fileID: 1025140417}
   validator: {fileID: 1056419519}
   scoreManager: {fileID: 476100037}
+  detectionZone: {fileID: 1025140415}
   allowHorizontal: 1
   allowVertical: 0
   minWordLength: 2
+  maxHeightAboveTable: 0.08
+  maxHorizontalOffsetToCellCenter: 0.04
 --- !u!114 &1056419519
 MonoBehaviour:
   m_ObjectHideFlags: 0
