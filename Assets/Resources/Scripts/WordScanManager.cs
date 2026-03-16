@@ -7,6 +7,7 @@ public class WordScanManager : MonoBehaviour
     [Header("References")]
     public TableSnapZone tableZone;
     public WordValidator validator;
+    public SceneObjectValidator sceneObjectValidator;
     public ScoreManager scoreManager;
     public BoxCollider detectionZone;
 
@@ -33,7 +34,7 @@ public class WordScanManager : MonoBehaviour
 
     public void ScanWords()
     {
-        if (tableZone == null || validator == null || detectionZone == null)
+        if (tableZone == null || validator == null || sceneObjectValidator == null || detectionZone == null)
         {
             Debug.LogWarning("WordScanManager: references not assigned.");
             return;
@@ -155,7 +156,22 @@ public class WordScanManager : MonoBehaviour
 
             string word = string.Concat(wordTiles.Select(t => t.GetLetter())).ToLower();
 
-            if (validator.CheckWord(word))
+            if (sceneObjectValidator.CheckWord(word))
+            {
+                Debug.Log($"<color=yellow>Scene object word:</color> {word}");
+
+                foreach (var tile in wordTiles)
+                {
+                    tile.SetSceneObjectYellow();
+
+                    var spawnObj = tile.GetComponent<SpawnableObject>();
+                    if (spawnObj != null)
+                    {
+                        spawnObj.BroadcastPosAndRot();
+                    }
+                }
+            }
+            else if (validator.CheckWord(word))
             {
                 Debug.Log($"<color=green>Valid word:</color> {word}");
 
@@ -168,7 +184,6 @@ public class WordScanManager : MonoBehaviour
                     if (tableZone != null)
                         tableZone.Unmark(tile.transform);
 
-                    // networking
                     var spawnObj = tile.gameObject.GetComponent<SpawnableObject>();
                     if (spawnObj != null)
                     {

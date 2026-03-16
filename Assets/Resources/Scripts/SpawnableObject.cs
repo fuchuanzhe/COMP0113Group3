@@ -14,19 +14,27 @@ public class SpawnableObject : MonoBehaviour, INetworkSpawnable
         return tile != null && tile.IsInvalid;
     }
 
+    private bool GetSceneObjectWordState()
+    {
+        var tile = GetComponent<LetterTile>();
+        return tile != null && tile.IsSceneObjectWord;
+    }
+
     private struct Message
     {
         public bool isActive;
         public bool isInvalid;
+        public bool isSceneObjectWord;
         public Vector3 position;
         public Quaternion rotation;
 
-        public Message(Transform transform, bool isActive, bool isInvalid)
+        public Message(Transform transform, bool isActive, bool isInvalid, bool isSceneObjectWord)
         {
             this.position = transform.position;
             this.rotation = transform.rotation;
             this.isActive = isActive;
             this.isInvalid = isInvalid;
+            this.isSceneObjectWord = isSceneObjectWord;
         }
     }
 
@@ -40,7 +48,12 @@ public class SpawnableObject : MonoBehaviour, INetworkSpawnable
         if (lastPosition != transform.position)
         {
             lastPosition = transform.position;
-            context.SendJson(new Message(transform, gameObject.activeSelf, GetInvalidState()));
+            context.SendJson(new Message(
+                transform,
+                gameObject.activeSelf,
+                GetInvalidState(),
+                GetSceneObjectWordState()
+            ));
         }
     }
 
@@ -56,7 +69,9 @@ public class SpawnableObject : MonoBehaviour, INetworkSpawnable
         var tile = GetComponent<LetterTile>();
         if (tile != null)
         {
-            if (m.isInvalid)
+            if (m.isSceneObjectWord)
+                tile.SetSceneObjectYellow();
+            else if (m.isInvalid)
                 tile.SetInvalidRed();
             else
                 tile.RestoreOriginalColor();
@@ -65,11 +80,21 @@ public class SpawnableObject : MonoBehaviour, INetworkSpawnable
 
     public void BroadcastActiveSelf(bool isActive)
     {
-        context.SendJson(new Message(transform, isActive, GetInvalidState()));
+        context.SendJson(new Message(
+            transform,
+            isActive,
+            GetInvalidState(),
+            GetSceneObjectWordState()
+        ));
     }
 
     public void BroadcastPosAndRot()
     {
-        context.SendJson(new Message(transform, true, GetInvalidState()));
+        context.SendJson(new Message(
+            transform,
+            true,
+            GetInvalidState(),
+            GetSceneObjectWordState()
+        ));
     }
 }
