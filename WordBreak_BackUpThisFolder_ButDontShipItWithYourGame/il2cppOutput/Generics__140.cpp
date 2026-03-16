@@ -10602,7 +10602,7 @@ IL_013b:
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 78899
+// Method Definition Index: 78900
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void StackFormatter_1_Add_m478EFAF04EFA4780B47A10BD6E9FF273346C38C2_gshared (StackFormatter_1_t5C54C28A35A31B544AB8C217C2FAB2EDBE573A48* __this, ArrayBuffer_1_t580D87FAC52DB6DA346162227F1F4615B3CF6DCB* ___0_collection, int32_t ___1_index, Il2CppFullySharedGenericAny ___2_value, const RuntimeMethod* method) 
 {
 	const uint32_t SizeOf_T_tD5502261E9D49B416D2A40DB7F35948352D3557C = il2cpp_codegen_sizeof(il2cpp_rgctx_data_no_init(method->klass->rgctx_data, 1));
@@ -10616,7 +10616,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void StackFormatter_1_Add_m478EFAF04EFA4780B4
 		return;
 	}
 }
-// Method Definition Index: 78900
+// Method Definition Index: 78901
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR ArrayBuffer_1_t580D87FAC52DB6DA346162227F1F4615B3CF6DCB StackFormatter_1_Create_m4379F94624867449ECAA46F5F5CC294318E1EB54_gshared (StackFormatter_1_t5C54C28A35A31B544AB8C217C2FAB2EDBE573A48* __this, const RuntimeMethod* method) 
 {
 	{
@@ -10627,7 +10627,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR ArrayBuffer_1_t580D87FAC52DB6DA346162227F1F46
 		return L_0;
 	}
 }
-// Method Definition Index: 78901
+// Method Definition Index: 78902
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void StackFormatter_1_GetSourceEnumerator_mC94B090E631A47E97BA94190DCCC4BBF4CACEBBD_gshared (StackFormatter_1_t5C54C28A35A31B544AB8C217C2FAB2EDBE573A48* __this, Stack_1_tF3E5E7101E929741300A1CF7C159A6ED9B61621A* ___0_source, Enumerator_t9C40FA80DC7A4C63469E514386FAB9AE1039DF41* il2cppRetVal, const RuntimeMethod* method) 
 {
 	const uint32_t SizeOf_Enumerator_tEA29F23C7E7BFAE5830FA07EFF0F1857EDF0277B = il2cpp_codegen_sizeof(il2cpp_rgctx_data_no_init(method->klass->rgctx_data, 8));
@@ -10641,7 +10641,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void StackFormatter_1_GetSourceEnumerator_mC9
 		return;
 	}
 }
-// Method Definition Index: 78902
+// Method Definition Index: 78903
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Stack_1_tF3E5E7101E929741300A1CF7C159A6ED9B61621A* StackFormatter_1_Complete_mEC84F0B99A5AFD6B89402880C0EEA9553766047C_gshared (StackFormatter_1_t5C54C28A35A31B544AB8C217C2FAB2EDBE573A48* __this, ArrayBuffer_1_t580D87FAC52DB6DA346162227F1F4615B3CF6DCB* ___0_intermediateCollection, const RuntimeMethod* method) 
 {
 	const uint32_t SizeOf_T_tD5502261E9D49B416D2A40DB7F35948352D3557C = il2cpp_codegen_sizeof(il2cpp_rgctx_data_no_init(method->klass->rgctx_data, 1));
@@ -10698,7 +10698,7 @@ IL_002f:
 		return L_14;
 	}
 }
-// Method Definition Index: 78903
+// Method Definition Index: 78904
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void StackFormatter_1__ctor_m5C8189D67E3C0ECCCB2D6814229EDEA4E890EA94_gshared (StackFormatter_1_t5C54C28A35A31B544AB8C217C2FAB2EDBE573A48* __this, const RuntimeMethod* method) 
 {
 	{
@@ -20140,7 +20140,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void StaticGetter_1_Invoke_m6206102EF397AEFFA
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 79104
+// Method Definition Index: 79105
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void StaticNullableFormatter_1__ctor_mE14C42A8768FDD8C818C041729C151A4CD8ABAC2_gshared (StaticNullableFormatter_1_t3008720325194C5966CC53FAA93B2699829EDBEB* __this, RuntimeObject* ___0_underlyingFormatter, const RuntimeMethod* method) 
 {
 	{
@@ -20154,7 +20154,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void StaticNullableFormatter_1__ctor_mE14C42A
 		return;
 	}
 }
-// Method Definition Index: 79105
+// Method Definition Index: 79106
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void StaticNullableFormatter_1__ctor_m8912699F45A679075C17F10F678F058D00CAFB2F_gshared (StaticNullableFormatter_1_t3008720325194C5966CC53FAA93B2699829EDBEB* __this, Type_t* ___0_formatterType, ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* ___1_formatterArguments, const RuntimeMethod* method) 
 {
 	Exception_t* V_0 = NULL;
@@ -20210,7 +20210,7 @@ IL_0032:
 		return;
 	}
 }
-// Method Definition Index: 79106
+// Method Definition Index: 79107
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void StaticNullableFormatter_1_Serialize_m3493B8703F16A1E69C9F023914CE9949687DDF72_gshared (StaticNullableFormatter_1_t3008720325194C5966CC53FAA93B2699829EDBEB* __this, JsonWriter_t76E122B737DD79975E835A95D9F85B09D0792EA2* ___0_writer, Nullable_1_tB6272BACE7A1FD9B331610C8D96A0BE3618C14B5 ___1_value, RuntimeObject* ___2_formatterResolver, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -20250,7 +20250,7 @@ IL_0010:
 		return;
 	}
 }
-// Method Definition Index: 79107
+// Method Definition Index: 79108
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Nullable_1_tB6272BACE7A1FD9B331610C8D96A0BE3618C14B5 StaticNullableFormatter_1_Deserialize_mAE1409325E3971AA81924E2646D5328F6491D4BE_gshared (StaticNullableFormatter_1_t3008720325194C5966CC53FAA93B2699829EDBEB* __this, JsonReader_tC309CFE30F38792D0E9F8D388FC2519EC4C23609* ___0_reader, RuntimeObject* ___1_formatterResolver, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -20302,7 +20302,7 @@ IL_0012:
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 79104
+// Method Definition Index: 79105
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void StaticNullableFormatter_1__ctor_m42E64402D94BCA57EC0618AF50684B7F74C5DE00_gshared (StaticNullableFormatter_1_tAFCCD77E4DB99B679EEABD3FF5CDD1E3195B5184* __this, RuntimeObject* ___0_underlyingFormatter, const RuntimeMethod* method) 
 {
 	{
@@ -20316,7 +20316,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void StaticNullableFormatter_1__ctor_m42E6440
 		return;
 	}
 }
-// Method Definition Index: 79105
+// Method Definition Index: 79106
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void StaticNullableFormatter_1__ctor_m9F5E87BDF5399E1AD4B0F4B0D9594E560937CA50_gshared (StaticNullableFormatter_1_tAFCCD77E4DB99B679EEABD3FF5CDD1E3195B5184* __this, Type_t* ___0_formatterType, ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* ___1_formatterArguments, const RuntimeMethod* method) 
 {
 	Exception_t* V_0 = NULL;
@@ -20372,7 +20372,7 @@ IL_0032:
 		return;
 	}
 }
-// Method Definition Index: 79106
+// Method Definition Index: 79107
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void StaticNullableFormatter_1_Serialize_mF3A8849848C518E855E41E1EE91B33E86DDE4E42_gshared (StaticNullableFormatter_1_tAFCCD77E4DB99B679EEABD3FF5CDD1E3195B5184* __this, JsonWriter_t76E122B737DD79975E835A95D9F85B09D0792EA2* ___0_writer, Nullable_1_t4926B6730CE7D5D65A9903F48CFD632867A41E72 ___1_value, RuntimeObject* ___2_formatterResolver, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -20412,7 +20412,7 @@ IL_0010:
 		return;
 	}
 }
-// Method Definition Index: 79107
+// Method Definition Index: 79108
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Nullable_1_t4926B6730CE7D5D65A9903F48CFD632867A41E72 StaticNullableFormatter_1_Deserialize_mE3F3A986336D7C78E3C654A88FB727F908A7937A_gshared (StaticNullableFormatter_1_tAFCCD77E4DB99B679EEABD3FF5CDD1E3195B5184* __this, JsonReader_tC309CFE30F38792D0E9F8D388FC2519EC4C23609* ___0_reader, RuntimeObject* ___1_formatterResolver, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -20464,7 +20464,7 @@ IL_0012:
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 79104
+// Method Definition Index: 79105
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void StaticNullableFormatter_1__ctor_m09E5B4AE709682CA6FCE3E4603D4D1AA44F32C98_gshared (StaticNullableFormatter_1_tB33F60DBEB3B943BE47C3AC55AC5BFA59A2721D6* __this, RuntimeObject* ___0_underlyingFormatter, const RuntimeMethod* method) 
 {
 	{
@@ -20478,7 +20478,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void StaticNullableFormatter_1__ctor_m09E5B4A
 		return;
 	}
 }
-// Method Definition Index: 79105
+// Method Definition Index: 79106
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void StaticNullableFormatter_1__ctor_m46AF77658EFEF230A575341138F5AF98790CFA53_gshared (StaticNullableFormatter_1_tB33F60DBEB3B943BE47C3AC55AC5BFA59A2721D6* __this, Type_t* ___0_formatterType, ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* ___1_formatterArguments, const RuntimeMethod* method) 
 {
 	Exception_t* V_0 = NULL;
@@ -20534,7 +20534,7 @@ IL_0032:
 		return;
 	}
 }
-// Method Definition Index: 79106
+// Method Definition Index: 79107
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void StaticNullableFormatter_1_Serialize_m1E2764DBC0B757DAD63E5FCDD151AA4CF82BC7BF_gshared (StaticNullableFormatter_1_tB33F60DBEB3B943BE47C3AC55AC5BFA59A2721D6* __this, JsonWriter_t76E122B737DD79975E835A95D9F85B09D0792EA2* ___0_writer, Nullable_1_tF45907C3073C9F341F91886F623DA8C0D5FAF286 ___1_value, RuntimeObject* ___2_formatterResolver, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -20574,7 +20574,7 @@ IL_0010:
 		return;
 	}
 }
-// Method Definition Index: 79107
+// Method Definition Index: 79108
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Nullable_1_tF45907C3073C9F341F91886F623DA8C0D5FAF286 StaticNullableFormatter_1_Deserialize_mEA6B21CBF4220E8C10F5F1CB585F2248E744B0E6_gshared (StaticNullableFormatter_1_tB33F60DBEB3B943BE47C3AC55AC5BFA59A2721D6* __this, JsonReader_tC309CFE30F38792D0E9F8D388FC2519EC4C23609* ___0_reader, RuntimeObject* ___1_formatterResolver, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -20626,7 +20626,7 @@ IL_0012:
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 79104
+// Method Definition Index: 79105
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void StaticNullableFormatter_1__ctor_mAED22C53A1BF2AA91CD2248E26754090AD418DC7_gshared (StaticNullableFormatter_1_t31F7C0E75442E04792E2F50F505739D62B95C7A5* __this, RuntimeObject* ___0_underlyingFormatter, const RuntimeMethod* method) 
 {
 	{
@@ -20640,7 +20640,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void StaticNullableFormatter_1__ctor_mAED22C5
 		return;
 	}
 }
-// Method Definition Index: 79105
+// Method Definition Index: 79106
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void StaticNullableFormatter_1__ctor_m4941EBADAE615D2825E79EDD53B61E11C2F20C83_gshared (StaticNullableFormatter_1_t31F7C0E75442E04792E2F50F505739D62B95C7A5* __this, Type_t* ___0_formatterType, ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* ___1_formatterArguments, const RuntimeMethod* method) 
 {
 	Exception_t* V_0 = NULL;
@@ -20696,7 +20696,7 @@ IL_0032:
 		return;
 	}
 }
-// Method Definition Index: 79106
+// Method Definition Index: 79107
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void StaticNullableFormatter_1_Serialize_mBD2818E347E055976A23DF6F2442C4BFB8838B1C_gshared (StaticNullableFormatter_1_t31F7C0E75442E04792E2F50F505739D62B95C7A5* __this, JsonWriter_t76E122B737DD79975E835A95D9F85B09D0792EA2* ___0_writer, Nullable_1_tEADC262F7F8B8BC4CC0A003DBDD3CA7C1B63F9AC ___1_value, RuntimeObject* ___2_formatterResolver, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -20736,7 +20736,7 @@ IL_0010:
 		return;
 	}
 }
-// Method Definition Index: 79107
+// Method Definition Index: 79108
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Nullable_1_tEADC262F7F8B8BC4CC0A003DBDD3CA7C1B63F9AC StaticNullableFormatter_1_Deserialize_m6FCAC39A3DFFAD6DD4701731E694421CBFD88EC1_gshared (StaticNullableFormatter_1_t31F7C0E75442E04792E2F50F505739D62B95C7A5* __this, JsonReader_tC309CFE30F38792D0E9F8D388FC2519EC4C23609* ___0_reader, RuntimeObject* ___1_formatterResolver, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -20788,7 +20788,7 @@ IL_0012:
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 79104
+// Method Definition Index: 79105
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void StaticNullableFormatter_1__ctor_mE8CAA5C7A4C5EA92DF364C4FCD9EF87F14342032_gshared (StaticNullableFormatter_1_t187D68C51C300C9A1ED14F755583C07F14FA9821* __this, RuntimeObject* ___0_underlyingFormatter, const RuntimeMethod* method) 
 {
 	{
@@ -20802,7 +20802,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void StaticNullableFormatter_1__ctor_mE8CAA5C
 		return;
 	}
 }
-// Method Definition Index: 79105
+// Method Definition Index: 79106
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void StaticNullableFormatter_1__ctor_m8D781375C0639D90224A9102A2374A36C86F388C_gshared (StaticNullableFormatter_1_t187D68C51C300C9A1ED14F755583C07F14FA9821* __this, Type_t* ___0_formatterType, ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* ___1_formatterArguments, const RuntimeMethod* method) 
 {
 	Exception_t* V_0 = NULL;
@@ -20858,7 +20858,7 @@ IL_0032:
 		return;
 	}
 }
-// Method Definition Index: 79106
+// Method Definition Index: 79107
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void StaticNullableFormatter_1_Serialize_m43F9D97BC0DBF0AEF33B0EDFB5AE4ADE6B8D1FEE_gshared (StaticNullableFormatter_1_t187D68C51C300C9A1ED14F755583C07F14FA9821* __this, JsonWriter_t76E122B737DD79975E835A95D9F85B09D0792EA2* ___0_writer, Nullable_1_t5127ABE6809BA32727C69CB2E076B28D676EB15B ___1_value, RuntimeObject* ___2_formatterResolver, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -20898,7 +20898,7 @@ IL_0010:
 		return;
 	}
 }
-// Method Definition Index: 79107
+// Method Definition Index: 79108
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Nullable_1_t5127ABE6809BA32727C69CB2E076B28D676EB15B StaticNullableFormatter_1_Deserialize_mB1F77B4ADCB65ADD256FE5C5C5D0D54D1D5B9BC0_gshared (StaticNullableFormatter_1_t187D68C51C300C9A1ED14F755583C07F14FA9821* __this, JsonReader_tC309CFE30F38792D0E9F8D388FC2519EC4C23609* ___0_reader, RuntimeObject* ___1_formatterResolver, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -20950,7 +20950,7 @@ IL_0012:
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 79104
+// Method Definition Index: 79105
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void StaticNullableFormatter_1__ctor_m89BF5A33A9FE644D2676513D18DB8EA94CC7F37D_gshared (StaticNullableFormatter_1_t651C71CAC9F4E9288F6B600B15220742CB8F1757* __this, RuntimeObject* ___0_underlyingFormatter, const RuntimeMethod* method) 
 {
 	{
@@ -20964,7 +20964,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void StaticNullableFormatter_1__ctor_m89BF5A3
 		return;
 	}
 }
-// Method Definition Index: 79105
+// Method Definition Index: 79106
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void StaticNullableFormatter_1__ctor_m4DB035FEEA6239619C6DF5FDCA67F55E19E9D9B7_gshared (StaticNullableFormatter_1_t651C71CAC9F4E9288F6B600B15220742CB8F1757* __this, Type_t* ___0_formatterType, ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* ___1_formatterArguments, const RuntimeMethod* method) 
 {
 	Exception_t* V_0 = NULL;
@@ -21020,7 +21020,7 @@ IL_0032:
 		return;
 	}
 }
-// Method Definition Index: 79106
+// Method Definition Index: 79107
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void StaticNullableFormatter_1_Serialize_m3AA26C74409ECF1BA400C7F03D6DC933DB50E5A4_gshared (StaticNullableFormatter_1_t651C71CAC9F4E9288F6B600B15220742CB8F1757* __this, JsonWriter_t76E122B737DD79975E835A95D9F85B09D0792EA2* ___0_writer, Nullable_1_t072551AA1AA8366A46F232F8180C34AA0CFFACBB ___1_value, RuntimeObject* ___2_formatterResolver, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -21060,7 +21060,7 @@ IL_0010:
 		return;
 	}
 }
-// Method Definition Index: 79107
+// Method Definition Index: 79108
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Nullable_1_t072551AA1AA8366A46F232F8180C34AA0CFFACBB StaticNullableFormatter_1_Deserialize_mA290083DB654F17840E32EF9C2C5302F57DB171A_gshared (StaticNullableFormatter_1_t651C71CAC9F4E9288F6B600B15220742CB8F1757* __this, JsonReader_tC309CFE30F38792D0E9F8D388FC2519EC4C23609* ___0_reader, RuntimeObject* ___1_formatterResolver, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -21112,7 +21112,7 @@ IL_0012:
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 79104
+// Method Definition Index: 79105
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void StaticNullableFormatter_1__ctor_m4A2692EE532E42A3393D16B5F9ECA7910718D1D6_gshared (StaticNullableFormatter_1_t15D0270466290C4632B555733E90D105F44F10BF* __this, RuntimeObject* ___0_underlyingFormatter, const RuntimeMethod* method) 
 {
 	{
@@ -21126,7 +21126,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void StaticNullableFormatter_1__ctor_m4A2692E
 		return;
 	}
 }
-// Method Definition Index: 79105
+// Method Definition Index: 79106
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void StaticNullableFormatter_1__ctor_mAFC9E5ABEF42508A329FF94E77F5724B2D6A399F_gshared (StaticNullableFormatter_1_t15D0270466290C4632B555733E90D105F44F10BF* __this, Type_t* ___0_formatterType, ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* ___1_formatterArguments, const RuntimeMethod* method) 
 {
 	Exception_t* V_0 = NULL;
@@ -21182,7 +21182,7 @@ IL_0032:
 		return;
 	}
 }
-// Method Definition Index: 79106
+// Method Definition Index: 79107
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void StaticNullableFormatter_1_Serialize_m02CFE83638A5C48AC08DC645F0F2F89FFF35199A_gshared (StaticNullableFormatter_1_t15D0270466290C4632B555733E90D105F44F10BF* __this, JsonWriter_t76E122B737DD79975E835A95D9F85B09D0792EA2* ___0_writer, Nullable_1_t0ECB838EB0C9A81655750B26970F21CF9A83A5F7 ___1_value, RuntimeObject* ___2_formatterResolver, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -21222,7 +21222,7 @@ IL_0010:
 		return;
 	}
 }
-// Method Definition Index: 79107
+// Method Definition Index: 79108
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Nullable_1_t0ECB838EB0C9A81655750B26970F21CF9A83A5F7 StaticNullableFormatter_1_Deserialize_m199096BCED4348893057C3FFFD87748384F72F8F_gshared (StaticNullableFormatter_1_t15D0270466290C4632B555733E90D105F44F10BF* __this, JsonReader_tC309CFE30F38792D0E9F8D388FC2519EC4C23609* ___0_reader, RuntimeObject* ___1_formatterResolver, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -21274,7 +21274,7 @@ IL_0012:
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 79104
+// Method Definition Index: 79105
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void StaticNullableFormatter_1__ctor_m0DDA8FA9B1036A146EB90764A276930529F4A04A_gshared (StaticNullableFormatter_1_t0431B70AC9E767C5F9745CDEBC0E34845ED2A402* __this, RuntimeObject* ___0_underlyingFormatter, const RuntimeMethod* method) 
 {
 	{
@@ -21288,7 +21288,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void StaticNullableFormatter_1__ctor_m0DDA8FA
 		return;
 	}
 }
-// Method Definition Index: 79105
+// Method Definition Index: 79106
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void StaticNullableFormatter_1__ctor_mE7CCE24F286F2C2BD2933D5801642E7A56B53BB2_gshared (StaticNullableFormatter_1_t0431B70AC9E767C5F9745CDEBC0E34845ED2A402* __this, Type_t* ___0_formatterType, ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* ___1_formatterArguments, const RuntimeMethod* method) 
 {
 	Exception_t* V_0 = NULL;
@@ -21344,7 +21344,7 @@ IL_0032:
 		return;
 	}
 }
-// Method Definition Index: 79106
+// Method Definition Index: 79107
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void StaticNullableFormatter_1_Serialize_mCD831E7BC3E7F7FC80BC666EC6A3B46BC7C0D458_gshared (StaticNullableFormatter_1_t0431B70AC9E767C5F9745CDEBC0E34845ED2A402* __this, JsonWriter_t76E122B737DD79975E835A95D9F85B09D0792EA2* ___0_writer, Nullable_1_tE151CE1F6892804B41C4004C95CB57020ABB3272 ___1_value, RuntimeObject* ___2_formatterResolver, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -21384,7 +21384,7 @@ IL_0010:
 		return;
 	}
 }
-// Method Definition Index: 79107
+// Method Definition Index: 79108
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Nullable_1_tE151CE1F6892804B41C4004C95CB57020ABB3272 StaticNullableFormatter_1_Deserialize_mB937067BEE2C6B989C02A93725D7B9F7CDFD7934_gshared (StaticNullableFormatter_1_t0431B70AC9E767C5F9745CDEBC0E34845ED2A402* __this, JsonReader_tC309CFE30F38792D0E9F8D388FC2519EC4C23609* ___0_reader, RuntimeObject* ___1_formatterResolver, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -21436,7 +21436,7 @@ IL_0012:
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 79104
+// Method Definition Index: 79105
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void StaticNullableFormatter_1__ctor_m00E97CCFCAF16BE7B165752AD5D135B9FC5ED3E3_gshared (StaticNullableFormatter_1_t6133493156ACD958EDEDC345F40B6E1649FD9BC1* __this, RuntimeObject* ___0_underlyingFormatter, const RuntimeMethod* method) 
 {
 	{
@@ -21450,7 +21450,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void StaticNullableFormatter_1__ctor_m00E97CC
 		return;
 	}
 }
-// Method Definition Index: 79105
+// Method Definition Index: 79106
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void StaticNullableFormatter_1__ctor_m04B501E8EB46F994771C8BA41A0E434FDCCA3A03_gshared (StaticNullableFormatter_1_t6133493156ACD958EDEDC345F40B6E1649FD9BC1* __this, Type_t* ___0_formatterType, ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* ___1_formatterArguments, const RuntimeMethod* method) 
 {
 	Exception_t* V_0 = NULL;
@@ -21506,7 +21506,7 @@ IL_0032:
 		return;
 	}
 }
-// Method Definition Index: 79106
+// Method Definition Index: 79107
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void StaticNullableFormatter_1_Serialize_mCF3ECEEFE36653C5FF4E86C493241E98FABC2606_gshared (StaticNullableFormatter_1_t6133493156ACD958EDEDC345F40B6E1649FD9BC1* __this, JsonWriter_t76E122B737DD79975E835A95D9F85B09D0792EA2* ___0_writer, Nullable_1_t71C4EA4E848DBD7A4A97704069FB951159A3A339 ___1_value, RuntimeObject* ___2_formatterResolver, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -21547,7 +21547,7 @@ IL_0010:
 		return;
 	}
 }
-// Method Definition Index: 79107
+// Method Definition Index: 79108
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void StaticNullableFormatter_1_Deserialize_m2008F1C3DE316BA0E7E62BE553F6F507BF0ECE48_gshared (StaticNullableFormatter_1_t6133493156ACD958EDEDC345F40B6E1649FD9BC1* __this, JsonReader_tC309CFE30F38792D0E9F8D388FC2519EC4C23609* ___0_reader, RuntimeObject* ___1_formatterResolver, Nullable_1_t71C4EA4E848DBD7A4A97704069FB951159A3A339* il2cppRetVal, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -22861,7 +22861,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR uint8_t* Array_GetRawSzArrayData_
 		return L_1;
 	}
 }
-// Method Definition Index: 78778
+// Method Definition Index: 78779
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void JsonWriter_WriteNull_m1CCDF931D743F8CA2E69D69BEE65DC50132EEA42_inline (JsonWriter_t76E122B737DD79975E835A95D9F85B09D0792EA2* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -23775,7 +23775,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t RefCounted_get_refCount_m
 		return L_0;
 	}
 }
-// Method Definition Index: 79383
+// Method Definition Index: 79384
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void BinaryUtil_EnsureCapacity_mBF0A62A1154D32F0C3AABCDD7E8F8D9A3D5F87A3_inline (ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031** ___0_bytes, int32_t ___1_offset, int32_t ___2_appendLength, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;

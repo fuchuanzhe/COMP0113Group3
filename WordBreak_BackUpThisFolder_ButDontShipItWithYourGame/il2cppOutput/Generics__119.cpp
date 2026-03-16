@@ -6590,7 +6590,7 @@ IL2CPP_EXTERN_C  DeviceInfo_tAB83FF3BB4996BA68DFDF5D6255C1FEBB452AE52 ReadOnlyAr
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 78909
+// Method Definition Index: 78910
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ReadOnlyCollectionFormatter_1_Add_m1AAA269CA6452F6D59924C29294DBAE89CB549C0_gshared (ReadOnlyCollectionFormatter_1_tE6D5E28EDDED61560EBA8F493C3ADE12DFFEB54A* __this, ArrayBuffer_1_t580D87FAC52DB6DA346162227F1F4615B3CF6DCB* ___0_collection, int32_t ___1_index, Il2CppFullySharedGenericAny ___2_value, const RuntimeMethod* method) 
 {
 	const uint32_t SizeOf_T_t446812DAFEF38061634D3B1F360EAC83C6CFB15B = il2cpp_codegen_sizeof(il2cpp_rgctx_data_no_init(method->klass->rgctx_data, 1));
@@ -6604,7 +6604,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ReadOnlyCollectionFormatter_1_Add_m1AAA2
 		return;
 	}
 }
-// Method Definition Index: 78910
+// Method Definition Index: 78911
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR ReadOnlyCollection_1_t5B7AA4E006906DE6818A44873F2D5987EFBF3AB8* ReadOnlyCollectionFormatter_1_Complete_mB59CFAA67203B98E7A0EF70ABEAF735CDB18191F_gshared (ReadOnlyCollectionFormatter_1_tE6D5E28EDDED61560EBA8F493C3ADE12DFFEB54A* __this, ArrayBuffer_1_t580D87FAC52DB6DA346162227F1F4615B3CF6DCB* ___0_intermediateCollection, const RuntimeMethod* method) 
 {
 	{
@@ -6617,7 +6617,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR ReadOnlyCollection_1_t5B7AA4E006906DE6818A448
 		return L_2;
 	}
 }
-// Method Definition Index: 78911
+// Method Definition Index: 78912
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR ArrayBuffer_1_t580D87FAC52DB6DA346162227F1F4615B3CF6DCB ReadOnlyCollectionFormatter_1_Create_m13487D0CFEEB5D52D2B252DC35A7D196FC33595A_gshared (ReadOnlyCollectionFormatter_1_tE6D5E28EDDED61560EBA8F493C3ADE12DFFEB54A* __this, const RuntimeMethod* method) 
 {
 	{
@@ -6628,7 +6628,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR ArrayBuffer_1_t580D87FAC52DB6DA346162227F1F46
 		return L_0;
 	}
 }
-// Method Definition Index: 78912
+// Method Definition Index: 78913
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ReadOnlyCollectionFormatter_1__ctor_m9A966A44CAA2D70E0373B09F3811B3A302C40706_gshared (ReadOnlyCollectionFormatter_1_tE6D5E28EDDED61560EBA8F493C3ADE12DFFEB54A* __this, const RuntimeMethod* method) 
 {
 	{

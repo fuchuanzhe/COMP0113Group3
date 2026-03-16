@@ -7594,7 +7594,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR ConfiguredTaskAwaitable_1_t49C60B05BE82F420C6
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 68060
+// Method Definition Index: 68061
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Task_1__ctor_m8131172F6D4081626F852B7B5CACA81276DF468C_gshared (Task_1_t3E16D9990A0CB7475DB30F40A13296DC7202DA93* __this, Il2CppFullySharedGenericAny ___0_priority, const RuntimeMethod* method) 
 {
 	const uint32_t SizeOf_T_tB5EB746B0C862CC8477FAACB0162E106B0A827CF = il2cpp_codegen_sizeof(il2cpp_rgctx_data_no_init(method->klass->rgctx_data, 0));
@@ -7609,7 +7609,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Task_1__ctor_m8131172F6D4081626F852B7B5C
 		return;
 	}
 }
-// Method Definition Index: 68061
+// Method Definition Index: 68062
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Task_1_get_Priority_m15980D6A260A10A2489187E5A5013F15A623E82A_gshared (Task_1_t3E16D9990A0CB7475DB30F40A13296DC7202DA93* __this, Il2CppFullySharedGenericAny* il2cppRetVal, const RuntimeMethod* method) 
 {
 	const uint32_t SizeOf_T_tB5EB746B0C862CC8477FAACB0162E106B0A827CF = il2cpp_codegen_sizeof(il2cpp_rgctx_data_no_init(method->klass->rgctx_data, 0));

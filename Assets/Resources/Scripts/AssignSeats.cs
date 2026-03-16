@@ -1,5 +1,7 @@
+using System.Collections;
 using System.Linq;
 using UnityEngine;
+using TMPro;
 using Ubiq.Rooms;
 using Ubiq.Messaging;
 
@@ -11,6 +13,9 @@ public class AssignSeats : MonoBehaviour
     private RoomClient roomClient;
     private bool started;
     public PlayerOccupation occupation;
+    public GameObject occupationUI;
+    private Coroutine uiCoroutine;
+    public TMP_Text occupationText;
 
     private NetworkContext context;
     private struct Message
@@ -39,6 +44,7 @@ public class AssignSeats : MonoBehaviour
         // roomClient.OnPeerAdded.AddListener(_ => Check());
         roomClient.OnPeerRemoved.AddListener(_ => CleanupSeats());
         occupation = GetComponent<PlayerOccupation>();
+        occupationUI.SetActive(false);
     }
 
     private void Check()
@@ -60,7 +66,8 @@ public class AssignSeats : MonoBehaviour
         if (!started)
         {
             started = true;
-            MoveToSeats();
+            var i = MoveToSeats();
+            ShowOccupationUIFor3Seconds(i);
             context.SendJson(new Message(true));
         }
     }
@@ -71,11 +78,12 @@ public class AssignSeats : MonoBehaviour
         if (m.start)
         {
             started = m.start;
-            MoveToSeats();
+            var i = MoveToSeats();
+            ShowOccupationUIFor3Seconds(i);
         }
     }
 
-    private void MoveToSeats()
+    private int MoveToSeats()
     {
         var allUuids = roomClient.Peers.Select(p => p.uuid).Append(roomClient.Me.uuid).OrderBy(x => x).ToList();
         int index = Mathf.Clamp(allUuids.IndexOf(roomClient.Me.uuid), 0, seats.Length - 1);
@@ -98,6 +106,51 @@ public class AssignSeats : MonoBehaviour
 
         Debug.Log($"Assigned seat {index}.");
         Debug.Log($"Assigned occupation {occupation.MyOccupation}.");
+        return index;
+    }
+
+    private void ShowOccupationUIFor3Seconds(int i)
+    {
+        if (occupationUI == null)
+            return;
+
+        if (uiCoroutine != null)
+        {
+            StopCoroutine(uiCoroutine);
+        }
+        UpdateOccupationText();
+        uiCoroutine = StartCoroutine(ShowOccupationUICoroutine(i));
+    }
+
+    private IEnumerator ShowOccupationUICoroutine(int i)
+    {
+        if(i >= 2)
+        {
+            occupationUI.transform.rotation = Quaternion.Euler(0,180f,0);
+        }
+        occupationUI.SetActive(true);
+        yield return new WaitForSeconds(3f);
+        occupationUI.SetActive(false);
+        uiCoroutine = null;
+    }
+    private void UpdateOccupationText()
+    {
+        string job = occupation.MyOccupation.ToString();
+        string allowed = "";
+        string blocked = "";
+
+        if (occupation.MyOccupation == PlayerOccupation.Occupation.Chef)
+        {
+            allowed = "knife";
+            blocked = "hammer";
+        }
+        else if (occupation.MyOccupation == PlayerOccupation.Occupation.Butcher)
+        {
+            allowed = "hammer";
+            blocked = "knife";
+        }
+
+        occupationText.text = $"You are a {job}.\nYou can only grab {allowed} but not {blocked}!";
     }
 
     private void CleanupSeats()
