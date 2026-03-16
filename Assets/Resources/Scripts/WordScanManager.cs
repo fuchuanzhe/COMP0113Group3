@@ -185,6 +185,12 @@ public class WordScanManager : MonoBehaviour
                 foreach (var tile in wordTiles)
                 {
                     tile.SetInvalidRed();
+
+                    var spawnObj = tile.GetComponent<SpawnableObject>();
+                    if (spawnObj != null)
+                    {
+                        spawnObj.BroadcastPosAndRot();
+                    }
                 }
             }
         }

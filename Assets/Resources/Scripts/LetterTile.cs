@@ -9,6 +9,7 @@ public class LetterTile : MonoBehaviour
 
     private Color _originalColor;
     private bool _isInvalid;
+    public bool IsInvalid => _isInvalid;
 
     void Awake()
     {

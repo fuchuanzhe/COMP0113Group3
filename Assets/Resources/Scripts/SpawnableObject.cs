@@ -8,17 +8,25 @@ public class SpawnableObject : MonoBehaviour, INetworkSpawnable
     public NetworkContext context;
     private Vector3 lastPosition;
 
+    private bool GetInvalidState()
+    {
+        var tile = GetComponent<LetterTile>();
+        return tile != null && tile.IsInvalid;
+    }
+
     private struct Message
     {
         public bool isActive;
+        public bool isInvalid;
         public Vector3 position;
         public Quaternion rotation;
 
-        public Message(Transform transform, bool isActive)
+        public Message(Transform transform, bool isActive, bool isInvalid)
         {
             this.position = transform.position;
             this.rotation = transform.rotation;
             this.isActive = isActive;
+            this.isInvalid = isInvalid;
         }
     }
 
@@ -29,10 +37,10 @@ public class SpawnableObject : MonoBehaviour, INetworkSpawnable
 
     void Update()
     {
-        if(lastPosition != transform.position)
+        if (lastPosition != transform.position)
         {
             lastPosition = transform.position;
-            context.SendJson(new Message(transform, gameObject.activeSelf));
+            context.SendJson(new Message(transform, gameObject.activeSelf, GetInvalidState()));
         }
     }
 
@@ -44,15 +52,24 @@ public class SpawnableObject : MonoBehaviour, INetworkSpawnable
         transform.position = m.position;
         lastPosition = transform.position;
         transform.rotation = m.rotation;
+
+        var tile = GetComponent<LetterTile>();
+        if (tile != null)
+        {
+            if (m.isInvalid)
+                tile.SetInvalidRed();
+            else
+                tile.RestoreOriginalColor();
+        }
     }
 
     public void BroadcastActiveSelf(bool isActive)
     {
-        context.SendJson(new Message(transform, isActive));
+        context.SendJson(new Message(transform, isActive, GetInvalidState()));
     }
 
     public void BroadcastPosAndRot()
     {
-        context.SendJson(new Message(transform, true));
+        context.SendJson(new Message(transform, true, GetInvalidState()));
     }
 }
