@@ -174,10 +174,8 @@ public class WordScanManager : MonoBehaviour
                     {
                         spawnObj.BroadcastActiveSelf(false);
                     }
-                    else
-                    {
-                        tile.gameObject.SetActive(false);
-                    }
+
+                    tile.gameObject.SetActive(false);
                 }
             }
             else
