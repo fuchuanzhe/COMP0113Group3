@@ -4,6 +4,15 @@ using UnityEngine;
 
 public class WordScanManager : MonoBehaviour
 {
+    public enum PlayerType
+    {
+        Player1,
+        Player2
+    }
+
+    [Header("Player")]
+    public PlayerType playerType;
+
     [Header("References")]
     public TableSnapZone tableZone;
     public WordValidator validator;
@@ -176,8 +185,14 @@ public class WordScanManager : MonoBehaviour
                 Debug.Log($"<color=green>Valid word:</color> {word}");
 
                 int points = word.Length;
+
                 if (scoreManager != null)
-                    scoreManager.AddPlayer1Score(points);
+                {
+                    if (playerType == PlayerType.Player1)
+                        scoreManager.AddPlayer1Score(points);
+                    else if (playerType == PlayerType.Player2)
+                        scoreManager.AddPlayer2Score(points);
+                }
 
                 foreach (var tile in wordTiles)
                 {
