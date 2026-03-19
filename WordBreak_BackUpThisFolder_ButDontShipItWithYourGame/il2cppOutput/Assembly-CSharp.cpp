@@ -689,7 +689,7 @@ IL2CPP_EXTERN_C const RuntimeMethod* U3CU3Ec_U3CCleanupSeatsU3Eb__19_0_mEF2D1C30
 IL2CPP_EXTERN_C const RuntimeMethod* U3CU3Ec_U3CCleanupSeatsU3Eb__19_1_mEDD2688A1D348EF96955F03908EFA74C1A43A60D_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* U3CU3Ec_U3CMoveToSeatsU3Eb__15_0_m4D45654598AC43407D045FACBD286AEB2201C3F0_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* U3CU3Ec_U3CMoveToSeatsU3Eb__15_1_m009C8C9C3DD33A2B590FAFB0F4E56428E7CA986E_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* U3CU3Ec_U3CScanDirectionU3Eb__13_0_m3A4B1ADB929403436F4428F1735142FF4822DA16_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* U3CU3Ec_U3CScanDirectionU3Eb__15_0_m04E7E89D7C02E490A6B09753FE6A530B31E8D0F0_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* UnityEvent_1_AddListener_m58BD029288EB53E8C5D3BD2A0FF7EC39284A7421_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* UnityEvent_1_AddListener_m84DD6D5B7DEA12DA2FB966EEF5E172ED5323D810_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* UnityEvent_1_AddListener_mAE71681FB0832FD7DBA813E5ADDBA574EA32EED2_RuntimeMethod_var;
@@ -2095,6 +2095,10 @@ struct Result_tFB98154F15BF37A66902802D441FEFADC68D4C87
 {
 	int32_t ___value__;
 };
+struct PlayerType_t80F254BF7015885A6D77DF3147F4DD6F9BDF35A6 
+{
+	int32_t ___value__;
+};
 struct DistanceCalculationMode_tE85298033372A2D44BB92F8728EA55B845089383 
 {
 	int32_t ___value__;
@@ -3467,6 +3471,7 @@ struct WordCheckButton_t2544D051B00D657D084BA9069E817885FA4DFBCB  : public MonoB
 };
 struct WordScanManager_t5DFA8AA7ED2E7C3224B27D3CA0955AC965052C11  : public MonoBehaviour_t532A11E69716D348D8AA7F854AFCBFCB8AD17F71
 {
+	int32_t ___playerType;
 	TableSnapZone_t98DB6E46409D9D63B767218E4B11C273A4015EA7* ___tableZone;
 	WordValidator_t0FC7E088593716BE97A671FBE4A3B870B7C72FA2* ___validator;
 	SceneObjectValidator_tBCB8A5AB6293DD4C8DFC7BBB492E65DC59CB2E32* ___sceneObjectValidator;
@@ -4019,7 +4024,7 @@ struct U3CU3Ec_t85CCE64AB8B9A3D6939E3ADAB341EF8615034820_StaticFields
 struct U3CU3Ec_t3022502319866C96FEA49E8F5B080A1E31507577_StaticFields
 {
 	U3CU3Ec_t3022502319866C96FEA49E8F5B080A1E31507577* ___U3CU3E9;
-	Func_2_tD405B678AA6269AE97FB3582F3158147036EDDB2* ___U3CU3E9__13_0;
+	Func_2_tD405B678AA6269AE97FB3582F3158147036EDDB2* ___U3CU3E9__15_0;
 };
 struct Boolean_t09A6377A54BE2F9E6985A8149F19234FD7DDFE22_StaticFields
 {
@@ -5430,6 +5435,7 @@ inline bool Enumerator_MoveNext_m4235C59F7CDFCADA64416F44D70922B6B08F7F8C (Enume
 }
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool WordValidator_CheckWord_m55775AC32D645FFE2013D64CD40BE1D344CE718E (WordValidator_t0FC7E088593716BE97A671FBE4A3B870B7C72FA2* __this, String_t* ___0_input, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ScoreManager_AddPlayer1Score_m1FB7C03FCC00B3EA1220FA752ADE9077571CC9B5 (ScoreManager_t86D4A06D4B38717B8C529883F37DA25BA5750F39* __this, int32_t ___0_amount, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ScoreManager_AddPlayer2Score_m29E7EB1290EF76096CB04DA3F35B4844E821D547 (ScoreManager_t86D4A06D4B38717B8C529883F37DA25BA5750F39* __this, int32_t ___0_amount, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SpawnableObject_BroadcastActiveSelf_m22C0FF174127BC6D81FCD930EB197B5E77C95CA4 (SpawnableObject_tB01492418378D7AE527A7C2936955B071EC7B7FA* __this, bool ___0_isActive, const RuntimeMethod* method) ;
 inline bool Enumerator_MoveNext_m624B713474E43DF4B1CA51521EC8296C0B7CE08C (Enumerator_tFF340CA8493E02027982A6FE053D70619046A55D* __this, const RuntimeMethod* method)
 {
@@ -18956,7 +18962,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A
 	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 V_2;
 	memset((&V_2), 0, sizeof(V_2));
 	{
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:23>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:32>
 		int32_t L_0;
 		L_0 = Vector2Int_get_x_mA2CACB1B6E6B5AD0CCC32B2CD2EDCE3ECEB50576_inline((&___0_cell), NULL);
 		TableSnapZone_t98DB6E46409D9D63B767218E4B11C273A4015EA7* L_1 = __this->___tableZone;
@@ -18965,7 +18971,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A
 		int32_t L_3;
 		L_3 = Vector2Int_get_x_mA2CACB1B6E6B5AD0CCC32B2CD2EDCE3ECEB50576_inline(L_2, NULL);
 		V_0 = ((int32_t)il2cpp_codegen_subtract(L_0, ((int32_t)(L_3/2))));
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:24>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:33>
 		int32_t L_4;
 		L_4 = Vector2Int_get_y_m48454163ECF0B463FB5A16A0C4FC4B14DB0768B3_inline((&___0_cell), NULL);
 		TableSnapZone_t98DB6E46409D9D63B767218E4B11C273A4015EA7* L_5 = __this->___tableZone;
@@ -18974,11 +18980,11 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A
 		int32_t L_7;
 		L_7 = Vector2Int_get_y_m48454163ECF0B463FB5A16A0C4FC4B14DB0768B3_inline(L_6, NULL);
 		V_1 = ((int32_t)il2cpp_codegen_subtract(L_4, ((int32_t)(L_7/2))));
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:26>
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:27>
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:28>
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:29>
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:30>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:35>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:36>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:37>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:38>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:39>
 		int32_t L_8 = V_0;
 		TableSnapZone_t98DB6E46409D9D63B767218E4B11C273A4015EA7* L_9 = __this->___tableZone;
 		NullCheck(L_9);
@@ -18993,7 +18999,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A
 		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7* L_16 = (Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7*)(&L_15->___cellSize);
 		float L_17 = L_16->___y;
 		Vector3__ctor_m376936E6B999EF1ECBE57D990A386303E2283DE0_inline((&V_2), ((float)il2cpp_codegen_multiply(((float)il2cpp_codegen_add(((float)L_8), (0.5f))), L_11)), L_13, ((float)il2cpp_codegen_multiply(((float)il2cpp_codegen_add(((float)L_14), (0.5f))), L_17)), NULL);
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:32>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:41>
 		TableSnapZone_t98DB6E46409D9D63B767218E4B11C273A4015EA7* L_18 = __this->___tableZone;
 		NullCheck(L_18);
 		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_19 = L_18->___gridOrigin;
@@ -19051,7 +19057,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void WordScanManager_ScanWords_m1FD4DEB672A4C
 	Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 V_15;
 	memset((&V_15), 0, sizeof(V_15));
 	{
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:37>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:46>
 		TableSnapZone_t98DB6E46409D9D63B767218E4B11C273A4015EA7* L_0 = __this->___tableZone;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_1;
@@ -19094,22 +19100,22 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void WordScanManager_ScanWords_m1FD4DEB672A4C
 
 IL_0038:
 	{
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:39>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:48>
 		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 		Debug_LogWarning_m33EF1B897E0C7C6FF538989610BFAFFEF4628CA9(_stringLiteral2A1EB1FD1D2B68766F4AC8DA0F106F82D9BDA39D, NULL);
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:40>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:49>
 		return;
 	}
 
 IL_0043:
 	{
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:43>
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:44>
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:45>
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:46>
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:47>
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:48>
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:49>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:52>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:53>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:54>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:55>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:56>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:57>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:58>
 		BoxCollider_tFA5D239388334D6DE0B8FFDAD6825C5B03786E23* L_8 = __this->___detectionZone;
 		NullCheck(L_8);
 		Bounds_t367E830C64BBF235ED8C3B2F8CF6254FDCAD39C3 L_9;
@@ -19134,11 +19140,11 @@ IL_0043:
 		il2cpp_codegen_runtime_class_init_inline(Physics_t1244C2983AEAFA149425AFFC3DF53BC91C18ED56_il2cpp_TypeInfo_var);
 		ColliderU5BU5D_t94A9D70F63D095AFF2A9B4613012A5F7F3141787* L_17;
 		L_17 = Physics_OverlapBox_mC38B579DEFD0341FCAEF8B8EC8B1E37A2C12366D(L_10, L_13, L_16, (-1), 1, NULL);
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:51>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:60>
 		HashSet_1_tC6CC68EEF8568891A7F0FC4B2435372BD4EE9CFD* L_18 = (HashSet_1_tC6CC68EEF8568891A7F0FC4B2435372BD4EE9CFD*)il2cpp_codegen_object_new(HashSet_1_tC6CC68EEF8568891A7F0FC4B2435372BD4EE9CFD_il2cpp_TypeInfo_var);
 		HashSet_1__ctor_m355565FB374431AF255ADA72155ABADFAC6023A2(L_18, HashSet_1__ctor_m355565FB374431AF255ADA72155ABADFAC6023A2_RuntimeMethod_var);
 		V_0 = L_18;
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:53>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:62>
 		V_6 = L_17;
 		V_7 = 0;
 		goto IL_00c1;
@@ -19146,14 +19152,14 @@ IL_0043:
 
 IL_008f:
 	{
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:53>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:62>
 		ColliderU5BU5D_t94A9D70F63D095AFF2A9B4613012A5F7F3141787* L_19 = V_6;
 		int32_t L_20 = V_7;
 		NullCheck(L_19);
 		int32_t L_21 = L_20;
 		Collider_t1CC3163924FCD6C4CC2E816373A929C1E3D55E76* L_22 = (L_19)->GetAt(static_cast<il2cpp_array_size_t>(L_21));
 		V_8 = L_22;
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:55>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:64>
 		Collider_t1CC3163924FCD6C4CC2E816373A929C1E3D55E76* L_23 = V_8;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_24;
@@ -19164,13 +19170,13 @@ IL_008f:
 		}
 	}
 	{
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:57>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:66>
 		Collider_t1CC3163924FCD6C4CC2E816373A929C1E3D55E76* L_25 = V_8;
 		NullCheck(L_25);
 		LetterTile_tB20E0D5265E6DEC4F697C65EBC185582BA0E3541* L_26;
 		L_26 = Component_GetComponentInParent_TisLetterTile_tB20E0D5265E6DEC4F697C65EBC185582BA0E3541_m92E7B10907D22B1792FAE847142614C7DFBC1B6A(L_25, Component_GetComponentInParent_TisLetterTile_tB20E0D5265E6DEC4F697C65EBC185582BA0E3541_m92E7B10907D22B1792FAE847142614C7DFBC1B6A_RuntimeMethod_var);
 		V_9 = L_26;
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:58>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:67>
 		LetterTile_tB20E0D5265E6DEC4F697C65EBC185582BA0E3541* L_27 = V_9;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_28;
@@ -19181,7 +19187,7 @@ IL_008f:
 		}
 	}
 	{
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:59>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:68>
 		HashSet_1_tC6CC68EEF8568891A7F0FC4B2435372BD4EE9CFD* L_29 = V_0;
 		LetterTile_tB20E0D5265E6DEC4F697C65EBC185582BA0E3541* L_30 = V_9;
 		NullCheck(L_29);
@@ -19197,7 +19203,7 @@ IL_00bb:
 
 IL_00c1:
 	{
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:53>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:62>
 		int32_t L_33 = V_7;
 		ColliderU5BU5D_t94A9D70F63D095AFF2A9B4613012A5F7F3141787* L_34 = V_6;
 		NullCheck(L_34);
@@ -19207,12 +19213,12 @@ IL_00c1:
 		}
 	}
 	{
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:62>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:71>
 		HashSet_1_tC6CC68EEF8568891A7F0FC4B2435372BD4EE9CFD* L_35 = V_0;
 		LetterTileU5BU5D_t59EDDCEA1B9A2F5C673BFBE24B9F52DD79789F57* L_36;
 		L_36 = Enumerable_ToArray_TisLetterTile_tB20E0D5265E6DEC4F697C65EBC185582BA0E3541_mBFB6B0A4755D2F316D10E962284412BF3A731B83(L_35, Enumerable_ToArray_TisLetterTile_tB20E0D5265E6DEC4F697C65EBC185582BA0E3541_mBFB6B0A4755D2F316D10E962284412BF3A731B83_RuntimeMethod_var);
 		V_1 = L_36;
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:64>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:73>
 		LetterTileU5BU5D_t59EDDCEA1B9A2F5C673BFBE24B9F52DD79789F57* L_37 = V_1;
 		V_10 = L_37;
 		V_7 = 0;
@@ -19221,13 +19227,13 @@ IL_00c1:
 
 IL_00d8:
 	{
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:64>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:73>
 		LetterTileU5BU5D_t59EDDCEA1B9A2F5C673BFBE24B9F52DD79789F57* L_38 = V_10;
 		int32_t L_39 = V_7;
 		NullCheck(L_38);
 		int32_t L_40 = L_39;
 		LetterTile_tB20E0D5265E6DEC4F697C65EBC185582BA0E3541* L_41 = (L_38)->GetAt(static_cast<il2cpp_array_size_t>(L_40));
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:66>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:75>
 		NullCheck(L_41);
 		LetterTile_RestoreOriginalColor_mF6E472449A2DFCD1B01F1ABEF693A31C6209C94E(L_41, NULL);
 		int32_t L_42 = V_7;
@@ -19236,7 +19242,7 @@ IL_00d8:
 
 IL_00e8:
 	{
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:64>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:73>
 		int32_t L_43 = V_7;
 		LetterTileU5BU5D_t59EDDCEA1B9A2F5C673BFBE24B9F52DD79789F57* L_44 = V_10;
 		NullCheck(L_44);
@@ -19246,11 +19252,11 @@ IL_00e8:
 		}
 	}
 	{
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:69>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:78>
 		Dictionary_2_tC4ACFBC4FA9DEC0736DD419613BD13FAF9350EA6* L_45 = (Dictionary_2_tC4ACFBC4FA9DEC0736DD419613BD13FAF9350EA6*)il2cpp_codegen_object_new(Dictionary_2_tC4ACFBC4FA9DEC0736DD419613BD13FAF9350EA6_il2cpp_TypeInfo_var);
 		Dictionary_2__ctor_m77B61C2FA8B5BDC3122DB7FE64BB293623DD368C(L_45, Dictionary_2__ctor_m77B61C2FA8B5BDC3122DB7FE64BB293623DD368C_RuntimeMethod_var);
 		V_2 = L_45;
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:71>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:80>
 		TableSnapZone_t98DB6E46409D9D63B767218E4B11C273A4015EA7* L_46 = __this->___tableZone;
 		NullCheck(L_46);
 		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_47 = L_46->___gridOrigin;
@@ -19259,7 +19265,7 @@ IL_00e8:
 		L_48 = Transform_get_position_m69CD5FA214FDAE7BB701552943674846C220FDE1(L_47, NULL);
 		float L_49 = L_48.___y;
 		V_3 = L_49;
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:73>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:82>
 		LetterTileU5BU5D_t59EDDCEA1B9A2F5C673BFBE24B9F52DD79789F57* L_50 = V_1;
 		V_10 = L_50;
 		V_7 = 0;
@@ -19268,14 +19274,14 @@ IL_00e8:
 
 IL_0117:
 	{
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:73>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:82>
 		LetterTileU5BU5D_t59EDDCEA1B9A2F5C673BFBE24B9F52DD79789F57* L_51 = V_10;
 		int32_t L_52 = V_7;
 		NullCheck(L_51);
 		int32_t L_53 = L_52;
 		LetterTile_tB20E0D5265E6DEC4F697C65EBC185582BA0E3541* L_54 = (L_51)->GetAt(static_cast<il2cpp_array_size_t>(L_53));
 		V_11 = L_54;
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:75>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:84>
 		LetterTile_tB20E0D5265E6DEC4F697C65EBC185582BA0E3541* L_55 = V_11;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_56;
@@ -19286,7 +19292,7 @@ IL_0117:
 		}
 	}
 	{
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:77>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:86>
 		LetterTile_tB20E0D5265E6DEC4F697C65EBC185582BA0E3541* L_57 = V_11;
 		NullCheck(L_57);
 		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_58;
@@ -19295,7 +19301,7 @@ IL_0117:
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_59;
 		L_59 = Transform_get_position_m69CD5FA214FDAE7BB701552943674846C220FDE1(L_58, NULL);
 		V_12 = L_59;
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:80>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:89>
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_60 = V_12;
 		float L_61 = L_60.___y;
 		float L_62 = V_3;
@@ -19308,14 +19314,14 @@ IL_0117:
 		}
 	}
 	{
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:83>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:92>
 		TableSnapZone_t98DB6E46409D9D63B767218E4B11C273A4015EA7* L_65 = __this->___tableZone;
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_66 = V_12;
 		NullCheck(L_65);
 		Vector2Int_t69B2886EBAB732D9B880565E18E7568F3DE0CE6A L_67;
 		L_67 = TableSnapZone_WorldToCell_mAB8142B1C7D51A19A5FF201125A4463720A05847(L_65, L_66, NULL);
 		V_13 = L_67;
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:86>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:95>
 		Vector2Int_t69B2886EBAB732D9B880565E18E7568F3DE0CE6A L_68 = V_13;
 		bool L_69;
 		L_69 = WordScanManager_IsInsideGrid_mA361D8005CA6A8B125A99D6C1FAA6F7980C1FFC1(__this, L_68, NULL);
@@ -19325,12 +19331,12 @@ IL_0117:
 		}
 	}
 	{
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:90>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:99>
 		Vector2Int_t69B2886EBAB732D9B880565E18E7568F3DE0CE6A L_70 = V_13;
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_71;
 		L_71 = WordScanManager_GetCellCenterWorld_m02F3D3EF20CF81C0722C12288857F396BBE0B439(__this, L_70, NULL);
 		V_14 = L_71;
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:91>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:100>
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_72 = V_12;
 		float L_73 = L_72.___x;
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_74 = V_14;
@@ -19340,7 +19346,7 @@ IL_0117:
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_78 = V_14;
 		float L_79 = L_78.___z;
 		Vector2__ctor_m9525B79969AFFE3254B303A40997A56DEEB6F548_inline((&V_15), ((float)il2cpp_codegen_subtract(L_73, L_75)), ((float)il2cpp_codegen_subtract(L_77, L_79)), NULL);
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:93>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:102>
 		float L_80;
 		L_80 = Vector2_get_magnitude_m5C59B4056420AEFDB291AD0914A3F675330A75CE_inline((&V_15), NULL);
 		float L_81 = __this->___maxHorizontalOffsetToCellCenter;
@@ -19350,7 +19356,7 @@ IL_0117:
 		}
 	}
 	{
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:96>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:105>
 		Dictionary_2_tC4ACFBC4FA9DEC0736DD419613BD13FAF9350EA6* L_82 = V_2;
 		Vector2Int_t69B2886EBAB732D9B880565E18E7568F3DE0CE6A L_83 = V_13;
 		NullCheck(L_82);
@@ -19362,7 +19368,7 @@ IL_0117:
 		}
 	}
 	{
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:98>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:107>
 		Dictionary_2_tC4ACFBC4FA9DEC0736DD419613BD13FAF9350EA6* L_85 = V_2;
 		Vector2Int_t69B2886EBAB732D9B880565E18E7568F3DE0CE6A L_86 = V_13;
 		LetterTile_tB20E0D5265E6DEC4F697C65EBC185582BA0E3541* L_87 = V_11;
@@ -19373,7 +19379,7 @@ IL_0117:
 
 IL_01bf:
 	{
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:102>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:111>
 		Vector2Int_t69B2886EBAB732D9B880565E18E7568F3DE0CE6A L_88 = V_13;
 		Vector2Int_t69B2886EBAB732D9B880565E18E7568F3DE0CE6A L_89 = L_88;
 		RuntimeObject* L_90 = Box(Vector2Int_t69B2886EBAB732D9B880565E18E7568F3DE0CE6A_il2cpp_TypeInfo_var, &L_89);
@@ -19395,7 +19401,7 @@ IL_01dc:
 
 IL_01e2:
 	{
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:73>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:82>
 		int32_t L_95 = V_7;
 		LetterTileU5BU5D_t59EDDCEA1B9A2F5C673BFBE24B9F52DD79789F57* L_96 = V_10;
 		NullCheck(L_96);
@@ -19405,7 +19411,7 @@ IL_01e2:
 		}
 	}
 	{
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:106>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:115>
 		Dictionary_2_tC4ACFBC4FA9DEC0736DD419613BD13FAF9350EA6* L_97 = V_2;
 		NullCheck(L_97);
 		int32_t L_98;
@@ -19416,11 +19422,11 @@ IL_01e2:
 		L_101 = String_Format_mA8DBB4C2516B9723C5A41E6CB1E2FAF4BBE96DD8(_stringLiteral00C3E1B629ABC60EC0AF4A0296FC6A4E81981397, L_100, NULL);
 		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 		Debug_Log_m87A9A3C761FF5C43ED8A53B16190A53D08F818BB(L_101, NULL);
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:108>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:117>
 		HashSet_1_tC6CC68EEF8568891A7F0FC4B2435372BD4EE9CFD* L_102 = (HashSet_1_tC6CC68EEF8568891A7F0FC4B2435372BD4EE9CFD*)il2cpp_codegen_object_new(HashSet_1_tC6CC68EEF8568891A7F0FC4B2435372BD4EE9CFD_il2cpp_TypeInfo_var);
 		HashSet_1__ctor_m355565FB374431AF255ADA72155ABADFAC6023A2(L_102, HashSet_1__ctor_m355565FB374431AF255ADA72155ABADFAC6023A2_RuntimeMethod_var);
 		V_4 = L_102;
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:110>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:119>
 		bool L_103 = __this->___allowHorizontal;
 		if (!L_103)
 		{
@@ -19428,7 +19434,7 @@ IL_01e2:
 		}
 	}
 	{
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:111>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:120>
 		Dictionary_2_tC4ACFBC4FA9DEC0736DD419613BD13FAF9350EA6* L_104 = V_2;
 		HashSet_1_tC6CC68EEF8568891A7F0FC4B2435372BD4EE9CFD* L_105 = V_4;
 		Vector2Int_t69B2886EBAB732D9B880565E18E7568F3DE0CE6A L_106;
@@ -19438,7 +19444,7 @@ IL_01e2:
 
 IL_0224:
 	{
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:113>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:122>
 		bool L_107 = __this->___allowVertical;
 		if (!L_107)
 		{
@@ -19446,7 +19452,7 @@ IL_0224:
 		}
 	}
 	{
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:114>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:123>
 		Dictionary_2_tC4ACFBC4FA9DEC0736DD419613BD13FAF9350EA6* L_108 = V_2;
 		HashSet_1_tC6CC68EEF8568891A7F0FC4B2435372BD4EE9CFD* L_109 = V_4;
 		Vector2Int_t69B2886EBAB732D9B880565E18E7568F3DE0CE6A L_110;
@@ -19456,7 +19462,7 @@ IL_0224:
 
 IL_023a:
 	{
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:115>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:124>
 		return;
 	}
 }
@@ -19464,10 +19470,10 @@ IL_023a:
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool WordScanManager_IsInsideGrid_mA361D8005CA6A8B125A99D6C1FAA6F7980C1FFC1 (WordScanManager_t5DFA8AA7ED2E7C3224B27D3CA0955AC965052C11* __this, Vector2Int_t69B2886EBAB732D9B880565E18E7568F3DE0CE6A ___0_cell, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:119>
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:120>
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:121>
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:122>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:128>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:129>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:130>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:131>
 		int32_t L_0;
 		L_0 = Vector2Int_get_x_mA2CACB1B6E6B5AD0CCC32B2CD2EDCE3ECEB50576_inline((&___0_cell), NULL);
 		if ((((int32_t)L_0) < ((int32_t)0)))
@@ -19545,7 +19551,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void WordScanManager_ScanDirection_m6E154F32D
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&List_1_t83778CDC4C8C3A5FD32A661A4D241173450265A1_il2cpp_TypeInfo_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&List_1_tB56F1028A724D2CE4E84861619D1CF68C68C983D_il2cpp_TypeInfo_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&U3CU3Ec_U3CScanDirectionU3Eb__13_0_m3A4B1ADB929403436F4428F1735142FF4822DA16_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&U3CU3Ec_U3CScanDirectionU3Eb__15_0_m04E7E89D7C02E490A6B09753FE6A530B31E8D0F0_RuntimeMethod_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&U3CU3Ec_t3022502319866C96FEA49E8F5B080A1E31507577_il2cpp_TypeInfo_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral2C29EDA00603EB942176E774B171B57C65ACE9B5);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteralA02D0A7615CA3C2CAA7E174375A3C7D2637015AD);
@@ -19579,7 +19585,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void WordScanManager_ScanDirection_m6E154F32D
 	Func_2_tD405B678AA6269AE97FB3582F3158147036EDDB2* G_B9_0 = NULL;
 	List_1_t83778CDC4C8C3A5FD32A661A4D241173450265A1* G_B9_1 = NULL;
 	{
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:130>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:139>
 		Dictionary_2_tC4ACFBC4FA9DEC0736DD419613BD13FAF9350EA6* L_0 = ___0_cellMap;
 		NullCheck(L_0);
 		Enumerator_tFF340CA8493E02027982A6FE053D70619046A55D L_1;
@@ -19590,7 +19596,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void WordScanManager_ScanDirection_m6E154F32D
 		auto __finallyBlock = il2cpp::utils::Finally([&]
 		{
 
-FINALLY_0263:
+FINALLY_0283:
 			{
 				Enumerator_Dispose_mBDD8EA06898CC08B2F2058F07DF78A3EA2872FA4((&V_0), Enumerator_Dispose_mBDD8EA06898CC08B2F2058F07DF78A3EA2872FA4_RuntimeMethod_var);
 				return;
@@ -19599,24 +19605,24 @@ FINALLY_0263:
 		try
 		{
 			{
-				goto IL_0255_1;
+				goto IL_0275_1;
 			}
 
 IL_000c_1:
 			{
-				//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:130>
+				//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:139>
 				KeyValuePair_2_t511D37B06E6BE8B21BCF130017D75ED906C9A7C6 L_2;
 				L_2 = Enumerator_get_Current_mDC991AC7C8F05903C8A8A8977D5F2D855923BAA2_inline((&V_0), Enumerator_get_Current_mDC991AC7C8F05903C8A8A8977D5F2D855923BAA2_RuntimeMethod_var);
 				V_1 = L_2;
-				//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:132>
+				//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:141>
 				Vector2Int_t69B2886EBAB732D9B880565E18E7568F3DE0CE6A L_3;
 				L_3 = KeyValuePair_2_get_Key_m5D88AEFDEF6624A1BF757689A44D1417B25BEA0A_inline((&V_1), KeyValuePair_2_get_Key_m5D88AEFDEF6624A1BF757689A44D1417B25BEA0A_RuntimeMethod_var);
 				V_2 = L_3;
-				//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:133>
+				//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:142>
 				LetterTile_tB20E0D5265E6DEC4F697C65EBC185582BA0E3541* L_4;
 				L_4 = KeyValuePair_2_get_Value_m8EF8C2FAA73F7F3CD93755201B8C2EA928ADAC9A_inline((&V_1), KeyValuePair_2_get_Value_m8EF8C2FAA73F7F3CD93755201B8C2EA928ADAC9A_RuntimeMethod_var);
 				V_3 = L_4;
-				//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:135>
+				//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:144>
 				HashSet_1_tC6CC68EEF8568891A7F0FC4B2435372BD4EE9CFD* L_5 = ___1_processed;
 				LetterTile_tB20E0D5265E6DEC4F697C65EBC185582BA0E3541* L_6 = V_3;
 				NullCheck(L_5);
@@ -19624,17 +19630,17 @@ IL_000c_1:
 				L_7 = HashSet_1_Contains_m411C89F3D656227FD71A3AFA7BB25033BA415E39(L_5, L_6, HashSet_1_Contains_m411C89F3D656227FD71A3AFA7BB25033BA415E39_RuntimeMethod_var);
 				if (L_7)
 				{
-					goto IL_0255_1;
+					goto IL_0275_1;
 				}
 			}
 			{
-				//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:138>
+				//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:147>
 				Vector2Int_t69B2886EBAB732D9B880565E18E7568F3DE0CE6A L_8 = V_2;
 				Vector2Int_t69B2886EBAB732D9B880565E18E7568F3DE0CE6A L_9 = ___2_dir;
 				Vector2Int_t69B2886EBAB732D9B880565E18E7568F3DE0CE6A L_10;
 				L_10 = Vector2Int_op_Subtraction_m5C9A4D049F8EE288878F37C991CA1BBB738D8059_inline(L_8, L_9, NULL);
 				V_4 = L_10;
-				//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:139>
+				//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:148>
 				Dictionary_2_tC4ACFBC4FA9DEC0736DD419613BD13FAF9350EA6* L_11 = ___0_cellMap;
 				Vector2Int_t69B2886EBAB732D9B880565E18E7568F3DE0CE6A L_12 = V_4;
 				NullCheck(L_11);
@@ -19642,26 +19648,26 @@ IL_000c_1:
 				L_13 = Dictionary_2_ContainsKey_m879213F7A630B58B08F2EA627D88B25A92953577(L_11, L_12, Dictionary_2_ContainsKey_m879213F7A630B58B08F2EA627D88B25A92953577_RuntimeMethod_var);
 				if (L_13)
 				{
-					goto IL_0255_1;
+					goto IL_0275_1;
 				}
 			}
 			{
-				//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:142>
+				//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:151>
 				List_1_t83778CDC4C8C3A5FD32A661A4D241173450265A1* L_14 = (List_1_t83778CDC4C8C3A5FD32A661A4D241173450265A1*)il2cpp_codegen_object_new(List_1_t83778CDC4C8C3A5FD32A661A4D241173450265A1_il2cpp_TypeInfo_var);
 				List_1__ctor_m3BF79E5ECB5ACC0F1F04369227155B54420C4A2F(L_14, List_1__ctor_m3BF79E5ECB5ACC0F1F04369227155B54420C4A2F_RuntimeMethod_var);
 				V_5 = L_14;
-				//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:143>
+				//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:152>
 				List_1_tB56F1028A724D2CE4E84861619D1CF68C68C983D* L_15 = (List_1_tB56F1028A724D2CE4E84861619D1CF68C68C983D*)il2cpp_codegen_object_new(List_1_tB56F1028A724D2CE4E84861619D1CF68C68C983D_il2cpp_TypeInfo_var);
 				List_1__ctor_mE1D9FD9DA1EF2CAC4F99EF4E013F05BB8C3507EF(L_15, List_1__ctor_mE1D9FD9DA1EF2CAC4F99EF4E013F05BB8C3507EF_RuntimeMethod_var);
 				V_6 = L_15;
-				//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:145>
+				//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:154>
 				Vector2Int_t69B2886EBAB732D9B880565E18E7568F3DE0CE6A L_16 = V_2;
 				V_7 = L_16;
 			}
 
 IL_0057_1:
 			{
-				//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:146>
+				//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:155>
 				Dictionary_2_tC4ACFBC4FA9DEC0736DD419613BD13FAF9350EA6* L_17 = ___0_cellMap;
 				Vector2Int_t69B2886EBAB732D9B880565E18E7568F3DE0CE6A L_18 = V_7;
 				NullCheck(L_17);
@@ -19673,35 +19679,35 @@ IL_0057_1:
 				}
 			}
 			{
-				//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:148>
+				//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:157>
 				List_1_t83778CDC4C8C3A5FD32A661A4D241173450265A1* L_20 = V_5;
 				LetterTile_tB20E0D5265E6DEC4F697C65EBC185582BA0E3541* L_21 = V_9;
 				NullCheck(L_20);
 				List_1_Add_m129D9D6C136541FC16EE70BAE863FC5EC633E96E_inline(L_20, L_21, List_1_Add_m129D9D6C136541FC16EE70BAE863FC5EC633E96E_RuntimeMethod_var);
-				//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:149>
+				//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:158>
 				List_1_tB56F1028A724D2CE4E84861619D1CF68C68C983D* L_22 = V_6;
 				Vector2Int_t69B2886EBAB732D9B880565E18E7568F3DE0CE6A L_23 = V_7;
 				NullCheck(L_22);
 				List_1_Add_m771AC7A01DFC931CCCFCCF949C1F4D56B5E98A1B_inline(L_22, L_23, List_1_Add_m771AC7A01DFC931CCCFCCF949C1F4D56B5E98A1B_RuntimeMethod_var);
-				//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:150>
+				//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:159>
 				HashSet_1_tC6CC68EEF8568891A7F0FC4B2435372BD4EE9CFD* L_24 = ___1_processed;
 				LetterTile_tB20E0D5265E6DEC4F697C65EBC185582BA0E3541* L_25 = V_9;
 				NullCheck(L_24);
 				bool L_26;
 				L_26 = HashSet_1_Add_mBB6D1B905FC34E06669E5AEFFC7EA590E67015AB(L_24, L_25, HashSet_1_Add_mBB6D1B905FC34E06669E5AEFFC7EA590E67015AB_RuntimeMethod_var);
-				//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:151>
+				//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:160>
 				Vector2Int_t69B2886EBAB732D9B880565E18E7568F3DE0CE6A L_27 = V_7;
 				Vector2Int_t69B2886EBAB732D9B880565E18E7568F3DE0CE6A L_28 = ___2_dir;
 				Vector2Int_t69B2886EBAB732D9B880565E18E7568F3DE0CE6A L_29;
 				L_29 = Vector2Int_op_Addition_m6358133A28BA913D2080FD44472D1FD1CE1AC28F_inline(L_27, L_28, NULL);
 				V_7 = L_29;
-				//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:152>
+				//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:161>
 				goto IL_0057_1;
 			}
 
 IL_008a_1:
 			{
-				//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:154>
+				//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:163>
 				List_1_t83778CDC4C8C3A5FD32A661A4D241173450265A1* L_30 = V_5;
 				NullCheck(L_30);
 				int32_t L_31;
@@ -19709,14 +19715,14 @@ IL_008a_1:
 				int32_t L_32 = __this->___minWordLength;
 				if ((((int32_t)L_31) < ((int32_t)L_32)))
 				{
-					goto IL_0255_1;
+					goto IL_0275_1;
 				}
 			}
 			{
-				//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:157>
+				//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:166>
 				List_1_t83778CDC4C8C3A5FD32A661A4D241173450265A1* L_33 = V_5;
 				il2cpp_codegen_runtime_class_init_inline(U3CU3Ec_t3022502319866C96FEA49E8F5B080A1E31507577_il2cpp_TypeInfo_var);
-				Func_2_tD405B678AA6269AE97FB3582F3158147036EDDB2* L_34 = ((U3CU3Ec_t3022502319866C96FEA49E8F5B080A1E31507577_StaticFields*)il2cpp_codegen_static_fields_for(U3CU3Ec_t3022502319866C96FEA49E8F5B080A1E31507577_il2cpp_TypeInfo_var))->___U3CU3E9__13_0;
+				Func_2_tD405B678AA6269AE97FB3582F3158147036EDDB2* L_34 = ((U3CU3Ec_t3022502319866C96FEA49E8F5B080A1E31507577_StaticFields*)il2cpp_codegen_static_fields_for(U3CU3Ec_t3022502319866C96FEA49E8F5B080A1E31507577_il2cpp_TypeInfo_var))->___U3CU3E9__15_0;
 				Func_2_tD405B678AA6269AE97FB3582F3158147036EDDB2* L_35 = L_34;
 				if (L_35)
 				{
@@ -19731,10 +19737,10 @@ IL_008a_1:
 				il2cpp_codegen_runtime_class_init_inline(U3CU3Ec_t3022502319866C96FEA49E8F5B080A1E31507577_il2cpp_TypeInfo_var);
 				U3CU3Ec_t3022502319866C96FEA49E8F5B080A1E31507577* L_36 = ((U3CU3Ec_t3022502319866C96FEA49E8F5B080A1E31507577_StaticFields*)il2cpp_codegen_static_fields_for(U3CU3Ec_t3022502319866C96FEA49E8F5B080A1E31507577_il2cpp_TypeInfo_var))->___U3CU3E9;
 				Func_2_tD405B678AA6269AE97FB3582F3158147036EDDB2* L_37 = (Func_2_tD405B678AA6269AE97FB3582F3158147036EDDB2*)il2cpp_codegen_object_new(Func_2_tD405B678AA6269AE97FB3582F3158147036EDDB2_il2cpp_TypeInfo_var);
-				Func_2__ctor_mBB82CE45173326DE27FDA4A8A0BD2887B6CE55D4(L_37, L_36, (intptr_t)((void*)U3CU3Ec_U3CScanDirectionU3Eb__13_0_m3A4B1ADB929403436F4428F1735142FF4822DA16_RuntimeMethod_var), NULL);
+				Func_2__ctor_mBB82CE45173326DE27FDA4A8A0BD2887B6CE55D4(L_37, L_36, (intptr_t)((void*)U3CU3Ec_U3CScanDirectionU3Eb__15_0_m04E7E89D7C02E490A6B09753FE6A530B31E8D0F0_RuntimeMethod_var), NULL);
 				Func_2_tD405B678AA6269AE97FB3582F3158147036EDDB2* L_38 = L_37;
-				((U3CU3Ec_t3022502319866C96FEA49E8F5B080A1E31507577_StaticFields*)il2cpp_codegen_static_fields_for(U3CU3Ec_t3022502319866C96FEA49E8F5B080A1E31507577_il2cpp_TypeInfo_var))->___U3CU3E9__13_0 = L_38;
-				Il2CppCodeGenWriteBarrier((void**)(&((U3CU3Ec_t3022502319866C96FEA49E8F5B080A1E31507577_StaticFields*)il2cpp_codegen_static_fields_for(U3CU3Ec_t3022502319866C96FEA49E8F5B080A1E31507577_il2cpp_TypeInfo_var))->___U3CU3E9__13_0), (void*)L_38);
+				((U3CU3Ec_t3022502319866C96FEA49E8F5B080A1E31507577_StaticFields*)il2cpp_codegen_static_fields_for(U3CU3Ec_t3022502319866C96FEA49E8F5B080A1E31507577_il2cpp_TypeInfo_var))->___U3CU3E9__15_0 = L_38;
+				Il2CppCodeGenWriteBarrier((void**)(&((U3CU3Ec_t3022502319866C96FEA49E8F5B080A1E31507577_StaticFields*)il2cpp_codegen_static_fields_for(U3CU3Ec_t3022502319866C96FEA49E8F5B080A1E31507577_il2cpp_TypeInfo_var))->___U3CU3E9__15_0), (void*)L_38);
 				G_B10_0 = L_38;
 				G_B10_1 = G_B9_1;
 			}
@@ -19749,7 +19755,7 @@ IL_00bd_1:
 				String_t* L_41;
 				L_41 = String_ToLower_m6191ABA3DC514ED47C10BDA23FD0DDCEAE7ACFBD(L_40, NULL);
 				V_8 = L_41;
-				//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:159>
+				//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:168>
 				SceneObjectValidator_tBCB8A5AB6293DD4C8DFC7BBB492E65DC59CB2E32* L_42 = __this->___sceneObjectValidator;
 				String_t* L_43 = V_8;
 				NullCheck(L_42);
@@ -19761,13 +19767,13 @@ IL_00bd_1:
 				}
 			}
 			{
-				//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:161>
+				//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:170>
 				String_t* L_45 = V_8;
 				String_t* L_46;
 				L_46 = String_Concat_m9E3155FB84015C823606188F53B47CB44C444991(_stringLiteralDB141919FD751F63302FFC76998E94B166ECCC60, L_45, NULL);
 				il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 				Debug_Log_m87A9A3C761FF5C43ED8A53B16190A53D08F818BB(L_46, NULL);
-				//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:163>
+				//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:172>
 				List_1_t83778CDC4C8C3A5FD32A661A4D241173450265A1* L_47 = V_5;
 				NullCheck(L_47);
 				Enumerator_t6735A01E8624C9A5B4DA2461922D3D4CEF85DFDA L_48;
@@ -19792,19 +19798,19 @@ FINALLY_012c_1:
 
 IL_00f9_2:
 					{
-						//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:163>
+						//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:172>
 						LetterTile_tB20E0D5265E6DEC4F697C65EBC185582BA0E3541* L_49;
 						L_49 = Enumerator_get_Current_mAE7C9841355F6D3416F927D57980DB66AFC65E17_inline((&V_10), Enumerator_get_Current_mAE7C9841355F6D3416F927D57980DB66AFC65E17_RuntimeMethod_var);
-						//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:165>
+						//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:174>
 						LetterTile_tB20E0D5265E6DEC4F697C65EBC185582BA0E3541* L_50 = L_49;
 						NullCheck(L_50);
 						LetterTile_SetSceneObjectYellow_m9A90F74C516CA25221DE36C6A9CAB351A1E84BAA(L_50, NULL);
-						//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:167>
+						//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:176>
 						NullCheck(L_50);
 						SpawnableObject_tB01492418378D7AE527A7C2936955B071EC7B7FA* L_51;
 						L_51 = Component_GetComponent_TisSpawnableObject_tB01492418378D7AE527A7C2936955B071EC7B7FA_m93A5752467942CC4B1FA17C2235BB977DFF1B7FB(L_50, Component_GetComponent_TisSpawnableObject_tB01492418378D7AE527A7C2936955B071EC7B7FA_m93A5752467942CC4B1FA17C2235BB977DFF1B7FB_RuntimeMethod_var);
 						V_11 = L_51;
-						//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:168>
+						//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:177>
 						SpawnableObject_tB01492418378D7AE527A7C2936955B071EC7B7FA* L_52 = V_11;
 						il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 						bool L_53;
@@ -19815,7 +19821,7 @@ IL_00f9_2:
 						}
 					}
 					{
-						//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:170>
+						//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:179>
 						SpawnableObject_tB01492418378D7AE527A7C2936955B071EC7B7FA* L_54 = V_11;
 						NullCheck(L_54);
 						SpawnableObject_BroadcastPosAndRot_m6BD5E105513D3C1045495CE0D624BA0AA827CE44(L_54, NULL);
@@ -19823,7 +19829,7 @@ IL_00f9_2:
 
 IL_011e_2:
 					{
-						//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:163>
+						//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:172>
 						bool L_55;
 						L_55 = Enumerator_MoveNext_m4235C59F7CDFCADA64416F44D70922B6B08F7F8C((&V_10), Enumerator_MoveNext_m4235C59F7CDFCADA64416F44D70922B6B08F7F8C_RuntimeMethod_var);
 						if (L_55)
@@ -19832,7 +19838,7 @@ IL_011e_2:
 						}
 					}
 					{
-						goto IL_0255_1;
+						goto IL_0275_1;
 					}
 				}
 				catch(Il2CppExceptionWrapper& e)
@@ -19843,7 +19849,7 @@ IL_011e_2:
 
 IL_013a_1:
 			{
-				//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:174>
+				//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:183>
 				WordValidator_t0FC7E088593716BE97A671FBE4A3B870B7C72FA2* L_56 = __this->___validator;
 				String_t* L_57 = V_8;
 				NullCheck(L_56);
@@ -19851,54 +19857,80 @@ IL_013a_1:
 				L_58 = WordValidator_CheckWord_m55775AC32D645FFE2013D64CD40BE1D344CE718E(L_56, L_57, NULL);
 				if (!L_58)
 				{
-					goto IL_01fb_1;
+					goto IL_021b_1;
 				}
 			}
 			{
-				//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:176>
+				//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:185>
 				String_t* L_59 = V_8;
 				String_t* L_60;
 				L_60 = String_Concat_m9E3155FB84015C823606188F53B47CB44C444991(_stringLiteralA02D0A7615CA3C2CAA7E174375A3C7D2637015AD, L_59, NULL);
 				il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 				Debug_Log_m87A9A3C761FF5C43ED8A53B16190A53D08F818BB(L_60, NULL);
-				//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:178>
+				//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:187>
 				String_t* L_61 = V_8;
 				NullCheck(L_61);
 				int32_t L_62;
 				L_62 = String_get_Length_m42625D67623FA5CC7A44D47425CE86FB946542D2_inline(L_61, NULL);
 				V_12 = L_62;
-				//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:179>
+				//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:189>
 				ScoreManager_t86D4A06D4B38717B8C529883F37DA25BA5750F39* L_63 = __this->___scoreManager;
 				il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 				bool L_64;
 				L_64 = Object_op_Inequality_mD0BE578448EAA61948F25C32F8DD55AB1F778602(L_63, (Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C*)NULL, NULL);
 				if (!L_64)
 				{
-					goto IL_0181_1;
+					goto IL_01a1_1;
 				}
 			}
 			{
-				//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:180>
-				ScoreManager_t86D4A06D4B38717B8C529883F37DA25BA5750F39* L_65 = __this->___scoreManager;
-				int32_t L_66 = V_12;
-				NullCheck(L_65);
-				ScoreManager_AddPlayer1Score_m1FB7C03FCC00B3EA1220FA752ADE9077571CC9B5(L_65, L_66, NULL);
+				//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:191>
+				int32_t L_65 = __this->___playerType;
+				if (L_65)
+				{
+					goto IL_018b_1;
+				}
+			}
+			{
+				//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:192>
+				ScoreManager_t86D4A06D4B38717B8C529883F37DA25BA5750F39* L_66 = __this->___scoreManager;
+				int32_t L_67 = V_12;
+				NullCheck(L_66);
+				ScoreManager_AddPlayer1Score_m1FB7C03FCC00B3EA1220FA752ADE9077571CC9B5(L_66, L_67, NULL);
+				goto IL_01a1_1;
 			}
 
-IL_0181_1:
+IL_018b_1:
 			{
-				//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:182>
-				List_1_t83778CDC4C8C3A5FD32A661A4D241173450265A1* L_67 = V_5;
-				NullCheck(L_67);
-				Enumerator_t6735A01E8624C9A5B4DA2461922D3D4CEF85DFDA L_68;
-				L_68 = List_1_GetEnumerator_m4CAFCF88E93A60F40667EE8678F5611B792FB2AC(L_67, List_1_GetEnumerator_m4CAFCF88E93A60F40667EE8678F5611B792FB2AC_RuntimeMethod_var);
-				V_10 = L_68;
+				//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:193>
+				int32_t L_68 = __this->___playerType;
+				if ((!(((uint32_t)L_68) == ((uint32_t)1))))
+				{
+					goto IL_01a1_1;
+				}
+			}
+			{
+				//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:194>
+				ScoreManager_t86D4A06D4B38717B8C529883F37DA25BA5750F39* L_69 = __this->___scoreManager;
+				int32_t L_70 = V_12;
+				NullCheck(L_69);
+				ScoreManager_AddPlayer2Score_m29E7EB1290EF76096CB04DA3F35B4844E821D547(L_69, L_70, NULL);
+			}
+
+IL_01a1_1:
+			{
+				//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:197>
+				List_1_t83778CDC4C8C3A5FD32A661A4D241173450265A1* L_71 = V_5;
+				NullCheck(L_71);
+				Enumerator_t6735A01E8624C9A5B4DA2461922D3D4CEF85DFDA L_72;
+				L_72 = List_1_GetEnumerator_m4CAFCF88E93A60F40667EE8678F5611B792FB2AC(L_71, List_1_GetEnumerator_m4CAFCF88E93A60F40667EE8678F5611B792FB2AC_RuntimeMethod_var);
+				V_10 = L_72;
 			}
 			{
 				auto __finallyBlock = il2cpp::utils::Finally([&]
 				{
 
-FINALLY_01ed_1:
+FINALLY_020d_1:
 					{
 						Enumerator_Dispose_m80E5ECA6220ADD00B39A97F258033B75C2A474BC((&V_10), Enumerator_Dispose_m80E5ECA6220ADD00B39A97F258033B75C2A474BC_RuntimeMethod_var);
 						return;
@@ -19907,87 +19939,87 @@ FINALLY_01ed_1:
 				try
 				{
 					{
-						goto IL_01e2_2;
+						goto IL_0202_2;
 					}
 
-IL_018c_2:
+IL_01ac_2:
 					{
-						//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:182>
-						LetterTile_tB20E0D5265E6DEC4F697C65EBC185582BA0E3541* L_69;
-						L_69 = Enumerator_get_Current_mAE7C9841355F6D3416F927D57980DB66AFC65E17_inline((&V_10), Enumerator_get_Current_mAE7C9841355F6D3416F927D57980DB66AFC65E17_RuntimeMethod_var);
-						V_13 = L_69;
-						//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:184>
-						TableSnapZone_t98DB6E46409D9D63B767218E4B11C273A4015EA7* L_70 = __this->___tableZone;
+						//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:197>
+						LetterTile_tB20E0D5265E6DEC4F697C65EBC185582BA0E3541* L_73;
+						L_73 = Enumerator_get_Current_mAE7C9841355F6D3416F927D57980DB66AFC65E17_inline((&V_10), Enumerator_get_Current_mAE7C9841355F6D3416F927D57980DB66AFC65E17_RuntimeMethod_var);
+						V_13 = L_73;
+						//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:199>
+						TableSnapZone_t98DB6E46409D9D63B767218E4B11C273A4015EA7* L_74 = __this->___tableZone;
 						il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
-						bool L_71;
-						L_71 = Object_op_Inequality_mD0BE578448EAA61948F25C32F8DD55AB1F778602(L_70, (Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C*)NULL, NULL);
-						if (!L_71)
-						{
-							goto IL_01b5_2;
-						}
-					}
-					{
-						//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:185>
-						TableSnapZone_t98DB6E46409D9D63B767218E4B11C273A4015EA7* L_72 = __this->___tableZone;
-						LetterTile_tB20E0D5265E6DEC4F697C65EBC185582BA0E3541* L_73 = V_13;
-						NullCheck(L_73);
-						Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_74;
-						L_74 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(L_73, NULL);
-						NullCheck(L_72);
-						TableSnapZone_Unmark_m0F25F968ECCA4B654D5CD8AA73CAF3CD2317FAF2(L_72, L_74, NULL);
-					}
-
-IL_01b5_2:
-					{
-						//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:187>
-						LetterTile_tB20E0D5265E6DEC4F697C65EBC185582BA0E3541* L_75 = V_13;
-						NullCheck(L_75);
-						GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_76;
-						L_76 = Component_get_gameObject_m57AEFBB14DB39EC476F740BA000E170355DE691B(L_75, NULL);
-						NullCheck(L_76);
-						SpawnableObject_tB01492418378D7AE527A7C2936955B071EC7B7FA* L_77;
-						L_77 = GameObject_GetComponent_TisSpawnableObject_tB01492418378D7AE527A7C2936955B071EC7B7FA_mF488A3B736C32806FEA5E7A9096D267180B8048F(L_76, GameObject_GetComponent_TisSpawnableObject_tB01492418378D7AE527A7C2936955B071EC7B7FA_mF488A3B736C32806FEA5E7A9096D267180B8048F_RuntimeMethod_var);
-						V_14 = L_77;
-						//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:188>
-						SpawnableObject_tB01492418378D7AE527A7C2936955B071EC7B7FA* L_78 = V_14;
-						il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
-						bool L_79;
-						L_79 = Object_op_Inequality_mD0BE578448EAA61948F25C32F8DD55AB1F778602(L_78, (Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C*)NULL, NULL);
-						if (!L_79)
+						bool L_75;
+						L_75 = Object_op_Inequality_mD0BE578448EAA61948F25C32F8DD55AB1F778602(L_74, (Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C*)NULL, NULL);
+						if (!L_75)
 						{
 							goto IL_01d5_2;
 						}
 					}
 					{
-						//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:190>
-						SpawnableObject_tB01492418378D7AE527A7C2936955B071EC7B7FA* L_80 = V_14;
-						NullCheck(L_80);
-						SpawnableObject_BroadcastActiveSelf_m22C0FF174127BC6D81FCD930EB197B5E77C95CA4(L_80, (bool)0, NULL);
+						//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:200>
+						TableSnapZone_t98DB6E46409D9D63B767218E4B11C273A4015EA7* L_76 = __this->___tableZone;
+						LetterTile_tB20E0D5265E6DEC4F697C65EBC185582BA0E3541* L_77 = V_13;
+						NullCheck(L_77);
+						Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_78;
+						L_78 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(L_77, NULL);
+						NullCheck(L_76);
+						TableSnapZone_Unmark_m0F25F968ECCA4B654D5CD8AA73CAF3CD2317FAF2(L_76, L_78, NULL);
 					}
 
 IL_01d5_2:
 					{
-						//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:193>
-						LetterTile_tB20E0D5265E6DEC4F697C65EBC185582BA0E3541* L_81 = V_13;
-						NullCheck(L_81);
-						GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_82;
-						L_82 = Component_get_gameObject_m57AEFBB14DB39EC476F740BA000E170355DE691B(L_81, NULL);
-						NullCheck(L_82);
-						GameObject_SetActive_m638E92E1E75E519E5B24CF150B08CA8E0CDFAB92(L_82, (bool)0, NULL);
-					}
-
-IL_01e2_2:
-					{
-						//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:182>
+						//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:202>
+						LetterTile_tB20E0D5265E6DEC4F697C65EBC185582BA0E3541* L_79 = V_13;
+						NullCheck(L_79);
+						GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_80;
+						L_80 = Component_get_gameObject_m57AEFBB14DB39EC476F740BA000E170355DE691B(L_79, NULL);
+						NullCheck(L_80);
+						SpawnableObject_tB01492418378D7AE527A7C2936955B071EC7B7FA* L_81;
+						L_81 = GameObject_GetComponent_TisSpawnableObject_tB01492418378D7AE527A7C2936955B071EC7B7FA_mF488A3B736C32806FEA5E7A9096D267180B8048F(L_80, GameObject_GetComponent_TisSpawnableObject_tB01492418378D7AE527A7C2936955B071EC7B7FA_mF488A3B736C32806FEA5E7A9096D267180B8048F_RuntimeMethod_var);
+						V_14 = L_81;
+						//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:203>
+						SpawnableObject_tB01492418378D7AE527A7C2936955B071EC7B7FA* L_82 = V_14;
+						il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 						bool L_83;
-						L_83 = Enumerator_MoveNext_m4235C59F7CDFCADA64416F44D70922B6B08F7F8C((&V_10), Enumerator_MoveNext_m4235C59F7CDFCADA64416F44D70922B6B08F7F8C_RuntimeMethod_var);
-						if (L_83)
+						L_83 = Object_op_Inequality_mD0BE578448EAA61948F25C32F8DD55AB1F778602(L_82, (Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C*)NULL, NULL);
+						if (!L_83)
 						{
-							goto IL_018c_2;
+							goto IL_01f5_2;
 						}
 					}
 					{
-						goto IL_0255_1;
+						//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:205>
+						SpawnableObject_tB01492418378D7AE527A7C2936955B071EC7B7FA* L_84 = V_14;
+						NullCheck(L_84);
+						SpawnableObject_BroadcastActiveSelf_m22C0FF174127BC6D81FCD930EB197B5E77C95CA4(L_84, (bool)0, NULL);
+					}
+
+IL_01f5_2:
+					{
+						//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:208>
+						LetterTile_tB20E0D5265E6DEC4F697C65EBC185582BA0E3541* L_85 = V_13;
+						NullCheck(L_85);
+						GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_86;
+						L_86 = Component_get_gameObject_m57AEFBB14DB39EC476F740BA000E170355DE691B(L_85, NULL);
+						NullCheck(L_86);
+						GameObject_SetActive_m638E92E1E75E519E5B24CF150B08CA8E0CDFAB92(L_86, (bool)0, NULL);
+					}
+
+IL_0202_2:
+					{
+						//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:197>
+						bool L_87;
+						L_87 = Enumerator_MoveNext_m4235C59F7CDFCADA64416F44D70922B6B08F7F8C((&V_10), Enumerator_MoveNext_m4235C59F7CDFCADA64416F44D70922B6B08F7F8C_RuntimeMethod_var);
+						if (L_87)
+						{
+							goto IL_01ac_2;
+						}
+					}
+					{
+						goto IL_0275_1;
 					}
 				}
 				catch(Il2CppExceptionWrapper& e)
@@ -19996,26 +20028,26 @@ IL_01e2_2:
 				}
 			}
 
-IL_01fb_1:
+IL_021b_1:
 			{
-				//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:198>
-				String_t* L_84 = V_8;
-				String_t* L_85;
-				L_85 = String_Concat_m9E3155FB84015C823606188F53B47CB44C444991(_stringLiteral2C29EDA00603EB942176E774B171B57C65ACE9B5, L_84, NULL);
+				//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:213>
+				String_t* L_88 = V_8;
+				String_t* L_89;
+				L_89 = String_Concat_m9E3155FB84015C823606188F53B47CB44C444991(_stringLiteral2C29EDA00603EB942176E774B171B57C65ACE9B5, L_88, NULL);
 				il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
-				Debug_Log_m87A9A3C761FF5C43ED8A53B16190A53D08F818BB(L_85, NULL);
-				//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:200>
-				List_1_t83778CDC4C8C3A5FD32A661A4D241173450265A1* L_86 = V_5;
-				NullCheck(L_86);
-				Enumerator_t6735A01E8624C9A5B4DA2461922D3D4CEF85DFDA L_87;
-				L_87 = List_1_GetEnumerator_m4CAFCF88E93A60F40667EE8678F5611B792FB2AC(L_86, List_1_GetEnumerator_m4CAFCF88E93A60F40667EE8678F5611B792FB2AC_RuntimeMethod_var);
-				V_10 = L_87;
+				Debug_Log_m87A9A3C761FF5C43ED8A53B16190A53D08F818BB(L_89, NULL);
+				//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:215>
+				List_1_t83778CDC4C8C3A5FD32A661A4D241173450265A1* L_90 = V_5;
+				NullCheck(L_90);
+				Enumerator_t6735A01E8624C9A5B4DA2461922D3D4CEF85DFDA L_91;
+				L_91 = List_1_GetEnumerator_m4CAFCF88E93A60F40667EE8678F5611B792FB2AC(L_90, List_1_GetEnumerator_m4CAFCF88E93A60F40667EE8678F5611B792FB2AC_RuntimeMethod_var);
+				V_10 = L_91;
 			}
 			{
 				auto __finallyBlock = il2cpp::utils::Finally([&]
 				{
 
-FINALLY_0247_1:
+FINALLY_0267_1:
 					{
 						Enumerator_Dispose_m80E5ECA6220ADD00B39A97F258033B75C2A474BC((&V_10), Enumerator_Dispose_m80E5ECA6220ADD00B39A97F258033B75C2A474BC_RuntimeMethod_var);
 						return;
@@ -20024,52 +20056,52 @@ FINALLY_0247_1:
 				try
 				{
 					{
-						goto IL_023c_2;
+						goto IL_025c_2;
 					}
 
-IL_0217_2:
+IL_0237_2:
 					{
-						//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:200>
-						LetterTile_tB20E0D5265E6DEC4F697C65EBC185582BA0E3541* L_88;
-						L_88 = Enumerator_get_Current_mAE7C9841355F6D3416F927D57980DB66AFC65E17_inline((&V_10), Enumerator_get_Current_mAE7C9841355F6D3416F927D57980DB66AFC65E17_RuntimeMethod_var);
-						//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:202>
-						LetterTile_tB20E0D5265E6DEC4F697C65EBC185582BA0E3541* L_89 = L_88;
-						NullCheck(L_89);
-						LetterTile_SetInvalidRed_m56D5F3A46FDF8915D934DC5488C6AE2F9CA800AD(L_89, NULL);
-						//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:204>
-						NullCheck(L_89);
-						SpawnableObject_tB01492418378D7AE527A7C2936955B071EC7B7FA* L_90;
-						L_90 = Component_GetComponent_TisSpawnableObject_tB01492418378D7AE527A7C2936955B071EC7B7FA_m93A5752467942CC4B1FA17C2235BB977DFF1B7FB(L_89, Component_GetComponent_TisSpawnableObject_tB01492418378D7AE527A7C2936955B071EC7B7FA_m93A5752467942CC4B1FA17C2235BB977DFF1B7FB_RuntimeMethod_var);
-						V_15 = L_90;
-						//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:205>
-						SpawnableObject_tB01492418378D7AE527A7C2936955B071EC7B7FA* L_91 = V_15;
-						il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
-						bool L_92;
-						L_92 = Object_op_Inequality_mD0BE578448EAA61948F25C32F8DD55AB1F778602(L_91, (Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C*)NULL, NULL);
-						if (!L_92)
-						{
-							goto IL_023c_2;
-						}
-					}
-					{
-						//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:207>
-						SpawnableObject_tB01492418378D7AE527A7C2936955B071EC7B7FA* L_93 = V_15;
+						//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:215>
+						LetterTile_tB20E0D5265E6DEC4F697C65EBC185582BA0E3541* L_92;
+						L_92 = Enumerator_get_Current_mAE7C9841355F6D3416F927D57980DB66AFC65E17_inline((&V_10), Enumerator_get_Current_mAE7C9841355F6D3416F927D57980DB66AFC65E17_RuntimeMethod_var);
+						//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:217>
+						LetterTile_tB20E0D5265E6DEC4F697C65EBC185582BA0E3541* L_93 = L_92;
 						NullCheck(L_93);
-						SpawnableObject_BroadcastPosAndRot_m6BD5E105513D3C1045495CE0D624BA0AA827CE44(L_93, NULL);
-					}
-
-IL_023c_2:
-					{
-						//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:200>
-						bool L_94;
-						L_94 = Enumerator_MoveNext_m4235C59F7CDFCADA64416F44D70922B6B08F7F8C((&V_10), Enumerator_MoveNext_m4235C59F7CDFCADA64416F44D70922B6B08F7F8C_RuntimeMethod_var);
-						if (L_94)
+						LetterTile_SetInvalidRed_m56D5F3A46FDF8915D934DC5488C6AE2F9CA800AD(L_93, NULL);
+						//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:219>
+						NullCheck(L_93);
+						SpawnableObject_tB01492418378D7AE527A7C2936955B071EC7B7FA* L_94;
+						L_94 = Component_GetComponent_TisSpawnableObject_tB01492418378D7AE527A7C2936955B071EC7B7FA_m93A5752467942CC4B1FA17C2235BB977DFF1B7FB(L_93, Component_GetComponent_TisSpawnableObject_tB01492418378D7AE527A7C2936955B071EC7B7FA_m93A5752467942CC4B1FA17C2235BB977DFF1B7FB_RuntimeMethod_var);
+						V_15 = L_94;
+						//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:220>
+						SpawnableObject_tB01492418378D7AE527A7C2936955B071EC7B7FA* L_95 = V_15;
+						il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
+						bool L_96;
+						L_96 = Object_op_Inequality_mD0BE578448EAA61948F25C32F8DD55AB1F778602(L_95, (Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C*)NULL, NULL);
+						if (!L_96)
 						{
-							goto IL_0217_2;
+							goto IL_025c_2;
 						}
 					}
 					{
-						goto IL_0255_1;
+						//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:222>
+						SpawnableObject_tB01492418378D7AE527A7C2936955B071EC7B7FA* L_97 = V_15;
+						NullCheck(L_97);
+						SpawnableObject_BroadcastPosAndRot_m6BD5E105513D3C1045495CE0D624BA0AA827CE44(L_97, NULL);
+					}
+
+IL_025c_2:
+					{
+						//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:215>
+						bool L_98;
+						L_98 = Enumerator_MoveNext_m4235C59F7CDFCADA64416F44D70922B6B08F7F8C((&V_10), Enumerator_MoveNext_m4235C59F7CDFCADA64416F44D70922B6B08F7F8C_RuntimeMethod_var);
+						if (L_98)
+						{
+							goto IL_0237_2;
+						}
+					}
+					{
+						goto IL_0275_1;
 					}
 				}
 				catch(Il2CppExceptionWrapper& e)
@@ -20078,18 +20110,18 @@ IL_023c_2:
 				}
 			}
 
-IL_0255_1:
+IL_0275_1:
 			{
-				//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:130>
-				bool L_95;
-				L_95 = Enumerator_MoveNext_m624B713474E43DF4B1CA51521EC8296C0B7CE08C((&V_0), Enumerator_MoveNext_m624B713474E43DF4B1CA51521EC8296C0B7CE08C_RuntimeMethod_var);
-				if (L_95)
+				//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:139>
+				bool L_99;
+				L_99 = Enumerator_MoveNext_m624B713474E43DF4B1CA51521EC8296C0B7CE08C((&V_0), Enumerator_MoveNext_m624B713474E43DF4B1CA51521EC8296C0B7CE08C_RuntimeMethod_var);
+				if (L_99)
 				{
 					goto IL_000c_1;
 				}
 			}
 			{
-				goto IL_0271;
+				goto IL_0291;
 			}
 		}
 		catch(Il2CppExceptionWrapper& e)
@@ -20098,9 +20130,9 @@ IL_0255_1:
 		}
 	}
 
-IL_0271:
+IL_0291:
 	{
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:212>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:227>
 		return;
 	}
 }
@@ -20108,18 +20140,26 @@ IL_0271:
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void WordScanManager__ctor_m0604227BA0D14F729230853480C2C8997F132AC7 (WordScanManager_t5DFA8AA7ED2E7C3224B27D3CA0955AC965052C11* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:15>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:24>
 		__this->___allowHorizontal = (bool)1;
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:17>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:26>
 		__this->___minWordLength = 2;
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:18>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:27>
 		__this->___maxHeightAboveTable = (0.0500000007f);
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:19>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:28>
 		__this->___maxHorizontalOffsetToCellCenter = (0.0299999993f);
 		MonoBehaviour__ctor_m592DB0105CA0BC97AA1C5F4AD27B12D68A3B7C1E(__this, NULL);
 		return;
 	}
 }
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
 #ifdef __clang__
 #pragma clang diagnostic pop
 #endif
@@ -20154,10 +20194,10 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec__ctor_mEA6CB45D314E4289800540F99
 	}
 }
 // Method Definition Index: 85966
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* U3CU3Ec_U3CScanDirectionU3Eb__13_0_m3A4B1ADB929403436F4428F1735142FF4822DA16 (U3CU3Ec_t3022502319866C96FEA49E8F5B080A1E31507577* __this, LetterTile_tB20E0D5265E6DEC4F697C65EBC185582BA0E3541* ___0_t, const RuntimeMethod* method) 
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* U3CU3Ec_U3CScanDirectionU3Eb__15_0_m04E7E89D7C02E490A6B09753FE6A530B31E8D0F0 (U3CU3Ec_t3022502319866C96FEA49E8F5B080A1E31507577* __this, LetterTile_tB20E0D5265E6DEC4F697C65EBC185582BA0E3541* ___0_t, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:157>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:166>
 		LetterTile_tB20E0D5265E6DEC4F697C65EBC185582BA0E3541* L_0 = ___0_t;
 		NullCheck(L_0);
 		String_t* L_1;
