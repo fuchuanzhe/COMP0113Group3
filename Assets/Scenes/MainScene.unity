@@ -1503,7 +1503,7 @@ MonoBehaviour:
   spawnOffset: 0.02
   throwSpeed: 0.8
   addRigidbodyIfMissing: 1
-  clip: {fileID: 0}
+  clip: {fileID: 8300000, guid: d2e6c160f65894821a88cff5cf0ae045, type: 3}
 --- !u!114 &75423323
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2069,7 +2069,7 @@ MonoBehaviour:
   spawnOffset: 0.02
   throwSpeed: 0.8
   addRigidbodyIfMissing: 1
-  clip: {fileID: 0}
+  clip: {fileID: 8300000, guid: d2e6c160f65894821a88cff5cf0ae045, type: 3}
 --- !u!114 &97965531
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2421,7 +2421,7 @@ MonoBehaviour:
   spawnOffset: 0.02
   throwSpeed: 0.8
   addRigidbodyIfMissing: 1
-  clip: {fileID: 0}
+  clip: {fileID: 8300000, guid: d2e6c160f65894821a88cff5cf0ae045, type: 3}
 --- !u!114 &103240312
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2583,6 +2583,135 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!1 &105052436
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 105052438}
+  - component: {fileID: 105052437}
+  m_Layer: 0
+  m_Name: BGM_Manager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!82 &105052437
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 105052436}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_Resource: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 0.2
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 50
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!4 &105052438
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 105052436}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1.91068, y: 1.03677, z: -3.50212}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &105940333
 GameObject:
   m_ObjectHideFlags: 0
@@ -2833,7 +2962,7 @@ MonoBehaviour:
   spawnOffset: 0.02
   throwSpeed: 0.8
   addRigidbodyIfMissing: 1
-  clip: {fileID: 0}
+  clip: {fileID: 8300000, guid: d2e6c160f65894821a88cff5cf0ae045, type: 3}
 --- !u!114 &125167893
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3333,6 +3462,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DualTearObject
   tearDistance: 0.35
+  tearSound: {fileID: 8300000, guid: d2e6c160f65894821a88cff5cf0ae045, type: 3}
+  soundVolume: 1
 --- !u!114 &158451486
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3640,7 +3771,7 @@ MonoBehaviour:
   spawnOffset: 0.02
   throwSpeed: 0.8
   addRigidbodyIfMissing: 1
-  clip: {fileID: 0}
+  clip: {fileID: 8300000, guid: d2e6c160f65894821a88cff5cf0ae045, type: 3}
 --- !u!114 &167861968
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3932,7 +4063,7 @@ MonoBehaviour:
   spawnOffset: 0.02
   throwSpeed: 0.8
   addRigidbodyIfMissing: 1
-  clip: {fileID: 0}
+  clip: {fileID: 8300000, guid: d2e6c160f65894821a88cff5cf0ae045, type: 3}
 --- !u!114 &177468099
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4267,7 +4398,7 @@ MonoBehaviour:
   spawnOffset: 0.02
   throwSpeed: 0.8
   addRigidbodyIfMissing: 1
-  clip: {fileID: 0}
+  clip: {fileID: 8300000, guid: d2e6c160f65894821a88cff5cf0ae045, type: 3}
 --- !u!114 &198360824
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4483,6 +4614,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DualTearObject
   tearDistance: 0.35
+  tearSound: {fileID: 8300000, guid: d2e6c160f65894821a88cff5cf0ae045, type: 3}
+  soundVolume: 1
 --- !u!114 &204654045
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4724,6 +4857,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DualTearObject
   tearDistance: 0.35
+  tearSound: {fileID: 8300000, guid: d2e6c160f65894821a88cff5cf0ae045, type: 3}
+  soundVolume: 1
 --- !u!114 &211879953
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5896,7 +6031,7 @@ MonoBehaviour:
   spawnOffset: 0.02
   throwSpeed: 0.8
   addRigidbodyIfMissing: 1
-  clip: {fileID: 0}
+  clip: {fileID: 8300000, guid: d2e6c160f65894821a88cff5cf0ae045, type: 3}
 --- !u!114 &252529544
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6189,7 +6324,7 @@ MonoBehaviour:
   spawnOffset: 0.02
   throwSpeed: 0.8
   addRigidbodyIfMissing: 1
-  clip: {fileID: 0}
+  clip: {fileID: 8300000, guid: d2e6c160f65894821a88cff5cf0ae045, type: 3}
 --- !u!114 &263803419
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6998,7 +7133,7 @@ MonoBehaviour:
   spawnOffset: 0.02
   throwSpeed: 0.8
   addRigidbodyIfMissing: 1
-  clip: {fileID: 0}
+  clip: {fileID: 8300000, guid: d2e6c160f65894821a88cff5cf0ae045, type: 3}
 --- !u!114 &316978045
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7279,7 +7414,7 @@ MonoBehaviour:
   spawnOffset: 0.02
   throwSpeed: 0.8
   addRigidbodyIfMissing: 1
-  clip: {fileID: 0}
+  clip: {fileID: 8300000, guid: d2e6c160f65894821a88cff5cf0ae045, type: 3}
 --- !u!114 &339476272
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8323,7 +8458,7 @@ MonoBehaviour:
   spawnOffset: 0.02
   throwSpeed: 0.8
   addRigidbodyIfMissing: 1
-  clip: {fileID: 0}
+  clip: {fileID: 8300000, guid: d2e6c160f65894821a88cff5cf0ae045, type: 3}
 --- !u!1 &380020978
 GameObject:
   m_ObjectHideFlags: 0
@@ -8458,7 +8593,7 @@ MonoBehaviour:
   spawnOffset: 0.02
   throwSpeed: 0.8
   addRigidbodyIfMissing: 1
-  clip: {fileID: 0}
+  clip: {fileID: 8300000, guid: d2e6c160f65894821a88cff5cf0ae045, type: 3}
 --- !u!114 &390187414
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8799,6 +8934,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DualTearObject
   tearDistance: 0.35
+  tearSound: {fileID: 8300000, guid: d2e6c160f65894821a88cff5cf0ae045, type: 3}
+  soundVolume: 1
 --- !u!114 &396210614
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9892,7 +10029,7 @@ MonoBehaviour:
   spawnOffset: 0.02
   throwSpeed: 0.8
   addRigidbodyIfMissing: 1
-  clip: {fileID: 0}
+  clip: {fileID: 8300000, guid: d2e6c160f65894821a88cff5cf0ae045, type: 3}
 --- !u!114 &420617562
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10244,7 +10381,7 @@ MonoBehaviour:
   spawnOffset: 0.02
   throwSpeed: 0.8
   addRigidbodyIfMissing: 1
-  clip: {fileID: 0}
+  clip: {fileID: 8300000, guid: d2e6c160f65894821a88cff5cf0ae045, type: 3}
 --- !u!114 &427431515
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10904,6 +11041,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DualTearObject
   tearDistance: 0.35
+  tearSound: {fileID: 8300000, guid: d2e6c160f65894821a88cff5cf0ae045, type: 3}
+  soundVolume: 1
 --- !u!114 &465786243
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11191,6 +11330,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DualTearObject
   tearDistance: 0.35
+  tearSound: {fileID: 8300000, guid: d2e6c160f65894821a88cff5cf0ae045, type: 3}
+  soundVolume: 1
 --- !u!114 &470620192
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11817,7 +11958,7 @@ MonoBehaviour:
   spawnOffset: 0.02
   throwSpeed: 0.8
   addRigidbodyIfMissing: 1
-  clip: {fileID: 0}
+  clip: {fileID: 8300000, guid: d2e6c160f65894821a88cff5cf0ae045, type: 3}
 --- !u!114 &489348206
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12179,7 +12320,7 @@ MonoBehaviour:
   spawnOffset: 0.02
   throwSpeed: 0.8
   addRigidbodyIfMissing: 1
-  clip: {fileID: 0}
+  clip: {fileID: 8300000, guid: d2e6c160f65894821a88cff5cf0ae045, type: 3}
 --- !u!114 &499402349
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12682,7 +12823,7 @@ MonoBehaviour:
   spawnOffset: 0.02
   throwSpeed: 0.8
   addRigidbodyIfMissing: 1
-  clip: {fileID: 0}
+  clip: {fileID: 8300000, guid: d2e6c160f65894821a88cff5cf0ae045, type: 3}
 --- !u!114 &553401313
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13190,6 +13331,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3302545406050912175, guid: 877888606b4c74a8e9ef7ac1acdbfd54, type: 3}
+      propertyPath: smashSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 26122df41f6d23b4fb51d132b9b5f214, type: 3}
     - target: {fileID: 7609904766593863396, guid: 877888606b4c74a8e9ef7ac1acdbfd54, type: 3}
       propertyPath: m_MovementType
       value: 0
@@ -13542,6 +13687,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DualTearObject
   tearDistance: 0.35
+  tearSound: {fileID: 8300000, guid: d2e6c160f65894821a88cff5cf0ae045, type: 3}
+  soundVolume: 1
 --- !u!114 &573627993
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13924,7 +14071,7 @@ MonoBehaviour:
   spawnOffset: 0.02
   throwSpeed: 0.8
   addRigidbodyIfMissing: 1
-  clip: {fileID: 0}
+  clip: {fileID: 8300000, guid: d2e6c160f65894821a88cff5cf0ae045, type: 3}
 --- !u!114 &583761299
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13963,7 +14110,7 @@ MonoBehaviour:
   spawnOffset: 0.02
   throwSpeed: 0.8
   addRigidbodyIfMissing: 1
-  clip: {fileID: 0}
+  clip: {fileID: 8300000, guid: d2e6c160f65894821a88cff5cf0ae045, type: 3}
 --- !u!114 &585034487
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14268,6 +14415,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DualTearObject
   tearDistance: 0.35
+  tearSound: {fileID: 8300000, guid: d2e6c160f65894821a88cff5cf0ae045, type: 3}
+  soundVolume: 1
 --- !u!114 &593039358
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15002,7 +15151,7 @@ MonoBehaviour:
   spawnOffset: 0.02
   throwSpeed: 0.8
   addRigidbodyIfMissing: 1
-  clip: {fileID: 0}
+  clip: {fileID: 8300000, guid: d2e6c160f65894821a88cff5cf0ae045, type: 3}
 --- !u!1001 &598439039
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -15269,7 +15418,7 @@ MonoBehaviour:
   spawnOffset: 0.02
   throwSpeed: 0.8
   addRigidbodyIfMissing: 1
-  clip: {fileID: 0}
+  clip: {fileID: 8300000, guid: d2e6c160f65894821a88cff5cf0ae045, type: 3}
 --- !u!114 &613847473
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15718,6 +15867,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DualTearObject
   tearDistance: 0.35
+  tearSound: {fileID: 8300000, guid: d2e6c160f65894821a88cff5cf0ae045, type: 3}
+  soundVolume: 1
 --- !u!114 &619446255
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15943,6 +16094,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DualTearObject
   tearDistance: 0.35
+  tearSound: {fileID: 8300000, guid: d2e6c160f65894821a88cff5cf0ae045, type: 3}
+  soundVolume: 1
 --- !u!114 &631424750
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16626,6 +16779,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DualTearObject
   tearDistance: 0.35
+  tearSound: {fileID: 8300000, guid: d2e6c160f65894821a88cff5cf0ae045, type: 3}
+  soundVolume: 1
 --- !u!114 &670028521
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16805,6 +16960,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DualTearObject
   tearDistance: 0.35
+  tearSound: {fileID: 8300000, guid: d2e6c160f65894821a88cff5cf0ae045, type: 3}
+  soundVolume: 1
 --- !u!114 &673833222
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17495,6 +17652,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DualTearObject
   tearDistance: 0.35
+  tearSound: {fileID: 8300000, guid: d2e6c160f65894821a88cff5cf0ae045, type: 3}
+  soundVolume: 1
 --- !u!114 &720426313
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17934,7 +18093,7 @@ MonoBehaviour:
   spawnOffset: 0.02
   throwSpeed: 0.8
   addRigidbodyIfMissing: 1
-  clip: {fileID: 0}
+  clip: {fileID: 8300000, guid: d2e6c160f65894821a88cff5cf0ae045, type: 3}
 --- !u!1001 &728493252
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -18065,7 +18224,7 @@ MonoBehaviour:
   spawnOffset: 0.02
   throwSpeed: 0.8
   addRigidbodyIfMissing: 1
-  clip: {fileID: 0}
+  clip: {fileID: 8300000, guid: d2e6c160f65894821a88cff5cf0ae045, type: 3}
 --- !u!114 &728493258
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18373,7 +18532,7 @@ MonoBehaviour:
   spawnOffset: 0.02
   throwSpeed: 0.8
   addRigidbodyIfMissing: 1
-  clip: {fileID: 0}
+  clip: {fileID: 8300000, guid: d2e6c160f65894821a88cff5cf0ae045, type: 3}
 --- !u!114 &728577774
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18675,7 +18834,7 @@ MonoBehaviour:
   spawnOffset: 0.02
   throwSpeed: 0.8
   addRigidbodyIfMissing: 1
-  clip: {fileID: 0}
+  clip: {fileID: 8300000, guid: d2e6c160f65894821a88cff5cf0ae045, type: 3}
 --- !u!114 &751820299
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18894,6 +19053,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DualTearObject
   tearDistance: 0.35
+  tearSound: {fileID: 8300000, guid: d2e6c160f65894821a88cff5cf0ae045, type: 3}
+  soundVolume: 1
 --- !u!114 &768499394
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19169,6 +19330,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DualTearObject
   tearDistance: 0.35
+  tearSound: {fileID: 8300000, guid: d2e6c160f65894821a88cff5cf0ae045, type: 3}
+  soundVolume: 1
 --- !u!114 &770167300
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19572,7 +19735,7 @@ MonoBehaviour:
   spawnOffset: 0.02
   throwSpeed: 0.8
   addRigidbodyIfMissing: 1
-  clip: {fileID: 0}
+  clip: {fileID: 8300000, guid: d2e6c160f65894821a88cff5cf0ae045, type: 3}
 --- !u!114 &810220669
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19876,7 +20039,7 @@ MonoBehaviour:
   spawnOffset: 0.02
   throwSpeed: 0.8
   addRigidbodyIfMissing: 1
-  clip: {fileID: 0}
+  clip: {fileID: 8300000, guid: d2e6c160f65894821a88cff5cf0ae045, type: 3}
 --- !u!114 &816403615
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -20177,7 +20340,7 @@ MonoBehaviour:
   spawnOffset: 0.02
   throwSpeed: 0.8
   addRigidbodyIfMissing: 1
-  clip: {fileID: 0}
+  clip: {fileID: 8300000, guid: d2e6c160f65894821a88cff5cf0ae045, type: 3}
 --- !u!114 &839293979
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -20722,7 +20885,7 @@ MonoBehaviour:
   spawnOffset: 0.02
   throwSpeed: 0.8
   addRigidbodyIfMissing: 1
-  clip: {fileID: 0}
+  clip: {fileID: 8300000, guid: d2e6c160f65894821a88cff5cf0ae045, type: 3}
 --- !u!114 &867055437
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -21030,7 +21193,7 @@ MonoBehaviour:
   spawnOffset: 0.02
   throwSpeed: 0.8
   addRigidbodyIfMissing: 1
-  clip: {fileID: 0}
+  clip: {fileID: 8300000, guid: d2e6c160f65894821a88cff5cf0ae045, type: 3}
 --- !u!114 &869922474
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -21514,7 +21677,7 @@ MonoBehaviour:
   spawnOffset: 0.02
   throwSpeed: 0.8
   addRigidbodyIfMissing: 1
-  clip: {fileID: 0}
+  clip: {fileID: 8300000, guid: d2e6c160f65894821a88cff5cf0ae045, type: 3}
 --- !u!114 &903228308
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -21862,6 +22025,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DualTearObject
   tearDistance: 0.35
+  tearSound: {fileID: 8300000, guid: d2e6c160f65894821a88cff5cf0ae045, type: 3}
+  soundVolume: 1
 --- !u!114 &939221204
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22237,7 +22402,7 @@ MonoBehaviour:
   spawnOffset: 0.02
   throwSpeed: 0.8
   addRigidbodyIfMissing: 1
-  clip: {fileID: 0}
+  clip: {fileID: 8300000, guid: d2e6c160f65894821a88cff5cf0ae045, type: 3}
 --- !u!114 &951162023
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22425,7 +22590,7 @@ MonoBehaviour:
   spawnOffset: 0.02
   throwSpeed: 0.8
   addRigidbodyIfMissing: 1
-  clip: {fileID: 0}
+  clip: {fileID: 8300000, guid: d2e6c160f65894821a88cff5cf0ae045, type: 3}
 --- !u!114 &952109091
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -23300,7 +23465,7 @@ MonoBehaviour:
   spawnOffset: 0.02
   throwSpeed: 0.8
   addRigidbodyIfMissing: 1
-  clip: {fileID: 0}
+  clip: {fileID: 8300000, guid: d2e6c160f65894821a88cff5cf0ae045, type: 3}
 --- !u!114 &984546707
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -23671,7 +23836,7 @@ MonoBehaviour:
   spawnOffset: 0.02
   throwSpeed: 0.8
   addRigidbodyIfMissing: 1
-  clip: {fileID: 0}
+  clip: {fileID: 8300000, guid: d2e6c160f65894821a88cff5cf0ae045, type: 3}
 --- !u!114 &1019094144
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -24173,7 +24338,7 @@ MonoBehaviour:
   spawnOffset: 0.02
   throwSpeed: 0.8
   addRigidbodyIfMissing: 1
-  clip: {fileID: 0}
+  clip: {fileID: 8300000, guid: d2e6c160f65894821a88cff5cf0ae045, type: 3}
 --- !u!114 &1032993609
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -25157,7 +25322,7 @@ MonoBehaviour:
   spawnOffset: 0.02
   throwSpeed: 0.8
   addRigidbodyIfMissing: 1
-  clip: {fileID: 0}
+  clip: {fileID: 8300000, guid: d2e6c160f65894821a88cff5cf0ae045, type: 3}
 --- !u!114 &1082803226
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -25740,7 +25905,7 @@ MonoBehaviour:
   spawnOffset: 0.02
   throwSpeed: 0.8
   addRigidbodyIfMissing: 1
-  clip: {fileID: 0}
+  clip: {fileID: 8300000, guid: d2e6c160f65894821a88cff5cf0ae045, type: 3}
 --- !u!114 &1113469849
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -26386,7 +26551,7 @@ MonoBehaviour:
   spawnOffset: 0.02
   throwSpeed: 0.8
   addRigidbodyIfMissing: 1
-  clip: {fileID: 0}
+  clip: {fileID: 8300000, guid: d2e6c160f65894821a88cff5cf0ae045, type: 3}
 --- !u!114 &1154132409
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -27331,6 +27496,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DualTearObject
   tearDistance: 0.35
+  tearSound: {fileID: 8300000, guid: d2e6c160f65894821a88cff5cf0ae045, type: 3}
+  soundVolume: 1
 --- !u!114 &1177723934
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -28053,6 +28220,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DualTearObject
   tearDistance: 0.35
+  tearSound: {fileID: 8300000, guid: d2e6c160f65894821a88cff5cf0ae045, type: 3}
+  soundVolume: 1
 --- !u!114 &1207377404
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -28236,7 +28405,7 @@ MonoBehaviour:
   spawnOffset: 0.02
   throwSpeed: 0.8
   addRigidbodyIfMissing: 1
-  clip: {fileID: 0}
+  clip: {fileID: 8300000, guid: d2e6c160f65894821a88cff5cf0ae045, type: 3}
 --- !u!114 &1239110615
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -28705,7 +28874,7 @@ MonoBehaviour:
   spawnOffset: 0.02
   throwSpeed: 0.8
   addRigidbodyIfMissing: 1
-  clip: {fileID: 0}
+  clip: {fileID: 8300000, guid: d2e6c160f65894821a88cff5cf0ae045, type: 3}
 --- !u!114 &1272294932
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -28935,6 +29104,10 @@ PrefabInstance:
       propertyPath: m_MatchAttachPosition
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7197500553211369046, guid: 4311400ab1ebc486b933a68aa9f84dde, type: 3}
+      propertyPath: cutSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 318fe9d51e2f2034e90c75e34ec8bbb4, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
@@ -29663,7 +29836,7 @@ MonoBehaviour:
   spawnOffset: 0.02
   throwSpeed: 0.8
   addRigidbodyIfMissing: 1
-  clip: {fileID: 0}
+  clip: {fileID: 8300000, guid: d2e6c160f65894821a88cff5cf0ae045, type: 3}
 --- !u!114 &1330214748
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -30084,7 +30257,7 @@ MonoBehaviour:
   spawnOffset: 0.02
   throwSpeed: 0.8
   addRigidbodyIfMissing: 1
-  clip: {fileID: 0}
+  clip: {fileID: 8300000, guid: d2e6c160f65894821a88cff5cf0ae045, type: 3}
 --- !u!114 &1369447470
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -30388,7 +30561,7 @@ MonoBehaviour:
   spawnOffset: 0.02
   throwSpeed: 0.8
   addRigidbodyIfMissing: 1
-  clip: {fileID: 0}
+  clip: {fileID: 8300000, guid: d2e6c160f65894821a88cff5cf0ae045, type: 3}
 --- !u!114 &1373085338
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -30955,7 +31128,7 @@ MonoBehaviour:
   spawnOffset: 0.02
   throwSpeed: 0.8
   addRigidbodyIfMissing: 1
-  clip: {fileID: 0}
+  clip: {fileID: 8300000, guid: d2e6c160f65894821a88cff5cf0ae045, type: 3}
 --- !u!114 &1378714358
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -31251,6 +31424,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DualTearObject
   tearDistance: 0.35
+  tearSound: {fileID: 8300000, guid: d2e6c160f65894821a88cff5cf0ae045, type: 3}
+  soundVolume: 1
 --- !u!114 &1379261010
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -31573,6 +31748,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DualTearObject
   tearDistance: 0.35
+  tearSound: {fileID: 8300000, guid: d2e6c160f65894821a88cff5cf0ae045, type: 3}
+  soundVolume: 1
 --- !u!114 &1388460500
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -31990,7 +32167,7 @@ MonoBehaviour:
   spawnOffset: 0.02
   throwSpeed: 0.8
   addRigidbodyIfMissing: 1
-  clip: {fileID: 0}
+  clip: {fileID: 8300000, guid: d2e6c160f65894821a88cff5cf0ae045, type: 3}
 --- !u!114 &1408090028
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -32224,6 +32401,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DualTearObject
   tearDistance: 0.35
+  tearSound: {fileID: 8300000, guid: d2e6c160f65894821a88cff5cf0ae045, type: 3}
+  soundVolume: 1
 --- !u!114 &1418168956
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -32638,7 +32817,7 @@ MonoBehaviour:
   spawnOffset: 0.02
   throwSpeed: 0.8
   addRigidbodyIfMissing: 1
-  clip: {fileID: 0}
+  clip: {fileID: 8300000, guid: d2e6c160f65894821a88cff5cf0ae045, type: 3}
 --- !u!114 &1435721190
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -32818,6 +32997,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DualTearObject
   tearDistance: 0.35
+  tearSound: {fileID: 8300000, guid: d2e6c160f65894821a88cff5cf0ae045, type: 3}
+  soundVolume: 1
 --- !u!114 &1440144715
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -33129,6 +33310,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DualTearObject
   tearDistance: 0.35
+  tearSound: {fileID: 8300000, guid: d2e6c160f65894821a88cff5cf0ae045, type: 3}
+  soundVolume: 1
 --- !u!114 &1443487694
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -33618,7 +33801,7 @@ MonoBehaviour:
   spawnOffset: 0.02
   throwSpeed: 0.8
   addRigidbodyIfMissing: 1
-  clip: {fileID: 0}
+  clip: {fileID: 8300000, guid: d2e6c160f65894821a88cff5cf0ae045, type: 3}
 --- !u!114 &1453545830
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -33909,6 +34092,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DualTearObject
   tearDistance: 0.35
+  tearSound: {fileID: 8300000, guid: d2e6c160f65894821a88cff5cf0ae045, type: 3}
+  soundVolume: 1
 --- !u!114 &1456236749
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -34423,6 +34608,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DualTearObject
   tearDistance: 0.35
+  tearSound: {fileID: 8300000, guid: d2e6c160f65894821a88cff5cf0ae045, type: 3}
+  soundVolume: 1
 --- !u!114 &1463718029
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -34874,7 +35061,7 @@ MonoBehaviour:
   spawnOffset: 0.02
   throwSpeed: 0.8
   addRigidbodyIfMissing: 1
-  clip: {fileID: 0}
+  clip: {fileID: 8300000, guid: d2e6c160f65894821a88cff5cf0ae045, type: 3}
 --- !u!1 &1470725805 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -3402772237482145072, guid: 497ae3b59d0c6454e9fd3139236e3c41, type: 3}
@@ -35039,7 +35226,7 @@ MonoBehaviour:
   spawnOffset: 0.02
   throwSpeed: 0.8
   addRigidbodyIfMissing: 1
-  clip: {fileID: 0}
+  clip: {fileID: 8300000, guid: d2e6c160f65894821a88cff5cf0ae045, type: 3}
 --- !u!114 &1479179312
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -35503,7 +35690,7 @@ MonoBehaviour:
   spawnOffset: 0.02
   throwSpeed: 0.8
   addRigidbodyIfMissing: 1
-  clip: {fileID: 0}
+  clip: {fileID: 8300000, guid: d2e6c160f65894821a88cff5cf0ae045, type: 3}
 --- !u!1001 &1489771358
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -35784,7 +35971,7 @@ MonoBehaviour:
   spawnOffset: 0.02
   throwSpeed: 0.8
   addRigidbodyIfMissing: 1
-  clip: {fileID: 0}
+  clip: {fileID: 8300000, guid: d2e6c160f65894821a88cff5cf0ae045, type: 3}
 --- !u!1 &1490870593 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 0a36059215b1c47cab8ae1713ffdbfab, type: 3}
@@ -35811,7 +35998,7 @@ MonoBehaviour:
   spawnOffset: 0.02
   throwSpeed: 0.8
   addRigidbodyIfMissing: 1
-  clip: {fileID: 0}
+  clip: {fileID: 8300000, guid: d2e6c160f65894821a88cff5cf0ae045, type: 3}
 --- !u!114 &1490870595
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -36220,7 +36407,7 @@ MonoBehaviour:
   spawnOffset: 0.02
   throwSpeed: 0.8
   addRigidbodyIfMissing: 1
-  clip: {fileID: 0}
+  clip: {fileID: 8300000, guid: d2e6c160f65894821a88cff5cf0ae045, type: 3}
 --- !u!114 &1497497863
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -37070,7 +37257,7 @@ MonoBehaviour:
   spawnOffset: 0.02
   throwSpeed: 0.8
   addRigidbodyIfMissing: 1
-  clip: {fileID: 0}
+  clip: {fileID: 8300000, guid: d2e6c160f65894821a88cff5cf0ae045, type: 3}
 --- !u!114 &1505774591
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -37450,6 +37637,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DualTearObject
   tearDistance: 0.35
+  tearSound: {fileID: 8300000, guid: d2e6c160f65894821a88cff5cf0ae045, type: 3}
+  soundVolume: 1
 --- !u!114 &1528238011
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -37656,6 +37845,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DualTearObject
   tearDistance: 0.35
+  tearSound: {fileID: 8300000, guid: d2e6c160f65894821a88cff5cf0ae045, type: 3}
+  soundVolume: 1
 --- !u!114 &1530429295
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -38196,7 +38387,7 @@ MonoBehaviour:
   spawnOffset: 0.02
   throwSpeed: 0.8
   addRigidbodyIfMissing: 1
-  clip: {fileID: 0}
+  clip: {fileID: 8300000, guid: d2e6c160f65894821a88cff5cf0ae045, type: 3}
 --- !u!114 &1561412193
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -39381,6 +39572,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DualTearObject
   tearDistance: 0.35
+  tearSound: {fileID: 8300000, guid: d2e6c160f65894821a88cff5cf0ae045, type: 3}
+  soundVolume: 1
 --- !u!114 &1620465267
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -39568,7 +39761,7 @@ MonoBehaviour:
   spawnOffset: 0.02
   throwSpeed: 0.8
   addRigidbodyIfMissing: 1
-  clip: {fileID: 0}
+  clip: {fileID: 8300000, guid: d2e6c160f65894821a88cff5cf0ae045, type: 3}
 --- !u!114 &1622597663
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -40019,7 +40212,7 @@ MonoBehaviour:
   spawnOffset: 0.02
   throwSpeed: 0.8
   addRigidbodyIfMissing: 1
-  clip: {fileID: 0}
+  clip: {fileID: 8300000, guid: d2e6c160f65894821a88cff5cf0ae045, type: 3}
 --- !u!114 &1648972939
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -40506,7 +40699,7 @@ MonoBehaviour:
   spawnOffset: 0.02
   throwSpeed: 0.8
   addRigidbodyIfMissing: 1
-  clip: {fileID: 0}
+  clip: {fileID: 8300000, guid: d2e6c160f65894821a88cff5cf0ae045, type: 3}
 --- !u!114 &1649764317
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -41911,7 +42104,7 @@ MonoBehaviour:
   spawnOffset: 0.02
   throwSpeed: 0.8
   addRigidbodyIfMissing: 1
-  clip: {fileID: 0}
+  clip: {fileID: 8300000, guid: d2e6c160f65894821a88cff5cf0ae045, type: 3}
 --- !u!114 &1721869298
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -42251,7 +42444,7 @@ MonoBehaviour:
   spawnOffset: 0.02
   throwSpeed: 0.8
   addRigidbodyIfMissing: 1
-  clip: {fileID: 0}
+  clip: {fileID: 8300000, guid: d2e6c160f65894821a88cff5cf0ae045, type: 3}
 --- !u!114 &1739895689
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -43156,7 +43349,7 @@ MonoBehaviour:
   spawnOffset: 0.02
   throwSpeed: 0.8
   addRigidbodyIfMissing: 1
-  clip: {fileID: 0}
+  clip: {fileID: 8300000, guid: d2e6c160f65894821a88cff5cf0ae045, type: 3}
 --- !u!114 &1767680554
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -43805,7 +43998,7 @@ MonoBehaviour:
   spawnOffset: 0.02
   throwSpeed: 0.8
   addRigidbodyIfMissing: 1
-  clip: {fileID: 0}
+  clip: {fileID: 8300000, guid: d2e6c160f65894821a88cff5cf0ae045, type: 3}
 --- !u!114 &1782239886
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -43960,7 +44153,7 @@ MonoBehaviour:
   spawnOffset: 0.02
   throwSpeed: 0.8
   addRigidbodyIfMissing: 1
-  clip: {fileID: 0}
+  clip: {fileID: 8300000, guid: d2e6c160f65894821a88cff5cf0ae045, type: 3}
 --- !u!114 &1803249745
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -44280,7 +44473,7 @@ MonoBehaviour:
   spawnOffset: 0.02
   throwSpeed: 0.8
   addRigidbodyIfMissing: 1
-  clip: {fileID: 0}
+  clip: {fileID: 8300000, guid: d2e6c160f65894821a88cff5cf0ae045, type: 3}
 --- !u!114 &1805090727
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -45206,7 +45399,7 @@ MonoBehaviour:
   spawnOffset: 0.02
   throwSpeed: 0.8
   addRigidbodyIfMissing: 1
-  clip: {fileID: 0}
+  clip: {fileID: 8300000, guid: d2e6c160f65894821a88cff5cf0ae045, type: 3}
 --- !u!114 &1829644256
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -45394,7 +45587,7 @@ MonoBehaviour:
   spawnOffset: 0.02
   throwSpeed: 0.8
   addRigidbodyIfMissing: 1
-  clip: {fileID: 0}
+  clip: {fileID: 8300000, guid: d2e6c160f65894821a88cff5cf0ae045, type: 3}
 --- !u!114 &1829814202
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -45876,6 +46069,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DualTearObject
   tearDistance: 0.35
+  tearSound: {fileID: 8300000, guid: d2e6c160f65894821a88cff5cf0ae045, type: 3}
+  soundVolume: 1
 --- !u!114 &1833464233
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -47031,7 +47226,7 @@ MonoBehaviour:
   spawnOffset: 0.02
   throwSpeed: 0.8
   addRigidbodyIfMissing: 1
-  clip: {fileID: 0}
+  clip: {fileID: 8300000, guid: d2e6c160f65894821a88cff5cf0ae045, type: 3}
 --- !u!114 &1852133662
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -47606,7 +47801,7 @@ MonoBehaviour:
   spawnOffset: 0.02
   throwSpeed: 0.8
   addRigidbodyIfMissing: 1
-  clip: {fileID: 0}
+  clip: {fileID: 8300000, guid: d2e6c160f65894821a88cff5cf0ae045, type: 3}
 --- !u!114 &1874012147
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -47943,7 +48138,7 @@ MonoBehaviour:
   spawnOffset: 0.02
   throwSpeed: 0.8
   addRigidbodyIfMissing: 1
-  clip: {fileID: 0}
+  clip: {fileID: 8300000, guid: d2e6c160f65894821a88cff5cf0ae045, type: 3}
 --- !u!114 &1879025677
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -48565,7 +48760,7 @@ MonoBehaviour:
   spawnOffset: 0.02
   throwSpeed: 0.8
   addRigidbodyIfMissing: 1
-  clip: {fileID: 0}
+  clip: {fileID: 8300000, guid: d2e6c160f65894821a88cff5cf0ae045, type: 3}
 --- !u!114 &1917708358
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -49301,7 +49496,7 @@ MonoBehaviour:
   spawnOffset: 0.02
   throwSpeed: 0.8
   addRigidbodyIfMissing: 1
-  clip: {fileID: 0}
+  clip: {fileID: 8300000, guid: d2e6c160f65894821a88cff5cf0ae045, type: 3}
 --- !u!114 &1942415519
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -50711,7 +50906,7 @@ MonoBehaviour:
   spawnOffset: 0.02
   throwSpeed: 0.8
   addRigidbodyIfMissing: 1
-  clip: {fileID: 0}
+  clip: {fileID: 8300000, guid: d2e6c160f65894821a88cff5cf0ae045, type: 3}
 --- !u!114 &2002228643
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -51046,7 +51241,7 @@ MonoBehaviour:
   spawnOffset: 0.02
   throwSpeed: 0.8
   addRigidbodyIfMissing: 1
-  clip: {fileID: 0}
+  clip: {fileID: 8300000, guid: d2e6c160f65894821a88cff5cf0ae045, type: 3}
 --- !u!114 &2012273816
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -51537,7 +51732,7 @@ MonoBehaviour:
   spawnOffset: 0.02
   throwSpeed: 0.8
   addRigidbodyIfMissing: 1
-  clip: {fileID: 0}
+  clip: {fileID: 8300000, guid: d2e6c160f65894821a88cff5cf0ae045, type: 3}
 --- !u!114 &2043249215
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -51729,6 +51924,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DualTearObject
   tearDistance: 0.35
+  tearSound: {fileID: 8300000, guid: d2e6c160f65894821a88cff5cf0ae045, type: 3}
+  soundVolume: 1
 --- !u!114 &2050792908
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -52300,7 +52497,7 @@ MonoBehaviour:
   spawnOffset: 0.02
   throwSpeed: 0.8
   addRigidbodyIfMissing: 1
-  clip: {fileID: 0}
+  clip: {fileID: 8300000, guid: d2e6c160f65894821a88cff5cf0ae045, type: 3}
 --- !u!114 &2061786751
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -52493,7 +52690,7 @@ MonoBehaviour:
   spawnOffset: 0.02
   throwSpeed: 0.8
   addRigidbodyIfMissing: 1
-  clip: {fileID: 0}
+  clip: {fileID: 8300000, guid: d2e6c160f65894821a88cff5cf0ae045, type: 3}
 --- !u!114 &2076731854
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -52890,7 +53087,7 @@ MonoBehaviour:
   spawnOffset: 0.02
   throwSpeed: 0.8
   addRigidbodyIfMissing: 1
-  clip: {fileID: 0}
+  clip: {fileID: 8300000, guid: d2e6c160f65894821a88cff5cf0ae045, type: 3}
 --- !u!114 &2079356453
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -53120,6 +53317,10 @@ PrefabInstance:
       propertyPath: m_MatchAttachPosition
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7197500553211369046, guid: 4311400ab1ebc486b933a68aa9f84dde, type: 3}
+      propertyPath: cutSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 318fe9d51e2f2034e90c75e34ec8bbb4, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
@@ -53254,6 +53455,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DualTearObject
   tearDistance: 0.35
+  tearSound: {fileID: 8300000, guid: d2e6c160f65894821a88cff5cf0ae045, type: 3}
+  soundVolume: 1
 --- !u!114 &2089859306
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -53663,6 +53866,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DualTearObject
   tearDistance: 0.35
+  tearSound: {fileID: 8300000, guid: d2e6c160f65894821a88cff5cf0ae045, type: 3}
+  soundVolume: 1
 --- !u!114 &2103260268
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -54567,7 +54772,7 @@ MonoBehaviour:
   spawnOffset: 0.02
   throwSpeed: 0.8
   addRigidbodyIfMissing: 1
-  clip: {fileID: 0}
+  clip: {fileID: 8300000, guid: d2e6c160f65894821a88cff5cf0ae045, type: 3}
 --- !u!114 &2143563769
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -55076,6 +55281,14 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: 0.06749996
       objectReference: {fileID: 0}
+    - target: {fileID: 2240128228795185484, guid: ce18fb1bfda024936973ca895c2667f2, type: 3}
+      propertyPath: clip
+      value: 
+      objectReference: {fileID: 8300000, guid: d2e6c160f65894821a88cff5cf0ae045, type: 3}
+    - target: {fileID: 4674406736800831676, guid: ce18fb1bfda024936973ca895c2667f2, type: 3}
+      propertyPath: tearSound
+      value: 
+      objectReference: {fileID: 8300000, guid: d2e6c160f65894821a88cff5cf0ae045, type: 3}
     - target: {fileID: 5356468101686502811, guid: ce18fb1bfda024936973ca895c2667f2, type: 3}
       propertyPath: m_Name
       value: WaitingRoom
@@ -55918,3 +56131,4 @@ SceneRoots:
   - {fileID: 1159595213656214967}
   - {fileID: 810784049374784226}
   - {fileID: 8854070618671141854}
+  - {fileID: 105052438}

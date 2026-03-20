@@ -21,6 +21,13 @@ public class HammerSmasher : MonoBehaviour
     public float smashImpulse = 2.0f;          // 给碎片初速度的强度（更像“炸开”）
     public bool impulseAlongVelocity = true;
 
+    // --- 新增：音效设置 ---
+    [Header("Audio")]
+    public AudioClip smashSound;               // 砸中目标时播放的音效
+    [Range(0f, 1f)]
+    public float soundVolume = 1.0f;           // 砸中音效的音量控制
+    // ----------------------
+
     Rigidbody _rb;
     Vector3 _lastHeadPos;
     bool _hasLast;
@@ -103,6 +110,12 @@ public class HammerSmasher : MonoBehaviour
 
             // smash point 用最近点
             Vector3 hitPoint = col.ClosestPoint(center);
+
+            // 新增：在击中点瞬间播放砸击音效
+            if (smashSound != null)
+            {
+                AudioSource.PlayClipAtPoint(smashSound, hitPoint, soundVolume);
+            }
 
             smashable.DoSmash(hitPoint, impulse);
 

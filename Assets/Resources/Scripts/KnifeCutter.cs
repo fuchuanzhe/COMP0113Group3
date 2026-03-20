@@ -29,6 +29,13 @@ public class KnifeCutter : MonoBehaviour
     public float throwSpeed = 1.0f;
     public bool useKnifeForwardForThrow = true;
 
+    // --- 新增：音效设置 ---
+    [Header("Audio")]
+    public AudioClip cutSound;               // 切割成功时播放的音效
+    [Range(0f, 1f)]
+    public float soundVolume = 1.0f;         // 切割音效的音量控制
+    // ----------------------
+
     Rigidbody _rb;
 
     // Fallback speed tracking when rigidbody velocity is not reliable
@@ -214,6 +221,12 @@ public class KnifeCutter : MonoBehaviour
             planeNormal = transform.right;
 
         Vector3 throwDir = useKnifeForwardForThrow ? bladeDir : (pathDir.sqrMagnitude > 1e-6f ? pathDir.normalized : bladeDir);
+
+        // 新增：在切割中心点播放切割音效
+        if (cutSound != null)
+        {
+            AudioSource.PlayClipAtPoint(cutSound, cutCenter, soundVolume);
+        }
 
         cuttable.DoCut(cutCenter, planeNormal, throwDir * throwSpeed);
     }

@@ -19,6 +19,12 @@ public class DualTearObject : MonoBehaviour
     private Vector3? refControllerPos;
     public string word { get; private set; }
 
+    // Audio configuration for the dual tear interaction
+    [Header("Audio")]
+    public AudioClip tearSound;
+    [Range(0f, 1f)]
+    public float soundVolume = 1.0f;
+
     private struct Message
     {
         public string id;
@@ -97,6 +103,12 @@ public class DualTearObject : MonoBehaviour
 
     private void DoTear()
     {
+        // Play sound locally for both clients before the return check
+        if (tearSound != null)
+        {
+            AudioSource.PlayClipAtPoint(tearSound, transform.position, soundVolume);
+        }
+
         // only the client with smaller id spawns
         if(string.Compare(roomClient.Me.uuid, otherId) >= 0) return;
 
