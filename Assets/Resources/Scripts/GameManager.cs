@@ -1,5 +1,6 @@
 using UnityEngine;
 using TMPro;
+using Ubiq.Messaging;
 
 public class GameManager : MonoBehaviour
 {
@@ -20,12 +21,59 @@ public class GameManager : MonoBehaviour
 
     private float remainingTime;
     private bool gameEnded = false;
+    public NetworkContext context;
+
+    private struct Message
+    {
+        public bool startMatch;
+        public bool endMatch;
+        public int winner;
+        public float remainingTime;
+
+        public Message(bool startMatch, bool endMatch, int winner, float remainingTime)
+        {
+            this.startMatch = startMatch;
+            this.endMatch = endMatch;
+            this.winner = winner;
+            this.remainingTime = remainingTime;
+        }
+    }
+    public void ProcessMessage(ReferenceCountedSceneGraphMessage message)
+    {
+        var m = message.FromJson<Message>();
+
+        if (m.startMatch)
+        {
+            if (!matchStarted && !gameEnded)
+            {
+                remainingTime = m.remainingTime;
+                matchStarted = true;
+                UpdateTimerUI();
+                Debug.Log("Match started from network message.");
+            }
+        }
+
+        if (m.endMatch)
+        {
+            if (!gameEnded)
+            {
+                remainingTime = m.remainingTime;
+                matchStarted = false;
+                gameEnded = true;
+                UpdateTimerUI();
+
+                ApplyWinnerResult(m.winner);
+                Debug.Log($"Match ended from network message. Winner = {m.winner}");
+            }
+        }
+    }
 
     void Start()
     {
         remainingTime = matchDuration;
         matchStarted = false;
         gameEnded = false;
+        context = NetworkScene.Register(this);
 
         UpdateTimerUI();
 
@@ -78,34 +126,22 @@ public class GameManager : MonoBehaviour
     void EndGame()
     {
         if (gameEnded) return;
+
         gameEnded = true;
+        matchStarted = false;
 
         int p1 = scoreManager != null ? scoreManager.GetPlayer1Score() : 0;
         int p2 = scoreManager != null ? scoreManager.GetPlayer2Score() : 0;
 
         Debug.Log($"Game Over! Player1={p1}, Player2={p2}");
 
-        // 判定赢家
-        if (p1 > p2)
-        {
-            Debug.Log("Player 1 wins!");
-            if (resultText != null) resultText.text = "Player 1 Wins!";
-            PlayWinnerFireworks(1);
-        }
-        else if (p2 > p1)
-        {
-            Debug.Log("Player 2 wins!");
-            if (resultText != null) resultText.text = "Player 2 Wins!";
-            PlayWinnerFireworks(2);
-        }
-        else
-        {
-            Debug.Log("Draw!");
-            if (resultText != null) resultText.text = "Draw!";
-        }
+        int winner = 0;
+        if (p1 > p2) winner = 1;
+        else if (p2 > p1) winner = 2;
 
-        // 这里先只“结束计分逻辑”
-        // 如果你后面想彻底禁止继续拼词，我们下一步再加
+        ApplyWinnerResult(winner);
+
+        context.SendJson(new Message(false, true, winner, remainingTime));
     }
 
     void PlayWinnerFireworks(int winner)
@@ -129,10 +165,32 @@ public class GameManager : MonoBehaviour
         UpdateTimerUI();
 
         Debug.Log("Match started!");
+
+        context.SendJson(new Message(true, false, 0, remainingTime));
     }
 
     public bool IsGameEnded()
     {
         return gameEnded;
+    }
+    void ApplyWinnerResult(int winner)
+    {
+        if (winner == 1)
+        {
+            Debug.Log("Player 1 wins!");
+            if (resultText != null) resultText.text = "Player 1 Wins!";
+            PlayWinnerFireworks(1);
+        }
+        else if (winner == 2)
+        {
+            Debug.Log("Player 2 wins!");
+            if (resultText != null) resultText.text = "Player 2 Wins!";
+            PlayWinnerFireworks(2);
+        }
+        else
+        {
+            Debug.Log("Draw!");
+            if (resultText != null) resultText.text = "Draw!";
+        }
     }
 }
