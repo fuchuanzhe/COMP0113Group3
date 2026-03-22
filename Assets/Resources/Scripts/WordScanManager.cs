@@ -4,12 +4,13 @@ using UnityEngine;
 
 public class WordScanManager : MonoBehaviour
 {
+    public GameManager gameManager;
+
     public enum PlayerType
     {
         Player1,
         Player2
     }
-
     [Header("Player")]
     public PlayerType playerType;
 
@@ -43,6 +44,12 @@ public class WordScanManager : MonoBehaviour
 
     public void ScanWords()
     {
+        if (gameManager != null && gameManager.IsGameEnded())
+        {
+            Debug.Log("Game already ended. Scan ignored.");
+            return;
+        }
+
         if (tableZone == null || validator == null || sceneObjectValidator == null || detectionZone == null)
         {
             Debug.LogWarning("WordScanManager: references not assigned.");

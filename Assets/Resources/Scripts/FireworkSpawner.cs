@@ -36,12 +36,13 @@ public class FireworkSpawner : MonoBehaviour
 
     public void SpawnFirework()
     {
-        Vector3 pos = new Vector3(
+        Vector3 pos = transform.position + new Vector3(
             Random.Range(xRange.x, xRange.y),
             spawnY,
             Random.Range(zRange.x, zRange.y)
         );
 
+        Debug.Log($"Spawn firework at {pos}");
         Instantiate(fireworkPrefab, pos, Quaternion.identity);
     }
 

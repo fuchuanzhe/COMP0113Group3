@@ -64,4 +64,14 @@ public class ScoreManager : MonoBehaviour
         player2Score = m.player2Score;
         RefreshUI();
     }
+
+    public int GetPlayer1Score()
+    {
+        return player1Score;
+    }
+
+    public int GetPlayer2Score()
+    {
+        return player2Score;
+    }
 }
