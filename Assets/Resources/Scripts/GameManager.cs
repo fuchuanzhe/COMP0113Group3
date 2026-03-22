@@ -7,13 +7,15 @@ public class GameManager : MonoBehaviour
     public ScoreManager scoreManager;
     public FireworkSpawner player1FireworkSpawner;
     public FireworkSpawner player2FireworkSpawner;
+    private bool matchStarted = false;
 
     [Header("Win Conditions")]
     public float matchDuration = 300f;   // 5 minutes
     public int targetScore = 100;
 
     [Header("UI (Optional)")]
-    public TextMeshProUGUI timerText;
+    public TextMeshProUGUI timerTextTeam1;
+    public TextMeshProUGUI timerTextTeam2;
     public TextMeshProUGUI resultText;
 
     private float remainingTime;
@@ -22,11 +24,11 @@ public class GameManager : MonoBehaviour
     void Start()
     {
         remainingTime = matchDuration;
+        matchStarted = false;
+        gameEnded = false;
 
-        if (resultText != null)
-            resultText.text = "";
+        UpdateTimerUI();
 
-        // 开局先不自动放烟花
         if (player1FireworkSpawner != null)
             player1FireworkSpawner.autoSpawn = false;
 
@@ -37,15 +39,14 @@ public class GameManager : MonoBehaviour
     void Update()
     {
         if (gameEnded) return;
+        if (!matchStarted) return;
 
-        // 1. timer countdown
         remainingTime -= Time.deltaTime;
         if (remainingTime < 0f)
             remainingTime = 0f;
 
         UpdateTimerUI();
 
-        // 2. score check
         int p1 = scoreManager != null ? scoreManager.GetPlayer1Score() : 0;
         int p2 = scoreManager != null ? scoreManager.GetPlayer2Score() : 0;
 
@@ -55,7 +56,6 @@ public class GameManager : MonoBehaviour
             return;
         }
 
-        // 3. time up
         if (remainingTime <= 0f)
         {
             EndGame();
@@ -64,12 +64,15 @@ public class GameManager : MonoBehaviour
 
     void UpdateTimerUI()
     {
-        if (timerText == null) return;
-
         int minutes = Mathf.FloorToInt(remainingTime / 60f);
         int seconds = Mathf.FloorToInt(remainingTime % 60f);
+        string timeString = $"Time: {minutes:00}:{seconds:00}";
 
-        timerText.text = $"{minutes:00}:{seconds:00}";
+        if (timerTextTeam1 != null)
+            timerTextTeam1.text = timeString;
+
+        if (timerTextTeam2 != null)
+            timerTextTeam2.text = timeString;
     }
 
     void EndGame()
@@ -115,6 +118,17 @@ public class GameManager : MonoBehaviour
         {
             player2FireworkSpawner.autoSpawn = true;
         }
+    }
+    public void BeginMatch()
+    {
+        if (gameEnded) return;
+        if (matchStarted) return;
+
+        remainingTime = matchDuration;
+        matchStarted = true;
+        UpdateTimerUI();
+
+        Debug.Log("Match started!");
     }
 
     public bool IsGameEnded()

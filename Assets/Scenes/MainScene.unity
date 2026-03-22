@@ -30209,7 +30209,8 @@ MonoBehaviour:
   player2FireworkSpawner: {fileID: 932994645}
   matchDuration: 25
   targetScore: 100
-  timerText: {fileID: 261439564}
+  timerTextTeam1: {fileID: 261439564}
+  timerTextTeam2: {fileID: 781946344}
   resultText: {fileID: 0}
 --- !u!4 &1349452089
 Transform:
@@ -55934,9 +55935,37 @@ PrefabInstance:
       value: WaitingRoom
       objectReference: {fileID: 0}
     - target: {fileID: 5419331889293473514, guid: ce18fb1bfda024936973ca895c2667f2, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5419331889293473514, guid: ce18fb1bfda024936973ca895c2667f2, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5419331889293473514, guid: ce18fb1bfda024936973ca895c2667f2, type: 3}
       propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 380020979}
+    - target: {fileID: 5419331889293473514, guid: ce18fb1bfda024936973ca895c2667f2, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 1349452088}
+    - target: {fileID: 5419331889293473514, guid: ce18fb1bfda024936973ca895c2667f2, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5419331889293473514, guid: ce18fb1bfda024936973ca895c2667f2, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: BeginMatch
+      objectReference: {fileID: 0}
+    - target: {fileID: 5419331889293473514, guid: ce18fb1bfda024936973ca895c2667f2, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: GameManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 5419331889293473514, guid: ce18fb1bfda024936973ca895c2667f2, type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
