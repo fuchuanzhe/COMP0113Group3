@@ -31350,7 +31350,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void VoipPeerConnection_set_PeerU
 		return;
 	}
 }
-// Method Definition Index: 89604
+// Method Definition Index: 89622
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t AudioStats_get_sampleCount_m9540F409D9E4A3A3D2D466AE820C3D4C0CAFF526_inline (AudioStats_t6CC8D8AF39903B6D2FD6932CBD9D0443FCFC975F* __this, const RuntimeMethod* method) 
 {
 	{
@@ -31359,7 +31359,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t AudioStats_get_sampleCoun
 		return L_0;
 	}
 }
-// Method Definition Index: 89606
+// Method Definition Index: 89624
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR float AudioStats_get_volumeSum_m0CF827F76D1306BAC53349596F75511B4B3E7C23_inline (AudioStats_t6CC8D8AF39903B6D2FD6932CBD9D0443FCFC975F* __this, const RuntimeMethod* method) 
 {
 	{
@@ -31368,7 +31368,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR float AudioStats_get_volumeSum_m0
 		return L_0;
 	}
 }
-// Method Definition Index: 89608
+// Method Definition Index: 89626
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t AudioStats_get_sampleRate_m661B6E7133E02054266C8D6A6DC5B88DF6DF54C3_inline (AudioStats_t6CC8D8AF39903B6D2FD6932CBD9D0443FCFC975F* __this, const RuntimeMethod* method) 
 {
 	{

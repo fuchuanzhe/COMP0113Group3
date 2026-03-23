@@ -16,6 +16,7 @@ public class AssignSeats : MonoBehaviour
     public GameObject occupationUI;
     private Coroutine uiCoroutine;
     public TMP_Text occupationText;
+    public BgmPlaylistManager bgmManager;
 
     private NetworkContext context;
     private struct Message
@@ -45,6 +46,9 @@ public class AssignSeats : MonoBehaviour
         roomClient.OnPeerRemoved.AddListener(_ => CleanupSeats());
         occupation = GetComponent<PlayerOccupation>();
         occupationUI.SetActive(false);
+
+        if (!bgmManager)
+            bgmManager = FindAnyObjectByType<BgmPlaylistManager>();
     }
 
     private void Check()
@@ -68,6 +72,7 @@ public class AssignSeats : MonoBehaviour
             started = true;
             var i = MoveToSeats();
             ShowOccupationUIFor3Seconds(i);
+            bgmManager?.PlayMainGamePlaylist();
             context.SendJson(new Message(true));
         }
     }
@@ -80,6 +85,7 @@ public class AssignSeats : MonoBehaviour
             started = m.start;
             var i = MoveToSeats();
             ShowOccupationUIFor3Seconds(i);
+            bgmManager?.PlayMainGamePlaylist();
         }
     }
 

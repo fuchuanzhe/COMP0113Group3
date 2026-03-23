@@ -2620,6 +2620,7 @@ GameObject:
   m_Component:
   - component: {fileID: 105052438}
   - component: {fileID: 105052437}
+  - component: {fileID: 105052439}
   m_Layer: 0
   m_Name: BGM_Manager
   m_TagString: Untagged
@@ -2739,6 +2740,25 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &105052439
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 105052436}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c2b6ec4cd5874cdf985f8e4c9f0edeca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::BgmPlaylistManager
+  source: {fileID: 105052437}
+  waitingRoomPlaylist:
+  - {fileID: 8300000, guid: a78f74b5fcf27449abe20b9a52383279, type: 3}
+  mainGamePlaylist:
+  - {fileID: 8300000, guid: 2ee5e2e3ac4b64a59824214626d0bb91, type: 3}
+  playWaitingRoomOnStart: 1
+  avoidImmediateRepeat: 1
 --- !u!1 &105940333
 GameObject:
   m_ObjectHideFlags: 0
@@ -7532,6 +7552,7 @@ MonoBehaviour:
   occupation: {fileID: 380020981}
   occupationUI: {fileID: 1764283606}
   occupationText: {fileID: 2140814561}
+  bgmManager: {fileID: 0}
 --- !u!4 &380020980
 Transform:
   m_ObjectHideFlags: 0
