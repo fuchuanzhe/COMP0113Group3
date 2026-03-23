@@ -49917,15 +49917,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 78827910775341751, guid: ce18fb1bfda024936973ca895c2667f2, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.322
+      value: 0.311
       objectReference: {fileID: 0}
     - target: {fileID: 78827910775341751, guid: ce18fb1bfda024936973ca895c2667f2, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.346
+      value: 0.335
       objectReference: {fileID: 0}
     - target: {fileID: 78827910775341751, guid: ce18fb1bfda024936973ca895c2667f2, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.198
+      value: -0.1
       objectReference: {fileID: 0}
     - target: {fileID: 211407336642229933, guid: ce18fb1bfda024936973ca895c2667f2, type: 3}
       propertyPath: m_LocalScale.x
@@ -49985,7 +49985,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1811122272821274886, guid: ce18fb1bfda024936973ca895c2667f2, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.044999957
+      value: 0.037499912
+      objectReference: {fileID: 0}
+    - target: {fileID: 1811122272821274886, guid: ce18fb1bfda024936973ca895c2667f2, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.0000002980232
       objectReference: {fileID: 0}
     - target: {fileID: 1893648761349590408, guid: ce18fb1bfda024936973ca895c2667f2, type: 3}
       propertyPath: m_LocalScale.x
@@ -50001,7 +50005,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1893648761349590408, guid: ce18fb1bfda024936973ca895c2667f2, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.057
+      value: -0.117
       objectReference: {fileID: 0}
     - target: {fileID: 1893648761349590408, guid: ce18fb1bfda024936973ca895c2667f2, type: 3}
       propertyPath: m_LocalPosition.y
@@ -50009,7 +50013,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1893648761349590408, guid: ce18fb1bfda024936973ca895c2667f2, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.231
+      value: -0.1
       objectReference: {fileID: 0}
     - target: {fileID: 2240128228795185484, guid: ce18fb1bfda024936973ca895c2667f2, type: 3}
       propertyPath: clip
@@ -50063,6 +50067,10 @@ PrefabInstance:
       propertyPath: smashSound
       value: 
       objectReference: {fileID: 8300000, guid: 26122df41f6d23b4fb51d132b9b5f214, type: 3}
+    - target: {fileID: 3589098257864573572, guid: ce18fb1bfda024936973ca895c2667f2, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 398
+      objectReference: {fileID: 0}
     - target: {fileID: 3767659853937482063, guid: ce18fb1bfda024936973ca895c2667f2, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.7
@@ -50081,11 +50089,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3767659853937482063, guid: ce18fb1bfda024936973ca895c2667f2, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.591
+      value: 0.393
       objectReference: {fileID: 0}
     - target: {fileID: 3767659853937482063, guid: ce18fb1bfda024936973ca895c2667f2, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.155
+      value: -0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4285995466560740919, guid: ce18fb1bfda024936973ca895c2667f2, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -48
       objectReference: {fileID: 0}
     - target: {fileID: 4616165200164398447, guid: ce18fb1bfda024936973ca895c2667f2, type: 3}
       propertyPath: m_LocalScale.x
@@ -50173,15 +50185,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5148252906052630116, guid: ce18fb1bfda024936973ca895c2667f2, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.71
+      value: 0.74
       objectReference: {fileID: 0}
     - target: {fileID: 5148252906052630116, guid: ce18fb1bfda024936973ca895c2667f2, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.363
+      value: 0.337
       objectReference: {fileID: 0}
     - target: {fileID: 5148252906052630116, guid: ce18fb1bfda024936973ca895c2667f2, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.16
+      value: -0.1
       objectReference: {fileID: 0}
     - target: {fileID: 5356468101686502811, guid: ce18fb1bfda024936973ca895c2667f2, type: 3}
       propertyPath: m_Name
@@ -50239,6 +50251,49 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: 0.323
       objectReference: {fileID: 0}
+    - target: {fileID: 5703001028324800205, guid: ce18fb1bfda024936973ca895c2667f2, type: 3}
+      propertyPath: m_text
+      value: "1.\tComplete the tutorial in the waiting room before starting the game.\n2.\tAfter
+        pressing the start button, all players will be transported to the kitchen
+        scene.\n3.\tYour assigned role will be displayed for 3 seconds, after which
+        the game will begin.\n4.\tYou may interact with and deform any objects in
+        the scene (e.g., including large items such as the fridge).\n5.\tPlace collected
+        letters onto the table; they will automatically attach to the surface.\n6.\tArrange
+        letters on the table to form words, then press the validation button.\n7.\tIf
+        the word is valid, the letters will disappear and points will be awarded
+        to your team.\n8.\tIf the letters turn red, the word is invalid.\n9.\tWords
+        formed using object names from the scene (e.g., \u201Capple\u201D) are not
+        allowed; such letters will turn yellow and no points will be awarded.\n10.\tWhen
+        the time expires, the team with the highest score wins the game."
+      objectReference: {fileID: 0}
+    - target: {fileID: 5703001028324800205, guid: ce18fb1bfda024936973ca895c2667f2, type: 3}
+      propertyPath: m_margin.w
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5703001028324800205, guid: ce18fb1bfda024936973ca895c2667f2, type: 3}
+      propertyPath: m_verticalMapping
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5703001028324800205, guid: ce18fb1bfda024936973ca895c2667f2, type: 3}
+      propertyPath: m_TextStyleHashCode
+      value: -1183493901
+      objectReference: {fileID: 0}
+    - target: {fileID: 5703001028324800205, guid: ce18fb1bfda024936973ca895c2667f2, type: 3}
+      propertyPath: m_VerticalAlignment
+      value: 256
+      objectReference: {fileID: 0}
+    - target: {fileID: 5703001028324800205, guid: ce18fb1bfda024936973ca895c2667f2, type: 3}
+      propertyPath: checkPaddingRequired
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5703001028324800205, guid: ce18fb1bfda024936973ca895c2667f2, type: 3}
+      propertyPath: m_enableExtraPadding
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5703001028324800205, guid: ce18fb1bfda024936973ca895c2667f2, type: 3}
+      propertyPath: m_HorizontalAlignment
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5831893726234299497, guid: ce18fb1bfda024936973ca895c2667f2, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.7
@@ -50253,11 +50308,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5831893726234299497, guid: ce18fb1bfda024936973ca895c2667f2, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.655
+      value: -0.85
       objectReference: {fileID: 0}
     - target: {fileID: 5831893726234299497, guid: ce18fb1bfda024936973ca895c2667f2, type: 3}
       propertyPath: m_LocalPosition.y
       value: 0.369
+      objectReference: {fileID: 0}
+    - target: {fileID: 5831893726234299497, guid: ce18fb1bfda024936973ca895c2667f2, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6363707536336780837, guid: ce18fb1bfda024936973ca895c2667f2, type: 3}
+      propertyPath: m_text
+      value: How To Play
+      objectReference: {fileID: 0}
+    - target: {fileID: 6363707536336780837, guid: ce18fb1bfda024936973ca895c2667f2, type: 3}
+      propertyPath: m_HorizontalAlignment
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6625197760985344343, guid: ce18fb1bfda024936973ca895c2667f2, type: 3}
       propertyPath: m_LocalScale.x
@@ -50274,6 +50341,10 @@ PrefabInstance:
     - target: {fileID: 6625197760985344343, guid: ce18fb1bfda024936973ca895c2667f2, type: 3}
       propertyPath: m_LocalPosition.x
       value: 4.8450003
+      objectReference: {fileID: 0}
+    - target: {fileID: 6625197760985344343, guid: ce18fb1bfda024936973ca895c2667f2, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.097
       objectReference: {fileID: 0}
     - target: {fileID: 7197500553211369046, guid: ce18fb1bfda024936973ca895c2667f2, type: 3}
       propertyPath: cutSound
