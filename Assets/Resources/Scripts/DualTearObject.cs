@@ -101,6 +101,19 @@ public class DualTearObject : MonoBehaviour
         return Vector3.zero;
     }
 
+    private Vector3 GetSpawnPosition()
+    {
+        Renderer[] renderers = GetComponentsInChildren<Renderer>();
+        if (renderers.Length == 0)
+            return transform.position;
+
+        Bounds bounds = renderers[0].bounds;
+        for (int i = 1; i < renderers.Length; i++)
+            bounds.Encapsulate(renderers[i].bounds);
+
+        return bounds.center;
+    }
+
     private void DoTear()
     {
         // Play sound locally for both clients before the return check
@@ -112,7 +125,11 @@ public class DualTearObject : MonoBehaviour
         // only the client with smaller id spawns
         if(string.Compare(roomClient.Me.uuid, otherId) >= 0) return;
 
-        LetterSpawner.Instance?.SpawnWord(word, transform.position);
+        Vector3 spawnPos = GetSpawnPosition();
+
+        LetterSpawner.Instance?.SpawnWord(word, spawnPos);
+
+        // LetterSpawner.Instance?.SpawnWord(word, transform.position);
         var networkObj = GetComponent<DualNetworkedObject>();
         networkObj.BroadcastActiveSelf(false);
         gameObject.SetActive(false);
