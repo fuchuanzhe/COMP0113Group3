@@ -730,7 +730,7 @@ IL2CPP_EXTERN_C const RuntimeMethod* U3CU3Ec_U3CCleanupSeatsU3Eb__20_0_m98A80313
 IL2CPP_EXTERN_C const RuntimeMethod* U3CU3Ec_U3CCleanupSeatsU3Eb__20_1_mE5145D608A36C58A34B06CEE755520B5D6919D1D_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* U3CU3Ec_U3CMoveToSeatsU3Eb__16_0_m3F4E97EDD9047F691CB6C2F3D8D6B67FDDE81984_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* U3CU3Ec_U3CMoveToSeatsU3Eb__16_1_m4FE5FFC1C7501E923D5DD7DB2E2BDD5E56A56375_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* U3CU3Ec_U3CScanDirectionU3Eb__17_0_m172853E8A736280660F1CFFAFC6EC1BA61660541_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* U3CU3Ec_U3CScanDirectionU3Eb__19_0_m66A91C61C70B632EFD255251375292BEEE4F208B_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* UnityEvent_1_AddListener_m58BD029288EB53E8C5D3BD2A0FF7EC39284A7421_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* UnityEvent_1_AddListener_m84DD6D5B7DEA12DA2FB966EEF5E172ED5323D810_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* UnityEvent_1_AddListener_mAE71681FB0832FD7DBA813E5ADDBA574EA32EED2_RuntimeMethod_var;
@@ -3303,6 +3303,7 @@ struct DualTearObject_t9C553667E71A6A2FCE1A4E25E0993C19C54324FF  : public MonoBe
 	float ___tearDistance;
 	bool ___isGrabbed;
 	bool ___isPulled;
+	bool ___isTorn;
 	RoomClient_t124F52F8602AB535AC105F1E470809979EDA2A4F* ___roomClient;
 	bool ___otherGrabbed;
 	bool ___otherPulled;
@@ -3349,6 +3350,9 @@ struct GameManager_tFE129A0017AF5BBD30FDCD4403B9CCEAE064C6B6  : public MonoBehav
 	TextMeshProUGUI_t101091AF4B578BB534C92E9D1EEAF0611636D957* ___timerTextTeam1;
 	TextMeshProUGUI_t101091AF4B578BB534C92E9D1EEAF0611636D957* ___timerTextTeam2;
 	TextMeshProUGUI_t101091AF4B578BB534C92E9D1EEAF0611636D957* ___resultText;
+	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___player;
+	AudioClip_t5D272C4EB4F2D3ED49F1C346DEA373CF6D585F20* ___winSound;
+	AudioClip_t5D272C4EB4F2D3ED49F1C346DEA373CF6D585F20* ___loseSound;
 	float ___remainingTime;
 	bool ___gameEnded;
 	NetworkContext_t49239659157E00ACFF3A196AF00218DED40F9310 ___context;
@@ -3539,6 +3543,7 @@ struct SnapOnRelease_t9CEE91944A45B649BD53A2ED9566DBC654E599C9  : public MonoBeh
 	XRGrabInteractable_tAE7E2F24377399C9B5159179E4B43EA6AA55531B* ___grab;
 	BlockFootprint_t60D904B81BA8C736F5063F58CFA2ED88428B4CDF* ___footprint;
 	LetterTile_tB20E0D5265E6DEC4F697C65EBC185582BA0E3541* ___letterTile;
+	AudioClip_t5D272C4EB4F2D3ED49F1C346DEA373CF6D585F20* ___snapSound;
 	bool ___U3CIsSnappedOnTableU3Ek__BackingField;
 };
 struct SpawnableObject_tB01492418378D7AE527A7C2936955B071EC7B7FA  : public MonoBehaviour_t532A11E69716D348D8AA7F854AFCBFCB8AD17F71
@@ -3630,6 +3635,8 @@ struct WordScanManager_t5DFA8AA7ED2E7C3224B27D3CA0955AC965052C11  : public MonoB
 	int32_t ___minWordLength;
 	float ___maxHeightAboveTable;
 	float ___maxHorizontalOffsetToCellCenter;
+	AudioClip_t5D272C4EB4F2D3ED49F1C346DEA373CF6D585F20* ___successSound;
+	AudioClip_t5D272C4EB4F2D3ED49F1C346DEA373CF6D585F20* ___failSound;
 };
 struct WordValidator_t0FC7E088593716BE97A671FBE4A3B870B7C72FA2  : public MonoBehaviour_t532A11E69716D348D8AA7F854AFCBFCB8AD17F71
 {
@@ -4180,7 +4187,7 @@ struct U3CU3Ec_t85CCE64AB8B9A3D6939E3ADAB341EF8615034820_StaticFields
 struct U3CU3Ec_t3022502319866C96FEA49E8F5B080A1E31507577_StaticFields
 {
 	U3CU3Ec_t3022502319866C96FEA49E8F5B080A1E31507577* ___U3CU3E9;
-	Func_2_tD405B678AA6269AE97FB3582F3158147036EDDB2* ___U3CU3E9__17_0;
+	Func_2_tD405B678AA6269AE97FB3582F3158147036EDDB2* ___U3CU3E9__19_0;
 };
 struct Boolean_t09A6377A54BE2F9E6985A8149F19234FD7DDFE22_StaticFields
 {
@@ -5238,6 +5245,7 @@ inline void NetworkContext_SendJson_TisMessage_t112DE54C687E2E6CB0EBCDDDD3B92BE5
 {
 	((  void (*) (NetworkContext_t49239659157E00ACFF3A196AF00218DED40F9310*, Message_t112DE54C687E2E6CB0EBCDDDD3B92BE534D9A7B1, const RuntimeMethod*))NetworkContext_SendJson_TisMessage_t112DE54C687E2E6CB0EBCDDDD3B92BE534D9A7B1_m5736B0079062CFA7E69D600626FD0B0E7406F867_gshared)(__this, ___0_message, method);
 }
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AudioSource_PlayClipAtPoint_mA78328A70D3F1088B588EF6F811AAD6577F2B7BF (AudioClip_t5D272C4EB4F2D3ED49F1C346DEA373CF6D585F20* ___0_clip, Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___1_position, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameManager_PlayWinnerFireworks_m00E98710AE3EBF5FA5A0CEA5F41549C4FEEA96C4 (GameManager_tFE129A0017AF5BBD30FDCD4403B9CCEAE064C6B6* __this, int32_t ___0_winner, const RuntimeMethod* method) ;
 inline ColliderU5BU5D_t94A9D70F63D095AFF2A9B4613012A5F7F3141787* Component_GetComponentsInChildren_TisCollider_t1CC3163924FCD6C4CC2E816373A929C1E3D55E76_m6FCDC69D916F8EB31E6219C8FB86B8BD98D146B3 (Component_t39FBE53E5EFCF4409111FB22C15FF73717632EC3* __this, bool ___0_includeInactive, const RuntimeMethod* method)
 {
@@ -5671,7 +5679,6 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void TearObject_set_tearCenter_mE
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TearObject_SpawnHalves_mA87F663D94666B86F42C04D656B3867EA405DC57 (TearObject_t3E896BBE62E856B51C65224E4EC149E43C6920CF* __this, Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___0_posA, Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___1_posB, const RuntimeMethod* method) ;
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR String_t* TearObject_get_word_m97D03F8F252A748F52D8F16F38DDE61E80DA221D_inline (TearObject_t3E896BBE62E856B51C65224E4EC149E43C6920CF* __this, const RuntimeMethod* method) ;
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 TearObject_get_tearCenter_m4C604DA94DBE476FD5A6D0B3E5197CF31B66429F_inline (TearObject_t3E896BBE62E856B51C65224E4EC149E43C6920CF* __this, const RuntimeMethod* method) ;
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AudioSource_PlayClipAtPoint_mA78328A70D3F1088B588EF6F811AAD6577F2B7BF (AudioClip_t5D272C4EB4F2D3ED49F1C346DEA373CF6D585F20* ___0_clip, Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___1_position, const RuntimeMethod* method) ;
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void Vector3_Normalize_mC749B887A4C74BA0A2E13E6377F17CCAEB0AADA8_inline (Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2* __this, const RuntimeMethod* method) ;
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 Vector3_op_UnaryNegation_m5450829F333BD2A88AF9A592C4EE331661225915_inline (Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___0_a, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TearObject_ApplyThrow_mD202983E6547DDCC8D1DE7DE3DFBCB3A8089C433 (TearObject_t3E896BBE62E856B51C65224E4EC149E43C6920CF* __this, GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___0_obj, Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___1_velocity, const RuntimeMethod* method) ;
@@ -5855,7 +5862,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AssignSeats_Start_m356359995EC02405407AA
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/AssignSeats.cs:35>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/AssignSeats.cs:35>
 		NetworkContext_t49239659157E00ACFF3A196AF00218DED40F9310 L_0;
 		L_0 = NetworkScene_Register_m0F251779B3FEA29EAE6A5DBCDDCC0E50596A6545(__this, NULL);
 		__this->___context = L_0;
@@ -5863,18 +5870,18 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AssignSeats_Start_m356359995EC02405407AA
 		#if IL2CPP_ENABLE_STRICT_WRITE_BARRIERS
 		Il2CppCodeGenWriteBarrier((void**)&(((&__this->___context))->___Component), (void*)NULL);
 		#endif
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/AssignSeats.cs:36>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/AssignSeats.cs:36>
 		il2cpp_codegen_runtime_class_init_inline(RoomClient_t124F52F8602AB535AC105F1E470809979EDA2A4F_il2cpp_TypeInfo_var);
 		RoomClient_t124F52F8602AB535AC105F1E470809979EDA2A4F* L_1;
 		L_1 = RoomClient_Find_m98EDCFBAD91F24585B1C9E9AF91F8D8DA5BA6F3E(__this, NULL);
 		__this->___roomClient = L_1;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___roomClient), (void*)L_1);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/AssignSeats.cs:38>
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/AssignSeats.cs:39>
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/AssignSeats.cs:40>
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/AssignSeats.cs:41>
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/AssignSeats.cs:42>
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/AssignSeats.cs:43>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/AssignSeats.cs:38>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/AssignSeats.cs:39>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/AssignSeats.cs:40>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/AssignSeats.cs:41>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/AssignSeats.cs:42>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/AssignSeats.cs:43>
 		RoomClient_t124F52F8602AB535AC105F1E470809979EDA2A4F* L_2 = __this->___roomClient;
 		NullCheck(L_2);
 		RoomEvent_tE6D32AD7A63F6CD673561FD622109927395ED2B1* L_3 = L_2->___OnJoinedRoom;
@@ -5882,7 +5889,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AssignSeats_Start_m356359995EC02405407AA
 		UnityAction_1__ctor_m23CE9207FAC5524B00C270BC302D2B90D937E265(L_4, __this, (intptr_t)((void*)AssignSeats_U3CStartU3Eb__12_0_m23C91A55E2997AA513469FFB208AD3CE052A6FDA_RuntimeMethod_var), NULL);
 		NullCheck(L_3);
 		UnityEvent_1_AddListener_m58BD029288EB53E8C5D3BD2A0FF7EC39284A7421(L_3, L_4, UnityEvent_1_AddListener_m58BD029288EB53E8C5D3BD2A0FF7EC39284A7421_RuntimeMethod_var);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/AssignSeats.cs:46>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/AssignSeats.cs:46>
 		RoomClient_t124F52F8602AB535AC105F1E470809979EDA2A4F* L_5 = __this->___roomClient;
 		NullCheck(L_5);
 		PeerEvent_t163FED99D83130BA201B6D0CE0B178738F87CD08* L_6 = L_5->___OnPeerRemoved;
@@ -5890,16 +5897,16 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AssignSeats_Start_m356359995EC02405407AA
 		UnityAction_1__ctor_mD314BD3DEB4DDD28D00B1159F378FF150952B35E(L_7, __this, (intptr_t)((void*)AssignSeats_U3CStartU3Eb__12_1_m8336813B5D7F76F2E0879CEC0B6841297894B1D3_RuntimeMethod_var), NULL);
 		NullCheck(L_6);
 		UnityEvent_1_AddListener_m84DD6D5B7DEA12DA2FB966EEF5E172ED5323D810(L_6, L_7, UnityEvent_1_AddListener_m84DD6D5B7DEA12DA2FB966EEF5E172ED5323D810_RuntimeMethod_var);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/AssignSeats.cs:47>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/AssignSeats.cs:47>
 		PlayerOccupation_t3B297CB24645A8F0E7ACEC3CC40DE325ACD545ED* L_8;
 		L_8 = Component_GetComponent_TisPlayerOccupation_t3B297CB24645A8F0E7ACEC3CC40DE325ACD545ED_m67AEBFC99F957F398886A9CFBE330F495D744D21(__this, Component_GetComponent_TisPlayerOccupation_t3B297CB24645A8F0E7ACEC3CC40DE325ACD545ED_m67AEBFC99F957F398886A9CFBE330F495D744D21_RuntimeMethod_var);
 		__this->___occupation = L_8;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___occupation), (void*)L_8);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/AssignSeats.cs:48>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/AssignSeats.cs:48>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_9 = __this->___occupationUI;
 		NullCheck(L_9);
 		GameObject_SetActive_m638E92E1E75E519E5B24CF150B08CA8E0CDFAB92(L_9, (bool)0, NULL);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/AssignSeats.cs:50>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/AssignSeats.cs:50>
 		BgmPlaylistManager_t1E456CA5ADFE23C62634BCBB3ED6C55F01F6661D* L_10 = __this->___bgmManager;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_11;
@@ -5910,7 +5917,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AssignSeats_Start_m356359995EC02405407AA
 		}
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/AssignSeats.cs:51>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/AssignSeats.cs:51>
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		BgmPlaylistManager_t1E456CA5ADFE23C62634BCBB3ED6C55F01F6661D* L_12;
 		L_12 = Object_FindAnyObjectByType_TisBgmPlaylistManager_t1E456CA5ADFE23C62634BCBB3ED6C55F01F6661D_mDD76EC697791EF1425B3F696502995F26B47C6FC(Object_FindAnyObjectByType_TisBgmPlaylistManager_t1E456CA5ADFE23C62634BCBB3ED6C55F01F6661D_mDD76EC697791EF1425B3F696502995F26B47C6FC_RuntimeMethod_var);
@@ -5920,7 +5927,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AssignSeats_Start_m356359995EC02405407AA
 
 IL_0080:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/AssignSeats.cs:52>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/AssignSeats.cs:52>
 		return;
 	}
 }
@@ -5937,16 +5944,16 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AssignSeats_Check_mFC9F13E5CD27EB3DE07C2
 	}
 	int32_t V_0 = 0;
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/AssignSeats.cs:56>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/AssignSeats.cs:56>
 		RoomClient_t124F52F8602AB535AC105F1E470809979EDA2A4F* L_0 = __this->___roomClient;
 		NullCheck(L_0);
 		RuntimeObject* L_1;
 		L_1 = RoomClient_get_Peers_m897C844614E1A164275336F6C603AEE6AAB3599F(L_0, NULL);
 		int32_t L_2;
 		L_2 = Enumerable_Count_TisIPeer_t768EF142845B1A6262D2719809DC194FCB98299C_m76883AE357890A996F6B8ACDB94A5BE7B6CE9CD9(L_1, Enumerable_Count_TisIPeer_t768EF142845B1A6262D2719809DC194FCB98299C_m76883AE357890A996F6B8ACDB94A5BE7B6CE9CD9_RuntimeMethod_var);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/AssignSeats.cs:57>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/AssignSeats.cs:57>
 		V_0 = ((int32_t)il2cpp_codegen_add(L_2, 1));
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/AssignSeats.cs:59>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/AssignSeats.cs:59>
 		int32_t L_3 = V_0;
 		int32_t L_4 = L_3;
 		RuntimeObject* L_5 = Box(il2cpp_defaults.int32_class, &L_4);
@@ -5957,7 +5964,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AssignSeats_Check_mFC9F13E5CD27EB3DE07C2
 		L_9 = String_Format_mFB7DA489BD99F4670881FF50EC017BFB0A5C0987(_stringLiteral32F9DD1CA137CDB80ED50888D94B5F7BD913E2E9, L_5, L_8, NULL);
 		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 		Debug_Log_m87A9A3C761FF5C43ED8A53B16190A53D08F818BB(L_9, NULL);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/AssignSeats.cs:61>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/AssignSeats.cs:61>
 		bool L_10 = __this->___started;
 		if (L_10)
 		{
@@ -5973,16 +5980,16 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AssignSeats_Check_mFC9F13E5CD27EB3DE07C2
 		}
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/AssignSeats.cs:63>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/AssignSeats.cs:63>
 		__this->___started = (bool)1;
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/AssignSeats.cs:64>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/AssignSeats.cs:64>
 		int32_t L_13;
 		L_13 = AssignSeats_MoveToSeats_m0EAD0143F8C85B1C2CF607E2A8DDCDE9FAD34B13(__this, NULL);
 	}
 
 IL_0052:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/AssignSeats.cs:66>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/AssignSeats.cs:66>
 		return;
 	}
 }
@@ -5999,7 +6006,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AssignSeats_GameStart_mABAD26CC92479977A
 	BgmPlaylistManager_t1E456CA5ADFE23C62634BCBB3ED6C55F01F6661D* G_B3_0 = NULL;
 	BgmPlaylistManager_t1E456CA5ADFE23C62634BCBB3ED6C55F01F6661D* G_B2_0 = NULL;
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/AssignSeats.cs:70>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/AssignSeats.cs:70>
 		bool L_0 = __this->___started;
 		if (L_0)
 		{
@@ -6007,16 +6014,16 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AssignSeats_GameStart_mABAD26CC92479977A
 		}
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/AssignSeats.cs:72>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/AssignSeats.cs:72>
 		__this->___started = (bool)1;
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/AssignSeats.cs:73>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/AssignSeats.cs:73>
 		int32_t L_1;
 		L_1 = AssignSeats_MoveToSeats_m0EAD0143F8C85B1C2CF607E2A8DDCDE9FAD34B13(__this, NULL);
 		V_0 = L_1;
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/AssignSeats.cs:74>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/AssignSeats.cs:74>
 		int32_t L_2 = V_0;
 		AssignSeats_ShowOccupationUIFor3Seconds_mCED46541389F01794402ED726706690014934BDF(__this, L_2, NULL);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/AssignSeats.cs:75>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/AssignSeats.cs:75>
 		BgmPlaylistManager_t1E456CA5ADFE23C62634BCBB3ED6C55F01F6661D* L_3 = __this->___bgmManager;
 		BgmPlaylistManager_t1E456CA5ADFE23C62634BCBB3ED6C55F01F6661D* L_4 = L_3;
 		if (L_4)
@@ -6038,7 +6045,7 @@ IL_0029:
 
 IL_002e:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/AssignSeats.cs:76>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/AssignSeats.cs:76>
 		NetworkContext_t49239659157E00ACFF3A196AF00218DED40F9310* L_5 = (NetworkContext_t49239659157E00ACFF3A196AF00218DED40F9310*)(&__this->___context);
 		Message_tCF59DEEEA446F89DC4B9ABB8906AA3CD8C4BD2F9 L_6;
 		memset((&L_6), 0, sizeof(L_6));
@@ -6048,7 +6055,7 @@ IL_002e:
 
 IL_003f:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/AssignSeats.cs:78>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/AssignSeats.cs:78>
 		return;
 	}
 }
@@ -6067,11 +6074,11 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AssignSeats_ProcessMessage_mAF55E7AF9186
 	BgmPlaylistManager_t1E456CA5ADFE23C62634BCBB3ED6C55F01F6661D* G_B3_0 = NULL;
 	BgmPlaylistManager_t1E456CA5ADFE23C62634BCBB3ED6C55F01F6661D* G_B2_0 = NULL;
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/AssignSeats.cs:82>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/AssignSeats.cs:82>
 		Message_tCF59DEEEA446F89DC4B9ABB8906AA3CD8C4BD2F9 L_0;
 		L_0 = ReferenceCountedSceneGraphMessage_FromJson_TisMessage_tCF59DEEEA446F89DC4B9ABB8906AA3CD8C4BD2F9_mF2AA41A632A6081AF355F20CBECDBC14B3FF4840((&___0_message), ReferenceCountedSceneGraphMessage_FromJson_TisMessage_tCF59DEEEA446F89DC4B9ABB8906AA3CD8C4BD2F9_mF2AA41A632A6081AF355F20CBECDBC14B3FF4840_RuntimeMethod_var);
 		V_0 = L_0;
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/AssignSeats.cs:83>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/AssignSeats.cs:83>
 		Message_tCF59DEEEA446F89DC4B9ABB8906AA3CD8C4BD2F9 L_1 = V_0;
 		bool L_2 = L_1.___start;
 		if (!L_2)
@@ -6080,18 +6087,18 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AssignSeats_ProcessMessage_mAF55E7AF9186
 		}
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/AssignSeats.cs:85>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/AssignSeats.cs:85>
 		Message_tCF59DEEEA446F89DC4B9ABB8906AA3CD8C4BD2F9 L_3 = V_0;
 		bool L_4 = L_3.___start;
 		__this->___started = L_4;
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/AssignSeats.cs:86>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/AssignSeats.cs:86>
 		int32_t L_5;
 		L_5 = AssignSeats_MoveToSeats_m0EAD0143F8C85B1C2CF607E2A8DDCDE9FAD34B13(__this, NULL);
 		V_1 = L_5;
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/AssignSeats.cs:87>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/AssignSeats.cs:87>
 		int32_t L_6 = V_1;
 		AssignSeats_ShowOccupationUIFor3Seconds_mCED46541389F01794402ED726706690014934BDF(__this, L_6, NULL);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/AssignSeats.cs:88>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/AssignSeats.cs:88>
 		BgmPlaylistManager_t1E456CA5ADFE23C62634BCBB3ED6C55F01F6661D* L_7 = __this->___bgmManager;
 		BgmPlaylistManager_t1E456CA5ADFE23C62634BCBB3ED6C55F01F6661D* L_8 = L_7;
 		if (L_8)
@@ -6113,7 +6120,7 @@ IL_0035:
 
 IL_003a:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/AssignSeats.cs:90>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/AssignSeats.cs:90>
 		return;
 	}
 }
@@ -6153,7 +6160,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t AssignSeats_MoveToSeats_m0EAD0143F8C8
 	Func_2_t85D1F7C2022B349817C22FC72C474CD33FFABE93* G_B3_0 = NULL;
 	RuntimeObject* G_B3_1 = NULL;
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/AssignSeats.cs:94>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/AssignSeats.cs:94>
 		RoomClient_t124F52F8602AB535AC105F1E470809979EDA2A4F* L_0 = __this->___roomClient;
 		NullCheck(L_0);
 		RuntimeObject* L_1;
@@ -6225,7 +6232,7 @@ IL_0063:
 		L_17 = Enumerable_OrderBy_TisString_t_TisString_t_m40B981D8BC975EB4FB16F2CFC3C9782D92493D2B(G_B4_1, G_B4_0, Enumerable_OrderBy_TisString_t_TisString_t_m40B981D8BC975EB4FB16F2CFC3C9782D92493D2B_RuntimeMethod_var);
 		List_1_tF470A3BE5C1B5B68E1325EF3F109D172E60BD7CD* L_18;
 		L_18 = Enumerable_ToList_TisString_t_m86360148F90DE6EA1A8363F38B7C2A88FD139131(L_17, Enumerable_ToList_TisString_t_m86360148F90DE6EA1A8363F38B7C2A88FD139131_RuntimeMethod_var);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/AssignSeats.cs:95>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/AssignSeats.cs:95>
 		RoomClient_t124F52F8602AB535AC105F1E470809979EDA2A4F* L_19 = __this->___roomClient;
 		NullCheck(L_19);
 		RuntimeObject* L_20;
@@ -6241,7 +6248,7 @@ IL_0063:
 		int32_t L_24;
 		L_24 = Mathf_Clamp_m4DC36EEFDBE5F07C16249DA568023C5ECCFF0E7B_inline(L_22, 0, ((int32_t)il2cpp_codegen_subtract(((int32_t)(((RuntimeArray*)L_23)->max_length)), 1)), NULL);
 		V_0 = L_24;
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/AssignSeats.cs:97>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/AssignSeats.cs:97>
 		int32_t L_25 = V_0;
 		int32_t L_26 = L_25;
 		RuntimeObject* L_27 = Box(il2cpp_defaults.int32_class, &L_26);
@@ -6253,12 +6260,12 @@ IL_0063:
 
 IL_00a6:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/AssignSeats.cs:102>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/AssignSeats.cs:102>
 		int32_t L_29 = V_0;
 		TransformU5BU5D_tBB9C5F5686CAE82E3D97D43DF0F3D68ABF75EC24* L_30 = __this->___seats;
 		NullCheck(L_30);
 		V_0 = ((int32_t)(((int32_t)il2cpp_codegen_add(L_29, 1))%((int32_t)(((RuntimeArray*)L_30)->max_length))));
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/AssignSeats.cs:103>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/AssignSeats.cs:103>
 		int32_t L_31 = V_0;
 		int32_t L_32 = L_31;
 		RuntimeObject* L_33 = Box(il2cpp_defaults.int32_class, &L_32);
@@ -6269,7 +6276,7 @@ IL_00a6:
 
 IL_00c4:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/AssignSeats.cs:100>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/AssignSeats.cs:100>
 		RoomClient_t124F52F8602AB535AC105F1E470809979EDA2A4F* L_35 = __this->___roomClient;
 		NullCheck(L_35);
 		RuntimeObject* L_36;
@@ -6286,12 +6293,12 @@ IL_00c4:
 		}
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/AssignSeats.cs:106>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/AssignSeats.cs:106>
 		PlayerOccupation_t3B297CB24645A8F0E7ACEC3CC40DE325ACD545ED* L_40 = __this->___occupation;
 		int32_t L_41 = V_0;
 		NullCheck(L_40);
 		PlayerOccupation_SetFromSeatIndex_mC82E4C438C2E7C98E40D2A6CCC01E1A7BE9031A8(L_40, L_41, NULL);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/AssignSeats.cs:108>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/AssignSeats.cs:108>
 		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_42 = __this->___avatarRoot;
 		TransformU5BU5D_tBB9C5F5686CAE82E3D97D43DF0F3D68ABF75EC24* L_43 = __this->___seats;
 		int32_t L_44 = V_0;
@@ -6303,7 +6310,7 @@ IL_00c4:
 		L_47 = Transform_get_position_m69CD5FA214FDAE7BB701552943674846C220FDE1(L_46, NULL);
 		NullCheck(L_42);
 		Transform_set_position_mA1A817124BB41B685043DED2A9BA48CDF37C4156(L_42, L_47, NULL);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/AssignSeats.cs:109>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/AssignSeats.cs:109>
 		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_48 = __this->___avatarRoot;
 		TransformU5BU5D_tBB9C5F5686CAE82E3D97D43DF0F3D68ABF75EC24* L_49 = __this->___seats;
 		int32_t L_50 = V_0;
@@ -6315,7 +6322,7 @@ IL_00c4:
 		L_53 = Transform_get_rotation_m32AF40CA0D50C797DA639A696F8EAEC7524C179C(L_52, NULL);
 		NullCheck(L_48);
 		Transform_set_rotation_m61340DE74726CF0F9946743A727C4D444397331D(L_48, L_53, NULL);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/AssignSeats.cs:111>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/AssignSeats.cs:111>
 		RoomClient_t124F52F8602AB535AC105F1E470809979EDA2A4F* L_54 = __this->___roomClient;
 		NullCheck(L_54);
 		RuntimeObject* L_55;
@@ -6330,7 +6337,7 @@ IL_00c4:
 		L_59 = InterfaceFuncInvoker0< String_t* >::Invoke(0, IPeer_t768EF142845B1A6262D2719809DC194FCB98299C_il2cpp_TypeInfo_var, L_58);
 		NullCheck(L_55);
 		InterfaceActionInvoker2< String_t*, String_t* >::Invoke(5, IRoom_tE9F34CE2E028BF3AF61025BC3BBB92B06DC44EE8_il2cpp_TypeInfo_var, L_55, L_56, L_59);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/AssignSeats.cs:113>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/AssignSeats.cs:113>
 		int32_t L_60 = V_0;
 		int32_t L_61 = L_60;
 		RuntimeObject* L_62 = Box(il2cpp_defaults.int32_class, &L_61);
@@ -6338,7 +6345,7 @@ IL_00c4:
 		L_63 = String_Format_mA8DBB4C2516B9723C5A41E6CB1E2FAF4BBE96DD8(_stringLiteral2D2C3C10BFCD93ADBAE3DF1418A6B2BE05A63ABC, L_62, NULL);
 		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 		Debug_Log_m87A9A3C761FF5C43ED8A53B16190A53D08F818BB(L_63, NULL);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/AssignSeats.cs:114>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/AssignSeats.cs:114>
 		PlayerOccupation_t3B297CB24645A8F0E7ACEC3CC40DE325ACD545ED* L_64 = __this->___occupation;
 		NullCheck(L_64);
 		int32_t L_65;
@@ -6348,7 +6355,7 @@ IL_00c4:
 		String_t* L_68;
 		L_68 = String_Format_mA8DBB4C2516B9723C5A41E6CB1E2FAF4BBE96DD8(_stringLiteral6937BC83EC42473633395D1F023732FC7961B9C8, L_67, NULL);
 		Debug_Log_m87A9A3C761FF5C43ED8A53B16190A53D08F818BB(L_68, NULL);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/AssignSeats.cs:115>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/AssignSeats.cs:115>
 		int32_t L_69 = V_0;
 		return L_69;
 	}
@@ -6363,7 +6370,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AssignSeats_ShowOccupationUIFor3Seconds_
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/AssignSeats.cs:120>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/AssignSeats.cs:120>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_0 = __this->___occupationUI;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_1;
@@ -6374,13 +6381,13 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AssignSeats_ShowOccupationUIFor3Seconds_
 		}
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/AssignSeats.cs:121>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/AssignSeats.cs:121>
 		return;
 	}
 
 IL_000f:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/AssignSeats.cs:123>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/AssignSeats.cs:123>
 		Coroutine_t85EA685566A254C23F3FD77AB5BDFFFF8799596B* L_2 = __this->___uiCoroutine;
 		if (!L_2)
 		{
@@ -6388,16 +6395,16 @@ IL_000f:
 		}
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/AssignSeats.cs:125>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/AssignSeats.cs:125>
 		Coroutine_t85EA685566A254C23F3FD77AB5BDFFFF8799596B* L_3 = __this->___uiCoroutine;
 		MonoBehaviour_StopCoroutine_mB0FC91BE84203BD8E360B3FBAE5B958B4C5ED22A(__this, L_3, NULL);
 	}
 
 IL_0023:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/AssignSeats.cs:127>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/AssignSeats.cs:127>
 		AssignSeats_UpdateOccupationText_mED9941325D192578924B6A184A77B4FDA118B5B1(__this, NULL);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/AssignSeats.cs:128>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/AssignSeats.cs:128>
 		int32_t L_4 = ___0_i;
 		RuntimeObject* L_5;
 		L_5 = AssignSeats_ShowOccupationUICoroutine_m686EDCF7999E3EE70DF41C5116C723B00E58C5BD(__this, L_4, NULL);
@@ -6405,7 +6412,7 @@ IL_0023:
 		L_6 = MonoBehaviour_StartCoroutine_m4CAFF732AA28CD3BDC5363B44A863575530EC812(__this, L_5, NULL);
 		__this->___uiCoroutine = L_6;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___uiCoroutine), (void*)L_6);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/AssignSeats.cs:129>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/AssignSeats.cs:129>
 		return;
 	}
 }
@@ -6454,7 +6461,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AssignSeats_UpdateOccupationText_mED9941
 	String_t* V_2 = NULL;
 	int32_t V_3 = 0;
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/AssignSeats.cs:144>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/AssignSeats.cs:144>
 		PlayerOccupation_t3B297CB24645A8F0E7ACEC3CC40DE325ACD545ED* L_0 = __this->___occupation;
 		NullCheck(L_0);
 		int32_t L_1;
@@ -6464,11 +6471,11 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AssignSeats_UpdateOccupationText_mED9941
 		String_t* L_3;
 		L_3 = Enum_ToString_m946B0B83C4470457D0FF555D862022C72BB55741((Enum_t2A1A94B24E3B776EEF4E5E485E290BB9D4D072E2*)(&L_2), NULL);
 		V_0 = L_3;
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/AssignSeats.cs:145>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/AssignSeats.cs:145>
 		V_1 = _stringLiteralDA39A3EE5E6B4B0D3255BFEF95601890AFD80709;
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/AssignSeats.cs:146>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/AssignSeats.cs:146>
 		V_2 = _stringLiteralDA39A3EE5E6B4B0D3255BFEF95601890AFD80709;
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/AssignSeats.cs:148>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/AssignSeats.cs:148>
 		PlayerOccupation_t3B297CB24645A8F0E7ACEC3CC40DE325ACD545ED* L_4 = __this->___occupation;
 		NullCheck(L_4);
 		int32_t L_5;
@@ -6479,16 +6486,16 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AssignSeats_UpdateOccupationText_mED9941
 		}
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/AssignSeats.cs:150>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/AssignSeats.cs:150>
 		V_1 = _stringLiteralDA805BC62E3EDD26754EBE609D3B4FB43B406083;
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/AssignSeats.cs:151>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/AssignSeats.cs:151>
 		V_2 = _stringLiteralCB930D26FAF0A9E8557063DA31C162E9C6964A84;
 		goto IL_005c;
 	}
 
 IL_0042:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/AssignSeats.cs:153>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/AssignSeats.cs:153>
 		PlayerOccupation_t3B297CB24645A8F0E7ACEC3CC40DE325ACD545ED* L_6 = __this->___occupation;
 		NullCheck(L_6);
 		int32_t L_7;
@@ -6499,15 +6506,15 @@ IL_0042:
 		}
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/AssignSeats.cs:155>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/AssignSeats.cs:155>
 		V_1 = _stringLiteralCB930D26FAF0A9E8557063DA31C162E9C6964A84;
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/AssignSeats.cs:156>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/AssignSeats.cs:156>
 		V_2 = _stringLiteralDA805BC62E3EDD26754EBE609D3B4FB43B406083;
 	}
 
 IL_005c:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/AssignSeats.cs:159>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/AssignSeats.cs:159>
 		TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9* L_8 = __this->___occupationText;
 		StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_9 = (StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248*)(StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248*)SZArrayNew(StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248_il2cpp_TypeInfo_var, (uint32_t)7);
 		StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_10 = L_9;
@@ -6538,7 +6545,7 @@ IL_005c:
 		L_20 = String_Concat_m647EBF831F54B6DF7D5AFA5FD012CF4EE7571B6A(L_19, NULL);
 		NullCheck(L_8);
 		VirtualActionInvoker1< String_t* >::Invoke(66, L_8, L_20);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/AssignSeats.cs:160>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/AssignSeats.cs:160>
 		return;
 	}
 }
@@ -6577,7 +6584,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AssignSeats_CleanupSeats_m90A7D933EA1A0E
 	Func_2_t85D1F7C2022B349817C22FC72C474CD33FFABE93* G_B3_0 = NULL;
 	RuntimeObject* G_B3_1 = NULL;
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/AssignSeats.cs:164>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/AssignSeats.cs:164>
 		RoomClient_t124F52F8602AB535AC105F1E470809979EDA2A4F* L_0 = __this->___roomClient;
 		NullCheck(L_0);
 		RuntimeObject* L_1;
@@ -6650,21 +6657,21 @@ IL_0063:
 		List_1_tF470A3BE5C1B5B68E1325EF3F109D172E60BD7CD* L_18;
 		L_18 = Enumerable_ToList_TisString_t_m86360148F90DE6EA1A8363F38B7C2A88FD139131(L_17, Enumerable_ToList_TisString_t_m86360148F90DE6EA1A8363F38B7C2A88FD139131_RuntimeMethod_var);
 		V_0 = L_18;
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/AssignSeats.cs:166>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/AssignSeats.cs:166>
 		V_1 = 0;
 		goto IL_00c0;
 	}
 
 IL_0072:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/AssignSeats.cs:168>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/AssignSeats.cs:168>
 		int32_t L_19 = V_1;
 		int32_t L_20 = L_19;
 		RuntimeObject* L_21 = Box(il2cpp_defaults.int32_class, &L_20);
 		String_t* L_22;
 		L_22 = String_Format_mA8DBB4C2516B9723C5A41E6CB1E2FAF4BBE96DD8(_stringLiteral7C47E05C323EAD7ECCF73A4FDE2F27E985DFD7C0, L_21, NULL);
 		V_2 = L_22;
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/AssignSeats.cs:169>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/AssignSeats.cs:169>
 		RoomClient_t124F52F8602AB535AC105F1E470809979EDA2A4F* L_23 = __this->___roomClient;
 		NullCheck(L_23);
 		RuntimeObject* L_24;
@@ -6674,7 +6681,7 @@ IL_0072:
 		String_t* L_26;
 		L_26 = InterfaceFuncInvoker1< String_t*, String_t* >::Invoke(4, IRoom_tE9F34CE2E028BF3AF61025BC3BBB92B06DC44EE8_il2cpp_TypeInfo_var, L_24, L_25);
 		V_3 = L_26;
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/AssignSeats.cs:171>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/AssignSeats.cs:171>
 		String_t* L_27 = V_3;
 		bool L_28;
 		L_28 = String_IsNullOrEmpty_mEA9E3FB005AC28FE02E69FCF95A7B8456192B478(L_27, NULL);
@@ -6695,7 +6702,7 @@ IL_0072:
 		}
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/AssignSeats.cs:173>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/AssignSeats.cs:173>
 		RoomClient_t124F52F8602AB535AC105F1E470809979EDA2A4F* L_32 = __this->___roomClient;
 		NullCheck(L_32);
 		RuntimeObject* L_33;
@@ -6707,14 +6714,14 @@ IL_0072:
 
 IL_00bc:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/AssignSeats.cs:166>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/AssignSeats.cs:166>
 		int32_t L_35 = V_1;
 		V_1 = ((int32_t)il2cpp_codegen_add(L_35, 1));
 	}
 
 IL_00c0:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/AssignSeats.cs:166>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/AssignSeats.cs:166>
 		int32_t L_36 = V_1;
 		TransformU5BU5D_tBB9C5F5686CAE82E3D97D43DF0F3D68ABF75EC24* L_37 = __this->___seats;
 		NullCheck(L_37);
@@ -6724,7 +6731,7 @@ IL_00c0:
 		}
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/AssignSeats.cs:176>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/AssignSeats.cs:176>
 		return;
 	}
 }
@@ -6738,9 +6745,9 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AssignSeats__ctor_m373E9FCBA5706A77E1FDE
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/AssignSeats.cs:10>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/AssignSeats.cs:10>
 		__this->___requiredPlayers = 2;
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/AssignSeats.cs:11>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/AssignSeats.cs:11>
 		TransformU5BU5D_tBB9C5F5686CAE82E3D97D43DF0F3D68ABF75EC24* L_0 = (TransformU5BU5D_tBB9C5F5686CAE82E3D97D43DF0F3D68ABF75EC24*)(TransformU5BU5D_tBB9C5F5686CAE82E3D97D43DF0F3D68ABF75EC24*)SZArrayNew(TransformU5BU5D_tBB9C5F5686CAE82E3D97D43DF0F3D68ABF75EC24_il2cpp_TypeInfo_var, (uint32_t)4);
 		__this->___seats = L_0;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___seats), (void*)L_0);
@@ -6759,12 +6766,12 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AssignSeats_U3CStartU3Eb__12_0_m23C91A55
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/AssignSeats.cs:40>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/AssignSeats.cs:40>
 		__this->___started = (bool)0;
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/AssignSeats.cs:41>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/AssignSeats.cs:41>
 		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 		Debug_Log_m87A9A3C761FF5C43ED8A53B16190A53D08F818BB(_stringLiteral0A848D0F3529D597E996B41539217C02226F4DEB, NULL);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/AssignSeats.cs:43>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/AssignSeats.cs:43>
 		return;
 	}
 }
@@ -6772,7 +6779,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AssignSeats_U3CStartU3Eb__12_0_m23C91A55
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AssignSeats_U3CStartU3Eb__12_1_m8336813B5D7F76F2E0879CEC0B6841297894B1D3 (AssignSeats_tF3C976915B602C0A3988CA78C4F0ED1D7F880E5F* __this, RuntimeObject* ___0__, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/AssignSeats.cs:46>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/AssignSeats.cs:46>
 		AssignSeats_CleanupSeats_m90A7D933EA1A0E79FB3F06F3F79C4CC4709B2AE8(__this, NULL);
 		return;
 	}
@@ -6815,10 +6822,10 @@ IL2CPP_EXTERN_C void Message_tCF59DEEEA446F89DC4B9ABB8906AA3CD8C4BD2F9_marshal_c
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Message__ctor_mE10F5E3D638586AC99B8EF643DB05ED37308FFD7 (Message_tCF59DEEEA446F89DC4B9ABB8906AA3CD8C4BD2F9* __this, bool ___0_start, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/AssignSeats.cs:28>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/AssignSeats.cs:28>
 		bool L_0 = ___0_start;
 		__this->___start = L_0;
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/AssignSeats.cs:29>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/AssignSeats.cs:29>
 		return;
 	}
 }
@@ -6872,7 +6879,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* U3CU3Ec_U3CMoveToSeatsU3Eb__16_0_m3
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/AssignSeats.cs:94>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/AssignSeats.cs:94>
 		RuntimeObject* L_0 = ___0_p;
 		NullCheck(L_0);
 		String_t* L_1;
@@ -6884,7 +6891,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* U3CU3Ec_U3CMoveToSeatsU3Eb__16_0_m3
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* U3CU3Ec_U3CMoveToSeatsU3Eb__16_1_m4FE5FFC1C7501E923D5DD7DB2E2BDD5E56A56375 (U3CU3Ec_t85CCE64AB8B9A3D6939E3ADAB341EF8615034820* __this, String_t* ___0_x, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/AssignSeats.cs:94>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/AssignSeats.cs:94>
 		String_t* L_0 = ___0_x;
 		return L_0;
 	}
@@ -6899,7 +6906,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* U3CU3Ec_U3CCleanupSeatsU3Eb__20_0_m
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/AssignSeats.cs:164>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/AssignSeats.cs:164>
 		RuntimeObject* L_0 = ___0_p;
 		NullCheck(L_0);
 		String_t* L_1;
@@ -6911,7 +6918,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* U3CU3Ec_U3CCleanupSeatsU3Eb__20_0_m
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* U3CU3Ec_U3CCleanupSeatsU3Eb__20_1_mE5145D608A36C58A34B06CEE755520B5D6919D1D (U3CU3Ec_t85CCE64AB8B9A3D6939E3ADAB341EF8615034820* __this, String_t* ___0_x, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/AssignSeats.cs:164>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/AssignSeats.cs:164>
 		String_t* L_0 = ___0_x;
 		return L_0;
 	}
@@ -6977,7 +6984,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool U3CShowOccupationUICoroutineU3Ed__18_Mov
 IL_0017:
 	{
 		__this->___U3CU3E1__state = (-1);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/AssignSeats.cs:133>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/AssignSeats.cs:133>
 		int32_t L_4 = __this->___i;
 		if ((((int32_t)L_4) < ((int32_t)2)))
 		{
@@ -6985,7 +6992,7 @@ IL_0017:
 		}
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/AssignSeats.cs:135>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/AssignSeats.cs:135>
 		AssignSeats_tF3C976915B602C0A3988CA78C4F0ED1D7F880E5F* L_5 = V_1;
 		NullCheck(L_5);
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_6 = L_5->___occupationUI;
@@ -7000,13 +7007,13 @@ IL_0017:
 
 IL_004b:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/AssignSeats.cs:137>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/AssignSeats.cs:137>
 		AssignSeats_tF3C976915B602C0A3988CA78C4F0ED1D7F880E5F* L_9 = V_1;
 		NullCheck(L_9);
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_10 = L_9->___occupationUI;
 		NullCheck(L_10);
 		GameObject_SetActive_m638E92E1E75E519E5B24CF150B08CA8E0CDFAB92(L_10, (bool)1, NULL);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/AssignSeats.cs:138>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/AssignSeats.cs:138>
 		WaitForSeconds_tF179DF251655B8DF044952E70A60DF4B358A3DD3* L_11 = (WaitForSeconds_tF179DF251655B8DF044952E70A60DF4B358A3DD3*)il2cpp_codegen_object_new(WaitForSeconds_tF179DF251655B8DF044952E70A60DF4B358A3DD3_il2cpp_TypeInfo_var);
 		WaitForSeconds__ctor_m579F95BADEDBAB4B3A7E302C6EE3995926EF2EFC(L_11, (3.0f), NULL);
 		__this->___U3CU3E2__current = L_11;
@@ -7018,18 +7025,18 @@ IL_004b:
 IL_0070:
 	{
 		__this->___U3CU3E1__state = (-1);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/AssignSeats.cs:139>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/AssignSeats.cs:139>
 		AssignSeats_tF3C976915B602C0A3988CA78C4F0ED1D7F880E5F* L_12 = V_1;
 		NullCheck(L_12);
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_13 = L_12->___occupationUI;
 		NullCheck(L_13);
 		GameObject_SetActive_m638E92E1E75E519E5B24CF150B08CA8E0CDFAB92(L_13, (bool)0, NULL);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/AssignSeats.cs:140>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/AssignSeats.cs:140>
 		AssignSeats_tF3C976915B602C0A3988CA78C4F0ED1D7F880E5F* L_14 = V_1;
 		NullCheck(L_14);
 		L_14->___uiCoroutine = (Coroutine_t85EA685566A254C23F3FD77AB5BDFFFF8799596B*)NULL;
 		Il2CppCodeGenWriteBarrier((void**)(&L_14->___uiCoroutine), (void*)(Coroutine_t85EA685566A254C23F3FD77AB5BDFFFF8799596B*)NULL);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/AssignSeats.cs:141>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/AssignSeats.cs:141>
 		return (bool)0;
 	}
 }
@@ -7070,7 +7077,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CShowOccupationUICoroutineU3
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t BgmPlaylistManager_get_CurrentPlaylist_m09A697F8E815201FED7A317B23BE558F2BA86796 (BgmPlaylistManager_t1E456CA5ADFE23C62634BCBB3ED6C55F01F6661D* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/BgmPlaylistManager.cs:30>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/BgmPlaylistManager.cs:30>
 		int32_t L_0 = __this->___currentPlaylist;
 		return L_0;
 	}
@@ -7085,12 +7092,12 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void BgmPlaylistManager_Reset_m312866B30A958E
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/BgmPlaylistManager.cs:34>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/BgmPlaylistManager.cs:34>
 		AudioSource_t871AC2272F896738252F04EE949AEF5B241D3299* L_0;
 		L_0 = Component_GetComponent_TisAudioSource_t871AC2272F896738252F04EE949AEF5B241D3299_m42DA4DEA19EB60D80CBED7413ADEB27FA033C77B(__this, Component_GetComponent_TisAudioSource_t871AC2272F896738252F04EE949AEF5B241D3299_m42DA4DEA19EB60D80CBED7413ADEB27FA033C77B_RuntimeMethod_var);
 		__this->___source = L_0;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___source), (void*)L_0);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/BgmPlaylistManager.cs:35>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/BgmPlaylistManager.cs:35>
 		return;
 	}
 }
@@ -7105,7 +7112,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void BgmPlaylistManager_Awake_mD88D75F7FDEDDA
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/BgmPlaylistManager.cs:39>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/BgmPlaylistManager.cs:39>
 		AudioSource_t871AC2272F896738252F04EE949AEF5B241D3299* L_0 = __this->___source;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_1;
@@ -7116,7 +7123,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void BgmPlaylistManager_Awake_mD88D75F7FDEDDA
 		}
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/BgmPlaylistManager.cs:39>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/BgmPlaylistManager.cs:39>
 		AudioSource_t871AC2272F896738252F04EE949AEF5B241D3299* L_2;
 		L_2 = Component_GetComponent_TisAudioSource_t871AC2272F896738252F04EE949AEF5B241D3299_m42DA4DEA19EB60D80CBED7413ADEB27FA033C77B(__this, Component_GetComponent_TisAudioSource_t871AC2272F896738252F04EE949AEF5B241D3299_m42DA4DEA19EB60D80CBED7413ADEB27FA033C77B_RuntimeMethod_var);
 		__this->___source = L_2;
@@ -7125,19 +7132,19 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void BgmPlaylistManager_Awake_mD88D75F7FDEDDA
 
 IL_0019:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/BgmPlaylistManager.cs:40>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/BgmPlaylistManager.cs:40>
 		AudioSource_t871AC2272F896738252F04EE949AEF5B241D3299* L_3 = __this->___source;
 		NullCheck(L_3);
 		AudioSource_set_loop_m834A590939D8456008C0F897FD80B0ECFFB7FE56(L_3, (bool)0, NULL);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/BgmPlaylistManager.cs:41>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/BgmPlaylistManager.cs:41>
 		AudioSource_t871AC2272F896738252F04EE949AEF5B241D3299* L_4 = __this->___source;
 		NullCheck(L_4);
 		AudioSource_set_spatialBlend_mCEE7A3E87A8C146E048B2CA3413FDC7BDB7BE001(L_4, (0.0f), NULL);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/BgmPlaylistManager.cs:42>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/BgmPlaylistManager.cs:42>
 		AudioSource_t871AC2272F896738252F04EE949AEF5B241D3299* L_5 = __this->___source;
 		NullCheck(L_5);
 		AudioSource_set_playOnAwake_m7EACC6ECEF12D7BA86A4E5A53603F1C8F9E11949(L_5, (bool)0, NULL);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/BgmPlaylistManager.cs:43>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/BgmPlaylistManager.cs:43>
 		return;
 	}
 }
@@ -7145,7 +7152,7 @@ IL_0019:
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void BgmPlaylistManager_Start_m3B164B1BF79C17B9E306BE9D638BDA3BAEE2AEBD (BgmPlaylistManager_t1E456CA5ADFE23C62634BCBB3ED6C55F01F6661D* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/BgmPlaylistManager.cs:47>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/BgmPlaylistManager.cs:47>
 		bool L_0 = __this->___playWaitingRoomOnStart;
 		if (!L_0)
 		{
@@ -7153,13 +7160,13 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void BgmPlaylistManager_Start_m3B164B1BF79C17
 		}
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/BgmPlaylistManager.cs:48>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/BgmPlaylistManager.cs:48>
 		BgmPlaylistManager_PlayWaitingRoomPlaylist_m87AA527F354E58DE93E02E28C28A49982F33A6E4(__this, NULL);
 	}
 
 IL_000e:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/BgmPlaylistManager.cs:49>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/BgmPlaylistManager.cs:49>
 		return;
 	}
 }
@@ -7167,7 +7174,7 @@ IL_000e:
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void BgmPlaylistManager_OnDisable_m679BD16C8DFA2357908DCB3A211F0AA994EA7A2D (BgmPlaylistManager_t1E456CA5ADFE23C62634BCBB3ED6C55F01F6661D* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/BgmPlaylistManager.cs:53>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/BgmPlaylistManager.cs:53>
 		Coroutine_t85EA685566A254C23F3FD77AB5BDFFFF8799596B* L_0 = __this->___playRoutine;
 		if (!L_0)
 		{
@@ -7175,17 +7182,17 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void BgmPlaylistManager_OnDisable_m679BD16C8D
 		}
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/BgmPlaylistManager.cs:55>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/BgmPlaylistManager.cs:55>
 		Coroutine_t85EA685566A254C23F3FD77AB5BDFFFF8799596B* L_1 = __this->___playRoutine;
 		MonoBehaviour_StopCoroutine_mB0FC91BE84203BD8E360B3FBAE5B958B4C5ED22A(__this, L_1, NULL);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/BgmPlaylistManager.cs:56>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/BgmPlaylistManager.cs:56>
 		__this->___playRoutine = (Coroutine_t85EA685566A254C23F3FD77AB5BDFFFF8799596B*)NULL;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___playRoutine), (void*)(Coroutine_t85EA685566A254C23F3FD77AB5BDFFFF8799596B*)NULL);
 	}
 
 IL_001b:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/BgmPlaylistManager.cs:58>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/BgmPlaylistManager.cs:58>
 		return;
 	}
 }
@@ -7193,9 +7200,9 @@ IL_001b:
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void BgmPlaylistManager_PlayWaitingRoomPlaylist_m87AA527F354E58DE93E02E28C28A49982F33A6E4 (BgmPlaylistManager_t1E456CA5ADFE23C62634BCBB3ED6C55F01F6661D* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/BgmPlaylistManager.cs:62>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/BgmPlaylistManager.cs:62>
 		BgmPlaylistManager_SwitchPlaylist_mD7EBAC460040E523C1B4CAF5317FB54F0EC69833(__this, 1, NULL);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/BgmPlaylistManager.cs:63>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/BgmPlaylistManager.cs:63>
 		return;
 	}
 }
@@ -7203,9 +7210,9 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void BgmPlaylistManager_PlayWaitingRoomPlayli
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void BgmPlaylistManager_PlayMainGamePlaylist_m77A819F5262DA1BFA64245E459AB456BEF65405E (BgmPlaylistManager_t1E456CA5ADFE23C62634BCBB3ED6C55F01F6661D* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/BgmPlaylistManager.cs:67>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/BgmPlaylistManager.cs:67>
 		BgmPlaylistManager_SwitchPlaylist_mD7EBAC460040E523C1B4CAF5317FB54F0EC69833(__this, 2, NULL);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/BgmPlaylistManager.cs:68>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/BgmPlaylistManager.cs:68>
 		return;
 	}
 }
@@ -7213,7 +7220,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void BgmPlaylistManager_PlayMainGamePlaylist_
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void BgmPlaylistManager_SwitchPlaylist_mD7EBAC460040E523C1B4CAF5317FB54F0EC69833 (BgmPlaylistManager_t1E456CA5ADFE23C62634BCBB3ED6C55F01F6661D* __this, int32_t ___0_target, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/BgmPlaylistManager.cs:72>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/BgmPlaylistManager.cs:72>
 		int32_t L_0 = __this->___currentPlaylist;
 		int32_t L_1 = ___0_target;
 		if ((!(((uint32_t)L_0) == ((uint32_t)L_1))))
@@ -7229,16 +7236,16 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void BgmPlaylistManager_SwitchPlaylist_mD7EBA
 		}
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/BgmPlaylistManager.cs:73>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/BgmPlaylistManager.cs:73>
 		return;
 	}
 
 IL_0012:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/BgmPlaylistManager.cs:75>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/BgmPlaylistManager.cs:75>
 		int32_t L_3 = ___0_target;
 		__this->___currentPlaylist = L_3;
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/BgmPlaylistManager.cs:77>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/BgmPlaylistManager.cs:77>
 		Coroutine_t85EA685566A254C23F3FD77AB5BDFFFF8799596B* L_4 = __this->___playRoutine;
 		if (!L_4)
 		{
@@ -7246,21 +7253,21 @@ IL_0012:
 		}
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/BgmPlaylistManager.cs:79>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/BgmPlaylistManager.cs:79>
 		Coroutine_t85EA685566A254C23F3FD77AB5BDFFFF8799596B* L_5 = __this->___playRoutine;
 		MonoBehaviour_StopCoroutine_mB0FC91BE84203BD8E360B3FBAE5B958B4C5ED22A(__this, L_5, NULL);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/BgmPlaylistManager.cs:80>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/BgmPlaylistManager.cs:80>
 		__this->___playRoutine = (Coroutine_t85EA685566A254C23F3FD77AB5BDFFFF8799596B*)NULL;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___playRoutine), (void*)(Coroutine_t85EA685566A254C23F3FD77AB5BDFFFF8799596B*)NULL);
 	}
 
 IL_0034:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/BgmPlaylistManager.cs:83>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/BgmPlaylistManager.cs:83>
 		AudioSource_t871AC2272F896738252F04EE949AEF5B241D3299* L_6 = __this->___source;
 		NullCheck(L_6);
 		AudioSource_Stop_m318F17F17A147C77FF6E0A5A7A6BE057DB90F537(L_6, NULL);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/BgmPlaylistManager.cs:84>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/BgmPlaylistManager.cs:84>
 		int32_t L_7 = ___0_target;
 		RuntimeObject* L_8;
 		L_8 = BgmPlaylistManager_PlayLoopRoutine_m62156282BC56420F2875DF271F58087500633B2E(__this, L_7, NULL);
@@ -7268,7 +7275,7 @@ IL_0034:
 		L_9 = MonoBehaviour_StartCoroutine_m4CAFF732AA28CD3BDC5363B44A863575530EC812(__this, L_8, NULL);
 		__this->___playRoutine = L_9;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___playRoutine), (void*)L_9);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/BgmPlaylistManager.cs:85>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/BgmPlaylistManager.cs:85>
 		return;
 	}
 }
@@ -7312,7 +7319,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR List_1_t33C1B21871505CF0516B63C148CD83EDA452B
 	int32_t V_2 = 0;
 	AudioClipU5BU5D_t916722468F7EDCFA833318C35CD7D41097D75D31* G_B3_0 = NULL;
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/BgmPlaylistManager.cs:115>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/BgmPlaylistManager.cs:115>
 		int32_t L_0 = ___0_playlist;
 		if ((((int32_t)L_0) == ((int32_t)2)))
 		{
@@ -7334,11 +7341,11 @@ IL_000c:
 IL_0012:
 	{
 		V_0 = G_B3_0;
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/BgmPlaylistManager.cs:116>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/BgmPlaylistManager.cs:116>
 		List_1_t33C1B21871505CF0516B63C148CD83EDA452BB5F* L_3 = (List_1_t33C1B21871505CF0516B63C148CD83EDA452BB5F*)il2cpp_codegen_object_new(List_1_t33C1B21871505CF0516B63C148CD83EDA452BB5F_il2cpp_TypeInfo_var);
 		List_1__ctor_m985F72633850464A3301F658B9CD510F7ADCDC33(L_3, List_1__ctor_m985F72633850464A3301F658B9CD510F7ADCDC33_RuntimeMethod_var);
 		V_1 = L_3;
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/BgmPlaylistManager.cs:117>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/BgmPlaylistManager.cs:117>
 		AudioClipU5BU5D_t916722468F7EDCFA833318C35CD7D41097D75D31* L_4 = V_0;
 		if (L_4)
 		{
@@ -7346,21 +7353,21 @@ IL_0012:
 		}
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/BgmPlaylistManager.cs:117>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/BgmPlaylistManager.cs:117>
 		List_1_t33C1B21871505CF0516B63C148CD83EDA452BB5F* L_5 = V_1;
 		return L_5;
 	}
 
 IL_001e:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/BgmPlaylistManager.cs:119>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/BgmPlaylistManager.cs:119>
 		V_2 = 0;
 		goto IL_003a;
 	}
 
 IL_0022:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/BgmPlaylistManager.cs:121>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/BgmPlaylistManager.cs:121>
 		AudioClipU5BU5D_t916722468F7EDCFA833318C35CD7D41097D75D31* L_6 = V_0;
 		int32_t L_7 = V_2;
 		NullCheck(L_6);
@@ -7375,7 +7382,7 @@ IL_0022:
 		}
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/BgmPlaylistManager.cs:122>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/BgmPlaylistManager.cs:122>
 		List_1_t33C1B21871505CF0516B63C148CD83EDA452BB5F* L_11 = V_1;
 		AudioClipU5BU5D_t916722468F7EDCFA833318C35CD7D41097D75D31* L_12 = V_0;
 		int32_t L_13 = V_2;
@@ -7388,14 +7395,14 @@ IL_0022:
 
 IL_0036:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/BgmPlaylistManager.cs:119>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/BgmPlaylistManager.cs:119>
 		int32_t L_16 = V_2;
 		V_2 = ((int32_t)il2cpp_codegen_add(L_16, 1));
 	}
 
 IL_003a:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/BgmPlaylistManager.cs:119>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/BgmPlaylistManager.cs:119>
 		int32_t L_17 = V_2;
 		AudioClipU5BU5D_t916722468F7EDCFA833318C35CD7D41097D75D31* L_18 = V_0;
 		NullCheck(L_18);
@@ -7405,7 +7412,7 @@ IL_003a:
 		}
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/BgmPlaylistManager.cs:125>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/BgmPlaylistManager.cs:125>
 		List_1_t33C1B21871505CF0516B63C148CD83EDA452BB5F* L_19 = V_1;
 		return L_19;
 	}
@@ -7414,11 +7421,11 @@ IL_003a:
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void BgmPlaylistManager__ctor_m87BEDD605D3FBE9BA235763DF2FF246C0C47F49D (BgmPlaylistManager_t1E456CA5ADFE23C62634BCBB3ED6C55F01F6661D* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/BgmPlaylistManager.cs:23>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/BgmPlaylistManager.cs:23>
 		__this->___playWaitingRoomOnStart = (bool)1;
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/BgmPlaylistManager.cs:24>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/BgmPlaylistManager.cs:24>
 		__this->___avoidImmediateRepeat = (bool)1;
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/BgmPlaylistManager.cs:28>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/BgmPlaylistManager.cs:28>
 		__this->___lastClipId = (-1);
 		MonoBehaviour__ctor_m592DB0105CA0BC97AA1C5F4AD27B12D68A3B7C1E(__this, NULL);
 		return;
@@ -7506,14 +7513,14 @@ IL_0022:
 
 IL_002e:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/BgmPlaylistManager.cs:91>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/BgmPlaylistManager.cs:91>
 		BgmPlaylistManager_t1E456CA5ADFE23C62634BCBB3ED6C55F01F6661D* L_3 = V_1;
 		int32_t L_4 = __this->___playlist;
 		NullCheck(L_3);
 		List_1_t33C1B21871505CF0516B63C148CD83EDA452BB5F* L_5;
 		L_5 = BgmPlaylistManager_BuildValidClipList_m4DA30E50497E9CED4D69826A68E524B00D186DEE(L_3, L_4, NULL);
 		V_2 = L_5;
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/BgmPlaylistManager.cs:92>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/BgmPlaylistManager.cs:92>
 		List_1_t33C1B21871505CF0516B63C148CD83EDA452BB5F* L_6 = V_2;
 		NullCheck(L_6);
 		int32_t L_7;
@@ -7524,7 +7531,7 @@ IL_002e:
 		}
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/BgmPlaylistManager.cs:94>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/BgmPlaylistManager.cs:94>
 		WaitForSeconds_tF179DF251655B8DF044952E70A60DF4B358A3DD3* L_8 = (WaitForSeconds_tF179DF251655B8DF044952E70A60DF4B358A3DD3*)il2cpp_codegen_object_new(WaitForSeconds_tF179DF251655B8DF044952E70A60DF4B358A3DD3_il2cpp_TypeInfo_var);
 		WaitForSeconds__ctor_m579F95BADEDBAB4B3A7E302C6EE3995926EF2EFC(L_8, (1.0f), NULL);
 		__this->___U3CU3E2__current = L_8;
@@ -7536,13 +7543,13 @@ IL_002e:
 IL_005c:
 	{
 		__this->___U3CU3E1__state = (-1);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/BgmPlaylistManager.cs:95>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/BgmPlaylistManager.cs:95>
 		goto IL_00fd;
 	}
 
 IL_0068:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/BgmPlaylistManager.cs:98>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/BgmPlaylistManager.cs:98>
 		List_1_t33C1B21871505CF0516B63C148CD83EDA452BB5F* L_9 = V_2;
 		NullCheck(L_9);
 		int32_t L_10;
@@ -7550,7 +7557,7 @@ IL_0068:
 		int32_t L_11;
 		L_11 = Random_Range_m6763D9767F033357F88B6637F048F4ACA4123B68(0, L_10, NULL);
 		V_3 = L_11;
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/BgmPlaylistManager.cs:99>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/BgmPlaylistManager.cs:99>
 		BgmPlaylistManager_t1E456CA5ADFE23C62634BCBB3ED6C55F01F6661D* L_12 = V_1;
 		NullCheck(L_12);
 		bool L_13 = L_12->___avoidImmediateRepeat;
@@ -7580,7 +7587,7 @@ IL_0068:
 		}
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/BgmPlaylistManager.cs:101>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/BgmPlaylistManager.cs:101>
 		int32_t L_19 = V_3;
 		List_1_t33C1B21871505CF0516B63C148CD83EDA452BB5F* L_20 = V_2;
 		NullCheck(L_20);
@@ -7597,12 +7604,12 @@ IL_0068:
 
 IL_00a5:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/BgmPlaylistManager.cs:104>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/BgmPlaylistManager.cs:104>
 		BgmPlaylistManager_t1E456CA5ADFE23C62634BCBB3ED6C55F01F6661D* L_25 = V_1;
 		int32_t L_26 = V_3;
 		NullCheck(L_25);
 		L_25->___lastClipId = L_26;
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/BgmPlaylistManager.cs:105>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/BgmPlaylistManager.cs:105>
 		BgmPlaylistManager_t1E456CA5ADFE23C62634BCBB3ED6C55F01F6661D* L_27 = V_1;
 		NullCheck(L_27);
 		AudioSource_t871AC2272F896738252F04EE949AEF5B241D3299* L_28 = L_27->___source;
@@ -7613,7 +7620,7 @@ IL_00a5:
 		L_31 = List_1_get_Item_mCCE271ACC0B0DF33B9B7D509E4BE078661DECF53(L_29, L_30, List_1_get_Item_mCCE271ACC0B0DF33B9B7D509E4BE078661DECF53_RuntimeMethod_var);
 		NullCheck(L_28);
 		AudioSource_set_clip_mFF441895E274286C88D9C75ED5CA1B1B39528D70(L_28, L_31, NULL);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/BgmPlaylistManager.cs:106>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/BgmPlaylistManager.cs:106>
 		BgmPlaylistManager_t1E456CA5ADFE23C62634BCBB3ED6C55F01F6661D* L_32 = V_1;
 		NullCheck(L_32);
 		AudioSource_t871AC2272F896738252F04EE949AEF5B241D3299* L_33 = L_32->___source;
@@ -7624,7 +7631,7 @@ IL_00a5:
 
 IL_00cb:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/BgmPlaylistManager.cs:109>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/BgmPlaylistManager.cs:109>
 		__this->___U3CU3E2__current = NULL;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___U3CU3E2__current), (void*)NULL);
 		__this->___U3CU3E1__state = 2;
@@ -7638,7 +7645,7 @@ IL_00db:
 
 IL_00e2:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/BgmPlaylistManager.cs:108>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/BgmPlaylistManager.cs:108>
 		BgmPlaylistManager_t1E456CA5ADFE23C62634BCBB3ED6C55F01F6661D* L_34 = V_1;
 		NullCheck(L_34);
 		int32_t L_35 = L_34->___currentPlaylist;
@@ -7663,7 +7670,7 @@ IL_00e2:
 
 IL_00fd:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/BgmPlaylistManager.cs:89>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/BgmPlaylistManager.cs:89>
 		BgmPlaylistManager_t1E456CA5ADFE23C62634BCBB3ED6C55F01F6661D* L_40 = V_1;
 		NullCheck(L_40);
 		int32_t L_41 = L_40->___currentPlaylist;
@@ -7674,7 +7681,7 @@ IL_00fd:
 		}
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/BgmPlaylistManager.cs:111>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/BgmPlaylistManager.cs:111>
 		return (bool)0;
 	}
 }
@@ -7727,11 +7734,11 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void BlockFootprint_RecalculateFromCollider_m
 	Bounds_t367E830C64BBF235ED8C3B2F8CF6254FDCAD39C3 V_2;
 	memset((&V_2), 0, sizeof(V_2));
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/BlockFootPrint.cs:15>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/BlockFootPrint.cs:15>
 		Collider_t1CC3163924FCD6C4CC2E816373A929C1E3D55E76* L_0;
 		L_0 = Component_GetComponentInChildren_TisCollider_t1CC3163924FCD6C4CC2E816373A929C1E3D55E76_m7273BACA077B9D6ECC07FBCB199D9748433411B2(__this, Component_GetComponentInChildren_TisCollider_t1CC3163924FCD6C4CC2E816373A929C1E3D55E76_m7273BACA077B9D6ECC07FBCB199D9748433411B2_RuntimeMethod_var);
 		V_0 = L_0;
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/BlockFootPrint.cs:16>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/BlockFootPrint.cs:16>
 		Collider_t1CC3163924FCD6C4CC2E816373A929C1E3D55E76* L_1 = V_0;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_2;
@@ -7742,13 +7749,13 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void BlockFootprint_RecalculateFromCollider_m
 		}
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/BlockFootPrint.cs:16>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/BlockFootPrint.cs:16>
 		return;
 	}
 
 IL_0010:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/BlockFootPrint.cs:18>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/BlockFootPrint.cs:18>
 		Collider_t1CC3163924FCD6C4CC2E816373A929C1E3D55E76* L_3 = V_0;
 		NullCheck(L_3);
 		Bounds_t367E830C64BBF235ED8C3B2F8CF6254FDCAD39C3 L_4;
@@ -7757,7 +7764,7 @@ IL_0010:
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_5;
 		L_5 = Bounds_get_size_m0699A53A55A78B3201D7270D6F338DFA91B6FAD4_inline((&V_2), NULL);
 		V_1 = L_5;
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/BlockFootPrint.cs:19>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/BlockFootPrint.cs:19>
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_6 = V_1;
 		float L_7 = L_6.___x;
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_8 = V_1;
@@ -7766,7 +7773,7 @@ IL_0010:
 		memset((&L_10), 0, sizeof(L_10));
 		Vector2__ctor_m9525B79969AFFE3254B303A40997A56DEEB6F548_inline((&L_10), L_7, L_9, NULL);
 		__this->___worldSizeXZ = L_10;
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/BlockFootPrint.cs:20>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/BlockFootPrint.cs:20>
 		Collider_t1CC3163924FCD6C4CC2E816373A929C1E3D55E76* L_11 = V_0;
 		NullCheck(L_11);
 		Bounds_t367E830C64BBF235ED8C3B2F8CF6254FDCAD39C3 L_12;
@@ -7775,7 +7782,7 @@ IL_0010:
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_13;
 		L_13 = Bounds_get_extents_mFE6DC407FCE2341BE2C750CB554055D211281D25_inline((&V_2), NULL);
 		__this->___WorldHalfExtents = L_13;
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/BlockFootPrint.cs:21>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/BlockFootPrint.cs:21>
 		return;
 	}
 }
@@ -7783,7 +7790,7 @@ IL_0010:
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void BlockFootprint_Awake_mE36C999AE9D12D68EC9740623E31FC4A360B1E0C (BlockFootprint_t60D904B81BA8C736F5063F58CFA2ED88428B4CDF* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/BlockFootPrint.cs:23>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/BlockFootPrint.cs:23>
 		BlockFootprint_RecalculateFromCollider_m9BF6D43791C07531AD0779CA96FBBF14C3E97F19(__this, NULL);
 		return;
 	}
@@ -7792,7 +7799,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void BlockFootprint_Awake_mE36C999AE9D12D68EC
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void BlockFootprint_OnValidate_m500B0919DE83D6194C9062BB2AD3C6A5B3ACAC36 (BlockFootprint_t60D904B81BA8C736F5063F58CFA2ED88428B4CDF* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/BlockFootPrint.cs:24>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/BlockFootPrint.cs:24>
 		BlockFootprint_RecalculateFromCollider_m9BF6D43791C07531AD0779CA96FBBF14C3E97F19(__this, NULL);
 		return;
 	}
@@ -7809,7 +7816,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void BlockFootprint__ctor_mBB2F8B8EBA1B45C4F5
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/BlockFootPrint.cs:7>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/BlockFootPrint.cs:7>
 		List_1_tB56F1028A724D2CE4E84861619D1CF68C68C983D* L_0 = (List_1_tB56F1028A724D2CE4E84861619D1CF68C68C983D*)il2cpp_codegen_object_new(List_1_tB56F1028A724D2CE4E84861619D1CF68C68C983D_il2cpp_TypeInfo_var);
 		List_1__ctor_mE1D9FD9DA1EF2CAC4F99EF4E013F05BB8C3507EF(L_0, List_1__ctor_mE1D9FD9DA1EF2CAC4F99EF4E013F05BB8C3507EF_RuntimeMethod_var);
 		List_1_tB56F1028A724D2CE4E84861619D1CF68C68C983D* L_1 = L_0;
@@ -7841,12 +7848,12 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void BlockGrab_Awake_m764C529E2D2BF4F4AD0EBE1
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/BlockGrab.cs:11>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/BlockGrab.cs:11>
 		XRGrabInteractable_tAE7E2F24377399C9B5159179E4B43EA6AA55531B* L_0;
 		L_0 = Component_GetComponent_TisXRGrabInteractable_tAE7E2F24377399C9B5159179E4B43EA6AA55531B_m49377F1D0DBAB9BDC59DFC6851E9A5D687717C14(__this, Component_GetComponent_TisXRGrabInteractable_tAE7E2F24377399C9B5159179E4B43EA6AA55531B_m49377F1D0DBAB9BDC59DFC6851E9A5D687717C14_RuntimeMethod_var);
 		__this->___grab = L_0;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___grab), (void*)L_0);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/BlockGrab.cs:12>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/BlockGrab.cs:12>
 		return;
 	}
 }
@@ -7862,7 +7869,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void BlockGrab_OnEnable_mD8D03B80C49F5A498F3E
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/BlockGrab.cs:16>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/BlockGrab.cs:16>
 		XRGrabInteractable_tAE7E2F24377399C9B5159179E4B43EA6AA55531B* L_0 = __this->___grab;
 		NullCheck(L_0);
 		SelectEnterEvent_tBA2614C8C25D8794D5804C4F66195D74E64FC5D0* L_1;
@@ -7871,7 +7878,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void BlockGrab_OnEnable_mD8D03B80C49F5A498F3E
 		UnityAction_1__ctor_mEE39E1A87376378311B4931978E8E07E589E9A24(L_2, __this, (intptr_t)((void*)BlockGrab_OnGrabAttempt_m7FD515867E8DE4F06A6E6AA34AEAA634AD8FD66D_RuntimeMethod_var), NULL);
 		NullCheck(L_1);
 		UnityEvent_1_AddListener_mAE71681FB0832FD7DBA813E5ADDBA574EA32EED2(L_1, L_2, UnityEvent_1_AddListener_mAE71681FB0832FD7DBA813E5ADDBA574EA32EED2_RuntimeMethod_var);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/BlockGrab.cs:17>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/BlockGrab.cs:17>
 		return;
 	}
 }
@@ -7887,7 +7894,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void BlockGrab_OnDisable_m2BDFF0290FE64F8C7E5
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/BlockGrab.cs:21>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/BlockGrab.cs:21>
 		XRGrabInteractable_tAE7E2F24377399C9B5159179E4B43EA6AA55531B* L_0 = __this->___grab;
 		NullCheck(L_0);
 		SelectEnterEvent_tBA2614C8C25D8794D5804C4F66195D74E64FC5D0* L_1;
@@ -7896,7 +7903,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void BlockGrab_OnDisable_m2BDFF0290FE64F8C7E5
 		UnityAction_1__ctor_mEE39E1A87376378311B4931978E8E07E589E9A24(L_2, __this, (intptr_t)((void*)BlockGrab_OnGrabAttempt_m7FD515867E8DE4F06A6E6AA34AEAA634AD8FD66D_RuntimeMethod_var), NULL);
 		NullCheck(L_1);
 		UnityEvent_1_RemoveListener_m1008B118B379B498B23E13BB88779719C22EB9EB(L_1, L_2, UnityEvent_1_RemoveListener_m1008B118B379B498B23E13BB88779719C22EB9EB_RuntimeMethod_var);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/BlockGrab.cs:22>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/BlockGrab.cs:22>
 		return;
 	}
 }
@@ -7904,10 +7911,10 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void BlockGrab_OnDisable_m2BDFF0290FE64F8C7E5
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void BlockGrab_OnGrabAttempt_m7FD515867E8DE4F06A6E6AA34AEAA634AD8FD66D (BlockGrab_t2696BBE44A183859CA9CD914E9ABAF90972480B3* __this, SelectEnterEventArgs_t9220B1E6A9BB5A847C0476949ACE0182430BB938* ___0_args, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/BlockGrab.cs:26>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/BlockGrab.cs:26>
 		SelectEnterEventArgs_t9220B1E6A9BB5A847C0476949ACE0182430BB938* L_0 = ___0_args;
 		BlockGrab_ForceRelease_m5553000F4E2631CF13A1F51DEDE53BFB5D7DA682(__this, L_0, NULL);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/BlockGrab.cs:27>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/BlockGrab.cs:27>
 		return;
 	}
 }
@@ -7921,7 +7928,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void BlockGrab_ForceRelease_m5553000F4E2631CF
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/BlockGrab.cs:31>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/BlockGrab.cs:31>
 		XRGrabInteractable_tAE7E2F24377399C9B5159179E4B43EA6AA55531B* L_0 = __this->___grab;
 		NullCheck(L_0);
 		XRInteractionManager_t93C7F7F0CFEAD83E1A70F92D05B0E663483746CD* L_1;
@@ -7935,7 +7942,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void BlockGrab_ForceRelease_m5553000F4E2631CF
 		}
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/BlockGrab.cs:33>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/BlockGrab.cs:33>
 		XRGrabInteractable_tAE7E2F24377399C9B5159179E4B43EA6AA55531B* L_3 = __this->___grab;
 		NullCheck(L_3);
 		XRInteractionManager_t93C7F7F0CFEAD83E1A70F92D05B0E663483746CD* L_4;
@@ -7951,7 +7958,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void BlockGrab_ForceRelease_m5553000F4E2631CF
 
 IL_002f:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/BlockGrab.cs:35>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/BlockGrab.cs:35>
 		return;
 	}
 }
@@ -7985,7 +7992,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ControllerPressableButton_Awake_m9334E17
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/ControllerPressableButton.cs:20>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/ControllerPressableButton.cs:20>
 		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_0 = __this->___buttonVisual;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_1;
@@ -7996,7 +8003,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ControllerPressableButton_Awake_m9334E17
 		}
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/ControllerPressableButton.cs:21>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/ControllerPressableButton.cs:21>
 		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_2;
 		L_2 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(__this, NULL);
 		__this->___buttonVisual = L_2;
@@ -8005,7 +8012,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ControllerPressableButton_Awake_m9334E17
 
 IL_001a:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/ControllerPressableButton.cs:23>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/ControllerPressableButton.cs:23>
 		XRSimpleInteractable_t7EDF3C91BAEEC571F7C2A2572035B362EE41C8F2* L_3 = __this->___interactable;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_4;
@@ -8016,7 +8023,7 @@ IL_001a:
 		}
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/ControllerPressableButton.cs:24>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/ControllerPressableButton.cs:24>
 		XRSimpleInteractable_t7EDF3C91BAEEC571F7C2A2572035B362EE41C8F2* L_5;
 		L_5 = Component_GetComponent_TisXRSimpleInteractable_t7EDF3C91BAEEC571F7C2A2572035B362EE41C8F2_mCD65FB49B5B2DEBC4220E932DE850CEE5CADA8F2(__this, Component_GetComponent_TisXRSimpleInteractable_t7EDF3C91BAEEC571F7C2A2572035B362EE41C8F2_mCD65FB49B5B2DEBC4220E932DE850CEE5CADA8F2_RuntimeMethod_var);
 		__this->___interactable = L_5;
@@ -8025,13 +8032,13 @@ IL_001a:
 
 IL_0034:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/ControllerPressableButton.cs:26>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/ControllerPressableButton.cs:26>
 		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_6 = __this->___buttonVisual;
 		NullCheck(L_6);
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_7;
 		L_7 = Transform_get_localPosition_mA9C86B990DF0685EA1061A120218993FDCC60A95(L_6, NULL);
 		__this->____startLocalPos = L_7;
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/ControllerPressableButton.cs:28>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/ControllerPressableButton.cs:28>
 		XRSimpleInteractable_t7EDF3C91BAEEC571F7C2A2572035B362EE41C8F2* L_8 = __this->___interactable;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_9;
@@ -8042,7 +8049,7 @@ IL_0034:
 		}
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/ControllerPressableButton.cs:29>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/ControllerPressableButton.cs:29>
 		XRSimpleInteractable_t7EDF3C91BAEEC571F7C2A2572035B362EE41C8F2* L_10 = __this->___interactable;
 		NullCheck(L_10);
 		SelectEnterEvent_tBA2614C8C25D8794D5804C4F66195D74E64FC5D0* L_11;
@@ -8055,7 +8062,7 @@ IL_0034:
 
 IL_006f:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/ControllerPressableButton.cs:30>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/ControllerPressableButton.cs:30>
 		return;
 	}
 }
@@ -8072,7 +8079,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ControllerPressableButton_OnDestroy_m9E6
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/ControllerPressableButton.cs:34>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/ControllerPressableButton.cs:34>
 		XRSimpleInteractable_t7EDF3C91BAEEC571F7C2A2572035B362EE41C8F2* L_0 = __this->___interactable;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_1;
@@ -8083,7 +8090,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ControllerPressableButton_OnDestroy_m9E6
 		}
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/ControllerPressableButton.cs:35>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/ControllerPressableButton.cs:35>
 		XRSimpleInteractable_t7EDF3C91BAEEC571F7C2A2572035B362EE41C8F2* L_2 = __this->___interactable;
 		NullCheck(L_2);
 		SelectEnterEvent_tBA2614C8C25D8794D5804C4F66195D74E64FC5D0* L_3;
@@ -8096,7 +8103,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ControllerPressableButton_OnDestroy_m9E6
 
 IL_002a:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/ControllerPressableButton.cs:36>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/ControllerPressableButton.cs:36>
 		return;
 	}
 }
@@ -8104,7 +8111,7 @@ IL_002a:
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ControllerPressableButton_OnSelectEntered_m2BC33366BA0DE23127F4AD518468D4F82F255ABC (ControllerPressableButton_tD8469795ADAC195444E6D1B89AE28AD4E6BF6FFB* __this, SelectEnterEventArgs_t9220B1E6A9BB5A847C0476949ACE0182430BB938* ___0_args, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/ControllerPressableButton.cs:40>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/ControllerPressableButton.cs:40>
 		bool L_0 = __this->____isAnimating;
 		if (L_0)
 		{
@@ -8112,7 +8119,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ControllerPressableButton_OnSelectEntere
 		}
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/ControllerPressableButton.cs:41>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/ControllerPressableButton.cs:41>
 		RuntimeObject* L_1;
 		L_1 = ControllerPressableButton_PressRoutine_m8B343503B56D1551F47E57128FD4FB91EF79D36A(__this, NULL);
 		Coroutine_t85EA685566A254C23F3FD77AB5BDFFFF8799596B* L_2;
@@ -8121,7 +8128,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ControllerPressableButton_OnSelectEntere
 
 IL_0015:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/ControllerPressableButton.cs:42>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/ControllerPressableButton.cs:42>
 		return;
 	}
 }
@@ -8148,14 +8155,14 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* ControllerPressableButton_Pres
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ControllerPressableButton__ctor_m84A36C514B994B8115174D1E8D13703DE3D85F01 (ControllerPressableButton_tD8469795ADAC195444E6D1B89AE28AD4E6BF6FFB* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/ControllerPressableButton.cs:11>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/ControllerPressableButton.cs:11>
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_0;
 		memset((&L_0), 0, sizeof(L_0));
 		Vector3__ctor_m376936E6B999EF1ECBE57D990A386303E2283DE0_inline((&L_0), (0.0f), (-0.0149999997f), (0.0f), NULL);
 		__this->___pressedLocalOffset = L_0;
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/ControllerPressableButton.cs:12>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/ControllerPressableButton.cs:12>
 		__this->___pressDuration = (0.0799999982f);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/ControllerPressableButton.cs:13>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/ControllerPressableButton.cs:13>
 		__this->___releaseDuration = (0.119999997f);
 		MonoBehaviour__ctor_m592DB0105CA0BC97AA1C5F4AD27B12D68A3B7C1E(__this, NULL);
 		return;
@@ -8222,11 +8229,11 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool U3CPressRoutineU3Ed__10_MoveNext_mF338CA
 IL_0022:
 	{
 		__this->___U3CU3E1__state = (-1);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/ControllerPressableButton.cs:46>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/ControllerPressableButton.cs:46>
 		ControllerPressableButton_tD8469795ADAC195444E6D1B89AE28AD4E6BF6FFB* L_3 = V_1;
 		NullCheck(L_3);
 		L_3->____isAnimating = (bool)1;
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/ControllerPressableButton.cs:48>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/ControllerPressableButton.cs:48>
 		ControllerPressableButton_tD8469795ADAC195444E6D1B89AE28AD4E6BF6FFB* L_4 = V_1;
 		NullCheck(L_4);
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_5 = L_4->____startLocalPos;
@@ -8236,19 +8243,19 @@ IL_0022:
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_8;
 		L_8 = Vector3_op_Addition_m78C0EC70CB66E8DCAC225743D82B268DAEE92067_inline(L_5, L_7, NULL);
 		__this->___U3CpressedPosU3E5__2 = L_8;
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/ControllerPressableButton.cs:50>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/ControllerPressableButton.cs:50>
 		__this->___U3CtU3E5__3 = (0.0f);
 		goto IL_00ad;
 	}
 
 IL_0054:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/ControllerPressableButton.cs:53>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/ControllerPressableButton.cs:53>
 		float L_9 = __this->___U3CtU3E5__3;
 		float L_10;
 		L_10 = Time_get_deltaTime_mC3195000401F0FD167DD2F948FD2BC58330D0865(NULL);
 		__this->___U3CtU3E5__3 = ((float)il2cpp_codegen_add(L_9, L_10));
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/ControllerPressableButton.cs:54>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/ControllerPressableButton.cs:54>
 		float L_11 = __this->___U3CtU3E5__3;
 		ControllerPressableButton_tD8469795ADAC195444E6D1B89AE28AD4E6BF6FFB* L_12 = V_1;
 		NullCheck(L_12);
@@ -8256,7 +8263,7 @@ IL_0054:
 		float L_14;
 		L_14 = Mathf_Clamp01_mA7E048DBDA832D399A581BE4D6DED9FA44CE0F14_inline(((float)(L_11/L_13)), NULL);
 		V_2 = L_14;
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/ControllerPressableButton.cs:55>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/ControllerPressableButton.cs:55>
 		ControllerPressableButton_tD8469795ADAC195444E6D1B89AE28AD4E6BF6FFB* L_15 = V_1;
 		NullCheck(L_15);
 		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_16 = L_15->___buttonVisual;
@@ -8269,7 +8276,7 @@ IL_0054:
 		L_21 = Vector3_Lerp_m3A906D0530A94FAABB94F0F905E84D99BE85C3F8_inline(L_18, L_19, L_20, NULL);
 		NullCheck(L_16);
 		Transform_set_localPosition_mDE1C997F7D79C0885210B7732B4BA50EE7D73134(L_16, L_21, NULL);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/ControllerPressableButton.cs:56>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/ControllerPressableButton.cs:56>
 		__this->___U3CU3E2__current = NULL;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___U3CU3E2__current), (void*)NULL);
 		__this->___U3CU3E1__state = 1;
@@ -8283,7 +8290,7 @@ IL_00a6:
 
 IL_00ad:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/ControllerPressableButton.cs:51>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/ControllerPressableButton.cs:51>
 		float L_22 = __this->___U3CtU3E5__3;
 		ControllerPressableButton_tD8469795ADAC195444E6D1B89AE28AD4E6BF6FFB* L_23 = V_1;
 		NullCheck(L_23);
@@ -8294,19 +8301,19 @@ IL_00ad:
 		}
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/ControllerPressableButton.cs:59>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/ControllerPressableButton.cs:59>
 		__this->___U3CtU3E5__3 = (0.0f);
 		goto IL_0121;
 	}
 
 IL_00c8:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/ControllerPressableButton.cs:62>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/ControllerPressableButton.cs:62>
 		float L_25 = __this->___U3CtU3E5__3;
 		float L_26;
 		L_26 = Time_get_deltaTime_mC3195000401F0FD167DD2F948FD2BC58330D0865(NULL);
 		__this->___U3CtU3E5__3 = ((float)il2cpp_codegen_add(L_25, L_26));
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/ControllerPressableButton.cs:63>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/ControllerPressableButton.cs:63>
 		float L_27 = __this->___U3CtU3E5__3;
 		ControllerPressableButton_tD8469795ADAC195444E6D1B89AE28AD4E6BF6FFB* L_28 = V_1;
 		NullCheck(L_28);
@@ -8314,7 +8321,7 @@ IL_00c8:
 		float L_30;
 		L_30 = Mathf_Clamp01_mA7E048DBDA832D399A581BE4D6DED9FA44CE0F14_inline(((float)(L_27/L_29)), NULL);
 		V_3 = L_30;
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/ControllerPressableButton.cs:64>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/ControllerPressableButton.cs:64>
 		ControllerPressableButton_tD8469795ADAC195444E6D1B89AE28AD4E6BF6FFB* L_31 = V_1;
 		NullCheck(L_31);
 		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_32 = L_31->___buttonVisual;
@@ -8327,7 +8334,7 @@ IL_00c8:
 		L_37 = Vector3_Lerp_m3A906D0530A94FAABB94F0F905E84D99BE85C3F8_inline(L_33, L_35, L_36, NULL);
 		NullCheck(L_32);
 		Transform_set_localPosition_mDE1C997F7D79C0885210B7732B4BA50EE7D73134(L_32, L_37, NULL);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/ControllerPressableButton.cs:65>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/ControllerPressableButton.cs:65>
 		__this->___U3CU3E2__current = NULL;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___U3CU3E2__current), (void*)NULL);
 		__this->___U3CU3E1__state = 2;
@@ -8341,7 +8348,7 @@ IL_011a:
 
 IL_0121:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/ControllerPressableButton.cs:60>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/ControllerPressableButton.cs:60>
 		float L_38 = __this->___U3CtU3E5__3;
 		ControllerPressableButton_tD8469795ADAC195444E6D1B89AE28AD4E6BF6FFB* L_39 = V_1;
 		NullCheck(L_39);
@@ -8352,7 +8359,7 @@ IL_0121:
 		}
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/ControllerPressableButton.cs:68>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/ControllerPressableButton.cs:68>
 		ControllerPressableButton_tD8469795ADAC195444E6D1B89AE28AD4E6BF6FFB* L_41 = V_1;
 		NullCheck(L_41);
 		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_42 = L_41->___buttonVisual;
@@ -8361,11 +8368,11 @@ IL_0121:
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_44 = L_43->____startLocalPos;
 		NullCheck(L_42);
 		Transform_set_localPosition_mDE1C997F7D79C0885210B7732B4BA50EE7D73134(L_42, L_44, NULL);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/ControllerPressableButton.cs:69>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/ControllerPressableButton.cs:69>
 		ControllerPressableButton_tD8469795ADAC195444E6D1B89AE28AD4E6BF6FFB* L_45 = V_1;
 		NullCheck(L_45);
 		L_45->____isAnimating = (bool)0;
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/ControllerPressableButton.cs:70>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/ControllerPressableButton.cs:70>
 		return (bool)0;
 	}
 }
@@ -8406,7 +8413,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CPressRoutineU3Ed__10_System
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool CuttableObject_get_IsCut_m0AA441C0B6E03F7E664B69B3A2FBE0AF65C34CB9 (CuttableObject_t00D99541FCCE75FBA7C9D873054FA1C29D1D4F06* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/CuttableObject.cs:12>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/CuttableObject.cs:12>
 		bool L_0 = __this->___U3CIsCutU3Ek__BackingField;
 		return L_0;
 	}
@@ -8415,7 +8422,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool CuttableObject_get_IsCut_m0AA441C0B6E03F
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CuttableObject_set_IsCut_m0C37FF1F750B896F146838D2E2C7FE031107199C (CuttableObject_t00D99541FCCE75FBA7C9D873054FA1C29D1D4F06* __this, bool ___0_value, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/CuttableObject.cs:12>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/CuttableObject.cs:12>
 		bool L_0 = ___0_value;
 		__this->___U3CIsCutU3Ek__BackingField = L_0;
 		return;
@@ -8425,7 +8432,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CuttableObject_set_IsCut_m0C37FF1F750B89
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* CuttableObject_get_word_m0CA57B254BC0225D3C53F546DE92C9A025AE5819 (CuttableObject_t00D99541FCCE75FBA7C9D873054FA1C29D1D4F06* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/CuttableObject.cs:14>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/CuttableObject.cs:14>
 		String_t* L_0 = __this->___U3CwordU3Ek__BackingField;
 		return L_0;
 	}
@@ -8434,7 +8441,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* CuttableObject_get_word_m0CA57B254B
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CuttableObject_set_word_m77BC1A39D2642E0710C522C0E01EBE1B6A43372C (CuttableObject_t00D99541FCCE75FBA7C9D873054FA1C29D1D4F06* __this, String_t* ___0_value, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/CuttableObject.cs:14>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/CuttableObject.cs:14>
 		String_t* L_0 = ___0_value;
 		__this->___U3CwordU3Ek__BackingField = L_0;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___U3CwordU3Ek__BackingField), (void*)L_0);
@@ -8445,7 +8452,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CuttableObject_set_word_m77BC1A39D2642E0
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CuttableObject_Awake_mCBC222DC4153AD16AD0B66957669B7EEBCD7E114 (CuttableObject_t00D99541FCCE75FBA7C9D873054FA1C29D1D4F06* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/CuttableObject.cs:18>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/CuttableObject.cs:18>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_0;
 		L_0 = Component_get_gameObject_m57AEFBB14DB39EC476F740BA000E170355DE691B(__this, NULL);
 		NullCheck(L_0);
@@ -8455,7 +8462,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CuttableObject_Awake_mCBC222DC4153AD16AD
 		String_t* L_2;
 		L_2 = String_ToUpperInvariant_mD73F658CDE1280A527231DC305B66CF09B64E5AB(L_1, NULL);
 		CuttableObject_set_word_m77BC1A39D2642E0710C522C0E01EBE1B6A43372C_inline(__this, L_2, NULL);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/CuttableObject.cs:19>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/CuttableObject.cs:19>
 		return;
 	}
 }
@@ -8485,7 +8492,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CuttableObject_DoCut_m6B5606556D91351B90
 	LetterSpawner_tBC161CA12FDE232F59203076963EF412B105F844* G_B14_0 = NULL;
 	LetterSpawner_tBC161CA12FDE232F59203076963EF412B105F844* G_B13_0 = NULL;
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/CuttableObject.cs:23>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/CuttableObject.cs:23>
 		bool L_0;
 		L_0 = CuttableObject_get_IsCut_m0AA441C0B6E03F7E664B69B3A2FBE0AF65C34CB9_inline(__this, NULL);
 		if (!L_0)
@@ -8494,19 +8501,19 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CuttableObject_DoCut_m6B5606556D91351B90
 		}
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/CuttableObject.cs:23>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/CuttableObject.cs:23>
 		return;
 	}
 
 IL_0009:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/CuttableObject.cs:24>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/CuttableObject.cs:24>
 		CuttableObject_set_IsCut_m0C37FF1F750B896F146838D2E2C7FE031107199C_inline(__this, (bool)1, NULL);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/CuttableObject.cs:25>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/CuttableObject.cs:25>
 		NetworkedObject_tE3E9824D3F2F3E9806E8197BBE87C61FF99361F8* L_1;
 		L_1 = Component_GetComponent_TisNetworkedObject_tE3E9824D3F2F3E9806E8197BBE87C61FF99361F8_mCECE75A8C5B119DC20854FB1C5F978F45CA0E7BC(__this, Component_GetComponent_TisNetworkedObject_tE3E9824D3F2F3E9806E8197BBE87C61FF99361F8_mCECE75A8C5B119DC20854FB1C5F978F45CA0E7BC_RuntimeMethod_var);
 		V_0 = L_1;
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/CuttableObject.cs:27>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/CuttableObject.cs:27>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_2 = __this->___halfPrefabA;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_3;
@@ -8529,14 +8536,14 @@ IL_0009:
 
 IL_0031:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/CuttableObject.cs:29>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/CuttableObject.cs:29>
 		String_t* L_6;
 		L_6 = Object_get_name_mAC2F6B897CF1303BA4249B4CB55271AFACBB6392(__this, NULL);
 		String_t* L_7;
 		L_7 = String_Concat_m8855A6DE10F84DA7F4EC113CADDB59873A25573B(_stringLiteral782E4D3FA7169FA53BC1D8EB83CE8EB081BBDA32, L_6, _stringLiteral26692AB6D7FA9045F58BE8EE7C0FC46DDA5BFA43, NULL);
 		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 		Debug_LogWarning_m33EF1B897E0C7C6FF538989610BFAFFEF4628CA9(L_7, NULL);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/CuttableObject.cs:31>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/CuttableObject.cs:31>
 		LetterSpawner_tBC161CA12FDE232F59203076963EF412B105F844* L_8;
 		L_8 = LetterSpawner_get_Instance_mDE743C5373029C238F50FE9E4F1A4F5C0241A009_inline(NULL);
 		LetterSpawner_tBC161CA12FDE232F59203076963EF412B105F844* L_9 = L_8;
@@ -8562,7 +8569,7 @@ IL_0056:
 
 IL_0062:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/CuttableObject.cs:32>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/CuttableObject.cs:32>
 		NetworkedObject_tE3E9824D3F2F3E9806E8197BBE87C61FF99361F8* L_12 = V_0;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_13;
@@ -8573,7 +8580,7 @@ IL_0062:
 		}
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/CuttableObject.cs:33>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/CuttableObject.cs:33>
 		NetworkedObject_tE3E9824D3F2F3E9806E8197BBE87C61FF99361F8* L_14 = V_0;
 		NullCheck(L_14);
 		NetworkedObject_BroadcastActiveSelf_mC0C7FBB192C2EDD5B7585CD932114652E0211B44(L_14, (bool)0, NULL);
@@ -8581,7 +8588,7 @@ IL_0062:
 
 IL_0072:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/CuttableObject.cs:35>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/CuttableObject.cs:35>
 		bool L_15 = __this->___destroyOriginal;
 		if (!L_15)
 		{
@@ -8589,7 +8596,7 @@ IL_0072:
 		}
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/CuttableObject.cs:35>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/CuttableObject.cs:35>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_16;
 		L_16 = Component_get_gameObject_m57AEFBB14DB39EC476F740BA000E170355DE691B(__this, NULL);
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
@@ -8599,32 +8606,32 @@ IL_0072:
 
 IL_0086:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/CuttableObject.cs:36>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/CuttableObject.cs:36>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_17;
 		L_17 = Component_get_gameObject_m57AEFBB14DB39EC476F740BA000E170355DE691B(__this, NULL);
 		NullCheck(L_17);
 		GameObject_SetActive_m638E92E1E75E519E5B24CF150B08CA8E0CDFAB92(L_17, (bool)0, NULL);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/CuttableObject.cs:37>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/CuttableObject.cs:37>
 		return;
 	}
 
 IL_0093:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/CuttableObject.cs:41>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/CuttableObject.cs:41>
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_18;
 		L_18 = Vector3_get_normalized_m736BBF65D5CDA7A18414370D15B4DFCC1E466F07_inline((&___1_planeNormal), NULL);
 		float L_19 = __this->___spawnOffset;
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_20;
 		L_20 = Vector3_op_Multiply_m87BA7C578F96C8E49BB07088DAAC4649F83B0353_inline(L_18, L_19, NULL);
 		V_1 = L_20;
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/CuttableObject.cs:44>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/CuttableObject.cs:44>
 		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_21;
 		L_21 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(__this, NULL);
 		NullCheck(L_21);
 		Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 L_22;
 		L_22 = Transform_get_rotation_m32AF40CA0D50C797DA639A696F8EAEC7524C179C(L_21, NULL);
 		V_2 = L_22;
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/CuttableObject.cs:46>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/CuttableObject.cs:46>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_23 = __this->___halfPrefabA;
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_24 = ___0_cutCenter;
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_25 = V_1;
@@ -8635,7 +8642,7 @@ IL_0093:
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_28;
 		L_28 = Object_Instantiate_TisGameObject_t76FEDD663AB33C991A9C9A23129337651094216F_m831D2F71DF2AA6C93AFDFEFA04CF2CFC5FBBCDB4(L_23, L_26, L_27, Object_Instantiate_TisGameObject_t76FEDD663AB33C991A9C9A23129337651094216F_m831D2F71DF2AA6C93AFDFEFA04CF2CFC5FBBCDB4_RuntimeMethod_var);
 		V_3 = L_28;
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/CuttableObject.cs:47>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/CuttableObject.cs:47>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_29 = __this->___halfPrefabB;
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_30 = ___0_cutCenter;
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_31 = V_1;
@@ -8645,7 +8652,7 @@ IL_0093:
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_34;
 		L_34 = Object_Instantiate_TisGameObject_t76FEDD663AB33C991A9C9A23129337651094216F_m831D2F71DF2AA6C93AFDFEFA04CF2CFC5FBBCDB4(L_29, L_32, L_33, Object_Instantiate_TisGameObject_t76FEDD663AB33C991A9C9A23129337651094216F_m831D2F71DF2AA6C93AFDFEFA04CF2CFC5FBBCDB4_RuntimeMethod_var);
 		V_4 = L_34;
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/CuttableObject.cs:49>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/CuttableObject.cs:49>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_35 = V_3;
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_36 = ___2_initialVelocity;
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_37;
@@ -8655,7 +8662,7 @@ IL_0093:
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_39;
 		L_39 = Vector3_op_Addition_m78C0EC70CB66E8DCAC225743D82B268DAEE92067_inline(L_36, L_38, NULL);
 		CuttableObject_SetupHalf_m4E39C6DAE0740D484228B2D7EF3D5F8FC40B2E66(__this, L_35, L_39, NULL);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/CuttableObject.cs:50>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/CuttableObject.cs:50>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_40 = V_4;
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_41 = ___2_initialVelocity;
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_42;
@@ -8665,7 +8672,7 @@ IL_0093:
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_44;
 		L_44 = Vector3_op_Subtraction_mE42023FF80067CB44A1D4A27EB7CF2B24CABB828_inline(L_41, L_43, NULL);
 		CuttableObject_SetupHalf_m4E39C6DAE0740D484228B2D7EF3D5F8FC40B2E66(__this, L_40, L_44, NULL);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/CuttableObject.cs:52>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/CuttableObject.cs:52>
 		LetterSpawner_tBC161CA12FDE232F59203076963EF412B105F844* L_45;
 		L_45 = LetterSpawner_get_Instance_mDE743C5373029C238F50FE9E4F1A4F5C0241A009_inline(NULL);
 		LetterSpawner_tBC161CA12FDE232F59203076963EF412B105F844* L_46 = L_45;
@@ -8691,7 +8698,7 @@ IL_0123:
 
 IL_012f:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/CuttableObject.cs:53>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/CuttableObject.cs:53>
 		NetworkedObject_tE3E9824D3F2F3E9806E8197BBE87C61FF99361F8* L_49 = V_0;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_50;
@@ -8702,7 +8709,7 @@ IL_012f:
 		}
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/CuttableObject.cs:54>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/CuttableObject.cs:54>
 		NetworkedObject_tE3E9824D3F2F3E9806E8197BBE87C61FF99361F8* L_51 = V_0;
 		NullCheck(L_51);
 		NetworkedObject_BroadcastActiveSelf_mC0C7FBB192C2EDD5B7585CD932114652E0211B44(L_51, (bool)0, NULL);
@@ -8710,7 +8717,7 @@ IL_012f:
 
 IL_013f:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/CuttableObject.cs:56>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/CuttableObject.cs:56>
 		bool L_52 = __this->___destroyOriginal;
 		if (!L_52)
 		{
@@ -8718,7 +8725,7 @@ IL_013f:
 		}
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/CuttableObject.cs:56>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/CuttableObject.cs:56>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_53;
 		L_53 = Component_get_gameObject_m57AEFBB14DB39EC476F740BA000E170355DE691B(__this, NULL);
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
@@ -8728,12 +8735,12 @@ IL_013f:
 
 IL_0153:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/CuttableObject.cs:57>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/CuttableObject.cs:57>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_54;
 		L_54 = Component_get_gameObject_m57AEFBB14DB39EC476F740BA000E170355DE691B(__this, NULL);
 		NullCheck(L_54);
 		GameObject_SetActive_m638E92E1E75E519E5B24CF150B08CA8E0CDFAB92(L_54, (bool)0, NULL);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/CuttableObject.cs:58>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/CuttableObject.cs:58>
 		return;
 	}
 }
@@ -8750,7 +8757,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CuttableObject_SetupHalf_m4E39C6DAE0740D
 	}
 	Rigidbody_t268697F5A994213ED97393309870968BC1C7393C* V_0 = NULL;
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/CuttableObject.cs:62>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/CuttableObject.cs:62>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_0 = ___0_go;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_1;
@@ -8761,19 +8768,19 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CuttableObject_SetupHalf_m4E39C6DAE0740D
 		}
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/CuttableObject.cs:62>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/CuttableObject.cs:62>
 		return;
 	}
 
 IL_0009:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/CuttableObject.cs:64>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/CuttableObject.cs:64>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_2 = ___0_go;
 		NullCheck(L_2);
 		Rigidbody_t268697F5A994213ED97393309870968BC1C7393C* L_3;
 		L_3 = GameObject_GetComponent_TisRigidbody_t268697F5A994213ED97393309870968BC1C7393C_m2D7F86C77ECF9B82AAC077B511F1004280571B90(L_2, GameObject_GetComponent_TisRigidbody_t268697F5A994213ED97393309870968BC1C7393C_m2D7F86C77ECF9B82AAC077B511F1004280571B90_RuntimeMethod_var);
 		V_0 = L_3;
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/CuttableObject.cs:65>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/CuttableObject.cs:65>
 		Rigidbody_t268697F5A994213ED97393309870968BC1C7393C* L_4 = V_0;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_5;
@@ -8791,7 +8798,7 @@ IL_0009:
 		}
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/CuttableObject.cs:65>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/CuttableObject.cs:65>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_7 = ___0_go;
 		NullCheck(L_7);
 		Rigidbody_t268697F5A994213ED97393309870968BC1C7393C* L_8;
@@ -8801,7 +8808,7 @@ IL_0009:
 
 IL_0027:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/CuttableObject.cs:66>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/CuttableObject.cs:66>
 		Rigidbody_t268697F5A994213ED97393309870968BC1C7393C* L_9 = V_0;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_10;
@@ -8812,12 +8819,12 @@ IL_0027:
 		}
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/CuttableObject.cs:68>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/CuttableObject.cs:68>
 		Rigidbody_t268697F5A994213ED97393309870968BC1C7393C* L_11 = V_0;
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_12 = ___1_vel;
 		NullCheck(L_11);
 		Rigidbody_set_linearVelocity_m29AE03D5FC079EAD4202FCF72E2AEBDC19363985(L_11, L_12, NULL);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/CuttableObject.cs:69>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/CuttableObject.cs:69>
 		Rigidbody_t268697F5A994213ED97393309870968BC1C7393C* L_13 = V_0;
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_14;
 		L_14 = Random_get_insideUnitSphere_mA488D6859560B73565B8D890ED6B39DB4091C54F(NULL);
@@ -8829,7 +8836,7 @@ IL_0027:
 
 IL_004b:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/CuttableObject.cs:71>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/CuttableObject.cs:71>
 		return;
 	}
 }
@@ -8837,11 +8844,11 @@ IL_004b:
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CuttableObject__ctor_m1180FBEAAFCD3028BE2BCE734C128A01DE9F28DB (CuttableObject_t00D99541FCCE75FBA7C9D873054FA1C29D1D4F06* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/CuttableObject.cs:8>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/CuttableObject.cs:8>
 		__this->___spawnOffset = (0.00999999978f);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/CuttableObject.cs:9>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/CuttableObject.cs:9>
 		__this->___addRigidbodyIfMissing = (bool)1;
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/CuttableObject.cs:10>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/CuttableObject.cs:10>
 		__this->___destroyOriginal = (bool)1;
 		MonoBehaviour__ctor_m592DB0105CA0BC97AA1C5F4AD27B12D68A3B7C1E(__this, NULL);
 		return;
@@ -8866,7 +8873,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* DualNetworkedObject_get_MyKey_mAFC3
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/DualNetworkedObject.cs:30>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/DualNetworkedObject.cs:30>
 		String_t* L_0 = __this->___id;
 		RoomClient_t124F52F8602AB535AC105F1E470809979EDA2A4F* L_1 = __this->___roomClient;
 		NullCheck(L_1);
@@ -8903,7 +8910,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DualNetworkedObject_Start_mF5D349E6498E3
 	NetworkId_tD5FA0360D2F8AE544493A7D1A6C7C90B28735CE7 V_0;
 	memset((&V_0), 0, sizeof(V_0));
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/DualNetworkedObject.cs:35>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/DualNetworkedObject.cs:35>
 		NetworkContext_t49239659157E00ACFF3A196AF00218DED40F9310 L_0;
 		L_0 = NetworkScene_Register_m0F251779B3FEA29EAE6A5DBCDDCC0E50596A6545(__this, NULL);
 		__this->___context = L_0;
@@ -8911,13 +8918,13 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DualNetworkedObject_Start_mF5D349E6498E3
 		#if IL2CPP_ENABLE_STRICT_WRITE_BARRIERS
 		Il2CppCodeGenWriteBarrier((void**)&(((&__this->___context))->___Component), (void*)NULL);
 		#endif
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/DualNetworkedObject.cs:36>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/DualNetworkedObject.cs:36>
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		RoomClient_t124F52F8602AB535AC105F1E470809979EDA2A4F* L_1;
 		L_1 = Object_FindAnyObjectByType_TisRoomClient_t124F52F8602AB535AC105F1E470809979EDA2A4F_m8D23DA0D2CD0BFC28CDF6FEF19C6D592B74D5DE4(Object_FindAnyObjectByType_TisRoomClient_t124F52F8602AB535AC105F1E470809979EDA2A4F_m8D23DA0D2CD0BFC28CDF6FEF19C6D592B74D5DE4_RuntimeMethod_var);
 		__this->___roomClient = L_1;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___roomClient), (void*)L_1);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/DualNetworkedObject.cs:37>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/DualNetworkedObject.cs:37>
 		NetworkId_tD5FA0360D2F8AE544493A7D1A6C7C90B28735CE7 L_2;
 		L_2 = NetworkId_Create_mCCF322BE02BC428984ED26020286B09707F5CD5E(__this, NULL);
 		V_0 = L_2;
@@ -8925,12 +8932,12 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DualNetworkedObject_Start_mF5D349E6498E3
 		L_3 = NetworkId_ToString_m84BE8372502BBDBC5F1BE05FF48CAB237702E013((&V_0), NULL);
 		__this->___id = L_3;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___id), (void*)L_3);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/DualNetworkedObject.cs:38>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/DualNetworkedObject.cs:38>
 		XRGrabInteractable_tAE7E2F24377399C9B5159179E4B43EA6AA55531B* L_4;
 		L_4 = Component_GetComponent_TisXRGrabInteractable_tAE7E2F24377399C9B5159179E4B43EA6AA55531B_m49377F1D0DBAB9BDC59DFC6851E9A5D687717C14(__this, Component_GetComponent_TisXRGrabInteractable_tAE7E2F24377399C9B5159179E4B43EA6AA55531B_m49377F1D0DBAB9BDC59DFC6851E9A5D687717C14_RuntimeMethod_var);
 		__this->___grab = L_4;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___grab), (void*)L_4);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/DualNetworkedObject.cs:39>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/DualNetworkedObject.cs:39>
 		XRGrabInteractable_tAE7E2F24377399C9B5159179E4B43EA6AA55531B* L_5 = __this->___grab;
 		bool L_6;
 		L_6 = Object_op_Inequality_mD0BE578448EAA61948F25C32F8DD55AB1F778602(L_5, (Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C*)NULL, NULL);
@@ -8940,7 +8947,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DualNetworkedObject_Start_mF5D349E6498E3
 		}
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/DualNetworkedObject.cs:41>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/DualNetworkedObject.cs:41>
 		XRGrabInteractable_tAE7E2F24377399C9B5159179E4B43EA6AA55531B* L_7 = __this->___grab;
 		NullCheck(L_7);
 		SelectEnterEvent_tBA2614C8C25D8794D5804C4F66195D74E64FC5D0* L_8;
@@ -8949,7 +8956,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DualNetworkedObject_Start_mF5D349E6498E3
 		UnityAction_1__ctor_mEE39E1A87376378311B4931978E8E07E589E9A24(L_9, __this, (intptr_t)((void*)DualNetworkedObject_OnGrab_m53F46209EBCFF0279204B56AC01738E3E91C6F85_RuntimeMethod_var), NULL);
 		NullCheck(L_8);
 		UnityEvent_1_AddListener_mAE71681FB0832FD7DBA813E5ADDBA574EA32EED2(L_8, L_9, UnityEvent_1_AddListener_mAE71681FB0832FD7DBA813E5ADDBA574EA32EED2_RuntimeMethod_var);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/DualNetworkedObject.cs:42>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/DualNetworkedObject.cs:42>
 		XRGrabInteractable_tAE7E2F24377399C9B5159179E4B43EA6AA55531B* L_10 = __this->___grab;
 		NullCheck(L_10);
 		SelectExitEvent_t15DC0A39F9657BA9E6BAE6250D8D64C9671201F6* L_11;
@@ -8962,12 +8969,12 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DualNetworkedObject_Start_mF5D349E6498E3
 
 IL_0083:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/DualNetworkedObject.cs:44>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/DualNetworkedObject.cs:44>
 		Rigidbody_t268697F5A994213ED97393309870968BC1C7393C* L_13;
 		L_13 = Component_GetComponent_TisRigidbody_t268697F5A994213ED97393309870968BC1C7393C_m4B5CAD64B52D153BEA96432633CA9A45FA523DD8(__this, Component_GetComponent_TisRigidbody_t268697F5A994213ED97393309870968BC1C7393C_m4B5CAD64B52D153BEA96432633CA9A45FA523DD8_RuntimeMethod_var);
 		__this->___rb = L_13;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___rb), (void*)L_13);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/DualNetworkedObject.cs:45>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/DualNetworkedObject.cs:45>
 		RoomClient_t124F52F8602AB535AC105F1E470809979EDA2A4F* L_14 = __this->___roomClient;
 		NullCheck(L_14);
 		RuntimeObject* L_15;
@@ -8976,7 +8983,7 @@ IL_0083:
 		L_16 = DualNetworkedObject_get_MyKey_mAFC3F8E014CFD495D613393F81E09A4F40329EB2(__this, NULL);
 		NullCheck(L_15);
 		InterfaceActionInvoker2< String_t*, String_t* >::Invoke(5, IRoom_tE9F34CE2E028BF3AF61025BC3BBB92B06DC44EE8_il2cpp_TypeInfo_var, L_15, L_16, _stringLiteralF944DCD635F9801F7AC90A407FBC479964DEC024);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/DualNetworkedObject.cs:46>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/DualNetworkedObject.cs:46>
 		return;
 	}
 }
@@ -8990,10 +8997,10 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DualNetworkedObject_OnGrab_m53F46209EBCF
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/DualNetworkedObject.cs:50>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/DualNetworkedObject.cs:50>
 		int32_t L_0 = __this->___localGrabCount;
 		__this->___localGrabCount = ((int32_t)il2cpp_codegen_add(L_0, 1));
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/DualNetworkedObject.cs:51>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/DualNetworkedObject.cs:51>
 		RoomClient_t124F52F8602AB535AC105F1E470809979EDA2A4F* L_1 = __this->___roomClient;
 		NullCheck(L_1);
 		RuntimeObject* L_2;
@@ -9005,7 +9012,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DualNetworkedObject_OnGrab_m53F46209EBCF
 		L_5 = Int32_ToString_m030E01C24E294D6762FB0B6F37CB541581F55CA5(L_4, NULL);
 		NullCheck(L_2);
 		InterfaceActionInvoker2< String_t*, String_t* >::Invoke(5, IRoom_tE9F34CE2E028BF3AF61025BC3BBB92B06DC44EE8_il2cpp_TypeInfo_var, L_2, L_3, L_5);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/DualNetworkedObject.cs:52>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/DualNetworkedObject.cs:52>
 		return;
 	}
 }
@@ -9019,12 +9026,12 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DualNetworkedObject_OnRelease_m919AEDB1E
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/DualNetworkedObject.cs:56>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/DualNetworkedObject.cs:56>
 		int32_t L_0 = __this->___localGrabCount;
 		int32_t L_1;
 		L_1 = Mathf_Max_m7FA442918DE37E3A00106D1F2E789D65829792B8_inline(0, ((int32_t)il2cpp_codegen_subtract(L_0, 1)), NULL);
 		__this->___localGrabCount = L_1;
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/DualNetworkedObject.cs:57>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/DualNetworkedObject.cs:57>
 		RoomClient_t124F52F8602AB535AC105F1E470809979EDA2A4F* L_2 = __this->___roomClient;
 		NullCheck(L_2);
 		RuntimeObject* L_3;
@@ -9036,7 +9043,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DualNetworkedObject_OnRelease_m919AEDB1E
 		L_6 = Int32_ToString_m030E01C24E294D6762FB0B6F37CB541581F55CA5(L_5, NULL);
 		NullCheck(L_3);
 		InterfaceActionInvoker2< String_t*, String_t* >::Invoke(5, IRoom_tE9F34CE2E028BF3AF61025BC3BBB92B06DC44EE8_il2cpp_TypeInfo_var, L_3, L_4, L_6);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/DualNetworkedObject.cs:58>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/DualNetworkedObject.cs:58>
 		return;
 	}
 }
@@ -9061,9 +9068,9 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t DualNetworkedObject_GetTotalGrabCount
 	String_t* V_3 = NULL;
 	int32_t V_4 = 0;
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/DualNetworkedObject.cs:62>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/DualNetworkedObject.cs:62>
 		V_0 = 0;
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/DualNetworkedObject.cs:63>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/DualNetworkedObject.cs:63>
 		RoomClient_t124F52F8602AB535AC105F1E470809979EDA2A4F* L_0 = __this->___roomClient;
 		NullCheck(L_0);
 		RuntimeObject* L_1;
@@ -9106,13 +9113,13 @@ IL_0065:
 
 IL_0015_1:
 			{
-				//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/DualNetworkedObject.cs:63>
+				//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/DualNetworkedObject.cs:63>
 				RuntimeObject* L_5 = V_1;
 				NullCheck(L_5);
 				RuntimeObject* L_6;
 				L_6 = InterfaceFuncInvoker0< RuntimeObject* >::Invoke(0, IEnumerator_1_t9FE60C6E93825D5B57E7D6767BA8A602078283C4_il2cpp_TypeInfo_var, L_5);
 				V_2 = L_6;
-				//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/DualNetworkedObject.cs:65>
+				//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/DualNetworkedObject.cs:65>
 				String_t* L_7 = __this->___id;
 				RuntimeObject* L_8 = V_2;
 				NullCheck(L_8);
@@ -9121,7 +9128,7 @@ IL_0015_1:
 				String_t* L_10;
 				L_10 = String_Concat_m8855A6DE10F84DA7F4EC113CADDB59873A25573B(L_7, _stringLiteral50639CAD49418C7B223CC529395C0E2A3892501C, L_9, NULL);
 				V_3 = L_10;
-				//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/DualNetworkedObject.cs:66>
+				//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/DualNetworkedObject.cs:66>
 				RoomClient_t124F52F8602AB535AC105F1E470809979EDA2A4F* L_11 = __this->___roomClient;
 				NullCheck(L_11);
 				RuntimeObject* L_12;
@@ -9130,7 +9137,7 @@ IL_0015_1:
 				NullCheck(L_12);
 				String_t* L_14;
 				L_14 = InterfaceFuncInvoker1< String_t*, String_t* >::Invoke(4, IRoom_tE9F34CE2E028BF3AF61025BC3BBB92B06DC44EE8_il2cpp_TypeInfo_var, L_12, L_13);
-				//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/DualNetworkedObject.cs:67>
+				//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/DualNetworkedObject.cs:67>
 				bool L_15;
 				L_15 = Int32_TryParse_mC928DE2FEC1C35ED5298BDDCA9868076E94B8A21(L_14, (&V_4), NULL);
 				if (!L_15)
@@ -9139,7 +9146,7 @@ IL_0015_1:
 				}
 			}
 			{
-				//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/DualNetworkedObject.cs:68>
+				//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/DualNetworkedObject.cs:68>
 				int32_t L_16 = V_0;
 				int32_t L_17 = V_4;
 				V_0 = ((int32_t)il2cpp_codegen_add(L_16, L_17));
@@ -9147,7 +9154,7 @@ IL_0015_1:
 
 IL_0052_1:
 			{
-				//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/DualNetworkedObject.cs:63>
+				//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/DualNetworkedObject.cs:63>
 				RuntimeObject* L_18 = V_1;
 				NullCheck(L_18);
 				bool L_19;
@@ -9169,11 +9176,11 @@ IL_0052_1:
 
 IL_0066:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/DualNetworkedObject.cs:70>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/DualNetworkedObject.cs:70>
 		int32_t L_20 = V_0;
 		int32_t L_21 = __this->___localGrabCount;
 		V_0 = ((int32_t)il2cpp_codegen_add(L_20, L_21));
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/DualNetworkedObject.cs:71>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/DualNetworkedObject.cs:71>
 		int32_t L_22 = V_0;
 		return L_22;
 	}
@@ -9188,31 +9195,31 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DualNetworkedObject_Update_m412FFADF1D76
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/DualNetworkedObject.cs:76>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/DualNetworkedObject.cs:76>
 		int32_t L_0;
 		L_0 = DualNetworkedObject_GetTotalGrabCount_mAAC3D6F9E679A41414E48042752DF823AE08F468(__this, NULL);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/DualNetworkedObject.cs:78>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/DualNetworkedObject.cs:78>
 		if ((((int32_t)L_0) < ((int32_t)2)))
 		{
 			goto IL_0017;
 		}
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/DualNetworkedObject.cs:80>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/DualNetworkedObject.cs:80>
 		Rigidbody_t268697F5A994213ED97393309870968BC1C7393C* L_1 = __this->___rb;
 		NullCheck(L_1);
 		Rigidbody_set_constraints_mE81BF0DAEB980E320538231E092CA4663885A9A3(L_1, ((int32_t)126), NULL);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/DualNetworkedObject.cs:81>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/DualNetworkedObject.cs:81>
 		return;
 	}
 
 IL_0017:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/DualNetworkedObject.cs:84>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/DualNetworkedObject.cs:84>
 		Rigidbody_t268697F5A994213ED97393309870968BC1C7393C* L_2 = __this->___rb;
 		NullCheck(L_2);
 		Rigidbody_set_constraints_mE81BF0DAEB980E320538231E092CA4663885A9A3(L_2, 0, NULL);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/DualNetworkedObject.cs:85>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/DualNetworkedObject.cs:85>
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_3 = __this->___lastPosition;
 		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_4;
 		L_4 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(__this, NULL);
@@ -9227,14 +9234,14 @@ IL_0017:
 		}
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/DualNetworkedObject.cs:87>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/DualNetworkedObject.cs:87>
 		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_7;
 		L_7 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(__this, NULL);
 		NullCheck(L_7);
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_8;
 		L_8 = Transform_get_position_m69CD5FA214FDAE7BB701552943674846C220FDE1(L_7, NULL);
 		__this->___lastPosition = L_8;
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/DualNetworkedObject.cs:88>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/DualNetworkedObject.cs:88>
 		NetworkContext_t49239659157E00ACFF3A196AF00218DED40F9310* L_9 = (NetworkContext_t49239659157E00ACFF3A196AF00218DED40F9310*)(&__this->___context);
 		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_10;
 		L_10 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(__this, NULL);
@@ -9251,7 +9258,7 @@ IL_0017:
 
 IL_006d:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/DualNetworkedObject.cs:90>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/DualNetworkedObject.cs:90>
 		return;
 	}
 }
@@ -9267,39 +9274,39 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DualNetworkedObject_ProcessMessage_m056F
 	Message_tCB42EFB4315D63EF16FC8EA26EC772E5540CF255 V_0;
 	memset((&V_0), 0, sizeof(V_0));
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/DualNetworkedObject.cs:94>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/DualNetworkedObject.cs:94>
 		Message_tCB42EFB4315D63EF16FC8EA26EC772E5540CF255 L_0;
 		L_0 = ReferenceCountedSceneGraphMessage_FromJson_TisMessage_tCB42EFB4315D63EF16FC8EA26EC772E5540CF255_mBE6CDA10B3B9738FE7703F8FC27ECD01CBC62A4B((&___0_message), ReferenceCountedSceneGraphMessage_FromJson_TisMessage_tCB42EFB4315D63EF16FC8EA26EC772E5540CF255_mBE6CDA10B3B9738FE7703F8FC27ECD01CBC62A4B_RuntimeMethod_var);
 		V_0 = L_0;
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/DualNetworkedObject.cs:95>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/DualNetworkedObject.cs:95>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_1;
 		L_1 = Component_get_gameObject_m57AEFBB14DB39EC476F740BA000E170355DE691B(__this, NULL);
 		Message_tCB42EFB4315D63EF16FC8EA26EC772E5540CF255 L_2 = V_0;
 		bool L_3 = L_2.___isActive;
 		NullCheck(L_1);
 		GameObject_SetActive_m638E92E1E75E519E5B24CF150B08CA8E0CDFAB92(L_1, L_3, NULL);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/DualNetworkedObject.cs:97>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/DualNetworkedObject.cs:97>
 		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_4;
 		L_4 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(__this, NULL);
 		Message_tCB42EFB4315D63EF16FC8EA26EC772E5540CF255 L_5 = V_0;
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_6 = L_5.___position;
 		NullCheck(L_4);
 		Transform_set_position_mA1A817124BB41B685043DED2A9BA48CDF37C4156(L_4, L_6, NULL);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/DualNetworkedObject.cs:98>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/DualNetworkedObject.cs:98>
 		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_7;
 		L_7 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(__this, NULL);
 		NullCheck(L_7);
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_8;
 		L_8 = Transform_get_position_m69CD5FA214FDAE7BB701552943674846C220FDE1(L_7, NULL);
 		__this->___lastPosition = L_8;
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/DualNetworkedObject.cs:99>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/DualNetworkedObject.cs:99>
 		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_9;
 		L_9 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(__this, NULL);
 		Message_tCB42EFB4315D63EF16FC8EA26EC772E5540CF255 L_10 = V_0;
 		Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 L_11 = L_10.___rotation;
 		NullCheck(L_9);
 		Transform_set_rotation_m61340DE74726CF0F9946743A727C4D444397331D(L_9, L_11, NULL);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/DualNetworkedObject.cs:100>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/DualNetworkedObject.cs:100>
 		return;
 	}
 }
@@ -9313,7 +9320,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DualNetworkedObject_BroadcastActiveSelf_
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/DualNetworkedObject.cs:104>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/DualNetworkedObject.cs:104>
 		NetworkContext_t49239659157E00ACFF3A196AF00218DED40F9310* L_0 = (NetworkContext_t49239659157E00ACFF3A196AF00218DED40F9310*)(&__this->___context);
 		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_1;
 		L_1 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(__this, NULL);
@@ -9322,7 +9329,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DualNetworkedObject_BroadcastActiveSelf_
 		memset((&L_3), 0, sizeof(L_3));
 		Message__ctor_m2551F8735D818DACF27AE524D81CB6F30888A365((&L_3), L_1, L_2, NULL);
 		NetworkContext_SendJson_TisMessage_tCB42EFB4315D63EF16FC8EA26EC772E5540CF255_mE830992CB9F1A422427B4CF942BAFA842B5FE609(L_0, L_3, NetworkContext_SendJson_TisMessage_tCB42EFB4315D63EF16FC8EA26EC772E5540CF255_mE830992CB9F1A422427B4CF942BAFA842B5FE609_RuntimeMethod_var);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/DualNetworkedObject.cs:105>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/DualNetworkedObject.cs:105>
 		return;
 	}
 }
@@ -9392,22 +9399,22 @@ IL2CPP_EXTERN_C void Message_tCB42EFB4315D63EF16FC8EA26EC772E5540CF255_marshal_c
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Message__ctor_m2551F8735D818DACF27AE524D81CB6F30888A365 (Message_tCB42EFB4315D63EF16FC8EA26EC772E5540CF255* __this, Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* ___0_transform, bool ___1_isActive, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/DualNetworkedObject.cs:24>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/DualNetworkedObject.cs:24>
 		bool L_0 = ___1_isActive;
 		__this->___isActive = L_0;
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/DualNetworkedObject.cs:25>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/DualNetworkedObject.cs:25>
 		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_1 = ___0_transform;
 		NullCheck(L_1);
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_2;
 		L_2 = Transform_get_position_m69CD5FA214FDAE7BB701552943674846C220FDE1(L_1, NULL);
 		__this->___position = L_2;
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/DualNetworkedObject.cs:26>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/DualNetworkedObject.cs:26>
 		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_3 = ___0_transform;
 		NullCheck(L_3);
 		Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 L_4;
 		L_4 = Transform_get_rotation_m32AF40CA0D50C797DA639A696F8EAEC7524C179C(L_3, NULL);
 		__this->___rotation = L_4;
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/DualNetworkedObject.cs:27>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/DualNetworkedObject.cs:27>
 		return;
 	}
 }
@@ -9430,7 +9437,7 @@ IL2CPP_EXTERN_C  void Message__ctor_m2551F8735D818DACF27AE524D81CB6F30888A365_Ad
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* DualTearObject_get_word_m47F2ED748DBA69A13E77D90F3FD89AF18A751A0B (DualTearObject_t9C553667E71A6A2FCE1A4E25E0993C19C54324FF* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/DualTearObject.cs:20>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/DualTearObject.cs:21>
 		String_t* L_0 = __this->___U3CwordU3Ek__BackingField;
 		return L_0;
 	}
@@ -9439,7 +9446,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* DualTearObject_get_word_m47F2ED748D
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DualTearObject_set_word_m55DAC1CFCA83A12F287DD0DFEF15861188252400 (DualTearObject_t9C553667E71A6A2FCE1A4E25E0993C19C54324FF* __this, String_t* ___0_value, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/DualTearObject.cs:20>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/DualTearObject.cs:21>
 		String_t* L_0 = ___0_value;
 		__this->___U3CwordU3Ek__BackingField = L_0;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___U3CwordU3Ek__BackingField), (void*)L_0);
@@ -9463,7 +9470,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DualTearObject_Start_mB487198A27A4657CDD
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/DualTearObject.cs:43>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/DualTearObject.cs:44>
 		NetworkContext_t49239659157E00ACFF3A196AF00218DED40F9310 L_0;
 		L_0 = NetworkScene_Register_m0F251779B3FEA29EAE6A5DBCDDCC0E50596A6545(__this, NULL);
 		__this->___context = L_0;
@@ -9471,12 +9478,12 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DualTearObject_Start_mB487198A27A4657CDD
 		#if IL2CPP_ENABLE_STRICT_WRITE_BARRIERS
 		Il2CppCodeGenWriteBarrier((void**)&(((&__this->___context))->___Component), (void*)NULL);
 		#endif
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/DualTearObject.cs:44>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/DualTearObject.cs:45>
 		XRGrabInteractable_tAE7E2F24377399C9B5159179E4B43EA6AA55531B* L_1;
 		L_1 = Component_GetComponent_TisXRGrabInteractable_tAE7E2F24377399C9B5159179E4B43EA6AA55531B_m49377F1D0DBAB9BDC59DFC6851E9A5D687717C14(__this, Component_GetComponent_TisXRGrabInteractable_tAE7E2F24377399C9B5159179E4B43EA6AA55531B_m49377F1D0DBAB9BDC59DFC6851E9A5D687717C14_RuntimeMethod_var);
 		__this->___grab = L_1;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___grab), (void*)L_1);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/DualTearObject.cs:45>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/DualTearObject.cs:46>
 		XRGrabInteractable_tAE7E2F24377399C9B5159179E4B43EA6AA55531B* L_2 = __this->___grab;
 		NullCheck(L_2);
 		SelectEnterEvent_tBA2614C8C25D8794D5804C4F66195D74E64FC5D0* L_3;
@@ -9485,7 +9492,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DualTearObject_Start_mB487198A27A4657CDD
 		UnityAction_1__ctor_mEE39E1A87376378311B4931978E8E07E589E9A24(L_4, __this, (intptr_t)((void*)DualTearObject_OnGrab_m38F7EE971858E2D9754BB69B8EF93DD5F2B3DD1E_RuntimeMethod_var), NULL);
 		NullCheck(L_3);
 		UnityEvent_1_AddListener_mAE71681FB0832FD7DBA813E5ADDBA574EA32EED2(L_3, L_4, UnityEvent_1_AddListener_mAE71681FB0832FD7DBA813E5ADDBA574EA32EED2_RuntimeMethod_var);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/DualTearObject.cs:46>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/DualTearObject.cs:47>
 		XRGrabInteractable_tAE7E2F24377399C9B5159179E4B43EA6AA55531B* L_5 = __this->___grab;
 		NullCheck(L_5);
 		SelectExitEvent_t15DC0A39F9657BA9E6BAE6250D8D64C9671201F6* L_6;
@@ -9494,13 +9501,13 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DualTearObject_Start_mB487198A27A4657CDD
 		UnityAction_1__ctor_mD74501F5FCCC37863163D5E7155B6C8B9B366C40(L_7, __this, (intptr_t)((void*)DualTearObject_OnRelease_mB1EBC940C84BCFC6092DB2C7C2B38BF25A8DB51A_RuntimeMethod_var), NULL);
 		NullCheck(L_6);
 		UnityEvent_1_AddListener_mB662756036996A6B6F83F6492CE9E26797AF9602(L_6, L_7, UnityEvent_1_AddListener_mB662756036996A6B6F83F6492CE9E26797AF9602_RuntimeMethod_var);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/DualTearObject.cs:47>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/DualTearObject.cs:48>
 		il2cpp_codegen_runtime_class_init_inline(RoomClient_t124F52F8602AB535AC105F1E470809979EDA2A4F_il2cpp_TypeInfo_var);
 		RoomClient_t124F52F8602AB535AC105F1E470809979EDA2A4F* L_8;
 		L_8 = RoomClient_Find_m98EDCFBAD91F24585B1C9E9AF91F8D8DA5BA6F3E(__this, NULL);
 		__this->___roomClient = L_8;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___roomClient), (void*)L_8);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/DualTearObject.cs:48>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/DualTearObject.cs:49>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_9;
 		L_9 = Component_get_gameObject_m57AEFBB14DB39EC476F740BA000E170355DE691B(__this, NULL);
 		NullCheck(L_9);
@@ -9510,7 +9517,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DualTearObject_Start_mB487198A27A4657CDD
 		String_t* L_11;
 		L_11 = String_ToUpperInvariant_mD73F658CDE1280A527231DC305B66CF09B64E5AB(L_10, NULL);
 		DualTearObject_set_word_m55DAC1CFCA83A12F287DD0DFEF15861188252400_inline(__this, L_11, NULL);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/DualTearObject.cs:49>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/DualTearObject.cs:50>
 		return;
 	}
 }
@@ -9531,7 +9538,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DualTearObject_Update_m44E1836ABC5AC7AB4
 	memset((&V_0), 0, sizeof(V_0));
 	float V_1 = 0.0f;
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/DualTearObject.cs:53>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/DualTearObject.cs:54>
 		bool L_0 = __this->___isGrabbed;
 		if (L_0)
 		{
@@ -9539,17 +9546,17 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DualTearObject_Update_m44E1836ABC5AC7AB4
 		}
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/DualTearObject.cs:53>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/DualTearObject.cs:54>
 		return;
 	}
 
 IL_0009:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/DualTearObject.cs:54>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/DualTearObject.cs:55>
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_1;
 		L_1 = DualTearObject_GetControllerPos_m1B95B090B92E81232D6D341FBFB1348BFA80B768(__this, NULL);
 		V_0 = L_1;
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/DualTearObject.cs:55>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/DualTearObject.cs:56>
 		NetworkContext_t49239659157E00ACFF3A196AF00218DED40F9310* L_2 = (NetworkContext_t49239659157E00ACFF3A196AF00218DED40F9310*)(&__this->___context);
 		RoomClient_t124F52F8602AB535AC105F1E470809979EDA2A4F* L_3 = __this->___roomClient;
 		NullCheck(L_3);
@@ -9562,7 +9569,7 @@ IL_0009:
 		memset((&L_6), 0, sizeof(L_6));
 		Message__ctor_m5BBC6E74AF14B06FC775F5BE3B4BBC61256E6EF4((&L_6), L_5, (bool)1, (bool)0, NULL);
 		NetworkContext_SendJson_TisMessage_tA05FD53BA21C5A0D5A29D37FC22D585711FB737A_mA8DFD8559D6037B46422153182D732603C1DF966(L_2, L_6, NetworkContext_SendJson_TisMessage_tA05FD53BA21C5A0D5A29D37FC22D585711FB737A_mA8DFD8559D6037B46422153182D732603C1DF966_RuntimeMethod_var);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/DualTearObject.cs:57>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/DualTearObject.cs:58>
 		bool L_7 = __this->___otherGrabbed;
 		if (!L_7)
 		{
@@ -9579,7 +9586,7 @@ IL_0009:
 		}
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/DualTearObject.cs:57>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/DualTearObject.cs:58>
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_10 = V_0;
 		Nullable_1_t9C51B084784B716FFF4ED4575C63CFD8A71A86FE L_11;
 		memset((&L_11), 0, sizeof(L_11));
@@ -9589,7 +9596,7 @@ IL_0009:
 
 IL_0053:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/DualTearObject.cs:59>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/DualTearObject.cs:60>
 		Nullable_1_t9C51B084784B716FFF4ED4575C63CFD8A71A86FE* L_12 = (Nullable_1_t9C51B084784B716FFF4ED4575C63CFD8A71A86FE*)(&__this->___refControllerPos);
 		bool L_13;
 		L_13 = Nullable_1_get_HasValue_m6B76086B0E863AB1D634FD03E30154F230070435_inline(L_12, Nullable_1_get_HasValue_m6B76086B0E863AB1D634FD03E30154F230070435_RuntimeMethod_var);
@@ -9599,7 +9606,7 @@ IL_0053:
 		}
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/DualTearObject.cs:61>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/DualTearObject.cs:62>
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_14 = V_0;
 		Nullable_1_t9C51B084784B716FFF4ED4575C63CFD8A71A86FE* L_15 = (Nullable_1_t9C51B084784B716FFF4ED4575C63CFD8A71A86FE*)(&__this->___refControllerPos);
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_16;
@@ -9607,7 +9614,7 @@ IL_0053:
 		float L_17;
 		L_17 = Vector3_Distance_m2314DB9B8BD01157E013DF87BEA557375C7F9FF9_inline(L_14, L_16, NULL);
 		V_1 = L_17;
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/DualTearObject.cs:62>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/DualTearObject.cs:63>
 		float L_18 = V_1;
 		float L_19 = __this->___tearDistance;
 		__this->___isPulled = (bool)((((int32_t)((!(((float)L_18) >= ((float)L_19)))? 1 : 0)) == ((int32_t)0))? 1 : 0);
@@ -9615,7 +9622,7 @@ IL_0053:
 
 IL_0084:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/DualTearObject.cs:65>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/DualTearObject.cs:66>
 		bool L_20 = __this->___isPulled;
 		if (L_20)
 		{
@@ -9623,13 +9630,13 @@ IL_0084:
 		}
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/DualTearObject.cs:65>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/DualTearObject.cs:66>
 		return;
 	}
 
 IL_008d:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/DualTearObject.cs:66>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/DualTearObject.cs:67>
 		NetworkContext_t49239659157E00ACFF3A196AF00218DED40F9310* L_21 = (NetworkContext_t49239659157E00ACFF3A196AF00218DED40F9310*)(&__this->___context);
 		RoomClient_t124F52F8602AB535AC105F1E470809979EDA2A4F* L_22 = __this->___roomClient;
 		NullCheck(L_22);
@@ -9642,21 +9649,28 @@ IL_008d:
 		memset((&L_25), 0, sizeof(L_25));
 		Message__ctor_m5BBC6E74AF14B06FC775F5BE3B4BBC61256E6EF4((&L_25), L_24, (bool)1, (bool)1, NULL);
 		NetworkContext_SendJson_TisMessage_tA05FD53BA21C5A0D5A29D37FC22D585711FB737A_mA8DFD8559D6037B46422153182D732603C1DF966(L_21, L_25, NetworkContext_SendJson_TisMessage_tA05FD53BA21C5A0D5A29D37FC22D585711FB737A_mA8DFD8559D6037B46422153182D732603C1DF966_RuntimeMethod_var);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/DualTearObject.cs:68>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/DualTearObject.cs:69>
 		bool L_26 = __this->___otherPulled;
 		if (!L_26)
 		{
-			goto IL_00bd;
+			goto IL_00c5;
 		}
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/DualTearObject.cs:68>
+		bool L_27 = __this->___isTorn;
+		if (L_27)
+		{
+			goto IL_00c5;
+		}
+	}
+	{
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/DualTearObject.cs:69>
 		DualTearObject_DoTear_m263B19053951EBFDD12B31A52EC34310344B7E53(__this, NULL);
 	}
 
-IL_00bd:
+IL_00c5:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/DualTearObject.cs:69>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/DualTearObject.cs:70>
 		return;
 	}
 }
@@ -9664,9 +9678,9 @@ IL_00bd:
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DualTearObject_OnGrab_m38F7EE971858E2D9754BB69B8EF93DD5F2B3DD1E (DualTearObject_t9C553667E71A6A2FCE1A4E25E0993C19C54324FF* __this, SelectEnterEventArgs_t9220B1E6A9BB5A847C0476949ACE0182430BB938* ___0_eventArgs, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/DualTearObject.cs:73>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/DualTearObject.cs:74>
 		__this->___isGrabbed = (bool)1;
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/DualTearObject.cs:74>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/DualTearObject.cs:75>
 		return;
 	}
 }
@@ -9674,14 +9688,14 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DualTearObject_OnGrab_m38F7EE971858E2D97
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DualTearObject_OnRelease_mB1EBC940C84BCFC6092DB2C7C2B38BF25A8DB51A (DualTearObject_t9C553667E71A6A2FCE1A4E25E0993C19C54324FF* __this, SelectExitEventArgs_t56125CE0360D37AC0B50EB6066B5AB5957EF559A* ___0_args, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/DualTearObject.cs:78>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/DualTearObject.cs:79>
 		__this->___isGrabbed = (bool)0;
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/DualTearObject.cs:79>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/DualTearObject.cs:80>
 		__this->___isPulled = (bool)0;
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/DualTearObject.cs:80>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/DualTearObject.cs:81>
 		Nullable_1_t9C51B084784B716FFF4ED4575C63CFD8A71A86FE* L_0 = (Nullable_1_t9C51B084784B716FFF4ED4575C63CFD8A71A86FE*)(&__this->___refControllerPos);
 		il2cpp_codegen_initobj(L_0, sizeof(Nullable_1_t9C51B084784B716FFF4ED4575C63CFD8A71A86FE));
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/DualTearObject.cs:81>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/DualTearObject.cs:82>
 		return;
 	}
 }
@@ -9697,24 +9711,24 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DualTearObject_ProcessMessage_m233B5CFCA
 	Message_tA05FD53BA21C5A0D5A29D37FC22D585711FB737A V_0;
 	memset((&V_0), 0, sizeof(V_0));
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/DualTearObject.cs:85>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/DualTearObject.cs:86>
 		Message_tA05FD53BA21C5A0D5A29D37FC22D585711FB737A L_0;
 		L_0 = ReferenceCountedSceneGraphMessage_FromJson_TisMessage_tA05FD53BA21C5A0D5A29D37FC22D585711FB737A_m95E0BC83C62A1180C234C1174FAA31BCE26A789D((&___0_message), ReferenceCountedSceneGraphMessage_FromJson_TisMessage_tA05FD53BA21C5A0D5A29D37FC22D585711FB737A_m95E0BC83C62A1180C234C1174FAA31BCE26A789D_RuntimeMethod_var);
 		V_0 = L_0;
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/DualTearObject.cs:86>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/DualTearObject.cs:87>
 		Message_tA05FD53BA21C5A0D5A29D37FC22D585711FB737A L_1 = V_0;
 		String_t* L_2 = L_1.___id;
 		__this->___otherId = L_2;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___otherId), (void*)L_2);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/DualTearObject.cs:87>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/DualTearObject.cs:88>
 		Message_tA05FD53BA21C5A0D5A29D37FC22D585711FB737A L_3 = V_0;
 		bool L_4 = L_3.___grabbed;
 		__this->___otherGrabbed = L_4;
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/DualTearObject.cs:88>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/DualTearObject.cs:89>
 		Message_tA05FD53BA21C5A0D5A29D37FC22D585711FB737A L_5 = V_0;
 		bool L_6 = L_5.___pulled;
 		__this->___otherPulled = L_6;
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/DualTearObject.cs:89>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/DualTearObject.cs:90>
 		return;
 	}
 }
@@ -9733,13 +9747,13 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A
 	List_1_tBCB8B48B71E07C12D7D6CBECDCCD87B719E5E708* V_0 = NULL;
 	Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* V_1 = NULL;
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/DualTearObject.cs:93>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/DualTearObject.cs:94>
 		XRGrabInteractable_tAE7E2F24377399C9B5159179E4B43EA6AA55531B* L_0 = __this->___grab;
 		NullCheck(L_0);
 		List_1_tBCB8B48B71E07C12D7D6CBECDCCD87B719E5E708* L_1;
 		L_1 = XRBaseInteractable_get_interactorsSelecting_m5F5C1717F4214684A3F96A53F794BB08435A7620(L_0, NULL);
 		V_0 = L_1;
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/DualTearObject.cs:94>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/DualTearObject.cs:95>
 		List_1_tBCB8B48B71E07C12D7D6CBECDCCD87B719E5E708* L_2 = V_0;
 		if (!L_2)
 		{
@@ -9757,7 +9771,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A
 		}
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/DualTearObject.cs:96>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/DualTearObject.cs:97>
 		List_1_tBCB8B48B71E07C12D7D6CBECDCCD87B719E5E708* L_5 = V_0;
 		NullCheck(L_5);
 		RuntimeObject* L_6;
@@ -9767,7 +9781,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A
 		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_8;
 		L_8 = InterfaceFuncInvoker1< Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1*, RuntimeObject* >::Invoke(7, IXRInteractor_tD834ADD95D200FFEC6473A23E515DCD02B33CF97_il2cpp_TypeInfo_var, L_6, L_7);
 		V_1 = L_8;
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/DualTearObject.cs:97>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/DualTearObject.cs:98>
 		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_9 = V_1;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_10;
@@ -9778,7 +9792,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A
 		}
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/DualTearObject.cs:97>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/DualTearObject.cs:98>
 		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_11 = V_1;
 		NullCheck(L_11);
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_12;
@@ -9788,7 +9802,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A
 
 IL_003b:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/DualTearObject.cs:98>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/DualTearObject.cs:99>
 		List_1_tBCB8B48B71E07C12D7D6CBECDCCD87B719E5E708* L_13 = V_0;
 		NullCheck(L_13);
 		RuntimeObject* L_14;
@@ -9804,7 +9818,7 @@ IL_003b:
 
 IL_004d:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/DualTearObject.cs:101>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/DualTearObject.cs:102>
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_17;
 		L_17 = Vector3_get_zero_m0C1249C3F25B1C70EAD3CC8B31259975A457AE39_inline(NULL);
 		return L_17;
@@ -9824,11 +9838,11 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A
 	memset((&V_1), 0, sizeof(V_1));
 	int32_t V_2 = 0;
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/DualTearObject.cs:106>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/DualTearObject.cs:107>
 		RendererU5BU5D_t32FDD782F67917B2291EA4FF242719877440A02A* L_0;
 		L_0 = Component_GetComponentsInChildren_TisRenderer_t320575F223BCB177A982E5DDB5DB19FAA89E7FBF_m35AC34F858BD2F34770712CD020AA0518D9409C7(__this, Component_GetComponentsInChildren_TisRenderer_t320575F223BCB177A982E5DDB5DB19FAA89E7FBF_m35AC34F858BD2F34770712CD020AA0518D9409C7_RuntimeMethod_var);
 		V_0 = L_0;
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/DualTearObject.cs:107>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/DualTearObject.cs:108>
 		RendererU5BU5D_t32FDD782F67917B2291EA4FF242719877440A02A* L_1 = V_0;
 		NullCheck(L_1);
 		if ((((RuntimeArray*)L_1)->max_length))
@@ -9837,7 +9851,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A
 		}
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/DualTearObject.cs:108>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/DualTearObject.cs:109>
 		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_2;
 		L_2 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(__this, NULL);
 		NullCheck(L_2);
@@ -9848,7 +9862,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A
 
 IL_0017:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/DualTearObject.cs:110>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/DualTearObject.cs:111>
 		RendererU5BU5D_t32FDD782F67917B2291EA4FF242719877440A02A* L_4 = V_0;
 		NullCheck(L_4);
 		int32_t L_5 = 0;
@@ -9857,14 +9871,14 @@ IL_0017:
 		Bounds_t367E830C64BBF235ED8C3B2F8CF6254FDCAD39C3 L_7;
 		L_7 = Renderer_get_bounds_m390CF334730C3C34E45CE59F1D08C3B9F3109C7C(L_6, NULL);
 		V_1 = L_7;
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/DualTearObject.cs:111>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/DualTearObject.cs:112>
 		V_2 = 1;
 		goto IL_0037;
 	}
 
 IL_0024:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/DualTearObject.cs:112>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/DualTearObject.cs:113>
 		RendererU5BU5D_t32FDD782F67917B2291EA4FF242719877440A02A* L_8 = V_0;
 		int32_t L_9 = V_2;
 		NullCheck(L_8);
@@ -9874,14 +9888,14 @@ IL_0024:
 		Bounds_t367E830C64BBF235ED8C3B2F8CF6254FDCAD39C3 L_12;
 		L_12 = Renderer_get_bounds_m390CF334730C3C34E45CE59F1D08C3B9F3109C7C(L_11, NULL);
 		Bounds_Encapsulate_m7C70C382B9380A8C962074C78E189B53CE8F7A22_inline((&V_1), L_12, NULL);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/DualTearObject.cs:111>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/DualTearObject.cs:112>
 		int32_t L_13 = V_2;
 		V_2 = ((int32_t)il2cpp_codegen_add(L_13, 1));
 	}
 
 IL_0037:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/DualTearObject.cs:111>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/DualTearObject.cs:112>
 		int32_t L_14 = V_2;
 		RendererU5BU5D_t32FDD782F67917B2291EA4FF242719877440A02A* L_15 = V_0;
 		NullCheck(L_15);
@@ -9891,7 +9905,7 @@ IL_0037:
 		}
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/DualTearObject.cs:114>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/DualTearObject.cs:115>
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_16;
 		L_16 = Bounds_get_center_m5B05F81CB835EB6DD8628FDA24B638F477984DC3_inline((&V_1), NULL);
 		return L_16;
@@ -9913,7 +9927,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DualTearObject_DoTear_m263B19053951EBFDD
 	LetterSpawner_tBC161CA12FDE232F59203076963EF412B105F844* G_B6_0 = NULL;
 	LetterSpawner_tBC161CA12FDE232F59203076963EF412B105F844* G_B5_0 = NULL;
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/DualTearObject.cs:120>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/DualTearObject.cs:121>
 		AudioClip_t5D272C4EB4F2D3ED49F1C346DEA373CF6D585F20* L_0 = __this->___tearSound;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_1;
@@ -9924,7 +9938,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DualTearObject_DoTear_m263B19053951EBFDD
 		}
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/DualTearObject.cs:122>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/DualTearObject.cs:123>
 		AudioClip_t5D272C4EB4F2D3ED49F1C346DEA373CF6D585F20* L_2 = __this->___tearSound;
 		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_3;
 		L_3 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(__this, NULL);
@@ -9937,7 +9951,9 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DualTearObject_DoTear_m263B19053951EBFDD
 
 IL_002a:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/DualTearObject.cs:126>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/DualTearObject.cs:126>
+		__this->___isTorn = (bool)1;
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/DualTearObject.cs:128>
 		RoomClient_t124F52F8602AB535AC105F1E470809979EDA2A4F* L_6 = __this->___roomClient;
 		NullCheck(L_6);
 		RuntimeObject* L_7;
@@ -9950,36 +9966,36 @@ IL_002a:
 		L_10 = String_Compare_mDD60C5A044BA55A136F7B84B48BBD99353F4EB4C(L_8, L_9, NULL);
 		if ((((int32_t)L_10) < ((int32_t)0)))
 		{
-			goto IL_0049;
+			goto IL_0050;
 		}
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/DualTearObject.cs:126>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/DualTearObject.cs:128>
 		return;
 	}
 
-IL_0049:
+IL_0050:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/DualTearObject.cs:128>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/DualTearObject.cs:130>
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_11;
 		L_11 = DualTearObject_GetSpawnPosition_mF608C83386DEC26836854ADC797925FF172E99B7(__this, NULL);
 		V_0 = L_11;
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/DualTearObject.cs:130>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/DualTearObject.cs:132>
 		LetterSpawner_tBC161CA12FDE232F59203076963EF412B105F844* L_12;
 		L_12 = LetterSpawner_get_Instance_mDE743C5373029C238F50FE9E4F1A4F5C0241A009_inline(NULL);
 		LetterSpawner_tBC161CA12FDE232F59203076963EF412B105F844* L_13 = L_12;
 		if (L_13)
 		{
 			G_B6_0 = L_13;
-			goto IL_005b;
+			goto IL_0062;
 		}
 		G_B5_0 = L_13;
 	}
 	{
-		goto IL_0067;
+		goto IL_006e;
 	}
 
-IL_005b:
+IL_0062:
 	{
 		String_t* L_14;
 		L_14 = DualTearObject_get_word_m47F2ED748DBA69A13E77D90F3FD89AF18A751A0B_inline(__this, NULL);
@@ -9988,25 +10004,25 @@ IL_005b:
 		LetterSpawner_SpawnWord_m9426C1A6533F487A1B8E20C1823AD50230516BA4(G_B6_0, L_14, L_15, NULL);
 	}
 
-IL_0067:
+IL_006e:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/DualTearObject.cs:133>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/DualTearObject.cs:135>
 		DualNetworkedObject_t073C6148E3DD2E9B0D8BC9E468A7A1D32416A76D* L_16;
 		L_16 = Component_GetComponent_TisDualNetworkedObject_t073C6148E3DD2E9B0D8BC9E468A7A1D32416A76D_mF98D29E5436CE98A2B6AC3F32E2EE8C941833E17(__this, Component_GetComponent_TisDualNetworkedObject_t073C6148E3DD2E9B0D8BC9E468A7A1D32416A76D_mF98D29E5436CE98A2B6AC3F32E2EE8C941833E17_RuntimeMethod_var);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/DualTearObject.cs:134>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/DualTearObject.cs:136>
 		NullCheck(L_16);
 		DualNetworkedObject_BroadcastActiveSelf_mB59FBA9535E8FE0BF34C42F75697114A236055E1(L_16, (bool)0, NULL);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/DualTearObject.cs:135>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/DualTearObject.cs:137>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_17;
 		L_17 = Component_get_gameObject_m57AEFBB14DB39EC476F740BA000E170355DE691B(__this, NULL);
 		NullCheck(L_17);
 		GameObject_SetActive_m638E92E1E75E519E5B24CF150B08CA8E0CDFAB92(L_17, (bool)0, NULL);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/DualTearObject.cs:136>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/DualTearObject.cs:138>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_18;
 		L_18 = Component_get_gameObject_m57AEFBB14DB39EC476F740BA000E170355DE691B(__this, NULL);
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		Object_Destroy_mE97D0A766419A81296E8D4E5C23D01D3FE91ACBB(L_18, NULL);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/DualTearObject.cs:137>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/DualTearObject.cs:139>
 		return;
 	}
 }
@@ -10014,9 +10030,9 @@ IL_0067:
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DualTearObject__ctor_m426952F69422C72B730877030411E0BE60D85B8F (DualTearObject_t9C553667E71A6A2FCE1A4E25E0993C19C54324FF* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/DualTearObject.cs:11>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/DualTearObject.cs:11>
 		__this->___tearDistance = (0.349999994f);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/DualTearObject.cs:26>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/DualTearObject.cs:27>
 		__this->___soundVolume = (1.0f);
 		MonoBehaviour__ctor_m592DB0105CA0BC97AA1C5F4AD27B12D68A3B7C1E(__this, NULL);
 		return;
@@ -10078,17 +10094,17 @@ IL2CPP_EXTERN_C void Message_tA05FD53BA21C5A0D5A29D37FC22D585711FB737A_marshal_c
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Message__ctor_m5BBC6E74AF14B06FC775F5BE3B4BBC61256E6EF4 (Message_tA05FD53BA21C5A0D5A29D37FC22D585711FB737A* __this, String_t* ___0_id, bool ___1_grabbed, bool ___2_pulled, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/DualTearObject.cs:35>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/DualTearObject.cs:36>
 		String_t* L_0 = ___0_id;
 		__this->___id = L_0;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___id), (void*)L_0);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/DualTearObject.cs:36>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/DualTearObject.cs:37>
 		bool L_1 = ___1_grabbed;
 		__this->___grabbed = L_1;
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/DualTearObject.cs:37>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/DualTearObject.cs:38>
 		bool L_2 = ___2_pulled;
 		__this->___pulled = L_2;
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/DualTearObject.cs:38>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/DualTearObject.cs:39>
 		return;
 	}
 }
@@ -10117,14 +10133,14 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FireworkController_Start_m8B3EEF565982F7
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/FireworkController.cs:28>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/FireworkController.cs:28>
 		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_0;
 		L_0 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(__this, NULL);
 		NullCheck(L_0);
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_1;
 		L_1 = Transform_get_position_m69CD5FA214FDAE7BB701552943674846C220FDE1(L_0, NULL);
 		__this->___startPos = L_1;
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/FireworkController.cs:29>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/FireworkController.cs:29>
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_2 = __this->___startPos;
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_3;
 		L_3 = Vector3_get_up_m128AF3FDC820BF59D5DE86D973E7DE3F20C3AEBA_inline(NULL);
@@ -10134,7 +10150,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FireworkController_Start_m8B3EEF565982F7
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_6;
 		L_6 = Vector3_op_Addition_m78C0EC70CB66E8DCAC225743D82B268DAEE92067_inline(L_2, L_5, NULL);
 		__this->___targetPos = L_6;
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/FireworkController.cs:31>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/FireworkController.cs:31>
 		ParticleSystem_tB19986EE308BD63D36FB6025EEEAFBEDB97C67C1* L_7 = __this->___rocketTrail;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_8;
@@ -10145,7 +10161,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FireworkController_Start_m8B3EEF565982F7
 		}
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/FireworkController.cs:32>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/FireworkController.cs:32>
 		ParticleSystem_tB19986EE308BD63D36FB6025EEEAFBEDB97C67C1* L_9 = __this->___rocketTrail;
 		NullCheck(L_9);
 		ParticleSystem_Play_mD943E601BFE16CB9BB5D1F5E6AED5C36F5F11EF5(L_9, NULL);
@@ -10153,9 +10169,9 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FireworkController_Start_m8B3EEF565982F7
 
 IL_004b:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/FireworkController.cs:34>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/FireworkController.cs:34>
 		FireworkController_ApplyColour_m601460E5FD65639B0CEC2D1210FF3A0A450092E2(__this, NULL);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/FireworkController.cs:35>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/FireworkController.cs:35>
 		return;
 	}
 }
@@ -10165,7 +10181,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FireworkController_Update_mB19F8F08D296B
 	float V_0 = 0.0f;
 	float V_1 = 0.0f;
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/FireworkController.cs:39>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/FireworkController.cs:39>
 		bool L_0 = __this->___exploded;
 		if (!L_0)
 		{
@@ -10173,31 +10189,31 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FireworkController_Update_mB19F8F08D296B
 		}
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/FireworkController.cs:39>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/FireworkController.cs:39>
 		return;
 	}
 
 IL_0009:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/FireworkController.cs:41>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/FireworkController.cs:41>
 		float L_1 = __this->___timer;
 		float L_2;
 		L_2 = Time_get_deltaTime_mC3195000401F0FD167DD2F948FD2BC58330D0865(NULL);
 		__this->___timer = ((float)il2cpp_codegen_add(L_1, L_2));
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/FireworkController.cs:42>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/FireworkController.cs:42>
 		float L_3 = __this->___timer;
 		float L_4 = __this->___launchDuration;
 		float L_5;
 		L_5 = Mathf_Clamp01_mA7E048DBDA832D399A581BE4D6DED9FA44CE0F14_inline(((float)(L_3/L_4)), NULL);
 		V_0 = L_5;
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/FireworkController.cs:43>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/FireworkController.cs:43>
 		AnimationCurve_tCBFFAAD05CEBB35EF8D8631BD99914BE1A6BB354* L_6 = __this->___heightCurve;
 		float L_7 = V_0;
 		NullCheck(L_6);
 		float L_8;
 		L_8 = AnimationCurve_Evaluate_m50B857043DE251A186032ADBCBB4CEF817F4EE3C(L_6, L_7, NULL);
 		V_1 = L_8;
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/FireworkController.cs:45>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/FireworkController.cs:45>
 		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_9;
 		L_9 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(__this, NULL);
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_10 = __this->___startPos;
@@ -10207,7 +10223,7 @@ IL_0009:
 		L_13 = Vector3_Lerp_m3A906D0530A94FAABB94F0F905E84D99BE85C3F8_inline(L_10, L_11, L_12, NULL);
 		NullCheck(L_9);
 		Transform_set_position_mA1A817124BB41B685043DED2A9BA48CDF37C4156(L_9, L_13, NULL);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/FireworkController.cs:47>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/FireworkController.cs:47>
 		float L_14 = V_0;
 		if ((!(((float)L_14) >= ((float)(1.0f)))))
 		{
@@ -10215,13 +10231,13 @@ IL_0009:
 		}
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/FireworkController.cs:48>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/FireworkController.cs:48>
 		FireworkController_Explode_m174E9F00BD267EDAFFB9BEFAD99F012743EEA408(__this, NULL);
 	}
 
 IL_0066:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/FireworkController.cs:49>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/FireworkController.cs:49>
 		return;
 	}
 }
@@ -10241,7 +10257,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FireworkController_ApplyColour_m601460E5
 	Color_tD001788D726C3A7F1379BEED0260B9591F440C1F G_B6_0;
 	memset((&G_B6_0), 0, sizeof(G_B6_0));
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/FireworkController.cs:53>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/FireworkController.cs:53>
 		bool L_0 = __this->___randomiseColour;
 		if (!L_0)
 		{
@@ -10261,15 +10277,15 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FireworkController_ApplyColour_m601460E5
 
 IL_0016:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/FireworkController.cs:53>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/FireworkController.cs:53>
 		return;
 	}
 
 IL_0017:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/FireworkController.cs:55>
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/FireworkController.cs:56>
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/FireworkController.cs:57>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/FireworkController.cs:55>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/FireworkController.cs:56>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/FireworkController.cs:57>
 		Gradient_tA7FEBE2FDB4929FFF6C997134841046F713DAC1E* L_3 = __this->___fireworkGradient;
 		if (L_3)
 		{
@@ -10297,18 +10313,18 @@ IL_0044:
 IL_0054:
 	{
 		V_0 = G_B6_0;
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/FireworkController.cs:59>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/FireworkController.cs:59>
 		ParticleSystem_tB19986EE308BD63D36FB6025EEEAFBEDB97C67C1* L_8 = __this->___explosion;
 		NullCheck(L_8);
 		MainModule_tC7ECD8330C14B0808478A748048988A6085CE2A9 L_9;
 		L_9 = ParticleSystem_get_main_mD86DFCD96150E2CE760CD2F37052BB3BCA33C189(L_8, NULL);
 		V_1 = L_9;
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/FireworkController.cs:60>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/FireworkController.cs:60>
 		Color_tD001788D726C3A7F1379BEED0260B9591F440C1F L_10 = V_0;
 		MinMaxGradient_tFF31B8EC2855D0074AB86E8B37BEA6609070AC69 L_11;
 		L_11 = MinMaxGradient_op_Implicit_mAA6154D6644E72BBA49EB34DC957538EE929DE02(L_10, NULL);
 		MainModule_set_startColor_m504911284CAC53A7C1B97B5D01BBDD2FA67D0E7A((&V_1), L_11, NULL);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/FireworkController.cs:61>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/FireworkController.cs:61>
 		return;
 	}
 }
@@ -10322,9 +10338,9 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FireworkController_Explode_m174E9F00BD26
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/FireworkController.cs:65>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/FireworkController.cs:65>
 		__this->___exploded = (bool)1;
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/FireworkController.cs:67>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/FireworkController.cs:67>
 		ParticleSystem_tB19986EE308BD63D36FB6025EEEAFBEDB97C67C1* L_0 = __this->___rocketTrail;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_1;
@@ -10335,7 +10351,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FireworkController_Explode_m174E9F00BD26
 		}
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/FireworkController.cs:68>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/FireworkController.cs:68>
 		ParticleSystem_tB19986EE308BD63D36FB6025EEEAFBEDB97C67C1* L_2 = __this->___rocketTrail;
 		NullCheck(L_2);
 		ParticleSystem_Stop_mB5761CB85083F593FFEC3D27931CACF1855A6326(L_2, (bool)1, 1, NULL);
@@ -10343,7 +10359,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FireworkController_Explode_m174E9F00BD26
 
 IL_0022:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/FireworkController.cs:70>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/FireworkController.cs:70>
 		ParticleSystem_tB19986EE308BD63D36FB6025EEEAFBEDB97C67C1* L_3 = __this->___explosion;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_4;
@@ -10354,7 +10370,7 @@ IL_0022:
 		}
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/FireworkController.cs:71>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/FireworkController.cs:71>
 		ParticleSystem_tB19986EE308BD63D36FB6025EEEAFBEDB97C67C1* L_5 = __this->___explosion;
 		NullCheck(L_5);
 		ParticleSystem_Play_mD943E601BFE16CB9BB5D1F5E6AED5C36F5F11EF5(L_5, NULL);
@@ -10362,13 +10378,13 @@ IL_0022:
 
 IL_003b:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/FireworkController.cs:73>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/FireworkController.cs:73>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_6;
 		L_6 = Component_get_gameObject_m57AEFBB14DB39EC476F740BA000E170355DE691B(__this, NULL);
 		float L_7 = __this->___destroyDelayAfterExplode;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		Object_Destroy_m064F2A066491D2DC4FFCFBDBE5FCFFB807A04436(L_6, L_7, NULL);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/FireworkController.cs:74>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/FireworkController.cs:74>
 		return;
 	}
 }
@@ -10376,18 +10392,18 @@ IL_003b:
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FireworkController__ctor_m8F9A6696BB90AB28E565DCC7941A6FC4ADD158F6 (FireworkController_tC3F471B6224393CB7282BA9026FB7BEF4AA02C68* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/FireworkController.cs:6>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/FireworkController.cs:6>
 		__this->___launchHeight = (6.0f);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/FireworkController.cs:7>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/FireworkController.cs:7>
 		__this->___launchDuration = (1.20000005f);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/FireworkController.cs:8>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/FireworkController.cs:8>
 		AnimationCurve_tCBFFAAD05CEBB35EF8D8631BD99914BE1A6BB354* L_0;
 		L_0 = AnimationCurve_EaseInOut_m01DD06E6C8962F8F62F293C9EAE491C3D3F2CAF3((0.0f), (0.0f), (1.0f), (1.0f), NULL);
 		__this->___heightCurve = L_0;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___heightCurve), (void*)L_0);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/FireworkController.cs:15>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/FireworkController.cs:15>
 		__this->___randomiseColour = (bool)1;
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/FireworkController.cs:19>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/FireworkController.cs:19>
 		__this->___destroyDelayAfterExplode = (3.0f);
 		MonoBehaviour__ctor_m592DB0105CA0BC97AA1C5F4AD27B12D68A3B7C1E(__this, NULL);
 		return;
@@ -10405,9 +10421,9 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FireworkController__ctor_m8F9A6696BB90AB
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FireworkSpawner_Start_mFCBD900FF8E9919CD0AEF337153AF0A3188F84BC (FireworkSpawner_tC677DC2418B65DD1D484DFB8473A53536B903CB7* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/FireworkSpawner.cs:23>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/FireworkSpawner.cs:23>
 		FireworkSpawner_ScheduleNext_m84FB040A89B2A7F5016F53BAF270DE868E4D0F58(__this, NULL);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/FireworkSpawner.cs:24>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/FireworkSpawner.cs:24>
 		return;
 	}
 }
@@ -10421,7 +10437,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FireworkSpawner_Update_mCDE7B9EF64EAC0A8
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/FireworkSpawner.cs:28>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/FireworkSpawner.cs:28>
 		bool L_0 = __this->___autoSpawn;
 		if (!L_0)
 		{
@@ -10441,13 +10457,13 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FireworkSpawner_Update_mCDE7B9EF64EAC0A8
 
 IL_0016:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/FireworkSpawner.cs:28>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/FireworkSpawner.cs:28>
 		return;
 	}
 
 IL_0017:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/FireworkSpawner.cs:30>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/FireworkSpawner.cs:30>
 		float L_3;
 		L_3 = Time_get_time_m3A271BB1B20041144AC5B7863B71AB1F0150374B(NULL);
 		float L_4 = __this->___nextSpawnTime;
@@ -10457,15 +10473,15 @@ IL_0017:
 		}
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/FireworkSpawner.cs:32>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/FireworkSpawner.cs:32>
 		FireworkSpawner_SpawnFirework_m080CEE94A130D0CFC8428E8A043B20F32284D8B5(__this, NULL);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/FireworkSpawner.cs:33>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/FireworkSpawner.cs:33>
 		FireworkSpawner_ScheduleNext_m84FB040A89B2A7F5016F53BAF270DE868E4D0F58(__this, NULL);
 	}
 
 IL_0030:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/FireworkSpawner.cs:35>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/FireworkSpawner.cs:35>
 		return;
 	}
 }
@@ -10485,11 +10501,11 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FireworkSpawner_SpawnFirework_m080CEE94A
 	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 V_0;
 	memset((&V_0), 0, sizeof(V_0));
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/FireworkSpawner.cs:39>
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/FireworkSpawner.cs:40>
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/FireworkSpawner.cs:41>
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/FireworkSpawner.cs:42>
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/FireworkSpawner.cs:43>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/FireworkSpawner.cs:39>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/FireworkSpawner.cs:40>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/FireworkSpawner.cs:41>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/FireworkSpawner.cs:42>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/FireworkSpawner.cs:43>
 		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_0;
 		L_0 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(__this, NULL);
 		NullCheck(L_0);
@@ -10514,7 +10530,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FireworkSpawner_SpawnFirework_m080CEE94A
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_14;
 		L_14 = Vector3_op_Addition_m78C0EC70CB66E8DCAC225743D82B268DAEE92067_inline(L_1, L_13, NULL);
 		V_0 = L_14;
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/FireworkSpawner.cs:45>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/FireworkSpawner.cs:45>
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_15 = V_0;
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_16 = L_15;
 		RuntimeObject* L_17 = Box(Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2_il2cpp_TypeInfo_var, &L_16);
@@ -10522,7 +10538,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FireworkSpawner_SpawnFirework_m080CEE94A
 		L_18 = String_Format_mA8DBB4C2516B9723C5A41E6CB1E2FAF4BBE96DD8(_stringLiteral722E965A8F4DDA02FFC100D1E2AE1B249F85DA82, L_17, NULL);
 		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 		Debug_Log_m87A9A3C761FF5C43ED8A53B16190A53D08F818BB(L_18, NULL);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/FireworkSpawner.cs:46>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/FireworkSpawner.cs:46>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_19 = __this->___fireworkPrefab;
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_20 = V_0;
 		Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 L_21;
@@ -10530,7 +10546,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FireworkSpawner_SpawnFirework_m080CEE94A
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_22;
 		L_22 = Object_Instantiate_TisGameObject_t76FEDD663AB33C991A9C9A23129337651094216F_m831D2F71DF2AA6C93AFDFEFA04CF2CFC5FBBCDB4(L_19, L_20, L_21, Object_Instantiate_TisGameObject_t76FEDD663AB33C991A9C9A23129337651094216F_m831D2F71DF2AA6C93AFDFEFA04CF2CFC5FBBCDB4_RuntimeMethod_var);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/FireworkSpawner.cs:47>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/FireworkSpawner.cs:47>
 		return;
 	}
 }
@@ -10538,7 +10554,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FireworkSpawner_SpawnFirework_m080CEE94A
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FireworkSpawner_ScheduleNext_m84FB040A89B2A7F5016F53BAF270DE868E4D0F58 (FireworkSpawner_tC677DC2418B65DD1D484DFB8473A53536B903CB7* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/FireworkSpawner.cs:51>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/FireworkSpawner.cs:51>
 		float L_0;
 		L_0 = Time_get_time_m3A271BB1B20041144AC5B7863B71AB1F0150374B(NULL);
 		float L_1 = __this->___minInterval;
@@ -10546,7 +10562,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FireworkSpawner_ScheduleNext_m84FB040A89
 		float L_3;
 		L_3 = Random_Range_m5236C99A7D8AE6AC9190592DC66016652A2D2494(L_1, L_2, NULL);
 		__this->___nextSpawnTime = ((float)il2cpp_codegen_add(L_0, L_3));
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/FireworkSpawner.cs:52>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/FireworkSpawner.cs:52>
 		return;
 	}
 }
@@ -10554,21 +10570,21 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FireworkSpawner_ScheduleNext_m84FB040A89
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FireworkSpawner__ctor_m3CA81576345E3F100707C3BF7F45E2DF523BD33D (FireworkSpawner_tC677DC2418B65DD1D484DFB8473A53536B903CB7* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/FireworkSpawner.cs:8>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/FireworkSpawner.cs:8>
 		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_0;
 		memset((&L_0), 0, sizeof(L_0));
 		Vector2__ctor_m9525B79969AFFE3254B303A40997A56DEEB6F548_inline((&L_0), (-4.0f), (4.0f), NULL);
 		__this->___xRange = L_0;
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/FireworkSpawner.cs:9>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/FireworkSpawner.cs:9>
 		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_1;
 		memset((&L_1), 0, sizeof(L_1));
 		Vector2__ctor_m9525B79969AFFE3254B303A40997A56DEEB6F548_inline((&L_1), (6.0f), (12.0f), NULL);
 		__this->___zRange = L_1;
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/FireworkSpawner.cs:13>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/FireworkSpawner.cs:13>
 		__this->___minInterval = (1.5f);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/FireworkSpawner.cs:14>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/FireworkSpawner.cs:14>
 		__this->___maxInterval = (3.0f);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/FireworkSpawner.cs:17>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/FireworkSpawner.cs:17>
 		__this->___autoSpawn = (bool)1;
 		MonoBehaviour__ctor_m592DB0105CA0BC97AA1C5F4AD27B12D68A3B7C1E(__this, NULL);
 		return;
@@ -10597,11 +10613,11 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameManager_ProcessMessage_m22DDA224EC92
 	Message_t112DE54C687E2E6CB0EBCDDDD3B92BE534D9A7B1 V_0;
 	memset((&V_0), 0, sizeof(V_0));
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/GameManager.cs:43>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/GameManager.cs:46>
 		Message_t112DE54C687E2E6CB0EBCDDDD3B92BE534D9A7B1 L_0;
 		L_0 = ReferenceCountedSceneGraphMessage_FromJson_TisMessage_t112DE54C687E2E6CB0EBCDDDD3B92BE534D9A7B1_m574EC2A25A31A65FC102E07DD19A653DF576590B((&___0_message), ReferenceCountedSceneGraphMessage_FromJson_TisMessage_t112DE54C687E2E6CB0EBCDDDD3B92BE534D9A7B1_m574EC2A25A31A65FC102E07DD19A653DF576590B_RuntimeMethod_var);
 		V_0 = L_0;
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/GameManager.cs:45>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/GameManager.cs:48>
 		Message_t112DE54C687E2E6CB0EBCDDDD3B92BE534D9A7B1 L_1 = V_0;
 		bool L_2 = L_1.___startMatch;
 		if (!L_2)
@@ -10610,7 +10626,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameManager_ProcessMessage_m22DDA224EC92
 		}
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/GameManager.cs:47>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/GameManager.cs:50>
 		bool L_3 = __this->___matchStarted;
 		if (L_3)
 		{
@@ -10625,22 +10641,22 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameManager_ProcessMessage_m22DDA224EC92
 		}
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/GameManager.cs:49>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/GameManager.cs:52>
 		Message_t112DE54C687E2E6CB0EBCDDDD3B92BE534D9A7B1 L_5 = V_0;
 		float L_6 = L_5.___remainingTime;
 		__this->___remainingTime = L_6;
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/GameManager.cs:50>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/GameManager.cs:53>
 		__this->___matchStarted = (bool)1;
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/GameManager.cs:51>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/GameManager.cs:54>
 		GameManager_UpdateTimerUI_m4AF067747EE379059EAFEA45D8ED5E26CC20A629(__this, NULL);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/GameManager.cs:52>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/GameManager.cs:55>
 		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 		Debug_Log_m87A9A3C761FF5C43ED8A53B16190A53D08F818BB(_stringLiteral38786725C36EAD632FB31BBDF90A2878574CF7DE, NULL);
 	}
 
 IL_0043:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/GameManager.cs:56>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/GameManager.cs:59>
 		Message_t112DE54C687E2E6CB0EBCDDDD3B92BE534D9A7B1 L_7 = V_0;
 		bool L_8 = L_7.___endMatch;
 		if (!L_8)
@@ -10649,7 +10665,7 @@ IL_0043:
 		}
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/GameManager.cs:58>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/GameManager.cs:61>
 		bool L_9 = __this->___gameEnded;
 		if (L_9)
 		{
@@ -10657,21 +10673,21 @@ IL_0043:
 		}
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/GameManager.cs:60>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/GameManager.cs:63>
 		Message_t112DE54C687E2E6CB0EBCDDDD3B92BE534D9A7B1 L_10 = V_0;
 		float L_11 = L_10.___remainingTime;
 		__this->___remainingTime = L_11;
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/GameManager.cs:61>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/GameManager.cs:64>
 		__this->___matchStarted = (bool)0;
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/GameManager.cs:62>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/GameManager.cs:65>
 		__this->___gameEnded = (bool)1;
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/GameManager.cs:63>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/GameManager.cs:66>
 		GameManager_UpdateTimerUI_m4AF067747EE379059EAFEA45D8ED5E26CC20A629(__this, NULL);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/GameManager.cs:65>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/GameManager.cs:68>
 		Message_t112DE54C687E2E6CB0EBCDDDD3B92BE534D9A7B1 L_12 = V_0;
 		int32_t L_13 = L_12.___winner;
 		GameManager_ApplyWinnerResult_m2678890F85BAF3E06C8B73EE84885A03AD7F655B(__this, L_13, NULL);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/GameManager.cs:66>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/GameManager.cs:69>
 		Message_t112DE54C687E2E6CB0EBCDDDD3B92BE534D9A7B1 L_14 = V_0;
 		int32_t L_15 = L_14.___winner;
 		int32_t L_16 = L_15;
@@ -10684,7 +10700,7 @@ IL_0043:
 
 IL_0099:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/GameManager.cs:69>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/GameManager.cs:72>
 		return;
 	}
 }
@@ -10698,14 +10714,14 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameManager_Start_m87A71D65F3171A58DBDDB
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/GameManager.cs:73>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/GameManager.cs:76>
 		float L_0 = __this->___matchDuration;
 		__this->___remainingTime = L_0;
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/GameManager.cs:74>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/GameManager.cs:77>
 		__this->___matchStarted = (bool)0;
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/GameManager.cs:75>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/GameManager.cs:78>
 		__this->___gameEnded = (bool)0;
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/GameManager.cs:76>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/GameManager.cs:79>
 		NetworkContext_t49239659157E00ACFF3A196AF00218DED40F9310 L_1;
 		L_1 = NetworkScene_Register_m0F251779B3FEA29EAE6A5DBCDDCC0E50596A6545(__this, NULL);
 		__this->___context = L_1;
@@ -10713,9 +10729,9 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameManager_Start_m87A71D65F3171A58DBDDB
 		#if IL2CPP_ENABLE_STRICT_WRITE_BARRIERS
 		Il2CppCodeGenWriteBarrier((void**)&(((&__this->___context))->___Component), (void*)NULL);
 		#endif
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/GameManager.cs:78>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/GameManager.cs:81>
 		GameManager_UpdateTimerUI_m4AF067747EE379059EAFEA45D8ED5E26CC20A629(__this, NULL);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/GameManager.cs:80>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/GameManager.cs:83>
 		FireworkSpawner_tC677DC2418B65DD1D484DFB8473A53536B903CB7* L_2 = __this->___player1FireworkSpawner;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_3;
@@ -10726,7 +10742,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameManager_Start_m87A71D65F3171A58DBDDB
 		}
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/GameManager.cs:81>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/GameManager.cs:84>
 		FireworkSpawner_tC677DC2418B65DD1D484DFB8473A53536B903CB7* L_4 = __this->___player1FireworkSpawner;
 		NullCheck(L_4);
 		L_4->___autoSpawn = (bool)0;
@@ -10734,7 +10750,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameManager_Start_m87A71D65F3171A58DBDDB
 
 IL_0046:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/GameManager.cs:83>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/GameManager.cs:86>
 		FireworkSpawner_tC677DC2418B65DD1D484DFB8473A53536B903CB7* L_5 = __this->___player2FireworkSpawner;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_6;
@@ -10745,7 +10761,7 @@ IL_0046:
 		}
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/GameManager.cs:84>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/GameManager.cs:87>
 		FireworkSpawner_tC677DC2418B65DD1D484DFB8473A53536B903CB7* L_7 = __this->___player2FireworkSpawner;
 		NullCheck(L_7);
 		L_7->___autoSpawn = (bool)0;
@@ -10753,7 +10769,7 @@ IL_0046:
 
 IL_0060:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/GameManager.cs:85>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/GameManager.cs:88>
 		return;
 	}
 }
@@ -10773,7 +10789,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameManager_Update_m7F29D8E933B8D21D2E67
 	int32_t G_B12_0 = 0;
 	int32_t G_B12_1 = 0;
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/GameManager.cs:89>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/GameManager.cs:92>
 		bool L_0 = __this->___gameEnded;
 		if (!L_0)
 		{
@@ -10781,13 +10797,13 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameManager_Update_m7F29D8E933B8D21D2E67
 		}
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/GameManager.cs:89>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/GameManager.cs:92>
 		return;
 	}
 
 IL_0009:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/GameManager.cs:90>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/GameManager.cs:93>
 		bool L_1 = __this->___matchStarted;
 		if (L_1)
 		{
@@ -10795,18 +10811,18 @@ IL_0009:
 		}
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/GameManager.cs:90>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/GameManager.cs:93>
 		return;
 	}
 
 IL_0012:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/GameManager.cs:92>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/GameManager.cs:95>
 		float L_2 = __this->___remainingTime;
 		float L_3;
 		L_3 = Time_get_deltaTime_mC3195000401F0FD167DD2F948FD2BC58330D0865(NULL);
 		__this->___remainingTime = ((float)il2cpp_codegen_subtract(L_2, L_3));
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/GameManager.cs:93>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/GameManager.cs:96>
 		float L_4 = __this->___remainingTime;
 		if ((!(((float)L_4) < ((float)(0.0f)))))
 		{
@@ -10814,15 +10830,15 @@ IL_0012:
 		}
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/GameManager.cs:94>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/GameManager.cs:97>
 		__this->___remainingTime = (0.0f);
 	}
 
 IL_003c:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/GameManager.cs:96>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/GameManager.cs:99>
 		GameManager_UpdateTimerUI_m4AF067747EE379059EAFEA45D8ED5E26CC20A629(__this, NULL);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/GameManager.cs:98>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/GameManager.cs:101>
 		ScoreManager_t86D4A06D4B38717B8C529883F37DA25BA5750F39* L_5 = __this->___scoreManager;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_6;
@@ -10848,7 +10864,7 @@ IL_0053:
 
 IL_005e:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/GameManager.cs:99>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/GameManager.cs:102>
 		ScoreManager_t86D4A06D4B38717B8C529883F37DA25BA5750F39* L_9 = __this->___scoreManager;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_10;
@@ -10879,7 +10895,7 @@ IL_006f:
 IL_007a:
 	{
 		V_0 = G_B12_0;
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/GameManager.cs:101>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/GameManager.cs:104>
 		int32_t L_13 = __this->___targetScore;
 		if ((((int32_t)G_B12_1) >= ((int32_t)L_13)))
 		{
@@ -10897,15 +10913,15 @@ IL_007a:
 
 IL_008c:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/GameManager.cs:103>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/GameManager.cs:106>
 		GameManager_EndGame_m280CB4AB8F3243752E42BBAE128D1ABC092E6D62(__this, NULL);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/GameManager.cs:104>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/GameManager.cs:107>
 		return;
 	}
 
 IL_0093:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/GameManager.cs:107>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/GameManager.cs:110>
 		float L_16 = __this->___remainingTime;
 		if ((!(((float)L_16) <= ((float)(0.0f)))))
 		{
@@ -10913,13 +10929,13 @@ IL_0093:
 		}
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/GameManager.cs:109>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/GameManager.cs:112>
 		GameManager_EndGame_m280CB4AB8F3243752E42BBAE128D1ABC092E6D62(__this, NULL);
 	}
 
 IL_00a6:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/GameManager.cs:111>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/GameManager.cs:114>
 		return;
 	}
 }
@@ -10937,17 +10953,17 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameManager_UpdateTimerUI_m4AF067747EE37
 	int32_t V_1 = 0;
 	String_t* V_2 = NULL;
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/GameManager.cs:115>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/GameManager.cs:118>
 		float L_0 = __this->___remainingTime;
 		int32_t L_1;
 		L_1 = Mathf_FloorToInt_m2A39AE881CAEE6B6A4B3BFEF9CA1ED40625F5AB7_inline(((float)(L_0/(60.0f))), NULL);
 		V_0 = L_1;
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/GameManager.cs:116>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/GameManager.cs:119>
 		float L_2 = __this->___remainingTime;
 		int32_t L_3;
 		L_3 = Mathf_FloorToInt_m2A39AE881CAEE6B6A4B3BFEF9CA1ED40625F5AB7_inline((fmodf(L_2, (60.0f))), NULL);
 		V_1 = L_3;
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/GameManager.cs:117>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/GameManager.cs:120>
 		int32_t L_4 = V_0;
 		int32_t L_5 = L_4;
 		RuntimeObject* L_6 = Box(il2cpp_defaults.int32_class, &L_5);
@@ -10957,7 +10973,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameManager_UpdateTimerUI_m4AF067747EE37
 		String_t* L_10;
 		L_10 = String_Format_mFB7DA489BD99F4670881FF50EC017BFB0A5C0987(_stringLiteral0F142983E06D07395072DC2B2C1B949833748928, L_6, L_9, NULL);
 		V_2 = L_10;
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/GameManager.cs:119>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/GameManager.cs:122>
 		TextMeshProUGUI_t101091AF4B578BB534C92E9D1EEAF0611636D957* L_11 = __this->___timerTextTeam1;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_12;
@@ -10968,7 +10984,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameManager_UpdateTimerUI_m4AF067747EE37
 		}
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/GameManager.cs:120>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/GameManager.cs:123>
 		TextMeshProUGUI_t101091AF4B578BB534C92E9D1EEAF0611636D957* L_13 = __this->___timerTextTeam1;
 		String_t* L_14 = V_2;
 		NullCheck(L_13);
@@ -10977,7 +10993,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameManager_UpdateTimerUI_m4AF067747EE37
 
 IL_0055:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/GameManager.cs:122>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/GameManager.cs:125>
 		TextMeshProUGUI_t101091AF4B578BB534C92E9D1EEAF0611636D957* L_15 = __this->___timerTextTeam2;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_16;
@@ -10988,7 +11004,7 @@ IL_0055:
 		}
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/GameManager.cs:123>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/GameManager.cs:126>
 		TextMeshProUGUI_t101091AF4B578BB534C92E9D1EEAF0611636D957* L_17 = __this->___timerTextTeam2;
 		String_t* L_18 = V_2;
 		NullCheck(L_17);
@@ -10997,7 +11013,7 @@ IL_0055:
 
 IL_006f:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/GameManager.cs:124>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/GameManager.cs:127>
 		return;
 	}
 }
@@ -11019,7 +11035,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameManager_EndGame_m280CB4AB8F3243752E4
 	int32_t G_B5_0 = 0;
 	int32_t G_B8_0 = 0;
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/GameManager.cs:128>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/GameManager.cs:131>
 		bool L_0 = __this->___gameEnded;
 		if (!L_0)
 		{
@@ -11027,17 +11043,17 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameManager_EndGame_m280CB4AB8F3243752E4
 		}
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/GameManager.cs:128>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/GameManager.cs:131>
 		return;
 	}
 
 IL_0009:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/GameManager.cs:130>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/GameManager.cs:133>
 		__this->___gameEnded = (bool)1;
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/GameManager.cs:131>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/GameManager.cs:134>
 		__this->___matchStarted = (bool)0;
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/GameManager.cs:133>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/GameManager.cs:136>
 		ScoreManager_t86D4A06D4B38717B8C529883F37DA25BA5750F39* L_1 = __this->___scoreManager;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_2;
@@ -11064,7 +11080,7 @@ IL_0028:
 IL_0033:
 	{
 		V_0 = G_B5_0;
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/GameManager.cs:134>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/GameManager.cs:137>
 		ScoreManager_t86D4A06D4B38717B8C529883F37DA25BA5750F39* L_5 = __this->___scoreManager;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_6;
@@ -11091,7 +11107,7 @@ IL_0045:
 IL_0050:
 	{
 		V_1 = G_B8_0;
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/GameManager.cs:136>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/GameManager.cs:139>
 		int32_t L_9 = V_0;
 		int32_t L_10 = L_9;
 		RuntimeObject* L_11 = Box(il2cpp_defaults.int32_class, &L_10);
@@ -11102,9 +11118,9 @@ IL_0050:
 		L_15 = String_Format_mFB7DA489BD99F4670881FF50EC017BFB0A5C0987(_stringLiteral49824ADDAD1818F8A65356068D30F92EBA5ED566, L_11, L_14, NULL);
 		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 		Debug_Log_m87A9A3C761FF5C43ED8A53B16190A53D08F818BB(L_15, NULL);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/GameManager.cs:138>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/GameManager.cs:141>
 		V_2 = 0;
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/GameManager.cs:139>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/GameManager.cs:142>
 		int32_t L_16 = V_0;
 		int32_t L_17 = V_1;
 		if ((((int32_t)L_16) <= ((int32_t)L_17)))
@@ -11113,14 +11129,14 @@ IL_0050:
 		}
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/GameManager.cs:139>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/GameManager.cs:142>
 		V_2 = 1;
 		goto IL_007c;
 	}
 
 IL_0076:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/GameManager.cs:140>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/GameManager.cs:143>
 		int32_t L_18 = V_1;
 		int32_t L_19 = V_0;
 		if ((((int32_t)L_18) <= ((int32_t)L_19)))
@@ -11129,16 +11145,16 @@ IL_0076:
 		}
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/GameManager.cs:140>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/GameManager.cs:143>
 		V_2 = 2;
 	}
 
 IL_007c:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/GameManager.cs:142>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/GameManager.cs:145>
 		int32_t L_20 = V_2;
 		GameManager_ApplyWinnerResult_m2678890F85BAF3E06C8B73EE84885A03AD7F655B(__this, L_20, NULL);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/GameManager.cs:144>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/GameManager.cs:147>
 		NetworkContext_t49239659157E00ACFF3A196AF00218DED40F9310* L_21 = (NetworkContext_t49239659157E00ACFF3A196AF00218DED40F9310*)(&__this->___context);
 		int32_t L_22 = V_2;
 		float L_23 = __this->___remainingTime;
@@ -11146,7 +11162,7 @@ IL_007c:
 		memset((&L_24), 0, sizeof(L_24));
 		Message__ctor_mA72FFCD0E15508D6684A5F7606E65784BD23EBDB((&L_24), (bool)0, (bool)1, L_22, L_23, NULL);
 		NetworkContext_SendJson_TisMessage_t112DE54C687E2E6CB0EBCDDDD3B92BE534D9A7B1_m5736B0079062CFA7E69D600626FD0B0E7406F867(L_21, L_24, NetworkContext_SendJson_TisMessage_t112DE54C687E2E6CB0EBCDDDD3B92BE534D9A7B1_m5736B0079062CFA7E69D600626FD0B0E7406F867_RuntimeMethod_var);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/GameManager.cs:145>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/GameManager.cs:148>
 		return;
 	}
 }
@@ -11160,7 +11176,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameManager_PlayWinnerFireworks_m00E9871
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/GameManager.cs:149>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/GameManager.cs:152>
 		int32_t L_0 = ___0_winner;
 		if ((!(((uint32_t)L_0) == ((uint32_t)1))))
 		{
@@ -11178,7 +11194,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameManager_PlayWinnerFireworks_m00E9871
 		}
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/GameManager.cs:151>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/GameManager.cs:154>
 		FireworkSpawner_tC677DC2418B65DD1D484DFB8473A53536B903CB7* L_3 = __this->___player1FireworkSpawner;
 		NullCheck(L_3);
 		L_3->___autoSpawn = (bool)1;
@@ -11187,7 +11203,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameManager_PlayWinnerFireworks_m00E9871
 
 IL_001f:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/GameManager.cs:153>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/GameManager.cs:156>
 		int32_t L_4 = ___0_winner;
 		if ((!(((uint32_t)L_4) == ((uint32_t)2))))
 		{
@@ -11205,7 +11221,7 @@ IL_001f:
 		}
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/GameManager.cs:155>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/GameManager.cs:158>
 		FireworkSpawner_tC677DC2418B65DD1D484DFB8473A53536B903CB7* L_7 = __this->___player2FireworkSpawner;
 		NullCheck(L_7);
 		L_7->___autoSpawn = (bool)1;
@@ -11213,7 +11229,7 @@ IL_001f:
 
 IL_003d:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/GameManager.cs:157>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/GameManager.cs:160>
 		return;
 	}
 }
@@ -11229,7 +11245,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameManager_BeginMatch_m63B2FE153E2E912A
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/GameManager.cs:160>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/GameManager.cs:163>
 		bool L_0 = __this->___gameEnded;
 		if (!L_0)
 		{
@@ -11237,13 +11253,13 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameManager_BeginMatch_m63B2FE153E2E912A
 		}
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/GameManager.cs:160>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/GameManager.cs:163>
 		return;
 	}
 
 IL_0009:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/GameManager.cs:161>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/GameManager.cs:164>
 		bool L_1 = __this->___matchStarted;
 		if (!L_1)
 		{
@@ -11251,30 +11267,30 @@ IL_0009:
 		}
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/GameManager.cs:161>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/GameManager.cs:164>
 		return;
 	}
 
 IL_0012:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/GameManager.cs:163>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/GameManager.cs:166>
 		float L_2 = __this->___matchDuration;
 		__this->___remainingTime = L_2;
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/GameManager.cs:164>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/GameManager.cs:167>
 		__this->___matchStarted = (bool)1;
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/GameManager.cs:165>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/GameManager.cs:168>
 		GameManager_UpdateTimerUI_m4AF067747EE379059EAFEA45D8ED5E26CC20A629(__this, NULL);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/GameManager.cs:167>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/GameManager.cs:170>
 		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 		Debug_Log_m87A9A3C761FF5C43ED8A53B16190A53D08F818BB(_stringLiteralF0D4C35532DB158EC4A2E36CDD7F02A2979201A8, NULL);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/GameManager.cs:169>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/GameManager.cs:172>
 		NetworkContext_t49239659157E00ACFF3A196AF00218DED40F9310* L_3 = (NetworkContext_t49239659157E00ACFF3A196AF00218DED40F9310*)(&__this->___context);
 		float L_4 = __this->___remainingTime;
 		Message_t112DE54C687E2E6CB0EBCDDDD3B92BE534D9A7B1 L_5;
 		memset((&L_5), 0, sizeof(L_5));
 		Message__ctor_mA72FFCD0E15508D6684A5F7606E65784BD23EBDB((&L_5), (bool)1, (bool)0, 0, L_4, NULL);
 		NetworkContext_SendJson_TisMessage_t112DE54C687E2E6CB0EBCDDDD3B92BE534D9A7B1_m5736B0079062CFA7E69D600626FD0B0E7406F867(L_3, L_5, NetworkContext_SendJson_TisMessage_t112DE54C687E2E6CB0EBCDDDD3B92BE534D9A7B1_m5736B0079062CFA7E69D600626FD0B0E7406F867_RuntimeMethod_var);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/GameManager.cs:170>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/GameManager.cs:173>
 		return;
 	}
 }
@@ -11282,7 +11298,7 @@ IL_0012:
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool GameManager_IsGameEnded_m45FC28D188A87C4A9F6369EAB21714BA6282A836 (GameManager_tFE129A0017AF5BBD30FDCD4403B9CCEAE064C6B6* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/GameManager.cs:174>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/GameManager.cs:177>
 		bool L_0 = __this->___gameEnded;
 		return L_0;
 	}
@@ -11303,103 +11319,223 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameManager_ApplyWinnerResult_m2678890F8
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/GameManager.cs:178>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/GameManager.cs:181>
 		int32_t L_0 = ___0_winner;
 		if ((!(((uint32_t)L_0) == ((uint32_t)1))))
 		{
-			goto IL_0034;
+			goto IL_009d;
 		}
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/GameManager.cs:180>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/GameManager.cs:183>
 		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 		Debug_Log_m87A9A3C761FF5C43ED8A53B16190A53D08F818BB(_stringLiteral0247C06B7ACDF114754810B2CCFB239B3EBB0B2C, NULL);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/GameManager.cs:181>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/GameManager.cs:184>
 		TextMeshProUGUI_t101091AF4B578BB534C92E9D1EEAF0611636D957* L_1 = __this->___resultText;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_2;
 		L_2 = Object_op_Inequality_mD0BE578448EAA61948F25C32F8DD55AB1F778602(L_1, (Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C*)NULL, NULL);
 		if (!L_2)
 		{
-			goto IL_002c;
+			goto IL_002f;
 		}
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/GameManager.cs:181>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/GameManager.cs:184>
 		TextMeshProUGUI_t101091AF4B578BB534C92E9D1EEAF0611636D957* L_3 = __this->___resultText;
 		NullCheck(L_3);
 		VirtualActionInvoker1< String_t* >::Invoke(66, L_3, _stringLiteral2793A6051169D45EEECDDCE436FCA27B04441758);
 	}
 
-IL_002c:
+IL_002f:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/GameManager.cs:182>
-		GameManager_PlayWinnerFireworks_m00E98710AE3EBF5FA5A0CEA5F41549C4FEEA96C4(__this, 1, NULL);
-		return;
-	}
-
-IL_0034:
-	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/GameManager.cs:184>
-		int32_t L_4 = ___0_winner;
-		if ((!(((uint32_t)L_4) == ((uint32_t)2))))
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/GameManager.cs:185>
+		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_4 = __this->___player;
+		NullCheck(L_4);
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_5;
+		L_5 = GameObject_get_transform_m0BC10ADFA1632166AE5544BDF9038A2650C2AE56(L_4, NULL);
+		NullCheck(L_5);
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_6;
+		L_6 = Transform_get_position_m69CD5FA214FDAE7BB701552943674846C220FDE1(L_5, NULL);
+		float L_7 = L_6.___z;
+		if ((!(((float)L_7) < ((float)(0.0f)))))
 		{
-			goto IL_0068;
+			goto IL_007f;
 		}
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/GameManager.cs:186>
-		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
-		Debug_Log_m87A9A3C761FF5C43ED8A53B16190A53D08F818BB(_stringLiteralA39A421B0154FC3991F1F33392EE594ED9C33DAE, NULL);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/GameManager.cs:187>
-		TextMeshProUGUI_t101091AF4B578BB534C92E9D1EEAF0611636D957* L_5 = __this->___resultText;
-		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
-		bool L_6;
-		L_6 = Object_op_Inequality_mD0BE578448EAA61948F25C32F8DD55AB1F778602(L_5, (Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C*)NULL, NULL);
-		if (!L_6)
-		{
-			goto IL_0060;
-		}
-	}
-	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/GameManager.cs:187>
-		TextMeshProUGUI_t101091AF4B578BB534C92E9D1EEAF0611636D957* L_7 = __this->___resultText;
-		NullCheck(L_7);
-		VirtualActionInvoker1< String_t* >::Invoke(66, L_7, _stringLiteralA19526466B6903289E8D3A7D74C59E27E9EF33F3);
-	}
-
-IL_0060:
-	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/GameManager.cs:188>
-		GameManager_PlayWinnerFireworks_m00E98710AE3EBF5FA5A0CEA5F41549C4FEEA96C4(__this, 2, NULL);
-		return;
-	}
-
-IL_0068:
-	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/GameManager.cs:192>
-		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
-		Debug_Log_m87A9A3C761FF5C43ED8A53B16190A53D08F818BB(_stringLiteralF106589BCC7EEC872459CAC5AC6CB8C4A332C93B, NULL);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/GameManager.cs:193>
-		TextMeshProUGUI_t101091AF4B578BB534C92E9D1EEAF0611636D957* L_8 = __this->___resultText;
+		AudioClip_t5D272C4EB4F2D3ED49F1C346DEA373CF6D585F20* L_8 = __this->___winSound;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_9;
 		L_9 = Object_op_Inequality_mD0BE578448EAA61948F25C32F8DD55AB1F778602(L_8, (Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C*)NULL, NULL);
 		if (!L_9)
 		{
-			goto IL_0090;
+			goto IL_007f;
 		}
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/GameManager.cs:193>
-		TextMeshProUGUI_t101091AF4B578BB534C92E9D1EEAF0611636D957* L_10 = __this->___resultText;
-		NullCheck(L_10);
-		VirtualActionInvoker1< String_t* >::Invoke(66, L_10, _stringLiteralF106589BCC7EEC872459CAC5AC6CB8C4A332C93B);
+		AudioClip_t5D272C4EB4F2D3ED49F1C346DEA373CF6D585F20* L_10 = __this->___loseSound;
+		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
+		bool L_11;
+		L_11 = Object_op_Inequality_mD0BE578448EAA61948F25C32F8DD55AB1F778602(L_10, (Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C*)NULL, NULL);
+		if (!L_11)
+		{
+			goto IL_007f;
+		}
+	}
+	{
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/GameManager.cs:187>
+		AudioClip_t5D272C4EB4F2D3ED49F1C346DEA373CF6D585F20* L_12 = __this->___winSound;
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_13;
+		L_13 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(__this, NULL);
+		NullCheck(L_13);
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_14;
+		L_14 = Transform_get_position_m69CD5FA214FDAE7BB701552943674846C220FDE1(L_13, NULL);
+		AudioSource_PlayClipAtPoint_mA78328A70D3F1088B588EF6F811AAD6577F2B7BF(L_12, L_14, NULL);
+		goto IL_0095;
 	}
 
-IL_0090:
+IL_007f:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/GameManager.cs:195>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/GameManager.cs:191>
+		AudioClip_t5D272C4EB4F2D3ED49F1C346DEA373CF6D585F20* L_15 = __this->___loseSound;
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_16;
+		L_16 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(__this, NULL);
+		NullCheck(L_16);
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_17;
+		L_17 = Transform_get_position_m69CD5FA214FDAE7BB701552943674846C220FDE1(L_16, NULL);
+		AudioSource_PlayClipAtPoint_mA78328A70D3F1088B588EF6F811AAD6577F2B7BF(L_15, L_17, NULL);
+	}
+
+IL_0095:
+	{
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/GameManager.cs:193>
+		GameManager_PlayWinnerFireworks_m00E98710AE3EBF5FA5A0CEA5F41549C4FEEA96C4(__this, 1, NULL);
+		return;
+	}
+
+IL_009d:
+	{
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/GameManager.cs:195>
+		int32_t L_18 = ___0_winner;
+		if ((!(((uint32_t)L_18) == ((uint32_t)2))))
+		{
+			goto IL_013a;
+		}
+	}
+	{
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/GameManager.cs:197>
+		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
+		Debug_Log_m87A9A3C761FF5C43ED8A53B16190A53D08F818BB(_stringLiteralA39A421B0154FC3991F1F33392EE594ED9C33DAE, NULL);
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/GameManager.cs:198>
+		TextMeshProUGUI_t101091AF4B578BB534C92E9D1EEAF0611636D957* L_19 = __this->___resultText;
+		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
+		bool L_20;
+		L_20 = Object_op_Inequality_mD0BE578448EAA61948F25C32F8DD55AB1F778602(L_19, (Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C*)NULL, NULL);
+		if (!L_20)
+		{
+			goto IL_00cc;
+		}
+	}
+	{
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/GameManager.cs:198>
+		TextMeshProUGUI_t101091AF4B578BB534C92E9D1EEAF0611636D957* L_21 = __this->___resultText;
+		NullCheck(L_21);
+		VirtualActionInvoker1< String_t* >::Invoke(66, L_21, _stringLiteralA19526466B6903289E8D3A7D74C59E27E9EF33F3);
+	}
+
+IL_00cc:
+	{
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/GameManager.cs:199>
+		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_22 = __this->___player;
+		NullCheck(L_22);
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_23;
+		L_23 = GameObject_get_transform_m0BC10ADFA1632166AE5544BDF9038A2650C2AE56(L_22, NULL);
+		NullCheck(L_23);
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_24;
+		L_24 = Transform_get_position_m69CD5FA214FDAE7BB701552943674846C220FDE1(L_23, NULL);
+		float L_25 = L_24.___z;
+		if ((!(((float)L_25) > ((float)(0.0f)))))
+		{
+			goto IL_011c;
+		}
+	}
+	{
+		AudioClip_t5D272C4EB4F2D3ED49F1C346DEA373CF6D585F20* L_26 = __this->___winSound;
+		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
+		bool L_27;
+		L_27 = Object_op_Inequality_mD0BE578448EAA61948F25C32F8DD55AB1F778602(L_26, (Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C*)NULL, NULL);
+		if (!L_27)
+		{
+			goto IL_011c;
+		}
+	}
+	{
+		AudioClip_t5D272C4EB4F2D3ED49F1C346DEA373CF6D585F20* L_28 = __this->___loseSound;
+		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
+		bool L_29;
+		L_29 = Object_op_Inequality_mD0BE578448EAA61948F25C32F8DD55AB1F778602(L_28, (Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C*)NULL, NULL);
+		if (!L_29)
+		{
+			goto IL_011c;
+		}
+	}
+	{
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/GameManager.cs:201>
+		AudioClip_t5D272C4EB4F2D3ED49F1C346DEA373CF6D585F20* L_30 = __this->___winSound;
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_31;
+		L_31 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(__this, NULL);
+		NullCheck(L_31);
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_32;
+		L_32 = Transform_get_position_m69CD5FA214FDAE7BB701552943674846C220FDE1(L_31, NULL);
+		AudioSource_PlayClipAtPoint_mA78328A70D3F1088B588EF6F811AAD6577F2B7BF(L_30, L_32, NULL);
+		goto IL_0132;
+	}
+
+IL_011c:
+	{
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/GameManager.cs:205>
+		AudioClip_t5D272C4EB4F2D3ED49F1C346DEA373CF6D585F20* L_33 = __this->___loseSound;
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_34;
+		L_34 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(__this, NULL);
+		NullCheck(L_34);
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_35;
+		L_35 = Transform_get_position_m69CD5FA214FDAE7BB701552943674846C220FDE1(L_34, NULL);
+		AudioSource_PlayClipAtPoint_mA78328A70D3F1088B588EF6F811AAD6577F2B7BF(L_33, L_35, NULL);
+	}
+
+IL_0132:
+	{
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/GameManager.cs:207>
+		GameManager_PlayWinnerFireworks_m00E98710AE3EBF5FA5A0CEA5F41549C4FEEA96C4(__this, 2, NULL);
+		return;
+	}
+
+IL_013a:
+	{
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/GameManager.cs:211>
+		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
+		Debug_Log_m87A9A3C761FF5C43ED8A53B16190A53D08F818BB(_stringLiteralF106589BCC7EEC872459CAC5AC6CB8C4A332C93B, NULL);
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/GameManager.cs:212>
+		TextMeshProUGUI_t101091AF4B578BB534C92E9D1EEAF0611636D957* L_36 = __this->___resultText;
+		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
+		bool L_37;
+		L_37 = Object_op_Inequality_mD0BE578448EAA61948F25C32F8DD55AB1F778602(L_36, (Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C*)NULL, NULL);
+		if (!L_37)
+		{
+			goto IL_0162;
+		}
+	}
+	{
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/GameManager.cs:212>
+		TextMeshProUGUI_t101091AF4B578BB534C92E9D1EEAF0611636D957* L_38 = __this->___resultText;
+		NullCheck(L_38);
+		VirtualActionInvoker1< String_t* >::Invoke(66, L_38, _stringLiteralF106589BCC7EEC872459CAC5AC6CB8C4A332C93B);
+	}
+
+IL_0162:
+	{
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/GameManager.cs:214>
 		return;
 	}
 }
@@ -11407,9 +11543,9 @@ IL_0090:
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameManager__ctor_mF453CED520617BFB65C52405A964E06CF17DB368 (GameManager_tFE129A0017AF5BBD30FDCD4403B9CCEAE064C6B6* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/GameManager.cs:14>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/GameManager.cs:14>
 		__this->___matchDuration = (300.0f);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/GameManager.cs:15>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/GameManager.cs:15>
 		__this->___targetScore = ((int32_t)100);
 		MonoBehaviour__ctor_m592DB0105CA0BC97AA1C5F4AD27B12D68A3B7C1E(__this, NULL);
 		return;
@@ -11477,19 +11613,19 @@ IL2CPP_EXTERN_C void Message_t112DE54C687E2E6CB0EBCDDDD3B92BE534D9A7B1_marshal_c
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Message__ctor_mA72FFCD0E15508D6684A5F7606E65784BD23EBDB (Message_t112DE54C687E2E6CB0EBCDDDD3B92BE534D9A7B1* __this, bool ___0_startMatch, bool ___1_endMatch, int32_t ___2_winner, float ___3_remainingTime, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/GameManager.cs:35>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/GameManager.cs:38>
 		bool L_0 = ___0_startMatch;
 		__this->___startMatch = L_0;
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/GameManager.cs:36>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/GameManager.cs:39>
 		bool L_1 = ___1_endMatch;
 		__this->___endMatch = L_1;
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/GameManager.cs:37>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/GameManager.cs:40>
 		int32_t L_2 = ___2_winner;
 		__this->___winner = L_2;
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/GameManager.cs:38>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/GameManager.cs:41>
 		float L_3 = ___3_remainingTime;
 		__this->___remainingTime = L_3;
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/GameManager.cs:39>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/GameManager.cs:42>
 		return;
 	}
 }
@@ -11527,7 +11663,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void HammerSmasher_Awake_mCB8361F47DBF2E1899F
 	Bounds_t367E830C64BBF235ED8C3B2F8CF6254FDCAD39C3 V_3;
 	memset((&V_3), 0, sizeof(V_3));
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/HammerSmasher.cs:43>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/HammerSmasher.cs:43>
 		Collider_t1CC3163924FCD6C4CC2E816373A929C1E3D55E76* L_0 = __this->___headVolume;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_1;
@@ -11538,10 +11674,10 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void HammerSmasher_Awake_mCB8361F47DBF2E1899F
 		}
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/HammerSmasher.cs:46>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/HammerSmasher.cs:46>
 		ColliderU5BU5D_t94A9D70F63D095AFF2A9B4613012A5F7F3141787* L_2;
 		L_2 = Component_GetComponentsInChildren_TisCollider_t1CC3163924FCD6C4CC2E816373A929C1E3D55E76_m6FCDC69D916F8EB31E6219C8FB86B8BD98D146B3(__this, (bool)1, Component_GetComponentsInChildren_TisCollider_t1CC3163924FCD6C4CC2E816373A929C1E3D55E76_m6FCDC69D916F8EB31E6219C8FB86B8BD98D146B3_RuntimeMethod_var);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/HammerSmasher.cs:47>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/HammerSmasher.cs:47>
 		V_0 = L_2;
 		V_1 = 0;
 		goto IL_0040;
@@ -11549,14 +11685,14 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void HammerSmasher_Awake_mCB8361F47DBF2E1899F
 
 IL_0019:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/HammerSmasher.cs:47>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/HammerSmasher.cs:47>
 		ColliderU5BU5D_t94A9D70F63D095AFF2A9B4613012A5F7F3141787* L_3 = V_0;
 		int32_t L_4 = V_1;
 		NullCheck(L_3);
 		int32_t L_5 = L_4;
 		Collider_t1CC3163924FCD6C4CC2E816373A929C1E3D55E76* L_6 = (L_3)->GetAt(static_cast<il2cpp_array_size_t>(L_5));
 		V_2 = L_6;
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/HammerSmasher.cs:49>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/HammerSmasher.cs:49>
 		Collider_t1CC3163924FCD6C4CC2E816373A929C1E3D55E76* L_7 = V_2;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_8;
@@ -11579,11 +11715,11 @@ IL_0019:
 		}
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/HammerSmasher.cs:51>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/HammerSmasher.cs:51>
 		Collider_t1CC3163924FCD6C4CC2E816373A929C1E3D55E76* L_12 = V_2;
 		__this->___headVolume = L_12;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___headVolume), (void*)L_12);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/HammerSmasher.cs:52>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/HammerSmasher.cs:52>
 		goto IL_0046;
 	}
 
@@ -11595,7 +11731,7 @@ IL_003c:
 
 IL_0040:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/HammerSmasher.cs:47>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/HammerSmasher.cs:47>
 		int32_t L_14 = V_1;
 		ColliderU5BU5D_t94A9D70F63D095AFF2A9B4613012A5F7F3141787* L_15 = V_0;
 		NullCheck(L_15);
@@ -11607,7 +11743,7 @@ IL_0040:
 
 IL_0046:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/HammerSmasher.cs:55>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/HammerSmasher.cs:55>
 		Collider_t1CC3163924FCD6C4CC2E816373A929C1E3D55E76* L_16 = __this->___headVolume;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_17;
@@ -11618,7 +11754,7 @@ IL_0046:
 		}
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/HammerSmasher.cs:55>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/HammerSmasher.cs:55>
 		Collider_t1CC3163924FCD6C4CC2E816373A929C1E3D55E76* L_18;
 		L_18 = Component_GetComponent_TisCollider_t1CC3163924FCD6C4CC2E816373A929C1E3D55E76_m820398EDBF1D3766C3166A0C323A127662A29A14(__this, Component_GetComponent_TisCollider_t1CC3163924FCD6C4CC2E816373A929C1E3D55E76_m820398EDBF1D3766C3166A0C323A127662A29A14_RuntimeMethod_var);
 		__this->___headVolume = L_18;
@@ -11627,12 +11763,12 @@ IL_0046:
 
 IL_005f:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/HammerSmasher.cs:58>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/HammerSmasher.cs:58>
 		Rigidbody_t268697F5A994213ED97393309870968BC1C7393C* L_19;
 		L_19 = Component_GetComponentInParent_TisRigidbody_t268697F5A994213ED97393309870968BC1C7393C_m49365CF93735FBE624C3828C66E7AD5FF67AD40D(__this, Component_GetComponentInParent_TisRigidbody_t268697F5A994213ED97393309870968BC1C7393C_m49365CF93735FBE624C3828C66E7AD5FF67AD40D_RuntimeMethod_var);
 		__this->____rb = L_19;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->____rb), (void*)L_19);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/HammerSmasher.cs:59>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/HammerSmasher.cs:59>
 		Rigidbody_t268697F5A994213ED97393309870968BC1C7393C* L_20 = __this->____rb;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_21;
@@ -11643,7 +11779,7 @@ IL_005f:
 		}
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/HammerSmasher.cs:59>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/HammerSmasher.cs:59>
 		Rigidbody_t268697F5A994213ED97393309870968BC1C7393C* L_22;
 		L_22 = Component_GetComponent_TisRigidbody_t268697F5A994213ED97393309870968BC1C7393C_m4B5CAD64B52D153BEA96432633CA9A45FA523DD8(__this, Component_GetComponent_TisRigidbody_t268697F5A994213ED97393309870968BC1C7393C_m4B5CAD64B52D153BEA96432633CA9A45FA523DD8_RuntimeMethod_var);
 		__this->____rb = L_22;
@@ -11652,7 +11788,7 @@ IL_005f:
 
 IL_0084:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/HammerSmasher.cs:61>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/HammerSmasher.cs:61>
 		Collider_t1CC3163924FCD6C4CC2E816373A929C1E3D55E76* L_23 = __this->___headVolume;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_24;
@@ -11663,7 +11799,7 @@ IL_0084:
 		}
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/HammerSmasher.cs:63>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/HammerSmasher.cs:63>
 		Collider_t1CC3163924FCD6C4CC2E816373A929C1E3D55E76* L_25 = __this->___headVolume;
 		NullCheck(L_25);
 		Bounds_t367E830C64BBF235ED8C3B2F8CF6254FDCAD39C3 L_26;
@@ -11672,13 +11808,13 @@ IL_0084:
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_27;
 		L_27 = Bounds_get_center_m5B05F81CB835EB6DD8628FDA24B638F477984DC3_inline((&V_3), NULL);
 		__this->____lastHeadPos = L_27;
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/HammerSmasher.cs:64>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/HammerSmasher.cs:64>
 		__this->____hasLast = (bool)1;
 	}
 
 IL_00b1:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/HammerSmasher.cs:66>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/HammerSmasher.cs:66>
 		return;
 	}
 }
@@ -11725,7 +11861,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void HammerSmasher_FixedUpdate_mAB89C80FEADD7
 	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 G_B16_0;
 	memset((&G_B16_0), 0, sizeof(G_B16_0));
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/HammerSmasher.cs:70>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/HammerSmasher.cs:70>
 		Collider_t1CC3163924FCD6C4CC2E816373A929C1E3D55E76* L_0 = __this->___headVolume;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_1;
@@ -11736,13 +11872,13 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void HammerSmasher_FixedUpdate_mAB89C80FEADD7
 		}
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/HammerSmasher.cs:70>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/HammerSmasher.cs:70>
 		return;
 	}
 
 IL_000e:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/HammerSmasher.cs:71>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/HammerSmasher.cs:71>
 		float L_2;
 		L_2 = Time_get_time_m3A271BB1B20041144AC5B7863B71AB1F0150374B(NULL);
 		float L_3 = __this->____cooldownUntil;
@@ -11752,15 +11888,15 @@ IL_000e:
 		}
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/HammerSmasher.cs:71>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/HammerSmasher.cs:71>
 		HammerSmasher_UpdateHeadPos_m85EEF6A5F42777FB5FFD08B8EFC5AE4876C7EFA0(__this, NULL);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/HammerSmasher.cs:71>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/HammerSmasher.cs:71>
 		return;
 	}
 
 IL_0022:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/HammerSmasher.cs:73>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/HammerSmasher.cs:73>
 		bool L_4 = __this->___requireHeld;
 		if (!L_4)
 		{
@@ -11776,33 +11912,33 @@ IL_0022:
 		}
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/HammerSmasher.cs:75>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/HammerSmasher.cs:75>
 		HashSet_1_t1C0A30E599B4C5836E9F5973B8BFF6C111BDD547* L_6 = __this->____prevTouching;
 		NullCheck(L_6);
 		HashSet_1_Clear_m46A30849D873AEA984D8213831C59A767721AF82(L_6, HashSet_1_Clear_m46A30849D873AEA984D8213831C59A767721AF82_RuntimeMethod_var);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/HammerSmasher.cs:76>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/HammerSmasher.cs:76>
 		HammerSmasher_UpdateHeadPos_m85EEF6A5F42777FB5FFD08B8EFC5AE4876C7EFA0(__this, NULL);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/HammerSmasher.cs:77>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/HammerSmasher.cs:77>
 		return;
 	}
 
 IL_0044:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/HammerSmasher.cs:80>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/HammerSmasher.cs:80>
 		Collider_t1CC3163924FCD6C4CC2E816373A929C1E3D55E76* L_7 = __this->___headVolume;
 		NullCheck(L_7);
 		Bounds_t367E830C64BBF235ED8C3B2F8CF6254FDCAD39C3 L_8;
 		L_8 = Collider_get_bounds_mCC32F749590E9A85C7930E5355661367F78E4CB4(L_7, NULL);
 		V_0 = L_8;
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/HammerSmasher.cs:81>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/HammerSmasher.cs:81>
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_9;
 		L_9 = Bounds_get_center_m5B05F81CB835EB6DD8628FDA24B638F477984DC3_inline((&V_0), NULL);
 		V_1 = L_9;
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/HammerSmasher.cs:82>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/HammerSmasher.cs:82>
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_10;
 		L_10 = Bounds_get_extents_mFE6DC407FCE2341BE2C750CB554055D211281D25_inline((&V_0), NULL);
 		V_2 = L_10;
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/HammerSmasher.cs:83>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/HammerSmasher.cs:83>
 		Collider_t1CC3163924FCD6C4CC2E816373A929C1E3D55E76* L_11 = __this->___headVolume;
 		NullCheck(L_11);
 		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_12;
@@ -11811,7 +11947,7 @@ IL_0044:
 		Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 L_13;
 		L_13 = Transform_get_rotation_m32AF40CA0D50C797DA639A696F8EAEC7524C179C(L_12, NULL);
 		V_3 = L_13;
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/HammerSmasher.cs:85>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/HammerSmasher.cs:85>
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_14 = V_1;
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_15 = V_2;
 		ColliderU5BU5D_t94A9D70F63D095AFF2A9B4613012A5F7F3141787* L_16 = __this->____overlaps;
@@ -11824,26 +11960,26 @@ IL_0044:
 		int32_t L_21;
 		L_21 = Physics_OverlapBoxNonAlloc_m1D43D10CD88EF2D5440601D3CD14CA4EB449A295(L_14, L_15, L_16, L_17, L_19, L_20, NULL);
 		V_4 = L_21;
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/HammerSmasher.cs:88>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/HammerSmasher.cs:88>
 		il2cpp_codegen_runtime_class_init_inline(ListPool_1_t11EF10A2F93A89E301E52BBB1075EEB92DC7CFAD_il2cpp_TypeInfo_var);
 		List_1_t177D286ADDC472B6F6DAF5F3EBD6190C58337E8C* L_22;
 		L_22 = ListPool_1_Get_m09CA21954CF5FCD8F3D1A4B501081B460A367479(ListPool_1_Get_m09CA21954CF5FCD8F3D1A4B501081B460A367479_RuntimeMethod_var);
 		V_5 = L_22;
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/HammerSmasher.cs:90>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/HammerSmasher.cs:90>
 		V_6 = 0;
 		goto IL_018e;
 	}
 
 IL_00a1:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/HammerSmasher.cs:92>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/HammerSmasher.cs:92>
 		ColliderU5BU5D_t94A9D70F63D095AFF2A9B4613012A5F7F3141787* L_23 = __this->____overlaps;
 		int32_t L_24 = V_6;
 		NullCheck(L_23);
 		int32_t L_25 = L_24;
 		Collider_t1CC3163924FCD6C4CC2E816373A929C1E3D55E76* L_26 = (L_23)->GetAt(static_cast<il2cpp_array_size_t>(L_25));
 		V_7 = L_26;
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/HammerSmasher.cs:93>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/HammerSmasher.cs:93>
 		Collider_t1CC3163924FCD6C4CC2E816373A929C1E3D55E76* L_27 = V_7;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_28;
@@ -11854,13 +11990,13 @@ IL_00a1:
 		}
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/HammerSmasher.cs:95>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/HammerSmasher.cs:95>
 		Collider_t1CC3163924FCD6C4CC2E816373A929C1E3D55E76* L_29 = V_7;
 		NullCheck(L_29);
 		SmashableObject_t4A59D92DD8FEBBB9EE4784495BE6785FAA59BD46* L_30;
 		L_30 = Component_GetComponentInParent_TisSmashableObject_t4A59D92DD8FEBBB9EE4784495BE6785FAA59BD46_m4B17EE465B2B1946B02777B523352A82E0CD2929(L_29, Component_GetComponentInParent_TisSmashableObject_t4A59D92DD8FEBBB9EE4784495BE6785FAA59BD46_m4B17EE465B2B1946B02777B523352A82E0CD2929_RuntimeMethod_var);
 		V_8 = L_30;
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/HammerSmasher.cs:96>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/HammerSmasher.cs:96>
 		SmashableObject_t4A59D92DD8FEBBB9EE4784495BE6785FAA59BD46* L_31 = V_8;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_32;
@@ -11881,12 +12017,12 @@ IL_00a1:
 		}
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/HammerSmasher.cs:98>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/HammerSmasher.cs:98>
 		List_1_t177D286ADDC472B6F6DAF5F3EBD6190C58337E8C* L_35 = V_5;
 		SmashableObject_t4A59D92DD8FEBBB9EE4784495BE6785FAA59BD46* L_36 = V_8;
 		NullCheck(L_35);
 		List_1_Add_mFC61210F6C1E0292964E5069C28FD9789DE8A3E4_inline(L_35, L_36, List_1_Add_mFC61210F6C1E0292964E5069C28FD9789DE8A3E4_RuntimeMethod_var);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/HammerSmasher.cs:101>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/HammerSmasher.cs:101>
 		HashSet_1_t1C0A30E599B4C5836E9F5973B8BFF6C111BDD547* L_37 = __this->____prevTouching;
 		SmashableObject_t4A59D92DD8FEBBB9EE4784495BE6785FAA59BD46* L_38 = V_8;
 		NullCheck(L_37);
@@ -11898,11 +12034,11 @@ IL_00a1:
 		}
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/HammerSmasher.cs:104>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/HammerSmasher.cs:104>
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_40 = V_1;
 		float L_41;
 		L_41 = HammerSmasher_HeadSpeed_mA39D99D42AF1987872C0194F46F26CF5D80C5ACD(__this, L_40, NULL);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/HammerSmasher.cs:105>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/HammerSmasher.cs:105>
 		float L_42 = __this->___minHeadSpeed;
 		if ((((float)L_41) < ((float)L_42)))
 		{
@@ -11910,12 +12046,12 @@ IL_00a1:
 		}
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/HammerSmasher.cs:108>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/HammerSmasher.cs:108>
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_43 = V_1;
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_44;
 		L_44 = HammerSmasher_HeadVelocityDir_mAEAAE871DAB7CCD5E311C5B2E2EB87EBD4A1BB07(__this, L_43, NULL);
 		V_9 = L_44;
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/HammerSmasher.cs:109>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/HammerSmasher.cs:109>
 		bool L_45 = __this->___impulseAlongVelocity;
 		if (L_45)
 		{
@@ -11947,14 +12083,14 @@ IL_012f:
 IL_013c:
 	{
 		V_10 = G_B16_0;
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/HammerSmasher.cs:112>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/HammerSmasher.cs:112>
 		Collider_t1CC3163924FCD6C4CC2E816373A929C1E3D55E76* L_53 = V_7;
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_54 = V_1;
 		NullCheck(L_53);
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_55;
 		L_55 = Collider_ClosestPoint_mFFF9B6F6CF9F18B22B325835A3E2E78A1C03BFCB(L_53, L_54, NULL);
 		V_11 = L_55;
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/HammerSmasher.cs:115>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/HammerSmasher.cs:115>
 		AudioClip_t5D272C4EB4F2D3ED49F1C346DEA373CF6D585F20* L_56 = __this->___smashSound;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_57;
@@ -11965,7 +12101,7 @@ IL_013c:
 		}
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/HammerSmasher.cs:117>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/HammerSmasher.cs:117>
 		AudioClip_t5D272C4EB4F2D3ED49F1C346DEA373CF6D585F20* L_58 = __this->___smashSound;
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_59 = V_11;
 		float L_60 = __this->___soundVolume;
@@ -11974,31 +12110,31 @@ IL_013c:
 
 IL_0169:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/HammerSmasher.cs:120>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/HammerSmasher.cs:120>
 		SmashableObject_t4A59D92DD8FEBBB9EE4784495BE6785FAA59BD46* L_61 = V_8;
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_62 = V_11;
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_63 = V_10;
 		NullCheck(L_61);
 		SmashableObject_DoSmash_m4CE0B4BD2E1B5819378F5666C0739F9D8C89FBA9(L_61, L_62, L_63, NULL);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/HammerSmasher.cs:122>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/HammerSmasher.cs:122>
 		float L_64;
 		L_64 = Time_get_time_m3A271BB1B20041144AC5B7863B71AB1F0150374B(NULL);
 		float L_65 = __this->___minImpactCooldown;
 		__this->____cooldownUntil = ((float)il2cpp_codegen_add(L_64, L_65));
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/HammerSmasher.cs:123>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/HammerSmasher.cs:123>
 		goto IL_0197;
 	}
 
 IL_0188:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/HammerSmasher.cs:90>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/HammerSmasher.cs:90>
 		int32_t L_66 = V_6;
 		V_6 = ((int32_t)il2cpp_codegen_add(L_66, 1));
 	}
 
 IL_018e:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/HammerSmasher.cs:90>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/HammerSmasher.cs:90>
 		int32_t L_67 = V_6;
 		int32_t L_68 = V_4;
 		if ((((int32_t)L_67) < ((int32_t)L_68)))
@@ -12009,18 +12145,18 @@ IL_018e:
 
 IL_0197:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/HammerSmasher.cs:126>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/HammerSmasher.cs:126>
 		HashSet_1_t1C0A30E599B4C5836E9F5973B8BFF6C111BDD547* L_69 = __this->____prevTouching;
 		NullCheck(L_69);
 		HashSet_1_Clear_m46A30849D873AEA984D8213831C59A767721AF82(L_69, HashSet_1_Clear_m46A30849D873AEA984D8213831C59A767721AF82_RuntimeMethod_var);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/HammerSmasher.cs:127>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/HammerSmasher.cs:127>
 		V_12 = 0;
 		goto IL_01c2;
 	}
 
 IL_01a7:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/HammerSmasher.cs:128>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/HammerSmasher.cs:128>
 		HashSet_1_t1C0A30E599B4C5836E9F5973B8BFF6C111BDD547* L_70 = __this->____prevTouching;
 		List_1_t177D286ADDC472B6F6DAF5F3EBD6190C58337E8C* L_71 = V_5;
 		int32_t L_72 = V_12;
@@ -12030,14 +12166,14 @@ IL_01a7:
 		NullCheck(L_70);
 		bool L_74;
 		L_74 = HashSet_1_Add_m23DEAD321FBF9A47709D961CB82BDE845C84DA3F(L_70, L_73, HashSet_1_Add_m23DEAD321FBF9A47709D961CB82BDE845C84DA3F_RuntimeMethod_var);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/HammerSmasher.cs:127>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/HammerSmasher.cs:127>
 		int32_t L_75 = V_12;
 		V_12 = ((int32_t)il2cpp_codegen_add(L_75, 1));
 	}
 
 IL_01c2:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/HammerSmasher.cs:127>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/HammerSmasher.cs:127>
 		int32_t L_76 = V_12;
 		List_1_t177D286ADDC472B6F6DAF5F3EBD6190C58337E8C* L_77 = V_5;
 		NullCheck(L_77);
@@ -12049,13 +12185,13 @@ IL_01c2:
 		}
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/HammerSmasher.cs:130>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/HammerSmasher.cs:130>
 		List_1_t177D286ADDC472B6F6DAF5F3EBD6190C58337E8C* L_79 = V_5;
 		il2cpp_codegen_runtime_class_init_inline(ListPool_1_t11EF10A2F93A89E301E52BBB1075EEB92DC7CFAD_il2cpp_TypeInfo_var);
 		ListPool_1_Release_m06E9EC9508F2D1C48650C0B28CAD472085E1760D(L_79, ListPool_1_Release_m06E9EC9508F2D1C48650C0B28CAD472085E1760D_RuntimeMethod_var);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/HammerSmasher.cs:132>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/HammerSmasher.cs:132>
 		HammerSmasher_UpdateHeadPos_m85EEF6A5F42777FB5FFD08B8EFC5AE4876C7EFA0(__this, NULL);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/HammerSmasher.cs:133>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/HammerSmasher.cs:133>
 		return;
 	}
 }
@@ -12071,7 +12207,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void HammerSmasher_UpdateHeadPos_m85EEF6A5F42
 	Bounds_t367E830C64BBF235ED8C3B2F8CF6254FDCAD39C3 V_0;
 	memset((&V_0), 0, sizeof(V_0));
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/HammerSmasher.cs:137>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/HammerSmasher.cs:137>
 		Collider_t1CC3163924FCD6C4CC2E816373A929C1E3D55E76* L_0 = __this->___headVolume;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_1;
@@ -12082,13 +12218,13 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void HammerSmasher_UpdateHeadPos_m85EEF6A5F42
 		}
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/HammerSmasher.cs:137>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/HammerSmasher.cs:137>
 		return;
 	}
 
 IL_000e:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/HammerSmasher.cs:138>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/HammerSmasher.cs:138>
 		Collider_t1CC3163924FCD6C4CC2E816373A929C1E3D55E76* L_2 = __this->___headVolume;
 		NullCheck(L_2);
 		Bounds_t367E830C64BBF235ED8C3B2F8CF6254FDCAD39C3 L_3;
@@ -12097,9 +12233,9 @@ IL_000e:
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_4;
 		L_4 = Bounds_get_center_m5B05F81CB835EB6DD8628FDA24B638F477984DC3_inline((&V_0), NULL);
 		__this->____lastHeadPos = L_4;
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/HammerSmasher.cs:139>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/HammerSmasher.cs:139>
 		__this->____hasLast = (bool)1;
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/HammerSmasher.cs:140>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/HammerSmasher.cs:140>
 		return;
 	}
 }
@@ -12115,7 +12251,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR float HammerSmasher_HeadSpeed_mA39D99D42AF198
 	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 V_0;
 	memset((&V_0), 0, sizeof(V_0));
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/HammerSmasher.cs:145>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/HammerSmasher.cs:145>
 		Rigidbody_t268697F5A994213ED97393309870968BC1C7393C* L_0 = __this->____rb;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_1;
@@ -12126,7 +12262,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR float HammerSmasher_HeadSpeed_mA39D99D42AF198
 		}
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/HammerSmasher.cs:145>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/HammerSmasher.cs:145>
 		Rigidbody_t268697F5A994213ED97393309870968BC1C7393C* L_2 = __this->____rb;
 		NullCheck(L_2);
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_3;
@@ -12139,7 +12275,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR float HammerSmasher_HeadSpeed_mA39D99D42AF198
 
 IL_0021:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/HammerSmasher.cs:149>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/HammerSmasher.cs:149>
 		bool L_5 = __this->____hasLast;
 		if (!L_5)
 		{
@@ -12147,7 +12283,7 @@ IL_0021:
 		}
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/HammerSmasher.cs:150>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/HammerSmasher.cs:150>
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_6 = __this->____lastHeadPos;
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_7 = ___0_headCenter;
 		float L_8;
@@ -12159,7 +12295,7 @@ IL_0021:
 
 IL_003c:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/HammerSmasher.cs:152>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/HammerSmasher.cs:152>
 		return (0.0f);
 	}
 }
@@ -12177,7 +12313,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A
 	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 V_1;
 	memset((&V_1), 0, sizeof(V_1));
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/HammerSmasher.cs:158>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/HammerSmasher.cs:158>
 		Rigidbody_t268697F5A994213ED97393309870968BC1C7393C* L_0 = __this->____rb;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_1;
@@ -12201,7 +12337,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A
 		}
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/HammerSmasher.cs:158>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/HammerSmasher.cs:158>
 		Rigidbody_t268697F5A994213ED97393309870968BC1C7393C* L_5 = __this->____rb;
 		NullCheck(L_5);
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_6;
@@ -12214,7 +12350,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A
 
 IL_003b:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/HammerSmasher.cs:162>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/HammerSmasher.cs:162>
 		bool L_8 = __this->____hasLast;
 		if (!L_8)
 		{
@@ -12222,13 +12358,13 @@ IL_003b:
 		}
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/HammerSmasher.cs:164>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/HammerSmasher.cs:164>
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_9 = ___0_headCenter;
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_10 = __this->____lastHeadPos;
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_11;
 		L_11 = Vector3_op_Subtraction_mE42023FF80067CB44A1D4A27EB7CF2B24CABB828_inline(L_9, L_10, NULL);
 		V_1 = L_11;
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/HammerSmasher.cs:165>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/HammerSmasher.cs:165>
 		float L_12;
 		L_12 = Vector3_get_sqrMagnitude_m43C27DEC47C4811FB30AB474FF2131A963B66FC8_inline((&V_1), NULL);
 		if ((!(((float)L_12) > ((float)(9.99999997E-07f)))))
@@ -12237,7 +12373,7 @@ IL_003b:
 		}
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/HammerSmasher.cs:165>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/HammerSmasher.cs:165>
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_13;
 		L_13 = Vector3_get_normalized_m736BBF65D5CDA7A18414370D15B4DFCC1E466F07_inline((&V_1), NULL);
 		return L_13;
@@ -12245,7 +12381,7 @@ IL_003b:
 
 IL_0066:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/HammerSmasher.cs:167>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/HammerSmasher.cs:167>
 		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_14;
 		L_14 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(__this, NULL);
 		NullCheck(L_14);
@@ -12274,7 +12410,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool HammerSmasher_IsHeld_mF4A7E65B8C0406E96B
 	Type_t* G_B5_0 = NULL;
 	Type_t* G_B4_0 = NULL;
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/HammerSmasher.cs:177>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/HammerSmasher.cs:177>
 		bool L_0 = __this->___requireHeld;
 		if (L_0)
 		{
@@ -12282,13 +12418,13 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool HammerSmasher_IsHeld_mF4A7E65B8C0406E96B
 		}
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/HammerSmasher.cs:177>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/HammerSmasher.cs:177>
 		return (bool)1;
 	}
 
 IL_000a:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/HammerSmasher.cs:179>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/HammerSmasher.cs:179>
 		bool L_1 = __this->____grabCached;
 		if (L_1)
 		{
@@ -12296,11 +12432,11 @@ IL_000a:
 		}
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/HammerSmasher.cs:181>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/HammerSmasher.cs:181>
 		__this->____grabCached = (bool)1;
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/HammerSmasher.cs:185>
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/HammerSmasher.cs:186>
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/HammerSmasher.cs:187>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/HammerSmasher.cs:185>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/HammerSmasher.cs:186>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/HammerSmasher.cs:187>
 		il2cpp_codegen_runtime_class_init_inline(il2cpp_defaults.systemtype_class);
 		Type_t* L_2;
 		L_2 = il2cpp_codegen_get_type(_stringLiteralAE7E2F24377399C9B5159179E4B43EA6AA55531B, Type_GetType_m71A077E0B5DA3BD1DC0AB9AE387056CFCF56F93F_RuntimeMethod_var, HammerSmasher_IsHeld_mF4A7E65B8C0406E96B97FA79EA6B5DC70409F51D_RuntimeMethod_var);
@@ -12322,7 +12458,7 @@ IL_000a:
 IL_0031:
 	{
 		V_0 = G_B5_0;
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/HammerSmasher.cs:189>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/HammerSmasher.cs:189>
 		Type_t* L_5 = V_0;
 		il2cpp_codegen_runtime_class_init_inline(il2cpp_defaults.systemtype_class);
 		bool L_6;
@@ -12333,13 +12469,13 @@ IL_0031:
 		}
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/HammerSmasher.cs:191>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/HammerSmasher.cs:191>
 		Type_t* L_7 = V_0;
 		Component_t39FBE53E5EFCF4409111FB22C15FF73717632EC3* L_8;
 		L_8 = Component_GetComponentInParent_m2307379F7578FC811C0239E1DBB2B85402D63CAC(__this, L_7, NULL);
 		__this->____grab = L_8;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->____grab), (void*)L_8);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/HammerSmasher.cs:192>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/HammerSmasher.cs:192>
 		Component_t39FBE53E5EFCF4409111FB22C15FF73717632EC3* L_9 = __this->____grab;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_10;
@@ -12350,7 +12486,7 @@ IL_0031:
 		}
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/HammerSmasher.cs:193>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/HammerSmasher.cs:193>
 		Type_t* L_11 = V_0;
 		NullCheck(L_11);
 		PropertyInfo_t* L_12;
@@ -12361,7 +12497,7 @@ IL_0031:
 
 IL_0067:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/HammerSmasher.cs:197>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/HammerSmasher.cs:197>
 		Component_t39FBE53E5EFCF4409111FB22C15FF73717632EC3* L_13 = __this->____grab;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_14;
@@ -12381,14 +12517,14 @@ IL_0067:
 		}
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/HammerSmasher.cs:199>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/HammerSmasher.cs:199>
 		PropertyInfo_t* L_17 = __this->____isSelectedProp;
 		Component_t39FBE53E5EFCF4409111FB22C15FF73717632EC3* L_18 = __this->____grab;
 		NullCheck(L_17);
 		RuntimeObject* L_19;
 		L_19 = PropertyInfo_GetValue_m89576462107E2A4DF5B7775216AEC29D74FF6088(L_17, L_18, NULL);
 		V_1 = L_19;
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/HammerSmasher.cs:200>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/HammerSmasher.cs:200>
 		RuntimeObject* L_20 = V_1;
 		if (!((RuntimeObject*)IsInstSealed((RuntimeObject*)L_20, il2cpp_defaults.boolean_class)))
 		{
@@ -12398,14 +12534,14 @@ IL_0067:
 	{
 		RuntimeObject* L_21 = V_1;
 		V_2 = ((*(bool*)UnBox(L_21, il2cpp_defaults.boolean_class)));
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/HammerSmasher.cs:200>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/HammerSmasher.cs:200>
 		bool L_22 = V_2;
 		return L_22;
 	}
 
 IL_00a6:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/HammerSmasher.cs:206>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/HammerSmasher.cs:206>
 		return (bool)0;
 	}
 }
@@ -12421,7 +12557,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void HammerSmasher_OnDrawGizmosSelected_m2686
 	Bounds_t367E830C64BBF235ED8C3B2F8CF6254FDCAD39C3 V_0;
 	memset((&V_0), 0, sizeof(V_0));
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/HammerSmasher.cs:232>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/HammerSmasher.cs:232>
 		Collider_t1CC3163924FCD6C4CC2E816373A929C1E3D55E76* L_0 = __this->___headVolume;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_1;
@@ -12432,19 +12568,19 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void HammerSmasher_OnDrawGizmosSelected_m2686
 		}
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/HammerSmasher.cs:232>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/HammerSmasher.cs:232>
 		return;
 	}
 
 IL_000e:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/HammerSmasher.cs:233>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/HammerSmasher.cs:233>
 		Collider_t1CC3163924FCD6C4CC2E816373A929C1E3D55E76* L_2 = __this->___headVolume;
 		NullCheck(L_2);
 		Bounds_t367E830C64BBF235ED8C3B2F8CF6254FDCAD39C3 L_3;
 		L_3 = Collider_get_bounds_mCC32F749590E9A85C7930E5355661367F78E4CB4(L_2, NULL);
 		V_0 = L_3;
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/HammerSmasher.cs:234>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/HammerSmasher.cs:234>
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_4;
 		L_4 = Bounds_get_center_m5B05F81CB835EB6DD8628FDA24B638F477984DC3_inline((&V_0), NULL);
 		Collider_t1CC3163924FCD6C4CC2E816373A929C1E3D55E76* L_5 = __this->___headVolume;
@@ -12459,13 +12595,13 @@ IL_000e:
 		Matrix4x4_tDB70CF134A14BA38190C59AA700BCE10E2AED3E6 L_9;
 		L_9 = Matrix4x4_TRS_mCC04FD47347234B451ACC6CCD2CE6D02E1E0E1E3_inline(L_4, L_7, L_8, NULL);
 		Gizmos_set_matrix_m100B4ACA7FBDFF65CE1BD0000E9E0D7566147A15(L_9, NULL);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/HammerSmasher.cs:235>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/HammerSmasher.cs:235>
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_10;
 		L_10 = Vector3_get_zero_m0C1249C3F25B1C70EAD3CC8B31259975A457AE39_inline(NULL);
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_11;
 		L_11 = Bounds_get_size_m0699A53A55A78B3201D7270D6F338DFA91B6FAD4_inline((&V_0), NULL);
 		Gizmos_DrawWireCube_m343533B3955A2D04A8638280D0EF537274A1FD8B(L_10, L_11, NULL);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/HammerSmasher.cs:236>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/HammerSmasher.cs:236>
 		return;
 	}
 }
@@ -12481,29 +12617,29 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void HammerSmasher__ctor_m7091A2D3B072A186F60
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/HammerSmasher.cs:10>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/HammerSmasher.cs:10>
 		LayerMask_t97CB6BDADEDC3D6423C7BCFEA7F86DA2EC6241DB L_0;
 		L_0 = LayerMask_op_Implicit_m01C8996A2CB2085328B9C33539C43139660D8222((-1), NULL);
 		__this->___smashableLayers = L_0;
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/HammerSmasher.cs:11>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/HammerSmasher.cs:11>
 		__this->___queryTriggerInteraction = 1;
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/HammerSmasher.cs:14>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/HammerSmasher.cs:14>
 		__this->___minHeadSpeed = (1.20000005f);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/HammerSmasher.cs:15>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/HammerSmasher.cs:15>
 		__this->___minImpactCooldown = (0.150000006f);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/HammerSmasher.cs:18>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/HammerSmasher.cs:18>
 		__this->___requireHeld = (bool)1;
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/HammerSmasher.cs:21>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/HammerSmasher.cs:21>
 		__this->___smashImpulse = (2.0f);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/HammerSmasher.cs:22>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/HammerSmasher.cs:22>
 		__this->___impulseAlongVelocity = (bool)1;
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/HammerSmasher.cs:28>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/HammerSmasher.cs:28>
 		__this->___soundVolume = (1.0f);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/HammerSmasher.cs:36>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/HammerSmasher.cs:36>
 		ColliderU5BU5D_t94A9D70F63D095AFF2A9B4613012A5F7F3141787* L_1 = (ColliderU5BU5D_t94A9D70F63D095AFF2A9B4613012A5F7F3141787*)(ColliderU5BU5D_t94A9D70F63D095AFF2A9B4613012A5F7F3141787*)SZArrayNew(ColliderU5BU5D_t94A9D70F63D095AFF2A9B4613012A5F7F3141787_il2cpp_TypeInfo_var, (uint32_t)((int32_t)64));
 		__this->____overlaps = L_1;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->____overlaps), (void*)L_1);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/HammerSmasher.cs:39>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/HammerSmasher.cs:39>
 		HashSet_1_t1C0A30E599B4C5836E9F5973B8BFF6C111BDD547* L_2 = (HashSet_1_t1C0A30E599B4C5836E9F5973B8BFF6C111BDD547*)il2cpp_codegen_object_new(HashSet_1_t1C0A30E599B4C5836E9F5973B8BFF6C111BDD547_il2cpp_TypeInfo_var);
 		HashSet_1__ctor_mC14A0FC9B3818791F5B3F5FE249D91C98947E129(L_2, HashSet_1__ctor_mC14A0FC9B3818791F5B3F5FE249D91C98947E129_RuntimeMethod_var);
 		__this->____prevTouching = L_2;
@@ -12539,7 +12675,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void KnifeCutter_Awake_m507100DE6A74B078DD7C9
 	Bounds_t367E830C64BBF235ED8C3B2F8CF6254FDCAD39C3 V_3;
 	memset((&V_3), 0, sizeof(V_3));
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/KnifeCutter.cs:61>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/KnifeCutter.cs:61>
 		Collider_t1CC3163924FCD6C4CC2E816373A929C1E3D55E76* L_0 = __this->___bladeVolume;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_1;
@@ -12550,10 +12686,10 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void KnifeCutter_Awake_m507100DE6A74B078DD7C9
 		}
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/KnifeCutter.cs:64>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/KnifeCutter.cs:64>
 		ColliderU5BU5D_t94A9D70F63D095AFF2A9B4613012A5F7F3141787* L_2;
 		L_2 = Component_GetComponentsInChildren_TisCollider_t1CC3163924FCD6C4CC2E816373A929C1E3D55E76_m6FCDC69D916F8EB31E6219C8FB86B8BD98D146B3(__this, (bool)1, Component_GetComponentsInChildren_TisCollider_t1CC3163924FCD6C4CC2E816373A929C1E3D55E76_m6FCDC69D916F8EB31E6219C8FB86B8BD98D146B3_RuntimeMethod_var);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/KnifeCutter.cs:65>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/KnifeCutter.cs:65>
 		V_0 = L_2;
 		V_1 = 0;
 		goto IL_0041;
@@ -12561,14 +12697,14 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void KnifeCutter_Awake_m507100DE6A74B078DD7C9
 
 IL_0019:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/KnifeCutter.cs:65>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/KnifeCutter.cs:65>
 		ColliderU5BU5D_t94A9D70F63D095AFF2A9B4613012A5F7F3141787* L_3 = V_0;
 		int32_t L_4 = V_1;
 		NullCheck(L_3);
 		int32_t L_5 = L_4;
 		Collider_t1CC3163924FCD6C4CC2E816373A929C1E3D55E76* L_6 = (L_3)->GetAt(static_cast<il2cpp_array_size_t>(L_5));
 		V_2 = L_6;
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/KnifeCutter.cs:67>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/KnifeCutter.cs:67>
 		Collider_t1CC3163924FCD6C4CC2E816373A929C1E3D55E76* L_7 = V_2;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_8;
@@ -12591,11 +12727,11 @@ IL_0019:
 		}
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/KnifeCutter.cs:69>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/KnifeCutter.cs:69>
 		Collider_t1CC3163924FCD6C4CC2E816373A929C1E3D55E76* L_12 = V_2;
 		__this->___bladeVolume = L_12;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___bladeVolume), (void*)L_12);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/KnifeCutter.cs:70>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/KnifeCutter.cs:70>
 		goto IL_0047;
 	}
 
@@ -12607,7 +12743,7 @@ IL_003d:
 
 IL_0041:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/KnifeCutter.cs:65>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/KnifeCutter.cs:65>
 		int32_t L_14 = V_1;
 		ColliderU5BU5D_t94A9D70F63D095AFF2A9B4613012A5F7F3141787* L_15 = V_0;
 		NullCheck(L_15);
@@ -12619,7 +12755,7 @@ IL_0041:
 
 IL_0047:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/KnifeCutter.cs:75>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/KnifeCutter.cs:75>
 		Collider_t1CC3163924FCD6C4CC2E816373A929C1E3D55E76* L_16 = __this->___bladeVolume;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_17;
@@ -12630,7 +12766,7 @@ IL_0047:
 		}
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/KnifeCutter.cs:76>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/KnifeCutter.cs:76>
 		Collider_t1CC3163924FCD6C4CC2E816373A929C1E3D55E76* L_18;
 		L_18 = Component_GetComponent_TisCollider_t1CC3163924FCD6C4CC2E816373A929C1E3D55E76_m820398EDBF1D3766C3166A0C323A127662A29A14(__this, Component_GetComponent_TisCollider_t1CC3163924FCD6C4CC2E816373A929C1E3D55E76_m820398EDBF1D3766C3166A0C323A127662A29A14_RuntimeMethod_var);
 		__this->___bladeVolume = L_18;
@@ -12639,12 +12775,12 @@ IL_0047:
 
 IL_0060:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/KnifeCutter.cs:80>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/KnifeCutter.cs:80>
 		Rigidbody_t268697F5A994213ED97393309870968BC1C7393C* L_19;
 		L_19 = Component_GetComponentInParent_TisRigidbody_t268697F5A994213ED97393309870968BC1C7393C_m49365CF93735FBE624C3828C66E7AD5FF67AD40D(__this, Component_GetComponentInParent_TisRigidbody_t268697F5A994213ED97393309870968BC1C7393C_m49365CF93735FBE624C3828C66E7AD5FF67AD40D_RuntimeMethod_var);
 		__this->____rb = L_19;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->____rb), (void*)L_19);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/KnifeCutter.cs:81>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/KnifeCutter.cs:81>
 		Rigidbody_t268697F5A994213ED97393309870968BC1C7393C* L_20 = __this->____rb;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_21;
@@ -12655,7 +12791,7 @@ IL_0060:
 		}
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/KnifeCutter.cs:81>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/KnifeCutter.cs:81>
 		Rigidbody_t268697F5A994213ED97393309870968BC1C7393C* L_22;
 		L_22 = Component_GetComponent_TisRigidbody_t268697F5A994213ED97393309870968BC1C7393C_m4B5CAD64B52D153BEA96432633CA9A45FA523DD8(__this, Component_GetComponent_TisRigidbody_t268697F5A994213ED97393309870968BC1C7393C_m4B5CAD64B52D153BEA96432633CA9A45FA523DD8_RuntimeMethod_var);
 		__this->____rb = L_22;
@@ -12664,7 +12800,7 @@ IL_0060:
 
 IL_0085:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/KnifeCutter.cs:83>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/KnifeCutter.cs:83>
 		Collider_t1CC3163924FCD6C4CC2E816373A929C1E3D55E76* L_23 = __this->___bladeVolume;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_24;
@@ -12675,7 +12811,7 @@ IL_0085:
 		}
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/KnifeCutter.cs:85>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/KnifeCutter.cs:85>
 		Collider_t1CC3163924FCD6C4CC2E816373A929C1E3D55E76* L_25 = __this->___bladeVolume;
 		NullCheck(L_25);
 		Bounds_t367E830C64BBF235ED8C3B2F8CF6254FDCAD39C3 L_26;
@@ -12684,13 +12820,13 @@ IL_0085:
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_27;
 		L_27 = Bounds_get_center_m5B05F81CB835EB6DD8628FDA24B638F477984DC3_inline((&V_3), NULL);
 		__this->____lastBladeWorldPos = L_27;
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/KnifeCutter.cs:86>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/KnifeCutter.cs:86>
 		__this->____hasLastBladePos = (bool)1;
 	}
 
 IL_00b2:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/KnifeCutter.cs:88>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/KnifeCutter.cs:88>
 		return;
 	}
 }
@@ -12741,7 +12877,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void KnifeCutter_FixedUpdate_mF4518A1BBA160DD
 	int32_t V_12 = 0;
 	CuttableObject_t00D99541FCCE75FBA7C9D873054FA1C29D1D4F06* V_13 = NULL;
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/KnifeCutter.cs:92>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/KnifeCutter.cs:92>
 		Collider_t1CC3163924FCD6C4CC2E816373A929C1E3D55E76* L_0 = __this->___bladeVolume;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_1;
@@ -12752,27 +12888,27 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void KnifeCutter_FixedUpdate_mF4518A1BBA160DD
 		}
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/KnifeCutter.cs:92>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/KnifeCutter.cs:92>
 		return;
 	}
 
 IL_000e:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/KnifeCutter.cs:97>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/KnifeCutter.cs:97>
 		Collider_t1CC3163924FCD6C4CC2E816373A929C1E3D55E76* L_2 = __this->___bladeVolume;
 		NullCheck(L_2);
 		Bounds_t367E830C64BBF235ED8C3B2F8CF6254FDCAD39C3 L_3;
 		L_3 = Collider_get_bounds_mCC32F749590E9A85C7930E5355661367F78E4CB4(L_2, NULL);
 		V_0 = L_3;
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/KnifeCutter.cs:98>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/KnifeCutter.cs:98>
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_4;
 		L_4 = Bounds_get_center_m5B05F81CB835EB6DD8628FDA24B638F477984DC3_inline((&V_0), NULL);
 		V_1 = L_4;
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/KnifeCutter.cs:99>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/KnifeCutter.cs:99>
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_5;
 		L_5 = Bounds_get_extents_mFE6DC407FCE2341BE2C750CB554055D211281D25_inline((&V_0), NULL);
 		V_2 = L_5;
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/KnifeCutter.cs:100>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/KnifeCutter.cs:100>
 		Collider_t1CC3163924FCD6C4CC2E816373A929C1E3D55E76* L_6 = __this->___bladeVolume;
 		NullCheck(L_6);
 		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_7;
@@ -12781,7 +12917,7 @@ IL_000e:
 		Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 L_8;
 		L_8 = Transform_get_rotation_m32AF40CA0D50C797DA639A696F8EAEC7524C179C(L_7, NULL);
 		V_3 = L_8;
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/KnifeCutter.cs:102>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/KnifeCutter.cs:102>
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_9 = V_1;
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_10 = V_2;
 		ColliderU5BU5D_t94A9D70F63D095AFF2A9B4613012A5F7F3141787* L_11 = __this->____overlaps;
@@ -12794,28 +12930,28 @@ IL_000e:
 		int32_t L_16;
 		L_16 = Physics_OverlapBoxNonAlloc_m1D43D10CD88EF2D5440601D3CD14CA4EB449A295(L_9, L_10, L_11, L_12, L_14, L_15, NULL);
 		V_4 = L_16;
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/KnifeCutter.cs:107>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/KnifeCutter.cs:107>
 		int32_t L_17 = V_4;
 		int32_t L_18;
 		L_18 = Mathf_Min_m888083F74FF5655778F0403BB5E9608BEFDEA8CB_inline(L_17, ((int32_t)16), NULL);
 		List_1_tC771A5C3F1762A5D4F9381171EF2227687E46512* L_19 = (List_1_tC771A5C3F1762A5D4F9381171EF2227687E46512*)il2cpp_codegen_object_new(List_1_tC771A5C3F1762A5D4F9381171EF2227687E46512_il2cpp_TypeInfo_var);
 		List_1__ctor_mCBB798BA5A8775FE0465D1022F8969B9710C7750(L_19, L_18, List_1__ctor_mCBB798BA5A8775FE0465D1022F8969B9710C7750_RuntimeMethod_var);
 		V_5 = L_19;
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/KnifeCutter.cs:109>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/KnifeCutter.cs:109>
 		V_6 = 0;
 		goto IL_0142;
 	}
 
 IL_0074:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/KnifeCutter.cs:111>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/KnifeCutter.cs:111>
 		ColliderU5BU5D_t94A9D70F63D095AFF2A9B4613012A5F7F3141787* L_20 = __this->____overlaps;
 		int32_t L_21 = V_6;
 		NullCheck(L_20);
 		int32_t L_22 = L_21;
 		Collider_t1CC3163924FCD6C4CC2E816373A929C1E3D55E76* L_23 = (L_20)->GetAt(static_cast<il2cpp_array_size_t>(L_22));
 		V_7 = L_23;
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/KnifeCutter.cs:112>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/KnifeCutter.cs:112>
 		Collider_t1CC3163924FCD6C4CC2E816373A929C1E3D55E76* L_24 = V_7;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_25;
@@ -12826,13 +12962,13 @@ IL_0074:
 		}
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/KnifeCutter.cs:114>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/KnifeCutter.cs:114>
 		Collider_t1CC3163924FCD6C4CC2E816373A929C1E3D55E76* L_26 = V_7;
 		NullCheck(L_26);
 		CuttableObject_t00D99541FCCE75FBA7C9D873054FA1C29D1D4F06* L_27;
 		L_27 = Component_GetComponentInParent_TisCuttableObject_t00D99541FCCE75FBA7C9D873054FA1C29D1D4F06_m304C63629177F94639E1CD8BE7C1905B88BB26C5(L_26, Component_GetComponentInParent_TisCuttableObject_t00D99541FCCE75FBA7C9D873054FA1C29D1D4F06_m304C63629177F94639E1CD8BE7C1905B88BB26C5_RuntimeMethod_var);
 		V_8 = L_27;
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/KnifeCutter.cs:115>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/KnifeCutter.cs:115>
 		CuttableObject_t00D99541FCCE75FBA7C9D873054FA1C29D1D4F06* L_28 = V_8;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_29;
@@ -12853,14 +12989,14 @@ IL_0074:
 		}
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/KnifeCutter.cs:118>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/KnifeCutter.cs:118>
 		Collider_t1CC3163924FCD6C4CC2E816373A929C1E3D55E76* L_32 = V_7;
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_33 = V_1;
 		NullCheck(L_32);
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_34;
 		L_34 = Collider_ClosestPoint_mFFF9B6F6CF9F18B22B325835A3E2E78A1C03BFCB(L_32, L_33, NULL);
 		V_9 = L_34;
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/KnifeCutter.cs:120>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/KnifeCutter.cs:120>
 		Dictionary_2_tABF27506231614C53E3EFC05670C2AA4231E8F0A* L_35 = __this->____states;
 		CuttableObject_t00D99541FCCE75FBA7C9D873054FA1C29D1D4F06* L_36 = V_8;
 		NullCheck(L_35);
@@ -12872,13 +13008,13 @@ IL_0074:
 		}
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/KnifeCutter.cs:123>
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/KnifeCutter.cs:124>
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/KnifeCutter.cs:125>
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/KnifeCutter.cs:126>
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/KnifeCutter.cs:127>
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/KnifeCutter.cs:128>
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/KnifeCutter.cs:129>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/KnifeCutter.cs:123>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/KnifeCutter.cs:124>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/KnifeCutter.cs:125>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/KnifeCutter.cs:126>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/KnifeCutter.cs:127>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/KnifeCutter.cs:128>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/KnifeCutter.cs:129>
 		ContactState_t7AF7799E394BDD12C5F25E8FEDB123B568EE2659* L_38 = (ContactState_t7AF7799E394BDD12C5F25E8FEDB123B568EE2659*)il2cpp_codegen_object_new(ContactState_t7AF7799E394BDD12C5F25E8FEDB123B568EE2659_il2cpp_TypeInfo_var);
 		ContactState__ctor_mA564AA31F3F5518BBB4B87CE9AC57078C7965CDF(L_38, NULL);
 		ContactState_t7AF7799E394BDD12C5F25E8FEDB123B568EE2659* L_39 = L_38;
@@ -12896,7 +13032,7 @@ IL_0074:
 		NullCheck(L_44);
 		L_44->___framesInside = 0;
 		V_10 = L_44;
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/KnifeCutter.cs:130>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/KnifeCutter.cs:130>
 		Dictionary_2_tABF27506231614C53E3EFC05670C2AA4231E8F0A* L_45 = __this->____states;
 		CuttableObject_t00D99541FCCE75FBA7C9D873054FA1C29D1D4F06* L_46 = V_8;
 		ContactState_t7AF7799E394BDD12C5F25E8FEDB123B568EE2659* L_47 = V_10;
@@ -12906,14 +13042,14 @@ IL_0074:
 
 IL_00ff:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/KnifeCutter.cs:134>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/KnifeCutter.cs:134>
 		ContactState_t7AF7799E394BDD12C5F25E8FEDB123B568EE2659* L_48 = V_10;
 		ContactState_t7AF7799E394BDD12C5F25E8FEDB123B568EE2659* L_49 = L_48;
 		NullCheck(L_49);
 		int32_t L_50 = L_49->___framesInside;
 		NullCheck(L_49);
 		L_49->___framesInside = ((int32_t)il2cpp_codegen_add(L_50, 1));
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/KnifeCutter.cs:135>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/KnifeCutter.cs:135>
 		ContactState_t7AF7799E394BDD12C5F25E8FEDB123B568EE2659* L_51 = V_10;
 		ContactState_t7AF7799E394BDD12C5F25E8FEDB123B568EE2659* L_52 = L_51;
 		NullCheck(L_52);
@@ -12926,12 +13062,12 @@ IL_00ff:
 		L_57 = Vector3_Distance_m2314DB9B8BD01157E013DF87BEA557375C7F9FF9_inline(L_55, L_56, NULL);
 		NullCheck(L_52);
 		L_52->___travel = ((float)il2cpp_codegen_add(L_53, L_57));
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/KnifeCutter.cs:136>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/KnifeCutter.cs:136>
 		ContactState_t7AF7799E394BDD12C5F25E8FEDB123B568EE2659* L_58 = V_10;
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_59 = V_9;
 		NullCheck(L_58);
 		L_58->___lastPoint = L_59;
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/KnifeCutter.cs:138>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/KnifeCutter.cs:138>
 		List_1_tC771A5C3F1762A5D4F9381171EF2227687E46512* L_60 = V_5;
 		CuttableObject_t00D99541FCCE75FBA7C9D873054FA1C29D1D4F06* L_61 = V_8;
 		NullCheck(L_60);
@@ -12940,14 +13076,14 @@ IL_00ff:
 
 IL_013c:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/KnifeCutter.cs:109>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/KnifeCutter.cs:109>
 		int32_t L_62 = V_6;
 		V_6 = ((int32_t)il2cpp_codegen_add(L_62, 1));
 	}
 
 IL_0142:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/KnifeCutter.cs:109>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/KnifeCutter.cs:109>
 		int32_t L_63 = V_6;
 		int32_t L_64 = V_4;
 		if ((((int32_t)L_63) < ((int32_t)L_64)))
@@ -12956,7 +13092,7 @@ IL_0142:
 		}
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/KnifeCutter.cs:142>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/KnifeCutter.cs:142>
 		Dictionary_2_tABF27506231614C53E3EFC05670C2AA4231E8F0A* L_65 = __this->____states;
 		NullCheck(L_65);
 		int32_t L_66;
@@ -12967,12 +13103,12 @@ IL_0142:
 		}
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/KnifeCutter.cs:145>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/KnifeCutter.cs:145>
 		il2cpp_codegen_runtime_class_init_inline(ListPool_1_tE717D8F235B0AAA9F58998814086DA6534F50CC7_il2cpp_TypeInfo_var);
 		List_1_tC771A5C3F1762A5D4F9381171EF2227687E46512* L_67;
 		L_67 = ListPool_1_Get_mE2B28B391245576BB6362B900F855CAF6B4C7B36(ListPool_1_Get_mE2B28B391245576BB6362B900F855CAF6B4C7B36_RuntimeMethod_var);
 		V_11 = L_67;
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/KnifeCutter.cs:146>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/KnifeCutter.cs:146>
 		List_1_tC771A5C3F1762A5D4F9381171EF2227687E46512* L_68 = V_11;
 		Dictionary_2_tABF27506231614C53E3EFC05670C2AA4231E8F0A* L_69 = __this->____states;
 		NullCheck(L_69);
@@ -12980,21 +13116,21 @@ IL_0142:
 		L_70 = Dictionary_2_get_Keys_m16F399ACFBF0281D12767EC6EF72BAB4BE763DAC(L_69, Dictionary_2_get_Keys_m16F399ACFBF0281D12767EC6EF72BAB4BE763DAC_RuntimeMethod_var);
 		NullCheck(L_68);
 		List_1_AddRange_m5AA86F61B4BF1013C3394F4323C5497F261E5456(L_68, L_70, List_1_AddRange_m5AA86F61B4BF1013C3394F4323C5497F261E5456_RuntimeMethod_var);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/KnifeCutter.cs:148>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/KnifeCutter.cs:148>
 		V_12 = 0;
 		goto IL_01c4;
 	}
 
 IL_0177:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/KnifeCutter.cs:150>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/KnifeCutter.cs:150>
 		List_1_tC771A5C3F1762A5D4F9381171EF2227687E46512* L_71 = V_11;
 		int32_t L_72 = V_12;
 		NullCheck(L_71);
 		CuttableObject_t00D99541FCCE75FBA7C9D873054FA1C29D1D4F06* L_73;
 		L_73 = List_1_get_Item_m7502BCAA038AAC06BF9FADB59D54891EE1F90E4A(L_71, L_72, List_1_get_Item_m7502BCAA038AAC06BF9FADB59D54891EE1F90E4A_RuntimeMethod_var);
 		V_13 = L_73;
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/KnifeCutter.cs:151>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/KnifeCutter.cs:151>
 		CuttableObject_t00D99541FCCE75FBA7C9D873054FA1C29D1D4F06* L_74 = V_13;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_75;
@@ -13005,19 +13141,19 @@ IL_0177:
 		}
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/KnifeCutter.cs:153>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/KnifeCutter.cs:153>
 		Dictionary_2_tABF27506231614C53E3EFC05670C2AA4231E8F0A* L_76 = __this->____states;
 		CuttableObject_t00D99541FCCE75FBA7C9D873054FA1C29D1D4F06* L_77 = V_13;
 		NullCheck(L_76);
 		bool L_78;
 		L_78 = Dictionary_2_Remove_mA0ED6E9EC15B810AD95975354499E57452FFD8DE(L_76, L_77, Dictionary_2_Remove_mA0ED6E9EC15B810AD95975354499E57452FFD8DE_RuntimeMethod_var);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/KnifeCutter.cs:154>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/KnifeCutter.cs:154>
 		goto IL_01be;
 	}
 
 IL_019c:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/KnifeCutter.cs:157>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/KnifeCutter.cs:157>
 		List_1_tC771A5C3F1762A5D4F9381171EF2227687E46512* L_79 = V_5;
 		CuttableObject_t00D99541FCCE75FBA7C9D873054FA1C29D1D4F06* L_80 = V_13;
 		NullCheck(L_79);
@@ -13029,11 +13165,11 @@ IL_019c:
 		}
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/KnifeCutter.cs:160>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/KnifeCutter.cs:160>
 		CuttableObject_t00D99541FCCE75FBA7C9D873054FA1C29D1D4F06* L_82 = V_13;
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_83 = V_1;
 		KnifeCutter_OnBladeExit_mCFCF97A5E29D5A8DC3508C16B3A3E4B51A2B0391(__this, L_82, L_83, NULL);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/KnifeCutter.cs:161>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/KnifeCutter.cs:161>
 		Dictionary_2_tABF27506231614C53E3EFC05670C2AA4231E8F0A* L_84 = __this->____states;
 		CuttableObject_t00D99541FCCE75FBA7C9D873054FA1C29D1D4F06* L_85 = V_13;
 		NullCheck(L_84);
@@ -13043,14 +13179,14 @@ IL_019c:
 
 IL_01be:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/KnifeCutter.cs:148>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/KnifeCutter.cs:148>
 		int32_t L_87 = V_12;
 		V_12 = ((int32_t)il2cpp_codegen_add(L_87, 1));
 	}
 
 IL_01c4:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/KnifeCutter.cs:148>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/KnifeCutter.cs:148>
 		int32_t L_88 = V_12;
 		List_1_tC771A5C3F1762A5D4F9381171EF2227687E46512* L_89 = V_11;
 		NullCheck(L_89);
@@ -13062,7 +13198,7 @@ IL_01c4:
 		}
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/KnifeCutter.cs:165>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/KnifeCutter.cs:165>
 		List_1_tC771A5C3F1762A5D4F9381171EF2227687E46512* L_91 = V_11;
 		il2cpp_codegen_runtime_class_init_inline(ListPool_1_tE717D8F235B0AAA9F58998814086DA6534F50CC7_il2cpp_TypeInfo_var);
 		ListPool_1_Release_m6E25C196A5E04FC748058EAEDAB0A3FBC0AE4561(L_91, ListPool_1_Release_m6E25C196A5E04FC748058EAEDAB0A3FBC0AE4561_RuntimeMethod_var);
@@ -13070,12 +13206,12 @@ IL_01c4:
 
 IL_01d6:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/KnifeCutter.cs:169>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/KnifeCutter.cs:169>
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_92 = V_1;
 		__this->____lastBladeWorldPos = L_92;
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/KnifeCutter.cs:170>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/KnifeCutter.cs:170>
 		__this->____hasLastBladePos = (bool)1;
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/KnifeCutter.cs:171>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/KnifeCutter.cs:171>
 		return;
 	}
 }
@@ -13091,7 +13227,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR float KnifeCutter_KnifeSpeed_m8CBB685F3E75AF3
 	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 V_0;
 	memset((&V_0), 0, sizeof(V_0));
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/KnifeCutter.cs:177>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/KnifeCutter.cs:177>
 		Rigidbody_t268697F5A994213ED97393309870968BC1C7393C* L_0 = __this->____rb;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_1;
@@ -13102,7 +13238,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR float KnifeCutter_KnifeSpeed_m8CBB685F3E75AF3
 		}
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/KnifeCutter.cs:177>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/KnifeCutter.cs:177>
 		Rigidbody_t268697F5A994213ED97393309870968BC1C7393C* L_2 = __this->____rb;
 		NullCheck(L_2);
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_3;
@@ -13115,7 +13251,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR float KnifeCutter_KnifeSpeed_m8CBB685F3E75AF3
 
 IL_0021:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/KnifeCutter.cs:183>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/KnifeCutter.cs:183>
 		bool L_5 = __this->____hasLastBladePos;
 		if (!L_5)
 		{
@@ -13123,7 +13259,7 @@ IL_0021:
 		}
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/KnifeCutter.cs:185>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/KnifeCutter.cs:185>
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_6 = __this->____lastBladeWorldPos;
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_7 = ___0_bladeCenter;
 		float L_8;
@@ -13135,7 +13271,7 @@ IL_0021:
 
 IL_003c:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/KnifeCutter.cs:188>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/KnifeCutter.cs:188>
 		return (0.0f);
 	}
 }
@@ -13151,7 +13287,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A
 	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 V_0;
 	memset((&V_0), 0, sizeof(V_0));
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/KnifeCutter.cs:193>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/KnifeCutter.cs:193>
 		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_0 = __this->___bladeTip;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_1;
@@ -13172,7 +13308,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A
 		}
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/KnifeCutter.cs:194>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/KnifeCutter.cs:194>
 		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_4 = __this->___bladeTip;
 		NullCheck(L_4);
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_5;
@@ -13191,7 +13327,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A
 
 IL_003e:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/KnifeCutter.cs:196>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/KnifeCutter.cs:196>
 		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_10;
 		L_10 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(__this, NULL);
 		NullCheck(L_10);
@@ -13230,7 +13366,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void KnifeCutter_OnBladeExit_mCFCF97A5E29D5A8
 	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 G_B14_0;
 	memset((&G_B14_0), 0, sizeof(G_B14_0));
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/KnifeCutter.cs:201>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/KnifeCutter.cs:201>
 		CuttableObject_t00D99541FCCE75FBA7C9D873054FA1C29D1D4F06* L_0 = ___0_cuttable;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_1;
@@ -13253,13 +13389,13 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void KnifeCutter_OnBladeExit_mCFCF97A5E29D5A8
 
 IL_0010:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/KnifeCutter.cs:201>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/KnifeCutter.cs:201>
 		return;
 	}
 
 IL_0011:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/KnifeCutter.cs:202>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/KnifeCutter.cs:202>
 		Dictionary_2_tABF27506231614C53E3EFC05670C2AA4231E8F0A* L_4 = __this->____states;
 		CuttableObject_t00D99541FCCE75FBA7C9D873054FA1C29D1D4F06* L_5 = ___0_cuttable;
 		NullCheck(L_4);
@@ -13271,31 +13407,31 @@ IL_0011:
 		}
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/KnifeCutter.cs:202>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/KnifeCutter.cs:202>
 		return;
 	}
 
 IL_0022:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/KnifeCutter.cs:204>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/KnifeCutter.cs:204>
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_7 = ___1_bladeCenter;
 		float L_8;
 		L_8 = KnifeCutter_KnifeSpeed_m8CBB685F3E75AF3427C2F48B9C0B2E2E73C6EEC3(__this, L_7, NULL);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/KnifeCutter.cs:205>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/KnifeCutter.cs:205>
 		float L_9 = __this->___minBladeSpeed;
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/KnifeCutter.cs:206>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/KnifeCutter.cs:206>
 		ContactState_t7AF7799E394BDD12C5F25E8FEDB123B568EE2659* L_10 = V_0;
 		NullCheck(L_10);
 		float L_11 = L_10->___travel;
 		float L_12 = __this->___minCutTravel;
 		V_1 = (bool)((((int32_t)((!(((float)L_11) >= ((float)L_12)))? 1 : 0)) == ((int32_t)0))? 1 : 0);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/KnifeCutter.cs:207>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/KnifeCutter.cs:207>
 		ContactState_t7AF7799E394BDD12C5F25E8FEDB123B568EE2659* L_13 = V_0;
 		NullCheck(L_13);
 		int32_t L_14 = L_13->___framesInside;
 		int32_t L_15 = __this->___minPenetrationFrames;
 		V_2 = (bool)((((int32_t)((((int32_t)L_14) < ((int32_t)L_15))? 1 : 0)) == ((int32_t)0))? 1 : 0);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/KnifeCutter.cs:209>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/KnifeCutter.cs:209>
 		bool L_16 = V_1;
 		bool L_17 = V_2;
 		if (((int32_t)(((int32_t)(((((int32_t)((!(((float)L_8) >= ((float)L_9)))? 1 : 0)) == ((int32_t)0))? 1 : 0)&(int32_t)L_16))&(int32_t)L_17)))
@@ -13304,18 +13440,18 @@ IL_0022:
 		}
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/KnifeCutter.cs:210>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/KnifeCutter.cs:210>
 		return;
 	}
 
 IL_005f:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/KnifeCutter.cs:213>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/KnifeCutter.cs:213>
 		ContactState_t7AF7799E394BDD12C5F25E8FEDB123B568EE2659* L_18 = V_0;
 		NullCheck(L_18);
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_19 = L_18->___lastPoint;
 		V_3 = L_19;
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/KnifeCutter.cs:214>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/KnifeCutter.cs:214>
 		ContactState_t7AF7799E394BDD12C5F25E8FEDB123B568EE2659* L_20 = V_0;
 		NullCheck(L_20);
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_21 = L_20->___enterPoint;
@@ -13325,7 +13461,7 @@ IL_005f:
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_24;
 		L_24 = Vector3_op_Multiply_m87BA7C578F96C8E49BB07088DAAC4649F83B0353_inline(L_23, (0.5f), NULL);
 		V_4 = L_24;
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/KnifeCutter.cs:217>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/KnifeCutter.cs:217>
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_25 = V_3;
 		ContactState_t7AF7799E394BDD12C5F25E8FEDB123B568EE2659* L_26 = V_0;
 		NullCheck(L_26);
@@ -13333,11 +13469,11 @@ IL_005f:
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_28;
 		L_28 = Vector3_op_Subtraction_mE42023FF80067CB44A1D4A27EB7CF2B24CABB828_inline(L_25, L_27, NULL);
 		V_5 = L_28;
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/KnifeCutter.cs:218>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/KnifeCutter.cs:218>
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_29;
 		L_29 = KnifeCutter_BladeDirection_m712935A4B28B75B2C4865B80485CE23FD5A7657A(__this, NULL);
 		V_6 = L_29;
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/KnifeCutter.cs:219>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/KnifeCutter.cs:219>
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_30 = V_6;
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_31 = V_5;
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_32;
@@ -13346,7 +13482,7 @@ IL_005f:
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_33;
 		L_33 = Vector3_get_normalized_m736BBF65D5CDA7A18414370D15B4DFCC1E466F07_inline((&V_9), NULL);
 		V_7 = L_33;
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/KnifeCutter.cs:220>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/KnifeCutter.cs:220>
 		float L_34;
 		L_34 = Vector3_get_sqrMagnitude_m43C27DEC47C4811FB30AB474FF2131A963B66FC8_inline((&V_7), NULL);
 		if ((!(((float)L_34) < ((float)(9.99999975E-05f)))))
@@ -13355,7 +13491,7 @@ IL_005f:
 		}
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/KnifeCutter.cs:221>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/KnifeCutter.cs:221>
 		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_35;
 		L_35 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(__this, NULL);
 		NullCheck(L_35);
@@ -13366,7 +13502,7 @@ IL_005f:
 
 IL_00c3:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/KnifeCutter.cs:223>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/KnifeCutter.cs:223>
 		bool L_37 = __this->___useKnifeForwardForThrow;
 		if (L_37)
 		{
@@ -13404,7 +13540,7 @@ IL_00e6:
 IL_00e8:
 	{
 		V_8 = G_B14_0;
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/KnifeCutter.cs:226>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/KnifeCutter.cs:226>
 		AudioClip_t5D272C4EB4F2D3ED49F1C346DEA373CF6D585F20* L_42 = __this->___cutSound;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_43;
@@ -13415,7 +13551,7 @@ IL_00e8:
 		}
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/KnifeCutter.cs:228>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/KnifeCutter.cs:228>
 		AudioClip_t5D272C4EB4F2D3ED49F1C346DEA373CF6D585F20* L_44 = __this->___cutSound;
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_45 = V_4;
 		float L_46 = __this->___soundVolume;
@@ -13424,7 +13560,7 @@ IL_00e8:
 
 IL_010b:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/KnifeCutter.cs:231>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/KnifeCutter.cs:231>
 		CuttableObject_t00D99541FCCE75FBA7C9D873054FA1C29D1D4F06* L_47 = ___0_cuttable;
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_48 = V_4;
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_49 = V_7;
@@ -13434,7 +13570,7 @@ IL_010b:
 		L_52 = Vector3_op_Multiply_m87BA7C578F96C8E49BB07088DAAC4649F83B0353_inline(L_50, L_51, NULL);
 		NullCheck(L_47);
 		CuttableObject_DoCut_m6B5606556D91351B9095036FE2C2D2F4EDCF0C83(L_47, L_48, L_49, L_52, NULL);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/KnifeCutter.cs:232>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/KnifeCutter.cs:232>
 		return;
 	}
 }
@@ -13450,7 +13586,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void KnifeCutter_OnDrawGizmosSelected_mA9DF49
 	Bounds_t367E830C64BBF235ED8C3B2F8CF6254FDCAD39C3 V_0;
 	memset((&V_0), 0, sizeof(V_0));
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/KnifeCutter.cs:261>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/KnifeCutter.cs:261>
 		Collider_t1CC3163924FCD6C4CC2E816373A929C1E3D55E76* L_0 = __this->___bladeVolume;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_1;
@@ -13461,19 +13597,19 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void KnifeCutter_OnDrawGizmosSelected_mA9DF49
 		}
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/KnifeCutter.cs:261>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/KnifeCutter.cs:261>
 		return;
 	}
 
 IL_000e:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/KnifeCutter.cs:262>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/KnifeCutter.cs:262>
 		Collider_t1CC3163924FCD6C4CC2E816373A929C1E3D55E76* L_2 = __this->___bladeVolume;
 		NullCheck(L_2);
 		Bounds_t367E830C64BBF235ED8C3B2F8CF6254FDCAD39C3 L_3;
 		L_3 = Collider_get_bounds_mCC32F749590E9A85C7930E5355661367F78E4CB4(L_2, NULL);
 		V_0 = L_3;
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/KnifeCutter.cs:263>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/KnifeCutter.cs:263>
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_4;
 		L_4 = Bounds_get_center_m5B05F81CB835EB6DD8628FDA24B638F477984DC3_inline((&V_0), NULL);
 		Collider_t1CC3163924FCD6C4CC2E816373A929C1E3D55E76* L_5 = __this->___bladeVolume;
@@ -13488,13 +13624,13 @@ IL_000e:
 		Matrix4x4_tDB70CF134A14BA38190C59AA700BCE10E2AED3E6 L_9;
 		L_9 = Matrix4x4_TRS_mCC04FD47347234B451ACC6CCD2CE6D02E1E0E1E3_inline(L_4, L_7, L_8, NULL);
 		Gizmos_set_matrix_m100B4ACA7FBDFF65CE1BD0000E9E0D7566147A15(L_9, NULL);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/KnifeCutter.cs:264>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/KnifeCutter.cs:264>
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_10;
 		L_10 = Vector3_get_zero_m0C1249C3F25B1C70EAD3CC8B31259975A457AE39_inline(NULL);
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_11;
 		L_11 = Bounds_get_size_m0699A53A55A78B3201D7270D6F338DFA91B6FAD4_inline((&V_0), NULL);
 		Gizmos_DrawWireCube_m343533B3955A2D04A8638280D0EF537274A1FD8B(L_10, L_11, NULL);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/KnifeCutter.cs:265>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/KnifeCutter.cs:265>
 		return;
 	}
 }
@@ -13510,30 +13646,30 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void KnifeCutter__ctor_m119458CC81D0BA3C7976A
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/KnifeCutter.cs:18>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/KnifeCutter.cs:18>
 		LayerMask_t97CB6BDADEDC3D6423C7BCFEA7F86DA2EC6241DB L_0;
 		L_0 = LayerMask_op_Implicit_m01C8996A2CB2085328B9C33539C43139660D8222((-1), NULL);
 		__this->___cuttableLayers = L_0;
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/KnifeCutter.cs:21>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/KnifeCutter.cs:21>
 		__this->___queryTriggerInteraction = 1;
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/KnifeCutter.cs:24>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/KnifeCutter.cs:24>
 		__this->___minBladeSpeed = (0.600000024f);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/KnifeCutter.cs:25>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/KnifeCutter.cs:25>
 		__this->___minCutTravel = (0.0799999982f);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/KnifeCutter.cs:26>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/KnifeCutter.cs:26>
 		__this->___minPenetrationFrames = 3;
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/KnifeCutter.cs:29>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/KnifeCutter.cs:29>
 		__this->___throwSpeed = (1.0f);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/KnifeCutter.cs:30>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/KnifeCutter.cs:30>
 		__this->___useKnifeForwardForThrow = (bool)1;
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/KnifeCutter.cs:36>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/KnifeCutter.cs:36>
 		__this->___soundVolume = (1.0f);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/KnifeCutter.cs:54>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/KnifeCutter.cs:54>
 		Dictionary_2_tABF27506231614C53E3EFC05670C2AA4231E8F0A* L_1 = (Dictionary_2_tABF27506231614C53E3EFC05670C2AA4231E8F0A*)il2cpp_codegen_object_new(Dictionary_2_tABF27506231614C53E3EFC05670C2AA4231E8F0A_il2cpp_TypeInfo_var);
 		Dictionary_2__ctor_mB260B04D3D353119071B3E1304BC5EBCB593A6AD(L_1, Dictionary_2__ctor_mB260B04D3D353119071B3E1304BC5EBCB593A6AD_RuntimeMethod_var);
 		__this->____states = L_1;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->____states), (void*)L_1);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/KnifeCutter.cs:57>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/KnifeCutter.cs:57>
 		ColliderU5BU5D_t94A9D70F63D095AFF2A9B4613012A5F7F3141787* L_2 = (ColliderU5BU5D_t94A9D70F63D095AFF2A9B4613012A5F7F3141787*)(ColliderU5BU5D_t94A9D70F63D095AFF2A9B4613012A5F7F3141787*)SZArrayNew(ColliderU5BU5D_t94A9D70F63D095AFF2A9B4613012A5F7F3141787_il2cpp_TypeInfo_var, (uint32_t)((int32_t)64));
 		__this->____overlaps = L_2;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->____overlaps), (void*)L_2);
@@ -13575,7 +13711,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR LetterSpawner_tBC161CA12FDE232F59203076963EF4
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/LetterSpawner.cs:10>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/LetterSpawner.cs:10>
 		LetterSpawner_tBC161CA12FDE232F59203076963EF412B105F844* L_0 = ((LetterSpawner_tBC161CA12FDE232F59203076963EF412B105F844_StaticFields*)il2cpp_codegen_static_fields_for(LetterSpawner_tBC161CA12FDE232F59203076963EF412B105F844_il2cpp_TypeInfo_var))->___U3CInstanceU3Ek__BackingField;
 		return L_0;
 	}
@@ -13590,7 +13726,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void LetterSpawner_set_Instance_m96C5FFD84D84
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/LetterSpawner.cs:10>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/LetterSpawner.cs:10>
 		LetterSpawner_tBC161CA12FDE232F59203076963EF412B105F844* L_0 = ___0_value;
 		((LetterSpawner_tBC161CA12FDE232F59203076963EF412B105F844_StaticFields*)il2cpp_codegen_static_fields_for(LetterSpawner_tBC161CA12FDE232F59203076963EF412B105F844_il2cpp_TypeInfo_var))->___U3CInstanceU3Ek__BackingField = L_0;
 		Il2CppCodeGenWriteBarrier((void**)(&((LetterSpawner_tBC161CA12FDE232F59203076963EF412B105F844_StaticFields*)il2cpp_codegen_static_fields_for(LetterSpawner_tBC161CA12FDE232F59203076963EF412B105F844_il2cpp_TypeInfo_var))->___U3CInstanceU3Ek__BackingField), (void*)L_0);
@@ -13607,7 +13743,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void LetterSpawner_Awake_m12677D684187E050D85
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/LetterSpawner.cs:22>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/LetterSpawner.cs:22>
 		LetterSpawner_tBC161CA12FDE232F59203076963EF412B105F844* L_0;
 		L_0 = LetterSpawner_get_Instance_mDE743C5373029C238F50FE9E4F1A4F5C0241A009_inline(NULL);
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
@@ -13630,20 +13766,20 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void LetterSpawner_Awake_m12677D684187E050D85
 		}
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/LetterSpawner.cs:24>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/LetterSpawner.cs:24>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_4;
 		L_4 = Component_get_gameObject_m57AEFBB14DB39EC476F740BA000E170355DE691B(__this, NULL);
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		Object_Destroy_mE97D0A766419A81296E8D4E5C23D01D3FE91ACBB(L_4, NULL);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/LetterSpawner.cs:25>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/LetterSpawner.cs:25>
 		return;
 	}
 
 IL_0026:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/LetterSpawner.cs:27>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/LetterSpawner.cs:27>
 		LetterSpawner_set_Instance_m96C5FFD84D840C7A288416D9F36E83D10046A83D_inline(__this, NULL);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/LetterSpawner.cs:29>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/LetterSpawner.cs:29>
 		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_5 = __this->___cameraTransform;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_6;
@@ -13665,7 +13801,7 @@ IL_0026:
 		}
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/LetterSpawner.cs:30>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/LetterSpawner.cs:30>
 		Camera_tA92CC927D7439999BC82DBEDC0AA45B470F9E184* L_9;
 		L_9 = Camera_get_main_m52C992F18E05355ABB9EEB64A4BF2215E12762DF(NULL);
 		NullCheck(L_9);
@@ -13677,7 +13813,7 @@ IL_0026:
 
 IL_0055:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/LetterSpawner.cs:31>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/LetterSpawner.cs:31>
 		return;
 	}
 }
@@ -13711,7 +13847,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void LetterSpawner_SpawnWord_m9426C1A6533F487
 	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* V_9 = NULL;
 	float G_B5_0 = 0.0f;
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/LetterSpawner.cs:35>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/LetterSpawner.cs:35>
 		String_t* L_0 = ___0_word;
 		bool L_1;
 		L_1 = String_IsNullOrEmpty_mEA9E3FB005AC28FE02E69FCF95A7B8456192B478(L_0, NULL);
@@ -13721,29 +13857,29 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void LetterSpawner_SpawnWord_m9426C1A6533F487
 		}
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/LetterSpawner.cs:35>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/LetterSpawner.cs:35>
 		return;
 	}
 
 IL_0009:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/LetterSpawner.cs:37>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/LetterSpawner.cs:37>
 		String_t* L_2 = ___0_word;
 		NullCheck(L_2);
 		String_t* L_3;
 		L_3 = String_ToUpperInvariant_mD73F658CDE1280A527231DC305B66CF09B64E5AB(L_2, NULL);
 		___0_word = L_3;
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/LetterSpawner.cs:38>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/LetterSpawner.cs:38>
 		String_t* L_4 = ___0_word;
 		NullCheck(L_4);
 		int32_t L_5;
 		L_5 = String_get_Length_m42625D67623FA5CC7A44D47425CE86FB946542D2_inline(L_4, NULL);
 		V_0 = L_5;
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/LetterSpawner.cs:40>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/LetterSpawner.cs:40>
 		int32_t L_6 = V_0;
 		float L_7 = __this->___letterSpacing;
 		V_1 = ((float)il2cpp_codegen_multiply(((float)((int32_t)il2cpp_codegen_subtract(L_6, 1))), L_7));
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/LetterSpawner.cs:41>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/LetterSpawner.cs:41>
 		bool L_8 = __this->___centerAlign;
 		if (L_8)
 		{
@@ -13764,11 +13900,11 @@ IL_0033:
 IL_003b:
 	{
 		V_2 = G_B5_0;
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/LetterSpawner.cs:43>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/LetterSpawner.cs:43>
 		Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 L_10;
 		L_10 = Quaternion_get_identity_m7E701AE095ED10FD5EA0B50ABCFDE2EEFF2173A5_inline(NULL);
 		V_3 = L_10;
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/LetterSpawner.cs:45>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/LetterSpawner.cs:45>
 		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_11 = __this->___cameraTransform;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_12;
@@ -13779,7 +13915,7 @@ IL_003b:
 		}
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/LetterSpawner.cs:47>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/LetterSpawner.cs:47>
 		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_13 = __this->___cameraTransform;
 		NullCheck(L_13);
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_14;
@@ -13788,9 +13924,9 @@ IL_003b:
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_16;
 		L_16 = Vector3_op_Subtraction_mE42023FF80067CB44A1D4A27EB7CF2B24CABB828_inline(L_14, L_15, NULL);
 		V_5 = L_16;
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/LetterSpawner.cs:48>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/LetterSpawner.cs:48>
 		(&V_5)->___y = (0.0f);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/LetterSpawner.cs:50>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/LetterSpawner.cs:50>
 		float L_17;
 		L_17 = Vector3_get_sqrMagnitude_m43C27DEC47C4811FB30AB474FF2131A963B66FC8_inline((&V_5), NULL);
 		if ((!(((float)L_17) < ((float)(9.99999997E-07f)))))
@@ -13799,7 +13935,7 @@ IL_003b:
 		}
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/LetterSpawner.cs:51>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/LetterSpawner.cs:51>
 		Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 L_18;
 		L_18 = Quaternion_get_identity_m7E701AE095ED10FD5EA0B50ABCFDE2EEFF2173A5_inline(NULL);
 		V_3 = L_18;
@@ -13808,7 +13944,7 @@ IL_003b:
 
 IL_0084:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/LetterSpawner.cs:53>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/LetterSpawner.cs:53>
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_19;
 		L_19 = Vector3_get_normalized_m736BBF65D5CDA7A18414370D15B4DFCC1E466F07_inline((&V_5), NULL);
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_20;
@@ -13820,14 +13956,14 @@ IL_0084:
 
 IL_0096:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/LetterSpawner.cs:56>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/LetterSpawner.cs:56>
 		Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 L_22 = V_3;
 		Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 L_23;
 		L_23 = Quaternion_Euler_m9262AB29E3E9CE94EF71051F38A28E82AEC73F90_inline((0.0f), (180.0f), (0.0f), NULL);
 		Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 L_24;
 		L_24 = Quaternion_op_Multiply_mCB375FCCC12A2EC8F9EB824A1BFB4453B58C2012_inline(L_22, L_23, NULL);
 		V_3 = L_24;
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/LetterSpawner.cs:58>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/LetterSpawner.cs:58>
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_25 = ___1_spawnPos;
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_26;
 		L_26 = Vector3_get_up_m128AF3FDC820BF59D5DE86D973E7DE3F20C3AEBA_inline(NULL);
@@ -13837,21 +13973,21 @@ IL_0096:
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_29;
 		L_29 = Vector3_op_Addition_m78C0EC70CB66E8DCAC225743D82B268DAEE92067_inline(L_25, L_28, NULL);
 		V_4 = L_29;
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/LetterSpawner.cs:60>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/LetterSpawner.cs:60>
 		V_6 = 0;
 		goto IL_01ac;
 	}
 
 IL_00d1:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/LetterSpawner.cs:62>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/LetterSpawner.cs:62>
 		String_t* L_30 = ___0_word;
 		int32_t L_31 = V_6;
 		NullCheck(L_30);
 		Il2CppChar L_32;
 		L_32 = String_get_Chars_mC49DF0CD2D3BE7BE97B3AD9C995BE3094F8E36D3(L_30, L_31, NULL);
 		V_7 = ((int32_t)il2cpp_codegen_subtract((int32_t)L_32, ((int32_t)65)));
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/LetterSpawner.cs:64>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/LetterSpawner.cs:64>
 		int32_t L_33 = V_7;
 		if ((((int32_t)L_33) < ((int32_t)0)))
 		{
@@ -13890,7 +14026,7 @@ IL_00d1:
 
 IL_0110:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/LetterSpawner.cs:66>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/LetterSpawner.cs:66>
 		String_t* L_43 = ___0_word;
 		int32_t L_44 = V_6;
 		NullCheck(L_43);
@@ -13902,13 +14038,13 @@ IL_0110:
 		L_48 = String_Format_mA8DBB4C2516B9723C5A41E6CB1E2FAF4BBE96DD8(_stringLiteral883B5C6D6705EE9A81325DF8AB8F512F1E735DD7, L_47, NULL);
 		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 		Debug_LogWarning_m33EF1B897E0C7C6FF538989610BFAFFEF4628CA9(L_48, NULL);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/LetterSpawner.cs:67>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/LetterSpawner.cs:67>
 		goto IL_01a6;
 	}
 
 IL_012e:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/LetterSpawner.cs:70>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/LetterSpawner.cs:70>
 		Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 L_49 = V_3;
 		float L_50 = V_2;
 		int32_t L_51 = V_6;
@@ -13919,7 +14055,7 @@ IL_012e:
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_54;
 		L_54 = Quaternion_op_Multiply_mE1EBA73F9173432B50F8F17CE8190C5A7986FB8C(L_49, L_53, NULL);
 		V_8 = L_54;
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/LetterSpawner.cs:71>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/LetterSpawner.cs:71>
 		NetworkSpawnManager_tFCB3B1216C5FF4535A3F8AF00C08A89C3CADA00D* L_55;
 		L_55 = NetworkSpawnManager_Find_m716E11837307E53BC29FE6BAF544134BABC665BC(__this, NULL);
 		PrefabCatalogue_tFB3A0794FB7272CDFD33FBF11A89214F1BB1C820* L_56 = __this->___letterPrefabs;
@@ -13933,7 +14069,7 @@ IL_012e:
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_60;
 		L_60 = NetworkSpawnManager_SpawnWithPeerScope_m253F79B92C3D7293F46F49C65005C1379719E418(L_55, L_59, NULL);
 		V_9 = L_60;
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/LetterSpawner.cs:73>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/LetterSpawner.cs:73>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_61 = V_9;
 		NullCheck(L_61);
 		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_62;
@@ -13944,7 +14080,7 @@ IL_012e:
 		L_65 = Vector3_op_Addition_m78C0EC70CB66E8DCAC225743D82B268DAEE92067_inline(L_63, L_64, NULL);
 		NullCheck(L_62);
 		Transform_set_position_mA1A817124BB41B685043DED2A9BA48CDF37C4156(L_62, L_65, NULL);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/LetterSpawner.cs:74>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/LetterSpawner.cs:74>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_66 = V_9;
 		NullCheck(L_66);
 		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_67;
@@ -13952,7 +14088,7 @@ IL_012e:
 		Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 L_68 = V_3;
 		NullCheck(L_67);
 		Transform_set_rotation_m61340DE74726CF0F9946743A727C4D444397331D(L_67, L_68, NULL);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/LetterSpawner.cs:75>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/LetterSpawner.cs:75>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_69 = V_9;
 		NullCheck(L_69);
 		SpawnableObject_tB01492418378D7AE527A7C2936955B071EC7B7FA* L_70;
@@ -13965,14 +14101,14 @@ IL_012e:
 
 IL_01a6:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/LetterSpawner.cs:60>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/LetterSpawner.cs:60>
 		int32_t L_73 = V_6;
 		V_6 = ((int32_t)il2cpp_codegen_add(L_73, 1));
 	}
 
 IL_01ac:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/LetterSpawner.cs:60>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/LetterSpawner.cs:60>
 		int32_t L_74 = V_6;
 		int32_t L_75 = V_0;
 		if ((((int32_t)L_74) < ((int32_t)L_75)))
@@ -13981,7 +14117,7 @@ IL_01ac:
 		}
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/LetterSpawner.cs:77>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/LetterSpawner.cs:77>
 		return;
 	}
 }
@@ -14009,13 +14145,13 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* LetterSpawner_BroadcastNextFra
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void LetterSpawner__ctor_m78A57DCE79B5A8BC0E900DEA09D77891E26FBC7D (LetterSpawner_tBC161CA12FDE232F59203076963EF412B105F844* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/LetterSpawner.cs:13>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/LetterSpawner.cs:13>
 		__this->___letterSpacing = (0.0599999987f);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/LetterSpawner.cs:14>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/LetterSpawner.cs:14>
 		__this->___centerAlign = (bool)1;
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/LetterSpawner.cs:15>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/LetterSpawner.cs:15>
 		__this->___liftY = (0.0199999996f);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/LetterSpawner.cs:17>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/LetterSpawner.cs:17>
 		__this->___faceCameraYawOnly = (bool)1;
 		MonoBehaviour__ctor_m592DB0105CA0BC97AA1C5F4AD27B12D68A3B7C1E(__this, NULL);
 		return;
@@ -14092,7 +14228,7 @@ IL_001f:
 
 IL_0028:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/LetterSpawner.cs:83>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/LetterSpawner.cs:83>
 		__this->___U3CU3E2__current = NULL;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___U3CU3E2__current), (void*)NULL);
 		__this->___U3CU3E1__state = 1;
@@ -14106,7 +14242,7 @@ IL_0038:
 
 IL_003f:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/LetterSpawner.cs:81>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/LetterSpawner.cs:81>
 		SpawnableObject_tB01492418378D7AE527A7C2936955B071EC7B7FA* L_2 = __this->___obj;
 		NullCheck(L_2);
 		NetworkContext_t49239659157E00ACFF3A196AF00218DED40F9310* L_3 = (NetworkContext_t49239659157E00ACFF3A196AF00218DED40F9310*)(&L_2->___context);
@@ -14120,7 +14256,7 @@ IL_003f:
 		}
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/LetterSpawner.cs:85>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/LetterSpawner.cs:85>
 		__this->___U3CU3E2__current = NULL;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___U3CU3E2__current), (void*)NULL);
 		__this->___U3CU3E1__state = 2;
@@ -14130,7 +14266,7 @@ IL_003f:
 IL_0067:
 	{
 		__this->___U3CU3E1__state = (-1);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/LetterSpawner.cs:86>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/LetterSpawner.cs:86>
 		__this->___U3CU3E2__current = NULL;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___U3CU3E2__current), (void*)NULL);
 		__this->___U3CU3E1__state = 3;
@@ -14140,11 +14276,11 @@ IL_0067:
 IL_007e:
 	{
 		__this->___U3CU3E1__state = (-1);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/LetterSpawner.cs:87>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/LetterSpawner.cs:87>
 		SpawnableObject_tB01492418378D7AE527A7C2936955B071EC7B7FA* L_6 = __this->___obj;
 		NullCheck(L_6);
 		SpawnableObject_BroadcastPosAndRot_m6BD5E105513D3C1045495CE0D624BA0AA827CE44(L_6, NULL);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/LetterSpawner.cs:88>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/LetterSpawner.cs:88>
 		return (bool)0;
 	}
 }
@@ -14185,7 +14321,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CBroadcastNextFrameU3Ed__12_
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool LetterTile_get_IsInvalid_m62E652D22E2B8651B96083CE22AEA3201E4E020C (LetterTile_tB20E0D5265E6DEC4F697C65EBC185582BA0E3541* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/LetterTile.cs:13>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/LetterTile.cs:13>
 		bool L_0 = __this->____isInvalid;
 		return L_0;
 	}
@@ -14194,7 +14330,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool LetterTile_get_IsInvalid_m62E652D22E2B86
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool LetterTile_get_IsSceneObjectWord_mD4FFFD7E5305DCB1CED4E17B50CF6EDF635B4E38 (LetterTile_tB20E0D5265E6DEC4F697C65EBC185582BA0E3541* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/LetterTile.cs:14>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/LetterTile.cs:14>
 		bool L_0 = __this->____isSceneObjectWord;
 		return L_0;
 	}
@@ -14209,7 +14345,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void LetterTile_Awake_mA205F88394034908C261D1
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/LetterTile.cs:18>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/LetterTile.cs:18>
 		TextMeshPro_t4560AB28A3EAF503895A781A9C625273D833270E* L_0 = __this->___letterText;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_1;
@@ -14220,7 +14356,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void LetterTile_Awake_mA205F88394034908C261D1
 		}
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/LetterTile.cs:19>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/LetterTile.cs:19>
 		TextMeshPro_t4560AB28A3EAF503895A781A9C625273D833270E* L_2 = __this->___letterText;
 		NullCheck(L_2);
 		Color_tD001788D726C3A7F1379BEED0260B9591F440C1F L_3;
@@ -14230,7 +14366,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void LetterTile_Awake_mA205F88394034908C261D1
 
 IL_001f:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/LetterTile.cs:20>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/LetterTile.cs:20>
 		return;
 	}
 }
@@ -14238,7 +14374,7 @@ IL_001f:
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* LetterTile_GetLetter_mA20D7ECBED73E4635BD8872B7F6E11ED055E208A (LetterTile_tB20E0D5265E6DEC4F697C65EBC185582BA0E3541* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/LetterTile.cs:24>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/LetterTile.cs:24>
 		String_t* L_0 = __this->___letter;
 		NullCheck(L_0);
 		String_t* L_1;
@@ -14259,11 +14395,11 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void LetterTile_SetInvalidRed_m56D5F3A46FDF89
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/LetterTile.cs:29>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/LetterTile.cs:29>
 		__this->____isInvalid = (bool)1;
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/LetterTile.cs:30>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/LetterTile.cs:30>
 		__this->____isSceneObjectWord = (bool)0;
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/LetterTile.cs:32>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/LetterTile.cs:32>
 		TextMeshPro_t4560AB28A3EAF503895A781A9C625273D833270E* L_0 = __this->___letterText;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_1;
@@ -14274,7 +14410,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void LetterTile_SetInvalidRed_m56D5F3A46FDF89
 		}
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/LetterTile.cs:33>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/LetterTile.cs:33>
 		TextMeshPro_t4560AB28A3EAF503895A781A9C625273D833270E* L_2 = __this->___letterText;
 		Color_tD001788D726C3A7F1379BEED0260B9591F440C1F L_3;
 		L_3 = Color_get_red_mA2E53E7173FDC97E68E335049AB0FAAEE43A844D_inline(NULL);
@@ -14284,7 +14420,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void LetterTile_SetInvalidRed_m56D5F3A46FDF89
 
 IL_002c:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/LetterTile.cs:34>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/LetterTile.cs:34>
 		return;
 	}
 }
@@ -14298,11 +14434,11 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void LetterTile_SetSceneObjectYellow_m9A90F74
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/LetterTile.cs:38>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/LetterTile.cs:38>
 		__this->____isInvalid = (bool)0;
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/LetterTile.cs:39>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/LetterTile.cs:39>
 		__this->____isSceneObjectWord = (bool)1;
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/LetterTile.cs:41>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/LetterTile.cs:41>
 		TextMeshPro_t4560AB28A3EAF503895A781A9C625273D833270E* L_0 = __this->___letterText;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_1;
@@ -14313,7 +14449,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void LetterTile_SetSceneObjectYellow_m9A90F74
 		}
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/LetterTile.cs:42>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/LetterTile.cs:42>
 		TextMeshPro_t4560AB28A3EAF503895A781A9C625273D833270E* L_2 = __this->___letterText;
 		Color_tD001788D726C3A7F1379BEED0260B9591F440C1F L_3;
 		L_3 = Color_get_yellow_m66637FA14383E8D74F24AE256B577CE1D55D469F_inline(NULL);
@@ -14323,7 +14459,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void LetterTile_SetSceneObjectYellow_m9A90F74
 
 IL_002c:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/LetterTile.cs:43>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/LetterTile.cs:43>
 		return;
 	}
 }
@@ -14337,11 +14473,11 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void LetterTile_RestoreOriginalColor_mF6E4724
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/LetterTile.cs:47>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/LetterTile.cs:47>
 		__this->____isInvalid = (bool)0;
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/LetterTile.cs:48>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/LetterTile.cs:48>
 		__this->____isSceneObjectWord = (bool)0;
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/LetterTile.cs:50>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/LetterTile.cs:50>
 		TextMeshPro_t4560AB28A3EAF503895A781A9C625273D833270E* L_0 = __this->___letterText;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_1;
@@ -14352,7 +14488,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void LetterTile_RestoreOriginalColor_mF6E4724
 		}
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/LetterTile.cs:51>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/LetterTile.cs:51>
 		TextMeshPro_t4560AB28A3EAF503895A781A9C625273D833270E* L_2 = __this->___letterText;
 		Color_tD001788D726C3A7F1379BEED0260B9591F440C1F L_3 = __this->____originalColor;
 		NullCheck(L_2);
@@ -14361,7 +14497,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void LetterTile_RestoreOriginalColor_mF6E4724
 
 IL_002d:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/LetterTile.cs:52>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/LetterTile.cs:52>
 		return;
 	}
 }
@@ -14375,7 +14511,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void LetterTile__ctor_mE9A6367E49B49D97CEE041
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/LetterTile.cs:6>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/LetterTile.cs:6>
 		__this->___letter = _stringLiteralEF420ABFDDBDA7B9EE665D85EF62E4A437554003;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___letter), (void*)_stringLiteralEF420ABFDDBDA7B9EE665D85EF62E4A437554003);
 		MonoBehaviour__ctor_m592DB0105CA0BC97AA1C5F4AD27B12D68A3B7C1E(__this, NULL);
@@ -14405,7 +14541,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Logger_Awake_m014FE5A3316852C1F55FC1A4F9
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/Logger.cs:14>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/Logger.cs:14>
 		Logger_t19EB2991B2797127D411A958B24298AE41917827* L_0 = ((Logger_t19EB2991B2797127D411A958B24298AE41917827_StaticFields*)il2cpp_codegen_static_fields_for(Logger_t19EB2991B2797127D411A958B24298AE41917827_il2cpp_TypeInfo_var))->___Instance;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_1;
@@ -14426,26 +14562,26 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Logger_Awake_m014FE5A3316852C1F55FC1A4F9
 		}
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/Logger.cs:16>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/Logger.cs:16>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_4;
 		L_4 = Component_get_gameObject_m57AEFBB14DB39EC476F740BA000E170355DE691B(__this, NULL);
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		Object_Destroy_mE97D0A766419A81296E8D4E5C23D01D3FE91ACBB(L_4, NULL);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/Logger.cs:17>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/Logger.cs:17>
 		return;
 	}
 
 IL_0026:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/Logger.cs:20>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/Logger.cs:20>
 		((Logger_t19EB2991B2797127D411A958B24298AE41917827_StaticFields*)il2cpp_codegen_static_fields_for(Logger_t19EB2991B2797127D411A958B24298AE41917827_il2cpp_TypeInfo_var))->___Instance = __this;
 		Il2CppCodeGenWriteBarrier((void**)(&((Logger_t19EB2991B2797127D411A958B24298AE41917827_StaticFields*)il2cpp_codegen_static_fields_for(Logger_t19EB2991B2797127D411A958B24298AE41917827_il2cpp_TypeInfo_var))->___Instance), (void*)__this);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/Logger.cs:21>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/Logger.cs:21>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_5;
 		L_5 = Component_get_gameObject_m57AEFBB14DB39EC476F740BA000E170355DE691B(__this, NULL);
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		Object_DontDestroyOnLoad_m4B70C3AEF886C176543D1295507B6455C9DCAEA7(L_5, NULL);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/Logger.cs:23>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/Logger.cs:23>
 		il2cpp_codegen_runtime_class_init_inline(Application_tDB03BE91CDF0ACA614A5E0B67CFB77C44EB19B21_il2cpp_TypeInfo_var);
 		String_t* L_6;
 		L_6 = Application_get_persistentDataPath_mC58BD3E1A20732E0A536491DBCAE6505B1624399(NULL);
@@ -14454,9 +14590,9 @@ IL_0026:
 		L_7 = Path_Combine_m1ADAC05CDA2D1D61B172DF65A81E86592696BEAE(L_6, _stringLiteral0A659EA5F9F943AFCC154F91D21BE278F35930EE, NULL);
 		__this->___logPath = L_7;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___logPath), (void*)L_7);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/Logger.cs:25>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/Logger.cs:25>
 		Logger_Log_mC79911971686B0C0DB37D4541B54CEDCB2AB7349(__this, _stringLiteralB61F66F5C2B5B307D8FCACC549215F53BDF26883, NULL);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/Logger.cs:26>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/Logger.cs:26>
 		return;
 	}
 }
@@ -14475,7 +14611,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Logger_Log_mC79911971686B0C0DB37D4541B54
 	Exception_t* V_1 = NULL;
 	il2cpp::utils::ExceptionSupportStack<RuntimeObject*, 1> __active_exceptions;
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/Logger.cs:30>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/Logger.cs:30>
 		il2cpp_codegen_runtime_class_init_inline(DateTime_t66193957C73913903DDAD89FEDC46139BCA5802D_il2cpp_TypeInfo_var);
 		DateTime_t66193957C73913903DDAD89FEDC46139BCA5802D L_0;
 		L_0 = DateTime_get_Now_m636CB9651A9099D20BA1CF813A0C69637317325C(NULL);
@@ -14485,14 +14621,14 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Logger_Log_mC79911971686B0C0DB37D4541B54
 		String_t* L_4;
 		L_4 = String_Format_mFB7DA489BD99F4670881FF50EC017BFB0A5C0987(_stringLiteral798667BF22E58FD7B3DDCE3C53AD15DA8611B4DB, L_2, L_3, NULL);
 		V_0 = L_4;
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/Logger.cs:32>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/Logger.cs:32>
 		String_t* L_5 = V_0;
 		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 		Debug_Log_m87A9A3C761FF5C43ED8A53B16190A53D08F818BB(L_5, NULL);
 	}
 	try
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/Logger.cs:36>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/Logger.cs:36>
 		String_t* L_6 = __this->___logPath;
 		String_t* L_7 = V_0;
 		String_t* L_8;
@@ -14500,7 +14636,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Logger_Log_mC79911971686B0C0DB37D4541B54
 		String_t* L_9;
 		L_9 = String_Concat_m9E3155FB84015C823606188F53B47CB44C444991(L_7, L_8, NULL);
 		File_AppendAllText_m08069DB321F56261289DCE3509565270F23DAEC6(L_6, L_9, NULL);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/Logger.cs:37>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/Logger.cs:37>
 		goto IL_004c;
 	}
 	catch(Il2CppExceptionWrapper& e)
@@ -14516,9 +14652,9 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Logger_Log_mC79911971686B0C0DB37D4541B54
 CATCH_0034:
 	{
 		Exception_t* L_10 = ((Exception_t*)IL2CPP_GET_ACTIVE_EXCEPTION(Exception_t*));;
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/Logger.cs:38>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/Logger.cs:38>
 		V_1 = L_10;
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/Logger.cs:40>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/Logger.cs:40>
 		Exception_t* L_11 = V_1;
 		NullCheck(L_11);
 		String_t* L_12;
@@ -14527,14 +14663,14 @@ CATCH_0034:
 		L_13 = String_Concat_m9E3155FB84015C823606188F53B47CB44C444991(((String_t*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&_stringLiteral12AF44F92067024F33698988E6AAE051413D38DA)), L_12, NULL);
 		il2cpp_codegen_runtime_class_init_inline(((RuntimeClass*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var)));
 		Debug_LogError_mB00B2B4468EF3CAF041B038D840820FB84C924B2(L_13, NULL);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/Logger.cs:41>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/Logger.cs:41>
 		IL2CPP_POP_ACTIVE_EXCEPTION(Exception_t*);
 		goto IL_004c;
 	}
 
 IL_004c:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/Logger.cs:42>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/Logger.cs:42>
 		return;
 	}
 }
@@ -14542,7 +14678,7 @@ IL_004c:
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Logger_Clear_mCE31F6CCFAF99A1F462870BEF9BBDC7A48703F71 (Logger_t19EB2991B2797127D411A958B24298AE41917827* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/Logger.cs:46>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/Logger.cs:46>
 		String_t* L_0 = __this->___logPath;
 		bool L_1;
 		L_1 = File_Exists_m95E329ABBE3EAD6750FE1989BBA6884457136D4A(L_0, NULL);
@@ -14552,14 +14688,14 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Logger_Clear_mCE31F6CCFAF99A1F462870BEF9
 		}
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/Logger.cs:47>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/Logger.cs:47>
 		String_t* L_2 = __this->___logPath;
 		File_Delete_mE29829DA504F3E1B8BCB78F21E2862C9ED7EC386(L_2, NULL);
 	}
 
 IL_0018:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/Logger.cs:48>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/Logger.cs:48>
 		return;
 	}
 }
@@ -14599,7 +14735,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MirrorReflection_LateUpdate_mD2DA1C99BBB
 	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 V_4;
 	memset((&V_4), 0, sizeof(V_4));
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/MirrorReflection.cs:16>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/MirrorReflection.cs:16>
 		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_0 = __this->___playerCamera;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_1;
@@ -14632,25 +14768,25 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MirrorReflection_LateUpdate_mD2DA1C99BBB
 
 IL_002a:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/MirrorReflection.cs:17>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/MirrorReflection.cs:17>
 		return;
 	}
 
 IL_002b:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/MirrorReflection.cs:19>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/MirrorReflection.cs:19>
 		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_6 = __this->___mirrorSurface;
 		NullCheck(L_6);
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_7;
 		L_7 = Transform_get_position_m69CD5FA214FDAE7BB701552943674846C220FDE1(L_6, NULL);
 		V_0 = L_7;
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/MirrorReflection.cs:20>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/MirrorReflection.cs:20>
 		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_8 = __this->___mirrorSurface;
 		NullCheck(L_8);
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_9;
 		L_9 = Transform_get_forward_mFCFACF7165FDAB21E80E384C494DF278386CEE2F(L_8, NULL);
 		V_1 = L_9;
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/MirrorReflection.cs:23>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/MirrorReflection.cs:23>
 		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_10 = __this->___playerCamera;
 		NullCheck(L_10);
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_11;
@@ -14658,7 +14794,7 @@ IL_002b:
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_12 = V_0;
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_13;
 		L_13 = Vector3_op_Subtraction_mE42023FF80067CB44A1D4A27EB7CF2B24CABB828_inline(L_11, L_12, NULL);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/MirrorReflection.cs:26>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/MirrorReflection.cs:26>
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_14 = V_1;
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_15;
 		L_15 = Vector3_Reflect_mE584AF88A0C648C9559633260F24DB697AB176CF_inline(L_13, L_14, NULL);
@@ -14666,7 +14802,7 @@ IL_002b:
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_17;
 		L_17 = Vector3_op_Addition_m78C0EC70CB66E8DCAC225743D82B268DAEE92067_inline(L_15, L_16, NULL);
 		V_2 = L_17;
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/MirrorReflection.cs:28>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/MirrorReflection.cs:28>
 		bool L_18 = __this->___updatePosition;
 		if (!L_18)
 		{
@@ -14674,7 +14810,7 @@ IL_002b:
 		}
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/MirrorReflection.cs:29>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/MirrorReflection.cs:29>
 		Camera_tA92CC927D7439999BC82DBEDC0AA45B470F9E184* L_19 = __this->___mirrorCamera;
 		NullCheck(L_19);
 		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_20;
@@ -14686,7 +14822,7 @@ IL_002b:
 
 IL_007a:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/MirrorReflection.cs:31>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/MirrorReflection.cs:31>
 		bool L_22 = __this->___updateRotation;
 		if (!L_22)
 		{
@@ -14694,7 +14830,7 @@ IL_007a:
 		}
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/MirrorReflection.cs:33>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/MirrorReflection.cs:33>
 		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_23 = __this->___playerCamera;
 		NullCheck(L_23);
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_24;
@@ -14703,7 +14839,7 @@ IL_007a:
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_26;
 		L_26 = Vector3_Reflect_mE584AF88A0C648C9559633260F24DB697AB176CF_inline(L_24, L_25, NULL);
 		V_3 = L_26;
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/MirrorReflection.cs:34>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/MirrorReflection.cs:34>
 		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_27 = __this->___playerCamera;
 		NullCheck(L_27);
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_28;
@@ -14712,7 +14848,7 @@ IL_007a:
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_30;
 		L_30 = Vector3_Reflect_mE584AF88A0C648C9559633260F24DB697AB176CF_inline(L_28, L_29, NULL);
 		V_4 = L_30;
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/MirrorReflection.cs:36>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/MirrorReflection.cs:36>
 		Camera_tA92CC927D7439999BC82DBEDC0AA45B470F9E184* L_31 = __this->___mirrorCamera;
 		NullCheck(L_31);
 		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_32;
@@ -14727,7 +14863,7 @@ IL_007a:
 
 IL_00bf:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/MirrorReflection.cs:38>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/MirrorReflection.cs:38>
 		return;
 	}
 }
@@ -14735,9 +14871,9 @@ IL_00bf:
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void MirrorReflection__ctor_m1DA5E52BC58632A9C7A55073974BD4538F9351C1 (MirrorReflection_t84DC9158A1EE3326F8B07D35F6E12A875A6146AD* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/MirrorReflection.cs:11>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/MirrorReflection.cs:11>
 		__this->___updateRotation = (bool)1;
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/MirrorReflection.cs:12>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/MirrorReflection.cs:12>
 		__this->___updatePosition = (bool)1;
 		MonoBehaviour__ctor_m592DB0105CA0BC97AA1C5F4AD27B12D68A3B7C1E(__this, NULL);
 		return;
@@ -14761,7 +14897,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* NetworkedObject_get_LocalId_mC40AC8
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/NetworkedObject.cs:28>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/NetworkedObject.cs:28>
 		RoomClient_t124F52F8602AB535AC105F1E470809979EDA2A4F* L_0 = __this->___roomClient;
 		NullCheck(L_0);
 		RuntimeObject* L_1;
@@ -14795,7 +14931,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NetworkedObject_Start_mCE238C7C140DF250B
 	NetworkId_tD5FA0360D2F8AE544493A7D1A6C7C90B28735CE7 V_0;
 	memset((&V_0), 0, sizeof(V_0));
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/NetworkedObject.cs:33>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/NetworkedObject.cs:33>
 		NetworkContext_t49239659157E00ACFF3A196AF00218DED40F9310 L_0;
 		L_0 = NetworkScene_Register_m0F251779B3FEA29EAE6A5DBCDDCC0E50596A6545(__this, NULL);
 		__this->___context = L_0;
@@ -14803,13 +14939,13 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NetworkedObject_Start_mCE238C7C140DF250B
 		#if IL2CPP_ENABLE_STRICT_WRITE_BARRIERS
 		Il2CppCodeGenWriteBarrier((void**)&(((&__this->___context))->___Component), (void*)NULL);
 		#endif
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/NetworkedObject.cs:34>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/NetworkedObject.cs:34>
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		RoomClient_t124F52F8602AB535AC105F1E470809979EDA2A4F* L_1;
 		L_1 = Object_FindAnyObjectByType_TisRoomClient_t124F52F8602AB535AC105F1E470809979EDA2A4F_m8D23DA0D2CD0BFC28CDF6FEF19C6D592B74D5DE4(Object_FindAnyObjectByType_TisRoomClient_t124F52F8602AB535AC105F1E470809979EDA2A4F_m8D23DA0D2CD0BFC28CDF6FEF19C6D592B74D5DE4_RuntimeMethod_var);
 		__this->___roomClient = L_1;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___roomClient), (void*)L_1);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/NetworkedObject.cs:35>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/NetworkedObject.cs:35>
 		NetworkId_tD5FA0360D2F8AE544493A7D1A6C7C90B28735CE7 L_2;
 		L_2 = NetworkId_Create_mCCF322BE02BC428984ED26020286B09707F5CD5E(__this, NULL);
 		V_0 = L_2;
@@ -14817,12 +14953,12 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NetworkedObject_Start_mCE238C7C140DF250B
 		L_3 = NetworkId_ToString_m84BE8372502BBDBC5F1BE05FF48CAB237702E013((&V_0), NULL);
 		__this->___id = L_3;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___id), (void*)L_3);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/NetworkedObject.cs:37>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/NetworkedObject.cs:37>
 		XRGrabInteractable_tAE7E2F24377399C9B5159179E4B43EA6AA55531B* L_4;
 		L_4 = Component_GetComponent_TisXRGrabInteractable_tAE7E2F24377399C9B5159179E4B43EA6AA55531B_m49377F1D0DBAB9BDC59DFC6851E9A5D687717C14(__this, Component_GetComponent_TisXRGrabInteractable_tAE7E2F24377399C9B5159179E4B43EA6AA55531B_m49377F1D0DBAB9BDC59DFC6851E9A5D687717C14_RuntimeMethod_var);
 		__this->___grab = L_4;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___grab), (void*)L_4);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/NetworkedObject.cs:38>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/NetworkedObject.cs:38>
 		XRGrabInteractable_tAE7E2F24377399C9B5159179E4B43EA6AA55531B* L_5 = __this->___grab;
 		bool L_6;
 		L_6 = Object_op_Inequality_mD0BE578448EAA61948F25C32F8DD55AB1F778602(L_5, (Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C*)NULL, NULL);
@@ -14832,7 +14968,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NetworkedObject_Start_mCE238C7C140DF250B
 		}
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/NetworkedObject.cs:40>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/NetworkedObject.cs:40>
 		XRGrabInteractable_tAE7E2F24377399C9B5159179E4B43EA6AA55531B* L_7 = __this->___grab;
 		NullCheck(L_7);
 		SelectEnterEvent_tBA2614C8C25D8794D5804C4F66195D74E64FC5D0* L_8;
@@ -14841,7 +14977,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NetworkedObject_Start_mCE238C7C140DF250B
 		UnityAction_1__ctor_mEE39E1A87376378311B4931978E8E07E589E9A24(L_9, __this, (intptr_t)((void*)NetworkedObject_OnGrab_m2FC7FD81FA3ABDF3BB993F925E5EAAF2DF7B3B2A_RuntimeMethod_var), NULL);
 		NullCheck(L_8);
 		UnityEvent_1_AddListener_mAE71681FB0832FD7DBA813E5ADDBA574EA32EED2(L_8, L_9, UnityEvent_1_AddListener_mAE71681FB0832FD7DBA813E5ADDBA574EA32EED2_RuntimeMethod_var);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/NetworkedObject.cs:41>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/NetworkedObject.cs:41>
 		XRGrabInteractable_tAE7E2F24377399C9B5159179E4B43EA6AA55531B* L_10 = __this->___grab;
 		NullCheck(L_10);
 		SelectExitEvent_t15DC0A39F9657BA9E6BAE6250D8D64C9671201F6* L_11;
@@ -14854,7 +14990,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NetworkedObject_Start_mCE238C7C140DF250B
 
 IL_0083:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/NetworkedObject.cs:43>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/NetworkedObject.cs:43>
 		RoomClient_t124F52F8602AB535AC105F1E470809979EDA2A4F* L_13 = __this->___roomClient;
 		NullCheck(L_13);
 		RoomEvent_tE6D32AD7A63F6CD673561FD622109927395ED2B1* L_14 = L_13->___OnRoomUpdated;
@@ -14862,7 +14998,7 @@ IL_0083:
 		UnityAction_1__ctor_m23CE9207FAC5524B00C270BC302D2B90D937E265(L_15, __this, (intptr_t)((void*)NetworkedObject_OnRoomUpdated_mAAE5487BD03BC6FFF1CA01C649775FA301F17ECE_RuntimeMethod_var), NULL);
 		NullCheck(L_14);
 		UnityEvent_1_AddListener_m58BD029288EB53E8C5D3BD2A0FF7EC39284A7421(L_14, L_15, UnityEvent_1_AddListener_m58BD029288EB53E8C5D3BD2A0FF7EC39284A7421_RuntimeMethod_var);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/NetworkedObject.cs:44>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/NetworkedObject.cs:44>
 		return;
 	}
 }
@@ -14870,7 +15006,7 @@ IL_0083:
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool NetworkedObject_IsOwner_m3689E17404EE4FE15B087DA504A41C3AB0014D02 (NetworkedObject_tE3E9824D3F2F3E9806E8197BBE87C61FF99361F8* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/NetworkedObject.cs:48>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/NetworkedObject.cs:48>
 		String_t* L_0 = __this->___currentOwner;
 		String_t* L_1;
 		L_1 = NetworkedObject_get_LocalId_mC40AC8F4EC6CADBB81B14DD44DD792D0BEE06F37(__this, NULL);
@@ -14890,7 +15026,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NetworkedObject_OnGrab_m2FC7FD81FA3ABDF3
 	}
 	RuntimeObject* V_0 = NULL;
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/NetworkedObject.cs:53>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/NetworkedObject.cs:53>
 		String_t* L_0 = __this->___currentOwner;
 		bool L_1;
 		L_1 = String_IsNullOrEmpty_mEA9E3FB005AC28FE02E69FCF95A7B8456192B478(L_0, NULL);
@@ -14911,13 +15047,13 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NetworkedObject_OnGrab_m2FC7FD81FA3ABDF3
 		}
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/NetworkedObject.cs:55>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/NetworkedObject.cs:55>
 		SelectEnterEventArgs_t9220B1E6A9BB5A847C0476949ACE0182430BB938* L_5 = ___0_args;
 		NullCheck(L_5);
 		RuntimeObject* L_6;
 		L_6 = SelectEnterEventArgs_get_interactorObject_mDBBDCE0D498FC768E0EC28C2E862C8FE5B32DE59(L_5, NULL);
 		V_0 = L_6;
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/NetworkedObject.cs:56>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/NetworkedObject.cs:56>
 		XRGrabInteractable_tAE7E2F24377399C9B5159179E4B43EA6AA55531B* L_7 = __this->___grab;
 		NullCheck(L_7);
 		XRInteractionManager_t93C7F7F0CFEAD83E1A70F92D05B0E663483746CD* L_8;
@@ -14926,13 +15062,13 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NetworkedObject_OnGrab_m2FC7FD81FA3ABDF3
 		XRGrabInteractable_tAE7E2F24377399C9B5159179E4B43EA6AA55531B* L_10 = __this->___grab;
 		NullCheck(L_8);
 		VirtualActionInvoker2< RuntimeObject*, RuntimeObject* >::Invoke(42, L_8, L_9, L_10);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/NetworkedObject.cs:57>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/NetworkedObject.cs:57>
 		return;
 	}
 
 IL_003f:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/NetworkedObject.cs:59>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/NetworkedObject.cs:59>
 		RoomClient_t124F52F8602AB535AC105F1E470809979EDA2A4F* L_11 = __this->___roomClient;
 		NullCheck(L_11);
 		RuntimeObject* L_12;
@@ -14942,7 +15078,7 @@ IL_003f:
 		L_14 = NetworkedObject_get_LocalId_mC40AC8F4EC6CADBB81B14DD44DD792D0BEE06F37(__this, NULL);
 		NullCheck(L_12);
 		InterfaceActionInvoker2< String_t*, String_t* >::Invoke(5, IRoom_tE9F34CE2E028BF3AF61025BC3BBB92B06DC44EE8_il2cpp_TypeInfo_var, L_12, L_13, L_14);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/NetworkedObject.cs:60>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/NetworkedObject.cs:60>
 		return;
 	}
 }
@@ -14957,7 +15093,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NetworkedObject_OnRelease_mCD9AF508AE7A9
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/NetworkedObject.cs:64>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/NetworkedObject.cs:64>
 		String_t* L_0 = __this->___currentOwner;
 		String_t* L_1;
 		L_1 = NetworkedObject_get_LocalId_mC40AC8F4EC6CADBB81B14DD44DD792D0BEE06F37(__this, NULL);
@@ -14969,7 +15105,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NetworkedObject_OnRelease_mCD9AF508AE7A9
 		}
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/NetworkedObject.cs:64>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/NetworkedObject.cs:64>
 		RoomClient_t124F52F8602AB535AC105F1E470809979EDA2A4F* L_3 = __this->___roomClient;
 		NullCheck(L_3);
 		RuntimeObject* L_4;
@@ -14981,7 +15117,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NetworkedObject_OnRelease_mCD9AF508AE7A9
 
 IL_002e:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/NetworkedObject.cs:65>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/NetworkedObject.cs:65>
 		return;
 	}
 }
@@ -14995,7 +15131,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NetworkedObject_OnRoomUpdated_mAAE5487BD
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/NetworkedObject.cs:69>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/NetworkedObject.cs:69>
 		RoomClient_t124F52F8602AB535AC105F1E470809979EDA2A4F* L_0 = __this->___roomClient;
 		NullCheck(L_0);
 		RuntimeObject* L_1;
@@ -15006,7 +15142,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NetworkedObject_OnRoomUpdated_mAAE5487BD
 		L_3 = InterfaceFuncInvoker1< String_t*, String_t* >::Invoke(4, IRoom_tE9F34CE2E028BF3AF61025BC3BBB92B06DC44EE8_il2cpp_TypeInfo_var, L_1, L_2);
 		__this->___currentOwner = L_3;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___currentOwner), (void*)L_3);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/NetworkedObject.cs:70>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/NetworkedObject.cs:70>
 		return;
 	}
 }
@@ -15020,7 +15156,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NetworkedObject_Update_mC2DBFDE569B78FCF
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/NetworkedObject.cs:74>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/NetworkedObject.cs:74>
 		bool L_0;
 		L_0 = NetworkedObject_IsOwner_m3689E17404EE4FE15B087DA504A41C3AB0014D02(__this, NULL);
 		if (!L_0)
@@ -15043,14 +15179,14 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NetworkedObject_Update_mC2DBFDE569B78FCF
 		}
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/NetworkedObject.cs:76>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/NetworkedObject.cs:76>
 		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_5;
 		L_5 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(__this, NULL);
 		NullCheck(L_5);
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_6;
 		L_6 = Transform_get_position_m69CD5FA214FDAE7BB701552943674846C220FDE1(L_5, NULL);
 		__this->___lastPosition = L_6;
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/NetworkedObject.cs:77>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/NetworkedObject.cs:77>
 		NetworkContext_t49239659157E00ACFF3A196AF00218DED40F9310* L_7 = (NetworkContext_t49239659157E00ACFF3A196AF00218DED40F9310*)(&__this->___context);
 		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_8;
 		L_8 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(__this, NULL);
@@ -15067,7 +15203,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NetworkedObject_Update_mC2DBFDE569B78FCF
 
 IL_0052:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/NetworkedObject.cs:79>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/NetworkedObject.cs:79>
 		return;
 	}
 }
@@ -15083,39 +15219,39 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NetworkedObject_ProcessMessage_mF1E9655D
 	Message_tBA02E726914D1200C7DE54B50BF35747FBF97050 V_0;
 	memset((&V_0), 0, sizeof(V_0));
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/NetworkedObject.cs:83>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/NetworkedObject.cs:83>
 		Message_tBA02E726914D1200C7DE54B50BF35747FBF97050 L_0;
 		L_0 = ReferenceCountedSceneGraphMessage_FromJson_TisMessage_tBA02E726914D1200C7DE54B50BF35747FBF97050_m335796FB660775F02338041A3E6262624B3A300B((&___0_message), ReferenceCountedSceneGraphMessage_FromJson_TisMessage_tBA02E726914D1200C7DE54B50BF35747FBF97050_m335796FB660775F02338041A3E6262624B3A300B_RuntimeMethod_var);
 		V_0 = L_0;
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/NetworkedObject.cs:84>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/NetworkedObject.cs:84>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_1;
 		L_1 = Component_get_gameObject_m57AEFBB14DB39EC476F740BA000E170355DE691B(__this, NULL);
 		Message_tBA02E726914D1200C7DE54B50BF35747FBF97050 L_2 = V_0;
 		bool L_3 = L_2.___isActive;
 		NullCheck(L_1);
 		GameObject_SetActive_m638E92E1E75E519E5B24CF150B08CA8E0CDFAB92(L_1, L_3, NULL);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/NetworkedObject.cs:86>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/NetworkedObject.cs:86>
 		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_4;
 		L_4 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(__this, NULL);
 		Message_tBA02E726914D1200C7DE54B50BF35747FBF97050 L_5 = V_0;
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_6 = L_5.___position;
 		NullCheck(L_4);
 		Transform_set_position_mA1A817124BB41B685043DED2A9BA48CDF37C4156(L_4, L_6, NULL);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/NetworkedObject.cs:87>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/NetworkedObject.cs:87>
 		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_7;
 		L_7 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(__this, NULL);
 		NullCheck(L_7);
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_8;
 		L_8 = Transform_get_position_m69CD5FA214FDAE7BB701552943674846C220FDE1(L_7, NULL);
 		__this->___lastPosition = L_8;
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/NetworkedObject.cs:88>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/NetworkedObject.cs:88>
 		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_9;
 		L_9 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(__this, NULL);
 		Message_tBA02E726914D1200C7DE54B50BF35747FBF97050 L_10 = V_0;
 		Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 L_11 = L_10.___rotation;
 		NullCheck(L_9);
 		Transform_set_rotation_m61340DE74726CF0F9946743A727C4D444397331D(L_9, L_11, NULL);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/NetworkedObject.cs:89>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/NetworkedObject.cs:89>
 		return;
 	}
 }
@@ -15129,7 +15265,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NetworkedObject_BroadcastActiveSelf_mC0C
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/NetworkedObject.cs:93>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/NetworkedObject.cs:93>
 		NetworkContext_t49239659157E00ACFF3A196AF00218DED40F9310* L_0 = (NetworkContext_t49239659157E00ACFF3A196AF00218DED40F9310*)(&__this->___context);
 		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_1;
 		L_1 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(__this, NULL);
@@ -15138,7 +15274,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void NetworkedObject_BroadcastActiveSelf_mC0C
 		memset((&L_3), 0, sizeof(L_3));
 		Message__ctor_m9433B40C1B38C35240247F9C79BF9814EC50E398((&L_3), L_1, L_2, NULL);
 		NetworkContext_SendJson_TisMessage_tBA02E726914D1200C7DE54B50BF35747FBF97050_mD1A5099739CD7E02178F5B3C7AFBC79A73DB228D(L_0, L_3, NetworkContext_SendJson_TisMessage_tBA02E726914D1200C7DE54B50BF35747FBF97050_mD1A5099739CD7E02178F5B3C7AFBC79A73DB228D_RuntimeMethod_var);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/NetworkedObject.cs:94>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/NetworkedObject.cs:94>
 		return;
 	}
 }
@@ -15208,22 +15344,22 @@ IL2CPP_EXTERN_C void Message_tBA02E726914D1200C7DE54B50BF35747FBF97050_marshal_c
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Message__ctor_m9433B40C1B38C35240247F9C79BF9814EC50E398 (Message_tBA02E726914D1200C7DE54B50BF35747FBF97050* __this, Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* ___0_transform, bool ___1_isActive, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/NetworkedObject.cs:22>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/NetworkedObject.cs:22>
 		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_0 = ___0_transform;
 		NullCheck(L_0);
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_1;
 		L_1 = Transform_get_position_m69CD5FA214FDAE7BB701552943674846C220FDE1(L_0, NULL);
 		__this->___position = L_1;
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/NetworkedObject.cs:23>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/NetworkedObject.cs:23>
 		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_2 = ___0_transform;
 		NullCheck(L_2);
 		Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 L_3;
 		L_3 = Transform_get_rotation_m32AF40CA0D50C797DA639A696F8EAEC7524C179C(L_2, NULL);
 		__this->___rotation = L_3;
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/NetworkedObject.cs:24>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/NetworkedObject.cs:24>
 		bool L_4 = ___1_isActive;
 		__this->___isActive = L_4;
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/NetworkedObject.cs:25>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/NetworkedObject.cs:25>
 		return;
 	}
 }
@@ -15252,12 +15388,12 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void OccupationRestriction_Awake_mB0DE39DBC72
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/OccupationRestriction.cs:14>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/OccupationRestriction.cs:14>
 		XRGrabInteractable_tAE7E2F24377399C9B5159179E4B43EA6AA55531B* L_0;
 		L_0 = Component_GetComponent_TisXRGrabInteractable_tAE7E2F24377399C9B5159179E4B43EA6AA55531B_m49377F1D0DBAB9BDC59DFC6851E9A5D687717C14(__this, Component_GetComponent_TisXRGrabInteractable_tAE7E2F24377399C9B5159179E4B43EA6AA55531B_m49377F1D0DBAB9BDC59DFC6851E9A5D687717C14_RuntimeMethod_var);
 		__this->___grab = L_0;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___grab), (void*)L_0);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/OccupationRestriction.cs:15>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/OccupationRestriction.cs:15>
 		return;
 	}
 }
@@ -15273,7 +15409,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void OccupationRestriction_OnEnable_m6581D5C2
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/OccupationRestriction.cs:19>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/OccupationRestriction.cs:19>
 		XRGrabInteractable_tAE7E2F24377399C9B5159179E4B43EA6AA55531B* L_0 = __this->___grab;
 		NullCheck(L_0);
 		SelectEnterEvent_tBA2614C8C25D8794D5804C4F66195D74E64FC5D0* L_1;
@@ -15282,7 +15418,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void OccupationRestriction_OnEnable_m6581D5C2
 		UnityAction_1__ctor_mEE39E1A87376378311B4931978E8E07E589E9A24(L_2, __this, (intptr_t)((void*)OccupationRestriction_OnGrabAttempt_m447BD08F559FA6F3519F250E1B947F31CF379840_RuntimeMethod_var), NULL);
 		NullCheck(L_1);
 		UnityEvent_1_AddListener_mAE71681FB0832FD7DBA813E5ADDBA574EA32EED2(L_1, L_2, UnityEvent_1_AddListener_mAE71681FB0832FD7DBA813E5ADDBA574EA32EED2_RuntimeMethod_var);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/OccupationRestriction.cs:20>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/OccupationRestriction.cs:20>
 		return;
 	}
 }
@@ -15298,7 +15434,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void OccupationRestriction_OnDisable_m05D78DF
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/OccupationRestriction.cs:24>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/OccupationRestriction.cs:24>
 		XRGrabInteractable_tAE7E2F24377399C9B5159179E4B43EA6AA55531B* L_0 = __this->___grab;
 		NullCheck(L_0);
 		SelectEnterEvent_tBA2614C8C25D8794D5804C4F66195D74E64FC5D0* L_1;
@@ -15307,7 +15443,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void OccupationRestriction_OnDisable_m05D78DF
 		UnityAction_1__ctor_mEE39E1A87376378311B4931978E8E07E589E9A24(L_2, __this, (intptr_t)((void*)OccupationRestriction_OnGrabAttempt_m447BD08F559FA6F3519F250E1B947F31CF379840_RuntimeMethod_var), NULL);
 		NullCheck(L_1);
 		UnityEvent_1_RemoveListener_m1008B118B379B498B23E13BB88779719C22EB9EB(L_1, L_2, UnityEvent_1_RemoveListener_m1008B118B379B498B23E13BB88779719C22EB9EB_RuntimeMethod_var);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/OccupationRestriction.cs:25>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/OccupationRestriction.cs:25>
 		return;
 	}
 }
@@ -15327,7 +15463,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void OccupationRestriction_OnGrabAttempt_m447
 	}
 	PlayerOccupation_t3B297CB24645A8F0E7ACEC3CC40DE325ACD545ED* V_0 = NULL;
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/OccupationRestriction.cs:29>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/OccupationRestriction.cs:29>
 		SelectEnterEventArgs_t9220B1E6A9BB5A847C0476949ACE0182430BB938* L_0 = ___0_args;
 		NullCheck(L_0);
 		RuntimeObject* L_1;
@@ -15335,12 +15471,12 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void OccupationRestriction_OnGrabAttempt_m447
 		NullCheck(L_1);
 		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_2;
 		L_2 = InterfaceFuncInvoker0< Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* >::Invoke(6, IXRInteractor_tD834ADD95D200FFEC6473A23E515DCD02B33CF97_il2cpp_TypeInfo_var, L_1);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/OccupationRestriction.cs:30>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/OccupationRestriction.cs:30>
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		PlayerOccupation_t3B297CB24645A8F0E7ACEC3CC40DE325ACD545ED* L_3;
 		L_3 = Object_FindAnyObjectByType_TisPlayerOccupation_t3B297CB24645A8F0E7ACEC3CC40DE325ACD545ED_m2E9E994B1D12D6BCE46F4BF2D67715896EE60D4D(Object_FindAnyObjectByType_TisPlayerOccupation_t3B297CB24645A8F0E7ACEC3CC40DE325ACD545ED_m2E9E994B1D12D6BCE46F4BF2D67715896EE60D4D_RuntimeMethod_var);
 		V_0 = L_3;
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/OccupationRestriction.cs:32>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/OccupationRestriction.cs:32>
 		PlayerOccupation_t3B297CB24645A8F0E7ACEC3CC40DE325ACD545ED* L_4 = V_0;
 		bool L_5;
 		L_5 = Object_op_Equality_mB6120F782D83091EF56A198FCEBCF066DB4A9605(L_4, (Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C*)NULL, NULL);
@@ -15350,16 +15486,16 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void OccupationRestriction_OnGrabAttempt_m447
 		}
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/OccupationRestriction.cs:34>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/OccupationRestriction.cs:34>
 		SelectEnterEventArgs_t9220B1E6A9BB5A847C0476949ACE0182430BB938* L_6 = ___0_args;
 		OccupationRestriction_ForceRelease_mCE853B901168362168DC0FD9D94250F12EE50F29(__this, L_6, NULL);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/OccupationRestriction.cs:35>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/OccupationRestriction.cs:35>
 		return;
 	}
 
 IL_0023:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/OccupationRestriction.cs:38>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/OccupationRestriction.cs:38>
 		PlayerOccupation_t3B297CB24645A8F0E7ACEC3CC40DE325ACD545ED* L_7 = V_0;
 		NullCheck(L_7);
 		int32_t L_8;
@@ -15371,7 +15507,7 @@ IL_0023:
 		}
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/OccupationRestriction.cs:40>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/OccupationRestriction.cs:40>
 		int32_t L_10 = __this->___allowedOccupation;
 		int32_t L_11 = L_10;
 		RuntimeObject* L_12 = Box(Occupation_t24669EFDE7C03AA00F272EFC9090515216363F36_il2cpp_TypeInfo_var, &L_11);
@@ -15385,14 +15521,14 @@ IL_0023:
 		L_17 = String_Format_mFB7DA489BD99F4670881FF50EC017BFB0A5C0987(_stringLiteral00441F34A7781E9BAA3AB4238D86C6E646846DCC, L_12, L_16, NULL);
 		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 		Debug_Log_m87A9A3C761FF5C43ED8A53B16190A53D08F818BB(L_17, NULL);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/OccupationRestriction.cs:41>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/OccupationRestriction.cs:41>
 		SelectEnterEventArgs_t9220B1E6A9BB5A847C0476949ACE0182430BB938* L_18 = ___0_args;
 		OccupationRestriction_ForceRelease_mCE853B901168362168DC0FD9D94250F12EE50F29(__this, L_18, NULL);
 	}
 
 IL_005d:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/OccupationRestriction.cs:43>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/OccupationRestriction.cs:43>
 		return;
 	}
 }
@@ -15406,7 +15542,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void OccupationRestriction_ForceRelease_mCE85
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/OccupationRestriction.cs:47>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/OccupationRestriction.cs:47>
 		XRGrabInteractable_tAE7E2F24377399C9B5159179E4B43EA6AA55531B* L_0 = __this->___grab;
 		NullCheck(L_0);
 		XRInteractionManager_t93C7F7F0CFEAD83E1A70F92D05B0E663483746CD* L_1;
@@ -15420,7 +15556,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void OccupationRestriction_ForceRelease_mCE85
 		}
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/OccupationRestriction.cs:49>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/OccupationRestriction.cs:49>
 		XRGrabInteractable_tAE7E2F24377399C9B5159179E4B43EA6AA55531B* L_3 = __this->___grab;
 		NullCheck(L_3);
 		XRInteractionManager_t93C7F7F0CFEAD83E1A70F92D05B0E663483746CD* L_4;
@@ -15436,7 +15572,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void OccupationRestriction_ForceRelease_mCE85
 
 IL_002f:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/OccupationRestriction.cs:51>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/OccupationRestriction.cs:51>
 		return;
 	}
 }
@@ -15460,7 +15596,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void OccupationRestriction__ctor_m3E8FCFE7C51
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t PlayerOccupation_get_MyOccupation_m5BCE7DE8CF0933408EAC0D0CE6A5E0773B08B6BB (PlayerOccupation_t3B297CB24645A8F0E7ACEC3CC40DE325ACD545ED* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/PlayerOccupation.cs:12>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/PlayerOccupation.cs:12>
 		int32_t L_0 = __this->___U3CMyOccupationU3Ek__BackingField;
 		return L_0;
 	}
@@ -15469,7 +15605,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t PlayerOccupation_get_MyOccupation_m5B
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayerOccupation_set_MyOccupation_m30327100E8C43582C380BD5E9D5080477342B3F5 (PlayerOccupation_t3B297CB24645A8F0E7ACEC3CC40DE325ACD545ED* __this, int32_t ___0_value, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/PlayerOccupation.cs:12>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/PlayerOccupation.cs:12>
 		int32_t L_0 = ___0_value;
 		__this->___U3CMyOccupationU3Ek__BackingField = L_0;
 		return;
@@ -15479,7 +15615,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayerOccupation_set_MyOccupation_m30327
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t PlayerOccupation_get_MySeatIndex_m55DF361C12DFBA10962892DA0B56CFDBD89C0D35 (PlayerOccupation_t3B297CB24645A8F0E7ACEC3CC40DE325ACD545ED* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/PlayerOccupation.cs:13>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/PlayerOccupation.cs:13>
 		int32_t L_0 = __this->___U3CMySeatIndexU3Ek__BackingField;
 		return L_0;
 	}
@@ -15488,7 +15624,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t PlayerOccupation_get_MySeatIndex_m55D
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayerOccupation_set_MySeatIndex_m505775904853E4AAE2CC119A5F2CE308E05A9B67 (PlayerOccupation_t3B297CB24645A8F0E7ACEC3CC40DE325ACD545ED* __this, int32_t ___0_value, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/PlayerOccupation.cs:13>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/PlayerOccupation.cs:13>
 		int32_t L_0 = ___0_value;
 		__this->___U3CMySeatIndexU3Ek__BackingField = L_0;
 		return;
@@ -15498,7 +15634,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayerOccupation_set_MySeatIndex_m505775
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool PlayerOccupation_get_CanUseKnife_m3A2610A41DE02C4A1E4BFDD0D573E855C174CEF8 (PlayerOccupation_t3B297CB24645A8F0E7ACEC3CC40DE325ACD545ED* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/PlayerOccupation.cs:15>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/PlayerOccupation.cs:15>
 		int32_t L_0;
 		L_0 = PlayerOccupation_get_MyOccupation_m5BCE7DE8CF0933408EAC0D0CE6A5E0773B08B6BB_inline(__this, NULL);
 		return (bool)((((int32_t)L_0) == ((int32_t)1))? 1 : 0);
@@ -15508,7 +15644,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool PlayerOccupation_get_CanUseKnife_m3A2610
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool PlayerOccupation_get_CanUseHammer_m3E73A3DAB4E9FB3701812F2BC99E9CE14275C8F4 (PlayerOccupation_t3B297CB24645A8F0E7ACEC3CC40DE325ACD545ED* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/PlayerOccupation.cs:16>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/PlayerOccupation.cs:16>
 		int32_t L_0;
 		L_0 = PlayerOccupation_get_MyOccupation_m5BCE7DE8CF0933408EAC0D0CE6A5E0773B08B6BB_inline(__this, NULL);
 		return (bool)((((int32_t)L_0) == ((int32_t)2))? 1 : 0);
@@ -15522,10 +15658,10 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayerOccupation_SetFromSeatIndex_mC82E4
 	int32_t G_B3_0 = 0;
 	PlayerOccupation_t3B297CB24645A8F0E7ACEC3CC40DE325ACD545ED* G_B3_1 = NULL;
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/PlayerOccupation.cs:20>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/PlayerOccupation.cs:20>
 		int32_t L_0 = ___0_seatIndex;
 		PlayerOccupation_set_MySeatIndex_m505775904853E4AAE2CC119A5F2CE308E05A9B67_inline(__this, L_0, NULL);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/PlayerOccupation.cs:21>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/PlayerOccupation.cs:21>
 		int32_t L_1 = ___0_seatIndex;
 		if (!((int32_t)(L_1%2)))
 		{
@@ -15550,7 +15686,7 @@ IL_0011:
 	{
 		NullCheck(G_B3_1);
 		PlayerOccupation_set_MyOccupation_m30327100E8C43582C380BD5E9D5080477342B3F5_inline(G_B3_1, G_B3_0, NULL);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/PlayerOccupation.cs:22>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/PlayerOccupation.cs:22>
 		return;
 	}
 }
@@ -15558,7 +15694,7 @@ IL_0011:
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayerOccupation__ctor_mF5CA097B6266C94FD426BB6CEA9E2E6B6C31846E (PlayerOccupation_t3B297CB24645A8F0E7ACEC3CC40DE325ACD545ED* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/PlayerOccupation.cs:13>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/PlayerOccupation.cs:13>
 		__this->___U3CMySeatIndexU3Ek__BackingField = (-1);
 		MonoBehaviour__ctor_m592DB0105CA0BC97AA1C5F4AD27B12D68A3B7C1E(__this, NULL);
 		return;
@@ -15584,12 +15720,12 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayerOccupation__ctor_mF5CA097B6266C94F
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SceneObjectValidator_Awake_mAF29C60A027F62BF196C1247F3D753A325DD3463 (SceneObjectValidator_tBCB8A5AB6293DD4C8DFC7BBB492E65DC59CB2E32* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/SceneObjectValidator.cs:13>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/SceneObjectValidator.cs:13>
 		RuntimeObject* L_0;
 		L_0 = SceneObjectValidator_LoadSceneObjectDictionary_m0BA15ACA3C90DE7A8D52925A6CB810BA604B424E(__this, NULL);
 		Coroutine_t85EA685566A254C23F3FD77AB5BDFFFF8799596B* L_1;
 		L_1 = MonoBehaviour_StartCoroutine_m4CAFF732AA28CD3BDC5363B44A863575530EC812(__this, L_0, NULL);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/SceneObjectValidator.cs:14>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/SceneObjectValidator.cs:14>
 		return;
 	}
 }
@@ -15623,7 +15759,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool SceneObjectValidator_CheckWord_m049461E3
 	}
 	String_t* V_0 = NULL;
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/SceneObjectValidator.cs:46>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/SceneObjectValidator.cs:46>
 		String_t* L_0 = ___0_input;
 		bool L_1;
 		L_1 = String_IsNullOrEmpty_mEA9E3FB005AC28FE02E69FCF95A7B8456192B478(L_0, NULL);
@@ -15633,13 +15769,13 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool SceneObjectValidator_CheckWord_m049461E3
 		}
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/SceneObjectValidator.cs:46>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/SceneObjectValidator.cs:46>
 		return (bool)0;
 	}
 
 IL_000a:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/SceneObjectValidator.cs:47>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/SceneObjectValidator.cs:47>
 		String_t* L_2 = ___0_input;
 		NullCheck(L_2);
 		String_t* L_3;
@@ -15648,7 +15784,7 @@ IL_000a:
 		String_t* L_4;
 		L_4 = String_ToLower_m6191ABA3DC514ED47C10BDA23FD0DDCEAE7ACFBD(L_3, NULL);
 		V_0 = L_4;
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/SceneObjectValidator.cs:48>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/SceneObjectValidator.cs:48>
 		HashSet_1_tEFC6605F7DE53F71946C33FD371E53C3100F2178* L_5 = __this->____dictionary;
 		String_t* L_6 = V_0;
 		NullCheck(L_5);
@@ -15668,7 +15804,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SceneObjectValidator__ctor_m64A77571A2E0
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/SceneObjectValidator.cs:9>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/SceneObjectValidator.cs:9>
 		HashSet_1_tEFC6605F7DE53F71946C33FD371E53C3100F2178* L_0 = (HashSet_1_tEFC6605F7DE53F71946C33FD371E53C3100F2178*)il2cpp_codegen_object_new(HashSet_1_tEFC6605F7DE53F71946C33FD371E53C3100F2178_il2cpp_TypeInfo_var);
 		HashSet_1__ctor_m780CFB8A2D23543157D1A0E1FADF781E1AF81E03(L_0, HashSet_1__ctor_m780CFB8A2D23543157D1A0E1FADF781E1AF81E03_RuntimeMethod_var);
 		__this->____dictionary = L_0;
@@ -15749,7 +15885,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool U3CLoadSceneObjectDictionaryU3Ed__2_Move
 IL_0017:
 	{
 		__this->___U3CU3E1__state = (-1);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/SceneObjectValidator.cs:18>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/SceneObjectValidator.cs:18>
 		il2cpp_codegen_runtime_class_init_inline(Application_tDB03BE91CDF0ACA614A5E0B67CFB77C44EB19B21_il2cpp_TypeInfo_var);
 		String_t* L_4;
 		L_4 = Application_get_streamingAssetsPath_mB904BCD9A7A4F18A52C175DE4A81F5DC3010CDB5(NULL);
@@ -15757,13 +15893,13 @@ IL_0017:
 		String_t* L_5;
 		L_5 = Path_Combine_m1ADAC05CDA2D1D61B172DF65A81E86592696BEAE(L_4, _stringLiteral6EA3AE9AA0AD4F0FABDDE668F1B550DC0B240B59, NULL);
 		V_2 = L_5;
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/SceneObjectValidator.cs:20>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/SceneObjectValidator.cs:20>
 		String_t* L_6 = V_2;
 		UnityWebRequest_t6233B8E22992FC2364A831C1ACB033EF3260C39F* L_7;
 		L_7 = UnityWebRequest_Get_m1A332EE069BB5052368307F254A5A7627BB5FD86(L_6, NULL);
 		__this->___U3CwwwU3E5__2 = L_7;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___U3CwwwU3E5__2), (void*)L_7);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/SceneObjectValidator.cs:21>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/SceneObjectValidator.cs:21>
 		UnityWebRequest_t6233B8E22992FC2364A831C1ACB033EF3260C39F* L_8 = __this->___U3CwwwU3E5__2;
 		NullCheck(L_8);
 		UnityWebRequestAsyncOperation_t14BE94558FF3A2CFC2EFBE2511A3A88252042B8C* L_9;
@@ -15777,7 +15913,7 @@ IL_0017:
 IL_0054:
 	{
 		__this->___U3CU3E1__state = (-1);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/SceneObjectValidator.cs:23>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/SceneObjectValidator.cs:23>
 		UnityWebRequest_t6233B8E22992FC2364A831C1ACB033EF3260C39F* L_10 = __this->___U3CwwwU3E5__2;
 		NullCheck(L_10);
 		int32_t L_11;
@@ -15788,7 +15924,7 @@ IL_0054:
 		}
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/SceneObjectValidator.cs:25>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/SceneObjectValidator.cs:25>
 		UnityWebRequest_t6233B8E22992FC2364A831C1ACB033EF3260C39F* L_12 = __this->___U3CwwwU3E5__2;
 		NullCheck(L_12);
 		DownloadHandler_t1B56C7D3F65D97A1E4B566A14A1E783EA8AE4EBB* L_13;
@@ -15796,11 +15932,11 @@ IL_0054:
 		NullCheck(L_13);
 		String_t* L_14;
 		L_14 = DownloadHandler_get_text_mA6DE5CB2647A21E577B963708DC3D0DA4DBFE7D8(L_13, NULL);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/SceneObjectValidator.cs:26>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/SceneObjectValidator.cs:26>
 		NullCheck(L_14);
 		StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_15;
 		L_15 = String_Split_m9530B73D02054692283BF35C3A27C8F2230946F4(L_14, ((int32_t)10), 0, NULL);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/SceneObjectValidator.cs:28>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/SceneObjectValidator.cs:28>
 		V_3 = L_15;
 		V_4 = 0;
 		goto IL_00b4;
@@ -15808,14 +15944,14 @@ IL_0054:
 
 IL_0087:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/SceneObjectValidator.cs:28>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/SceneObjectValidator.cs:28>
 		StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_16 = V_3;
 		int32_t L_17 = V_4;
 		NullCheck(L_16);
 		int32_t L_18 = L_17;
 		String_t* L_19 = (L_16)->GetAt(static_cast<il2cpp_array_size_t>(L_18));
 		V_5 = L_19;
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/SceneObjectValidator.cs:30>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/SceneObjectValidator.cs:30>
 		String_t* L_20 = V_5;
 		bool L_21;
 		L_21 = String_IsNullOrWhiteSpace_m42E1F3B2C358068D645E46F01CF1834DC77A5A10(L_20, NULL);
@@ -15825,7 +15961,7 @@ IL_0087:
 		}
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/SceneObjectValidator.cs:32>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/SceneObjectValidator.cs:32>
 		SceneObjectValidator_tBCB8A5AB6293DD4C8DFC7BBB492E65DC59CB2E32* L_22 = V_1;
 		NullCheck(L_22);
 		HashSet_1_tEFC6605F7DE53F71946C33FD371E53C3100F2178* L_23 = L_22->____dictionary;
@@ -15849,7 +15985,7 @@ IL_00ae:
 
 IL_00b4:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/SceneObjectValidator.cs:28>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/SceneObjectValidator.cs:28>
 		int32_t L_29 = V_4;
 		StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_30 = V_3;
 		NullCheck(L_30);
@@ -15859,7 +15995,7 @@ IL_00b4:
 		}
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/SceneObjectValidator.cs:36>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/SceneObjectValidator.cs:36>
 		SceneObjectValidator_tBCB8A5AB6293DD4C8DFC7BBB492E65DC59CB2E32* L_31 = V_1;
 		NullCheck(L_31);
 		HashSet_1_tEFC6605F7DE53F71946C33FD371E53C3100F2178* L_32 = L_31->____dictionary;
@@ -15877,7 +16013,7 @@ IL_00b4:
 
 IL_00dc:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/SceneObjectValidator.cs:40>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/SceneObjectValidator.cs:40>
 		UnityWebRequest_t6233B8E22992FC2364A831C1ACB033EF3260C39F* L_37 = __this->___U3CwwwU3E5__2;
 		NullCheck(L_37);
 		String_t* L_38;
@@ -15890,7 +16026,7 @@ IL_00dc:
 
 IL_00f6:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/SceneObjectValidator.cs:42>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/SceneObjectValidator.cs:42>
 		return (bool)0;
 	}
 }
@@ -15931,12 +16067,12 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CLoadSceneObjectDictionaryU3
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ScoreboardUI_SetPlayer1Score_mE31D34A4FFBDFE987E7E444019892C564CAC1546 (ScoreboardUI_t8A34B218B36B1AD47AD130C284C3916C1316DBFD* __this, int32_t ___0_score, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/ScoreboardUI.cs:21>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/ScoreboardUI.cs:21>
 		RectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5* L_0 = __this->___team1FillBar;
 		TextMeshProUGUI_t101091AF4B578BB534C92E9D1EEAF0611636D957* L_1 = __this->___team1ScoreText;
 		int32_t L_2 = ___0_score;
 		ScoreboardUI_UpdateBar_mE7249AF73788B91D45F643A53A983DE035218C7D(__this, L_0, L_1, L_2, NULL);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/ScoreboardUI.cs:22>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/ScoreboardUI.cs:22>
 		return;
 	}
 }
@@ -15944,12 +16080,12 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ScoreboardUI_SetPlayer1Score_mE31D34A4FF
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ScoreboardUI_SetPlayer2Score_mAEBE24B1D01D50E985EB04BC8DCFF8D285C6FD78 (ScoreboardUI_t8A34B218B36B1AD47AD130C284C3916C1316DBFD* __this, int32_t ___0_score, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/ScoreboardUI.cs:26>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/ScoreboardUI.cs:26>
 		RectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5* L_0 = __this->___team2FillBar;
 		TextMeshProUGUI_t101091AF4B578BB534C92E9D1EEAF0611636D957* L_1 = __this->___team2ScoreText;
 		int32_t L_2 = ___0_score;
 		ScoreboardUI_UpdateBar_mE7249AF73788B91D45F643A53A983DE035218C7D(__this, L_0, L_1, L_2, NULL);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/ScoreboardUI.cs:27>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/ScoreboardUI.cs:27>
 		return;
 	}
 }
@@ -15965,7 +16101,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ScoreboardUI_UpdateBar_mE7249AF73788B91D
 	Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 V_0;
 	memset((&V_0), 0, sizeof(V_0));
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/ScoreboardUI.cs:31>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/ScoreboardUI.cs:31>
 		RectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5* L_0 = ___0_fillBar;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_1;
@@ -15976,13 +16112,13 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ScoreboardUI_UpdateBar_mE7249AF73788B91D
 		}
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/ScoreboardUI.cs:33>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/ScoreboardUI.cs:33>
 		RectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5* L_2 = ___0_fillBar;
 		NullCheck(L_2);
 		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_3;
 		L_3 = RectTransform_get_sizeDelta_m822A8493F2035677384F1540A2E9E5ACE63010BB(L_2, NULL);
 		V_0 = L_3;
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/ScoreboardUI.cs:34>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/ScoreboardUI.cs:34>
 		float L_4 = __this->___minBarHeight;
 		int32_t L_5 = ___2_score;
 		float L_6 = __this->___pixelsPerPoint;
@@ -15990,7 +16126,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ScoreboardUI_UpdateBar_mE7249AF73788B91D
 		float L_8;
 		L_8 = Mathf_Min_m747CA71A9483CDB394B13BD0AD048EE17E48FFE4_inline(((float)il2cpp_codegen_add(L_4, ((float)il2cpp_codegen_multiply(((float)L_5), L_6)))), L_7, NULL);
 		(&V_0)->___y = L_8;
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/ScoreboardUI.cs:35>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/ScoreboardUI.cs:35>
 		RectTransform_t6C5DA5E41A89E0F488B001E45E58963480E543A5* L_9 = ___0_fillBar;
 		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_10 = V_0;
 		NullCheck(L_9);
@@ -15999,7 +16135,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ScoreboardUI_UpdateBar_mE7249AF73788B91D
 
 IL_0039:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/ScoreboardUI.cs:38>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/ScoreboardUI.cs:38>
 		TextMeshProUGUI_t101091AF4B578BB534C92E9D1EEAF0611636D957* L_11 = ___1_scoreText;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_12;
@@ -16010,7 +16146,7 @@ IL_0039:
 		}
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/ScoreboardUI.cs:40>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/ScoreboardUI.cs:40>
 		TextMeshProUGUI_t101091AF4B578BB534C92E9D1EEAF0611636D957* L_13 = ___1_scoreText;
 		String_t* L_14;
 		L_14 = Int32_ToString_m030E01C24E294D6762FB0B6F37CB541581F55CA5((&___2_score), NULL);
@@ -16020,7 +16156,7 @@ IL_0039:
 
 IL_004f:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/ScoreboardUI.cs:42>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/ScoreboardUI.cs:42>
 		return;
 	}
 }
@@ -16028,11 +16164,11 @@ IL_004f:
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ScoreboardUI__ctor_m15D33847BC96F6929D438814EC92FBD8636E95AB (ScoreboardUI_t8A34B218B36B1AD47AD130C284C3916C1316DBFD* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/ScoreboardUI.cs:15>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/ScoreboardUI.cs:15>
 		__this->___minBarHeight = (10.0f);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/ScoreboardUI.cs:16>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/ScoreboardUI.cs:16>
 		__this->___pixelsPerPoint = (8.0f);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/ScoreboardUI.cs:17>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/ScoreboardUI.cs:17>
 		__this->___maxBarHeight = (220.0f);
 		MonoBehaviour__ctor_m592DB0105CA0BC97AA1C5F4AD27B12D68A3B7C1E(__this, NULL);
 		return;
@@ -16050,7 +16186,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ScoreboardUI__ctor_m15D33847BC96F6929D43
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ScoreManager_Start_m7E00370AD0134DB3AEA647B9BA69055725AA83FE (ScoreManager_t86D4A06D4B38717B8C529883F37DA25BA5750F39* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/ScoreManager.cs:27>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/ScoreManager.cs:27>
 		NetworkContext_t49239659157E00ACFF3A196AF00218DED40F9310 L_0;
 		L_0 = NetworkScene_Register_m0F251779B3FEA29EAE6A5DBCDDCC0E50596A6545(__this, NULL);
 		__this->___context = L_0;
@@ -16058,9 +16194,9 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ScoreManager_Start_m7E00370AD0134DB3AEA6
 		#if IL2CPP_ENABLE_STRICT_WRITE_BARRIERS
 		Il2CppCodeGenWriteBarrier((void**)&(((&__this->___context))->___Component), (void*)NULL);
 		#endif
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/ScoreManager.cs:28>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/ScoreManager.cs:28>
 		ScoreManager_RefreshUI_mA685B8F1DF9BF624249232AA563EE2A3A67DACEC(__this, NULL);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/ScoreManager.cs:29>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/ScoreManager.cs:29>
 		return;
 	}
 }
@@ -16074,11 +16210,11 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ScoreManager_AddPlayer1Score_m1FB7C03FCC
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/ScoreManager.cs:33>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/ScoreManager.cs:33>
 		int32_t L_0 = __this->___player1Score;
 		int32_t L_1 = ___0_amount;
 		__this->___player1Score = ((int32_t)il2cpp_codegen_add(L_0, L_1));
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/ScoreManager.cs:34>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/ScoreManager.cs:34>
 		int32_t L_2 = __this->___player1Score;
 		if ((((int32_t)L_2) >= ((int32_t)0)))
 		{
@@ -16086,15 +16222,15 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ScoreManager_AddPlayer1Score_m1FB7C03FCC
 		}
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/ScoreManager.cs:34>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/ScoreManager.cs:34>
 		__this->___player1Score = 0;
 	}
 
 IL_001e:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/ScoreManager.cs:36>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/ScoreManager.cs:36>
 		ScoreManager_RefreshUI_mA685B8F1DF9BF624249232AA563EE2A3A67DACEC(__this, NULL);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/ScoreManager.cs:37>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/ScoreManager.cs:37>
 		NetworkContext_t49239659157E00ACFF3A196AF00218DED40F9310* L_3 = (NetworkContext_t49239659157E00ACFF3A196AF00218DED40F9310*)(&__this->___context);
 		int32_t L_4 = __this->___player1Score;
 		int32_t L_5 = __this->___player2Score;
@@ -16102,7 +16238,7 @@ IL_001e:
 		memset((&L_6), 0, sizeof(L_6));
 		Message__ctor_m99540459A60C891E65502A4536F361625DE443AC((&L_6), L_4, L_5, NULL);
 		NetworkContext_SendJson_TisMessage_t6BA8C6649241BCC1C2DBAD7CCA708C53F96F1DAC_m2384A7886DCBC3C60C90A3A624FE8CEA70DAE9F9(L_3, L_6, NetworkContext_SendJson_TisMessage_t6BA8C6649241BCC1C2DBAD7CCA708C53F96F1DAC_m2384A7886DCBC3C60C90A3A624FE8CEA70DAE9F9_RuntimeMethod_var);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/ScoreManager.cs:38>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/ScoreManager.cs:38>
 		return;
 	}
 }
@@ -16116,11 +16252,11 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ScoreManager_AddPlayer2Score_m29E7EB1290
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/ScoreManager.cs:42>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/ScoreManager.cs:42>
 		int32_t L_0 = __this->___player2Score;
 		int32_t L_1 = ___0_amount;
 		__this->___player2Score = ((int32_t)il2cpp_codegen_add(L_0, L_1));
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/ScoreManager.cs:43>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/ScoreManager.cs:43>
 		int32_t L_2 = __this->___player2Score;
 		if ((((int32_t)L_2) >= ((int32_t)0)))
 		{
@@ -16128,15 +16264,15 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ScoreManager_AddPlayer2Score_m29E7EB1290
 		}
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/ScoreManager.cs:43>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/ScoreManager.cs:43>
 		__this->___player2Score = 0;
 	}
 
 IL_001e:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/ScoreManager.cs:45>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/ScoreManager.cs:45>
 		ScoreManager_RefreshUI_mA685B8F1DF9BF624249232AA563EE2A3A67DACEC(__this, NULL);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/ScoreManager.cs:46>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/ScoreManager.cs:46>
 		NetworkContext_t49239659157E00ACFF3A196AF00218DED40F9310* L_3 = (NetworkContext_t49239659157E00ACFF3A196AF00218DED40F9310*)(&__this->___context);
 		int32_t L_4 = __this->___player1Score;
 		int32_t L_5 = __this->___player2Score;
@@ -16144,7 +16280,7 @@ IL_001e:
 		memset((&L_6), 0, sizeof(L_6));
 		Message__ctor_m99540459A60C891E65502A4536F361625DE443AC((&L_6), L_4, L_5, NULL);
 		NetworkContext_SendJson_TisMessage_t6BA8C6649241BCC1C2DBAD7CCA708C53F96F1DAC_m2384A7886DCBC3C60C90A3A624FE8CEA70DAE9F9(L_3, L_6, NetworkContext_SendJson_TisMessage_t6BA8C6649241BCC1C2DBAD7CCA708C53F96F1DAC_m2384A7886DCBC3C60C90A3A624FE8CEA70DAE9F9_RuntimeMethod_var);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/ScoreManager.cs:47>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/ScoreManager.cs:47>
 		return;
 	}
 }
@@ -16158,7 +16294,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ScoreManager_RefreshUI_mA685B8F1DF9BF624
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/ScoreManager.cs:51>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/ScoreManager.cs:51>
 		ScoreboardUI_t8A34B218B36B1AD47AD130C284C3916C1316DBFD* L_0 = __this->___scoreboardUI;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_1;
@@ -16181,33 +16317,33 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ScoreManager_RefreshUI_mA685B8F1DF9BF624
 
 IL_001c:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/ScoreManager.cs:51>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/ScoreManager.cs:51>
 		return;
 	}
 
 IL_001d:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/ScoreManager.cs:53>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/ScoreManager.cs:53>
 		ScoreboardUI_t8A34B218B36B1AD47AD130C284C3916C1316DBFD* L_4 = __this->___scoreboardUI;
 		int32_t L_5 = __this->___player1Score;
 		NullCheck(L_4);
 		ScoreboardUI_SetPlayer1Score_mE31D34A4FFBDFE987E7E444019892C564CAC1546(L_4, L_5, NULL);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/ScoreManager.cs:54>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/ScoreManager.cs:54>
 		ScoreboardUI_t8A34B218B36B1AD47AD130C284C3916C1316DBFD* L_6 = __this->___scoreboardUI;
 		int32_t L_7 = __this->___player2Score;
 		NullCheck(L_6);
 		ScoreboardUI_SetPlayer2Score_mAEBE24B1D01D50E985EB04BC8DCFF8D285C6FD78(L_6, L_7, NULL);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/ScoreManager.cs:56>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/ScoreManager.cs:56>
 		ScoreboardUI_t8A34B218B36B1AD47AD130C284C3916C1316DBFD* L_8 = __this->___scoreboardUI2;
 		int32_t L_9 = __this->___player1Score;
 		NullCheck(L_8);
 		ScoreboardUI_SetPlayer1Score_mE31D34A4FFBDFE987E7E444019892C564CAC1546(L_8, L_9, NULL);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/ScoreManager.cs:57>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/ScoreManager.cs:57>
 		ScoreboardUI_t8A34B218B36B1AD47AD130C284C3916C1316DBFD* L_10 = __this->___scoreboardUI2;
 		int32_t L_11 = __this->___player2Score;
 		NullCheck(L_10);
 		ScoreboardUI_SetPlayer2Score_mAEBE24B1D01D50E985EB04BC8DCFF8D285C6FD78(L_10, L_11, NULL);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/ScoreManager.cs:58>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/ScoreManager.cs:58>
 		return;
 	}
 }
@@ -16223,21 +16359,21 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ScoreManager_ProcessMessage_mEB289D0B7AD
 	Message_t6BA8C6649241BCC1C2DBAD7CCA708C53F96F1DAC V_0;
 	memset((&V_0), 0, sizeof(V_0));
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/ScoreManager.cs:62>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/ScoreManager.cs:62>
 		Message_t6BA8C6649241BCC1C2DBAD7CCA708C53F96F1DAC L_0;
 		L_0 = ReferenceCountedSceneGraphMessage_FromJson_TisMessage_t6BA8C6649241BCC1C2DBAD7CCA708C53F96F1DAC_m9CC23AF0810C92CA4B3AB016FE220760F13DE00C((&___0_message), ReferenceCountedSceneGraphMessage_FromJson_TisMessage_t6BA8C6649241BCC1C2DBAD7CCA708C53F96F1DAC_m9CC23AF0810C92CA4B3AB016FE220760F13DE00C_RuntimeMethod_var);
 		V_0 = L_0;
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/ScoreManager.cs:63>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/ScoreManager.cs:63>
 		Message_t6BA8C6649241BCC1C2DBAD7CCA708C53F96F1DAC L_1 = V_0;
 		int32_t L_2 = L_1.___player1Score;
 		__this->___player1Score = L_2;
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/ScoreManager.cs:64>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/ScoreManager.cs:64>
 		Message_t6BA8C6649241BCC1C2DBAD7CCA708C53F96F1DAC L_3 = V_0;
 		int32_t L_4 = L_3.___player2Score;
 		__this->___player2Score = L_4;
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/ScoreManager.cs:65>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/ScoreManager.cs:65>
 		ScoreManager_RefreshUI_mA685B8F1DF9BF624249232AA563EE2A3A67DACEC(__this, NULL);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/ScoreManager.cs:66>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/ScoreManager.cs:66>
 		return;
 	}
 }
@@ -16245,7 +16381,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ScoreManager_ProcessMessage_mEB289D0B7AD
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t ScoreManager_GetPlayer1Score_m6CCBB4632745C9537229A794A29029666DC013A8 (ScoreManager_t86D4A06D4B38717B8C529883F37DA25BA5750F39* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/ScoreManager.cs:70>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/ScoreManager.cs:70>
 		int32_t L_0 = __this->___player1Score;
 		return L_0;
 	}
@@ -16254,7 +16390,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t ScoreManager_GetPlayer1Score_m6CCBB46
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t ScoreManager_GetPlayer2Score_m5440078B1BD314123EFCCBD79B1C9C5C683E92E3 (ScoreManager_t86D4A06D4B38717B8C529883F37DA25BA5750F39* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/ScoreManager.cs:75>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/ScoreManager.cs:75>
 		int32_t L_0 = __this->___player2Score;
 		return L_0;
 	}
@@ -16279,13 +16415,13 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ScoreManager__ctor_mE5C264C34A9CBBAB72DC
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Message__ctor_m99540459A60C891E65502A4536F361625DE443AC (Message_t6BA8C6649241BCC1C2DBAD7CCA708C53F96F1DAC* __this, int32_t ___0_player1Score, int32_t ___1_player2Score, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/ScoreManager.cs:14>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/ScoreManager.cs:14>
 		int32_t L_0 = ___0_player1Score;
 		__this->___player1Score = L_0;
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/ScoreManager.cs:15>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/ScoreManager.cs:15>
 		int32_t L_1 = ___1_player2Score;
 		__this->___player2Score = L_1;
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/ScoreManager.cs:16>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/ScoreManager.cs:16>
 		return;
 	}
 }
@@ -16308,7 +16444,7 @@ IL2CPP_EXTERN_C  void Message__ctor_m99540459A60C891E65502A4536F361625DE443AC_Ad
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool SmashableObject_get_IsSmashed_mA1B57D3957A37CA99E02CF96DE0540553B353113 (SmashableObject_t4A59D92DD8FEBBB9EE4784495BE6785FAA59BD46* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/SmashableObject.cs:13>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/SmashableObject.cs:13>
 		bool L_0 = __this->___U3CIsSmashedU3Ek__BackingField;
 		return L_0;
 	}
@@ -16317,7 +16453,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool SmashableObject_get_IsSmashed_mA1B57D395
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SmashableObject_set_IsSmashed_m9338BAA03437CACC30B57FD0B44036DB1A5AAD7E (SmashableObject_t4A59D92DD8FEBBB9EE4784495BE6785FAA59BD46* __this, bool ___0_value, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/SmashableObject.cs:13>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/SmashableObject.cs:13>
 		bool L_0 = ___0_value;
 		__this->___U3CIsSmashedU3Ek__BackingField = L_0;
 		return;
@@ -16327,7 +16463,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SmashableObject_set_IsSmashed_m9338BAA03
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* SmashableObject_get_word_m4B4B5E2F638DDC2A368E2551326F44E228BAAC01 (SmashableObject_t4A59D92DD8FEBBB9EE4784495BE6785FAA59BD46* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/SmashableObject.cs:15>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/SmashableObject.cs:15>
 		String_t* L_0 = __this->___U3CwordU3Ek__BackingField;
 		return L_0;
 	}
@@ -16336,7 +16472,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* SmashableObject_get_word_m4B4B5E2F6
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SmashableObject_set_word_m872301608A2653D261873683F9D64482E2BC2C62 (SmashableObject_t4A59D92DD8FEBBB9EE4784495BE6785FAA59BD46* __this, String_t* ___0_value, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/SmashableObject.cs:15>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/SmashableObject.cs:15>
 		String_t* L_0 = ___0_value;
 		__this->___U3CwordU3Ek__BackingField = L_0;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___U3CwordU3Ek__BackingField), (void*)L_0);
@@ -16347,7 +16483,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SmashableObject_set_word_m872301608A2653
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SmashableObject_Awake_mD78848F013D4E27D3407E45F4D2820A1D79387D1 (SmashableObject_t4A59D92DD8FEBBB9EE4784495BE6785FAA59BD46* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/SmashableObject.cs:19>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/SmashableObject.cs:19>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_0;
 		L_0 = Component_get_gameObject_m57AEFBB14DB39EC476F740BA000E170355DE691B(__this, NULL);
 		NullCheck(L_0);
@@ -16357,7 +16493,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SmashableObject_Awake_mD78848F013D4E27D3
 		String_t* L_2;
 		L_2 = String_ToUpperInvariant_mD73F658CDE1280A527231DC305B66CF09B64E5AB(L_1, NULL);
 		SmashableObject_set_word_m872301608A2653D261873683F9D64482E2BC2C62_inline(__this, L_2, NULL);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/SmashableObject.cs:20>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/SmashableObject.cs:20>
 		return;
 	}
 }
@@ -16387,7 +16523,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SmashableObject_DoSmash_m4CE0B4BD2E1B581
 	LetterSpawner_tBC161CA12FDE232F59203076963EF412B105F844* G_B14_0 = NULL;
 	LetterSpawner_tBC161CA12FDE232F59203076963EF412B105F844* G_B13_0 = NULL;
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/SmashableObject.cs:24>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/SmashableObject.cs:24>
 		bool L_0;
 		L_0 = SmashableObject_get_IsSmashed_mA1B57D3957A37CA99E02CF96DE0540553B353113_inline(__this, NULL);
 		if (!L_0)
@@ -16396,15 +16532,15 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SmashableObject_DoSmash_m4CE0B4BD2E1B581
 		}
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/SmashableObject.cs:24>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/SmashableObject.cs:24>
 		return;
 	}
 
 IL_0009:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/SmashableObject.cs:25>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/SmashableObject.cs:25>
 		SmashableObject_set_IsSmashed_m9338BAA03437CACC30B57FD0B44036DB1A5AAD7E_inline(__this, (bool)1, NULL);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/SmashableObject.cs:27>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/SmashableObject.cs:27>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_1 = __this->___smashedPrefab;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_2;
@@ -16415,7 +16551,7 @@ IL_0009:
 		}
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/SmashableObject.cs:29>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/SmashableObject.cs:29>
 		String_t* L_3;
 		L_3 = Object_get_name_mAC2F6B897CF1303BA4249B4CB55271AFACBB6392(__this, NULL);
 		String_t* L_4;
@@ -16427,7 +16563,7 @@ IL_0009:
 
 IL_003c:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/SmashableObject.cs:33>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/SmashableObject.cs:33>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_5 = __this->___smashedPrefab;
 		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_6;
 		L_6 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(__this, NULL);
@@ -16443,13 +16579,13 @@ IL_003c:
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_10;
 		L_10 = Object_Instantiate_TisGameObject_t76FEDD663AB33C991A9C9A23129337651094216F_m831D2F71DF2AA6C93AFDFEFA04CF2CFC5FBBCDB4(L_5, L_7, L_9, Object_Instantiate_TisGameObject_t76FEDD663AB33C991A9C9A23129337651094216F_m831D2F71DF2AA6C93AFDFEFA04CF2CFC5FBBCDB4_RuntimeMethod_var);
 		V_1 = L_10;
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/SmashableObject.cs:36>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/SmashableObject.cs:36>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_11 = V_1;
 		NullCheck(L_11);
 		RigidbodyU5BU5D_t052E8AB174C34DFD0EBB5E897554DEBB841CC649* L_12;
 		L_12 = GameObject_GetComponentsInChildren_TisRigidbody_t268697F5A994213ED97393309870968BC1C7393C_m224ED18A25C60B9286709DC06A147133FCD6C1F1(L_11, (bool)1, GameObject_GetComponentsInChildren_TisRigidbody_t268697F5A994213ED97393309870968BC1C7393C_m224ED18A25C60B9286709DC06A147133FCD6C1F1_RuntimeMethod_var);
 		V_2 = L_12;
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/SmashableObject.cs:37>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/SmashableObject.cs:37>
 		RigidbodyU5BU5D_t052E8AB174C34DFD0EBB5E897554DEBB841CC649* L_13 = V_2;
 		NullCheck(L_13);
 		if ((((RuntimeArray*)L_13)->max_length))
@@ -16465,17 +16601,17 @@ IL_003c:
 		}
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/SmashableObject.cs:40>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/SmashableObject.cs:40>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_15 = V_1;
 		NullCheck(L_15);
 		Rigidbody_t268697F5A994213ED97393309870968BC1C7393C* L_16;
 		L_16 = GameObject_AddComponent_TisRigidbody_t268697F5A994213ED97393309870968BC1C7393C_m03A761629A3F71B0248F1B26EF612F592B757093(L_15, GameObject_AddComponent_TisRigidbody_t268697F5A994213ED97393309870968BC1C7393C_m03A761629A3F71B0248F1B26EF612F592B757093_RuntimeMethod_var);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/SmashableObject.cs:41>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/SmashableObject.cs:41>
 		Rigidbody_t268697F5A994213ED97393309870968BC1C7393C* L_17 = L_16;
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_18 = ___1_impulse;
 		NullCheck(L_17);
 		Rigidbody_AddForce_mBDBC288D0E266BC1B62E3649B4FCE46E7EA9CCBC(L_17, L_18, 2, NULL);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/SmashableObject.cs:42>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/SmashableObject.cs:42>
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_19;
 		L_19 = Random_get_insideUnitSphere_mA488D6859560B73565B8D890ED6B39DB4091C54F(NULL);
 		float L_20 = __this->___randomAngular;
@@ -16488,21 +16624,21 @@ IL_003c:
 
 IL_0097:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/SmashableObject.cs:46>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/SmashableObject.cs:46>
 		V_3 = 0;
 		goto IL_0104;
 	}
 
 IL_009b:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/SmashableObject.cs:48>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/SmashableObject.cs:48>
 		RigidbodyU5BU5D_t052E8AB174C34DFD0EBB5E897554DEBB841CC649* L_22 = V_2;
 		int32_t L_23 = V_3;
 		NullCheck(L_22);
 		int32_t L_24 = L_23;
 		Rigidbody_t268697F5A994213ED97393309870968BC1C7393C* L_25 = (L_22)->GetAt(static_cast<il2cpp_array_size_t>(L_24));
 		V_4 = L_25;
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/SmashableObject.cs:49>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/SmashableObject.cs:49>
 		Rigidbody_t268697F5A994213ED97393309870968BC1C7393C* L_26 = V_4;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_27;
@@ -16513,7 +16649,7 @@ IL_009b:
 		}
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/SmashableObject.cs:52>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/SmashableObject.cs:52>
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_28 = ___0_hitPoint;
 		Rigidbody_t268697F5A994213ED97393309870968BC1C7393C* L_29 = V_4;
 		NullCheck(L_29);
@@ -16522,10 +16658,10 @@ IL_009b:
 		float L_31;
 		L_31 = Vector3_Distance_m2314DB9B8BD01157E013DF87BEA557375C7F9FF9_inline(L_28, L_30, NULL);
 		V_5 = L_31;
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/SmashableObject.cs:53>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/SmashableObject.cs:53>
 		float L_32 = V_5;
 		V_6 = ((float)((1.0f)/((float)il2cpp_codegen_add((1.0f), ((float)il2cpp_codegen_multiply(L_32, (3.0f)))))));
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/SmashableObject.cs:55>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/SmashableObject.cs:55>
 		Rigidbody_t268697F5A994213ED97393309870968BC1C7393C* L_33 = V_4;
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_34 = ___1_impulse;
 		float L_35 = V_6;
@@ -16533,7 +16669,7 @@ IL_009b:
 		L_36 = Vector3_op_Multiply_m87BA7C578F96C8E49BB07088DAAC4649F83B0353_inline(L_34, L_35, NULL);
 		NullCheck(L_33);
 		Rigidbody_AddForce_mBDBC288D0E266BC1B62E3649B4FCE46E7EA9CCBC(L_33, L_36, 2, NULL);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/SmashableObject.cs:56>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/SmashableObject.cs:56>
 		Rigidbody_t268697F5A994213ED97393309870968BC1C7393C* L_37 = V_4;
 		Rigidbody_t268697F5A994213ED97393309870968BC1C7393C* L_38 = L_37;
 		NullCheck(L_38);
@@ -16552,14 +16688,14 @@ IL_009b:
 
 IL_0100:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/SmashableObject.cs:46>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/SmashableObject.cs:46>
 		int32_t L_44 = V_3;
 		V_3 = ((int32_t)il2cpp_codegen_add(L_44, 1));
 	}
 
 IL_0104:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/SmashableObject.cs:46>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/SmashableObject.cs:46>
 		int32_t L_45 = V_3;
 		RigidbodyU5BU5D_t052E8AB174C34DFD0EBB5E897554DEBB841CC649* L_46 = V_2;
 		NullCheck(L_46);
@@ -16571,7 +16707,7 @@ IL_0104:
 
 IL_010a:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/SmashableObject.cs:61>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/SmashableObject.cs:61>
 		LetterSpawner_tBC161CA12FDE232F59203076963EF412B105F844* L_47;
 		L_47 = LetterSpawner_get_Instance_mDE743C5373029C238F50FE9E4F1A4F5C0241A009_inline(NULL);
 		LetterSpawner_tBC161CA12FDE232F59203076963EF412B105F844* L_48 = L_47;
@@ -16597,11 +16733,11 @@ IL_0115:
 
 IL_0121:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/SmashableObject.cs:62>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/SmashableObject.cs:62>
 		NetworkedObject_tE3E9824D3F2F3E9806E8197BBE87C61FF99361F8* L_51;
 		L_51 = Component_GetComponent_TisNetworkedObject_tE3E9824D3F2F3E9806E8197BBE87C61FF99361F8_mCECE75A8C5B119DC20854FB1C5F978F45CA0E7BC(__this, Component_GetComponent_TisNetworkedObject_tE3E9824D3F2F3E9806E8197BBE87C61FF99361F8_mCECE75A8C5B119DC20854FB1C5F978F45CA0E7BC_RuntimeMethod_var);
 		V_0 = L_51;
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/SmashableObject.cs:63>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/SmashableObject.cs:63>
 		NetworkedObject_tE3E9824D3F2F3E9806E8197BBE87C61FF99361F8* L_52 = V_0;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_53;
@@ -16612,7 +16748,7 @@ IL_0121:
 		}
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/SmashableObject.cs:64>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/SmashableObject.cs:64>
 		NetworkedObject_tE3E9824D3F2F3E9806E8197BBE87C61FF99361F8* L_54 = V_0;
 		NullCheck(L_54);
 		NetworkedObject_BroadcastActiveSelf_mC0C7FBB192C2EDD5B7585CD932114652E0211B44(L_54, (bool)0, NULL);
@@ -16620,7 +16756,7 @@ IL_0121:
 
 IL_0138:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/SmashableObject.cs:66>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/SmashableObject.cs:66>
 		bool L_55 = __this->___destroyOriginal;
 		if (!L_55)
 		{
@@ -16628,7 +16764,7 @@ IL_0138:
 		}
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/SmashableObject.cs:66>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/SmashableObject.cs:66>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_56;
 		L_56 = Component_get_gameObject_m57AEFBB14DB39EC476F740BA000E170355DE691B(__this, NULL);
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
@@ -16638,12 +16774,12 @@ IL_0138:
 
 IL_014c:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/SmashableObject.cs:67>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/SmashableObject.cs:67>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_57;
 		L_57 = Component_get_gameObject_m57AEFBB14DB39EC476F740BA000E170355DE691B(__this, NULL);
 		NullCheck(L_57);
 		GameObject_SetActive_m638E92E1E75E519E5B24CF150B08CA8E0CDFAB92(L_57, (bool)0, NULL);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/SmashableObject.cs:68>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/SmashableObject.cs:68>
 		return;
 	}
 }
@@ -16651,9 +16787,9 @@ IL_014c:
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SmashableObject__ctor_m16E000FCA14BFC31F3CFD68A836BFB9C00716108 (SmashableObject_t4A59D92DD8FEBBB9EE4784495BE6785FAA59BD46* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/SmashableObject.cs:7>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/SmashableObject.cs:7>
 		__this->___destroyOriginal = (bool)1;
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/SmashableObject.cs:11>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/SmashableObject.cs:11>
 		__this->___randomAngular = (6.0f);
 		MonoBehaviour__ctor_m592DB0105CA0BC97AA1C5F4AD27B12D68A3B7C1E(__this, NULL);
 		return;
@@ -16671,7 +16807,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SmashableObject__ctor_m16E000FCA14BFC31F
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool SnapOnRelease_get_IsSnappedOnTable_m6510F987DA0B8E3E737D32DFDF4F4D7BC0A6C9DB (SnapOnRelease_t9CEE91944A45B649BD53A2ED9566DBC654E599C9* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/SnapOnRelease.cs:12>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/SnapOnRelease.cs:13>
 		bool L_0 = __this->___U3CIsSnappedOnTableU3Ek__BackingField;
 		return L_0;
 	}
@@ -16680,7 +16816,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool SnapOnRelease_get_IsSnappedOnTable_m6510
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SnapOnRelease_set_IsSnappedOnTable_mD9F23CEAB6415678659F60335B3530374B42CF60 (SnapOnRelease_t9CEE91944A45B649BD53A2ED9566DBC654E599C9* __this, bool ___0_value, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/SnapOnRelease.cs:12>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/SnapOnRelease.cs:13>
 		bool L_0 = ___0_value;
 		__this->___U3CIsSnappedOnTableU3Ek__BackingField = L_0;
 		return;
@@ -16704,22 +16840,22 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SnapOnRelease_Awake_m832E4EDB0723168A2CC
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/SnapOnRelease.cs:16>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/SnapOnRelease.cs:17>
 		XRGrabInteractable_tAE7E2F24377399C9B5159179E4B43EA6AA55531B* L_0;
 		L_0 = Component_GetComponent_TisXRGrabInteractable_tAE7E2F24377399C9B5159179E4B43EA6AA55531B_m49377F1D0DBAB9BDC59DFC6851E9A5D687717C14(__this, Component_GetComponent_TisXRGrabInteractable_tAE7E2F24377399C9B5159179E4B43EA6AA55531B_m49377F1D0DBAB9BDC59DFC6851E9A5D687717C14_RuntimeMethod_var);
 		__this->___grab = L_0;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___grab), (void*)L_0);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/SnapOnRelease.cs:17>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/SnapOnRelease.cs:18>
 		BlockFootprint_t60D904B81BA8C736F5063F58CFA2ED88428B4CDF* L_1;
 		L_1 = Component_GetComponent_TisBlockFootprint_t60D904B81BA8C736F5063F58CFA2ED88428B4CDF_m137BB59C4572F5889826E382A6F0D0E59CCD1063(__this, Component_GetComponent_TisBlockFootprint_t60D904B81BA8C736F5063F58CFA2ED88428B4CDF_m137BB59C4572F5889826E382A6F0D0E59CCD1063_RuntimeMethod_var);
 		__this->___footprint = L_1;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___footprint), (void*)L_1);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/SnapOnRelease.cs:18>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/SnapOnRelease.cs:19>
 		LetterTile_tB20E0D5265E6DEC4F697C65EBC185582BA0E3541* L_2;
 		L_2 = Component_GetComponent_TisLetterTile_tB20E0D5265E6DEC4F697C65EBC185582BA0E3541_m7A93D93C1D973E02885054E44CBD8BF136F2BDBE(__this, Component_GetComponent_TisLetterTile_tB20E0D5265E6DEC4F697C65EBC185582BA0E3541_m7A93D93C1D973E02885054E44CBD8BF136F2BDBE_RuntimeMethod_var);
 		__this->___letterTile = L_2;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___letterTile), (void*)L_2);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/SnapOnRelease.cs:20>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/SnapOnRelease.cs:21>
 		XRGrabInteractable_tAE7E2F24377399C9B5159179E4B43EA6AA55531B* L_3 = __this->___grab;
 		NullCheck(L_3);
 		SelectExitEvent_t15DC0A39F9657BA9E6BAE6250D8D64C9671201F6* L_4;
@@ -16728,7 +16864,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SnapOnRelease_Awake_m832E4EDB0723168A2CC
 		UnityAction_1__ctor_mD74501F5FCCC37863163D5E7155B6C8B9B366C40(L_5, __this, (intptr_t)((void*)SnapOnRelease_OnReleased_m85D6DA6712512A6C7B6D98329CD54E36ECB3A9A3_RuntimeMethod_var), NULL);
 		NullCheck(L_4);
 		UnityEvent_1_AddListener_mB662756036996A6B6F83F6492CE9E26797AF9602(L_4, L_5, UnityEvent_1_AddListener_mB662756036996A6B6F83F6492CE9E26797AF9602_RuntimeMethod_var);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/SnapOnRelease.cs:21>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/SnapOnRelease.cs:22>
 		XRGrabInteractable_tAE7E2F24377399C9B5159179E4B43EA6AA55531B* L_6 = __this->___grab;
 		NullCheck(L_6);
 		SelectEnterEvent_tBA2614C8C25D8794D5804C4F66195D74E64FC5D0* L_7;
@@ -16737,7 +16873,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SnapOnRelease_Awake_m832E4EDB0723168A2CC
 		UnityAction_1__ctor_mEE39E1A87376378311B4931978E8E07E589E9A24(L_8, __this, (intptr_t)((void*)SnapOnRelease_OnPicked_m8A4BDF068ADA1CBAF286EF10CF220C601AD1E849_RuntimeMethod_var), NULL);
 		NullCheck(L_7);
 		UnityEvent_1_AddListener_mAE71681FB0832FD7DBA813E5ADDBA574EA32EED2(L_7, L_8, UnityEvent_1_AddListener_mAE71681FB0832FD7DBA813E5ADDBA574EA32EED2_RuntimeMethod_var);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/SnapOnRelease.cs:22>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/SnapOnRelease.cs:23>
 		return;
 	}
 }
@@ -16753,11 +16889,11 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SnapOnRelease_OnPicked_m8A4BDF068ADA1CBA
 	}
 	Rigidbody_t268697F5A994213ED97393309870968BC1C7393C* V_0 = NULL;
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/SnapOnRelease.cs:26>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/SnapOnRelease.cs:27>
 		Rigidbody_t268697F5A994213ED97393309870968BC1C7393C* L_0;
 		L_0 = Component_GetComponent_TisRigidbody_t268697F5A994213ED97393309870968BC1C7393C_m4B5CAD64B52D153BEA96432633CA9A45FA523DD8(__this, Component_GetComponent_TisRigidbody_t268697F5A994213ED97393309870968BC1C7393C_m4B5CAD64B52D153BEA96432633CA9A45FA523DD8_RuntimeMethod_var);
 		V_0 = L_0;
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/SnapOnRelease.cs:27>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/SnapOnRelease.cs:28>
 		Rigidbody_t268697F5A994213ED97393309870968BC1C7393C* L_1 = V_0;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_2;
@@ -16768,7 +16904,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SnapOnRelease_OnPicked_m8A4BDF068ADA1CBA
 		}
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/SnapOnRelease.cs:27>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/SnapOnRelease.cs:28>
 		Rigidbody_t268697F5A994213ED97393309870968BC1C7393C* L_3 = V_0;
 		NullCheck(L_3);
 		Rigidbody_set_isKinematic_m6C3FD3EA358DADA3B191F2449CF1C4F8B22695ED(L_3, (bool)0, NULL);
@@ -16776,7 +16912,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SnapOnRelease_OnPicked_m8A4BDF068ADA1CBA
 
 IL_0016:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/SnapOnRelease.cs:29>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/SnapOnRelease.cs:30>
 		TableSnapZone_t98DB6E46409D9D63B767218E4B11C273A4015EA7* L_4 = __this->___currentZone;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_5;
@@ -16787,7 +16923,7 @@ IL_0016:
 		}
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/SnapOnRelease.cs:29>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/SnapOnRelease.cs:30>
 		TableSnapZone_t98DB6E46409D9D63B767218E4B11C273A4015EA7* L_6 = __this->___currentZone;
 		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_7;
 		L_7 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(__this, NULL);
@@ -16797,9 +16933,9 @@ IL_0016:
 
 IL_0034:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/SnapOnRelease.cs:31>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/SnapOnRelease.cs:32>
 		SnapOnRelease_set_IsSnappedOnTable_mD9F23CEAB6415678659F60335B3530374B42CF60_inline(__this, (bool)0, NULL);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/SnapOnRelease.cs:34>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/SnapOnRelease.cs:34>
 		LetterTile_tB20E0D5265E6DEC4F697C65EBC185582BA0E3541* L_8 = __this->___letterTile;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_9;
@@ -16810,7 +16946,7 @@ IL_0034:
 		}
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/SnapOnRelease.cs:35>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/SnapOnRelease.cs:35>
 		LetterTile_tB20E0D5265E6DEC4F697C65EBC185582BA0E3541* L_10 = __this->___letterTile;
 		NullCheck(L_10);
 		LetterTile_RestoreOriginalColor_mF6E472449A2DFCD1B01F1ABEF693A31C6209C94E(L_10, NULL);
@@ -16818,7 +16954,7 @@ IL_0034:
 
 IL_0054:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/SnapOnRelease.cs:36>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/SnapOnRelease.cs:36>
 		return;
 	}
 }
@@ -16842,7 +16978,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SnapOnRelease_OnReleased_m85D6DA6712512A
 	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 G_B5_0;
 	memset((&G_B5_0), 0, sizeof(G_B5_0));
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/SnapOnRelease.cs:40>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/SnapOnRelease.cs:40>
 		TableSnapZone_t98DB6E46409D9D63B767218E4B11C273A4015EA7* L_0 = __this->___currentZone;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_1;
@@ -16853,17 +16989,17 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SnapOnRelease_OnReleased_m85D6DA6712512A
 		}
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/SnapOnRelease.cs:40>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/SnapOnRelease.cs:40>
 		return;
 	}
 
 IL_000e:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/SnapOnRelease.cs:42>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/SnapOnRelease.cs:42>
 		Collider_t1CC3163924FCD6C4CC2E816373A929C1E3D55E76* L_2;
 		L_2 = Component_GetComponentInChildren_TisCollider_t1CC3163924FCD6C4CC2E816373A929C1E3D55E76_m7273BACA077B9D6ECC07FBCB199D9748433411B2(__this, Component_GetComponentInChildren_TisCollider_t1CC3163924FCD6C4CC2E816373A929C1E3D55E76_m7273BACA077B9D6ECC07FBCB199D9748433411B2_RuntimeMethod_var);
 		V_0 = L_2;
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/SnapOnRelease.cs:43>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/SnapOnRelease.cs:43>
 		Collider_t1CC3163924FCD6C4CC2E816373A929C1E3D55E76* L_3 = V_0;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_4;
@@ -16898,7 +17034,7 @@ IL_002a:
 IL_0038:
 	{
 		V_1 = G_B5_0;
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/SnapOnRelease.cs:44>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/SnapOnRelease.cs:44>
 		TableSnapZone_t98DB6E46409D9D63B767218E4B11C273A4015EA7* L_10 = __this->___currentZone;
 		NullCheck(L_10);
 		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_11 = L_10->___gridOrigin;
@@ -16907,7 +17043,7 @@ IL_0038:
 		L_12 = Transform_get_position_m69CD5FA214FDAE7BB701552943674846C220FDE1(L_11, NULL);
 		float L_13 = L_12.___y;
 		(&V_1)->___y = L_13;
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/SnapOnRelease.cs:46>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/SnapOnRelease.cs:46>
 		TableSnapZone_t98DB6E46409D9D63B767218E4B11C273A4015EA7* L_14 = __this->___currentZone;
 		BlockFootprint_t60D904B81BA8C736F5063F58CFA2ED88428B4CDF* L_15 = __this->___footprint;
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_16 = V_1;
@@ -16916,18 +17052,18 @@ IL_0038:
 		NullCheck(L_14);
 		bool L_18;
 		L_18 = TableSnapZone_TryPlace_m7C24EC6354472645E81C6DE8E5D83008650D84A4(L_14, L_15, L_16, L_17, NULL);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/SnapOnRelease.cs:47>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/SnapOnRelease.cs:47>
 		if (L_18)
 		{
 			goto IL_008d;
 		}
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/SnapOnRelease.cs:49>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/SnapOnRelease.cs:49>
 		Rigidbody_t268697F5A994213ED97393309870968BC1C7393C* L_19;
 		L_19 = Component_GetComponent_TisRigidbody_t268697F5A994213ED97393309870968BC1C7393C_m4B5CAD64B52D153BEA96432633CA9A45FA523DD8(__this, Component_GetComponent_TisRigidbody_t268697F5A994213ED97393309870968BC1C7393C_m4B5CAD64B52D153BEA96432633CA9A45FA523DD8_RuntimeMethod_var);
 		V_3 = L_19;
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/SnapOnRelease.cs:50>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/SnapOnRelease.cs:50>
 		Rigidbody_t268697F5A994213ED97393309870968BC1C7393C* L_20 = V_3;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_21;
@@ -16938,7 +17074,7 @@ IL_0038:
 		}
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/SnapOnRelease.cs:50>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/SnapOnRelease.cs:50>
 		Rigidbody_t268697F5A994213ED97393309870968BC1C7393C* L_22 = V_3;
 		NullCheck(L_22);
 		Rigidbody_set_isKinematic_m6C3FD3EA358DADA3B191F2449CF1C4F8B22695ED(L_22, (bool)0, NULL);
@@ -16946,16 +17082,39 @@ IL_0038:
 
 IL_0085:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/SnapOnRelease.cs:52>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/SnapOnRelease.cs:52>
 		SnapOnRelease_set_IsSnappedOnTable_mD9F23CEAB6415678659F60335B3530374B42CF60_inline(__this, (bool)0, NULL);
 		return;
 	}
 
 IL_008d:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/SnapOnRelease.cs:56>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/SnapOnRelease.cs:56>
 		SnapOnRelease_set_IsSnappedOnTable_mD9F23CEAB6415678659F60335B3530374B42CF60_inline(__this, (bool)1, NULL);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/SnapOnRelease.cs:58>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/SnapOnRelease.cs:57>
+		AudioClip_t5D272C4EB4F2D3ED49F1C346DEA373CF6D585F20* L_23 = __this->___snapSound;
+		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
+		bool L_24;
+		L_24 = Object_op_Inequality_mD0BE578448EAA61948F25C32F8DD55AB1F778602(L_23, (Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C*)NULL, NULL);
+		if (!L_24)
+		{
+			goto IL_00b8;
+		}
+	}
+	{
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/SnapOnRelease.cs:59>
+		AudioClip_t5D272C4EB4F2D3ED49F1C346DEA373CF6D585F20* L_25 = __this->___snapSound;
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_26;
+		L_26 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(__this, NULL);
+		NullCheck(L_26);
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_27;
+		L_27 = Transform_get_position_m69CD5FA214FDAE7BB701552943674846C220FDE1(L_26, NULL);
+		AudioSource_PlayClipAtPoint_mA78328A70D3F1088B588EF6F811AAD6577F2B7BF(L_25, L_27, NULL);
+	}
+
+IL_00b8:
+	{
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/SnapOnRelease.cs:62>
 		return;
 	}
 }
@@ -16971,13 +17130,13 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SnapOnRelease_OnTriggerEnter_m7EEE66BB24
 	}
 	TableSnapZone_t98DB6E46409D9D63B767218E4B11C273A4015EA7* V_0 = NULL;
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/SnapOnRelease.cs:62>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/SnapOnRelease.cs:66>
 		Collider_t1CC3163924FCD6C4CC2E816373A929C1E3D55E76* L_0 = ___0_other;
 		NullCheck(L_0);
 		TableSnapZone_t98DB6E46409D9D63B767218E4B11C273A4015EA7* L_1;
 		L_1 = Component_GetComponent_TisTableSnapZone_t98DB6E46409D9D63B767218E4B11C273A4015EA7_m576F8C11708C6971E5128A81AA8E4808A85C27E2(L_0, Component_GetComponent_TisTableSnapZone_t98DB6E46409D9D63B767218E4B11C273A4015EA7_m576F8C11708C6971E5128A81AA8E4808A85C27E2_RuntimeMethod_var);
 		V_0 = L_1;
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/SnapOnRelease.cs:63>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/SnapOnRelease.cs:67>
 		TableSnapZone_t98DB6E46409D9D63B767218E4B11C273A4015EA7* L_2 = V_0;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_3;
@@ -16988,7 +17147,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SnapOnRelease_OnTriggerEnter_m7EEE66BB24
 		}
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/SnapOnRelease.cs:63>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/SnapOnRelease.cs:67>
 		TableSnapZone_t98DB6E46409D9D63B767218E4B11C273A4015EA7* L_4 = V_0;
 		__this->___currentZone = L_4;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___currentZone), (void*)L_4);
@@ -16996,7 +17155,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SnapOnRelease_OnTriggerEnter_m7EEE66BB24
 
 IL_0016:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/SnapOnRelease.cs:64>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/SnapOnRelease.cs:68>
 		return;
 	}
 }
@@ -17012,13 +17171,13 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SnapOnRelease_OnTriggerExit_m16B510FFC53
 	}
 	TableSnapZone_t98DB6E46409D9D63B767218E4B11C273A4015EA7* V_0 = NULL;
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/SnapOnRelease.cs:68>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/SnapOnRelease.cs:72>
 		Collider_t1CC3163924FCD6C4CC2E816373A929C1E3D55E76* L_0 = ___0_other;
 		NullCheck(L_0);
 		TableSnapZone_t98DB6E46409D9D63B767218E4B11C273A4015EA7* L_1;
 		L_1 = Component_GetComponent_TisTableSnapZone_t98DB6E46409D9D63B767218E4B11C273A4015EA7_m576F8C11708C6971E5128A81AA8E4808A85C27E2(L_0, Component_GetComponent_TisTableSnapZone_t98DB6E46409D9D63B767218E4B11C273A4015EA7_m576F8C11708C6971E5128A81AA8E4808A85C27E2_RuntimeMethod_var);
 		V_0 = L_1;
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/SnapOnRelease.cs:69>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/SnapOnRelease.cs:73>
 		TableSnapZone_t98DB6E46409D9D63B767218E4B11C273A4015EA7* L_2 = V_0;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_3;
@@ -17040,14 +17199,14 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SnapOnRelease_OnTriggerExit_m16B510FFC53
 		}
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/SnapOnRelease.cs:69>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/SnapOnRelease.cs:73>
 		__this->___currentZone = (TableSnapZone_t98DB6E46409D9D63B767218E4B11C273A4015EA7*)NULL;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___currentZone), (void*)(TableSnapZone_t98DB6E46409D9D63B767218E4B11C273A4015EA7*)NULL);
 	}
 
 IL_0024:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/SnapOnRelease.cs:70>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/SnapOnRelease.cs:74>
 		return;
 	}
 }
@@ -17071,7 +17230,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SnapOnRelease__ctor_m4D10690E8B319940159
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR NetworkId_tD5FA0360D2F8AE544493A7D1A6C7C90B28735CE7 SpawnableObject_get_NetworkId_mA50D2D8098D6AF6B7DA47220C73566B4AC978158 (SpawnableObject_tB01492418378D7AE527A7C2936955B071EC7B7FA* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/SpawnableObject.cs:7>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/SpawnableObject.cs:7>
 		NetworkId_tD5FA0360D2F8AE544493A7D1A6C7C90B28735CE7 L_0 = __this->___U3CNetworkIdU3Ek__BackingField;
 		return L_0;
 	}
@@ -17080,7 +17239,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR NetworkId_tD5FA0360D2F8AE544493A7D1A6C7C90B28
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SpawnableObject_set_NetworkId_m4C8AD36B95C4268B800B98657FDE3282466BAF38 (SpawnableObject_tB01492418378D7AE527A7C2936955B071EC7B7FA* __this, NetworkId_tD5FA0360D2F8AE544493A7D1A6C7C90B28735CE7 ___0_value, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/SpawnableObject.cs:7>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/SpawnableObject.cs:7>
 		NetworkId_tD5FA0360D2F8AE544493A7D1A6C7C90B28735CE7 L_0 = ___0_value;
 		__this->___U3CNetworkIdU3Ek__BackingField = L_0;
 		return;
@@ -17098,11 +17257,11 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool SpawnableObject_GetInvalidState_m241BFB6
 	}
 	LetterTile_tB20E0D5265E6DEC4F697C65EBC185582BA0E3541* V_0 = NULL;
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/SpawnableObject.cs:13>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/SpawnableObject.cs:13>
 		LetterTile_tB20E0D5265E6DEC4F697C65EBC185582BA0E3541* L_0;
 		L_0 = Component_GetComponent_TisLetterTile_tB20E0D5265E6DEC4F697C65EBC185582BA0E3541_m7A93D93C1D973E02885054E44CBD8BF136F2BDBE(__this, Component_GetComponent_TisLetterTile_tB20E0D5265E6DEC4F697C65EBC185582BA0E3541_m7A93D93C1D973E02885054E44CBD8BF136F2BDBE_RuntimeMethod_var);
 		V_0 = L_0;
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/SpawnableObject.cs:14>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/SpawnableObject.cs:14>
 		LetterTile_tB20E0D5265E6DEC4F697C65EBC185582BA0E3541* L_1 = V_0;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_2;
@@ -17137,11 +17296,11 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool SpawnableObject_GetSceneObjectWordState_
 	}
 	LetterTile_tB20E0D5265E6DEC4F697C65EBC185582BA0E3541* V_0 = NULL;
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/SpawnableObject.cs:19>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/SpawnableObject.cs:19>
 		LetterTile_tB20E0D5265E6DEC4F697C65EBC185582BA0E3541* L_0;
 		L_0 = Component_GetComponent_TisLetterTile_tB20E0D5265E6DEC4F697C65EBC185582BA0E3541_m7A93D93C1D973E02885054E44CBD8BF136F2BDBE(__this, Component_GetComponent_TisLetterTile_tB20E0D5265E6DEC4F697C65EBC185582BA0E3541_m7A93D93C1D973E02885054E44CBD8BF136F2BDBE_RuntimeMethod_var);
 		V_0 = L_0;
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/SpawnableObject.cs:20>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/SpawnableObject.cs:20>
 		LetterTile_tB20E0D5265E6DEC4F697C65EBC185582BA0E3541* L_1 = V_0;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_2;
@@ -17168,7 +17327,7 @@ IL_0017:
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SpawnableObject_Start_m6BCD27D7CC1CF4453E8701037B7253FB0FCAFD71 (SpawnableObject_tB01492418378D7AE527A7C2936955B071EC7B7FA* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/SpawnableObject.cs:43>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/SpawnableObject.cs:43>
 		NetworkContext_t49239659157E00ACFF3A196AF00218DED40F9310 L_0;
 		L_0 = NetworkScene_Register_m0F251779B3FEA29EAE6A5DBCDDCC0E50596A6545(__this, NULL);
 		__this->___context = L_0;
@@ -17176,7 +17335,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SpawnableObject_Start_m6BCD27D7CC1CF4453
 		#if IL2CPP_ENABLE_STRICT_WRITE_BARRIERS
 		Il2CppCodeGenWriteBarrier((void**)&(((&__this->___context))->___Component), (void*)NULL);
 		#endif
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/SpawnableObject.cs:44>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/SpawnableObject.cs:44>
 		return;
 	}
 }
@@ -17190,7 +17349,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SpawnableObject_Update_m4560E7B22988952A
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/SpawnableObject.cs:48>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/SpawnableObject.cs:48>
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_0 = __this->___lastPosition;
 		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_1;
 		L_1 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(__this, NULL);
@@ -17205,19 +17364,19 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SpawnableObject_Update_m4560E7B22988952A
 		}
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/SpawnableObject.cs:50>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/SpawnableObject.cs:50>
 		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_4;
 		L_4 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(__this, NULL);
 		NullCheck(L_4);
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_5;
 		L_5 = Transform_get_position_m69CD5FA214FDAE7BB701552943674846C220FDE1(L_4, NULL);
 		__this->___lastPosition = L_5;
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/SpawnableObject.cs:51>
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/SpawnableObject.cs:52>
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/SpawnableObject.cs:53>
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/SpawnableObject.cs:54>
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/SpawnableObject.cs:55>
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/SpawnableObject.cs:56>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/SpawnableObject.cs:51>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/SpawnableObject.cs:52>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/SpawnableObject.cs:53>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/SpawnableObject.cs:54>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/SpawnableObject.cs:55>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/SpawnableObject.cs:56>
 		NetworkContext_t49239659157E00ACFF3A196AF00218DED40F9310* L_6 = (NetworkContext_t49239659157E00ACFF3A196AF00218DED40F9310*)(&__this->___context);
 		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_7;
 		L_7 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(__this, NULL);
@@ -17238,7 +17397,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SpawnableObject_Update_m4560E7B22988952A
 
 IL_0056:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/SpawnableObject.cs:58>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/SpawnableObject.cs:58>
 		return;
 	}
 }
@@ -17257,43 +17416,43 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SpawnableObject_ProcessMessage_mD1BE9BE0
 	memset((&V_0), 0, sizeof(V_0));
 	LetterTile_tB20E0D5265E6DEC4F697C65EBC185582BA0E3541* V_1 = NULL;
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/SpawnableObject.cs:62>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/SpawnableObject.cs:62>
 		Message_t14677B5ABFC50BD111031A062815DF5CF4A16476 L_0;
 		L_0 = ReferenceCountedSceneGraphMessage_FromJson_TisMessage_t14677B5ABFC50BD111031A062815DF5CF4A16476_mD1B77601190C3A6C0E3E264E0C0AAAF561C04101((&___0_message), ReferenceCountedSceneGraphMessage_FromJson_TisMessage_t14677B5ABFC50BD111031A062815DF5CF4A16476_mD1B77601190C3A6C0E3E264E0C0AAAF561C04101_RuntimeMethod_var);
 		V_0 = L_0;
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/SpawnableObject.cs:63>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/SpawnableObject.cs:63>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_1;
 		L_1 = Component_get_gameObject_m57AEFBB14DB39EC476F740BA000E170355DE691B(__this, NULL);
 		Message_t14677B5ABFC50BD111031A062815DF5CF4A16476 L_2 = V_0;
 		bool L_3 = L_2.___isActive;
 		NullCheck(L_1);
 		GameObject_SetActive_m638E92E1E75E519E5B24CF150B08CA8E0CDFAB92(L_1, L_3, NULL);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/SpawnableObject.cs:65>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/SpawnableObject.cs:65>
 		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_4;
 		L_4 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(__this, NULL);
 		Message_t14677B5ABFC50BD111031A062815DF5CF4A16476 L_5 = V_0;
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_6 = L_5.___position;
 		NullCheck(L_4);
 		Transform_set_position_mA1A817124BB41B685043DED2A9BA48CDF37C4156(L_4, L_6, NULL);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/SpawnableObject.cs:66>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/SpawnableObject.cs:66>
 		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_7;
 		L_7 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(__this, NULL);
 		NullCheck(L_7);
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_8;
 		L_8 = Transform_get_position_m69CD5FA214FDAE7BB701552943674846C220FDE1(L_7, NULL);
 		__this->___lastPosition = L_8;
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/SpawnableObject.cs:67>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/SpawnableObject.cs:67>
 		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_9;
 		L_9 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(__this, NULL);
 		Message_t14677B5ABFC50BD111031A062815DF5CF4A16476 L_10 = V_0;
 		Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 L_11 = L_10.___rotation;
 		NullCheck(L_9);
 		Transform_set_rotation_m61340DE74726CF0F9946743A727C4D444397331D(L_9, L_11, NULL);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/SpawnableObject.cs:69>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/SpawnableObject.cs:69>
 		LetterTile_tB20E0D5265E6DEC4F697C65EBC185582BA0E3541* L_12;
 		L_12 = Component_GetComponent_TisLetterTile_tB20E0D5265E6DEC4F697C65EBC185582BA0E3541_m7A93D93C1D973E02885054E44CBD8BF136F2BDBE(__this, Component_GetComponent_TisLetterTile_tB20E0D5265E6DEC4F697C65EBC185582BA0E3541_m7A93D93C1D973E02885054E44CBD8BF136F2BDBE_RuntimeMethod_var);
 		V_1 = L_12;
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/SpawnableObject.cs:70>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/SpawnableObject.cs:70>
 		LetterTile_tB20E0D5265E6DEC4F697C65EBC185582BA0E3541* L_13 = V_1;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_14;
@@ -17304,7 +17463,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SpawnableObject_ProcessMessage_mD1BE9BE0
 		}
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/SpawnableObject.cs:72>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/SpawnableObject.cs:72>
 		Message_t14677B5ABFC50BD111031A062815DF5CF4A16476 L_15 = V_0;
 		bool L_16 = L_15.___isSceneObjectWord;
 		if (!L_16)
@@ -17313,7 +17472,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SpawnableObject_ProcessMessage_mD1BE9BE0
 		}
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/SpawnableObject.cs:73>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/SpawnableObject.cs:73>
 		LetterTile_tB20E0D5265E6DEC4F697C65EBC185582BA0E3541* L_17 = V_1;
 		NullCheck(L_17);
 		LetterTile_SetSceneObjectYellow_m9A90F74C516CA25221DE36C6A9CAB351A1E84BAA(L_17, NULL);
@@ -17322,7 +17481,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SpawnableObject_ProcessMessage_mD1BE9BE0
 
 IL_006b:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/SpawnableObject.cs:74>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/SpawnableObject.cs:74>
 		Message_t14677B5ABFC50BD111031A062815DF5CF4A16476 L_18 = V_0;
 		bool L_19 = L_18.___isInvalid;
 		if (!L_19)
@@ -17331,7 +17490,7 @@ IL_006b:
 		}
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/SpawnableObject.cs:75>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/SpawnableObject.cs:75>
 		LetterTile_tB20E0D5265E6DEC4F697C65EBC185582BA0E3541* L_20 = V_1;
 		NullCheck(L_20);
 		LetterTile_SetInvalidRed_m56D5F3A46FDF8915D934DC5488C6AE2F9CA800AD(L_20, NULL);
@@ -17340,7 +17499,7 @@ IL_006b:
 
 IL_007a:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/SpawnableObject.cs:77>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/SpawnableObject.cs:77>
 		LetterTile_tB20E0D5265E6DEC4F697C65EBC185582BA0E3541* L_21 = V_1;
 		NullCheck(L_21);
 		LetterTile_RestoreOriginalColor_mF6E472449A2DFCD1B01F1ABEF693A31C6209C94E(L_21, NULL);
@@ -17348,7 +17507,7 @@ IL_007a:
 
 IL_0080:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/SpawnableObject.cs:79>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/SpawnableObject.cs:79>
 		return;
 	}
 }
@@ -17362,12 +17521,12 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SpawnableObject_BroadcastActiveSelf_m22C
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/SpawnableObject.cs:83>
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/SpawnableObject.cs:84>
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/SpawnableObject.cs:85>
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/SpawnableObject.cs:86>
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/SpawnableObject.cs:87>
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/SpawnableObject.cs:88>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/SpawnableObject.cs:83>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/SpawnableObject.cs:84>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/SpawnableObject.cs:85>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/SpawnableObject.cs:86>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/SpawnableObject.cs:87>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/SpawnableObject.cs:88>
 		NetworkContext_t49239659157E00ACFF3A196AF00218DED40F9310* L_0 = (NetworkContext_t49239659157E00ACFF3A196AF00218DED40F9310*)(&__this->___context);
 		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_1;
 		L_1 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(__this, NULL);
@@ -17380,7 +17539,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SpawnableObject_BroadcastActiveSelf_m22C
 		memset((&L_5), 0, sizeof(L_5));
 		Message__ctor_m914D3F1A31D77B966BAFB22E29788FAC80BE134D((&L_5), L_1, L_2, L_3, L_4, NULL);
 		NetworkContext_SendJson_TisMessage_t14677B5ABFC50BD111031A062815DF5CF4A16476_m20F21F8D22067F3DD719CEE57F556E7428544A26(L_0, L_5, NetworkContext_SendJson_TisMessage_t14677B5ABFC50BD111031A062815DF5CF4A16476_m20F21F8D22067F3DD719CEE57F556E7428544A26_RuntimeMethod_var);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/SpawnableObject.cs:89>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/SpawnableObject.cs:89>
 		return;
 	}
 }
@@ -17394,12 +17553,12 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SpawnableObject_BroadcastPosAndRot_m6BD5
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/SpawnableObject.cs:93>
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/SpawnableObject.cs:94>
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/SpawnableObject.cs:95>
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/SpawnableObject.cs:96>
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/SpawnableObject.cs:97>
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/SpawnableObject.cs:98>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/SpawnableObject.cs:93>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/SpawnableObject.cs:94>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/SpawnableObject.cs:95>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/SpawnableObject.cs:96>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/SpawnableObject.cs:97>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/SpawnableObject.cs:98>
 		NetworkContext_t49239659157E00ACFF3A196AF00218DED40F9310* L_0 = (NetworkContext_t49239659157E00ACFF3A196AF00218DED40F9310*)(&__this->___context);
 		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_1;
 		L_1 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(__this, NULL);
@@ -17411,7 +17570,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SpawnableObject_BroadcastPosAndRot_m6BD5
 		memset((&L_4), 0, sizeof(L_4));
 		Message__ctor_m914D3F1A31D77B966BAFB22E29788FAC80BE134D((&L_4), L_1, (bool)1, L_2, L_3, NULL);
 		NetworkContext_SendJson_TisMessage_t14677B5ABFC50BD111031A062815DF5CF4A16476_m20F21F8D22067F3DD719CEE57F556E7428544A26(L_0, L_4, NetworkContext_SendJson_TisMessage_t14677B5ABFC50BD111031A062815DF5CF4A16476_m20F21F8D22067F3DD719CEE57F556E7428544A26_RuntimeMethod_var);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/SpawnableObject.cs:99>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/SpawnableObject.cs:99>
 		return;
 	}
 }
@@ -17497,28 +17656,28 @@ IL2CPP_EXTERN_C void Message_t14677B5ABFC50BD111031A062815DF5CF4A16476_marshal_c
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Message__ctor_m914D3F1A31D77B966BAFB22E29788FAC80BE134D (Message_t14677B5ABFC50BD111031A062815DF5CF4A16476* __this, Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* ___0_transform, bool ___1_isActive, bool ___2_isInvalid, bool ___3_isSceneObjectWord, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/SpawnableObject.cs:33>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/SpawnableObject.cs:33>
 		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_0 = ___0_transform;
 		NullCheck(L_0);
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_1;
 		L_1 = Transform_get_position_m69CD5FA214FDAE7BB701552943674846C220FDE1(L_0, NULL);
 		__this->___position = L_1;
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/SpawnableObject.cs:34>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/SpawnableObject.cs:34>
 		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_2 = ___0_transform;
 		NullCheck(L_2);
 		Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 L_3;
 		L_3 = Transform_get_rotation_m32AF40CA0D50C797DA639A696F8EAEC7524C179C(L_2, NULL);
 		__this->___rotation = L_3;
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/SpawnableObject.cs:35>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/SpawnableObject.cs:35>
 		bool L_4 = ___1_isActive;
 		__this->___isActive = L_4;
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/SpawnableObject.cs:36>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/SpawnableObject.cs:36>
 		bool L_5 = ___2_isInvalid;
 		__this->___isInvalid = L_5;
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/SpawnableObject.cs:37>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/SpawnableObject.cs:37>
 		bool L_6 = ___3_isSceneObjectWord;
 		__this->___isSceneObjectWord = L_6;
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/SpawnableObject.cs:38>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/SpawnableObject.cs:38>
 		return;
 	}
 }
@@ -17547,20 +17706,20 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool TableSnapZone_TryPlace_m7C24EC6354472645
 	Pose_t06BA69EAA6E9FAF60056D519A87D25F54AFE7971 V_2;
 	memset((&V_2), 0, sizeof(V_2));
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TableSnapZone.cs:33>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TableSnapZone.cs:33>
 		__this->____hasLast = (bool)1;
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TableSnapZone.cs:34>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TableSnapZone.cs:34>
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_0 = ___1_desiredWorldPoint;
 		__this->____lastDesiredWorld = L_0;
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TableSnapZone.cs:35>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TableSnapZone.cs:35>
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_1 = ___1_desiredWorldPoint;
 		Vector2Int_t69B2886EBAB732D9B880565E18E7568F3DE0CE6A L_2;
 		L_2 = TableSnapZone_WorldToCell_mAB8142B1C7D51A19A5FF201125A4463720A05847(__this, L_1, NULL);
 		__this->____lastDesiredCell = L_2;
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TableSnapZone.cs:37>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TableSnapZone.cs:37>
 		Vector2Int_t69B2886EBAB732D9B880565E18E7568F3DE0CE6A L_3 = __this->____lastDesiredCell;
 		V_0 = L_3;
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TableSnapZone.cs:39>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TableSnapZone.cs:39>
 		BlockFootprint_t60D904B81BA8C736F5063F58CFA2ED88428B4CDF* L_4 = ___0_footprint;
 		Vector2Int_t69B2886EBAB732D9B880565E18E7568F3DE0CE6A L_5 = V_0;
 		bool L_6;
@@ -17571,25 +17730,25 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool TableSnapZone_TryPlace_m7C24EC6354472645
 		}
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TableSnapZone.cs:40>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TableSnapZone.cs:40>
 		return (bool)0;
 	}
 
 IL_0030:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TableSnapZone.cs:42>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TableSnapZone.cs:42>
 		Vector2Int_t69B2886EBAB732D9B880565E18E7568F3DE0CE6A L_7 = V_1;
 		BlockFootprint_t60D904B81BA8C736F5063F58CFA2ED88428B4CDF* L_8 = ___0_footprint;
 		Pose_t06BA69EAA6E9FAF60056D519A87D25F54AFE7971 L_9;
 		L_9 = TableSnapZone_CellToPose_m3DBD463F2244A9216D4B7CD04BE583FD25F15D6B(__this, L_7, L_8, NULL);
 		V_2 = L_9;
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TableSnapZone.cs:44>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TableSnapZone.cs:44>
 		Vector2Int_t69B2886EBAB732D9B880565E18E7568F3DE0CE6A L_10 = V_1;
 		__this->____lastChosenCell = L_10;
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TableSnapZone.cs:45>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TableSnapZone.cs:45>
 		Pose_t06BA69EAA6E9FAF60056D519A87D25F54AFE7971 L_11 = V_2;
 		__this->____lastChosenPose = L_11;
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TableSnapZone.cs:47>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TableSnapZone.cs:47>
 		BlockFootprint_t60D904B81BA8C736F5063F58CFA2ED88428B4CDF* L_12 = ___0_footprint;
 		Pose_t06BA69EAA6E9FAF60056D519A87D25F54AFE7971 L_13 = V_2;
 		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_14 = ___2_objectRoot;
@@ -17601,22 +17760,22 @@ IL_0030:
 		}
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TableSnapZone.cs:48>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TableSnapZone.cs:48>
 		return (bool)0;
 	}
 
 IL_0054:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TableSnapZone.cs:50>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TableSnapZone.cs:50>
 		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_16 = ___2_objectRoot;
 		Pose_t06BA69EAA6E9FAF60056D519A87D25F54AFE7971 L_17 = V_2;
 		TableSnapZone_ApplyPlacement_mF50E49AC9ECE8309723C218F6BA0B52D94D1E7CC(__this, L_16, L_17, NULL);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TableSnapZone.cs:51>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TableSnapZone.cs:51>
 		BlockFootprint_t60D904B81BA8C736F5063F58CFA2ED88428B4CDF* L_18 = ___0_footprint;
 		Vector2Int_t69B2886EBAB732D9B880565E18E7568F3DE0CE6A L_19 = V_1;
 		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_20 = ___2_objectRoot;
 		TableSnapZone_MarkOccupied_m87463125A3816E829C28EB559946198F265FE594(__this, L_18, L_19, L_20, NULL);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TableSnapZone.cs:52>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TableSnapZone.cs:52>
 		return (bool)1;
 	}
 }
@@ -17627,13 +17786,13 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Vector2Int_t69B2886EBAB732D9B880565E18E7568F3
 	int32_t V_1 = 0;
 	int32_t V_2 = 0;
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TableSnapZone.cs:57>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TableSnapZone.cs:57>
 		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_0 = __this->___gridOrigin;
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_1 = ___0_world;
 		NullCheck(L_0);
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_2;
 		L_2 = Transform_InverseTransformPoint_m18CD395144D9C78F30E15A5B82B6670E792DBA5D(L_0, L_1, NULL);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TableSnapZone.cs:59>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TableSnapZone.cs:59>
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_3 = L_2;
 		float L_4 = L_3.___x;
 		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7* L_5 = (Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7*)(&__this->___cellSize);
@@ -17641,25 +17800,25 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Vector2Int_t69B2886EBAB732D9B880565E18E7568F3
 		int32_t L_7;
 		L_7 = Mathf_FloorToInt_m2A39AE881CAEE6B6A4B3BFEF9CA1ED40625F5AB7_inline(((float)(L_4/L_6)), NULL);
 		V_0 = L_7;
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TableSnapZone.cs:60>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TableSnapZone.cs:60>
 		float L_8 = L_3.___z;
 		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7* L_9 = (Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7*)(&__this->___cellSize);
 		float L_10 = L_9->___y;
 		int32_t L_11;
 		L_11 = Mathf_FloorToInt_m2A39AE881CAEE6B6A4B3BFEF9CA1ED40625F5AB7_inline(((float)(L_8/L_10)), NULL);
 		V_1 = L_11;
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TableSnapZone.cs:62>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TableSnapZone.cs:62>
 		int32_t L_12 = V_0;
 		Vector2Int_t69B2886EBAB732D9B880565E18E7568F3DE0CE6A* L_13 = (Vector2Int_t69B2886EBAB732D9B880565E18E7568F3DE0CE6A*)(&__this->___gridSize);
 		int32_t L_14;
 		L_14 = Vector2Int_get_x_mA2CACB1B6E6B5AD0CCC32B2CD2EDCE3ECEB50576_inline(L_13, NULL);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TableSnapZone.cs:63>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TableSnapZone.cs:63>
 		int32_t L_15 = V_1;
 		Vector2Int_t69B2886EBAB732D9B880565E18E7568F3DE0CE6A* L_16 = (Vector2Int_t69B2886EBAB732D9B880565E18E7568F3DE0CE6A*)(&__this->___gridSize);
 		int32_t L_17;
 		L_17 = Vector2Int_get_y_m48454163ECF0B463FB5A16A0C4FC4B14DB0768B3_inline(L_16, NULL);
 		V_2 = ((int32_t)il2cpp_codegen_add(L_15, ((int32_t)(L_17/2))));
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TableSnapZone.cs:65>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TableSnapZone.cs:65>
 		int32_t L_18 = V_2;
 		Vector2Int_t69B2886EBAB732D9B880565E18E7568F3DE0CE6A L_19;
 		memset((&L_19), 0, sizeof(L_19));
@@ -17699,21 +17858,21 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Pose_t06BA69EAA6E9FAF60056D519A87D25F54AFE797
 	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 G_B5_0;
 	memset((&G_B5_0), 0, sizeof(G_B5_0));
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TableSnapZone.cs:70>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TableSnapZone.cs:70>
 		int32_t L_0;
 		L_0 = Vector2Int_get_x_mA2CACB1B6E6B5AD0CCC32B2CD2EDCE3ECEB50576_inline((&___0_cell), NULL);
 		Vector2Int_t69B2886EBAB732D9B880565E18E7568F3DE0CE6A* L_1 = (Vector2Int_t69B2886EBAB732D9B880565E18E7568F3DE0CE6A*)(&__this->___gridSize);
 		int32_t L_2;
 		L_2 = Vector2Int_get_x_mA2CACB1B6E6B5AD0CCC32B2CD2EDCE3ECEB50576_inline(L_1, NULL);
 		V_0 = ((int32_t)il2cpp_codegen_subtract(L_0, ((int32_t)(L_2/2))));
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TableSnapZone.cs:71>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TableSnapZone.cs:71>
 		int32_t L_3;
 		L_3 = Vector2Int_get_y_m48454163ECF0B463FB5A16A0C4FC4B14DB0768B3_inline((&___0_cell), NULL);
 		Vector2Int_t69B2886EBAB732D9B880565E18E7568F3DE0CE6A* L_4 = (Vector2Int_t69B2886EBAB732D9B880565E18E7568F3DE0CE6A*)(&__this->___gridSize);
 		int32_t L_5;
 		L_5 = Vector2Int_get_y_m48454163ECF0B463FB5A16A0C4FC4B14DB0768B3_inline(L_4, NULL);
 		V_1 = ((int32_t)il2cpp_codegen_subtract(L_3, ((int32_t)(L_5/2))));
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TableSnapZone.cs:73>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TableSnapZone.cs:73>
 		int32_t L_6 = V_0;
 		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7* L_7 = (Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7*)(&__this->___cellSize);
 		float L_8 = L_7->___x;
@@ -17722,13 +17881,13 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Pose_t06BA69EAA6E9FAF60056D519A87D25F54AFE797
 		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7* L_11 = (Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7*)(&__this->___cellSize);
 		float L_12 = L_11->___y;
 		Vector3__ctor_m376936E6B999EF1ECBE57D990A386303E2283DE0_inline((&V_2), ((float)il2cpp_codegen_multiply(((float)il2cpp_codegen_add(((float)L_6), (0.5f))), L_8)), L_9, ((float)il2cpp_codegen_multiply(((float)il2cpp_codegen_add(((float)L_10), (0.5f))), L_12)), NULL);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TableSnapZone.cs:74>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TableSnapZone.cs:74>
 		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_13 = __this->___gridOrigin;
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_14 = V_2;
 		NullCheck(L_13);
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_15;
 		L_15 = Transform_TransformPoint_m05BFF013DB830D7BFE44A007703694AE1062EE44(L_13, L_14, NULL);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TableSnapZone.cs:78>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TableSnapZone.cs:78>
 		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_16 = __this->___gridOrigin;
 		NullCheck(L_16);
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_17;
@@ -17741,7 +17900,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Pose_t06BA69EAA6E9FAF60056D519A87D25F54AFE797
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_20;
 		L_20 = Vector3_get_normalized_m736BBF65D5CDA7A18414370D15B4DFCC1E466F07_inline((&V_6), NULL);
 		V_4 = L_20;
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TableSnapZone.cs:79>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TableSnapZone.cs:79>
 		float L_21;
 		L_21 = Vector3_get_sqrMagnitude_m43C27DEC47C4811FB30AB474FF2131A963B66FC8_inline((&V_4), NULL);
 		if ((!(((float)L_21) < ((float)(9.99999975E-05f)))))
@@ -17752,7 +17911,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Pose_t06BA69EAA6E9FAF60056D519A87D25F54AFE797
 		G_B1_0 = L_15;
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TableSnapZone.cs:79>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TableSnapZone.cs:79>
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_22;
 		L_22 = Vector3_get_forward_mAA55A7034304DF8B2152EAD49AE779FC4CA2EB4A_inline(NULL);
 		V_4 = L_22;
@@ -17761,14 +17920,14 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Pose_t06BA69EAA6E9FAF60056D519A87D25F54AFE797
 
 IL_00a2:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TableSnapZone.cs:80>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TableSnapZone.cs:80>
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_23 = V_4;
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_24;
 		L_24 = Vector3_get_up_m128AF3FDC820BF59D5DE86D973E7DE3F20C3AEBA_inline(NULL);
 		Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 L_25;
 		L_25 = Quaternion_LookRotation_mFB02EDC8F733774DFAC3BEA4B4BB265A228F8307_inline(L_23, L_24, NULL);
 		V_5 = L_25;
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TableSnapZone.cs:82>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TableSnapZone.cs:82>
 		BlockFootprint_t60D904B81BA8C736F5063F58CFA2ED88428B4CDF* L_26 = ___1_footprint;
 		NullCheck(L_26);
 		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_27 = L_26->___forwardRef;
@@ -17783,7 +17942,7 @@ IL_00a2:
 		G_B3_0 = G_B2_0;
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TableSnapZone.cs:84>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TableSnapZone.cs:84>
 		Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 L_29 = V_5;
 		BlockFootprint_t60D904B81BA8C736F5063F58CFA2ED88428B4CDF* L_30 = ___1_footprint;
 		NullCheck(L_30);
@@ -17802,7 +17961,7 @@ IL_00a2:
 
 IL_00d8:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TableSnapZone.cs:88>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TableSnapZone.cs:88>
 		Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 L_35 = V_5;
 		V_3 = L_35;
 		G_B5_0 = G_B4_0;
@@ -17810,7 +17969,7 @@ IL_00d8:
 
 IL_00db:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TableSnapZone.cs:90>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TableSnapZone.cs:90>
 		Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 L_36 = V_3;
 		Pose_t06BA69EAA6E9FAF60056D519A87D25F54AFE7971 L_37;
 		memset((&L_37), 0, sizeof(L_37));
@@ -17833,7 +17992,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool TableSnapZone_FindNearestValidCell_m3F29
 	Vector2Int_t69B2886EBAB732D9B880565E18E7568F3DE0CE6A V_6;
 	memset((&V_6), 0, sizeof(V_6));
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TableSnapZone.cs:95>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TableSnapZone.cs:95>
 		BlockFootprint_t60D904B81BA8C736F5063F58CFA2ED88428B4CDF* L_0 = ___0_footprint;
 		Vector2Int_t69B2886EBAB732D9B880565E18E7568F3DE0CE6A L_1 = ___1_desired;
 		bool L_2;
@@ -17844,24 +18003,24 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool TableSnapZone_FindNearestValidCell_m3F29
 		}
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TableSnapZone.cs:97>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TableSnapZone.cs:97>
 		Vector2Int_t69B2886EBAB732D9B880565E18E7568F3DE0CE6A* L_3 = ___2_chosen;
 		Vector2Int_t69B2886EBAB732D9B880565E18E7568F3DE0CE6A L_4 = ___1_desired;
 		*(Vector2Int_t69B2886EBAB732D9B880565E18E7568F3DE0CE6A*)L_3 = L_4;
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TableSnapZone.cs:98>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TableSnapZone.cs:98>
 		return (bool)1;
 	}
 
 IL_0013:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TableSnapZone.cs:101>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TableSnapZone.cs:101>
 		V_0 = 1;
 		goto IL_00f6;
 	}
 
 IL_001a:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TableSnapZone.cs:103>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TableSnapZone.cs:103>
 		int32_t L_5 = V_0;
 		V_1 = ((-L_5));
 		goto IL_007b;
@@ -17869,7 +18028,7 @@ IL_001a:
 
 IL_001f:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TableSnapZone.cs:105>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TableSnapZone.cs:105>
 		int32_t L_6;
 		L_6 = Vector2Int_get_x_mA2CACB1B6E6B5AD0CCC32B2CD2EDCE3ECEB50576_inline((&___1_desired), NULL);
 		int32_t L_7 = V_1;
@@ -17877,7 +18036,7 @@ IL_001f:
 		L_8 = Vector2Int_get_y_m48454163ECF0B463FB5A16A0C4FC4B14DB0768B3_inline((&___1_desired), NULL);
 		int32_t L_9 = V_0;
 		Vector2Int__ctor_mC20D1312133EB8CB63EC11067088B043660F11CE_inline((&V_2), ((int32_t)il2cpp_codegen_add(L_6, L_7)), ((int32_t)il2cpp_codegen_subtract(L_8, L_9)), NULL);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TableSnapZone.cs:106>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TableSnapZone.cs:106>
 		BlockFootprint_t60D904B81BA8C736F5063F58CFA2ED88428B4CDF* L_10 = ___0_footprint;
 		Vector2Int_t69B2886EBAB732D9B880565E18E7568F3DE0CE6A L_11 = V_2;
 		bool L_12;
@@ -17888,17 +18047,17 @@ IL_001f:
 		}
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TableSnapZone.cs:106>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TableSnapZone.cs:106>
 		Vector2Int_t69B2886EBAB732D9B880565E18E7568F3DE0CE6A* L_13 = ___2_chosen;
 		Vector2Int_t69B2886EBAB732D9B880565E18E7568F3DE0CE6A L_14 = V_2;
 		*(Vector2Int_t69B2886EBAB732D9B880565E18E7568F3DE0CE6A*)L_13 = L_14;
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TableSnapZone.cs:106>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TableSnapZone.cs:106>
 		return (bool)1;
 	}
 
 IL_004b:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TableSnapZone.cs:108>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TableSnapZone.cs:108>
 		int32_t L_15;
 		L_15 = Vector2Int_get_x_mA2CACB1B6E6B5AD0CCC32B2CD2EDCE3ECEB50576_inline((&___1_desired), NULL);
 		int32_t L_16 = V_1;
@@ -17906,7 +18065,7 @@ IL_004b:
 		L_17 = Vector2Int_get_y_m48454163ECF0B463FB5A16A0C4FC4B14DB0768B3_inline((&___1_desired), NULL);
 		int32_t L_18 = V_0;
 		Vector2Int__ctor_mC20D1312133EB8CB63EC11067088B043660F11CE_inline((&V_3), ((int32_t)il2cpp_codegen_add(L_15, L_16)), ((int32_t)il2cpp_codegen_add(L_17, L_18)), NULL);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TableSnapZone.cs:109>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TableSnapZone.cs:109>
 		BlockFootprint_t60D904B81BA8C736F5063F58CFA2ED88428B4CDF* L_19 = ___0_footprint;
 		Vector2Int_t69B2886EBAB732D9B880565E18E7568F3DE0CE6A L_20 = V_3;
 		bool L_21;
@@ -17917,24 +18076,24 @@ IL_004b:
 		}
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TableSnapZone.cs:109>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TableSnapZone.cs:109>
 		Vector2Int_t69B2886EBAB732D9B880565E18E7568F3DE0CE6A* L_22 = ___2_chosen;
 		Vector2Int_t69B2886EBAB732D9B880565E18E7568F3DE0CE6A L_23 = V_3;
 		*(Vector2Int_t69B2886EBAB732D9B880565E18E7568F3DE0CE6A*)L_22 = L_23;
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TableSnapZone.cs:109>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TableSnapZone.cs:109>
 		return (bool)1;
 	}
 
 IL_0077:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TableSnapZone.cs:103>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TableSnapZone.cs:103>
 		int32_t L_24 = V_1;
 		V_1 = ((int32_t)il2cpp_codegen_add(L_24, 1));
 	}
 
 IL_007b:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TableSnapZone.cs:103>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TableSnapZone.cs:103>
 		int32_t L_25 = V_1;
 		int32_t L_26 = V_0;
 		if ((((int32_t)L_25) <= ((int32_t)L_26)))
@@ -17943,7 +18102,7 @@ IL_007b:
 		}
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TableSnapZone.cs:112>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TableSnapZone.cs:112>
 		int32_t L_27 = V_0;
 		V_4 = ((int32_t)il2cpp_codegen_add(((-L_27)), 1));
 		goto IL_00eb;
@@ -17951,7 +18110,7 @@ IL_007b:
 
 IL_0087:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TableSnapZone.cs:114>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TableSnapZone.cs:114>
 		int32_t L_28;
 		L_28 = Vector2Int_get_x_mA2CACB1B6E6B5AD0CCC32B2CD2EDCE3ECEB50576_inline((&___1_desired), NULL);
 		int32_t L_29 = V_0;
@@ -17959,7 +18118,7 @@ IL_0087:
 		L_30 = Vector2Int_get_y_m48454163ECF0B463FB5A16A0C4FC4B14DB0768B3_inline((&___1_desired), NULL);
 		int32_t L_31 = V_4;
 		Vector2Int__ctor_mC20D1312133EB8CB63EC11067088B043660F11CE_inline((&V_5), ((int32_t)il2cpp_codegen_subtract(L_28, L_29)), ((int32_t)il2cpp_codegen_add(L_30, L_31)), NULL);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TableSnapZone.cs:115>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TableSnapZone.cs:115>
 		BlockFootprint_t60D904B81BA8C736F5063F58CFA2ED88428B4CDF* L_32 = ___0_footprint;
 		Vector2Int_t69B2886EBAB732D9B880565E18E7568F3DE0CE6A L_33 = V_5;
 		bool L_34;
@@ -17970,17 +18129,17 @@ IL_0087:
 		}
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TableSnapZone.cs:115>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TableSnapZone.cs:115>
 		Vector2Int_t69B2886EBAB732D9B880565E18E7568F3DE0CE6A* L_35 = ___2_chosen;
 		Vector2Int_t69B2886EBAB732D9B880565E18E7568F3DE0CE6A L_36 = V_5;
 		*(Vector2Int_t69B2886EBAB732D9B880565E18E7568F3DE0CE6A*)L_35 = L_36;
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TableSnapZone.cs:115>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TableSnapZone.cs:115>
 		return (bool)1;
 	}
 
 IL_00b6:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TableSnapZone.cs:117>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TableSnapZone.cs:117>
 		int32_t L_37;
 		L_37 = Vector2Int_get_x_mA2CACB1B6E6B5AD0CCC32B2CD2EDCE3ECEB50576_inline((&___1_desired), NULL);
 		int32_t L_38 = V_0;
@@ -17988,7 +18147,7 @@ IL_00b6:
 		L_39 = Vector2Int_get_y_m48454163ECF0B463FB5A16A0C4FC4B14DB0768B3_inline((&___1_desired), NULL);
 		int32_t L_40 = V_4;
 		Vector2Int__ctor_mC20D1312133EB8CB63EC11067088B043660F11CE_inline((&V_6), ((int32_t)il2cpp_codegen_add(L_37, L_38)), ((int32_t)il2cpp_codegen_add(L_39, L_40)), NULL);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TableSnapZone.cs:118>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TableSnapZone.cs:118>
 		BlockFootprint_t60D904B81BA8C736F5063F58CFA2ED88428B4CDF* L_41 = ___0_footprint;
 		Vector2Int_t69B2886EBAB732D9B880565E18E7568F3DE0CE6A L_42 = V_6;
 		bool L_43;
@@ -17999,24 +18158,24 @@ IL_00b6:
 		}
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TableSnapZone.cs:118>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TableSnapZone.cs:118>
 		Vector2Int_t69B2886EBAB732D9B880565E18E7568F3DE0CE6A* L_44 = ___2_chosen;
 		Vector2Int_t69B2886EBAB732D9B880565E18E7568F3DE0CE6A L_45 = V_6;
 		*(Vector2Int_t69B2886EBAB732D9B880565E18E7568F3DE0CE6A*)L_44 = L_45;
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TableSnapZone.cs:118>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TableSnapZone.cs:118>
 		return (bool)1;
 	}
 
 IL_00e5:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TableSnapZone.cs:112>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TableSnapZone.cs:112>
 		int32_t L_46 = V_4;
 		V_4 = ((int32_t)il2cpp_codegen_add(L_46, 1));
 	}
 
 IL_00eb:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TableSnapZone.cs:112>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TableSnapZone.cs:112>
 		int32_t L_47 = V_4;
 		int32_t L_48 = V_0;
 		if ((((int32_t)L_47) <= ((int32_t)((int32_t)il2cpp_codegen_subtract(L_48, 1)))))
@@ -18025,14 +18184,14 @@ IL_00eb:
 		}
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TableSnapZone.cs:101>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TableSnapZone.cs:101>
 		int32_t L_49 = V_0;
 		V_0 = ((int32_t)il2cpp_codegen_add(L_49, 1));
 	}
 
 IL_00f6:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TableSnapZone.cs:101>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TableSnapZone.cs:101>
 		int32_t L_50 = V_0;
 		int32_t L_51 = __this->___searchRadiusCells;
 		if ((((int32_t)L_50) <= ((int32_t)L_51)))
@@ -18041,10 +18200,10 @@ IL_00f6:
 		}
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TableSnapZone.cs:122>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TableSnapZone.cs:122>
 		Vector2Int_t69B2886EBAB732D9B880565E18E7568F3DE0CE6A* L_52 = ___2_chosen;
 		il2cpp_codegen_initobj(L_52, sizeof(Vector2Int_t69B2886EBAB732D9B880565E18E7568F3DE0CE6A));
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TableSnapZone.cs:123>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TableSnapZone.cs:123>
 		return (bool)0;
 	}
 }
@@ -18069,7 +18228,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool TableSnapZone_IsCellValidForFootprint_m2
 	memset((&V_2), 0, sizeof(V_2));
 	bool V_3 = false;
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TableSnapZone.cs:128>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TableSnapZone.cs:128>
 		BlockFootprint_t60D904B81BA8C736F5063F58CFA2ED88428B4CDF* L_0 = ___0_footprint;
 		NullCheck(L_0);
 		List_1_tB56F1028A724D2CE4E84861619D1CF68C68C983D* L_1 = L_0->___Cells;
@@ -18096,17 +18255,17 @@ FINALLY_007b:
 
 IL_000e_1:
 			{
-				//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TableSnapZone.cs:128>
+				//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TableSnapZone.cs:128>
 				Vector2Int_t69B2886EBAB732D9B880565E18E7568F3DE0CE6A L_3;
 				L_3 = Enumerator_get_Current_m87245A61572727EBCD1642C4A2BD99B11CE9FA8A_inline((&V_0), Enumerator_get_Current_m87245A61572727EBCD1642C4A2BD99B11CE9FA8A_RuntimeMethod_var);
 				V_1 = L_3;
-				//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TableSnapZone.cs:130>
+				//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TableSnapZone.cs:130>
 				Vector2Int_t69B2886EBAB732D9B880565E18E7568F3DE0CE6A L_4 = ___1_anchorCell;
 				Vector2Int_t69B2886EBAB732D9B880565E18E7568F3DE0CE6A L_5 = V_1;
 				Vector2Int_t69B2886EBAB732D9B880565E18E7568F3DE0CE6A L_6;
 				L_6 = Vector2Int_op_Addition_m6358133A28BA913D2080FD44472D1FD1CE1AC28F_inline(L_4, L_5, NULL);
 				V_2 = L_6;
-				//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TableSnapZone.cs:131>
+				//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TableSnapZone.cs:131>
 				int32_t L_7;
 				L_7 = Vector2Int_get_x_mA2CACB1B6E6B5AD0CCC32B2CD2EDCE3ECEB50576_inline((&V_2), NULL);
 				if ((((int32_t)L_7) < ((int32_t)0)))
@@ -18147,14 +18306,14 @@ IL_000e_1:
 
 IL_005a_1:
 			{
-				//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TableSnapZone.cs:131>
+				//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TableSnapZone.cs:131>
 				V_3 = (bool)0;
 				goto IL_008b;
 			}
 
 IL_005e_1:
 			{
-				//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TableSnapZone.cs:132>
+				//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TableSnapZone.cs:132>
 				Dictionary_2_t7B7CB436C9FD4D48D6F62849664D7E373D6E3D73* L_15 = __this->___occupied;
 				Vector2Int_t69B2886EBAB732D9B880565E18E7568F3DE0CE6A L_16 = V_2;
 				NullCheck(L_15);
@@ -18166,14 +18325,14 @@ IL_005e_1:
 				}
 			}
 			{
-				//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TableSnapZone.cs:132>
+				//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TableSnapZone.cs:132>
 				V_3 = (bool)0;
 				goto IL_008b;
 			}
 
 IL_0070_1:
 			{
-				//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TableSnapZone.cs:128>
+				//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TableSnapZone.cs:128>
 				bool L_18;
 				L_18 = Enumerator_MoveNext_mD6D16710D40F62D081A4973E4D8CA1614D1482B5((&V_0), Enumerator_MoveNext_mD6D16710D40F62D081A4973E4D8CA1614D1482B5_RuntimeMethod_var);
 				if (L_18)
@@ -18193,13 +18352,13 @@ IL_0070_1:
 
 IL_0089:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TableSnapZone.cs:134>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TableSnapZone.cs:134>
 		return (bool)1;
 	}
 
 IL_008b:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TableSnapZone.cs:135>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TableSnapZone.cs:135>
 		bool L_19 = V_3;
 		return L_19;
 	}
@@ -18220,7 +18379,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool TableSnapZone_PassOverlapCheck_mD4FCC4E8
 	int32_t V_2 = 0;
 	Collider_t1CC3163924FCD6C4CC2E816373A929C1E3D55E76* V_3 = NULL;
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TableSnapZone.cs:139>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TableSnapZone.cs:139>
 		BlockFootprint_t60D904B81BA8C736F5063F58CFA2ED88428B4CDF* L_0 = ___0_footprint;
 		NullCheck(L_0);
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_1 = L_0->___WorldHalfExtents;
@@ -18228,13 +18387,13 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool TableSnapZone_PassOverlapCheck_mD4FCC4E8
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_3;
 		L_3 = Vector3_op_Multiply_m87BA7C578F96C8E49BB07088DAAC4649F83B0353_inline(L_1, L_2, NULL);
 		V_0 = L_3;
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TableSnapZone.cs:141>
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TableSnapZone.cs:142>
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TableSnapZone.cs:143>
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TableSnapZone.cs:144>
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TableSnapZone.cs:145>
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TableSnapZone.cs:146>
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TableSnapZone.cs:147>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TableSnapZone.cs:141>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TableSnapZone.cs:142>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TableSnapZone.cs:143>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TableSnapZone.cs:144>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TableSnapZone.cs:145>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TableSnapZone.cs:146>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TableSnapZone.cs:147>
 		Pose_t06BA69EAA6E9FAF60056D519A87D25F54AFE7971 L_4 = ___1_pose;
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_5 = L_4.___position;
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_6 = V_0;
@@ -18246,7 +18405,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool TableSnapZone_PassOverlapCheck_mD4FCC4E8
 		il2cpp_codegen_runtime_class_init_inline(Physics_t1244C2983AEAFA149425AFFC3DF53BC91C18ED56_il2cpp_TypeInfo_var);
 		ColliderU5BU5D_t94A9D70F63D095AFF2A9B4613012A5F7F3141787* L_11;
 		L_11 = Physics_OverlapBox_mC38B579DEFD0341FCAEF8B8EC8B1E37A2C12366D(L_5, L_6, L_8, L_10, 1, NULL);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TableSnapZone.cs:149>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TableSnapZone.cs:149>
 		V_1 = L_11;
 		V_2 = 0;
 		goto IL_005a;
@@ -18254,14 +18413,14 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool TableSnapZone_PassOverlapCheck_mD4FCC4E8
 
 IL_0035:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TableSnapZone.cs:149>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TableSnapZone.cs:149>
 		ColliderU5BU5D_t94A9D70F63D095AFF2A9B4613012A5F7F3141787* L_12 = V_1;
 		int32_t L_13 = V_2;
 		NullCheck(L_12);
 		int32_t L_14 = L_13;
 		Collider_t1CC3163924FCD6C4CC2E816373A929C1E3D55E76* L_15 = (L_12)->GetAt(static_cast<il2cpp_array_size_t>(L_14));
 		V_3 = L_15;
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TableSnapZone.cs:151>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TableSnapZone.cs:151>
 		Collider_t1CC3163924FCD6C4CC2E816373A929C1E3D55E76* L_16 = V_3;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_17;
@@ -18272,7 +18431,7 @@ IL_0035:
 		}
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TableSnapZone.cs:152>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TableSnapZone.cs:152>
 		Collider_t1CC3163924FCD6C4CC2E816373A929C1E3D55E76* L_18 = V_3;
 		NullCheck(L_18);
 		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_19;
@@ -18290,7 +18449,7 @@ IL_0035:
 		}
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TableSnapZone.cs:153>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TableSnapZone.cs:153>
 		return (bool)0;
 	}
 
@@ -18302,7 +18461,7 @@ IL_0056:
 
 IL_005a:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TableSnapZone.cs:149>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TableSnapZone.cs:149>
 		int32_t L_24 = V_2;
 		ColliderU5BU5D_t94A9D70F63D095AFF2A9B4613012A5F7F3141787* L_25 = V_1;
 		NullCheck(L_25);
@@ -18312,7 +18471,7 @@ IL_005a:
 		}
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TableSnapZone.cs:155>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TableSnapZone.cs:155>
 		return (bool)1;
 	}
 }
@@ -18328,7 +18487,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TableSnapZone_ApplyPlacement_mF50E49AC9E
 	}
 	Rigidbody_t268697F5A994213ED97393309870968BC1C7393C* V_0 = NULL;
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TableSnapZone.cs:160>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TableSnapZone.cs:160>
 		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_0 = ___0_root;
 		Pose_t06BA69EAA6E9FAF60056D519A87D25F54AFE7971 L_1 = ___1_pose;
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_2 = L_1.___position;
@@ -18336,13 +18495,13 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TableSnapZone_ApplyPlacement_mF50E49AC9E
 		Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 L_4 = L_3.___rotation;
 		NullCheck(L_0);
 		Transform_SetPositionAndRotation_m418859BF59086EEAA084FFD6F258A43FAB408F5A(L_0, L_2, L_4, NULL);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TableSnapZone.cs:162>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TableSnapZone.cs:162>
 		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_5 = ___0_root;
 		NullCheck(L_5);
 		Rigidbody_t268697F5A994213ED97393309870968BC1C7393C* L_6;
 		L_6 = Component_GetComponent_TisRigidbody_t268697F5A994213ED97393309870968BC1C7393C_m4B5CAD64B52D153BEA96432633CA9A45FA523DD8(L_5, Component_GetComponent_TisRigidbody_t268697F5A994213ED97393309870968BC1C7393C_m4B5CAD64B52D153BEA96432633CA9A45FA523DD8_RuntimeMethod_var);
 		V_0 = L_6;
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TableSnapZone.cs:163>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TableSnapZone.cs:163>
 		Rigidbody_t268697F5A994213ED97393309870968BC1C7393C* L_7 = V_0;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_8;
@@ -18353,19 +18512,19 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TableSnapZone_ApplyPlacement_mF50E49AC9E
 		}
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TableSnapZone.cs:165>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TableSnapZone.cs:165>
 		Rigidbody_t268697F5A994213ED97393309870968BC1C7393C* L_9 = V_0;
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_10;
 		L_10 = Vector3_get_zero_m0C1249C3F25B1C70EAD3CC8B31259975A457AE39_inline(NULL);
 		NullCheck(L_9);
 		Rigidbody_set_linearVelocity_m29AE03D5FC079EAD4202FCF72E2AEBDC19363985(L_9, L_10, NULL);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TableSnapZone.cs:166>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TableSnapZone.cs:166>
 		Rigidbody_t268697F5A994213ED97393309870968BC1C7393C* L_11 = V_0;
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_12;
 		L_12 = Vector3_get_zero_m0C1249C3F25B1C70EAD3CC8B31259975A457AE39_inline(NULL);
 		NullCheck(L_11);
 		Rigidbody_set_angularVelocity_m23266B4E52BF0D2E65CC984AC73CC40B8D4A27E0(L_11, L_12, NULL);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TableSnapZone.cs:167>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TableSnapZone.cs:167>
 		Rigidbody_t268697F5A994213ED97393309870968BC1C7393C* L_13 = V_0;
 		NullCheck(L_13);
 		Rigidbody_set_isKinematic_m6C3FD3EA358DADA3B191F2449CF1C4F8B22695ED(L_13, (bool)1, NULL);
@@ -18373,7 +18532,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TableSnapZone_ApplyPlacement_mF50E49AC9E
 
 IL_003e:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TableSnapZone.cs:169>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TableSnapZone.cs:169>
 		return;
 	}
 }
@@ -18395,7 +18554,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TableSnapZone_MarkOccupied_m87463125A381
 	Vector2Int_t69B2886EBAB732D9B880565E18E7568F3DE0CE6A V_1;
 	memset((&V_1), 0, sizeof(V_1));
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TableSnapZone.cs:173>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TableSnapZone.cs:173>
 		BlockFootprint_t60D904B81BA8C736F5063F58CFA2ED88428B4CDF* L_0 = ___0_footprint;
 		NullCheck(L_0);
 		List_1_tB56F1028A724D2CE4E84861619D1CF68C68C983D* L_1 = L_0->___Cells;
@@ -18422,11 +18581,11 @@ FINALLY_0034:
 
 IL_000e_1:
 			{
-				//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TableSnapZone.cs:173>
+				//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TableSnapZone.cs:173>
 				Vector2Int_t69B2886EBAB732D9B880565E18E7568F3DE0CE6A L_3;
 				L_3 = Enumerator_get_Current_m87245A61572727EBCD1642C4A2BD99B11CE9FA8A_inline((&V_0), Enumerator_get_Current_m87245A61572727EBCD1642C4A2BD99B11CE9FA8A_RuntimeMethod_var);
 				V_1 = L_3;
-				//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TableSnapZone.cs:174>
+				//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TableSnapZone.cs:174>
 				Dictionary_2_t7B7CB436C9FD4D48D6F62849664D7E373D6E3D73* L_4 = __this->___occupied;
 				Vector2Int_t69B2886EBAB732D9B880565E18E7568F3DE0CE6A L_5 = ___1_anchorCell;
 				Vector2Int_t69B2886EBAB732D9B880565E18E7568F3DE0CE6A L_6 = V_1;
@@ -18439,7 +18598,7 @@ IL_000e_1:
 
 IL_0029_1:
 			{
-				//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TableSnapZone.cs:173>
+				//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TableSnapZone.cs:173>
 				bool L_9;
 				L_9 = Enumerator_MoveNext_mD6D16710D40F62D081A4973E4D8CA1614D1482B5((&V_0), Enumerator_MoveNext_mD6D16710D40F62D081A4973E4D8CA1614D1482B5_RuntimeMethod_var);
 				if (L_9)
@@ -18459,7 +18618,7 @@ IL_0029_1:
 
 IL_0042:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TableSnapZone.cs:175>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TableSnapZone.cs:175>
 		return;
 	}
 }
@@ -18496,11 +18655,11 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TableSnapZone_Unmark_m0F25F968ECCA4B654D
 	Vector2Int_t69B2886EBAB732D9B880565E18E7568F3DE0CE6A V_4;
 	memset((&V_4), 0, sizeof(V_4));
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TableSnapZone.cs:179>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TableSnapZone.cs:179>
 		List_1_tB56F1028A724D2CE4E84861619D1CF68C68C983D* L_0 = (List_1_tB56F1028A724D2CE4E84861619D1CF68C68C983D*)il2cpp_codegen_object_new(List_1_tB56F1028A724D2CE4E84861619D1CF68C68C983D_il2cpp_TypeInfo_var);
 		List_1__ctor_mE1D9FD9DA1EF2CAC4F99EF4E013F05BB8C3507EF(L_0, List_1__ctor_mE1D9FD9DA1EF2CAC4F99EF4E013F05BB8C3507EF_RuntimeMethod_var);
 		V_0 = L_0;
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TableSnapZone.cs:180>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TableSnapZone.cs:180>
 		Dictionary_2_t7B7CB436C9FD4D48D6F62849664D7E373D6E3D73* L_1 = __this->___occupied;
 		NullCheck(L_1);
 		Enumerator_tF9ACF4FDF4299F761BE7100881C080B51290AC30 L_2;
@@ -18525,11 +18684,11 @@ FINALLY_0043:
 
 IL_0014_1:
 			{
-				//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TableSnapZone.cs:180>
+				//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TableSnapZone.cs:180>
 				KeyValuePair_2_tBE27BD77834962C63EE93C49DABF535D8CAD369C L_3;
 				L_3 = Enumerator_get_Current_m936C5925B5B5127245BDA4830B76D4A22B62810D_inline((&V_1), Enumerator_get_Current_m936C5925B5B5127245BDA4830B76D4A22B62810D_RuntimeMethod_var);
 				V_2 = L_3;
-				//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TableSnapZone.cs:181>
+				//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TableSnapZone.cs:181>
 				Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_4;
 				L_4 = KeyValuePair_2_get_Value_mC57FA70E9280F333E8D51111714B824E97B548E8_inline((&V_2), KeyValuePair_2_get_Value_mC57FA70E9280F333E8D51111714B824E97B548E8_RuntimeMethod_var);
 				Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_5 = ___0_root;
@@ -18542,7 +18701,7 @@ IL_0014_1:
 				}
 			}
 			{
-				//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TableSnapZone.cs:181>
+				//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TableSnapZone.cs:181>
 				List_1_tB56F1028A724D2CE4E84861619D1CF68C68C983D* L_7 = V_0;
 				Vector2Int_t69B2886EBAB732D9B880565E18E7568F3DE0CE6A L_8;
 				L_8 = KeyValuePair_2_get_Key_m1BF261F3EB3D4754DF2D57DE6475A44B99596EFD_inline((&V_2), KeyValuePair_2_get_Key_m1BF261F3EB3D4754DF2D57DE6475A44B99596EFD_RuntimeMethod_var);
@@ -18552,7 +18711,7 @@ IL_0014_1:
 
 IL_0038_1:
 			{
-				//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TableSnapZone.cs:180>
+				//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TableSnapZone.cs:180>
 				bool L_9;
 				L_9 = Enumerator_MoveNext_m6D240DEDEA0559B7FE9834F1037EFBBE170D1C7F((&V_1), Enumerator_MoveNext_m6D240DEDEA0559B7FE9834F1037EFBBE170D1C7F_RuntimeMethod_var);
 				if (L_9)
@@ -18572,7 +18731,7 @@ IL_0038_1:
 
 IL_0051:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TableSnapZone.cs:182>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TableSnapZone.cs:182>
 		List_1_tB56F1028A724D2CE4E84861619D1CF68C68C983D* L_10 = V_0;
 		NullCheck(L_10);
 		Enumerator_t4BD1B5394A2E9960562CC364C2CCE4FCBD1AC258 L_11;
@@ -18597,11 +18756,11 @@ FINALLY_007c:
 
 IL_005a_1:
 			{
-				//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TableSnapZone.cs:182>
+				//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TableSnapZone.cs:182>
 				Vector2Int_t69B2886EBAB732D9B880565E18E7568F3DE0CE6A L_12;
 				L_12 = Enumerator_get_Current_m87245A61572727EBCD1642C4A2BD99B11CE9FA8A_inline((&V_3), Enumerator_get_Current_m87245A61572727EBCD1642C4A2BD99B11CE9FA8A_RuntimeMethod_var);
 				V_4 = L_12;
-				//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TableSnapZone.cs:182>
+				//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TableSnapZone.cs:182>
 				Dictionary_2_t7B7CB436C9FD4D48D6F62849664D7E373D6E3D73* L_13 = __this->___occupied;
 				Vector2Int_t69B2886EBAB732D9B880565E18E7568F3DE0CE6A L_14 = V_4;
 				NullCheck(L_13);
@@ -18611,7 +18770,7 @@ IL_005a_1:
 
 IL_0071_1:
 			{
-				//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TableSnapZone.cs:182>
+				//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TableSnapZone.cs:182>
 				bool L_16;
 				L_16 = Enumerator_MoveNext_mD6D16710D40F62D081A4973E4D8CA1614D1482B5((&V_3), Enumerator_MoveNext_mD6D16710D40F62D081A4973E4D8CA1614D1482B5_RuntimeMethod_var);
 				if (L_16)
@@ -18631,7 +18790,7 @@ IL_0071_1:
 
 IL_008a:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TableSnapZone.cs:183>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TableSnapZone.cs:183>
 		return;
 	}
 }
@@ -18664,7 +18823,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TableSnapZone_OnDrawGizmosSelected_m86B1
 	{
 		(&V_0)->___U3CU3E4__this = __this;
 		Il2CppCodeGenWriteBarrier((void**)(&(&V_0)->___U3CU3E4__this), (void*)__this);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TableSnapZone.cs:188>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TableSnapZone.cs:188>
 		bool L_0 = __this->___drawGridGizmos;
 		if (!L_0)
 		{
@@ -18684,44 +18843,44 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TableSnapZone_OnDrawGizmosSelected_m86B1
 
 IL_001e:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TableSnapZone.cs:188>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TableSnapZone.cs:188>
 		return;
 	}
 
 IL_001f:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TableSnapZone.cs:190>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TableSnapZone.cs:190>
 		(&V_0)->___yLift = (0.00200000009f);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TableSnapZone.cs:192>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TableSnapZone.cs:192>
 		Vector2Int_t69B2886EBAB732D9B880565E18E7568F3DE0CE6A* L_3 = (Vector2Int_t69B2886EBAB732D9B880565E18E7568F3DE0CE6A*)(&__this->___gridSize);
 		int32_t L_4;
 		L_4 = Vector2Int_get_x_mA2CACB1B6E6B5AD0CCC32B2CD2EDCE3ECEB50576_inline(L_3, NULL);
 		V_1 = ((int32_t)(L_4/2));
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TableSnapZone.cs:193>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TableSnapZone.cs:193>
 		Vector2Int_t69B2886EBAB732D9B880565E18E7568F3DE0CE6A* L_5 = (Vector2Int_t69B2886EBAB732D9B880565E18E7568F3DE0CE6A*)(&__this->___gridSize);
 		int32_t L_6;
 		L_6 = Vector2Int_get_y_m48454163ECF0B463FB5A16A0C4FC4B14DB0768B3_inline(L_5, NULL);
 		V_2 = ((int32_t)(L_6/2));
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TableSnapZone.cs:204>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TableSnapZone.cs:204>
 		V_3 = 0;
 		goto IL_00ab;
 	}
 
 IL_004b:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TableSnapZone.cs:206>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TableSnapZone.cs:206>
 		int32_t L_7 = V_3;
 		int32_t L_8 = V_1;
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TableSnapZone.cs:207>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TableSnapZone.cs:207>
 		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7* L_9 = (Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7*)(&__this->___cellSize);
 		float L_10 = L_9->___x;
 		V_4 = ((float)il2cpp_codegen_multiply(((float)((int32_t)il2cpp_codegen_subtract(L_7, L_8))), L_10));
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TableSnapZone.cs:208>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TableSnapZone.cs:208>
 		int32_t L_11 = V_2;
 		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7* L_12 = (Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7*)(&__this->___cellSize);
 		float L_13 = L_12->___y;
 		V_5 = ((float)il2cpp_codegen_multiply(((float)((-L_11))), L_13));
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TableSnapZone.cs:209>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TableSnapZone.cs:209>
 		Vector2Int_t69B2886EBAB732D9B880565E18E7568F3DE0CE6A* L_14 = (Vector2Int_t69B2886EBAB732D9B880565E18E7568F3DE0CE6A*)(&__this->___gridSize);
 		int32_t L_15;
 		L_15 = Vector2Int_get_y_m48454163ECF0B463FB5A16A0C4FC4B14DB0768B3_inline(L_14, NULL);
@@ -18729,7 +18888,7 @@ IL_004b:
 		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7* L_17 = (Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7*)(&__this->___cellSize);
 		float L_18 = L_17->___y;
 		V_6 = ((float)il2cpp_codegen_multiply(((float)((int32_t)il2cpp_codegen_subtract(L_15, L_16))), L_18));
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TableSnapZone.cs:211>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TableSnapZone.cs:211>
 		float L_19 = V_4;
 		float L_20 = V_5;
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_21;
@@ -18739,14 +18898,14 @@ IL_004b:
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_24;
 		L_24 = TableSnapZone_U3COnDrawGizmosSelectedU3Eg__OriginToWorldU7C26_0_mCF37949CF2113422C85CE234ECA7ED6E40AA21EF(__this, L_22, L_23, (&V_0), NULL);
 		Gizmos_DrawLine_mB139054F55D615637A39A3127AADB16043387F8A(L_21, L_24, NULL);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TableSnapZone.cs:204>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TableSnapZone.cs:204>
 		int32_t L_25 = V_3;
 		V_3 = ((int32_t)il2cpp_codegen_add(L_25, 1));
 	}
 
 IL_00ab:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TableSnapZone.cs:204>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TableSnapZone.cs:204>
 		int32_t L_26 = V_3;
 		Vector2Int_t69B2886EBAB732D9B880565E18E7568F3DE0CE6A* L_27 = (Vector2Int_t69B2886EBAB732D9B880565E18E7568F3DE0CE6A*)(&__this->___gridSize);
 		int32_t L_28;
@@ -18757,26 +18916,26 @@ IL_00ab:
 		}
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TableSnapZone.cs:214>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TableSnapZone.cs:214>
 		V_7 = 0;
 		goto IL_0121;
 	}
 
 IL_00be:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TableSnapZone.cs:216>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TableSnapZone.cs:216>
 		int32_t L_29 = V_7;
 		int32_t L_30 = V_2;
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TableSnapZone.cs:217>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TableSnapZone.cs:217>
 		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7* L_31 = (Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7*)(&__this->___cellSize);
 		float L_32 = L_31->___y;
 		V_8 = ((float)il2cpp_codegen_multiply(((float)((int32_t)il2cpp_codegen_subtract(L_29, L_30))), L_32));
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TableSnapZone.cs:218>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TableSnapZone.cs:218>
 		int32_t L_33 = V_1;
 		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7* L_34 = (Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7*)(&__this->___cellSize);
 		float L_35 = L_34->___x;
 		V_9 = ((float)il2cpp_codegen_multiply(((float)((-L_33))), L_35));
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TableSnapZone.cs:219>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TableSnapZone.cs:219>
 		Vector2Int_t69B2886EBAB732D9B880565E18E7568F3DE0CE6A* L_36 = (Vector2Int_t69B2886EBAB732D9B880565E18E7568F3DE0CE6A*)(&__this->___gridSize);
 		int32_t L_37;
 		L_37 = Vector2Int_get_x_mA2CACB1B6E6B5AD0CCC32B2CD2EDCE3ECEB50576_inline(L_36, NULL);
@@ -18784,7 +18943,7 @@ IL_00be:
 		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7* L_39 = (Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7*)(&__this->___cellSize);
 		float L_40 = L_39->___x;
 		V_10 = ((float)il2cpp_codegen_multiply(((float)((int32_t)il2cpp_codegen_subtract(L_37, L_38))), L_40));
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TableSnapZone.cs:221>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TableSnapZone.cs:221>
 		float L_41 = V_9;
 		float L_42 = V_8;
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_43;
@@ -18794,14 +18953,14 @@ IL_00be:
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_46;
 		L_46 = TableSnapZone_U3COnDrawGizmosSelectedU3Eg__OriginToWorldU7C26_0_mCF37949CF2113422C85CE234ECA7ED6E40AA21EF(__this, L_44, L_45, (&V_0), NULL);
 		Gizmos_DrawLine_mB139054F55D615637A39A3127AADB16043387F8A(L_43, L_46, NULL);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TableSnapZone.cs:214>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TableSnapZone.cs:214>
 		int32_t L_47 = V_7;
 		V_7 = ((int32_t)il2cpp_codegen_add(L_47, 1));
 	}
 
 IL_0121:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TableSnapZone.cs:214>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TableSnapZone.cs:214>
 		int32_t L_48 = V_7;
 		Vector2Int_t69B2886EBAB732D9B880565E18E7568F3DE0CE6A* L_49 = (Vector2Int_t69B2886EBAB732D9B880565E18E7568F3DE0CE6A*)(&__this->___gridSize);
 		int32_t L_50;
@@ -18812,7 +18971,7 @@ IL_0121:
 		}
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TableSnapZone.cs:225>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TableSnapZone.cs:225>
 		bool L_51 = __this->___drawCellCenters;
 		if (!L_51)
 		{
@@ -18820,56 +18979,56 @@ IL_0121:
 		}
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TableSnapZone.cs:227>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TableSnapZone.cs:227>
 		V_11 = 0;
 		goto IL_01b7;
 	}
 
 IL_0140:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TableSnapZone.cs:228>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TableSnapZone.cs:228>
 		V_12 = 0;
 		goto IL_01a2;
 	}
 
 IL_0145:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TableSnapZone.cs:230>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TableSnapZone.cs:230>
 		int32_t L_52 = V_11;
 		int32_t L_53 = V_1;
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TableSnapZone.cs:231>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TableSnapZone.cs:231>
 		int32_t L_54 = V_12;
 		int32_t L_55 = V_2;
 		V_13 = ((int32_t)il2cpp_codegen_subtract(L_54, L_55));
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TableSnapZone.cs:233>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TableSnapZone.cs:233>
 		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7* L_56 = (Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7*)(&__this->___cellSize);
 		float L_57 = L_56->___x;
 		V_14 = ((float)il2cpp_codegen_multiply(((float)il2cpp_codegen_add(((float)((int32_t)il2cpp_codegen_subtract(L_52, L_53))), (0.5f))), L_57));
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TableSnapZone.cs:234>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TableSnapZone.cs:234>
 		int32_t L_58 = V_13;
 		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7* L_59 = (Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7*)(&__this->___cellSize);
 		float L_60 = L_59->___y;
 		V_15 = ((float)il2cpp_codegen_multiply(((float)il2cpp_codegen_add(((float)L_58), (0.5f))), L_60));
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TableSnapZone.cs:236>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TableSnapZone.cs:236>
 		float L_61 = V_14;
 		float L_62 = V_15;
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_63;
 		L_63 = TableSnapZone_U3COnDrawGizmosSelectedU3Eg__OriginToWorldU7C26_0_mCF37949CF2113422C85CE234ECA7ED6E40AA21EF(__this, L_61, L_62, (&V_0), NULL);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TableSnapZone.cs:237>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TableSnapZone.cs:237>
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_64;
 		L_64 = Vector3_get_one_mC9B289F1E15C42C597180C9FE6FB492495B51D02_inline(NULL);
 		float L_65 = __this->___centerDotRadius;
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_66;
 		L_66 = Vector3_op_Multiply_m87BA7C578F96C8E49BB07088DAAC4649F83B0353_inline(L_64, L_65, NULL);
 		Gizmos_DrawCube_m4417EAEA479EF4AD52445810D840BA8FCBC6EF3F(L_63, L_66, NULL);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TableSnapZone.cs:228>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TableSnapZone.cs:228>
 		int32_t L_67 = V_12;
 		V_12 = ((int32_t)il2cpp_codegen_add(L_67, 1));
 	}
 
 IL_01a2:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TableSnapZone.cs:228>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TableSnapZone.cs:228>
 		int32_t L_68 = V_12;
 		Vector2Int_t69B2886EBAB732D9B880565E18E7568F3DE0CE6A* L_69 = (Vector2Int_t69B2886EBAB732D9B880565E18E7568F3DE0CE6A*)(&__this->___gridSize);
 		int32_t L_70;
@@ -18880,14 +19039,14 @@ IL_01a2:
 		}
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TableSnapZone.cs:227>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TableSnapZone.cs:227>
 		int32_t L_71 = V_11;
 		V_11 = ((int32_t)il2cpp_codegen_add(L_71, 1));
 	}
 
 IL_01b7:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TableSnapZone.cs:227>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TableSnapZone.cs:227>
 		int32_t L_72 = V_11;
 		Vector2Int_t69B2886EBAB732D9B880565E18E7568F3DE0CE6A* L_73 = (Vector2Int_t69B2886EBAB732D9B880565E18E7568F3DE0CE6A*)(&__this->___gridSize);
 		int32_t L_74;
@@ -18900,7 +19059,7 @@ IL_01b7:
 
 IL_01c9:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TableSnapZone.cs:242>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TableSnapZone.cs:242>
 		bool L_75 = __this->___drawLastPlacement;
 		if (!L_75)
 		{
@@ -18915,16 +19074,16 @@ IL_01c9:
 		}
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TableSnapZone.cs:244>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TableSnapZone.cs:244>
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_77 = __this->____lastDesiredWorld;
 		float L_78 = __this->___centerDotRadius;
 		Gizmos_DrawSphere_mC7B2862BBDB3141A63B83F0F1E56E30101D4F472(L_77, ((float)il2cpp_codegen_multiply(L_78, (1.20000005f))), NULL);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TableSnapZone.cs:245>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TableSnapZone.cs:245>
 		Pose_t06BA69EAA6E9FAF60056D519A87D25F54AFE7971* L_79 = (Pose_t06BA69EAA6E9FAF60056D519A87D25F54AFE7971*)(&__this->____lastChosenPose);
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_80 = L_79->___position;
 		float L_81 = __this->___centerDotRadius;
 		Gizmos_DrawSphere_mC7B2862BBDB3141A63B83F0F1E56E30101D4F472(L_80, ((float)il2cpp_codegen_multiply(L_81, (1.79999995f))), NULL);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TableSnapZone.cs:246>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TableSnapZone.cs:246>
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_82 = __this->____lastDesiredWorld;
 		Pose_t06BA69EAA6E9FAF60056D519A87D25F54AFE7971* L_83 = (Pose_t06BA69EAA6E9FAF60056D519A87D25F54AFE7971*)(&__this->____lastChosenPose);
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_84 = L_83->___position;
@@ -18933,7 +19092,7 @@ IL_01c9:
 
 IL_0222:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TableSnapZone.cs:248>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TableSnapZone.cs:248>
 		return;
 	}
 }
@@ -18948,32 +19107,32 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TableSnapZone__ctor_m2082887F9BEC4582068
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TableSnapZone.cs:8>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TableSnapZone.cs:8>
 		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_0;
 		memset((&L_0), 0, sizeof(L_0));
 		Vector2__ctor_m9525B79969AFFE3254B303A40997A56DEEB6F548_inline((&L_0), (0.100000001f), (0.100000001f), NULL);
 		__this->___cellSize = L_0;
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TableSnapZone.cs:9>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TableSnapZone.cs:9>
 		Vector2Int_t69B2886EBAB732D9B880565E18E7568F3DE0CE6A L_1;
 		memset((&L_1), 0, sizeof(L_1));
 		Vector2Int__ctor_mC20D1312133EB8CB63EC11067088B043660F11CE_inline((&L_1), ((int32_t)10), ((int32_t)10), NULL);
 		__this->___gridSize = L_1;
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TableSnapZone.cs:11>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TableSnapZone.cs:11>
 		__this->___searchRadiusCells = 4;
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TableSnapZone.cs:15>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TableSnapZone.cs:15>
 		__this->___overlapShrink = (0.980000019f);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TableSnapZone.cs:17>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TableSnapZone.cs:17>
 		Dictionary_2_t7B7CB436C9FD4D48D6F62849664D7E373D6E3D73* L_2 = (Dictionary_2_t7B7CB436C9FD4D48D6F62849664D7E373D6E3D73*)il2cpp_codegen_object_new(Dictionary_2_t7B7CB436C9FD4D48D6F62849664D7E373D6E3D73_il2cpp_TypeInfo_var);
 		Dictionary_2__ctor_mD1F96422EC83B510F11ADF3FEA9E60B90157CD24(L_2, Dictionary_2__ctor_mD1F96422EC83B510F11ADF3FEA9E60B90157CD24_RuntimeMethod_var);
 		__this->___occupied = L_2;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___occupied), (void*)L_2);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TableSnapZone.cs:20>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TableSnapZone.cs:20>
 		__this->___drawGridGizmos = (bool)1;
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TableSnapZone.cs:21>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TableSnapZone.cs:21>
 		__this->___drawCellCenters = (bool)1;
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TableSnapZone.cs:22>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TableSnapZone.cs:22>
 		__this->___centerDotRadius = (0.00999999978f);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TableSnapZone.cs:23>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TableSnapZone.cs:23>
 		__this->___drawLastPlacement = (bool)1;
 		MonoBehaviour__ctor_m592DB0105CA0BC97AA1C5F4AD27B12D68A3B7C1E(__this, NULL);
 		return;
@@ -18987,19 +19146,19 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A
 	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 V_1;
 	memset((&V_1), 0, sizeof(V_1));
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TableSnapZone.cs:197>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TableSnapZone.cs:197>
 		float L_0 = ___0_lx;
 		float L_1 = __this->___snapY;
 		float L_2 = ___1_lz;
 		Vector3__ctor_m376936E6B999EF1ECBE57D990A386303E2283DE0_inline((&V_0), L_0, L_1, L_2, NULL);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TableSnapZone.cs:198>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TableSnapZone.cs:198>
 		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_3 = __this->___gridOrigin;
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_4 = V_0;
 		NullCheck(L_3);
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_5;
 		L_5 = Transform_TransformPoint_m05BFF013DB830D7BFE44A007703694AE1062EE44(L_3, L_4, NULL);
 		V_1 = L_5;
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TableSnapZone.cs:199>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TableSnapZone.cs:199>
 		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_6 = __this->___gridOrigin;
 		NullCheck(L_6);
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_7;
@@ -19009,7 +19168,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A
 		U3CU3Ec__DisplayClass26_0_t402B6D0915D51C28A5C54A39319D8D024BBB6590* L_10 = ___2_p;
 		float L_11 = L_10->___yLift;
 		(&V_1)->___y = ((float)il2cpp_codegen_add(((float)il2cpp_codegen_add(L_8, L_9)), L_11));
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TableSnapZone.cs:200>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TableSnapZone.cs:200>
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_12 = V_1;
 		return L_12;
 	}
@@ -19034,9 +19193,9 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TeamBoardManager_Start_m75FEB9FADE43F27185DD5DF00ECBB659D58C8CDF (TeamBoardManager_t624F77E97005E05F0151CAF7119EB2B315DDA599* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TeamBoardManager.cs:50>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TeamBoardManager.cs:50>
 		TeamBoardManager_RefreshUI_m8322A9BC2D081F01BD9D4EB48B5868DC6E10E4B2(__this, NULL);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TeamBoardManager.cs:51>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TeamBoardManager.cs:51>
 		return;
 	}
 }
@@ -19044,10 +19203,10 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TeamBoardManager_Start_m75FEB9FADE43F271
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TeamBoardManager_SelectBlueChef_m97AA2E006244EA8AF1B4BED318A9FFC60F427AC6 (TeamBoardManager_t624F77E97005E05F0151CAF7119EB2B315DDA599* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TeamBoardManager.cs:59>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TeamBoardManager.cs:59>
 		String_t* L_0 = __this->___localPlayerId;
 		TeamBoardManager_SelectRole_m07C136902A077C65E886B6DF0E6FB44062399831(__this, L_0, 1, 1, NULL);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TeamBoardManager.cs:60>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TeamBoardManager.cs:60>
 		return;
 	}
 }
@@ -19055,10 +19214,10 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TeamBoardManager_SelectBlueChef_m97AA2E0
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TeamBoardManager_SelectBlueButcher_mE68D3EE4801D816BAD132BC61AC3959CF844824A (TeamBoardManager_t624F77E97005E05F0151CAF7119EB2B315DDA599* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TeamBoardManager.cs:64>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TeamBoardManager.cs:64>
 		String_t* L_0 = __this->___localPlayerId;
 		TeamBoardManager_SelectRole_m07C136902A077C65E886B6DF0E6FB44062399831(__this, L_0, 1, 2, NULL);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TeamBoardManager.cs:65>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TeamBoardManager.cs:65>
 		return;
 	}
 }
@@ -19066,10 +19225,10 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TeamBoardManager_SelectBlueButcher_mE68D
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TeamBoardManager_SelectRedChef_mF272B301E424E0A49ED4A640FBDDC341900EB822 (TeamBoardManager_t624F77E97005E05F0151CAF7119EB2B315DDA599* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TeamBoardManager.cs:69>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TeamBoardManager.cs:69>
 		String_t* L_0 = __this->___localPlayerId;
 		TeamBoardManager_SelectRole_m07C136902A077C65E886B6DF0E6FB44062399831(__this, L_0, 2, 1, NULL);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TeamBoardManager.cs:70>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TeamBoardManager.cs:70>
 		return;
 	}
 }
@@ -19077,10 +19236,10 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TeamBoardManager_SelectRedChef_mF272B301
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TeamBoardManager_SelectRedButcher_m44265FD1402B2F62E5E95EDC10E6B64A6CC7A338 (TeamBoardManager_t624F77E97005E05F0151CAF7119EB2B315DDA599* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TeamBoardManager.cs:74>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TeamBoardManager.cs:74>
 		String_t* L_0 = __this->___localPlayerId;
 		TeamBoardManager_SelectRole_m07C136902A077C65E886B6DF0E6FB44062399831(__this, L_0, 2, 2, NULL);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TeamBoardManager.cs:75>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TeamBoardManager.cs:75>
 		return;
 	}
 }
@@ -19099,17 +19258,17 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TeamBoardManager_CancelCurrentSelection_
 	int32_t V_0 = 0;
 	int32_t V_1 = 0;
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TeamBoardManager.cs:79>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TeamBoardManager.cs:79>
 		String_t* L_0 = __this->___localPlayerId;
 		int32_t L_1;
 		L_1 = TeamBoardManager_GetPlayerTeam_mA73B13D25FA0A8865F6AB199936C50A6E4FB859E(__this, L_0, NULL);
 		V_0 = L_1;
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TeamBoardManager.cs:80>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TeamBoardManager.cs:80>
 		String_t* L_2 = __this->___localPlayerId;
 		int32_t L_3;
 		L_3 = TeamBoardManager_GetPlayerRole_m86484277EA0280A03D12F0D8A3C5E8C4D698DD53(__this, L_2, NULL);
 		V_1 = L_3;
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TeamBoardManager.cs:82>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TeamBoardManager.cs:82>
 		int32_t L_4 = V_0;
 		if (!L_4)
 		{
@@ -19126,23 +19285,23 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TeamBoardManager_CancelCurrentSelection_
 
 IL_0020:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TeamBoardManager.cs:84>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TeamBoardManager.cs:84>
 		String_t* L_6 = __this->___localPlayerId;
 		String_t* L_7;
 		L_7 = String_Concat_m9E3155FB84015C823606188F53B47CB44C444991(L_6, _stringLiteralE9D4D0FF53D39237F1753DA49EA5B37BBA2ABC7A, NULL);
 		TeamBoardManager_SetStatus_mF9E7F372C7F2E0494091B09D0EA2954B480B1B13(__this, L_7, NULL);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TeamBoardManager.cs:85>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TeamBoardManager.cs:85>
 		return;
 	}
 
 IL_0037:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TeamBoardManager.cs:88>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TeamBoardManager.cs:88>
 		String_t* L_8 = __this->___localPlayerId;
 		TeamBoardManager_RemovePlayerFromAllSlots_mC165CD70CD398891B0513ED6F47E31E9374155BB(__this, L_8, NULL);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TeamBoardManager.cs:89>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TeamBoardManager.cs:89>
 		TeamBoardManager_RefreshUI_m8322A9BC2D081F01BD9D4EB48B5868DC6E10E4B2(__this, NULL);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TeamBoardManager.cs:90>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TeamBoardManager.cs:90>
 		String_t* L_9 = __this->___localPlayerId;
 		int32_t L_10 = V_0;
 		int32_t L_11 = L_10;
@@ -19153,7 +19312,7 @@ IL_0037:
 		String_t* L_16;
 		L_16 = String_Format_mA0534D6E2AE4D67A6BD8D45B3321323930EB930C(_stringLiteral6F0FA7F984E71CEDC626A325D785B104F4C50048, L_9, L_12, L_15, NULL);
 		TeamBoardManager_SetStatus_mF9E7F372C7F2E0494091B09D0EA2954B480B1B13(__this, L_16, NULL);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TeamBoardManager.cs:91>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TeamBoardManager.cs:91>
 		return;
 	}
 }
@@ -19161,10 +19320,10 @@ IL_0037:
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TeamBoardManager_CancelBlue_m2CDEDC86D8EF6406CD0ADD7E6AB26C6AF70A78D5 (TeamBoardManager_t624F77E97005E05F0151CAF7119EB2B315DDA599* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TeamBoardManager.cs:96>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TeamBoardManager.cs:96>
 		String_t* L_0 = __this->___localPlayerId;
 		TeamBoardManager_CancelIfInTeam_mD70F3422687EFC3BE7FCC05DF2488B021FA9733B(__this, L_0, 1, NULL);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TeamBoardManager.cs:97>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TeamBoardManager.cs:97>
 		return;
 	}
 }
@@ -19172,10 +19331,10 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TeamBoardManager_CancelBlue_m2CDEDC86D8E
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TeamBoardManager_CancelRed_m3F85EDE22B2C110D3C87167683D09EA313AF3855 (TeamBoardManager_t624F77E97005E05F0151CAF7119EB2B315DDA599* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TeamBoardManager.cs:101>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TeamBoardManager.cs:101>
 		String_t* L_0 = __this->___localPlayerId;
 		TeamBoardManager_CancelIfInTeam_mD70F3422687EFC3BE7FCC05DF2488B021FA9733B(__this, L_0, 2, NULL);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TeamBoardManager.cs:102>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TeamBoardManager.cs:102>
 		return;
 	}
 }
@@ -19199,7 +19358,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TeamBoardManager_SelectRole_m07C136902A0
 	int32_t V_1 = 0;
 	String_t* V_2 = NULL;
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TeamBoardManager.cs:110>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TeamBoardManager.cs:110>
 		String_t* L_0 = ___0_playerId;
 		bool L_1;
 		L_1 = String_IsNullOrWhiteSpace_m42E1F3B2C358068D645E46F01CF1834DC77A5A10(L_0, NULL);
@@ -19209,25 +19368,25 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TeamBoardManager_SelectRole_m07C136902A0
 		}
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TeamBoardManager.cs:112>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TeamBoardManager.cs:112>
 		TeamBoardManager_SetStatus_mF9E7F372C7F2E0494091B09D0EA2954B480B1B13(__this, _stringLiteralD22D0A3B9223A2D24898C67FAB2449BFFC8512F1, NULL);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TeamBoardManager.cs:113>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TeamBoardManager.cs:113>
 		return;
 	}
 
 IL_0014:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TeamBoardManager.cs:116>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TeamBoardManager.cs:116>
 		String_t* L_2 = ___0_playerId;
 		int32_t L_3;
 		L_3 = TeamBoardManager_GetPlayerTeam_mA73B13D25FA0A8865F6AB199936C50A6E4FB859E(__this, L_2, NULL);
 		V_0 = L_3;
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TeamBoardManager.cs:117>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TeamBoardManager.cs:117>
 		String_t* L_4 = ___0_playerId;
 		int32_t L_5;
 		L_5 = TeamBoardManager_GetPlayerRole_m86484277EA0280A03D12F0D8A3C5E8C4D698DD53(__this, L_4, NULL);
 		V_1 = L_5;
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TeamBoardManager.cs:120>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TeamBoardManager.cs:120>
 		int32_t L_6 = V_0;
 		int32_t L_7 = ___1_targetTeam;
 		if ((!(((uint32_t)L_6) == ((uint32_t)L_7))))
@@ -19244,7 +19403,7 @@ IL_0014:
 		}
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TeamBoardManager.cs:122>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TeamBoardManager.cs:122>
 		String_t* L_10 = ___0_playerId;
 		int32_t L_11 = ___2_targetRole;
 		int32_t L_12 = L_11;
@@ -19255,21 +19414,21 @@ IL_0014:
 		String_t* L_17;
 		L_17 = String_Format_mA0534D6E2AE4D67A6BD8D45B3321323930EB930C(_stringLiteralF375C7B625D50076DB16EEE9E0F8831AD3439246, L_10, L_13, L_16, NULL);
 		TeamBoardManager_SetStatus_mF9E7F372C7F2E0494091B09D0EA2954B480B1B13(__this, L_17, NULL);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TeamBoardManager.cs:123>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TeamBoardManager.cs:123>
 		TeamBoardManager_RefreshUI_m8322A9BC2D081F01BD9D4EB48B5868DC6E10E4B2(__this, NULL);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TeamBoardManager.cs:124>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TeamBoardManager.cs:124>
 		return;
 	}
 
 IL_0050:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TeamBoardManager.cs:128>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TeamBoardManager.cs:128>
 		int32_t L_18 = ___1_targetTeam;
 		int32_t L_19 = ___2_targetRole;
 		String_t* L_20;
 		L_20 = TeamBoardManager_GetOccupant_m4CB1D9BDC69E82967B4F3CA5D14D0E4FE7004B4E(__this, L_18, L_19, NULL);
 		V_2 = L_20;
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TeamBoardManager.cs:129>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TeamBoardManager.cs:129>
 		String_t* L_21 = V_2;
 		bool L_22;
 		L_22 = String_IsNullOrEmpty_mEA9E3FB005AC28FE02E69FCF95A7B8456192B478(L_21, NULL);
@@ -19289,7 +19448,7 @@ IL_0050:
 		}
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TeamBoardManager.cs:131>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TeamBoardManager.cs:131>
 		int32_t L_26 = ___1_targetTeam;
 		int32_t L_27 = L_26;
 		RuntimeObject* L_28 = Box(Team_t5EDA3C324791F23F591E1D76B633AFC226A25129_il2cpp_TypeInfo_var, &L_27);
@@ -19300,25 +19459,25 @@ IL_0050:
 		String_t* L_33;
 		L_33 = String_Format_mA0534D6E2AE4D67A6BD8D45B3321323930EB930C(_stringLiteralE02988298F93A6EB9118DC4912BE6CDCFC03EBDE, L_28, L_31, L_32, NULL);
 		TeamBoardManager_SetStatus_mF9E7F372C7F2E0494091B09D0EA2954B480B1B13(__this, L_33, NULL);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TeamBoardManager.cs:132>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TeamBoardManager.cs:132>
 		TeamBoardManager_RefreshUI_m8322A9BC2D081F01BD9D4EB48B5868DC6E10E4B2(__this, NULL);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TeamBoardManager.cs:133>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TeamBoardManager.cs:133>
 		return;
 	}
 
 IL_008e:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TeamBoardManager.cs:137>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TeamBoardManager.cs:137>
 		String_t* L_34 = ___0_playerId;
 		TeamBoardManager_RemovePlayerFromAllSlots_mC165CD70CD398891B0513ED6F47E31E9374155BB(__this, L_34, NULL);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TeamBoardManager.cs:140>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TeamBoardManager.cs:140>
 		int32_t L_35 = ___1_targetTeam;
 		int32_t L_36 = ___2_targetRole;
 		String_t* L_37 = ___0_playerId;
 		TeamBoardManager_SetOccupant_mF8D9E52D6EEC532A861DFFC25A995559730EDF39(__this, L_35, L_36, L_37, NULL);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TeamBoardManager.cs:142>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TeamBoardManager.cs:142>
 		TeamBoardManager_RefreshUI_m8322A9BC2D081F01BD9D4EB48B5868DC6E10E4B2(__this, NULL);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TeamBoardManager.cs:144>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TeamBoardManager.cs:144>
 		int32_t L_38 = V_0;
 		if (!L_38)
 		{
@@ -19335,7 +19494,7 @@ IL_008e:
 
 IL_00aa:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TeamBoardManager.cs:146>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TeamBoardManager.cs:146>
 		String_t* L_40 = ___0_playerId;
 		int32_t L_41 = ___1_targetTeam;
 		int32_t L_42 = L_41;
@@ -19351,7 +19510,7 @@ IL_00aa:
 
 IL_00c8:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TeamBoardManager.cs:150>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TeamBoardManager.cs:150>
 		ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* L_48 = (ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918*)(ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918*)SZArrayNew(ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918_il2cpp_TypeInfo_var, (uint32_t)5);
 		ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* L_49 = L_48;
 		String_t* L_50 = ___0_playerId;
@@ -19389,7 +19548,7 @@ IL_00c8:
 		String_t* L_67;
 		L_67 = String_Format_m918500C1EFB475181349A79989BB79BB36102894(_stringLiteralF77F153ECAC4DBA0AB4EBBBF0F34B82DF519065F, L_63, NULL);
 		TeamBoardManager_SetStatus_mF9E7F372C7F2E0494091B09D0EA2954B480B1B13(__this, L_67, NULL);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TeamBoardManager.cs:152>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TeamBoardManager.cs:152>
 		return;
 	}
 }
@@ -19405,7 +19564,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TeamBoardManager_CancelIfInTeam_mD70F342
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TeamBoardManager.cs:156>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TeamBoardManager.cs:156>
 		String_t* L_0 = ___0_playerId;
 		int32_t L_1;
 		L_1 = TeamBoardManager_GetPlayerTeam_mA73B13D25FA0A8865F6AB199936C50A6E4FB859E(__this, L_0, NULL);
@@ -19416,7 +19575,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TeamBoardManager_CancelIfInTeam_mD70F342
 		}
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TeamBoardManager.cs:158>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TeamBoardManager.cs:158>
 		String_t* L_3 = ___0_playerId;
 		int32_t L_4 = ___1_team;
 		int32_t L_5 = L_4;
@@ -19424,18 +19583,18 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TeamBoardManager_CancelIfInTeam_mD70F342
 		String_t* L_7;
 		L_7 = String_Format_mFB7DA489BD99F4670881FF50EC017BFB0A5C0987(_stringLiteralE96D17D94D3B3E00808E98CEEC382718199F6934, L_3, L_6, NULL);
 		TeamBoardManager_SetStatus_mF9E7F372C7F2E0494091B09D0EA2954B480B1B13(__this, L_7, NULL);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TeamBoardManager.cs:159>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TeamBoardManager.cs:159>
 		return;
 	}
 
 IL_0022:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TeamBoardManager.cs:162>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TeamBoardManager.cs:162>
 		String_t* L_8 = ___0_playerId;
 		TeamBoardManager_RemovePlayerFromAllSlots_mC165CD70CD398891B0513ED6F47E31E9374155BB(__this, L_8, NULL);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TeamBoardManager.cs:163>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TeamBoardManager.cs:163>
 		TeamBoardManager_RefreshUI_m8322A9BC2D081F01BD9D4EB48B5868DC6E10E4B2(__this, NULL);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TeamBoardManager.cs:164>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TeamBoardManager.cs:164>
 		String_t* L_9 = ___0_playerId;
 		int32_t L_10 = ___1_team;
 		int32_t L_11 = L_10;
@@ -19443,7 +19602,7 @@ IL_0022:
 		String_t* L_13;
 		L_13 = String_Format_mFB7DA489BD99F4670881FF50EC017BFB0A5C0987(_stringLiteralA07E3F6BF88D08C4B7A7759C245F1D2398C0C060, L_9, L_12, NULL);
 		TeamBoardManager_SetStatus_mF9E7F372C7F2E0494091B09D0EA2954B480B1B13(__this, L_13, NULL);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TeamBoardManager.cs:165>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TeamBoardManager.cs:165>
 		return;
 	}
 }
@@ -19451,7 +19610,7 @@ IL_0022:
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t TeamBoardManager_GetPlayerTeam_mA73B13D25FA0A8865F6AB199936C50A6E4FB859E (TeamBoardManager_t624F77E97005E05F0151CAF7119EB2B315DDA599* __this, String_t* ___0_playerId, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TeamBoardManager.cs:173>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TeamBoardManager.cs:173>
 		String_t* L_0 = __this->___blueChefPlayer;
 		String_t* L_1 = ___0_playerId;
 		bool L_2;
@@ -19474,13 +19633,13 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t TeamBoardManager_GetPlayerTeam_mA73B1
 
 IL_001c:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TeamBoardManager.cs:174>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TeamBoardManager.cs:174>
 		return (int32_t)(1);
 	}
 
 IL_001e:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TeamBoardManager.cs:176>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TeamBoardManager.cs:176>
 		String_t* L_6 = __this->___redChefPlayer;
 		String_t* L_7 = ___0_playerId;
 		bool L_8;
@@ -19503,13 +19662,13 @@ IL_001e:
 
 IL_003a:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TeamBoardManager.cs:177>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TeamBoardManager.cs:177>
 		return (int32_t)(2);
 	}
 
 IL_003c:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TeamBoardManager.cs:179>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TeamBoardManager.cs:179>
 		return (int32_t)(0);
 	}
 }
@@ -19517,7 +19676,7 @@ IL_003c:
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t TeamBoardManager_GetPlayerRole_m86484277EA0280A03D12F0D8A3C5E8C4D698DD53 (TeamBoardManager_t624F77E97005E05F0151CAF7119EB2B315DDA599* __this, String_t* ___0_playerId, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TeamBoardManager.cs:184>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TeamBoardManager.cs:184>
 		String_t* L_0 = __this->___blueChefPlayer;
 		String_t* L_1 = ___0_playerId;
 		bool L_2;
@@ -19540,13 +19699,13 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t TeamBoardManager_GetPlayerRole_m86484
 
 IL_001c:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TeamBoardManager.cs:185>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TeamBoardManager.cs:185>
 		return (int32_t)(1);
 	}
 
 IL_001e:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TeamBoardManager.cs:187>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TeamBoardManager.cs:187>
 		String_t* L_6 = __this->___blueButcherPlayer;
 		String_t* L_7 = ___0_playerId;
 		bool L_8;
@@ -19569,13 +19728,13 @@ IL_001e:
 
 IL_003a:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TeamBoardManager.cs:188>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TeamBoardManager.cs:188>
 		return (int32_t)(2);
 	}
 
 IL_003c:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TeamBoardManager.cs:190>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TeamBoardManager.cs:190>
 		return (int32_t)(0);
 	}
 }
@@ -19602,7 +19761,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* TeamBoardManager_GetOccupant_m4CB1D
 
 IL_000a:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TeamBoardManager.cs:198>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TeamBoardManager.cs:198>
 		int32_t L_2 = ___1_role;
 		if ((((int32_t)L_2) == ((int32_t)1)))
 		{
@@ -19622,7 +19781,7 @@ IL_0015:
 
 IL_001c:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TeamBoardManager.cs:201>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TeamBoardManager.cs:201>
 		int32_t L_5 = ___1_role;
 		if ((((int32_t)L_5) == ((int32_t)1)))
 		{
@@ -19642,7 +19801,7 @@ IL_0027:
 
 IL_002e:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TeamBoardManager.cs:204>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TeamBoardManager.cs:204>
 		return (String_t*)NULL;
 	}
 }
@@ -19669,7 +19828,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TeamBoardManager_SetOccupant_mF8D9E52D6E
 
 IL_0009:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TeamBoardManager.cs:213>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TeamBoardManager.cs:213>
 		int32_t L_2 = ___1_role;
 		if ((!(((uint32_t)L_2) == ((uint32_t)1))))
 		{
@@ -19677,7 +19836,7 @@ IL_0009:
 		}
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TeamBoardManager.cs:214>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TeamBoardManager.cs:214>
 		String_t* L_3 = ___2_playerId;
 		__this->___blueChefPlayer = L_3;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___blueChefPlayer), (void*)L_3);
@@ -19686,7 +19845,7 @@ IL_0009:
 
 IL_0015:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TeamBoardManager.cs:215>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TeamBoardManager.cs:215>
 		int32_t L_4 = ___1_role;
 		if ((!(((uint32_t)L_4) == ((uint32_t)2))))
 		{
@@ -19694,17 +19853,17 @@ IL_0015:
 		}
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TeamBoardManager.cs:216>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TeamBoardManager.cs:216>
 		String_t* L_5 = ___2_playerId;
 		__this->___blueButcherPlayer = L_5;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___blueButcherPlayer), (void*)L_5);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TeamBoardManager.cs:217>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TeamBoardManager.cs:217>
 		return;
 	}
 
 IL_0021:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TeamBoardManager.cs:220>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TeamBoardManager.cs:220>
 		int32_t L_6 = ___1_role;
 		if ((!(((uint32_t)L_6) == ((uint32_t)1))))
 		{
@@ -19712,7 +19871,7 @@ IL_0021:
 		}
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TeamBoardManager.cs:221>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TeamBoardManager.cs:221>
 		String_t* L_7 = ___2_playerId;
 		__this->___redChefPlayer = L_7;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___redChefPlayer), (void*)L_7);
@@ -19721,7 +19880,7 @@ IL_0021:
 
 IL_002d:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TeamBoardManager.cs:222>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TeamBoardManager.cs:222>
 		int32_t L_8 = ___1_role;
 		if ((!(((uint32_t)L_8) == ((uint32_t)2))))
 		{
@@ -19729,7 +19888,7 @@ IL_002d:
 		}
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TeamBoardManager.cs:223>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TeamBoardManager.cs:223>
 		String_t* L_9 = ___2_playerId;
 		__this->___redButcherPlayer = L_9;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___redButcherPlayer), (void*)L_9);
@@ -19737,7 +19896,7 @@ IL_002d:
 
 IL_0038:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TeamBoardManager.cs:226>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TeamBoardManager.cs:226>
 		return;
 	}
 }
@@ -19745,7 +19904,7 @@ IL_0038:
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TeamBoardManager_RemovePlayerFromAllSlots_mC165CD70CD398891B0513ED6F47E31E9374155BB (TeamBoardManager_t624F77E97005E05F0151CAF7119EB2B315DDA599* __this, String_t* ___0_playerId, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TeamBoardManager.cs:230>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TeamBoardManager.cs:230>
 		String_t* L_0 = __this->___blueChefPlayer;
 		String_t* L_1 = ___0_playerId;
 		bool L_2;
@@ -19756,14 +19915,14 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TeamBoardManager_RemovePlayerFromAllSlot
 		}
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TeamBoardManager.cs:230>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TeamBoardManager.cs:230>
 		__this->___blueChefPlayer = (String_t*)NULL;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___blueChefPlayer), (void*)(String_t*)NULL);
 	}
 
 IL_0015:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TeamBoardManager.cs:231>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TeamBoardManager.cs:231>
 		String_t* L_3 = __this->___blueButcherPlayer;
 		String_t* L_4 = ___0_playerId;
 		bool L_5;
@@ -19774,14 +19933,14 @@ IL_0015:
 		}
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TeamBoardManager.cs:231>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TeamBoardManager.cs:231>
 		__this->___blueButcherPlayer = (String_t*)NULL;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___blueButcherPlayer), (void*)(String_t*)NULL);
 	}
 
 IL_002a:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TeamBoardManager.cs:232>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TeamBoardManager.cs:232>
 		String_t* L_6 = __this->___redChefPlayer;
 		String_t* L_7 = ___0_playerId;
 		bool L_8;
@@ -19792,14 +19951,14 @@ IL_002a:
 		}
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TeamBoardManager.cs:232>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TeamBoardManager.cs:232>
 		__this->___redChefPlayer = (String_t*)NULL;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___redChefPlayer), (void*)(String_t*)NULL);
 	}
 
 IL_003f:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TeamBoardManager.cs:233>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TeamBoardManager.cs:233>
 		String_t* L_9 = __this->___redButcherPlayer;
 		String_t* L_10 = ___0_playerId;
 		bool L_11;
@@ -19810,14 +19969,14 @@ IL_003f:
 		}
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TeamBoardManager.cs:233>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TeamBoardManager.cs:233>
 		__this->___redButcherPlayer = (String_t*)NULL;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___redButcherPlayer), (void*)(String_t*)NULL);
 	}
 
 IL_0054:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TeamBoardManager.cs:234>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TeamBoardManager.cs:234>
 		return;
 	}
 }
@@ -19832,27 +19991,27 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TeamBoardManager_RefreshUI_m8322A9BC2D08
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TeamBoardManager.cs:242>
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TeamBoardManager.cs:243>
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TeamBoardManager.cs:244>
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TeamBoardManager.cs:245>
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TeamBoardManager.cs:246>
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TeamBoardManager.cs:247>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TeamBoardManager.cs:242>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TeamBoardManager.cs:243>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TeamBoardManager.cs:244>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TeamBoardManager.cs:245>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TeamBoardManager.cs:246>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TeamBoardManager.cs:247>
 		TeamUI_t7890418D7CFAF8310AA2E8CD3943684A74114D38* L_0 = __this->___blueUI;
 		String_t* L_1 = __this->___blueChefPlayer;
 		String_t* L_2 = __this->___blueButcherPlayer;
 		TeamBoardManager_RefreshTeamUI_m568FCCCA5763304E887BE001D5DC12E9C54A5D3A(__this, L_0, _stringLiteralB7F25B4C5DCCDCCAECECF0D9E2BCAA3C681EB626, L_1, L_2, NULL);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TeamBoardManager.cs:249>
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TeamBoardManager.cs:250>
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TeamBoardManager.cs:251>
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TeamBoardManager.cs:252>
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TeamBoardManager.cs:253>
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TeamBoardManager.cs:254>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TeamBoardManager.cs:249>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TeamBoardManager.cs:250>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TeamBoardManager.cs:251>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TeamBoardManager.cs:252>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TeamBoardManager.cs:253>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TeamBoardManager.cs:254>
 		TeamUI_t7890418D7CFAF8310AA2E8CD3943684A74114D38* L_3 = __this->___redUI;
 		String_t* L_4 = __this->___redChefPlayer;
 		String_t* L_5 = __this->___redButcherPlayer;
 		TeamBoardManager_RefreshTeamUI_m568FCCCA5763304E887BE001D5DC12E9C54A5D3A(__this, L_3, _stringLiteral8FBC3FE7D6FEF8B80A316655A8252B894BC98821, L_4, L_5, NULL);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TeamBoardManager.cs:255>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TeamBoardManager.cs:255>
 		return;
 	}
 }
@@ -19876,7 +20035,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TeamBoardManager_RefreshTeamUI_m568FCCCA
 	String_t* G_B13_0 = NULL;
 	TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9* G_B13_1 = NULL;
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TeamBoardManager.cs:259>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TeamBoardManager.cs:259>
 		TeamUI_t7890418D7CFAF8310AA2E8CD3943684A74114D38* L_0 = ___0_teamUI;
 		if (L_0)
 		{
@@ -19884,13 +20043,13 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TeamBoardManager_RefreshTeamUI_m568FCCCA
 		}
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TeamBoardManager.cs:260>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TeamBoardManager.cs:260>
 		return;
 	}
 
 IL_0004:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TeamBoardManager.cs:262>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TeamBoardManager.cs:262>
 		TeamUI_t7890418D7CFAF8310AA2E8CD3943684A74114D38* L_1 = ___0_teamUI;
 		NullCheck(L_1);
 		TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9* L_2 = L_1->___titleText;
@@ -19903,7 +20062,7 @@ IL_0004:
 		}
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TeamBoardManager.cs:263>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TeamBoardManager.cs:263>
 		TeamUI_t7890418D7CFAF8310AA2E8CD3943684A74114D38* L_4 = ___0_teamUI;
 		NullCheck(L_4);
 		TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9* L_5 = L_4->___titleText;
@@ -19914,7 +20073,7 @@ IL_0004:
 
 IL_001e:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TeamBoardManager.cs:265>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TeamBoardManager.cs:265>
 		TeamUI_t7890418D7CFAF8310AA2E8CD3943684A74114D38* L_7 = ___0_teamUI;
 		NullCheck(L_7);
 		TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9* L_8 = L_7->___chefSlotText;
@@ -19927,9 +20086,9 @@ IL_001e:
 		}
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TeamBoardManager.cs:266>
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TeamBoardManager.cs:267>
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TeamBoardManager.cs:268>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TeamBoardManager.cs:266>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TeamBoardManager.cs:267>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TeamBoardManager.cs:268>
 		TeamUI_t7890418D7CFAF8310AA2E8CD3943684A74114D38* L_10 = ___0_teamUI;
 		NullCheck(L_10);
 		TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9* L_11 = L_10->___chefSlotText;
@@ -19967,7 +20126,7 @@ IL_004d:
 
 IL_0052:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TeamBoardManager.cs:270>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TeamBoardManager.cs:270>
 		TeamUI_t7890418D7CFAF8310AA2E8CD3943684A74114D38* L_17 = ___0_teamUI;
 		NullCheck(L_17);
 		TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9* L_18 = L_17->___butcherSlotText;
@@ -19980,9 +20139,9 @@ IL_0052:
 		}
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TeamBoardManager.cs:271>
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TeamBoardManager.cs:272>
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TeamBoardManager.cs:273>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TeamBoardManager.cs:271>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TeamBoardManager.cs:272>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TeamBoardManager.cs:273>
 		TeamUI_t7890418D7CFAF8310AA2E8CD3943684A74114D38* L_20 = ___0_teamUI;
 		NullCheck(L_20);
 		TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9* L_21 = L_20->___butcherSlotText;
@@ -20020,7 +20179,7 @@ IL_0083:
 
 IL_0088:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TeamBoardManager.cs:274>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TeamBoardManager.cs:274>
 		return;
 	}
 }
@@ -20036,13 +20195,13 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TeamBoardManager_SetStatus_mF9E7F372C7F2
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TeamBoardManager.cs:278>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TeamBoardManager.cs:278>
 		String_t* L_0 = ___0_message;
 		String_t* L_1;
 		L_1 = String_Concat_m9E3155FB84015C823606188F53B47CB44C444991(_stringLiteral1ECC3D2C584F4E3B8C9AD151E122F3BB29506AAB, L_0, NULL);
 		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 		Debug_Log_m87A9A3C761FF5C43ED8A53B16190A53D08F818BB(L_1, NULL);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TeamBoardManager.cs:280>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TeamBoardManager.cs:280>
 		TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9* L_2 = __this->___statusText;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_3;
@@ -20053,7 +20212,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TeamBoardManager_SetStatus_mF9E7F372C7F2
 		}
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TeamBoardManager.cs:281>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TeamBoardManager.cs:281>
 		TMP_Text_tE8D677872D43AD4B2AAF0D6101692A17D0B251A9* L_4 = __this->___statusText;
 		String_t* L_5 = ___0_message;
 		NullCheck(L_4);
@@ -20062,7 +20221,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TeamBoardManager_SetStatus_mF9E7F372C7F2
 
 IL_002a:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TeamBoardManager.cs:282>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TeamBoardManager.cs:282>
 		return;
 	}
 }
@@ -20070,9 +20229,9 @@ IL_002a:
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TeamBoardManager_DebugBlueChef_m3308D7829B8AB83A4EFCCACE530C54AA260AA076 (TeamBoardManager_t624F77E97005E05F0151CAF7119EB2B315DDA599* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TeamBoardManager.cs:291>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TeamBoardManager.cs:291>
 		TeamBoardManager_SelectBlueChef_m97AA2E006244EA8AF1B4BED318A9FFC60F427AC6(__this, NULL);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TeamBoardManager.cs:292>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TeamBoardManager.cs:292>
 		return;
 	}
 }
@@ -20080,9 +20239,9 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TeamBoardManager_DebugBlueChef_m3308D782
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TeamBoardManager_DebugBlueButcher_m1752F02ABE9AC8D645A94C0F74820CE82DC4465E (TeamBoardManager_t624F77E97005E05F0151CAF7119EB2B315DDA599* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TeamBoardManager.cs:297>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TeamBoardManager.cs:297>
 		TeamBoardManager_SelectBlueButcher_mE68D3EE4801D816BAD132BC61AC3959CF844824A(__this, NULL);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TeamBoardManager.cs:298>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TeamBoardManager.cs:298>
 		return;
 	}
 }
@@ -20090,9 +20249,9 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TeamBoardManager_DebugBlueButcher_m1752F
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TeamBoardManager_DebugRedChef_m783970868EC4495721D56E6B6F13014F37A6BB19 (TeamBoardManager_t624F77E97005E05F0151CAF7119EB2B315DDA599* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TeamBoardManager.cs:303>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TeamBoardManager.cs:303>
 		TeamBoardManager_SelectRedChef_mF272B301E424E0A49ED4A640FBDDC341900EB822(__this, NULL);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TeamBoardManager.cs:304>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TeamBoardManager.cs:304>
 		return;
 	}
 }
@@ -20100,9 +20259,9 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TeamBoardManager_DebugRedChef_m783970868
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TeamBoardManager_DebugRedButcher_m5A62E241B4418A60488B51B2ECF7286D99496576 (TeamBoardManager_t624F77E97005E05F0151CAF7119EB2B315DDA599* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TeamBoardManager.cs:309>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TeamBoardManager.cs:309>
 		TeamBoardManager_SelectRedButcher_m44265FD1402B2F62E5E95EDC10E6B64A6CC7A338(__this, NULL);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TeamBoardManager.cs:310>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TeamBoardManager.cs:310>
 		return;
 	}
 }
@@ -20110,9 +20269,9 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TeamBoardManager_DebugRedButcher_m5A62E2
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TeamBoardManager_DebugCancel_mFCBE149D1640570088812AAEB3505ACAEEF080A5 (TeamBoardManager_t624F77E97005E05F0151CAF7119EB2B315DDA599* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TeamBoardManager.cs:315>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TeamBoardManager.cs:315>
 		TeamBoardManager_CancelCurrentSelection_mBB9C9EE454322A0AF6FE20B60E459C7AC782736B(__this, NULL);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TeamBoardManager.cs:316>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TeamBoardManager.cs:316>
 		return;
 	}
 }
@@ -20128,13 +20287,13 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TeamBoardManager__ctor_m9BAD57ED47628402
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TeamBoardManager.cs:38>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TeamBoardManager.cs:38>
 		__this->___emptyChefText = _stringLiteral8C9E2C6926955E6922E840B97D69B029B67C7378;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___emptyChefText), (void*)_stringLiteral8C9E2C6926955E6922E840B97D69B029B67C7378);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TeamBoardManager.cs:39>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TeamBoardManager.cs:39>
 		__this->___emptyButcherText = _stringLiteralC48A6955A4CE3C7418F44D92D0CE224F41256743;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___emptyButcherText), (void*)_stringLiteralC48A6955A4CE3C7418F44D92D0CE224F41256743);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TeamBoardManager.cs:40>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TeamBoardManager.cs:40>
 		__this->___localPlayerId = _stringLiteral9298C1B7CC6668EE5F68DAA5E2070184E3E47075;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___localPlayerId), (void*)_stringLiteral9298C1B7CC6668EE5F68DAA5E2070184E3E47075);
 		MonoBehaviour__ctor_m592DB0105CA0BC97AA1C5F4AD27B12D68A3B7C1E(__this, NULL);
@@ -20191,12 +20350,12 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TearColliderSwitcher_Reset_mBF6BC540EB81
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TearColliderSwitcher.cs:30>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TearColliderSwitcher.cs:30>
 		XRGrabInteractable_tAE7E2F24377399C9B5159179E4B43EA6AA55531B* L_0;
 		L_0 = Component_GetComponent_TisXRGrabInteractable_tAE7E2F24377399C9B5159179E4B43EA6AA55531B_m49377F1D0DBAB9BDC59DFC6851E9A5D687717C14(__this, Component_GetComponent_TisXRGrabInteractable_tAE7E2F24377399C9B5159179E4B43EA6AA55531B_m49377F1D0DBAB9BDC59DFC6851E9A5D687717C14_RuntimeMethod_var);
 		__this->___grab = L_0;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___grab), (void*)L_0);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TearColliderSwitcher.cs:31>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TearColliderSwitcher.cs:31>
 		return;
 	}
 }
@@ -20223,7 +20382,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TearColliderSwitcher_Awake_mE34E0767F002
 	int32_t V_4 = 0;
 	Collider_t1CC3163924FCD6C4CC2E816373A929C1E3D55E76* V_5 = NULL;
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TearColliderSwitcher.cs:35>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TearColliderSwitcher.cs:35>
 		XRGrabInteractable_tAE7E2F24377399C9B5159179E4B43EA6AA55531B* L_0 = __this->___grab;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_1;
@@ -20234,7 +20393,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TearColliderSwitcher_Awake_mE34E0767F002
 		}
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TearColliderSwitcher.cs:35>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TearColliderSwitcher.cs:35>
 		XRGrabInteractable_tAE7E2F24377399C9B5159179E4B43EA6AA55531B* L_2;
 		L_2 = Component_GetComponent_TisXRGrabInteractable_tAE7E2F24377399C9B5159179E4B43EA6AA55531B_m49377F1D0DBAB9BDC59DFC6851E9A5D687717C14(__this, Component_GetComponent_TisXRGrabInteractable_tAE7E2F24377399C9B5159179E4B43EA6AA55531B_m49377F1D0DBAB9BDC59DFC6851E9A5D687717C14_RuntimeMethod_var);
 		__this->___grab = L_2;
@@ -20243,7 +20402,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TearColliderSwitcher_Awake_mE34E0767F002
 
 IL_0019:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TearColliderSwitcher.cs:37>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TearColliderSwitcher.cs:37>
 		MeshCollider_tB525E4DDE383252364ED0BDD32CF2B53914EE455* L_3 = __this->___tearMeshCollider;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_4;
@@ -20254,18 +20413,18 @@ IL_0019:
 		}
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TearColliderSwitcher.cs:39>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TearColliderSwitcher.cs:39>
 		MeshColliderU5BU5D_t403933804A3127F0A3420D5A5319B6BAFB97B9FC* L_5;
 		L_5 = Component_GetComponentsInChildren_TisMeshCollider_tB525E4DDE383252364ED0BDD32CF2B53914EE455_m3C0AD10EFE3CB8DC5DA4C1A842EA842254EBCD5F(__this, (bool)1, Component_GetComponentsInChildren_TisMeshCollider_tB525E4DDE383252364ED0BDD32CF2B53914EE455_m3C0AD10EFE3CB8DC5DA4C1A842EA842254EBCD5F_RuntimeMethod_var);
 		V_0 = L_5;
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TearColliderSwitcher.cs:40>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TearColliderSwitcher.cs:40>
 		V_1 = 0;
 		goto IL_004c;
 	}
 
 IL_0032:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TearColliderSwitcher.cs:42>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TearColliderSwitcher.cs:42>
 		MeshColliderU5BU5D_t403933804A3127F0A3420D5A5319B6BAFB97B9FC* L_6 = V_0;
 		int32_t L_7 = V_1;
 		NullCheck(L_6);
@@ -20280,7 +20439,7 @@ IL_0032:
 		}
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TearColliderSwitcher.cs:44>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TearColliderSwitcher.cs:44>
 		MeshColliderU5BU5D_t403933804A3127F0A3420D5A5319B6BAFB97B9FC* L_11 = V_0;
 		int32_t L_12 = V_1;
 		NullCheck(L_11);
@@ -20288,20 +20447,20 @@ IL_0032:
 		MeshCollider_tB525E4DDE383252364ED0BDD32CF2B53914EE455* L_14 = (L_11)->GetAt(static_cast<il2cpp_array_size_t>(L_13));
 		__this->___tearMeshCollider = L_14;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___tearMeshCollider), (void*)L_14);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TearColliderSwitcher.cs:45>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TearColliderSwitcher.cs:45>
 		goto IL_0052;
 	}
 
 IL_0048:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TearColliderSwitcher.cs:40>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TearColliderSwitcher.cs:40>
 		int32_t L_15 = V_1;
 		V_1 = ((int32_t)il2cpp_codegen_add(L_15, 1));
 	}
 
 IL_004c:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TearColliderSwitcher.cs:40>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TearColliderSwitcher.cs:40>
 		int32_t L_16 = V_1;
 		MeshColliderU5BU5D_t403933804A3127F0A3420D5A5319B6BAFB97B9FC* L_17 = V_0;
 		NullCheck(L_17);
@@ -20313,7 +20472,7 @@ IL_004c:
 
 IL_0052:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TearColliderSwitcher.cs:50>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TearColliderSwitcher.cs:50>
 		ColliderU5BU5D_t94A9D70F63D095AFF2A9B4613012A5F7F3141787* L_18 = __this->___normalColliders;
 		if (!L_18)
 		{
@@ -20331,31 +20490,31 @@ IL_0052:
 
 IL_0063:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TearColliderSwitcher.cs:52>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TearColliderSwitcher.cs:52>
 		ColliderU5BU5D_t94A9D70F63D095AFF2A9B4613012A5F7F3141787* L_20;
 		L_20 = Component_GetComponentsInChildren_TisCollider_t1CC3163924FCD6C4CC2E816373A929C1E3D55E76_m6FCDC69D916F8EB31E6219C8FB86B8BD98D146B3(__this, (bool)1, Component_GetComponentsInChildren_TisCollider_t1CC3163924FCD6C4CC2E816373A929C1E3D55E76_m6FCDC69D916F8EB31E6219C8FB86B8BD98D146B3_RuntimeMethod_var);
 		V_2 = L_20;
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TearColliderSwitcher.cs:53>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TearColliderSwitcher.cs:53>
 		ColliderU5BU5D_t94A9D70F63D095AFF2A9B4613012A5F7F3141787* L_21 = V_2;
 		NullCheck(L_21);
 		List_1_t58F89DEDCD7DABB0CFB009AAD9C0CFE061592252* L_22 = (List_1_t58F89DEDCD7DABB0CFB009AAD9C0CFE061592252*)il2cpp_codegen_object_new(List_1_t58F89DEDCD7DABB0CFB009AAD9C0CFE061592252_il2cpp_TypeInfo_var);
 		List_1__ctor_mF9B8D3384D54EACA66C1705C925949CF6D5FE48A(L_22, ((int32_t)(((RuntimeArray*)L_21)->max_length)), List_1__ctor_mF9B8D3384D54EACA66C1705C925949CF6D5FE48A_RuntimeMethod_var);
 		V_3 = L_22;
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TearColliderSwitcher.cs:54>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TearColliderSwitcher.cs:54>
 		V_4 = 0;
 		goto IL_00a5;
 	}
 
 IL_0079:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TearColliderSwitcher.cs:56>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TearColliderSwitcher.cs:56>
 		ColliderU5BU5D_t94A9D70F63D095AFF2A9B4613012A5F7F3141787* L_23 = V_2;
 		int32_t L_24 = V_4;
 		NullCheck(L_23);
 		int32_t L_25 = L_24;
 		Collider_t1CC3163924FCD6C4CC2E816373A929C1E3D55E76* L_26 = (L_23)->GetAt(static_cast<il2cpp_array_size_t>(L_25));
 		V_5 = L_26;
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TearColliderSwitcher.cs:57>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TearColliderSwitcher.cs:57>
 		Collider_t1CC3163924FCD6C4CC2E816373A929C1E3D55E76* L_27 = V_5;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_28;
@@ -20366,7 +20525,7 @@ IL_0079:
 		}
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TearColliderSwitcher.cs:58>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TearColliderSwitcher.cs:58>
 		Collider_t1CC3163924FCD6C4CC2E816373A929C1E3D55E76* L_29 = V_5;
 		MeshCollider_tB525E4DDE383252364ED0BDD32CF2B53914EE455* L_30 = __this->___tearMeshCollider;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
@@ -20378,7 +20537,7 @@ IL_0079:
 		}
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TearColliderSwitcher.cs:59>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TearColliderSwitcher.cs:59>
 		List_1_t58F89DEDCD7DABB0CFB009AAD9C0CFE061592252* L_32 = V_3;
 		Collider_t1CC3163924FCD6C4CC2E816373A929C1E3D55E76* L_33 = V_5;
 		NullCheck(L_32);
@@ -20387,14 +20546,14 @@ IL_0079:
 
 IL_009f:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TearColliderSwitcher.cs:54>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TearColliderSwitcher.cs:54>
 		int32_t L_34 = V_4;
 		V_4 = ((int32_t)il2cpp_codegen_add(L_34, 1));
 	}
 
 IL_00a5:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TearColliderSwitcher.cs:54>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TearColliderSwitcher.cs:54>
 		int32_t L_35 = V_4;
 		ColliderU5BU5D_t94A9D70F63D095AFF2A9B4613012A5F7F3141787* L_36 = V_2;
 		NullCheck(L_36);
@@ -20404,7 +20563,7 @@ IL_00a5:
 		}
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TearColliderSwitcher.cs:61>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TearColliderSwitcher.cs:61>
 		List_1_t58F89DEDCD7DABB0CFB009AAD9C0CFE061592252* L_37 = V_3;
 		NullCheck(L_37);
 		ColliderU5BU5D_t94A9D70F63D095AFF2A9B4613012A5F7F3141787* L_38;
@@ -20415,7 +20574,7 @@ IL_00a5:
 
 IL_00b8:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TearColliderSwitcher.cs:63>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TearColliderSwitcher.cs:63>
 		return;
 	}
 }
@@ -20423,9 +20582,9 @@ IL_00b8:
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TearColliderSwitcher_OnEnable_m8AE873180ED8C97FA1BADE1837FC37AD68839003 (TearColliderSwitcher_t31B2D5E2D088035AC7284ABF953C5207E35A1CF7* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TearColliderSwitcher.cs:67>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TearColliderSwitcher.cs:67>
 		TearColliderSwitcher_SubscribeGrabEvents_m92D87D9D21A842BB2EC99C8707A32E2EB1423041(__this, NULL);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TearColliderSwitcher.cs:68>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TearColliderSwitcher.cs:68>
 		bool L_0 = __this->___startInNormalMode;
 		if (!L_0)
 		{
@@ -20433,13 +20592,13 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TearColliderSwitcher_OnEnable_m8AE873180
 		}
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TearColliderSwitcher.cs:68>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TearColliderSwitcher.cs:68>
 		TearColliderSwitcher_ApplyNormalMode_mAA42FBF71DE41C274B309746490905EF7073F572(__this, NULL);
 	}
 
 IL_0014:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TearColliderSwitcher.cs:69>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TearColliderSwitcher.cs:69>
 		return;
 	}
 }
@@ -20447,9 +20606,9 @@ IL_0014:
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TearColliderSwitcher_OnDisable_m3F38A047541497E394C4CA50D78786CD5E889D97 (TearColliderSwitcher_t31B2D5E2D088035AC7284ABF953C5207E35A1CF7* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TearColliderSwitcher.cs:73>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TearColliderSwitcher.cs:73>
 		TearColliderSwitcher_UnsubscribeGrabEvents_mD73C6AEDC4D6675971A99DDCCAE948DC08B89208(__this, NULL);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TearColliderSwitcher.cs:74>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TearColliderSwitcher.cs:74>
 		return;
 	}
 }
@@ -20469,7 +20628,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TearColliderSwitcher_SubscribeGrabEvents
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TearColliderSwitcher.cs:78>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TearColliderSwitcher.cs:78>
 		bool L_0 = __this->____subscribed;
 		if (L_0)
 		{
@@ -20489,13 +20648,13 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TearColliderSwitcher_SubscribeGrabEvents
 
 IL_0015:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TearColliderSwitcher.cs:78>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TearColliderSwitcher.cs:78>
 		return;
 	}
 
 IL_0016:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TearColliderSwitcher.cs:79>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TearColliderSwitcher.cs:79>
 		XRGrabInteractable_tAE7E2F24377399C9B5159179E4B43EA6AA55531B* L_3 = __this->___grab;
 		NullCheck(L_3);
 		SelectEnterEvent_tBA2614C8C25D8794D5804C4F66195D74E64FC5D0* L_4;
@@ -20504,7 +20663,7 @@ IL_0016:
 		UnityAction_1__ctor_mEE39E1A87376378311B4931978E8E07E589E9A24(L_5, __this, (intptr_t)((void*)TearColliderSwitcher_OnGrabEnter_m0030DB8F4057A181E30E2CB1E7D9936600C30742_RuntimeMethod_var), NULL);
 		NullCheck(L_4);
 		UnityEvent_1_AddListener_mAE71681FB0832FD7DBA813E5ADDBA574EA32EED2(L_4, L_5, UnityEvent_1_AddListener_mAE71681FB0832FD7DBA813E5ADDBA574EA32EED2_RuntimeMethod_var);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TearColliderSwitcher.cs:80>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TearColliderSwitcher.cs:80>
 		XRGrabInteractable_tAE7E2F24377399C9B5159179E4B43EA6AA55531B* L_6 = __this->___grab;
 		NullCheck(L_6);
 		SelectExitEvent_t15DC0A39F9657BA9E6BAE6250D8D64C9671201F6* L_7;
@@ -20513,9 +20672,9 @@ IL_0016:
 		UnityAction_1__ctor_mD74501F5FCCC37863163D5E7155B6C8B9B366C40(L_8, __this, (intptr_t)((void*)TearColliderSwitcher_OnGrabExit_m1032FCB4E88BB8E067ADEA6207A5C8AB97B79E60_RuntimeMethod_var), NULL);
 		NullCheck(L_7);
 		UnityEvent_1_AddListener_mB662756036996A6B6F83F6492CE9E26797AF9602(L_7, L_8, UnityEvent_1_AddListener_mB662756036996A6B6F83F6492CE9E26797AF9602_RuntimeMethod_var);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TearColliderSwitcher.cs:81>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TearColliderSwitcher.cs:81>
 		__this->____subscribed = (bool)1;
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TearColliderSwitcher.cs:82>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TearColliderSwitcher.cs:82>
 		return;
 	}
 }
@@ -20535,7 +20694,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TearColliderSwitcher_UnsubscribeGrabEven
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TearColliderSwitcher.cs:86>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TearColliderSwitcher.cs:86>
 		bool L_0 = __this->____subscribed;
 		if (!L_0)
 		{
@@ -20555,13 +20714,13 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TearColliderSwitcher_UnsubscribeGrabEven
 
 IL_0015:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TearColliderSwitcher.cs:86>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TearColliderSwitcher.cs:86>
 		return;
 	}
 
 IL_0016:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TearColliderSwitcher.cs:87>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TearColliderSwitcher.cs:87>
 		XRGrabInteractable_tAE7E2F24377399C9B5159179E4B43EA6AA55531B* L_3 = __this->___grab;
 		NullCheck(L_3);
 		SelectEnterEvent_tBA2614C8C25D8794D5804C4F66195D74E64FC5D0* L_4;
@@ -20570,7 +20729,7 @@ IL_0016:
 		UnityAction_1__ctor_mEE39E1A87376378311B4931978E8E07E589E9A24(L_5, __this, (intptr_t)((void*)TearColliderSwitcher_OnGrabEnter_m0030DB8F4057A181E30E2CB1E7D9936600C30742_RuntimeMethod_var), NULL);
 		NullCheck(L_4);
 		UnityEvent_1_RemoveListener_m1008B118B379B498B23E13BB88779719C22EB9EB(L_4, L_5, UnityEvent_1_RemoveListener_m1008B118B379B498B23E13BB88779719C22EB9EB_RuntimeMethod_var);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TearColliderSwitcher.cs:88>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TearColliderSwitcher.cs:88>
 		XRGrabInteractable_tAE7E2F24377399C9B5159179E4B43EA6AA55531B* L_6 = __this->___grab;
 		NullCheck(L_6);
 		SelectExitEvent_t15DC0A39F9657BA9E6BAE6250D8D64C9671201F6* L_7;
@@ -20579,9 +20738,9 @@ IL_0016:
 		UnityAction_1__ctor_mD74501F5FCCC37863163D5E7155B6C8B9B366C40(L_8, __this, (intptr_t)((void*)TearColliderSwitcher_OnGrabExit_m1032FCB4E88BB8E067ADEA6207A5C8AB97B79E60_RuntimeMethod_var), NULL);
 		NullCheck(L_7);
 		UnityEvent_1_RemoveListener_m4353C3D43531002B6FBE7556246DB0A261672F9B(L_7, L_8, UnityEvent_1_RemoveListener_m4353C3D43531002B6FBE7556246DB0A261672F9B_RuntimeMethod_var);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TearColliderSwitcher.cs:89>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TearColliderSwitcher.cs:89>
 		__this->____subscribed = (bool)0;
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TearColliderSwitcher.cs:90>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TearColliderSwitcher.cs:90>
 		return;
 	}
 }
@@ -20589,9 +20748,9 @@ IL_0016:
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TearColliderSwitcher_OnGrabEnter_m0030DB8F4057A181E30E2CB1E7D9936600C30742 (TearColliderSwitcher_t31B2D5E2D088035AC7284ABF953C5207E35A1CF7* __this, SelectEnterEventArgs_t9220B1E6A9BB5A847C0476949ACE0182430BB938* ___0__, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TearColliderSwitcher.cs:94>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TearColliderSwitcher.cs:94>
 		TearColliderSwitcher_ApplyGrabMode_m0DB6742F09CC0334502FADF60739C19D6119E711(__this, NULL);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TearColliderSwitcher.cs:95>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TearColliderSwitcher.cs:95>
 		return;
 	}
 }
@@ -20599,9 +20758,9 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TearColliderSwitcher_OnGrabEnter_m0030DB
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TearColliderSwitcher_OnGrabExit_m1032FCB4E88BB8E067ADEA6207A5C8AB97B79E60 (TearColliderSwitcher_t31B2D5E2D088035AC7284ABF953C5207E35A1CF7* __this, SelectExitEventArgs_t56125CE0360D37AC0B50EB6066B5AB5957EF559A* ___0__, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TearColliderSwitcher.cs:99>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TearColliderSwitcher.cs:99>
 		TearColliderSwitcher_ApplyNormalMode_mAA42FBF71DE41C274B309746490905EF7073F572(__this, NULL);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TearColliderSwitcher.cs:100>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TearColliderSwitcher.cs:100>
 		return;
 	}
 }
@@ -20620,13 +20779,13 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TearColliderSwitcher_ApplyNormalMode_mAA
 	int32_t G_B4_0 = 0;
 	MeshCollider_tB525E4DDE383252364ED0BDD32CF2B53914EE455* G_B4_1 = NULL;
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TearColliderSwitcher.cs:104>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TearColliderSwitcher.cs:104>
 		bool L_0;
 		L_0 = TearColliderSwitcher_HasNormalColliders_mF2233B2E4AF87C1F15F8F859FE0FECC165F1FC10(__this, NULL);
 		V_0 = L_0;
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TearColliderSwitcher.cs:105>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TearColliderSwitcher.cs:105>
 		TearColliderSwitcher_SetNormalCollidersEnabled_m8D250C93E0B86985E886251E4A8F2BD613810D24(__this, (bool)1, NULL);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TearColliderSwitcher.cs:107>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TearColliderSwitcher.cs:107>
 		MeshCollider_tB525E4DDE383252364ED0BDD32CF2B53914EE455* L_1 = __this->___tearMeshCollider;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_2;
@@ -20637,7 +20796,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TearColliderSwitcher_ApplyNormalMode_mAA
 		}
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TearColliderSwitcher.cs:109>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TearColliderSwitcher.cs:109>
 		MeshCollider_tB525E4DDE383252364ED0BDD32CF2B53914EE455* L_3 = __this->___tearMeshCollider;
 		bool L_4 = V_0;
 		if (L_4)
@@ -20664,7 +20823,7 @@ IL_002d:
 	{
 		NullCheck(G_B4_1);
 		Collider_set_enabled_m8D5C3B5047592D227A52560FC9723D176E209F70(G_B4_1, (bool)G_B4_0, NULL);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TearColliderSwitcher.cs:110>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TearColliderSwitcher.cs:110>
 		MeshCollider_tB525E4DDE383252364ED0BDD32CF2B53914EE455* L_6 = __this->___tearMeshCollider;
 		NullCheck(L_6);
 		Collider_set_isTrigger_mFCD22F3EB5E28C97863956AB725D53F7F4B7CA78(L_6, (bool)0, NULL);
@@ -20672,7 +20831,7 @@ IL_002d:
 
 IL_003e:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TearColliderSwitcher.cs:112>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TearColliderSwitcher.cs:112>
 		return;
 	}
 }
@@ -20691,14 +20850,14 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TearColliderSwitcher_ApplyGrabMode_m0DB6
 	int32_t G_B6_0 = 0;
 	MeshCollider_tB525E4DDE383252364ED0BDD32CF2B53914EE455* G_B6_1 = NULL;
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TearColliderSwitcher.cs:116>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TearColliderSwitcher.cs:116>
 		bool L_0;
 		L_0 = TearColliderSwitcher_HasNormalColliders_mF2233B2E4AF87C1F15F8F859FE0FECC165F1FC10(__this, NULL);
 		V_0 = L_0;
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TearColliderSwitcher.cs:117>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TearColliderSwitcher.cs:117>
 		bool L_1 = __this->___keepNormalCollidersWhenGrabbed;
 		TearColliderSwitcher_SetNormalCollidersEnabled_m8D250C93E0B86985E886251E4A8F2BD613810D24(__this, L_1, NULL);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TearColliderSwitcher.cs:119>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TearColliderSwitcher.cs:119>
 		MeshCollider_tB525E4DDE383252364ED0BDD32CF2B53914EE455* L_2 = __this->___tearMeshCollider;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_3;
@@ -20709,7 +20868,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TearColliderSwitcher_ApplyGrabMode_m0DB6
 		}
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TearColliderSwitcher.cs:121>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TearColliderSwitcher.cs:121>
 		bool L_4 = __this->___enableTearMeshTriggerWhenGrabbed;
 		if (!L_4)
 		{
@@ -20717,11 +20876,11 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TearColliderSwitcher_ApplyGrabMode_m0DB6
 		}
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TearColliderSwitcher.cs:123>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TearColliderSwitcher.cs:123>
 		MeshCollider_tB525E4DDE383252364ED0BDD32CF2B53914EE455* L_5 = __this->___tearMeshCollider;
 		NullCheck(L_5);
 		Collider_set_enabled_m8D5C3B5047592D227A52560FC9723D176E209F70(L_5, (bool)1, NULL);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TearColliderSwitcher.cs:124>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TearColliderSwitcher.cs:124>
 		MeshCollider_tB525E4DDE383252364ED0BDD32CF2B53914EE455* L_6 = __this->___tearMeshCollider;
 		NullCheck(L_6);
 		Collider_set_isTrigger_mFCD22F3EB5E28C97863956AB725D53F7F4B7CA78(L_6, (bool)1, NULL);
@@ -20730,7 +20889,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TearColliderSwitcher_ApplyGrabMode_m0DB6
 
 IL_0041:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TearColliderSwitcher.cs:128>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TearColliderSwitcher.cs:128>
 		MeshCollider_tB525E4DDE383252364ED0BDD32CF2B53914EE455* L_7 = __this->___tearMeshCollider;
 		bool L_8 = V_0;
 		if (L_8)
@@ -20757,7 +20916,7 @@ IL_0053:
 	{
 		NullCheck(G_B6_1);
 		Collider_set_enabled_m8D5C3B5047592D227A52560FC9723D176E209F70(G_B6_1, (bool)G_B6_0, NULL);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TearColliderSwitcher.cs:129>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TearColliderSwitcher.cs:129>
 		MeshCollider_tB525E4DDE383252364ED0BDD32CF2B53914EE455* L_10 = __this->___tearMeshCollider;
 		NullCheck(L_10);
 		Collider_set_isTrigger_mFCD22F3EB5E28C97863956AB725D53F7F4B7CA78(L_10, (bool)0, NULL);
@@ -20765,7 +20924,7 @@ IL_0053:
 
 IL_0064:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TearColliderSwitcher.cs:132>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TearColliderSwitcher.cs:132>
 		return;
 	}
 }
@@ -20779,9 +20938,9 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TearColliderSwitcher_ApplyTearMode_m504B
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TearColliderSwitcher.cs:136>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TearColliderSwitcher.cs:136>
 		TearColliderSwitcher_SetNormalCollidersEnabled_m8D250C93E0B86985E886251E4A8F2BD613810D24(__this, (bool)0, NULL);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TearColliderSwitcher.cs:138>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TearColliderSwitcher.cs:138>
 		MeshCollider_tB525E4DDE383252364ED0BDD32CF2B53914EE455* L_0 = __this->___tearMeshCollider;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_1;
@@ -20792,25 +20951,25 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TearColliderSwitcher_ApplyTearMode_m504B
 		}
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TearColliderSwitcher.cs:138>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TearColliderSwitcher.cs:138>
 		return;
 	}
 
 IL_0015:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TearColliderSwitcher.cs:141>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TearColliderSwitcher.cs:141>
 		MeshCollider_tB525E4DDE383252364ED0BDD32CF2B53914EE455* L_2 = __this->___tearMeshCollider;
 		NullCheck(L_2);
 		MeshCollider_set_convex_m20482D687240D0921BA76B77983403E55A2E3CE1(L_2, (bool)1, NULL);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TearColliderSwitcher.cs:142>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TearColliderSwitcher.cs:142>
 		MeshCollider_tB525E4DDE383252364ED0BDD32CF2B53914EE455* L_3 = __this->___tearMeshCollider;
 		NullCheck(L_3);
 		Collider_set_isTrigger_mFCD22F3EB5E28C97863956AB725D53F7F4B7CA78(L_3, (bool)0, NULL);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TearColliderSwitcher.cs:143>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TearColliderSwitcher.cs:143>
 		MeshCollider_tB525E4DDE383252364ED0BDD32CF2B53914EE455* L_4 = __this->___tearMeshCollider;
 		NullCheck(L_4);
 		Collider_set_enabled_m8D5C3B5047592D227A52560FC9723D176E209F70(L_4, (bool)1, NULL);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TearColliderSwitcher.cs:144>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TearColliderSwitcher.cs:144>
 		return;
 	}
 }
@@ -20825,7 +20984,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TearColliderSwitcher_SetNormalCollidersE
 	}
 	int32_t V_0 = 0;
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TearColliderSwitcher.cs:148>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TearColliderSwitcher.cs:148>
 		ColliderU5BU5D_t94A9D70F63D095AFF2A9B4613012A5F7F3141787* L_0 = __this->___normalColliders;
 		if (L_0)
 		{
@@ -20833,20 +20992,20 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TearColliderSwitcher_SetNormalCollidersE
 		}
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TearColliderSwitcher.cs:148>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TearColliderSwitcher.cs:148>
 		return;
 	}
 
 IL_0009:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TearColliderSwitcher.cs:149>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TearColliderSwitcher.cs:149>
 		V_0 = 0;
 		goto IL_002e;
 	}
 
 IL_000d:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TearColliderSwitcher.cs:151>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TearColliderSwitcher.cs:151>
 		ColliderU5BU5D_t94A9D70F63D095AFF2A9B4613012A5F7F3141787* L_1 = __this->___normalColliders;
 		int32_t L_2 = V_0;
 		NullCheck(L_1);
@@ -20861,7 +21020,7 @@ IL_000d:
 		}
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TearColliderSwitcher.cs:152>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TearColliderSwitcher.cs:152>
 		ColliderU5BU5D_t94A9D70F63D095AFF2A9B4613012A5F7F3141787* L_6 = __this->___normalColliders;
 		int32_t L_7 = V_0;
 		NullCheck(L_6);
@@ -20874,14 +21033,14 @@ IL_000d:
 
 IL_002a:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TearColliderSwitcher.cs:149>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TearColliderSwitcher.cs:149>
 		int32_t L_11 = V_0;
 		V_0 = ((int32_t)il2cpp_codegen_add(L_11, 1));
 	}
 
 IL_002e:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TearColliderSwitcher.cs:149>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TearColliderSwitcher.cs:149>
 		int32_t L_12 = V_0;
 		ColliderU5BU5D_t94A9D70F63D095AFF2A9B4613012A5F7F3141787* L_13 = __this->___normalColliders;
 		NullCheck(L_13);
@@ -20891,7 +21050,7 @@ IL_002e:
 		}
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TearColliderSwitcher.cs:154>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TearColliderSwitcher.cs:154>
 		return;
 	}
 }
@@ -20906,7 +21065,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool TearColliderSwitcher_HasNormalColliders_
 	}
 	int32_t V_0 = 0;
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TearColliderSwitcher.cs:158>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TearColliderSwitcher.cs:158>
 		ColliderU5BU5D_t94A9D70F63D095AFF2A9B4613012A5F7F3141787* L_0 = __this->___normalColliders;
 		if (L_0)
 		{
@@ -20914,20 +21073,20 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool TearColliderSwitcher_HasNormalColliders_
 		}
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TearColliderSwitcher.cs:158>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TearColliderSwitcher.cs:158>
 		return (bool)0;
 	}
 
 IL_000a:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TearColliderSwitcher.cs:159>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TearColliderSwitcher.cs:159>
 		V_0 = 0;
 		goto IL_0023;
 	}
 
 IL_000e:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TearColliderSwitcher.cs:161>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TearColliderSwitcher.cs:161>
 		ColliderU5BU5D_t94A9D70F63D095AFF2A9B4613012A5F7F3141787* L_1 = __this->___normalColliders;
 		int32_t L_2 = V_0;
 		NullCheck(L_1);
@@ -20942,20 +21101,20 @@ IL_000e:
 		}
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TearColliderSwitcher.cs:161>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TearColliderSwitcher.cs:161>
 		return (bool)1;
 	}
 
 IL_001f:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TearColliderSwitcher.cs:159>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TearColliderSwitcher.cs:159>
 		int32_t L_6 = V_0;
 		V_0 = ((int32_t)il2cpp_codegen_add(L_6, 1));
 	}
 
 IL_0023:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TearColliderSwitcher.cs:159>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TearColliderSwitcher.cs:159>
 		int32_t L_7 = V_0;
 		ColliderU5BU5D_t94A9D70F63D095AFF2A9B4613012A5F7F3141787* L_8 = __this->___normalColliders;
 		NullCheck(L_8);
@@ -20965,7 +21124,7 @@ IL_0023:
 		}
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TearColliderSwitcher.cs:163>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TearColliderSwitcher.cs:163>
 		return (bool)0;
 	}
 }
@@ -20973,11 +21132,11 @@ IL_0023:
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TearColliderSwitcher__ctor_m9B19B64132FECA59052D5F2EED493187F9548FEB (TearColliderSwitcher_t31B2D5E2D088035AC7284ABF953C5207E35A1CF7* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TearColliderSwitcher.cs:15>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TearColliderSwitcher.cs:15>
 		__this->___keepNormalCollidersWhenGrabbed = (bool)1;
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TearColliderSwitcher.cs:21>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TearColliderSwitcher.cs:21>
 		__this->___startInNormalMode = (bool)1;
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TearColliderSwitcher.cs:24>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TearColliderSwitcher.cs:24>
 		__this->___fallbackToMeshWhenNoNormalColliders = (bool)1;
 		MonoBehaviour__ctor_m592DB0105CA0BC97AA1C5F4AD27B12D68A3B7C1E(__this, NULL);
 		return;
@@ -20995,7 +21154,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TearColliderSwitcher__ctor_m9B19B64132FE
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool TearObject_get_isTeared_m43F9C2F2C7DF17A6F8FBDDBB212948A863777959 (TearObject_t3E896BBE62E856B51C65224E4EC149E43C6920CF* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TearObject.cs:23>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TearObject.cs:23>
 		bool L_0 = __this->___U3CisTearedU3Ek__BackingField;
 		return L_0;
 	}
@@ -21004,7 +21163,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool TearObject_get_isTeared_m43F9C2F2C7DF17A
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TearObject_set_isTeared_m25B62A297D5EA698ADCA5676A6EB4ABC4134AE42 (TearObject_t3E896BBE62E856B51C65224E4EC149E43C6920CF* __this, bool ___0_value, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TearObject.cs:23>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TearObject.cs:23>
 		bool L_0 = ___0_value;
 		__this->___U3CisTearedU3Ek__BackingField = L_0;
 		return;
@@ -21014,7 +21173,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TearObject_set_isTeared_m25B62A297D5EA69
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 TearObject_get_tearCenter_m4C604DA94DBE476FD5A6D0B3E5197CF31B66429F (TearObject_t3E896BBE62E856B51C65224E4EC149E43C6920CF* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TearObject.cs:24>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TearObject.cs:24>
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_0 = __this->___U3CtearCenterU3Ek__BackingField;
 		return L_0;
 	}
@@ -21023,7 +21182,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TearObject_set_tearCenter_mECC7679A76FFA00288360F44C8744AB79322FB3E (TearObject_t3E896BBE62E856B51C65224E4EC149E43C6920CF* __this, Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___0_value, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TearObject.cs:24>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TearObject.cs:24>
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_0 = ___0_value;
 		__this->___U3CtearCenterU3Ek__BackingField = L_0;
 		return;
@@ -21033,7 +21192,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TearObject_set_tearCenter_mECC7679A76FFA
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* TearObject_get_word_m97D03F8F252A748F52D8F16F38DDE61E80DA221D (TearObject_t3E896BBE62E856B51C65224E4EC149E43C6920CF* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TearObject.cs:25>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TearObject.cs:25>
 		String_t* L_0 = __this->___U3CwordU3Ek__BackingField;
 		return L_0;
 	}
@@ -21042,7 +21201,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* TearObject_get_word_m97D03F8F252A74
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TearObject_set_word_m51BFFD66061CA7919848DDDDF0626A26A7122257 (TearObject_t3E896BBE62E856B51C65224E4EC149E43C6920CF* __this, String_t* ___0_value, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TearObject.cs:25>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TearObject.cs:25>
 		String_t* L_0 = ___0_value;
 		__this->___U3CwordU3Ek__BackingField = L_0;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___U3CwordU3Ek__BackingField), (void*)L_0);
@@ -21059,12 +21218,12 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TearObject_Reset_m2E4CE960F5C43789D34BAA
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TearObject.cs:32>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TearObject.cs:32>
 		XRGrabInteractable_tAE7E2F24377399C9B5159179E4B43EA6AA55531B* L_0;
 		L_0 = Component_GetComponent_TisXRGrabInteractable_tAE7E2F24377399C9B5159179E4B43EA6AA55531B_m49377F1D0DBAB9BDC59DFC6851E9A5D687717C14(__this, Component_GetComponent_TisXRGrabInteractable_tAE7E2F24377399C9B5159179E4B43EA6AA55531B_m49377F1D0DBAB9BDC59DFC6851E9A5D687717C14_RuntimeMethod_var);
 		__this->___grab = L_0;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___grab), (void*)L_0);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TearObject.cs:33>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TearObject.cs:33>
 		return;
 	}
 }
@@ -21082,7 +21241,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TearObject_Awake_m54E0FE06E5824C4B3BB1C3
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TearObject.cs:37>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TearObject.cs:37>
 		XRGrabInteractable_tAE7E2F24377399C9B5159179E4B43EA6AA55531B* L_0 = __this->___grab;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_1;
@@ -21093,7 +21252,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TearObject_Awake_m54E0FE06E5824C4B3BB1C3
 		}
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TearObject.cs:37>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TearObject.cs:37>
 		XRGrabInteractable_tAE7E2F24377399C9B5159179E4B43EA6AA55531B* L_2;
 		L_2 = Component_GetComponent_TisXRGrabInteractable_tAE7E2F24377399C9B5159179E4B43EA6AA55531B_m49377F1D0DBAB9BDC59DFC6851E9A5D687717C14(__this, Component_GetComponent_TisXRGrabInteractable_tAE7E2F24377399C9B5159179E4B43EA6AA55531B_m49377F1D0DBAB9BDC59DFC6851E9A5D687717C14_RuntimeMethod_var);
 		__this->___grab = L_2;
@@ -21102,7 +21261,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TearObject_Awake_m54E0FE06E5824C4B3BB1C3
 
 IL_0019:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TearObject.cs:39>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TearObject.cs:39>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_3;
 		L_3 = Component_get_gameObject_m57AEFBB14DB39EC476F740BA000E170355DE691B(__this, NULL);
 		NullCheck(L_3);
@@ -21115,7 +21274,7 @@ IL_0019:
 		String_t* L_6;
 		L_6 = Regex_Replace_m811FCA60D20059998EC547FC390F053C524D045D(L_5, _stringLiteral895EBF6BCA850A901402B924FD981269C1B2B3A2, _stringLiteralDA39A3EE5E6B4B0D3255BFEF95601890AFD80709, NULL);
 		TearObject_set_word_m51BFFD66061CA7919848DDDDF0626A26A7122257_inline(__this, L_6, NULL);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TearObject.cs:40>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TearObject.cs:40>
 		return;
 	}
 }
@@ -21138,7 +21297,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TearObject_Update_mEFAB74ABA07CB1B13FA8E
 	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 V_4;
 	memset((&V_4), 0, sizeof(V_4));
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TearObject.cs:44>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TearObject.cs:44>
 		bool L_0;
 		L_0 = TearObject_get_isTeared_m43F9C2F2C7DF17A6F8FBDDBB212948A863777959_inline(__this, NULL);
 		if (L_0)
@@ -21159,13 +21318,13 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TearObject_Update_mEFAB74ABA07CB1B13FA8E
 
 IL_0016:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TearObject.cs:44>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TearObject.cs:44>
 		return;
 	}
 
 IL_0017:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TearObject.cs:46>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TearObject.cs:46>
 		Keyboard_t015BD1A6508137D20B4395295F6E002773FAAF43* L_3;
 		L_3 = Keyboard_get_current_mDE773B54C9975CEFEAA469AD091C49E150A3FEC3_inline(NULL);
 		if (!L_3)
@@ -21188,21 +21347,21 @@ IL_0017:
 		}
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TearObject.cs:48>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TearObject.cs:48>
 		TearObject_DebugTear_mE5825D87DE0AA8BC078E46BE51286105DFFA9B88(__this, NULL);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TearObject.cs:49>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TearObject.cs:49>
 		return;
 	}
 
 IL_0036:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TearObject.cs:52>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TearObject.cs:52>
 		XRGrabInteractable_tAE7E2F24377399C9B5159179E4B43EA6AA55531B* L_7 = __this->___grab;
 		NullCheck(L_7);
 		List_1_tBCB8B48B71E07C12D7D6CBECDCCD87B719E5E708* L_8;
 		L_8 = XRBaseInteractable_get_interactorsSelecting_m5F5C1717F4214684A3F96A53F794BB08435A7620(L_7, NULL);
 		V_0 = L_8;
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TearObject.cs:53>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TearObject.cs:53>
 		List_1_tBCB8B48B71E07C12D7D6CBECDCCD87B719E5E708* L_9 = V_0;
 		if (!L_9)
 		{
@@ -21222,15 +21381,15 @@ IL_0036:
 
 IL_004e:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TearObject.cs:55>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TearObject.cs:55>
 		__this->____armed = (bool)0;
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TearObject.cs:56>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TearObject.cs:56>
 		return;
 	}
 
 IL_0056:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TearObject.cs:59>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TearObject.cs:59>
 		bool L_12 = __this->____armed;
 		if (L_12)
 		{
@@ -21238,9 +21397,9 @@ IL_0056:
 		}
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TearObject.cs:61>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TearObject.cs:61>
 		__this->____armed = (bool)1;
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TearObject.cs:62>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TearObject.cs:62>
 		float L_13;
 		L_13 = Time_get_time_m3A271BB1B20041144AC5B7863B71AB1F0150374B(NULL);
 		__this->____armedAt = L_13;
@@ -21248,7 +21407,7 @@ IL_0056:
 
 IL_0070:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TearObject.cs:64>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TearObject.cs:64>
 		float L_14;
 		L_14 = Time_get_time_m3A271BB1B20041144AC5B7863B71AB1F0150374B(NULL);
 		float L_15 = __this->____armedAt;
@@ -21259,35 +21418,35 @@ IL_0070:
 		}
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TearObject.cs:64>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TearObject.cs:64>
 		return;
 	}
 
 IL_0085:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TearObject.cs:66>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TearObject.cs:66>
 		List_1_tBCB8B48B71E07C12D7D6CBECDCCD87B719E5E708* L_17 = V_0;
 		NullCheck(L_17);
 		RuntimeObject* L_18;
 		L_18 = List_1_get_Item_mA0A087E5FF50205AA465E6DDCE55556FFA8CD501(L_17, 0, List_1_get_Item_mA0A087E5FF50205AA465E6DDCE55556FFA8CD501_RuntimeMethod_var);
 		V_1 = L_18;
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TearObject.cs:67>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TearObject.cs:67>
 		List_1_tBCB8B48B71E07C12D7D6CBECDCCD87B719E5E708* L_19 = V_0;
 		NullCheck(L_19);
 		RuntimeObject* L_20;
 		L_20 = List_1_get_Item_mA0A087E5FF50205AA465E6DDCE55556FFA8CD501(L_19, 1, List_1_get_Item_mA0A087E5FF50205AA465E6DDCE55556FFA8CD501_RuntimeMethod_var);
 		V_2 = L_20;
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TearObject.cs:69>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TearObject.cs:69>
 		RuntimeObject* L_21 = V_1;
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_22;
 		L_22 = TearObject_GetInteractorPos_mA937B735C2E87A728B8CD9A9E595EE7CBDCF5CA9(__this, L_21, NULL);
 		V_3 = L_22;
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TearObject.cs:70>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TearObject.cs:70>
 		RuntimeObject* L_23 = V_2;
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_24;
 		L_24 = TearObject_GetInteractorPos_mA937B735C2E87A728B8CD9A9E595EE7CBDCF5CA9(__this, L_23, NULL);
 		V_4 = L_24;
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TearObject.cs:72>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TearObject.cs:72>
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_25 = V_3;
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_26 = V_4;
 		float L_27;
@@ -21299,7 +21458,7 @@ IL_0085:
 		}
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TearObject.cs:74>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TearObject.cs:74>
 		RuntimeObject* L_29 = V_1;
 		RuntimeObject* L_30 = V_2;
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_31 = V_3;
@@ -21309,7 +21468,7 @@ IL_0085:
 
 IL_00c1:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TearObject.cs:76>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TearObject.cs:76>
 		return;
 	}
 }
@@ -21329,16 +21488,16 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TearObject_DebugTear_mE5825D87DE0AA8BC07
 	LetterSpawner_tBC161CA12FDE232F59203076963EF412B105F844* G_B6_0 = NULL;
 	LetterSpawner_tBC161CA12FDE232F59203076963EF412B105F844* G_B5_0 = NULL;
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TearObject.cs:79>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TearObject.cs:79>
 		TearObject_set_isTeared_m25B62A297D5EA698ADCA5676A6EB4ABC4134AE42_inline(__this, (bool)1, NULL);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TearObject.cs:81>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TearObject.cs:81>
 		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_0;
 		L_0 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(__this, NULL);
 		NullCheck(L_0);
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_1;
 		L_1 = Transform_get_position_m69CD5FA214FDAE7BB701552943674846C220FDE1(L_0, NULL);
 		TearObject_set_tearCenter_mECC7679A76FFA00288360F44C8744AB79322FB3E_inline(__this, L_1, NULL);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TearObject.cs:83>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TearObject.cs:83>
 		bool L_2 = __this->___spawnHalves;
 		if (!L_2)
 		{
@@ -21366,15 +21525,15 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TearObject_DebugTear_mE5825D87DE0AA8BC07
 		}
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TearObject.cs:85>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TearObject.cs:85>
 		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_7;
 		L_7 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(__this, NULL);
 		NullCheck(L_7);
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_8;
 		L_8 = Transform_get_right_mC6DC057C23313802E2186A9E0DB760D795A758A4(L_7, NULL);
 		V_1 = L_8;
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TearObject.cs:86>
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TearObject.cs:87>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TearObject.cs:86>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TearObject.cs:87>
 		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_9;
 		L_9 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(__this, NULL);
 		NullCheck(L_9);
@@ -21400,7 +21559,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TearObject_DebugTear_mE5825D87DE0AA8BC07
 
 IL_0082:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TearObject.cs:90>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TearObject.cs:90>
 		LetterSpawner_tBC161CA12FDE232F59203076963EF412B105F844* L_19;
 		L_19 = LetterSpawner_get_Instance_mDE743C5373029C238F50FE9E4F1A4F5C0241A009_inline(NULL);
 		LetterSpawner_tBC161CA12FDE232F59203076963EF412B105F844* L_20 = L_19;
@@ -21427,7 +21586,7 @@ IL_008d:
 
 IL_009e:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TearObject.cs:91>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TearObject.cs:91>
 		AudioClip_t5D272C4EB4F2D3ED49F1C346DEA373CF6D585F20* L_23 = __this->___clip;
 		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_24;
 		L_24 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(__this, NULL);
@@ -21435,11 +21594,11 @@ IL_009e:
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_25;
 		L_25 = Transform_get_position_m69CD5FA214FDAE7BB701552943674846C220FDE1(L_24, NULL);
 		AudioSource_PlayClipAtPoint_mA78328A70D3F1088B588EF6F811AAD6577F2B7BF(L_23, L_25, NULL);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TearObject.cs:93>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TearObject.cs:93>
 		NetworkedObject_tE3E9824D3F2F3E9806E8197BBE87C61FF99361F8* L_26;
 		L_26 = Component_GetComponent_TisNetworkedObject_tE3E9824D3F2F3E9806E8197BBE87C61FF99361F8_mCECE75A8C5B119DC20854FB1C5F978F45CA0E7BC(__this, Component_GetComponent_TisNetworkedObject_tE3E9824D3F2F3E9806E8197BBE87C61FF99361F8_mCECE75A8C5B119DC20854FB1C5F978F45CA0E7BC_RuntimeMethod_var);
 		V_0 = L_26;
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TearObject.cs:94>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TearObject.cs:94>
 		NetworkedObject_tE3E9824D3F2F3E9806E8197BBE87C61FF99361F8* L_27 = V_0;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_28;
@@ -21450,7 +21609,7 @@ IL_009e:
 		}
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TearObject.cs:95>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TearObject.cs:95>
 		NetworkedObject_tE3E9824D3F2F3E9806E8197BBE87C61FF99361F8* L_29 = V_0;
 		NullCheck(L_29);
 		NetworkedObject_BroadcastActiveSelf_mC0C7FBB192C2EDD5B7585CD932114652E0211B44(L_29, (bool)0, NULL);
@@ -21458,12 +21617,12 @@ IL_009e:
 
 IL_00cb:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TearObject.cs:97>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TearObject.cs:97>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_30;
 		L_30 = Component_get_gameObject_m57AEFBB14DB39EC476F740BA000E170355DE691B(__this, NULL);
 		NullCheck(L_30);
 		GameObject_SetActive_m638E92E1E75E519E5B24CF150B08CA8E0CDFAB92(L_30, (bool)0, NULL);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TearObject.cs:98>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TearObject.cs:98>
 		return;
 	}
 }
@@ -21479,14 +21638,14 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A
 	}
 	Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* V_0 = NULL;
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TearObject.cs:103>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TearObject.cs:103>
 		RuntimeObject* L_0 = ___0_interactor;
 		XRGrabInteractable_tAE7E2F24377399C9B5159179E4B43EA6AA55531B* L_1 = __this->___grab;
 		NullCheck(L_0);
 		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_2;
 		L_2 = InterfaceFuncInvoker1< Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1*, RuntimeObject* >::Invoke(7, IXRInteractor_tD834ADD95D200FFEC6473A23E515DCD02B33CF97_il2cpp_TypeInfo_var, L_0, L_1);
 		V_0 = L_2;
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TearObject.cs:104>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TearObject.cs:104>
 		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_3 = V_0;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_4;
@@ -21529,9 +21688,9 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TearObject_DoTear_m7148614F722CA26793875
 	LetterSpawner_tBC161CA12FDE232F59203076963EF412B105F844* G_B8_0 = NULL;
 	LetterSpawner_tBC161CA12FDE232F59203076963EF412B105F844* G_B7_0 = NULL;
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TearObject.cs:114>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TearObject.cs:114>
 		TearObject_set_isTeared_m25B62A297D5EA698ADCA5676A6EB4ABC4134AE42_inline(__this, (bool)1, NULL);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TearObject.cs:115>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TearObject.cs:115>
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_0 = ___2_posA;
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_1 = ___3_posB;
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_2;
@@ -21539,7 +21698,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TearObject_DoTear_m7148614F722CA26793875
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_3;
 		L_3 = Vector3_op_Multiply_m87BA7C578F96C8E49BB07088DAAC4649F83B0353_inline(L_2, (0.5f), NULL);
 		TearObject_set_tearCenter_mECC7679A76FFA00288360F44C8744AB79322FB3E_inline(__this, L_3, NULL);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TearObject.cs:117>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TearObject.cs:117>
 		XRGrabInteractable_tAE7E2F24377399C9B5159179E4B43EA6AA55531B* L_4 = __this->___grab;
 		NullCheck(L_4);
 		XRInteractionManager_t93C7F7F0CFEAD83E1A70F92D05B0E663483746CD* L_5;
@@ -21553,7 +21712,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TearObject_DoTear_m7148614F722CA26793875
 		}
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TearObject.cs:119>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TearObject.cs:119>
 		XRGrabInteractable_tAE7E2F24377399C9B5159179E4B43EA6AA55531B* L_7 = __this->___grab;
 		NullCheck(L_7);
 		XRInteractionManager_t93C7F7F0CFEAD83E1A70F92D05B0E663483746CD* L_8;
@@ -21562,7 +21721,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TearObject_DoTear_m7148614F722CA26793875
 		XRGrabInteractable_tAE7E2F24377399C9B5159179E4B43EA6AA55531B* L_10 = __this->___grab;
 		NullCheck(L_8);
 		VirtualActionInvoker2< RuntimeObject*, RuntimeObject* >::Invoke(42, L_8, L_9, L_10);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TearObject.cs:120>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TearObject.cs:120>
 		XRGrabInteractable_tAE7E2F24377399C9B5159179E4B43EA6AA55531B* L_11 = __this->___grab;
 		NullCheck(L_11);
 		XRInteractionManager_t93C7F7F0CFEAD83E1A70F92D05B0E663483746CD* L_12;
@@ -21575,7 +21734,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TearObject_DoTear_m7148614F722CA26793875
 
 IL_0060:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TearObject.cs:123>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TearObject.cs:123>
 		bool L_15 = __this->___spawnHalves;
 		if (!L_15)
 		{
@@ -21603,7 +21762,7 @@ IL_0060:
 		}
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TearObject.cs:125>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TearObject.cs:125>
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_20 = ___2_posA;
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_21 = ___3_posB;
 		TearObject_SpawnHalves_mA87F663D94666B86F42C04D656B3867EA405DC57(__this, L_20, L_21, NULL);
@@ -21611,7 +21770,7 @@ IL_0060:
 
 IL_008b:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TearObject.cs:128>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TearObject.cs:128>
 		LetterSpawner_tBC161CA12FDE232F59203076963EF412B105F844* L_22;
 		L_22 = LetterSpawner_get_Instance_mDE743C5373029C238F50FE9E4F1A4F5C0241A009_inline(NULL);
 		LetterSpawner_tBC161CA12FDE232F59203076963EF412B105F844* L_23 = L_22;
@@ -21638,7 +21797,7 @@ IL_0096:
 
 IL_00a7:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TearObject.cs:129>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TearObject.cs:129>
 		AudioClip_t5D272C4EB4F2D3ED49F1C346DEA373CF6D585F20* L_26 = __this->___clip;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_27;
@@ -21649,7 +21808,7 @@ IL_00a7:
 		}
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TearObject.cs:131>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TearObject.cs:131>
 		AudioClip_t5D272C4EB4F2D3ED49F1C346DEA373CF6D585F20* L_28 = __this->___clip;
 		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_29;
 		L_29 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(__this, NULL);
@@ -21661,23 +21820,23 @@ IL_00a7:
 
 IL_00cb:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TearObject.cs:133>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TearObject.cs:133>
 		NetworkedObject_tE3E9824D3F2F3E9806E8197BBE87C61FF99361F8* L_31;
 		L_31 = Component_GetComponent_TisNetworkedObject_tE3E9824D3F2F3E9806E8197BBE87C61FF99361F8_mCECE75A8C5B119DC20854FB1C5F978F45CA0E7BC(__this, Component_GetComponent_TisNetworkedObject_tE3E9824D3F2F3E9806E8197BBE87C61FF99361F8_mCECE75A8C5B119DC20854FB1C5F978F45CA0E7BC_RuntimeMethod_var);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TearObject.cs:134>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TearObject.cs:134>
 		NullCheck(L_31);
 		NetworkedObject_BroadcastActiveSelf_mC0C7FBB192C2EDD5B7585CD932114652E0211B44(L_31, (bool)0, NULL);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TearObject.cs:135>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TearObject.cs:135>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_32;
 		L_32 = Component_get_gameObject_m57AEFBB14DB39EC476F740BA000E170355DE691B(__this, NULL);
 		NullCheck(L_32);
 		GameObject_SetActive_m638E92E1E75E519E5B24CF150B08CA8E0CDFAB92(L_32, (bool)0, NULL);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TearObject.cs:136>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TearObject.cs:136>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_33;
 		L_33 = Component_get_gameObject_m57AEFBB14DB39EC476F740BA000E170355DE691B(__this, NULL);
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		Object_Destroy_mE97D0A766419A81296E8D4E5C23D01D3FE91ACBB(L_33, NULL);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TearObject.cs:137>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TearObject.cs:137>
 		return;
 	}
 }
@@ -21702,13 +21861,13 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TearObject_SpawnHalves_mA87F663D94666B86
 	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* V_4 = NULL;
 	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* V_5 = NULL;
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TearObject.cs:141>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TearObject.cs:141>
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_0 = ___1_posB;
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_1 = ___0_posA;
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_2;
 		L_2 = Vector3_op_Subtraction_mE42023FF80067CB44A1D4A27EB7CF2B24CABB828_inline(L_0, L_1, NULL);
 		V_0 = L_2;
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TearObject.cs:142>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TearObject.cs:142>
 		float L_3;
 		L_3 = Vector3_get_sqrMagnitude_m43C27DEC47C4811FB30AB474FF2131A963B66FC8_inline((&V_0), NULL);
 		if ((!(((float)L_3) < ((float)(9.99999997E-07f)))))
@@ -21717,7 +21876,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TearObject_SpawnHalves_mA87F663D94666B86
 		}
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TearObject.cs:142>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TearObject.cs:142>
 		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_4;
 		L_4 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(__this, NULL);
 		NullCheck(L_4);
@@ -21728,9 +21887,9 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TearObject_SpawnHalves_mA87F663D94666B86
 
 IL_0022:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TearObject.cs:143>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TearObject.cs:143>
 		Vector3_Normalize_mC749B887A4C74BA0A2E13E6377F17CCAEB0AADA8_inline((&V_0), NULL);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TearObject.cs:145>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TearObject.cs:145>
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_6 = ___0_posA;
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_7 = V_0;
 		float L_8 = __this->___spawnOffset;
@@ -21739,7 +21898,7 @@ IL_0022:
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_10;
 		L_10 = Vector3_op_Subtraction_mE42023FF80067CB44A1D4A27EB7CF2B24CABB828_inline(L_6, L_9, NULL);
 		V_1 = L_10;
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TearObject.cs:146>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TearObject.cs:146>
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_11 = ___1_posB;
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_12 = V_0;
 		float L_13 = __this->___spawnOffset;
@@ -21748,14 +21907,14 @@ IL_0022:
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_15;
 		L_15 = Vector3_op_Addition_m78C0EC70CB66E8DCAC225743D82B268DAEE92067_inline(L_11, L_14, NULL);
 		V_2 = L_15;
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TearObject.cs:148>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TearObject.cs:148>
 		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_16;
 		L_16 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(__this, NULL);
 		NullCheck(L_16);
 		Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 L_17;
 		L_17 = Transform_get_rotation_m32AF40CA0D50C797DA639A696F8EAEC7524C179C(L_16, NULL);
 		V_3 = L_17;
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TearObject.cs:150>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TearObject.cs:150>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_18 = __this->___HalfPrefabA;
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_19 = V_1;
 		Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 L_20 = V_3;
@@ -21763,14 +21922,14 @@ IL_0022:
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_21;
 		L_21 = Object_Instantiate_TisGameObject_t76FEDD663AB33C991A9C9A23129337651094216F_m831D2F71DF2AA6C93AFDFEFA04CF2CFC5FBBCDB4(L_18, L_19, L_20, Object_Instantiate_TisGameObject_t76FEDD663AB33C991A9C9A23129337651094216F_m831D2F71DF2AA6C93AFDFEFA04CF2CFC5FBBCDB4_RuntimeMethod_var);
 		V_4 = L_21;
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TearObject.cs:151>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TearObject.cs:151>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_22 = __this->___HalfPrefabB;
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_23 = V_2;
 		Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 L_24 = V_3;
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_25;
 		L_25 = Object_Instantiate_TisGameObject_t76FEDD663AB33C991A9C9A23129337651094216F_m831D2F71DF2AA6C93AFDFEFA04CF2CFC5FBBCDB4(L_22, L_23, L_24, Object_Instantiate_TisGameObject_t76FEDD663AB33C991A9C9A23129337651094216F_m831D2F71DF2AA6C93AFDFEFA04CF2CFC5FBBCDB4_RuntimeMethod_var);
 		V_5 = L_25;
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TearObject.cs:153>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TearObject.cs:153>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_26 = V_4;
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_27 = V_0;
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_28;
@@ -21779,14 +21938,14 @@ IL_0022:
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_30;
 		L_30 = Vector3_op_Multiply_m87BA7C578F96C8E49BB07088DAAC4649F83B0353_inline(L_28, L_29, NULL);
 		TearObject_ApplyThrow_mD202983E6547DDCC8D1DE7DE3DFBCB3A8089C433(__this, L_26, L_30, NULL);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TearObject.cs:154>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TearObject.cs:154>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_31 = V_5;
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_32 = V_0;
 		float L_33 = __this->___throwSpeed;
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_34;
 		L_34 = Vector3_op_Multiply_m87BA7C578F96C8E49BB07088DAAC4649F83B0353_inline(L_32, L_33, NULL);
 		TearObject_ApplyThrow_mD202983E6547DDCC8D1DE7DE3DFBCB3A8089C433(__this, L_31, L_34, NULL);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TearObject.cs:155>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TearObject.cs:155>
 		return;
 	}
 }
@@ -21803,7 +21962,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TearObject_ApplyThrow_mD202983E6547DDCC8
 	}
 	Rigidbody_t268697F5A994213ED97393309870968BC1C7393C* V_0 = NULL;
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TearObject.cs:159>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TearObject.cs:159>
 		float L_0 = __this->___throwSpeed;
 		if ((!(((float)L_0) <= ((float)(0.0f)))))
 		{
@@ -21811,19 +21970,19 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TearObject_ApplyThrow_mD202983E6547DDCC8
 		}
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TearObject.cs:159>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TearObject.cs:159>
 		return;
 	}
 
 IL_000e:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TearObject.cs:161>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TearObject.cs:161>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_1 = ___0_obj;
 		NullCheck(L_1);
 		Rigidbody_t268697F5A994213ED97393309870968BC1C7393C* L_2;
 		L_2 = GameObject_GetComponent_TisRigidbody_t268697F5A994213ED97393309870968BC1C7393C_m2D7F86C77ECF9B82AAC077B511F1004280571B90(L_1, GameObject_GetComponent_TisRigidbody_t268697F5A994213ED97393309870968BC1C7393C_m2D7F86C77ECF9B82AAC077B511F1004280571B90_RuntimeMethod_var);
 		V_0 = L_2;
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TearObject.cs:162>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TearObject.cs:162>
 		Rigidbody_t268697F5A994213ED97393309870968BC1C7393C* L_3 = V_0;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_4;
@@ -21841,7 +22000,7 @@ IL_000e:
 		}
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TearObject.cs:163>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TearObject.cs:163>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_6 = ___0_obj;
 		NullCheck(L_6);
 		Rigidbody_t268697F5A994213ED97393309870968BC1C7393C* L_7;
@@ -21851,7 +22010,7 @@ IL_000e:
 
 IL_002c:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TearObject.cs:165>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TearObject.cs:165>
 		Rigidbody_t268697F5A994213ED97393309870968BC1C7393C* L_8 = V_0;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_9;
@@ -21862,7 +22021,7 @@ IL_002c:
 		}
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TearObject.cs:166>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TearObject.cs:166>
 		Rigidbody_t268697F5A994213ED97393309870968BC1C7393C* L_10 = V_0;
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_11 = ___1_velocity;
 		NullCheck(L_10);
@@ -21871,7 +22030,7 @@ IL_002c:
 
 IL_003b:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TearObject.cs:167>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TearObject.cs:167>
 		return;
 	}
 }
@@ -21879,15 +22038,15 @@ IL_003b:
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TearObject__ctor_m3A4BFE49BF087AFE3F8913F2092E187B4DDCD363 (TearObject_t3E896BBE62E856B51C65224E4EC149E43C6920CF* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TearObject.cs:11>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TearObject.cs:11>
 		__this->___tearDistance = (0.25f);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TearObject.cs:12>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TearObject.cs:12>
 		__this->___armDelay = (0.0799999982f);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TearObject.cs:18>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TearObject.cs:18>
 		__this->___spawnOffset = (0.0199999996f);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TearObject.cs:19>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TearObject.cs:19>
 		__this->___throwSpeed = (0.800000012f);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TearObject.cs:20>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TearObject.cs:20>
 		__this->___addRigidbodyIfMissing = (bool)1;
 		MonoBehaviour__ctor_m592DB0105CA0BC97AA1C5F4AD27B12D68A3B7C1E(__this, NULL);
 		return;
@@ -21914,7 +22073,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void WordCheckButton_TriggerWordCheck_m95AA31
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/WordCheckButton.cs:9>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/WordCheckButton.cs:9>
 		WordScanManager_t5DFA8AA7ED2E7C3224B27D3CA0955AC965052C11* L_0 = __this->___wordScanManager;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_1;
@@ -21925,23 +22084,23 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void WordCheckButton_TriggerWordCheck_m95AA31
 		}
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/WordCheckButton.cs:11>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/WordCheckButton.cs:11>
 		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 		Debug_LogWarning_m33EF1B897E0C7C6FF538989610BFAFFEF4628CA9(_stringLiteral2394B6D7B2397C4B326EE1391202A83347BE1208, NULL);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/WordCheckButton.cs:12>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/WordCheckButton.cs:12>
 		return;
 	}
 
 IL_0019:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/WordCheckButton.cs:15>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/WordCheckButton.cs:15>
 		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 		Debug_Log_m87A9A3C761FF5C43ED8A53B16190A53D08F818BB(_stringLiteralFC0C5C6DD268B76D84C5983A45BB1D58887E7E91, NULL);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/WordCheckButton.cs:16>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/WordCheckButton.cs:16>
 		WordScanManager_t5DFA8AA7ED2E7C3224B27D3CA0955AC965052C11* L_2 = __this->___wordScanManager;
 		NullCheck(L_2);
 		WordScanManager_ScanWords_m1FD4DEB672A4C57259B856F3AEE078665089A01C(L_2, NULL);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/WordCheckButton.cs:17>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/WordCheckButton.cs:17>
 		return;
 	}
 }
@@ -21969,7 +22128,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A
 	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 V_2;
 	memset((&V_2), 0, sizeof(V_2));
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:33>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:35>
 		int32_t L_0;
 		L_0 = Vector2Int_get_x_mA2CACB1B6E6B5AD0CCC32B2CD2EDCE3ECEB50576_inline((&___0_cell), NULL);
 		TableSnapZone_t98DB6E46409D9D63B767218E4B11C273A4015EA7* L_1 = __this->___tableZone;
@@ -21978,7 +22137,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A
 		int32_t L_3;
 		L_3 = Vector2Int_get_x_mA2CACB1B6E6B5AD0CCC32B2CD2EDCE3ECEB50576_inline(L_2, NULL);
 		V_0 = ((int32_t)il2cpp_codegen_subtract(L_0, ((int32_t)(L_3/2))));
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:34>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:36>
 		int32_t L_4;
 		L_4 = Vector2Int_get_y_m48454163ECF0B463FB5A16A0C4FC4B14DB0768B3_inline((&___0_cell), NULL);
 		TableSnapZone_t98DB6E46409D9D63B767218E4B11C273A4015EA7* L_5 = __this->___tableZone;
@@ -21987,11 +22146,11 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A
 		int32_t L_7;
 		L_7 = Vector2Int_get_y_m48454163ECF0B463FB5A16A0C4FC4B14DB0768B3_inline(L_6, NULL);
 		V_1 = ((int32_t)il2cpp_codegen_subtract(L_4, ((int32_t)(L_7/2))));
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:36>
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:37>
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:38>
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:39>
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:40>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:38>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:39>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:40>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:41>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:42>
 		int32_t L_8 = V_0;
 		TableSnapZone_t98DB6E46409D9D63B767218E4B11C273A4015EA7* L_9 = __this->___tableZone;
 		NullCheck(L_9);
@@ -22006,7 +22165,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A
 		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7* L_16 = (Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7*)(&L_15->___cellSize);
 		float L_17 = L_16->___y;
 		Vector3__ctor_m376936E6B999EF1ECBE57D990A386303E2283DE0_inline((&V_2), ((float)il2cpp_codegen_multiply(((float)il2cpp_codegen_add(((float)L_8), (0.5f))), L_11)), L_13, ((float)il2cpp_codegen_multiply(((float)il2cpp_codegen_add(((float)L_14), (0.5f))), L_17)), NULL);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:42>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:44>
 		TableSnapZone_t98DB6E46409D9D63B767218E4B11C273A4015EA7* L_18 = __this->___tableZone;
 		NullCheck(L_18);
 		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_19 = L_18->___gridOrigin;
@@ -22023,15 +22182,15 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t WordScanManager_CalculatePoints_m281F
 	int32_t V_0 = 0;
 	float V_1 = 0.0f;
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:47>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:49>
 		String_t* L_0 = ___0_word;
 		NullCheck(L_0);
 		int32_t L_1;
 		L_1 = String_get_Length_m42625D67623FA5CC7A44D47425CE86FB946542D2_inline(L_0, NULL);
 		V_0 = L_1;
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:48>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:50>
 		V_1 = (1.0f);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:50>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:52>
 		int32_t L_2 = V_0;
 		if ((((int32_t)L_2) < ((int32_t)((int32_t)10))))
 		{
@@ -22046,14 +22205,14 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t WordScanManager_CalculatePoints_m281F
 		}
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:51>
-		V_1 = (1.20000005f);
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:53>
+		V_1 = (1.5f);
 		goto IL_002a;
 	}
 
 IL_001f:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:52>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:54>
 		int32_t L_4 = V_0;
 		if ((!(((uint32_t)L_4) == ((uint32_t)((int32_t)15)))))
 		{
@@ -22061,13 +22220,13 @@ IL_001f:
 		}
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:53>
-		V_1 = (1.5f);
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:55>
+		V_1 = (2.0f);
 	}
 
 IL_002a:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:55>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:57>
 		int32_t L_5 = V_0;
 		float L_6 = V_1;
 		int32_t L_7;
@@ -22123,7 +22282,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void WordScanManager_ScanWords_m1FD4DEB672A4C
 	Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 V_15;
 	memset((&V_15), 0, sizeof(V_15));
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:60>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:62>
 		GameManager_tFE129A0017AF5BBD30FDCD4403B9CCEAE064C6B6* L_0 = __this->___gameManager;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_1;
@@ -22144,16 +22303,16 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void WordScanManager_ScanWords_m1FD4DEB672A4C
 		}
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:62>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:64>
 		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 		Debug_Log_m87A9A3C761FF5C43ED8A53B16190A53D08F818BB(_stringLiteral0DA060BDF2731AE73BDDAE14A5A16860D68CA684, NULL);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:63>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:65>
 		return;
 	}
 
 IL_0026:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:66>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:68>
 		TableSnapZone_t98DB6E46409D9D63B767218E4B11C273A4015EA7* L_4 = __this->___tableZone;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_5;
@@ -22196,22 +22355,22 @@ IL_0026:
 
 IL_005e:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:68>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:70>
 		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 		Debug_LogWarning_m33EF1B897E0C7C6FF538989610BFAFFEF4628CA9(_stringLiteral2A1EB1FD1D2B68766F4AC8DA0F106F82D9BDA39D, NULL);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:69>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:71>
 		return;
 	}
 
 IL_0069:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:72>
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:73>
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:74>
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:75>
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:76>
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:77>
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:78>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:74>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:75>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:76>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:77>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:78>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:79>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:80>
 		BoxCollider_tFA5D239388334D6DE0B8FFDAD6825C5B03786E23* L_12 = __this->___detectionZone;
 		NullCheck(L_12);
 		Bounds_t367E830C64BBF235ED8C3B2F8CF6254FDCAD39C3 L_13;
@@ -22236,11 +22395,11 @@ IL_0069:
 		il2cpp_codegen_runtime_class_init_inline(Physics_t1244C2983AEAFA149425AFFC3DF53BC91C18ED56_il2cpp_TypeInfo_var);
 		ColliderU5BU5D_t94A9D70F63D095AFF2A9B4613012A5F7F3141787* L_21;
 		L_21 = Physics_OverlapBox_mC38B579DEFD0341FCAEF8B8EC8B1E37A2C12366D(L_14, L_17, L_20, (-1), 1, NULL);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:80>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:82>
 		HashSet_1_tC6CC68EEF8568891A7F0FC4B2435372BD4EE9CFD* L_22 = (HashSet_1_tC6CC68EEF8568891A7F0FC4B2435372BD4EE9CFD*)il2cpp_codegen_object_new(HashSet_1_tC6CC68EEF8568891A7F0FC4B2435372BD4EE9CFD_il2cpp_TypeInfo_var);
 		HashSet_1__ctor_m355565FB374431AF255ADA72155ABADFAC6023A2(L_22, HashSet_1__ctor_m355565FB374431AF255ADA72155ABADFAC6023A2_RuntimeMethod_var);
 		V_0 = L_22;
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:82>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:84>
 		V_6 = L_21;
 		V_7 = 0;
 		goto IL_00e7;
@@ -22248,14 +22407,14 @@ IL_0069:
 
 IL_00b5:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:82>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:84>
 		ColliderU5BU5D_t94A9D70F63D095AFF2A9B4613012A5F7F3141787* L_23 = V_6;
 		int32_t L_24 = V_7;
 		NullCheck(L_23);
 		int32_t L_25 = L_24;
 		Collider_t1CC3163924FCD6C4CC2E816373A929C1E3D55E76* L_26 = (L_23)->GetAt(static_cast<il2cpp_array_size_t>(L_25));
 		V_8 = L_26;
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:84>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:86>
 		Collider_t1CC3163924FCD6C4CC2E816373A929C1E3D55E76* L_27 = V_8;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_28;
@@ -22266,13 +22425,13 @@ IL_00b5:
 		}
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:86>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:88>
 		Collider_t1CC3163924FCD6C4CC2E816373A929C1E3D55E76* L_29 = V_8;
 		NullCheck(L_29);
 		LetterTile_tB20E0D5265E6DEC4F697C65EBC185582BA0E3541* L_30;
 		L_30 = Component_GetComponentInParent_TisLetterTile_tB20E0D5265E6DEC4F697C65EBC185582BA0E3541_m92E7B10907D22B1792FAE847142614C7DFBC1B6A(L_29, Component_GetComponentInParent_TisLetterTile_tB20E0D5265E6DEC4F697C65EBC185582BA0E3541_m92E7B10907D22B1792FAE847142614C7DFBC1B6A_RuntimeMethod_var);
 		V_9 = L_30;
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:87>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:89>
 		LetterTile_tB20E0D5265E6DEC4F697C65EBC185582BA0E3541* L_31 = V_9;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_32;
@@ -22283,7 +22442,7 @@ IL_00b5:
 		}
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:88>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:90>
 		HashSet_1_tC6CC68EEF8568891A7F0FC4B2435372BD4EE9CFD* L_33 = V_0;
 		LetterTile_tB20E0D5265E6DEC4F697C65EBC185582BA0E3541* L_34 = V_9;
 		NullCheck(L_33);
@@ -22299,7 +22458,7 @@ IL_00e1:
 
 IL_00e7:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:82>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:84>
 		int32_t L_37 = V_7;
 		ColliderU5BU5D_t94A9D70F63D095AFF2A9B4613012A5F7F3141787* L_38 = V_6;
 		NullCheck(L_38);
@@ -22309,12 +22468,12 @@ IL_00e7:
 		}
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:91>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:93>
 		HashSet_1_tC6CC68EEF8568891A7F0FC4B2435372BD4EE9CFD* L_39 = V_0;
 		LetterTileU5BU5D_t59EDDCEA1B9A2F5C673BFBE24B9F52DD79789F57* L_40;
 		L_40 = Enumerable_ToArray_TisLetterTile_tB20E0D5265E6DEC4F697C65EBC185582BA0E3541_mBFB6B0A4755D2F316D10E962284412BF3A731B83(L_39, Enumerable_ToArray_TisLetterTile_tB20E0D5265E6DEC4F697C65EBC185582BA0E3541_mBFB6B0A4755D2F316D10E962284412BF3A731B83_RuntimeMethod_var);
 		V_1 = L_40;
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:93>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:95>
 		LetterTileU5BU5D_t59EDDCEA1B9A2F5C673BFBE24B9F52DD79789F57* L_41 = V_1;
 		V_10 = L_41;
 		V_7 = 0;
@@ -22323,13 +22482,13 @@ IL_00e7:
 
 IL_00fe:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:93>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:95>
 		LetterTileU5BU5D_t59EDDCEA1B9A2F5C673BFBE24B9F52DD79789F57* L_42 = V_10;
 		int32_t L_43 = V_7;
 		NullCheck(L_42);
 		int32_t L_44 = L_43;
 		LetterTile_tB20E0D5265E6DEC4F697C65EBC185582BA0E3541* L_45 = (L_42)->GetAt(static_cast<il2cpp_array_size_t>(L_44));
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:95>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:97>
 		NullCheck(L_45);
 		LetterTile_RestoreOriginalColor_mF6E472449A2DFCD1B01F1ABEF693A31C6209C94E(L_45, NULL);
 		int32_t L_46 = V_7;
@@ -22338,7 +22497,7 @@ IL_00fe:
 
 IL_010e:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:93>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:95>
 		int32_t L_47 = V_7;
 		LetterTileU5BU5D_t59EDDCEA1B9A2F5C673BFBE24B9F52DD79789F57* L_48 = V_10;
 		NullCheck(L_48);
@@ -22348,11 +22507,11 @@ IL_010e:
 		}
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:98>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:100>
 		Dictionary_2_tC4ACFBC4FA9DEC0736DD419613BD13FAF9350EA6* L_49 = (Dictionary_2_tC4ACFBC4FA9DEC0736DD419613BD13FAF9350EA6*)il2cpp_codegen_object_new(Dictionary_2_tC4ACFBC4FA9DEC0736DD419613BD13FAF9350EA6_il2cpp_TypeInfo_var);
 		Dictionary_2__ctor_m77B61C2FA8B5BDC3122DB7FE64BB293623DD368C(L_49, Dictionary_2__ctor_m77B61C2FA8B5BDC3122DB7FE64BB293623DD368C_RuntimeMethod_var);
 		V_2 = L_49;
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:100>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:102>
 		TableSnapZone_t98DB6E46409D9D63B767218E4B11C273A4015EA7* L_50 = __this->___tableZone;
 		NullCheck(L_50);
 		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_51 = L_50->___gridOrigin;
@@ -22361,7 +22520,7 @@ IL_010e:
 		L_52 = Transform_get_position_m69CD5FA214FDAE7BB701552943674846C220FDE1(L_51, NULL);
 		float L_53 = L_52.___y;
 		V_3 = L_53;
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:102>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:104>
 		LetterTileU5BU5D_t59EDDCEA1B9A2F5C673BFBE24B9F52DD79789F57* L_54 = V_1;
 		V_10 = L_54;
 		V_7 = 0;
@@ -22370,14 +22529,14 @@ IL_010e:
 
 IL_013d:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:102>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:104>
 		LetterTileU5BU5D_t59EDDCEA1B9A2F5C673BFBE24B9F52DD79789F57* L_55 = V_10;
 		int32_t L_56 = V_7;
 		NullCheck(L_55);
 		int32_t L_57 = L_56;
 		LetterTile_tB20E0D5265E6DEC4F697C65EBC185582BA0E3541* L_58 = (L_55)->GetAt(static_cast<il2cpp_array_size_t>(L_57));
 		V_11 = L_58;
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:104>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:106>
 		LetterTile_tB20E0D5265E6DEC4F697C65EBC185582BA0E3541* L_59 = V_11;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_60;
@@ -22388,7 +22547,7 @@ IL_013d:
 		}
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:106>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:108>
 		LetterTile_tB20E0D5265E6DEC4F697C65EBC185582BA0E3541* L_61 = V_11;
 		NullCheck(L_61);
 		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_62;
@@ -22397,7 +22556,7 @@ IL_013d:
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_63;
 		L_63 = Transform_get_position_m69CD5FA214FDAE7BB701552943674846C220FDE1(L_62, NULL);
 		V_12 = L_63;
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:109>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:111>
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_64 = V_12;
 		float L_65 = L_64.___y;
 		float L_66 = V_3;
@@ -22410,14 +22569,14 @@ IL_013d:
 		}
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:112>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:114>
 		TableSnapZone_t98DB6E46409D9D63B767218E4B11C273A4015EA7* L_69 = __this->___tableZone;
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_70 = V_12;
 		NullCheck(L_69);
 		Vector2Int_t69B2886EBAB732D9B880565E18E7568F3DE0CE6A L_71;
 		L_71 = TableSnapZone_WorldToCell_mAB8142B1C7D51A19A5FF201125A4463720A05847(L_69, L_70, NULL);
 		V_13 = L_71;
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:115>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:117>
 		Vector2Int_t69B2886EBAB732D9B880565E18E7568F3DE0CE6A L_72 = V_13;
 		bool L_73;
 		L_73 = WordScanManager_IsInsideGrid_mA361D8005CA6A8B125A99D6C1FAA6F7980C1FFC1(__this, L_72, NULL);
@@ -22427,12 +22586,12 @@ IL_013d:
 		}
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:119>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:121>
 		Vector2Int_t69B2886EBAB732D9B880565E18E7568F3DE0CE6A L_74 = V_13;
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_75;
 		L_75 = WordScanManager_GetCellCenterWorld_m02F3D3EF20CF81C0722C12288857F396BBE0B439(__this, L_74, NULL);
 		V_14 = L_75;
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:120>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:122>
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_76 = V_12;
 		float L_77 = L_76.___x;
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_78 = V_14;
@@ -22442,7 +22601,7 @@ IL_013d:
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_82 = V_14;
 		float L_83 = L_82.___z;
 		Vector2__ctor_m9525B79969AFFE3254B303A40997A56DEEB6F548_inline((&V_15), ((float)il2cpp_codegen_subtract(L_77, L_79)), ((float)il2cpp_codegen_subtract(L_81, L_83)), NULL);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:122>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:124>
 		float L_84;
 		L_84 = Vector2_get_magnitude_m5C59B4056420AEFDB291AD0914A3F675330A75CE_inline((&V_15), NULL);
 		float L_85 = __this->___maxHorizontalOffsetToCellCenter;
@@ -22452,7 +22611,7 @@ IL_013d:
 		}
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:125>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:127>
 		Dictionary_2_tC4ACFBC4FA9DEC0736DD419613BD13FAF9350EA6* L_86 = V_2;
 		Vector2Int_t69B2886EBAB732D9B880565E18E7568F3DE0CE6A L_87 = V_13;
 		NullCheck(L_86);
@@ -22464,7 +22623,7 @@ IL_013d:
 		}
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:127>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:129>
 		Dictionary_2_tC4ACFBC4FA9DEC0736DD419613BD13FAF9350EA6* L_89 = V_2;
 		Vector2Int_t69B2886EBAB732D9B880565E18E7568F3DE0CE6A L_90 = V_13;
 		LetterTile_tB20E0D5265E6DEC4F697C65EBC185582BA0E3541* L_91 = V_11;
@@ -22475,7 +22634,7 @@ IL_013d:
 
 IL_01e5:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:131>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:133>
 		Vector2Int_t69B2886EBAB732D9B880565E18E7568F3DE0CE6A L_92 = V_13;
 		Vector2Int_t69B2886EBAB732D9B880565E18E7568F3DE0CE6A L_93 = L_92;
 		RuntimeObject* L_94 = Box(Vector2Int_t69B2886EBAB732D9B880565E18E7568F3DE0CE6A_il2cpp_TypeInfo_var, &L_93);
@@ -22497,7 +22656,7 @@ IL_0202:
 
 IL_0208:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:102>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:104>
 		int32_t L_99 = V_7;
 		LetterTileU5BU5D_t59EDDCEA1B9A2F5C673BFBE24B9F52DD79789F57* L_100 = V_10;
 		NullCheck(L_100);
@@ -22507,7 +22666,7 @@ IL_0208:
 		}
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:135>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:137>
 		Dictionary_2_tC4ACFBC4FA9DEC0736DD419613BD13FAF9350EA6* L_101 = V_2;
 		NullCheck(L_101);
 		int32_t L_102;
@@ -22518,11 +22677,11 @@ IL_0208:
 		L_105 = String_Format_mA8DBB4C2516B9723C5A41E6CB1E2FAF4BBE96DD8(_stringLiteral00C3E1B629ABC60EC0AF4A0296FC6A4E81981397, L_104, NULL);
 		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 		Debug_Log_m87A9A3C761FF5C43ED8A53B16190A53D08F818BB(L_105, NULL);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:137>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:139>
 		HashSet_1_tC6CC68EEF8568891A7F0FC4B2435372BD4EE9CFD* L_106 = (HashSet_1_tC6CC68EEF8568891A7F0FC4B2435372BD4EE9CFD*)il2cpp_codegen_object_new(HashSet_1_tC6CC68EEF8568891A7F0FC4B2435372BD4EE9CFD_il2cpp_TypeInfo_var);
 		HashSet_1__ctor_m355565FB374431AF255ADA72155ABADFAC6023A2(L_106, HashSet_1__ctor_m355565FB374431AF255ADA72155ABADFAC6023A2_RuntimeMethod_var);
 		V_4 = L_106;
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:139>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:141>
 		bool L_107 = __this->___allowHorizontal;
 		if (!L_107)
 		{
@@ -22530,7 +22689,7 @@ IL_0208:
 		}
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:140>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:142>
 		Dictionary_2_tC4ACFBC4FA9DEC0736DD419613BD13FAF9350EA6* L_108 = V_2;
 		HashSet_1_tC6CC68EEF8568891A7F0FC4B2435372BD4EE9CFD* L_109 = V_4;
 		Vector2Int_t69B2886EBAB732D9B880565E18E7568F3DE0CE6A L_110;
@@ -22540,7 +22699,7 @@ IL_0208:
 
 IL_024a:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:142>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:144>
 		bool L_111 = __this->___allowVertical;
 		if (!L_111)
 		{
@@ -22548,7 +22707,7 @@ IL_024a:
 		}
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:143>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:145>
 		Dictionary_2_tC4ACFBC4FA9DEC0736DD419613BD13FAF9350EA6* L_112 = V_2;
 		HashSet_1_tC6CC68EEF8568891A7F0FC4B2435372BD4EE9CFD* L_113 = V_4;
 		Vector2Int_t69B2886EBAB732D9B880565E18E7568F3DE0CE6A L_114;
@@ -22558,7 +22717,7 @@ IL_024a:
 
 IL_0260:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:144>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:146>
 		return;
 	}
 }
@@ -22566,10 +22725,10 @@ IL_0260:
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool WordScanManager_IsInsideGrid_mA361D8005CA6A8B125A99D6C1FAA6F7980C1FFC1 (WordScanManager_t5DFA8AA7ED2E7C3224B27D3CA0955AC965052C11* __this, Vector2Int_t69B2886EBAB732D9B880565E18E7568F3DE0CE6A ___0_cell, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:148>
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:149>
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:150>
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:151>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:150>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:151>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:152>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:153>
 		int32_t L_0;
 		L_0 = Vector2Int_get_x_mA2CACB1B6E6B5AD0CCC32B2CD2EDCE3ECEB50576_inline((&___0_cell), NULL);
 		if ((((int32_t)L_0) < ((int32_t)0)))
@@ -22647,7 +22806,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void WordScanManager_ScanDirection_m6E154F32D
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&List_1_t83778CDC4C8C3A5FD32A661A4D241173450265A1_il2cpp_TypeInfo_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&List_1_tB56F1028A724D2CE4E84861619D1CF68C68C983D_il2cpp_TypeInfo_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&U3CU3Ec_U3CScanDirectionU3Eb__17_0_m172853E8A736280660F1CFFAFC6EC1BA61660541_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&U3CU3Ec_U3CScanDirectionU3Eb__19_0_m66A91C61C70B632EFD255251375292BEEE4F208B_RuntimeMethod_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&U3CU3Ec_t3022502319866C96FEA49E8F5B080A1E31507577_il2cpp_TypeInfo_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral2C29EDA00603EB942176E774B171B57C65ACE9B5);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteralA02D0A7615CA3C2CAA7E174375A3C7D2637015AD);
@@ -22681,7 +22840,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void WordScanManager_ScanDirection_m6E154F32D
 	Func_2_tD405B678AA6269AE97FB3582F3158147036EDDB2* G_B9_0 = NULL;
 	List_1_t83778CDC4C8C3A5FD32A661A4D241173450265A1* G_B9_1 = NULL;
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:159>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:161>
 		Dictionary_2_tC4ACFBC4FA9DEC0736DD419613BD13FAF9350EA6* L_0 = ___0_cellMap;
 		NullCheck(L_0);
 		Enumerator_tFF340CA8493E02027982A6FE053D70619046A55D L_1;
@@ -22692,7 +22851,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void WordScanManager_ScanDirection_m6E154F32D
 		auto __finallyBlock = il2cpp::utils::Finally([&]
 		{
 
-FINALLY_0284:
+FINALLY_02fd:
 			{
 				Enumerator_Dispose_mBDD8EA06898CC08B2F2058F07DF78A3EA2872FA4((&V_0), Enumerator_Dispose_mBDD8EA06898CC08B2F2058F07DF78A3EA2872FA4_RuntimeMethod_var);
 				return;
@@ -22701,24 +22860,24 @@ FINALLY_0284:
 		try
 		{
 			{
-				goto IL_0276_1;
+				goto IL_02ef_1;
 			}
 
 IL_000c_1:
 			{
-				//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:159>
+				//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:161>
 				KeyValuePair_2_t511D37B06E6BE8B21BCF130017D75ED906C9A7C6 L_2;
 				L_2 = Enumerator_get_Current_mDC991AC7C8F05903C8A8A8977D5F2D855923BAA2_inline((&V_0), Enumerator_get_Current_mDC991AC7C8F05903C8A8A8977D5F2D855923BAA2_RuntimeMethod_var);
 				V_1 = L_2;
-				//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:161>
+				//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:163>
 				Vector2Int_t69B2886EBAB732D9B880565E18E7568F3DE0CE6A L_3;
 				L_3 = KeyValuePair_2_get_Key_m5D88AEFDEF6624A1BF757689A44D1417B25BEA0A_inline((&V_1), KeyValuePair_2_get_Key_m5D88AEFDEF6624A1BF757689A44D1417B25BEA0A_RuntimeMethod_var);
 				V_2 = L_3;
-				//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:162>
+				//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:164>
 				LetterTile_tB20E0D5265E6DEC4F697C65EBC185582BA0E3541* L_4;
 				L_4 = KeyValuePair_2_get_Value_m8EF8C2FAA73F7F3CD93755201B8C2EA928ADAC9A_inline((&V_1), KeyValuePair_2_get_Value_m8EF8C2FAA73F7F3CD93755201B8C2EA928ADAC9A_RuntimeMethod_var);
 				V_3 = L_4;
-				//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:164>
+				//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:166>
 				HashSet_1_tC6CC68EEF8568891A7F0FC4B2435372BD4EE9CFD* L_5 = ___1_processed;
 				LetterTile_tB20E0D5265E6DEC4F697C65EBC185582BA0E3541* L_6 = V_3;
 				NullCheck(L_5);
@@ -22726,17 +22885,17 @@ IL_000c_1:
 				L_7 = HashSet_1_Contains_m411C89F3D656227FD71A3AFA7BB25033BA415E39(L_5, L_6, HashSet_1_Contains_m411C89F3D656227FD71A3AFA7BB25033BA415E39_RuntimeMethod_var);
 				if (L_7)
 				{
-					goto IL_0276_1;
+					goto IL_02ef_1;
 				}
 			}
 			{
-				//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:167>
+				//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:169>
 				Vector2Int_t69B2886EBAB732D9B880565E18E7568F3DE0CE6A L_8 = V_2;
 				Vector2Int_t69B2886EBAB732D9B880565E18E7568F3DE0CE6A L_9 = ___2_dir;
 				Vector2Int_t69B2886EBAB732D9B880565E18E7568F3DE0CE6A L_10;
 				L_10 = Vector2Int_op_Subtraction_m5C9A4D049F8EE288878F37C991CA1BBB738D8059_inline(L_8, L_9, NULL);
 				V_4 = L_10;
-				//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:168>
+				//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:170>
 				Dictionary_2_tC4ACFBC4FA9DEC0736DD419613BD13FAF9350EA6* L_11 = ___0_cellMap;
 				Vector2Int_t69B2886EBAB732D9B880565E18E7568F3DE0CE6A L_12 = V_4;
 				NullCheck(L_11);
@@ -22744,26 +22903,26 @@ IL_000c_1:
 				L_13 = Dictionary_2_ContainsKey_m879213F7A630B58B08F2EA627D88B25A92953577(L_11, L_12, Dictionary_2_ContainsKey_m879213F7A630B58B08F2EA627D88B25A92953577_RuntimeMethod_var);
 				if (L_13)
 				{
-					goto IL_0276_1;
+					goto IL_02ef_1;
 				}
 			}
 			{
-				//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:171>
+				//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:173>
 				List_1_t83778CDC4C8C3A5FD32A661A4D241173450265A1* L_14 = (List_1_t83778CDC4C8C3A5FD32A661A4D241173450265A1*)il2cpp_codegen_object_new(List_1_t83778CDC4C8C3A5FD32A661A4D241173450265A1_il2cpp_TypeInfo_var);
 				List_1__ctor_m3BF79E5ECB5ACC0F1F04369227155B54420C4A2F(L_14, List_1__ctor_m3BF79E5ECB5ACC0F1F04369227155B54420C4A2F_RuntimeMethod_var);
 				V_5 = L_14;
-				//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:172>
+				//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:174>
 				List_1_tB56F1028A724D2CE4E84861619D1CF68C68C983D* L_15 = (List_1_tB56F1028A724D2CE4E84861619D1CF68C68C983D*)il2cpp_codegen_object_new(List_1_tB56F1028A724D2CE4E84861619D1CF68C68C983D_il2cpp_TypeInfo_var);
 				List_1__ctor_mE1D9FD9DA1EF2CAC4F99EF4E013F05BB8C3507EF(L_15, List_1__ctor_mE1D9FD9DA1EF2CAC4F99EF4E013F05BB8C3507EF_RuntimeMethod_var);
 				V_6 = L_15;
-				//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:174>
+				//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:176>
 				Vector2Int_t69B2886EBAB732D9B880565E18E7568F3DE0CE6A L_16 = V_2;
 				V_7 = L_16;
 			}
 
 IL_0057_1:
 			{
-				//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:175>
+				//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:177>
 				Dictionary_2_tC4ACFBC4FA9DEC0736DD419613BD13FAF9350EA6* L_17 = ___0_cellMap;
 				Vector2Int_t69B2886EBAB732D9B880565E18E7568F3DE0CE6A L_18 = V_7;
 				NullCheck(L_17);
@@ -22775,35 +22934,35 @@ IL_0057_1:
 				}
 			}
 			{
-				//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:177>
+				//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:179>
 				List_1_t83778CDC4C8C3A5FD32A661A4D241173450265A1* L_20 = V_5;
 				LetterTile_tB20E0D5265E6DEC4F697C65EBC185582BA0E3541* L_21 = V_9;
 				NullCheck(L_20);
 				List_1_Add_m129D9D6C136541FC16EE70BAE863FC5EC633E96E_inline(L_20, L_21, List_1_Add_m129D9D6C136541FC16EE70BAE863FC5EC633E96E_RuntimeMethod_var);
-				//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:178>
+				//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:180>
 				List_1_tB56F1028A724D2CE4E84861619D1CF68C68C983D* L_22 = V_6;
 				Vector2Int_t69B2886EBAB732D9B880565E18E7568F3DE0CE6A L_23 = V_7;
 				NullCheck(L_22);
 				List_1_Add_m771AC7A01DFC931CCCFCCF949C1F4D56B5E98A1B_inline(L_22, L_23, List_1_Add_m771AC7A01DFC931CCCFCCF949C1F4D56B5E98A1B_RuntimeMethod_var);
-				//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:179>
+				//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:181>
 				HashSet_1_tC6CC68EEF8568891A7F0FC4B2435372BD4EE9CFD* L_24 = ___1_processed;
 				LetterTile_tB20E0D5265E6DEC4F697C65EBC185582BA0E3541* L_25 = V_9;
 				NullCheck(L_24);
 				bool L_26;
 				L_26 = HashSet_1_Add_mBB6D1B905FC34E06669E5AEFFC7EA590E67015AB(L_24, L_25, HashSet_1_Add_mBB6D1B905FC34E06669E5AEFFC7EA590E67015AB_RuntimeMethod_var);
-				//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:180>
+				//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:182>
 				Vector2Int_t69B2886EBAB732D9B880565E18E7568F3DE0CE6A L_27 = V_7;
 				Vector2Int_t69B2886EBAB732D9B880565E18E7568F3DE0CE6A L_28 = ___2_dir;
 				Vector2Int_t69B2886EBAB732D9B880565E18E7568F3DE0CE6A L_29;
 				L_29 = Vector2Int_op_Addition_m6358133A28BA913D2080FD44472D1FD1CE1AC28F_inline(L_27, L_28, NULL);
 				V_7 = L_29;
-				//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:181>
+				//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:183>
 				goto IL_0057_1;
 			}
 
 IL_008a_1:
 			{
-				//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:183>
+				//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:185>
 				List_1_t83778CDC4C8C3A5FD32A661A4D241173450265A1* L_30 = V_5;
 				NullCheck(L_30);
 				int32_t L_31;
@@ -22811,14 +22970,14 @@ IL_008a_1:
 				int32_t L_32 = __this->___minWordLength;
 				if ((((int32_t)L_31) < ((int32_t)L_32)))
 				{
-					goto IL_0276_1;
+					goto IL_02ef_1;
 				}
 			}
 			{
-				//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:186>
+				//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:188>
 				List_1_t83778CDC4C8C3A5FD32A661A4D241173450265A1* L_33 = V_5;
 				il2cpp_codegen_runtime_class_init_inline(U3CU3Ec_t3022502319866C96FEA49E8F5B080A1E31507577_il2cpp_TypeInfo_var);
-				Func_2_tD405B678AA6269AE97FB3582F3158147036EDDB2* L_34 = ((U3CU3Ec_t3022502319866C96FEA49E8F5B080A1E31507577_StaticFields*)il2cpp_codegen_static_fields_for(U3CU3Ec_t3022502319866C96FEA49E8F5B080A1E31507577_il2cpp_TypeInfo_var))->___U3CU3E9__17_0;
+				Func_2_tD405B678AA6269AE97FB3582F3158147036EDDB2* L_34 = ((U3CU3Ec_t3022502319866C96FEA49E8F5B080A1E31507577_StaticFields*)il2cpp_codegen_static_fields_for(U3CU3Ec_t3022502319866C96FEA49E8F5B080A1E31507577_il2cpp_TypeInfo_var))->___U3CU3E9__19_0;
 				Func_2_tD405B678AA6269AE97FB3582F3158147036EDDB2* L_35 = L_34;
 				if (L_35)
 				{
@@ -22833,10 +22992,10 @@ IL_008a_1:
 				il2cpp_codegen_runtime_class_init_inline(U3CU3Ec_t3022502319866C96FEA49E8F5B080A1E31507577_il2cpp_TypeInfo_var);
 				U3CU3Ec_t3022502319866C96FEA49E8F5B080A1E31507577* L_36 = ((U3CU3Ec_t3022502319866C96FEA49E8F5B080A1E31507577_StaticFields*)il2cpp_codegen_static_fields_for(U3CU3Ec_t3022502319866C96FEA49E8F5B080A1E31507577_il2cpp_TypeInfo_var))->___U3CU3E9;
 				Func_2_tD405B678AA6269AE97FB3582F3158147036EDDB2* L_37 = (Func_2_tD405B678AA6269AE97FB3582F3158147036EDDB2*)il2cpp_codegen_object_new(Func_2_tD405B678AA6269AE97FB3582F3158147036EDDB2_il2cpp_TypeInfo_var);
-				Func_2__ctor_mBB82CE45173326DE27FDA4A8A0BD2887B6CE55D4(L_37, L_36, (intptr_t)((void*)U3CU3Ec_U3CScanDirectionU3Eb__17_0_m172853E8A736280660F1CFFAFC6EC1BA61660541_RuntimeMethod_var), NULL);
+				Func_2__ctor_mBB82CE45173326DE27FDA4A8A0BD2887B6CE55D4(L_37, L_36, (intptr_t)((void*)U3CU3Ec_U3CScanDirectionU3Eb__19_0_m66A91C61C70B632EFD255251375292BEEE4F208B_RuntimeMethod_var), NULL);
 				Func_2_tD405B678AA6269AE97FB3582F3158147036EDDB2* L_38 = L_37;
-				((U3CU3Ec_t3022502319866C96FEA49E8F5B080A1E31507577_StaticFields*)il2cpp_codegen_static_fields_for(U3CU3Ec_t3022502319866C96FEA49E8F5B080A1E31507577_il2cpp_TypeInfo_var))->___U3CU3E9__17_0 = L_38;
-				Il2CppCodeGenWriteBarrier((void**)(&((U3CU3Ec_t3022502319866C96FEA49E8F5B080A1E31507577_StaticFields*)il2cpp_codegen_static_fields_for(U3CU3Ec_t3022502319866C96FEA49E8F5B080A1E31507577_il2cpp_TypeInfo_var))->___U3CU3E9__17_0), (void*)L_38);
+				((U3CU3Ec_t3022502319866C96FEA49E8F5B080A1E31507577_StaticFields*)il2cpp_codegen_static_fields_for(U3CU3Ec_t3022502319866C96FEA49E8F5B080A1E31507577_il2cpp_TypeInfo_var))->___U3CU3E9__19_0 = L_38;
+				Il2CppCodeGenWriteBarrier((void**)(&((U3CU3Ec_t3022502319866C96FEA49E8F5B080A1E31507577_StaticFields*)il2cpp_codegen_static_fields_for(U3CU3Ec_t3022502319866C96FEA49E8F5B080A1E31507577_il2cpp_TypeInfo_var))->___U3CU3E9__19_0), (void*)L_38);
 				G_B10_0 = L_38;
 				G_B10_1 = G_B9_1;
 			}
@@ -22851,7 +23010,7 @@ IL_00bd_1:
 				String_t* L_41;
 				L_41 = String_ToLower_m6191ABA3DC514ED47C10BDA23FD0DDCEAE7ACFBD(L_40, NULL);
 				V_8 = L_41;
-				//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:188>
+				//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:190>
 				SceneObjectValidator_tBCB8A5AB6293DD4C8DFC7BBB492E65DC59CB2E32* L_42 = __this->___sceneObjectValidator;
 				String_t* L_43 = V_8;
 				NullCheck(L_42);
@@ -22859,17 +23018,17 @@ IL_00bd_1:
 				L_44 = SceneObjectValidator_CheckWord_m049461E397D04D2241246BC9032CD1AAE7B0729B(L_42, L_43, NULL);
 				if (!L_44)
 				{
-					goto IL_013a_1;
+					goto IL_0166_1;
 				}
 			}
 			{
-				//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:190>
+				//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:192>
 				String_t* L_45 = V_8;
 				String_t* L_46;
 				L_46 = String_Concat_m9E3155FB84015C823606188F53B47CB44C444991(_stringLiteralDB141919FD751F63302FFC76998E94B166ECCC60, L_45, NULL);
 				il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 				Debug_Log_m87A9A3C761FF5C43ED8A53B16190A53D08F818BB(L_46, NULL);
-				//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:192>
+				//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:194>
 				List_1_t83778CDC4C8C3A5FD32A661A4D241173450265A1* L_47 = V_5;
 				NullCheck(L_47);
 				Enumerator_t6735A01E8624C9A5B4DA2461922D3D4CEF85DFDA L_48;
@@ -22889,52 +23048,52 @@ FINALLY_012c_1:
 				try
 				{
 					{
-						goto IL_011e_2;
+						goto IL_0121_2;
 					}
 
-IL_00f9_2:
+IL_00fc_2:
 					{
-						//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:192>
+						//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:194>
 						LetterTile_tB20E0D5265E6DEC4F697C65EBC185582BA0E3541* L_49;
 						L_49 = Enumerator_get_Current_mAE7C9841355F6D3416F927D57980DB66AFC65E17_inline((&V_10), Enumerator_get_Current_mAE7C9841355F6D3416F927D57980DB66AFC65E17_RuntimeMethod_var);
-						//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:194>
+						//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:196>
 						LetterTile_tB20E0D5265E6DEC4F697C65EBC185582BA0E3541* L_50 = L_49;
 						NullCheck(L_50);
 						LetterTile_SetSceneObjectYellow_m9A90F74C516CA25221DE36C6A9CAB351A1E84BAA(L_50, NULL);
-						//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:196>
+						//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:198>
 						NullCheck(L_50);
 						SpawnableObject_tB01492418378D7AE527A7C2936955B071EC7B7FA* L_51;
 						L_51 = Component_GetComponent_TisSpawnableObject_tB01492418378D7AE527A7C2936955B071EC7B7FA_m93A5752467942CC4B1FA17C2235BB977DFF1B7FB(L_50, Component_GetComponent_TisSpawnableObject_tB01492418378D7AE527A7C2936955B071EC7B7FA_m93A5752467942CC4B1FA17C2235BB977DFF1B7FB_RuntimeMethod_var);
 						V_11 = L_51;
-						//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:197>
+						//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:199>
 						SpawnableObject_tB01492418378D7AE527A7C2936955B071EC7B7FA* L_52 = V_11;
 						il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 						bool L_53;
 						L_53 = Object_op_Inequality_mD0BE578448EAA61948F25C32F8DD55AB1F778602(L_52, (Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C*)NULL, NULL);
 						if (!L_53)
 						{
-							goto IL_011e_2;
+							goto IL_0121_2;
 						}
 					}
 					{
-						//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:199>
+						//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:201>
 						SpawnableObject_tB01492418378D7AE527A7C2936955B071EC7B7FA* L_54 = V_11;
 						NullCheck(L_54);
 						SpawnableObject_BroadcastPosAndRot_m6BD5E105513D3C1045495CE0D624BA0AA827CE44(L_54, NULL);
 					}
 
-IL_011e_2:
+IL_0121_2:
 					{
-						//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:192>
+						//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:194>
 						bool L_55;
 						L_55 = Enumerator_MoveNext_m4235C59F7CDFCADA64416F44D70922B6B08F7F8C((&V_10), Enumerator_MoveNext_m4235C59F7CDFCADA64416F44D70922B6B08F7F8C_RuntimeMethod_var);
 						if (L_55)
 						{
-							goto IL_00f9_2;
+							goto IL_00fc_2;
 						}
 					}
 					{
-						goto IL_0276_1;
+						goto IL_013a_1;
 					}
 				}
 				catch(Il2CppExceptionWrapper& e)
@@ -22945,204 +23104,111 @@ IL_011e_2:
 
 IL_013a_1:
 			{
-				//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:203>
-				WordValidator_t0FC7E088593716BE97A671FBE4A3B870B7C72FA2* L_56 = __this->___validator;
-				String_t* L_57 = V_8;
-				NullCheck(L_56);
-				bool L_58;
-				L_58 = WordValidator_CheckWord_m55775AC32D645FFE2013D64CD40BE1D344CE718E(L_56, L_57, NULL);
-				if (!L_58)
-				{
-					goto IL_021c_1;
-				}
-			}
-			{
-				//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:205>
-				String_t* L_59 = V_8;
-				String_t* L_60;
-				L_60 = String_Concat_m9E3155FB84015C823606188F53B47CB44C444991(_stringLiteralA02D0A7615CA3C2CAA7E174375A3C7D2637015AD, L_59, NULL);
-				il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
-				Debug_Log_m87A9A3C761FF5C43ED8A53B16190A53D08F818BB(L_60, NULL);
-				//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:207>
-				String_t* L_61 = V_8;
-				int32_t L_62;
-				L_62 = WordScanManager_CalculatePoints_m281F24B3BB34B9D7751A1B899333D075C52648DF(__this, L_61, NULL);
-				V_12 = L_62;
-				//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:209>
-				ScoreManager_t86D4A06D4B38717B8C529883F37DA25BA5750F39* L_63 = __this->___scoreManager;
+				//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:204>
+				AudioClip_t5D272C4EB4F2D3ED49F1C346DEA373CF6D585F20* L_56 = __this->___failSound;
 				il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
-				bool L_64;
-				L_64 = Object_op_Inequality_mD0BE578448EAA61948F25C32F8DD55AB1F778602(L_63, (Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C*)NULL, NULL);
-				if (!L_64)
+				bool L_57;
+				L_57 = Object_op_Inequality_mD0BE578448EAA61948F25C32F8DD55AB1F778602(L_56, (Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C*)NULL, NULL);
+				if (!L_57)
 				{
-					goto IL_01a2_1;
+					goto IL_02ef_1;
 				}
 			}
 			{
-				//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:211>
-				int32_t L_65 = __this->___playerType;
-				if (L_65)
+				//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:206>
+				AudioClip_t5D272C4EB4F2D3ED49F1C346DEA373CF6D585F20* L_58 = __this->___failSound;
+				Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_59;
+				L_59 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(__this, NULL);
+				NullCheck(L_59);
+				Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_60;
+				L_60 = Transform_get_position_m69CD5FA214FDAE7BB701552943674846C220FDE1(L_59, NULL);
+				AudioSource_PlayClipAtPoint_mA78328A70D3F1088B588EF6F811AAD6577F2B7BF(L_58, L_60, NULL);
+				goto IL_02ef_1;
+			}
+
+IL_0166_1:
+			{
+				//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:209>
+				WordValidator_t0FC7E088593716BE97A671FBE4A3B870B7C72FA2* L_61 = __this->___validator;
+				String_t* L_62 = V_8;
+				NullCheck(L_61);
+				bool L_63;
+				L_63 = WordValidator_CheckWord_m55775AC32D645FFE2013D64CD40BE1D344CE718E(L_61, L_62, NULL);
+				if (!L_63)
 				{
-					goto IL_018c_1;
+					goto IL_0271_1;
 				}
 			}
 			{
-				//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:212>
-				ScoreManager_t86D4A06D4B38717B8C529883F37DA25BA5750F39* L_66 = __this->___scoreManager;
-				int32_t L_67 = V_12;
-				NullCheck(L_66);
-				ScoreManager_AddPlayer1Score_m1FB7C03FCC00B3EA1220FA752ADE9077571CC9B5(L_66, L_67, NULL);
-				goto IL_01a2_1;
-			}
-
-IL_018c_1:
-			{
-				//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:213>
-				int32_t L_68 = __this->___playerType;
-				if ((!(((uint32_t)L_68) == ((uint32_t)1))))
-				{
-					goto IL_01a2_1;
-				}
-			}
-			{
-				//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:214>
-				ScoreManager_t86D4A06D4B38717B8C529883F37DA25BA5750F39* L_69 = __this->___scoreManager;
-				int32_t L_70 = V_12;
-				NullCheck(L_69);
-				ScoreManager_AddPlayer2Score_m29E7EB1290EF76096CB04DA3F35B4844E821D547(L_69, L_70, NULL);
-			}
-
-IL_01a2_1:
-			{
-				//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:217>
-				List_1_t83778CDC4C8C3A5FD32A661A4D241173450265A1* L_71 = V_5;
-				NullCheck(L_71);
-				Enumerator_t6735A01E8624C9A5B4DA2461922D3D4CEF85DFDA L_72;
-				L_72 = List_1_GetEnumerator_m4CAFCF88E93A60F40667EE8678F5611B792FB2AC(L_71, List_1_GetEnumerator_m4CAFCF88E93A60F40667EE8678F5611B792FB2AC_RuntimeMethod_var);
-				V_10 = L_72;
-			}
-			{
-				auto __finallyBlock = il2cpp::utils::Finally([&]
-				{
-
-FINALLY_020e_1:
-					{
-						Enumerator_Dispose_m80E5ECA6220ADD00B39A97F258033B75C2A474BC((&V_10), Enumerator_Dispose_m80E5ECA6220ADD00B39A97F258033B75C2A474BC_RuntimeMethod_var);
-						return;
-					}
-				});
-				try
-				{
-					{
-						goto IL_0203_2;
-					}
-
-IL_01ad_2:
-					{
-						//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:217>
-						LetterTile_tB20E0D5265E6DEC4F697C65EBC185582BA0E3541* L_73;
-						L_73 = Enumerator_get_Current_mAE7C9841355F6D3416F927D57980DB66AFC65E17_inline((&V_10), Enumerator_get_Current_mAE7C9841355F6D3416F927D57980DB66AFC65E17_RuntimeMethod_var);
-						V_13 = L_73;
-						//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:219>
-						TableSnapZone_t98DB6E46409D9D63B767218E4B11C273A4015EA7* L_74 = __this->___tableZone;
-						il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
-						bool L_75;
-						L_75 = Object_op_Inequality_mD0BE578448EAA61948F25C32F8DD55AB1F778602(L_74, (Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C*)NULL, NULL);
-						if (!L_75)
-						{
-							goto IL_01d6_2;
-						}
-					}
-					{
-						//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:220>
-						TableSnapZone_t98DB6E46409D9D63B767218E4B11C273A4015EA7* L_76 = __this->___tableZone;
-						LetterTile_tB20E0D5265E6DEC4F697C65EBC185582BA0E3541* L_77 = V_13;
-						NullCheck(L_77);
-						Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_78;
-						L_78 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(L_77, NULL);
-						NullCheck(L_76);
-						TableSnapZone_Unmark_m0F25F968ECCA4B654D5CD8AA73CAF3CD2317FAF2(L_76, L_78, NULL);
-					}
-
-IL_01d6_2:
-					{
-						//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:222>
-						LetterTile_tB20E0D5265E6DEC4F697C65EBC185582BA0E3541* L_79 = V_13;
-						NullCheck(L_79);
-						GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_80;
-						L_80 = Component_get_gameObject_m57AEFBB14DB39EC476F740BA000E170355DE691B(L_79, NULL);
-						NullCheck(L_80);
-						SpawnableObject_tB01492418378D7AE527A7C2936955B071EC7B7FA* L_81;
-						L_81 = GameObject_GetComponent_TisSpawnableObject_tB01492418378D7AE527A7C2936955B071EC7B7FA_mF488A3B736C32806FEA5E7A9096D267180B8048F(L_80, GameObject_GetComponent_TisSpawnableObject_tB01492418378D7AE527A7C2936955B071EC7B7FA_mF488A3B736C32806FEA5E7A9096D267180B8048F_RuntimeMethod_var);
-						V_14 = L_81;
-						//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:223>
-						SpawnableObject_tB01492418378D7AE527A7C2936955B071EC7B7FA* L_82 = V_14;
-						il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
-						bool L_83;
-						L_83 = Object_op_Inequality_mD0BE578448EAA61948F25C32F8DD55AB1F778602(L_82, (Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C*)NULL, NULL);
-						if (!L_83)
-						{
-							goto IL_01f6_2;
-						}
-					}
-					{
-						//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:225>
-						SpawnableObject_tB01492418378D7AE527A7C2936955B071EC7B7FA* L_84 = V_14;
-						NullCheck(L_84);
-						SpawnableObject_BroadcastActiveSelf_m22C0FF174127BC6D81FCD930EB197B5E77C95CA4(L_84, (bool)0, NULL);
-					}
-
-IL_01f6_2:
-					{
-						//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:228>
-						LetterTile_tB20E0D5265E6DEC4F697C65EBC185582BA0E3541* L_85 = V_13;
-						NullCheck(L_85);
-						GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_86;
-						L_86 = Component_get_gameObject_m57AEFBB14DB39EC476F740BA000E170355DE691B(L_85, NULL);
-						NullCheck(L_86);
-						GameObject_SetActive_m638E92E1E75E519E5B24CF150B08CA8E0CDFAB92(L_86, (bool)0, NULL);
-					}
-
-IL_0203_2:
-					{
-						//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:217>
-						bool L_87;
-						L_87 = Enumerator_MoveNext_m4235C59F7CDFCADA64416F44D70922B6B08F7F8C((&V_10), Enumerator_MoveNext_m4235C59F7CDFCADA64416F44D70922B6B08F7F8C_RuntimeMethod_var);
-						if (L_87)
-						{
-							goto IL_01ad_2;
-						}
-					}
-					{
-						goto IL_0276_1;
-					}
-				}
-				catch(Il2CppExceptionWrapper& e)
-				{
-					__finallyBlock.StoreException(e.ex);
-				}
-			}
-
-IL_021c_1:
-			{
-				//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:233>
-				String_t* L_88 = V_8;
-				String_t* L_89;
-				L_89 = String_Concat_m9E3155FB84015C823606188F53B47CB44C444991(_stringLiteral2C29EDA00603EB942176E774B171B57C65ACE9B5, L_88, NULL);
+				//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:211>
+				String_t* L_64 = V_8;
+				String_t* L_65;
+				L_65 = String_Concat_m9E3155FB84015C823606188F53B47CB44C444991(_stringLiteralA02D0A7615CA3C2CAA7E174375A3C7D2637015AD, L_64, NULL);
 				il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
-				Debug_Log_m87A9A3C761FF5C43ED8A53B16190A53D08F818BB(L_89, NULL);
-				//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:235>
-				List_1_t83778CDC4C8C3A5FD32A661A4D241173450265A1* L_90 = V_5;
-				NullCheck(L_90);
-				Enumerator_t6735A01E8624C9A5B4DA2461922D3D4CEF85DFDA L_91;
-				L_91 = List_1_GetEnumerator_m4CAFCF88E93A60F40667EE8678F5611B792FB2AC(L_90, List_1_GetEnumerator_m4CAFCF88E93A60F40667EE8678F5611B792FB2AC_RuntimeMethod_var);
-				V_10 = L_91;
+				Debug_Log_m87A9A3C761FF5C43ED8A53B16190A53D08F818BB(L_65, NULL);
+				//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:213>
+				String_t* L_66 = V_8;
+				int32_t L_67;
+				L_67 = WordScanManager_CalculatePoints_m281F24B3BB34B9D7751A1B899333D075C52648DF(__this, L_66, NULL);
+				V_12 = L_67;
+				//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:215>
+				ScoreManager_t86D4A06D4B38717B8C529883F37DA25BA5750F39* L_68 = __this->___scoreManager;
+				il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
+				bool L_69;
+				L_69 = Object_op_Inequality_mD0BE578448EAA61948F25C32F8DD55AB1F778602(L_68, (Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C*)NULL, NULL);
+				if (!L_69)
+				{
+					goto IL_01ce_1;
+				}
+			}
+			{
+				//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:217>
+				int32_t L_70 = __this->___playerType;
+				if (L_70)
+				{
+					goto IL_01b8_1;
+				}
+			}
+			{
+				//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:218>
+				ScoreManager_t86D4A06D4B38717B8C529883F37DA25BA5750F39* L_71 = __this->___scoreManager;
+				int32_t L_72 = V_12;
+				NullCheck(L_71);
+				ScoreManager_AddPlayer1Score_m1FB7C03FCC00B3EA1220FA752ADE9077571CC9B5(L_71, L_72, NULL);
+				goto IL_01ce_1;
+			}
+
+IL_01b8_1:
+			{
+				//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:219>
+				int32_t L_73 = __this->___playerType;
+				if ((!(((uint32_t)L_73) == ((uint32_t)1))))
+				{
+					goto IL_01ce_1;
+				}
+			}
+			{
+				//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:220>
+				ScoreManager_t86D4A06D4B38717B8C529883F37DA25BA5750F39* L_74 = __this->___scoreManager;
+				int32_t L_75 = V_12;
+				NullCheck(L_74);
+				ScoreManager_AddPlayer2Score_m29E7EB1290EF76096CB04DA3F35B4844E821D547(L_74, L_75, NULL);
+			}
+
+IL_01ce_1:
+			{
+				//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:223>
+				List_1_t83778CDC4C8C3A5FD32A661A4D241173450265A1* L_76 = V_5;
+				NullCheck(L_76);
+				Enumerator_t6735A01E8624C9A5B4DA2461922D3D4CEF85DFDA L_77;
+				L_77 = List_1_GetEnumerator_m4CAFCF88E93A60F40667EE8678F5611B792FB2AC(L_76, List_1_GetEnumerator_m4CAFCF88E93A60F40667EE8678F5611B792FB2AC_RuntimeMethod_var);
+				V_10 = L_77;
 			}
 			{
 				auto __finallyBlock = il2cpp::utils::Finally([&]
 				{
 
-FINALLY_0268_1:
+FINALLY_023a_1:
 					{
 						Enumerator_Dispose_m80E5ECA6220ADD00B39A97F258033B75C2A474BC((&V_10), Enumerator_Dispose_m80E5ECA6220ADD00B39A97F258033B75C2A474BC_RuntimeMethod_var);
 						return;
@@ -23151,52 +23217,87 @@ FINALLY_0268_1:
 				try
 				{
 					{
-						goto IL_025d_2;
+						goto IL_022f_2;
 					}
 
-IL_0238_2:
+IL_01d9_2:
 					{
-						//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:235>
-						LetterTile_tB20E0D5265E6DEC4F697C65EBC185582BA0E3541* L_92;
-						L_92 = Enumerator_get_Current_mAE7C9841355F6D3416F927D57980DB66AFC65E17_inline((&V_10), Enumerator_get_Current_mAE7C9841355F6D3416F927D57980DB66AFC65E17_RuntimeMethod_var);
-						//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:237>
-						LetterTile_tB20E0D5265E6DEC4F697C65EBC185582BA0E3541* L_93 = L_92;
-						NullCheck(L_93);
-						LetterTile_SetInvalidRed_m56D5F3A46FDF8915D934DC5488C6AE2F9CA800AD(L_93, NULL);
-						//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:239>
-						NullCheck(L_93);
-						SpawnableObject_tB01492418378D7AE527A7C2936955B071EC7B7FA* L_94;
-						L_94 = Component_GetComponent_TisSpawnableObject_tB01492418378D7AE527A7C2936955B071EC7B7FA_m93A5752467942CC4B1FA17C2235BB977DFF1B7FB(L_93, Component_GetComponent_TisSpawnableObject_tB01492418378D7AE527A7C2936955B071EC7B7FA_m93A5752467942CC4B1FA17C2235BB977DFF1B7FB_RuntimeMethod_var);
-						V_15 = L_94;
-						//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:240>
-						SpawnableObject_tB01492418378D7AE527A7C2936955B071EC7B7FA* L_95 = V_15;
+						//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:223>
+						LetterTile_tB20E0D5265E6DEC4F697C65EBC185582BA0E3541* L_78;
+						L_78 = Enumerator_get_Current_mAE7C9841355F6D3416F927D57980DB66AFC65E17_inline((&V_10), Enumerator_get_Current_mAE7C9841355F6D3416F927D57980DB66AFC65E17_RuntimeMethod_var);
+						V_13 = L_78;
+						//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:225>
+						TableSnapZone_t98DB6E46409D9D63B767218E4B11C273A4015EA7* L_79 = __this->___tableZone;
 						il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
-						bool L_96;
-						L_96 = Object_op_Inequality_mD0BE578448EAA61948F25C32F8DD55AB1F778602(L_95, (Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C*)NULL, NULL);
-						if (!L_96)
+						bool L_80;
+						L_80 = Object_op_Inequality_mD0BE578448EAA61948F25C32F8DD55AB1F778602(L_79, (Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C*)NULL, NULL);
+						if (!L_80)
 						{
-							goto IL_025d_2;
+							goto IL_0202_2;
 						}
 					}
 					{
-						//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:242>
-						SpawnableObject_tB01492418378D7AE527A7C2936955B071EC7B7FA* L_97 = V_15;
-						NullCheck(L_97);
-						SpawnableObject_BroadcastPosAndRot_m6BD5E105513D3C1045495CE0D624BA0AA827CE44(L_97, NULL);
+						//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:226>
+						TableSnapZone_t98DB6E46409D9D63B767218E4B11C273A4015EA7* L_81 = __this->___tableZone;
+						LetterTile_tB20E0D5265E6DEC4F697C65EBC185582BA0E3541* L_82 = V_13;
+						NullCheck(L_82);
+						Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_83;
+						L_83 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(L_82, NULL);
+						NullCheck(L_81);
+						TableSnapZone_Unmark_m0F25F968ECCA4B654D5CD8AA73CAF3CD2317FAF2(L_81, L_83, NULL);
 					}
 
-IL_025d_2:
+IL_0202_2:
 					{
-						//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:235>
-						bool L_98;
-						L_98 = Enumerator_MoveNext_m4235C59F7CDFCADA64416F44D70922B6B08F7F8C((&V_10), Enumerator_MoveNext_m4235C59F7CDFCADA64416F44D70922B6B08F7F8C_RuntimeMethod_var);
-						if (L_98)
+						//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:228>
+						LetterTile_tB20E0D5265E6DEC4F697C65EBC185582BA0E3541* L_84 = V_13;
+						NullCheck(L_84);
+						GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_85;
+						L_85 = Component_get_gameObject_m57AEFBB14DB39EC476F740BA000E170355DE691B(L_84, NULL);
+						NullCheck(L_85);
+						SpawnableObject_tB01492418378D7AE527A7C2936955B071EC7B7FA* L_86;
+						L_86 = GameObject_GetComponent_TisSpawnableObject_tB01492418378D7AE527A7C2936955B071EC7B7FA_mF488A3B736C32806FEA5E7A9096D267180B8048F(L_85, GameObject_GetComponent_TisSpawnableObject_tB01492418378D7AE527A7C2936955B071EC7B7FA_mF488A3B736C32806FEA5E7A9096D267180B8048F_RuntimeMethod_var);
+						V_14 = L_86;
+						//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:229>
+						SpawnableObject_tB01492418378D7AE527A7C2936955B071EC7B7FA* L_87 = V_14;
+						il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
+						bool L_88;
+						L_88 = Object_op_Inequality_mD0BE578448EAA61948F25C32F8DD55AB1F778602(L_87, (Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C*)NULL, NULL);
+						if (!L_88)
 						{
-							goto IL_0238_2;
+							goto IL_0222_2;
 						}
 					}
 					{
-						goto IL_0276_1;
+						//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:231>
+						SpawnableObject_tB01492418378D7AE527A7C2936955B071EC7B7FA* L_89 = V_14;
+						NullCheck(L_89);
+						SpawnableObject_BroadcastActiveSelf_m22C0FF174127BC6D81FCD930EB197B5E77C95CA4(L_89, (bool)0, NULL);
+					}
+
+IL_0222_2:
+					{
+						//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:234>
+						LetterTile_tB20E0D5265E6DEC4F697C65EBC185582BA0E3541* L_90 = V_13;
+						NullCheck(L_90);
+						GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_91;
+						L_91 = Component_get_gameObject_m57AEFBB14DB39EC476F740BA000E170355DE691B(L_90, NULL);
+						NullCheck(L_91);
+						GameObject_SetActive_m638E92E1E75E519E5B24CF150B08CA8E0CDFAB92(L_91, (bool)0, NULL);
+					}
+
+IL_022f_2:
+					{
+						//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:223>
+						bool L_92;
+						L_92 = Enumerator_MoveNext_m4235C59F7CDFCADA64416F44D70922B6B08F7F8C((&V_10), Enumerator_MoveNext_m4235C59F7CDFCADA64416F44D70922B6B08F7F8C_RuntimeMethod_var);
+						if (L_92)
+						{
+							goto IL_01d9_2;
+						}
+					}
+					{
+						goto IL_0248_1;
 					}
 				}
 				catch(Il2CppExceptionWrapper& e)
@@ -23205,18 +23306,147 @@ IL_025d_2:
 				}
 			}
 
-IL_0276_1:
+IL_0248_1:
 			{
-				//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:159>
-				bool L_99;
-				L_99 = Enumerator_MoveNext_m624B713474E43DF4B1CA51521EC8296C0B7CE08C((&V_0), Enumerator_MoveNext_m624B713474E43DF4B1CA51521EC8296C0B7CE08C_RuntimeMethod_var);
-				if (L_99)
+				//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:236>
+				AudioClip_t5D272C4EB4F2D3ED49F1C346DEA373CF6D585F20* L_93 = __this->___successSound;
+				il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
+				bool L_94;
+				L_94 = Object_op_Inequality_mD0BE578448EAA61948F25C32F8DD55AB1F778602(L_93, (Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C*)NULL, NULL);
+				if (!L_94)
+				{
+					goto IL_02ef_1;
+				}
+			}
+			{
+				//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:238>
+				AudioClip_t5D272C4EB4F2D3ED49F1C346DEA373CF6D585F20* L_95 = __this->___successSound;
+				Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_96;
+				L_96 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(__this, NULL);
+				NullCheck(L_96);
+				Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_97;
+				L_97 = Transform_get_position_m69CD5FA214FDAE7BB701552943674846C220FDE1(L_96, NULL);
+				AudioSource_PlayClipAtPoint_mA78328A70D3F1088B588EF6F811AAD6577F2B7BF(L_95, L_97, NULL);
+				goto IL_02ef_1;
+			}
+
+IL_0271_1:
+			{
+				//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:243>
+				String_t* L_98 = V_8;
+				String_t* L_99;
+				L_99 = String_Concat_m9E3155FB84015C823606188F53B47CB44C444991(_stringLiteral2C29EDA00603EB942176E774B171B57C65ACE9B5, L_98, NULL);
+				il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
+				Debug_Log_m87A9A3C761FF5C43ED8A53B16190A53D08F818BB(L_99, NULL);
+				//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:245>
+				List_1_t83778CDC4C8C3A5FD32A661A4D241173450265A1* L_100 = V_5;
+				NullCheck(L_100);
+				Enumerator_t6735A01E8624C9A5B4DA2461922D3D4CEF85DFDA L_101;
+				L_101 = List_1_GetEnumerator_m4CAFCF88E93A60F40667EE8678F5611B792FB2AC(L_100, List_1_GetEnumerator_m4CAFCF88E93A60F40667EE8678F5611B792FB2AC_RuntimeMethod_var);
+				V_10 = L_101;
+			}
+			{
+				auto __finallyBlock = il2cpp::utils::Finally([&]
+				{
+
+FINALLY_02bd_1:
+					{
+						Enumerator_Dispose_m80E5ECA6220ADD00B39A97F258033B75C2A474BC((&V_10), Enumerator_Dispose_m80E5ECA6220ADD00B39A97F258033B75C2A474BC_RuntimeMethod_var);
+						return;
+					}
+				});
+				try
+				{
+					{
+						goto IL_02b2_2;
+					}
+
+IL_028d_2:
+					{
+						//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:245>
+						LetterTile_tB20E0D5265E6DEC4F697C65EBC185582BA0E3541* L_102;
+						L_102 = Enumerator_get_Current_mAE7C9841355F6D3416F927D57980DB66AFC65E17_inline((&V_10), Enumerator_get_Current_mAE7C9841355F6D3416F927D57980DB66AFC65E17_RuntimeMethod_var);
+						//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:247>
+						LetterTile_tB20E0D5265E6DEC4F697C65EBC185582BA0E3541* L_103 = L_102;
+						NullCheck(L_103);
+						LetterTile_SetInvalidRed_m56D5F3A46FDF8915D934DC5488C6AE2F9CA800AD(L_103, NULL);
+						//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:249>
+						NullCheck(L_103);
+						SpawnableObject_tB01492418378D7AE527A7C2936955B071EC7B7FA* L_104;
+						L_104 = Component_GetComponent_TisSpawnableObject_tB01492418378D7AE527A7C2936955B071EC7B7FA_m93A5752467942CC4B1FA17C2235BB977DFF1B7FB(L_103, Component_GetComponent_TisSpawnableObject_tB01492418378D7AE527A7C2936955B071EC7B7FA_m93A5752467942CC4B1FA17C2235BB977DFF1B7FB_RuntimeMethod_var);
+						V_15 = L_104;
+						//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:250>
+						SpawnableObject_tB01492418378D7AE527A7C2936955B071EC7B7FA* L_105 = V_15;
+						il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
+						bool L_106;
+						L_106 = Object_op_Inequality_mD0BE578448EAA61948F25C32F8DD55AB1F778602(L_105, (Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C*)NULL, NULL);
+						if (!L_106)
+						{
+							goto IL_02b2_2;
+						}
+					}
+					{
+						//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:252>
+						SpawnableObject_tB01492418378D7AE527A7C2936955B071EC7B7FA* L_107 = V_15;
+						NullCheck(L_107);
+						SpawnableObject_BroadcastPosAndRot_m6BD5E105513D3C1045495CE0D624BA0AA827CE44(L_107, NULL);
+					}
+
+IL_02b2_2:
+					{
+						//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:245>
+						bool L_108;
+						L_108 = Enumerator_MoveNext_m4235C59F7CDFCADA64416F44D70922B6B08F7F8C((&V_10), Enumerator_MoveNext_m4235C59F7CDFCADA64416F44D70922B6B08F7F8C_RuntimeMethod_var);
+						if (L_108)
+						{
+							goto IL_028d_2;
+						}
+					}
+					{
+						goto IL_02cb_1;
+					}
+				}
+				catch(Il2CppExceptionWrapper& e)
+				{
+					__finallyBlock.StoreException(e.ex);
+				}
+			}
+
+IL_02cb_1:
+			{
+				//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:255>
+				AudioClip_t5D272C4EB4F2D3ED49F1C346DEA373CF6D585F20* L_109 = __this->___failSound;
+				il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
+				bool L_110;
+				L_110 = Object_op_Inequality_mD0BE578448EAA61948F25C32F8DD55AB1F778602(L_109, (Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C*)NULL, NULL);
+				if (!L_110)
+				{
+					goto IL_02ef_1;
+				}
+			}
+			{
+				//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:257>
+				AudioClip_t5D272C4EB4F2D3ED49F1C346DEA373CF6D585F20* L_111 = __this->___failSound;
+				Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_112;
+				L_112 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(__this, NULL);
+				NullCheck(L_112);
+				Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_113;
+				L_113 = Transform_get_position_m69CD5FA214FDAE7BB701552943674846C220FDE1(L_112, NULL);
+				AudioSource_PlayClipAtPoint_mA78328A70D3F1088B588EF6F811AAD6577F2B7BF(L_111, L_113, NULL);
+			}
+
+IL_02ef_1:
+			{
+				//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:161>
+				bool L_114;
+				L_114 = Enumerator_MoveNext_m624B713474E43DF4B1CA51521EC8296C0B7CE08C((&V_0), Enumerator_MoveNext_m624B713474E43DF4B1CA51521EC8296C0B7CE08C_RuntimeMethod_var);
+				if (L_114)
 				{
 					goto IL_000c_1;
 				}
 			}
 			{
-				goto IL_0292;
+				goto IL_030b;
 			}
 		}
 		catch(Il2CppExceptionWrapper& e)
@@ -23225,9 +23455,9 @@ IL_0276_1:
 		}
 	}
 
-IL_0292:
+IL_030b:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:247>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:261>
 		return;
 	}
 }
@@ -23235,13 +23465,13 @@ IL_0292:
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void WordScanManager__ctor_m0604227BA0D14F729230853480C2C8997F132AC7 (WordScanManager_t5DFA8AA7ED2E7C3224B27D3CA0955AC965052C11* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:25>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:25>
 		__this->___allowHorizontal = (bool)1;
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:27>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:27>
 		__this->___minWordLength = 2;
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:28>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:28>
 		__this->___maxHeightAboveTable = (0.0500000007f);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:29>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:29>
 		__this->___maxHorizontalOffsetToCellCenter = (0.0299999993f);
 		MonoBehaviour__ctor_m592DB0105CA0BC97AA1C5F4AD27B12D68A3B7C1E(__this, NULL);
 		return;
@@ -23289,10 +23519,10 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec__ctor_mEA6CB45D314E4289800540F99
 	}
 }
 // Method Definition Index: 86012
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* U3CU3Ec_U3CScanDirectionU3Eb__17_0_m172853E8A736280660F1CFFAFC6EC1BA61660541 (U3CU3Ec_t3022502319866C96FEA49E8F5B080A1E31507577* __this, LetterTile_tB20E0D5265E6DEC4F697C65EBC185582BA0E3541* ___0_t, const RuntimeMethod* method) 
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* U3CU3Ec_U3CScanDirectionU3Eb__19_0_m66A91C61C70B632EFD255251375292BEEE4F208B (U3CU3Ec_t3022502319866C96FEA49E8F5B080A1E31507577* __this, LetterTile_tB20E0D5265E6DEC4F697C65EBC185582BA0E3541* ___0_t, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:186>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:188>
 		LetterTile_tB20E0D5265E6DEC4F697C65EBC185582BA0E3541* L_0 = ___0_t;
 		NullCheck(L_0);
 		String_t* L_1;
@@ -23312,12 +23542,12 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* U3CU3Ec_U3CScanDirectionU3Eb__17_0_
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void WordValidator_Awake_m249EC81D2CDC5FE6AAF0B3A8B5E20AF521731BD4 (WordValidator_t0FC7E088593716BE97A671FBE4A3B870B7C72FA2* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/WordValidator.cs:13>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/WordValidator.cs:13>
 		RuntimeObject* L_0;
 		L_0 = WordValidator_LoadLocalDictionary_m3452A706B0C3817FEEF71F652F8BA784644E6A79(__this, NULL);
 		Coroutine_t85EA685566A254C23F3FD77AB5BDFFFF8799596B* L_1;
 		L_1 = MonoBehaviour_StartCoroutine_m4CAFF732AA28CD3BDC5363B44A863575530EC812(__this, L_0, NULL);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/WordValidator.cs:14>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/WordValidator.cs:14>
 		return;
 	}
 }
@@ -23351,7 +23581,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool WordValidator_CheckWord_m55775AC32D645FF
 	}
 	String_t* V_0 = NULL;
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/WordValidator.cs:47>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/WordValidator.cs:47>
 		String_t* L_0 = ___0_input;
 		bool L_1;
 		L_1 = String_IsNullOrEmpty_mEA9E3FB005AC28FE02E69FCF95A7B8456192B478(L_0, NULL);
@@ -23361,13 +23591,13 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool WordValidator_CheckWord_m55775AC32D645FF
 		}
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/WordValidator.cs:47>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/WordValidator.cs:47>
 		return (bool)0;
 	}
 
 IL_000a:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/WordValidator.cs:48>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/WordValidator.cs:48>
 		String_t* L_2 = ___0_input;
 		NullCheck(L_2);
 		String_t* L_3;
@@ -23376,7 +23606,7 @@ IL_000a:
 		String_t* L_4;
 		L_4 = String_ToLower_m6191ABA3DC514ED47C10BDA23FD0DDCEAE7ACFBD(L_3, NULL);
 		V_0 = L_4;
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/WordValidator.cs:49>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/WordValidator.cs:49>
 		HashSet_1_tEFC6605F7DE53F71946C33FD371E53C3100F2178* L_5 = __this->____dictionary;
 		String_t* L_6 = V_0;
 		NullCheck(L_5);
@@ -23396,7 +23626,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void WordValidator__ctor_mAA73498223200E64AB7
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/WordValidator.cs:9>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/WordValidator.cs:9>
 		HashSet_1_tEFC6605F7DE53F71946C33FD371E53C3100F2178* L_0 = (HashSet_1_tEFC6605F7DE53F71946C33FD371E53C3100F2178*)il2cpp_codegen_object_new(HashSet_1_tEFC6605F7DE53F71946C33FD371E53C3100F2178_il2cpp_TypeInfo_var);
 		HashSet_1__ctor_m780CFB8A2D23543157D1A0E1FADF781E1AF81E03(L_0, HashSet_1__ctor_m780CFB8A2D23543157D1A0E1FADF781E1AF81E03_RuntimeMethod_var);
 		__this->____dictionary = L_0;
@@ -23477,7 +23707,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool U3CLoadLocalDictionaryU3Ed__2_MoveNext_m
 IL_0017:
 	{
 		__this->___U3CU3E1__state = (-1);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/WordValidator.cs:18>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/WordValidator.cs:18>
 		il2cpp_codegen_runtime_class_init_inline(Application_tDB03BE91CDF0ACA614A5E0B67CFB77C44EB19B21_il2cpp_TypeInfo_var);
 		String_t* L_4;
 		L_4 = Application_get_streamingAssetsPath_mB904BCD9A7A4F18A52C175DE4A81F5DC3010CDB5(NULL);
@@ -23485,13 +23715,13 @@ IL_0017:
 		String_t* L_5;
 		L_5 = Path_Combine_m1ADAC05CDA2D1D61B172DF65A81E86592696BEAE(L_4, _stringLiteralDD2CB2ADC7EED673B56A509203521AC90E0B9740, NULL);
 		V_2 = L_5;
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/WordValidator.cs:20>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/WordValidator.cs:20>
 		String_t* L_6 = V_2;
 		UnityWebRequest_t6233B8E22992FC2364A831C1ACB033EF3260C39F* L_7;
 		L_7 = UnityWebRequest_Get_m1A332EE069BB5052368307F254A5A7627BB5FD86(L_6, NULL);
 		__this->___U3CwwwU3E5__2 = L_7;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___U3CwwwU3E5__2), (void*)L_7);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/WordValidator.cs:21>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/WordValidator.cs:21>
 		UnityWebRequest_t6233B8E22992FC2364A831C1ACB033EF3260C39F* L_8 = __this->___U3CwwwU3E5__2;
 		NullCheck(L_8);
 		UnityWebRequestAsyncOperation_t14BE94558FF3A2CFC2EFBE2511A3A88252042B8C* L_9;
@@ -23505,7 +23735,7 @@ IL_0017:
 IL_0054:
 	{
 		__this->___U3CU3E1__state = (-1);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/WordValidator.cs:23>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/WordValidator.cs:23>
 		UnityWebRequest_t6233B8E22992FC2364A831C1ACB033EF3260C39F* L_10 = __this->___U3CwwwU3E5__2;
 		NullCheck(L_10);
 		int32_t L_11;
@@ -23516,7 +23746,7 @@ IL_0054:
 		}
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/WordValidator.cs:25>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/WordValidator.cs:25>
 		UnityWebRequest_t6233B8E22992FC2364A831C1ACB033EF3260C39F* L_12 = __this->___U3CwwwU3E5__2;
 		NullCheck(L_12);
 		DownloadHandler_t1B56C7D3F65D97A1E4B566A14A1E783EA8AE4EBB* L_13;
@@ -23524,11 +23754,11 @@ IL_0054:
 		NullCheck(L_13);
 		String_t* L_14;
 		L_14 = DownloadHandler_get_text_mA6DE5CB2647A21E577B963708DC3D0DA4DBFE7D8(L_13, NULL);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/WordValidator.cs:26>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/WordValidator.cs:26>
 		NullCheck(L_14);
 		StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_15;
 		L_15 = String_Split_m9530B73D02054692283BF35C3A27C8F2230946F4(L_14, ((int32_t)10), 0, NULL);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/WordValidator.cs:28>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/WordValidator.cs:28>
 		V_3 = L_15;
 		V_4 = 0;
 		goto IL_00b4;
@@ -23536,14 +23766,14 @@ IL_0054:
 
 IL_0087:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/WordValidator.cs:28>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/WordValidator.cs:28>
 		StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_16 = V_3;
 		int32_t L_17 = V_4;
 		NullCheck(L_16);
 		int32_t L_18 = L_17;
 		String_t* L_19 = (L_16)->GetAt(static_cast<il2cpp_array_size_t>(L_18));
 		V_5 = L_19;
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/WordValidator.cs:30>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/WordValidator.cs:30>
 		String_t* L_20 = V_5;
 		bool L_21;
 		L_21 = String_IsNullOrWhiteSpace_m42E1F3B2C358068D645E46F01CF1834DC77A5A10(L_20, NULL);
@@ -23553,7 +23783,7 @@ IL_0087:
 		}
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/WordValidator.cs:32>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/WordValidator.cs:32>
 		WordValidator_t0FC7E088593716BE97A671FBE4A3B870B7C72FA2* L_22 = V_1;
 		NullCheck(L_22);
 		HashSet_1_tEFC6605F7DE53F71946C33FD371E53C3100F2178* L_23 = L_22->____dictionary;
@@ -23577,7 +23807,7 @@ IL_00ae:
 
 IL_00b4:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/WordValidator.cs:28>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/WordValidator.cs:28>
 		int32_t L_29 = V_4;
 		StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_30 = V_3;
 		NullCheck(L_30);
@@ -23587,7 +23817,7 @@ IL_00b4:
 		}
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/WordValidator.cs:36>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/WordValidator.cs:36>
 		WordValidator_t0FC7E088593716BE97A671FBE4A3B870B7C72FA2* L_31 = V_1;
 		NullCheck(L_31);
 		HashSet_1_tEFC6605F7DE53F71946C33FD371E53C3100F2178* L_32 = L_31->____dictionary;
@@ -23605,7 +23835,7 @@ IL_00b4:
 
 IL_00dc:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/WordValidator.cs:40>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/WordValidator.cs:40>
 		UnityWebRequest_t6233B8E22992FC2364A831C1ACB033EF3260C39F* L_37 = __this->___U3CwwwU3E5__2;
 		NullCheck(L_37);
 		String_t* L_38;
@@ -23618,7 +23848,7 @@ IL_00dc:
 
 IL_00f6:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/WordValidator.cs:42>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/WordValidator.cs:42>
 		return (bool)0;
 	}
 }
@@ -23798,10 +24028,10 @@ IL2CPP_EXTERN_C void MonoScriptData_t8F50E352855B96FFFC1D9CB07EACC90C99D73A3E_ma
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void Message__ctor_mE10F5E3D638586AC99B8EF643DB05ED37308FFD7_inline (Message_tCF59DEEEA446F89DC4B9ABB8906AA3CD8C4BD2F9* __this, bool ___0_start, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/AssignSeats.cs:28>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/AssignSeats.cs:28>
 		bool L_0 = ___0_start;
 		__this->___start = L_0;
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/AssignSeats.cs:29>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/AssignSeats.cs:29>
 		return;
 	}
 }
@@ -23878,7 +24108,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR RuntimeObject* RoomClient_get_Roo
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t PlayerOccupation_get_MyOccupation_m5BCE7DE8CF0933408EAC0D0CE6A5E0773B08B6BB_inline (PlayerOccupation_t3B297CB24645A8F0E7ACEC3CC40DE325ACD545ED* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/PlayerOccupation.cs:12>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/PlayerOccupation.cs:12>
 		int32_t L_0 = __this->___U3CMyOccupationU3Ek__BackingField;
 		return L_0;
 	}
@@ -24110,7 +24340,7 @@ IL_0064:
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void CuttableObject_set_word_m77BC1A39D2642E0710C522C0E01EBE1B6A43372C_inline (CuttableObject_t00D99541FCCE75FBA7C9D873054FA1C29D1D4F06* __this, String_t* ___0_value, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/CuttableObject.cs:14>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/CuttableObject.cs:14>
 		String_t* L_0 = ___0_value;
 		__this->___U3CwordU3Ek__BackingField = L_0;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___U3CwordU3Ek__BackingField), (void*)L_0);
@@ -24121,7 +24351,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void CuttableObject_set_word_m77B
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR bool CuttableObject_get_IsCut_m0AA441C0B6E03F7E664B69B3A2FBE0AF65C34CB9_inline (CuttableObject_t00D99541FCCE75FBA7C9D873054FA1C29D1D4F06* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/CuttableObject.cs:12>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/CuttableObject.cs:12>
 		bool L_0 = __this->___U3CIsCutU3Ek__BackingField;
 		return L_0;
 	}
@@ -24130,7 +24360,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR bool CuttableObject_get_IsCut_m0A
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void CuttableObject_set_IsCut_m0C37FF1F750B896F146838D2E2C7FE031107199C_inline (CuttableObject_t00D99541FCCE75FBA7C9D873054FA1C29D1D4F06* __this, bool ___0_value, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/CuttableObject.cs:12>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/CuttableObject.cs:12>
 		bool L_0 = ___0_value;
 		__this->___U3CIsCutU3Ek__BackingField = L_0;
 		return;
@@ -24146,7 +24376,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR LetterSpawner_tBC161CA12FDE232F59
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/LetterSpawner.cs:10>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/LetterSpawner.cs:10>
 		LetterSpawner_tBC161CA12FDE232F59203076963EF412B105F844* L_0 = ((LetterSpawner_tBC161CA12FDE232F59203076963EF412B105F844_StaticFields*)il2cpp_codegen_static_fields_for(LetterSpawner_tBC161CA12FDE232F59203076963EF412B105F844_il2cpp_TypeInfo_var))->___U3CInstanceU3Ek__BackingField;
 		return L_0;
 	}
@@ -24155,7 +24385,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR LetterSpawner_tBC161CA12FDE232F59
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR String_t* CuttableObject_get_word_m0CA57B254BC0225D3C53F546DE92C9A025AE5819_inline (CuttableObject_t00D99541FCCE75FBA7C9D873054FA1C29D1D4F06* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/CuttableObject.cs:14>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/CuttableObject.cs:14>
 		String_t* L_0 = __this->___U3CwordU3Ek__BackingField;
 		return L_0;
 	}
@@ -24279,7 +24509,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR bool Vector3_op_Inequality_m9F170
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void DualTearObject_set_word_m55DAC1CFCA83A12F287DD0DFEF15861188252400_inline (DualTearObject_t9C553667E71A6A2FCE1A4E25E0993C19C54324FF* __this, String_t* ___0_value, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/DualTearObject.cs:20>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/DualTearObject.cs:21>
 		String_t* L_0 = ___0_value;
 		__this->___U3CwordU3Ek__BackingField = L_0;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___U3CwordU3Ek__BackingField), (void*)L_0);
@@ -24379,7 +24609,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Vector3_t24C512C7B96BBABAD472002D
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR String_t* DualTearObject_get_word_m47F2ED748DBA69A13E77D90F3FD89AF18A751A0B_inline (DualTearObject_t9C553667E71A6A2FCE1A4E25E0993C19C54324FF* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/DualTearObject.cs:20>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/DualTearObject.cs:21>
 		String_t* L_0 = __this->___U3CwordU3Ek__BackingField;
 		return L_0;
 	}
@@ -24416,7 +24646,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Quaternion_tDA59F214EF07D7700B26E
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t ScoreManager_GetPlayer1Score_m6CCBB4632745C9537229A794A29029666DC013A8_inline (ScoreManager_t86D4A06D4B38717B8C529883F37DA25BA5750F39* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/ScoreManager.cs:70>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/ScoreManager.cs:70>
 		int32_t L_0 = __this->___player1Score;
 		return L_0;
 	}
@@ -24425,7 +24655,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t ScoreManager_GetPlayer1Sc
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t ScoreManager_GetPlayer2Score_m5440078B1BD314123EFCCBD79B1C9C5C683E92E3_inline (ScoreManager_t86D4A06D4B38717B8C529883F37DA25BA5750F39* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/ScoreManager.cs:75>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/ScoreManager.cs:75>
 		int32_t L_0 = __this->___player2Score;
 		return L_0;
 	}
@@ -24459,7 +24689,7 @@ IL_000c:
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR bool SmashableObject_get_IsSmashed_mA1B57D3957A37CA99E02CF96DE0540553B353113_inline (SmashableObject_t4A59D92DD8FEBBB9EE4784495BE6785FAA59BD46* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/SmashableObject.cs:13>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/SmashableObject.cs:13>
 		bool L_0 = __this->___U3CIsSmashedU3Ek__BackingField;
 		return L_0;
 	}
@@ -24607,7 +24837,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void LetterSpawner_set_Instance_m
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/LetterSpawner.cs:10>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/LetterSpawner.cs:10>
 		LetterSpawner_tBC161CA12FDE232F59203076963EF412B105F844* L_0 = ___0_value;
 		((LetterSpawner_tBC161CA12FDE232F59203076963EF412B105F844_StaticFields*)il2cpp_codegen_static_fields_for(LetterSpawner_tBC161CA12FDE232F59203076963EF412B105F844_il2cpp_TypeInfo_var))->___U3CInstanceU3Ek__BackingField = L_0;
 		Il2CppCodeGenWriteBarrier((void**)(&((LetterSpawner_tBC161CA12FDE232F59203076963EF412B105F844_StaticFields*)il2cpp_codegen_static_fields_for(LetterSpawner_tBC161CA12FDE232F59203076963EF412B105F844_il2cpp_TypeInfo_var))->___U3CInstanceU3Ek__BackingField), (void*)L_0);
@@ -24775,7 +25005,7 @@ IL_0057:
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void PlayerOccupation_set_MySeatIndex_m505775904853E4AAE2CC119A5F2CE308E05A9B67_inline (PlayerOccupation_t3B297CB24645A8F0E7ACEC3CC40DE325ACD545ED* __this, int32_t ___0_value, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/PlayerOccupation.cs:13>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/PlayerOccupation.cs:13>
 		int32_t L_0 = ___0_value;
 		__this->___U3CMySeatIndexU3Ek__BackingField = L_0;
 		return;
@@ -24785,7 +25015,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void PlayerOccupation_set_MySeatI
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void PlayerOccupation_set_MyOccupation_m30327100E8C43582C380BD5E9D5080477342B3F5_inline (PlayerOccupation_t3B297CB24645A8F0E7ACEC3CC40DE325ACD545ED* __this, int32_t ___0_value, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/PlayerOccupation.cs:12>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/PlayerOccupation.cs:12>
 		int32_t L_0 = ___0_value;
 		__this->___U3CMyOccupationU3Ek__BackingField = L_0;
 		return;
@@ -24832,7 +25062,7 @@ IL_000c:
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void SmashableObject_set_word_m872301608A2653D261873683F9D64482E2BC2C62_inline (SmashableObject_t4A59D92DD8FEBBB9EE4784495BE6785FAA59BD46* __this, String_t* ___0_value, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/SmashableObject.cs:15>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/SmashableObject.cs:15>
 		String_t* L_0 = ___0_value;
 		__this->___U3CwordU3Ek__BackingField = L_0;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___U3CwordU3Ek__BackingField), (void*)L_0);
@@ -24843,7 +25073,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void SmashableObject_set_word_m87
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void SmashableObject_set_IsSmashed_m9338BAA03437CACC30B57FD0B44036DB1A5AAD7E_inline (SmashableObject_t4A59D92DD8FEBBB9EE4784495BE6785FAA59BD46* __this, bool ___0_value, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/SmashableObject.cs:13>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/SmashableObject.cs:13>
 		bool L_0 = ___0_value;
 		__this->___U3CIsSmashedU3Ek__BackingField = L_0;
 		return;
@@ -24853,7 +25083,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void SmashableObject_set_IsSmashe
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR String_t* SmashableObject_get_word_m4B4B5E2F638DDC2A368E2551326F44E228BAAC01_inline (SmashableObject_t4A59D92DD8FEBBB9EE4784495BE6785FAA59BD46* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/SmashableObject.cs:15>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/SmashableObject.cs:15>
 		String_t* L_0 = __this->___U3CwordU3Ek__BackingField;
 		return L_0;
 	}
@@ -24862,7 +25092,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR String_t* SmashableObject_get_wor
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void SnapOnRelease_set_IsSnappedOnTable_mD9F23CEAB6415678659F60335B3530374B42CF60_inline (SnapOnRelease_t9CEE91944A45B649BD53A2ED9566DBC654E599C9* __this, bool ___0_value, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/SnapOnRelease.cs:12>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/SnapOnRelease.cs:13>
 		bool L_0 = ___0_value;
 		__this->___U3CIsSnappedOnTableU3Ek__BackingField = L_0;
 		return;
@@ -24872,7 +25102,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void SnapOnRelease_set_IsSnappedO
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR bool LetterTile_get_IsInvalid_m62E652D22E2B8651B96083CE22AEA3201E4E020C_inline (LetterTile_tB20E0D5265E6DEC4F697C65EBC185582BA0E3541* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/LetterTile.cs:13>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/LetterTile.cs:13>
 		bool L_0 = __this->____isInvalid;
 		return L_0;
 	}
@@ -24881,7 +25111,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR bool LetterTile_get_IsInvalid_m62
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR bool LetterTile_get_IsSceneObjectWord_mD4FFFD7E5305DCB1CED4E17B50CF6EDF635B4E38_inline (LetterTile_tB20E0D5265E6DEC4F697C65EBC185582BA0E3541* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/LetterTile.cs:14>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/LetterTile.cs:14>
 		bool L_0 = __this->____isSceneObjectWord;
 		return L_0;
 	}
@@ -25028,7 +25258,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Vector2Int_t69B2886EBAB732D9B8805
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void TearObject_set_word_m51BFFD66061CA7919848DDDDF0626A26A7122257_inline (TearObject_t3E896BBE62E856B51C65224E4EC149E43C6920CF* __this, String_t* ___0_value, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TearObject.cs:25>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TearObject.cs:25>
 		String_t* L_0 = ___0_value;
 		__this->___U3CwordU3Ek__BackingField = L_0;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___U3CwordU3Ek__BackingField), (void*)L_0);
@@ -25039,7 +25269,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void TearObject_set_word_m51BFFD6
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR bool TearObject_get_isTeared_m43F9C2F2C7DF17A6F8FBDDBB212948A863777959_inline (TearObject_t3E896BBE62E856B51C65224E4EC149E43C6920CF* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TearObject.cs:23>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TearObject.cs:23>
 		bool L_0 = __this->___U3CisTearedU3Ek__BackingField;
 		return L_0;
 	}
@@ -25063,7 +25293,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Keyboard_t015BD1A6508137D20B43952
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void TearObject_set_isTeared_m25B62A297D5EA698ADCA5676A6EB4ABC4134AE42_inline (TearObject_t3E896BBE62E856B51C65224E4EC149E43C6920CF* __this, bool ___0_value, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TearObject.cs:23>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TearObject.cs:23>
 		bool L_0 = ___0_value;
 		__this->___U3CisTearedU3Ek__BackingField = L_0;
 		return;
@@ -25073,7 +25303,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void TearObject_set_isTeared_m25B
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void TearObject_set_tearCenter_mECC7679A76FFA00288360F44C8744AB79322FB3E_inline (TearObject_t3E896BBE62E856B51C65224E4EC149E43C6920CF* __this, Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___0_value, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TearObject.cs:24>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TearObject.cs:24>
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_0 = ___0_value;
 		__this->___U3CtearCenterU3Ek__BackingField = L_0;
 		return;
@@ -25083,7 +25313,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void TearObject_set_tearCenter_mE
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR String_t* TearObject_get_word_m97D03F8F252A748F52D8F16F38DDE61E80DA221D_inline (TearObject_t3E896BBE62E856B51C65224E4EC149E43C6920CF* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TearObject.cs:25>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TearObject.cs:25>
 		String_t* L_0 = __this->___U3CwordU3Ek__BackingField;
 		return L_0;
 	}
@@ -25092,7 +25322,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR String_t* TearObject_get_word_m97
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 TearObject_get_tearCenter_m4C604DA94DBE476FD5A6D0B3E5197CF31B66429F_inline (TearObject_t3E896BBE62E856B51C65224E4EC149E43C6920CF* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/TearObject.cs:24>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/TearObject.cs:24>
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_0 = __this->___U3CtearCenterU3Ek__BackingField;
 		return L_0;
 	}
@@ -25163,7 +25393,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Vector3_t24C512C7B96BBABAD472002D
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR bool GameManager_IsGameEnded_m45FC28D188A87C4A9F6369EAB21714BA6282A836_inline (GameManager_tFE129A0017AF5BBD30FDCD4403B9CCEAE064C6B6* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/GameManager.cs:174>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/GameManager.cs:177>
 		bool L_0 = __this->___gameEnded;
 		return L_0;
 	}

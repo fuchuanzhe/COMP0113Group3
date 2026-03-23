@@ -11,6 +11,7 @@ public class DualTearObject : MonoBehaviour
     public float tearDistance = 0.35f;
     private bool isGrabbed = false;
     private bool isPulled = false;
+    private bool isTorn = false;
     private RoomClient roomClient;
 
     private bool otherGrabbed = false;
@@ -65,7 +66,7 @@ public class DualTearObject : MonoBehaviour
         if (!isPulled) return;
         context.SendJson(new Message(roomClient.Me.uuid, true, true));
 
-        if(otherPulled) DoTear();
+        if(otherPulled && !isTorn) DoTear();
     }
 
     private void OnGrab(SelectEnterEventArgs eventArgs)
@@ -121,7 +122,8 @@ public class DualTearObject : MonoBehaviour
         {
             AudioSource.PlayClipAtPoint(tearSound, transform.position, soundVolume);
         }
-
+        
+        isTorn = true;
         // only the client with smaller id spawns
         if(string.Compare(roomClient.Me.uuid, otherId) >= 0) return;
 

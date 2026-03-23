@@ -1213,7 +1213,7 @@ IL2CPP_EXTERN_C void MonoScriptData_t29E6F8CABA0F51572325219BF516E1117E9420E2_ma
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR NetworkId_tD5FA0360D2F8AE544493A7D1A6C7C90B28735CE7 Firework_get_NetworkId_m35FF4BC10C1B402B7DFC896ABC65F6140DA4141C (Firework_tCD30D777E501AD8DF31AF37620EB6424EEBAA39A* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Demo (XRI)/Assets/Scripts/Firework.cs:20>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Demo (XRI)/Assets/Scripts/Firework.cs:20>
 		NetworkId_tD5FA0360D2F8AE544493A7D1A6C7C90B28735CE7 L_0 = __this->___U3CNetworkIdU3Ek__BackingField;
 		return L_0;
 	}
@@ -1222,7 +1222,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR NetworkId_tD5FA0360D2F8AE544493A7D1A6C7C90B28
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Firework_set_NetworkId_mB9489B3FD85718C5578AE3ABD8B97BA573734995 (Firework_tCD30D777E501AD8DF31AF37620EB6424EEBAA39A* __this, NetworkId_tD5FA0360D2F8AE544493A7D1A6C7C90B28735CE7 ___0_value, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Demo (XRI)/Assets/Scripts/Firework.cs:20>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Demo (XRI)/Assets/Scripts/Firework.cs:20>
 		NetworkId_tD5FA0360D2F8AE544493A7D1A6C7C90B28735CE7 L_0 = ___0_value;
 		__this->___U3CNetworkIdU3Ek__BackingField = L_0;
 		return;
@@ -1239,19 +1239,19 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Firework_Awake_m80B860A837B4F98978B641D6
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Demo (XRI)/Assets/Scripts/Firework.cs:33>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Demo (XRI)/Assets/Scripts/Firework.cs:33>
 		Rigidbody_t268697F5A994213ED97393309870968BC1C7393C* L_0;
 		L_0 = Component_GetComponent_TisRigidbody_t268697F5A994213ED97393309870968BC1C7393C_m4B5CAD64B52D153BEA96432633CA9A45FA523DD8(__this, Component_GetComponent_TisRigidbody_t268697F5A994213ED97393309870968BC1C7393C_m4B5CAD64B52D153BEA96432633CA9A45FA523DD8_RuntimeMethod_var);
 		__this->___body = L_0;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___body), (void*)L_0);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Demo (XRI)/Assets/Scripts/Firework.cs:34>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Demo (XRI)/Assets/Scripts/Firework.cs:34>
 		ParticleSystem_tB19986EE308BD63D36FB6025EEEAFBEDB97C67C1* L_1;
 		L_1 = Component_GetComponentInChildren_TisParticleSystem_tB19986EE308BD63D36FB6025EEEAFBEDB97C67C1_m7FE20EC51F5F0CD242B94967CCF5B8E32BA9FC62(__this, Component_GetComponentInChildren_TisParticleSystem_tB19986EE308BD63D36FB6025EEEAFBEDB97C67C1_m7FE20EC51F5F0CD242B94967CCF5B8E32BA9FC62_RuntimeMethod_var);
 		__this->___particles = L_1;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___particles), (void*)L_1);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Demo (XRI)/Assets/Scripts/Firework.cs:35>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Demo (XRI)/Assets/Scripts/Firework.cs:35>
 		__this->___owner = (bool)0;
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Demo (XRI)/Assets/Scripts/Firework.cs:36>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Demo (XRI)/Assets/Scripts/Firework.cs:36>
 		return;
 	}
 }
@@ -1268,7 +1268,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Firework_Start_m9F1A1DB32E913B4D01756D50
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Demo (XRI)/Assets/Scripts/Firework.cs:40>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Demo (XRI)/Assets/Scripts/Firework.cs:40>
 		NetworkContext_t49239659157E00ACFF3A196AF00218DED40F9310 L_0;
 		L_0 = NetworkScene_Register_m0F251779B3FEA29EAE6A5DBCDDCC0E50596A6545(__this, NULL);
 		__this->___context = L_0;
@@ -1276,10 +1276,10 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Firework_Start_m9F1A1DB32E913B4D01756D50
 		#if IL2CPP_ENABLE_STRICT_WRITE_BARRIERS
 		Il2CppCodeGenWriteBarrier((void**)&(((&__this->___context))->___Component), (void*)NULL);
 		#endif
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Demo (XRI)/Assets/Scripts/Firework.cs:42>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Demo (XRI)/Assets/Scripts/Firework.cs:42>
 		XRGrabInteractable_tAE7E2F24377399C9B5159179E4B43EA6AA55531B* L_1;
 		L_1 = Component_GetComponent_TisXRGrabInteractable_tAE7E2F24377399C9B5159179E4B43EA6AA55531B_m49377F1D0DBAB9BDC59DFC6851E9A5D687717C14(__this, Component_GetComponent_TisXRGrabInteractable_tAE7E2F24377399C9B5159179E4B43EA6AA55531B_m49377F1D0DBAB9BDC59DFC6851E9A5D687717C14_RuntimeMethod_var);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Demo (XRI)/Assets/Scripts/Firework.cs:43>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Demo (XRI)/Assets/Scripts/Firework.cs:43>
 		NullCheck(L_1);
 		SelectExitEvent_t15DC0A39F9657BA9E6BAE6250D8D64C9671201F6* L_2;
 		L_2 = XRBaseInteractable_get_selectExited_m0296CEBB4427F63D460984FC32FA0C9C7ACED5A7_inline(L_1, NULL);
@@ -1287,7 +1287,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Firework_Start_m9F1A1DB32E913B4D01756D50
 		UnityAction_1__ctor_mD74501F5FCCC37863163D5E7155B6C8B9B366C40(L_3, __this, (intptr_t)((void*)Firework_Interactable_SelectExited_m5FC43E69568728EA6B4546D101F9FEC72A00A437_RuntimeMethod_var), NULL);
 		NullCheck(L_2);
 		UnityEvent_1_AddListener_mB662756036996A6B6F83F6492CE9E26797AF9602(L_2, L_3, UnityEvent_1_AddListener_mB662756036996A6B6F83F6492CE9E26797AF9602_RuntimeMethod_var);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Demo (XRI)/Assets/Scripts/Firework.cs:44>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Demo (XRI)/Assets/Scripts/Firework.cs:44>
 		return;
 	}
 }
@@ -1301,7 +1301,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Firework_Interactable_SelectExited_m5FC4
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Demo (XRI)/Assets/Scripts/Firework.cs:48>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Demo (XRI)/Assets/Scripts/Firework.cs:48>
 		bool L_0 = __this->___fired;
 		if (!L_0)
 		{
@@ -1309,18 +1309,18 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Firework_Interactable_SelectExited_m5FC4
 		}
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Demo (XRI)/Assets/Scripts/Firework.cs:50>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Demo (XRI)/Assets/Scripts/Firework.cs:50>
 		return;
 	}
 
 IL_0009:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Demo (XRI)/Assets/Scripts/Firework.cs:53>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Demo (XRI)/Assets/Scripts/Firework.cs:53>
 		__this->___fired = (bool)1;
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Demo (XRI)/Assets/Scripts/Firework.cs:55>
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Demo (XRI)/Assets/Scripts/Firework.cs:56>
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Demo (XRI)/Assets/Scripts/Firework.cs:57>
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Demo (XRI)/Assets/Scripts/Firework.cs:58>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Demo (XRI)/Assets/Scripts/Firework.cs:55>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Demo (XRI)/Assets/Scripts/Firework.cs:56>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Demo (XRI)/Assets/Scripts/Firework.cs:57>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Demo (XRI)/Assets/Scripts/Firework.cs:58>
 		float L_1;
 		L_1 = Random_get_value_m2CEA87FADF5222EF9E13D32695F15E2BA282E24B(NULL);
 		float L_2;
@@ -1329,19 +1329,19 @@ IL_0009:
 		memset((&L_3), 0, sizeof(L_3));
 		Vector3__ctor_m376936E6B999EF1ECBE57D990A386303E2283DE0_inline((&L_3), ((float)il2cpp_codegen_multiply(((float)il2cpp_codegen_subtract(L_1, (0.5f))), (0.0500000007f))), (3.0f), ((float)il2cpp_codegen_multiply(((float)il2cpp_codegen_subtract(L_2, (0.5f))), (0.0500000007f))), NULL);
 		__this->___flightForce = L_3;
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Demo (XRI)/Assets/Scripts/Firework.cs:59>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Demo (XRI)/Assets/Scripts/Firework.cs:59>
 		float L_4;
 		L_4 = Time_get_time_m3A271BB1B20041144AC5B7863B71AB1F0150374B(NULL);
 		__this->___explodeTime = ((float)il2cpp_codegen_add(L_4, (10.0f)));
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Demo (XRI)/Assets/Scripts/Firework.cs:62>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Demo (XRI)/Assets/Scripts/Firework.cs:62>
 		SelectExitEventArgs_t56125CE0360D37AC0B50EB6066B5AB5957EF559A* L_5 = ___0_eventArgs;
 		NullCheck(L_5);
 		RuntimeObject* L_6;
 		L_6 = SelectExitEventArgs_get_interactableObject_m61490444FA57DADCD90F156DDA6F816C71133F1F(L_5, NULL);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Demo (XRI)/Assets/Scripts/Firework.cs:63>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Demo (XRI)/Assets/Scripts/Firework.cs:63>
 		NullCheck(((XRGrabInteractable_tAE7E2F24377399C9B5159179E4B43EA6AA55531B*)CastclassClass((RuntimeObject*)L_6, XRGrabInteractable_tAE7E2F24377399C9B5159179E4B43EA6AA55531B_il2cpp_TypeInfo_var)));
 		Behaviour_set_enabled_mF1DCFE60EB09E0529FE9476CA804A3AA2D72B16A(((XRGrabInteractable_tAE7E2F24377399C9B5159179E4B43EA6AA55531B*)CastclassClass((RuntimeObject*)L_6, XRGrabInteractable_tAE7E2F24377399C9B5159179E4B43EA6AA55531B_il2cpp_TypeInfo_var)), (bool)0, NULL);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Demo (XRI)/Assets/Scripts/Firework.cs:64>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Demo (XRI)/Assets/Scripts/Firework.cs:64>
 		return;
 	}
 }
@@ -1349,7 +1349,7 @@ IL_0009:
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Firework_FixedUpdate_m2490E9B02A472312F32711B5CCEB4FDDEC1B7CC2 (Firework_tCD30D777E501AD8DF31AF37620EB6424EEBAA39A* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Demo (XRI)/Assets/Scripts/Firework.cs:68>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Demo (XRI)/Assets/Scripts/Firework.cs:68>
 		bool L_0 = __this->___owner;
 		if (!L_0)
 		{
@@ -1357,13 +1357,13 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Firework_FixedUpdate_m2490E9B02A472312F3
 		}
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Demo (XRI)/Assets/Scripts/Firework.cs:70>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Demo (XRI)/Assets/Scripts/Firework.cs:70>
 		Firework_SendMessage_m3C4838CF184B65F378B7938F0AFB1A3BD652EB3C(__this, NULL);
 	}
 
 IL_000e:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Demo (XRI)/Assets/Scripts/Firework.cs:72>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Demo (XRI)/Assets/Scripts/Firework.cs:72>
 		bool L_1 = __this->___owner;
 		if (!L_1)
 		{
@@ -1378,16 +1378,16 @@ IL_000e:
 		}
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Demo (XRI)/Assets/Scripts/Firework.cs:74>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Demo (XRI)/Assets/Scripts/Firework.cs:74>
 		Rigidbody_t268697F5A994213ED97393309870968BC1C7393C* L_3 = __this->___body;
 		NullCheck(L_3);
 		Rigidbody_set_isKinematic_m6C3FD3EA358DADA3B191F2449CF1C4F8B22695ED(L_3, (bool)0, NULL);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Demo (XRI)/Assets/Scripts/Firework.cs:75>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Demo (XRI)/Assets/Scripts/Firework.cs:75>
 		Rigidbody_t268697F5A994213ED97393309870968BC1C7393C* L_4 = __this->___body;
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_5 = __this->___flightForce;
 		NullCheck(L_4);
 		Rigidbody_AddForce_mBDBC288D0E266BC1B62E3649B4FCE46E7EA9CCBC(L_4, L_5, 0, NULL);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Demo (XRI)/Assets/Scripts/Firework.cs:77>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Demo (XRI)/Assets/Scripts/Firework.cs:77>
 		ParticleSystem_tB19986EE308BD63D36FB6025EEEAFBEDB97C67C1* L_6 = __this->___particles;
 		NullCheck(L_6);
 		bool L_7;
@@ -1398,11 +1398,11 @@ IL_000e:
 		}
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Demo (XRI)/Assets/Scripts/Firework.cs:79>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Demo (XRI)/Assets/Scripts/Firework.cs:79>
 		ParticleSystem_tB19986EE308BD63D36FB6025EEEAFBEDB97C67C1* L_8 = __this->___particles;
 		NullCheck(L_8);
 		ParticleSystem_Play_mD943E601BFE16CB9BB5D1F5E6AED5C36F5F11EF5(L_8, NULL);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Demo (XRI)/Assets/Scripts/Firework.cs:80>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Demo (XRI)/Assets/Scripts/Firework.cs:80>
 		Rigidbody_t268697F5A994213ED97393309870968BC1C7393C* L_9 = __this->___body;
 		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_10;
 		L_10 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(__this, NULL);
@@ -1417,7 +1417,7 @@ IL_000e:
 
 IL_0075:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Demo (XRI)/Assets/Scripts/Firework.cs:83>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Demo (XRI)/Assets/Scripts/Firework.cs:83>
 		float L_13;
 		L_13 = Time_get_time_m3A271BB1B20041144AC5B7863B71AB1F0150374B(NULL);
 		float L_14 = __this->___explodeTime;
@@ -1427,20 +1427,20 @@ IL_0075:
 		}
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Demo (XRI)/Assets/Scripts/Firework.cs:85>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Demo (XRI)/Assets/Scripts/Firework.cs:85>
 		NetworkSpawnManager_tFCB3B1216C5FF4535A3F8AF00C08A89C3CADA00D* L_15;
 		L_15 = NetworkSpawnManager_Find_m716E11837307E53BC29FE6BAF544134BABC665BC(__this, NULL);
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_16;
 		L_16 = Component_get_gameObject_m57AEFBB14DB39EC476F740BA000E170355DE691B(__this, NULL);
 		NullCheck(L_15);
 		NetworkSpawnManager_Despawn_m596D5E5241D592D40ED83B9F101C8D6D30316E10(L_15, L_16, NULL);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Demo (XRI)/Assets/Scripts/Firework.cs:86>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Demo (XRI)/Assets/Scripts/Firework.cs:86>
 		return;
 	}
 
 IL_0094:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Demo (XRI)/Assets/Scripts/Firework.cs:89>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Demo (XRI)/Assets/Scripts/Firework.cs:89>
 		bool L_17 = __this->___owner;
 		if (L_17)
 		{
@@ -1455,7 +1455,7 @@ IL_0094:
 		}
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Demo (XRI)/Assets/Scripts/Firework.cs:91>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Demo (XRI)/Assets/Scripts/Firework.cs:91>
 		ParticleSystem_tB19986EE308BD63D36FB6025EEEAFBEDB97C67C1* L_19 = __this->___particles;
 		NullCheck(L_19);
 		bool L_20;
@@ -1466,7 +1466,7 @@ IL_0094:
 		}
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Demo (XRI)/Assets/Scripts/Firework.cs:93>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Demo (XRI)/Assets/Scripts/Firework.cs:93>
 		ParticleSystem_tB19986EE308BD63D36FB6025EEEAFBEDB97C67C1* L_21 = __this->___particles;
 		NullCheck(L_21);
 		ParticleSystem_Play_mD943E601BFE16CB9BB5D1F5E6AED5C36F5F11EF5(L_21, NULL);
@@ -1474,7 +1474,7 @@ IL_0094:
 
 IL_00bc:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Demo (XRI)/Assets/Scripts/Firework.cs:96>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Demo (XRI)/Assets/Scripts/Firework.cs:96>
 		return;
 	}
 }
@@ -1490,9 +1490,9 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Firework_SendMessage_m3C4838CF184B65F378
 	Message_tA0664CF3C7654927F4CB1DEE5C7C03BA0B2A243B V_0;
 	memset((&V_0), 0, sizeof(V_0));
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Demo (XRI)/Assets/Scripts/Firework.cs:106>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Demo (XRI)/Assets/Scripts/Firework.cs:106>
 		il2cpp_codegen_initobj((&V_0), sizeof(Message_tA0664CF3C7654927F4CB1DEE5C7C03BA0B2A243B));
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Demo (XRI)/Assets/Scripts/Firework.cs:107>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Demo (XRI)/Assets/Scripts/Firework.cs:107>
 		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_0;
 		L_0 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(__this, NULL);
 		NetworkContext_t49239659157E00ACFF3A196AF00218DED40F9310* L_1 = (NetworkContext_t49239659157E00ACFF3A196AF00218DED40F9310*)(&__this->___context);
@@ -1503,14 +1503,14 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Firework_SendMessage_m3C4838CF184B65F378
 		Pose_t06BA69EAA6E9FAF60056D519A87D25F54AFE7971 L_4;
 		L_4 = Transforms_ToLocal_m4D5F05B555570AD283BE91293D747CEA8C728B70(L_0, L_3, NULL);
 		(&V_0)->___pose = L_4;
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Demo (XRI)/Assets/Scripts/Firework.cs:108>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Demo (XRI)/Assets/Scripts/Firework.cs:108>
 		bool L_5 = __this->___fired;
 		(&V_0)->___fired = L_5;
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Demo (XRI)/Assets/Scripts/Firework.cs:109>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Demo (XRI)/Assets/Scripts/Firework.cs:109>
 		NetworkContext_t49239659157E00ACFF3A196AF00218DED40F9310* L_6 = (NetworkContext_t49239659157E00ACFF3A196AF00218DED40F9310*)(&__this->___context);
 		Message_tA0664CF3C7654927F4CB1DEE5C7C03BA0B2A243B L_7 = V_0;
 		NetworkContext_SendJson_TisMessage_tA0664CF3C7654927F4CB1DEE5C7C03BA0B2A243B_m10B2745F2C23DA1EFB456B6399AF50901DE8B7EE(L_6, L_7, NetworkContext_SendJson_TisMessage_tA0664CF3C7654927F4CB1DEE5C7C03BA0B2A243B_m10B2745F2C23DA1EFB456B6399AF50901DE8B7EE_RuntimeMethod_var);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Demo (XRI)/Assets/Scripts/Firework.cs:110>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Demo (XRI)/Assets/Scripts/Firework.cs:110>
 		return;
 	}
 }
@@ -1528,11 +1528,11 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Firework_ProcessMessage_m492CF3E0715B528
 	Pose_t06BA69EAA6E9FAF60056D519A87D25F54AFE7971 V_1;
 	memset((&V_1), 0, sizeof(V_1));
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Demo (XRI)/Assets/Scripts/Firework.cs:114>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Demo (XRI)/Assets/Scripts/Firework.cs:114>
 		Message_tA0664CF3C7654927F4CB1DEE5C7C03BA0B2A243B L_0;
 		L_0 = ReferenceCountedSceneGraphMessage_FromJson_TisMessage_tA0664CF3C7654927F4CB1DEE5C7C03BA0B2A243B_m4B97E42D96CA233AF4A1AE3AA22BED103B58D4B5((&___0_message), ReferenceCountedSceneGraphMessage_FromJson_TisMessage_tA0664CF3C7654927F4CB1DEE5C7C03BA0B2A243B_m4B97E42D96CA233AF4A1AE3AA22BED103B58D4B5_RuntimeMethod_var);
 		V_0 = L_0;
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Demo (XRI)/Assets/Scripts/Firework.cs:115>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Demo (XRI)/Assets/Scripts/Firework.cs:115>
 		Message_tA0664CF3C7654927F4CB1DEE5C7C03BA0B2A243B L_1 = V_0;
 		Pose_t06BA69EAA6E9FAF60056D519A87D25F54AFE7971 L_2 = L_1.___pose;
 		NetworkContext_t49239659157E00ACFF3A196AF00218DED40F9310* L_3 = (NetworkContext_t49239659157E00ACFF3A196AF00218DED40F9310*)(&__this->___context);
@@ -1543,25 +1543,25 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Firework_ProcessMessage_m492CF3E0715B528
 		Pose_t06BA69EAA6E9FAF60056D519A87D25F54AFE7971 L_6;
 		L_6 = Transforms_ToWorld_m954B013AEE60C52F691A6414A2B041E1F5E55F8D(L_2, L_5, NULL);
 		V_1 = L_6;
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Demo (XRI)/Assets/Scripts/Firework.cs:116>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Demo (XRI)/Assets/Scripts/Firework.cs:116>
 		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_7;
 		L_7 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(__this, NULL);
 		Pose_t06BA69EAA6E9FAF60056D519A87D25F54AFE7971 L_8 = V_1;
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_9 = L_8.___position;
 		NullCheck(L_7);
 		Transform_set_position_mA1A817124BB41B685043DED2A9BA48CDF37C4156(L_7, L_9, NULL);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Demo (XRI)/Assets/Scripts/Firework.cs:117>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Demo (XRI)/Assets/Scripts/Firework.cs:117>
 		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_10;
 		L_10 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(__this, NULL);
 		Pose_t06BA69EAA6E9FAF60056D519A87D25F54AFE7971 L_11 = V_1;
 		Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 L_12 = L_11.___rotation;
 		NullCheck(L_10);
 		Transform_set_rotation_m61340DE74726CF0F9946743A727C4D444397331D(L_10, L_12, NULL);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Demo (XRI)/Assets/Scripts/Firework.cs:118>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Demo (XRI)/Assets/Scripts/Firework.cs:118>
 		Message_tA0664CF3C7654927F4CB1DEE5C7C03BA0B2A243B L_13 = V_0;
 		bool L_14 = L_13.___fired;
 		__this->___fired = L_14;
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Demo (XRI)/Assets/Scripts/Firework.cs:119>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Demo (XRI)/Assets/Scripts/Firework.cs:119>
 		return;
 	}
 }
@@ -1638,24 +1638,24 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FireworksBox_Start_mC0C14886FBE123B94728
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Demo (XRI)/Assets/Scripts/FireworksBox.cs:31>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Demo (XRI)/Assets/Scripts/FireworksBox.cs:31>
 		NetworkSpawnManager_tFCB3B1216C5FF4535A3F8AF00C08A89C3CADA00D* L_0;
 		L_0 = NetworkSpawnManager_Find_m716E11837307E53BC29FE6BAF544134BABC665BC(__this, NULL);
 		__this->___spawnManager = L_0;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___spawnManager), (void*)L_0);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Demo (XRI)/Assets/Scripts/FireworksBox.cs:32>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Demo (XRI)/Assets/Scripts/FireworksBox.cs:32>
 		XRSimpleInteractable_t7EDF3C91BAEEC571F7C2A2572035B362EE41C8F2* L_1;
 		L_1 = Component_GetComponent_TisXRSimpleInteractable_t7EDF3C91BAEEC571F7C2A2572035B362EE41C8F2_mCD65FB49B5B2DEBC4220E932DE850CEE5CADA8F2(__this, Component_GetComponent_TisXRSimpleInteractable_t7EDF3C91BAEEC571F7C2A2572035B362EE41C8F2_mCD65FB49B5B2DEBC4220E932DE850CEE5CADA8F2_RuntimeMethod_var);
 		__this->___interactable = L_1;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___interactable), (void*)L_1);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Demo (XRI)/Assets/Scripts/FireworksBox.cs:33>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Demo (XRI)/Assets/Scripts/FireworksBox.cs:33>
 		XRSimpleInteractable_t7EDF3C91BAEEC571F7C2A2572035B362EE41C8F2* L_2 = __this->___interactable;
 		NullCheck(L_2);
 		XRInteractionManager_t93C7F7F0CFEAD83E1A70F92D05B0E663483746CD* L_3;
 		L_3 = XRBaseInteractable_get_interactionManager_m86DA7C564753850E7755D80A011C27CF56E0EBBE_inline(L_2, NULL);
 		__this->___interactionManager = L_3;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___interactionManager), (void*)L_3);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Demo (XRI)/Assets/Scripts/FireworksBox.cs:35>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Demo (XRI)/Assets/Scripts/FireworksBox.cs:35>
 		XRSimpleInteractable_t7EDF3C91BAEEC571F7C2A2572035B362EE41C8F2* L_4 = __this->___interactable;
 		NullCheck(L_4);
 		SelectEnterEvent_tBA2614C8C25D8794D5804C4F66195D74E64FC5D0* L_5;
@@ -1664,7 +1664,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FireworksBox_Start_mC0C14886FBE123B94728
 		UnityAction_1__ctor_mEE39E1A87376378311B4931978E8E07E589E9A24(L_6, __this, (intptr_t)((void*)FireworksBox_XRGrabInteractable_SelectEntered_mEB84F6FB6F6CC6A93D14DC859487CEBF07CAE887_RuntimeMethod_var), NULL);
 		NullCheck(L_5);
 		UnityEvent_1_AddListener_mAE71681FB0832FD7DBA813E5ADDBA574EA32EED2(L_5, L_6, UnityEvent_1_AddListener_mAE71681FB0832FD7DBA813E5ADDBA574EA32EED2_RuntimeMethod_var);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Demo (XRI)/Assets/Scripts/FireworksBox.cs:36>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Demo (XRI)/Assets/Scripts/FireworksBox.cs:36>
 		return;
 	}
 }
@@ -1680,7 +1680,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FireworksBox_OnDestroy_m52A226C94C1840F0
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Demo (XRI)/Assets/Scripts/FireworksBox.cs:40>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Demo (XRI)/Assets/Scripts/FireworksBox.cs:40>
 		XRSimpleInteractable_t7EDF3C91BAEEC571F7C2A2572035B362EE41C8F2* L_0 = __this->___interactable;
 		NullCheck(L_0);
 		SelectEnterEvent_tBA2614C8C25D8794D5804C4F66195D74E64FC5D0* L_1;
@@ -1689,7 +1689,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FireworksBox_OnDestroy_m52A226C94C1840F0
 		UnityAction_1__ctor_mEE39E1A87376378311B4931978E8E07E589E9A24(L_2, __this, (intptr_t)((void*)FireworksBox_XRGrabInteractable_SelectEntered_mEB84F6FB6F6CC6A93D14DC859487CEBF07CAE887_RuntimeMethod_var), NULL);
 		NullCheck(L_1);
 		UnityEvent_1_RemoveListener_m1008B118B379B498B23E13BB88779719C22EB9EB(L_1, L_2, UnityEvent_1_RemoveListener_m1008B118B379B498B23E13BB88779719C22EB9EB_RuntimeMethod_var);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Demo (XRI)/Assets/Scripts/FireworksBox.cs:41>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Demo (XRI)/Assets/Scripts/FireworksBox.cs:41>
 		return;
 	}
 }
@@ -1707,18 +1707,18 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FireworksBox_XRGrabInteractable_SelectEn
 	Firework_tCD30D777E501AD8DF31AF37620EB6424EEBAA39A* V_0 = NULL;
 	RuntimeObject* V_1 = NULL;
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Demo (XRI)/Assets/Scripts/FireworksBox.cs:45>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Demo (XRI)/Assets/Scripts/FireworksBox.cs:45>
 		NetworkSpawnManager_tFCB3B1216C5FF4535A3F8AF00C08A89C3CADA00D* L_0 = __this->___spawnManager;
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_1 = __this->___fireworkPrefab;
 		NullCheck(L_0);
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_2;
 		L_2 = NetworkSpawnManager_SpawnWithPeerScope_m253F79B92C3D7293F46F49C65005C1379719E418(L_0, L_1, NULL);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Demo (XRI)/Assets/Scripts/FireworksBox.cs:46>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Demo (XRI)/Assets/Scripts/FireworksBox.cs:46>
 		NullCheck(L_2);
 		Firework_tCD30D777E501AD8DF31AF37620EB6424EEBAA39A* L_3;
 		L_3 = GameObject_GetComponent_TisFirework_tCD30D777E501AD8DF31AF37620EB6424EEBAA39A_mD5B9D453AF2509A40EA006ABA1468B6919CEBCC8(L_2, GameObject_GetComponent_TisFirework_tCD30D777E501AD8DF31AF37620EB6424EEBAA39A_mD5B9D453AF2509A40EA006ABA1468B6919CEBCC8_RuntimeMethod_var);
 		V_0 = L_3;
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Demo (XRI)/Assets/Scripts/FireworksBox.cs:47>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Demo (XRI)/Assets/Scripts/FireworksBox.cs:47>
 		Firework_tCD30D777E501AD8DF31AF37620EB6424EEBAA39A* L_4 = V_0;
 		NullCheck(L_4);
 		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_5;
@@ -1730,11 +1730,11 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FireworksBox_XRGrabInteractable_SelectEn
 		L_7 = Transform_get_position_m69CD5FA214FDAE7BB701552943674846C220FDE1(L_6, NULL);
 		NullCheck(L_5);
 		Transform_set_position_mA1A817124BB41B685043DED2A9BA48CDF37C4156(L_5, L_7, NULL);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Demo (XRI)/Assets/Scripts/FireworksBox.cs:48>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Demo (XRI)/Assets/Scripts/FireworksBox.cs:48>
 		Firework_tCD30D777E501AD8DF31AF37620EB6424EEBAA39A* L_8 = V_0;
 		NullCheck(L_8);
 		L_8->___owner = (bool)1;
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Demo (XRI)/Assets/Scripts/FireworksBox.cs:50>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Demo (XRI)/Assets/Scripts/FireworksBox.cs:50>
 		XRInteractionManager_t93C7F7F0CFEAD83E1A70F92D05B0E663483746CD* L_9 = __this->___interactionManager;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_10;
@@ -1745,19 +1745,19 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FireworksBox_XRGrabInteractable_SelectEn
 		}
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Demo (XRI)/Assets/Scripts/FireworksBox.cs:52>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Demo (XRI)/Assets/Scripts/FireworksBox.cs:52>
 		return;
 	}
 
 IL_0042:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Demo (XRI)/Assets/Scripts/FireworksBox.cs:56>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Demo (XRI)/Assets/Scripts/FireworksBox.cs:56>
 		SelectEnterEventArgs_t9220B1E6A9BB5A847C0476949ACE0182430BB938* L_11 = ___0_eventArgs;
 		NullCheck(L_11);
 		RuntimeObject* L_12;
 		L_12 = SelectEnterEventArgs_get_interactorObject_mDBBDCE0D498FC768E0EC28C2E862C8FE5B32DE59(L_11, NULL);
 		V_1 = L_12;
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Demo (XRI)/Assets/Scripts/FireworksBox.cs:57>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Demo (XRI)/Assets/Scripts/FireworksBox.cs:57>
 		RuntimeObject* L_13 = V_1;
 		if (!L_13)
 		{
@@ -1765,17 +1765,17 @@ IL_0042:
 		}
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Demo (XRI)/Assets/Scripts/FireworksBox.cs:59>
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Demo (XRI)/Assets/Scripts/FireworksBox.cs:60>
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Demo (XRI)/Assets/Scripts/FireworksBox.cs:61>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Demo (XRI)/Assets/Scripts/FireworksBox.cs:59>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Demo (XRI)/Assets/Scripts/FireworksBox.cs:60>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Demo (XRI)/Assets/Scripts/FireworksBox.cs:61>
 		XRInteractionManager_t93C7F7F0CFEAD83E1A70F92D05B0E663483746CD* L_14 = __this->___interactionManager;
 		RuntimeObject* L_15 = V_1;
 		XRSimpleInteractable_t7EDF3C91BAEEC571F7C2A2572035B362EE41C8F2* L_16 = __this->___interactable;
 		NullCheck(L_14);
 		VirtualActionInvoker2< RuntimeObject*, RuntimeObject* >::Invoke(42, L_14, L_15, L_16);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Demo (XRI)/Assets/Scripts/FireworksBox.cs:62>
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Demo (XRI)/Assets/Scripts/FireworksBox.cs:63>
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Demo (XRI)/Assets/Scripts/FireworksBox.cs:64>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Demo (XRI)/Assets/Scripts/FireworksBox.cs:62>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Demo (XRI)/Assets/Scripts/FireworksBox.cs:63>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Demo (XRI)/Assets/Scripts/FireworksBox.cs:64>
 		XRInteractionManager_t93C7F7F0CFEAD83E1A70F92D05B0E663483746CD* L_17 = __this->___interactionManager;
 		RuntimeObject* L_18 = V_1;
 		Firework_tCD30D777E501AD8DF31AF37620EB6424EEBAA39A* L_19 = V_0;
@@ -1788,7 +1788,7 @@ IL_0042:
 
 IL_0070:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Demo (XRI)/Assets/Scripts/FireworksBox.cs:66>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Demo (XRI)/Assets/Scripts/FireworksBox.cs:66>
 		return;
 	}
 }
@@ -1823,11 +1823,11 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void JoinAllRoomClients_Start_m1961A3CAEA6D69
 	RoomClientU5BU5D_t5932A3FEC7748463B7C227B5A12F1D34B3B74BE5* V_1 = NULL;
 	int32_t V_2 = 0;
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Demo (XRI)/Assets/Scripts/JoinAllRoomClients.cs:15>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Demo (XRI)/Assets/Scripts/JoinAllRoomClients.cs:15>
 		Guid_t L_0;
 		L_0 = Guid_NewGuid_m1F4894E8DC089811D6252148AD5858E58D43A7BD(NULL);
 		V_0 = L_0;
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Demo (XRI)/Assets/Scripts/JoinAllRoomClients.cs:16>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Demo (XRI)/Assets/Scripts/JoinAllRoomClients.cs:16>
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		RoomClientU5BU5D_t5932A3FEC7748463B7C227B5A12F1D34B3B74BE5* L_1;
 		L_1 = Object_FindObjectsByType_TisRoomClient_t124F52F8602AB535AC105F1E470809979EDA2A4F_mCD26CBCFE666B611DC2CBD5F0269B7870E102BFD(0, Object_FindObjectsByType_TisRoomClient_t124F52F8602AB535AC105F1E470809979EDA2A4F_mCD26CBCFE666B611DC2CBD5F0269B7870E102BFD_RuntimeMethod_var);
@@ -1838,13 +1838,13 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void JoinAllRoomClients_Start_m1961A3CAEA6D69
 
 IL_0011:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Demo (XRI)/Assets/Scripts/JoinAllRoomClients.cs:16>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Demo (XRI)/Assets/Scripts/JoinAllRoomClients.cs:16>
 		RoomClientU5BU5D_t5932A3FEC7748463B7C227B5A12F1D34B3B74BE5* L_2 = V_1;
 		int32_t L_3 = V_2;
 		NullCheck(L_2);
 		int32_t L_4 = L_3;
 		RoomClient_t124F52F8602AB535AC105F1E470809979EDA2A4F* L_5 = (L_2)->GetAt(static_cast<il2cpp_array_size_t>(L_4));
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Demo (XRI)/Assets/Scripts/JoinAllRoomClients.cs:18>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Demo (XRI)/Assets/Scripts/JoinAllRoomClients.cs:18>
 		Guid_t L_6 = V_0;
 		NullCheck(L_5);
 		RoomClient_Join_m4A6D5CDB4FBC72BFD1DAC3D11E9DEB3A6998D7F3(L_5, L_6, NULL);
@@ -1854,7 +1854,7 @@ IL_0011:
 
 IL_001e:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Demo (XRI)/Assets/Scripts/JoinAllRoomClients.cs:16>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Demo (XRI)/Assets/Scripts/JoinAllRoomClients.cs:16>
 		int32_t L_8 = V_2;
 		RoomClientU5BU5D_t5932A3FEC7748463B7C227B5A12F1D34B3B74BE5* L_9 = V_1;
 		NullCheck(L_9);
@@ -1864,7 +1864,7 @@ IL_001e:
 		}
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Demo (XRI)/Assets/Scripts/JoinAllRoomClients.cs:20>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Demo (XRI)/Assets/Scripts/JoinAllRoomClients.cs:20>
 		return;
 	}
 }

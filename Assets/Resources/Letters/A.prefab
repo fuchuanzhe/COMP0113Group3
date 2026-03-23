@@ -556,6 +556,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e017df32671f69e4594e4fa3e2ddf474, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SnapOnRelease
+  snapSound: {fileID: 8300000, guid: 8486d4d609109440cb32d0b9418484be, type: 3}
 --- !u!114 &4498851895113247415
 MonoBehaviour:
   m_ObjectHideFlags: 0

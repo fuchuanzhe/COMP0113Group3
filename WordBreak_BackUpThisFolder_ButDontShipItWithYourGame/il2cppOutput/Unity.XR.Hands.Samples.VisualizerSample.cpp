@@ -1307,7 +1307,7 @@ IL2CPP_EXTERN_C void MonoScriptData_tF50C601B9FB7D0B824131FDA44DEA76DA6808B08_ma
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t HandProcessor_get_callbackOrder_m3F2EF2D3D2C2C58FDADEE00CE9157B9C585FA8F7 (HandProcessor_tB65F4982827071531E5561C27DB783A11A3E9270* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandProcessor.cs:14>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandProcessor.cs:14>
 		return 0;
 	}
 }
@@ -1315,7 +1315,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t HandProcessor_get_callbackOrder_m3F2E
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t HandProcessor_get_processorExampleMode_m676693753425671E2723428A5D9B7B244F5B7494 (HandProcessor_tB65F4982827071531E5561C27DB783A11A3E9270* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandProcessor.cs:54>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandProcessor.cs:54>
 		int32_t L_0 = __this->___m_ProcessorExampleMode;
 		return L_0;
 	}
@@ -1324,7 +1324,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t HandProcessor_get_processorExampleMod
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void HandProcessor_set_processorExampleMode_mE2759A5B11698877F2FD1FD6046042CD29AF48FE (HandProcessor_tB65F4982827071531E5561C27DB783A11A3E9270* __this, int32_t ___0_value, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandProcessor.cs:55>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandProcessor.cs:55>
 		int32_t L_0 = ___0_value;
 		__this->___m_ProcessorExampleMode = L_0;
 		return;
@@ -1335,7 +1335,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void HandProcessor_ProcessJoints_m6FA3EA45A43
 {
 	int32_t V_0 = 0;
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandProcessor.cs:71>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandProcessor.cs:71>
 		int32_t L_0 = __this->___m_ProcessorExampleMode;
 		V_0 = L_0;
 		int32_t L_1 = V_0;
@@ -1357,20 +1357,20 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void HandProcessor_ProcessJoints_m6FA3EA45A43
 
 IL_0011:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandProcessor.cs:74>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandProcessor.cs:74>
 		XRHandSubsystem_t0EB20D332ADF52A334449A240A3FDD6844EEA92C* L_3 = ___0_subsystem;
 		int32_t L_4 = ___1_successFlags;
 		int32_t L_5 = ___2_updateType;
 		int32_t L_6 = __this->___m_LastProcessorExampleMode;
 		int32_t L_7 = __this->___m_ProcessorExampleMode;
 		HandProcessor_SmoothHandsExample_mA4CDE58B592B8073552EC6600EDC740DA4536C05(__this, L_3, L_4, L_5, (bool)((((int32_t)((((int32_t)L_6) == ((int32_t)L_7))? 1 : 0)) == ((int32_t)0))? 1 : 0), NULL);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandProcessor.cs:75>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandProcessor.cs:75>
 		goto IL_0036;
 	}
 
 IL_002d:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandProcessor.cs:78>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandProcessor.cs:78>
 		XRHandSubsystem_t0EB20D332ADF52A334449A240A3FDD6844EEA92C* L_8 = ___0_subsystem;
 		int32_t L_9 = ___1_successFlags;
 		int32_t L_10 = ___2_updateType;
@@ -1379,10 +1379,10 @@ IL_002d:
 
 IL_0036:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandProcessor.cs:82>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandProcessor.cs:82>
 		int32_t L_11 = __this->___m_ProcessorExampleMode;
 		__this->___m_LastProcessorExampleMode = L_11;
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandProcessor.cs:83>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandProcessor.cs:83>
 		return;
 	}
 }
@@ -1404,19 +1404,19 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void HandProcessor_SmoothHandsExample_mA4CDE5
 	memset((&V_6), 0, sizeof(V_6));
 	float V_7 = 0.0f;
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandProcessor.cs:89>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandProcessor.cs:89>
 		XRHandSubsystem_t0EB20D332ADF52A334449A240A3FDD6844EEA92C* L_0 = ___0_subsystem;
 		NullCheck(L_0);
 		XRHand_t42370E2B19E7613E9C8FFA4A4B749C91FF021471 L_1;
 		L_1 = XRHandSubsystem_get_leftHand_mD3B931E5129348FEE34C3965A0CF8E62A0CFFB97_inline(L_0, NULL);
 		V_0 = L_1;
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandProcessor.cs:90>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandProcessor.cs:90>
 		XRHandSubsystem_t0EB20D332ADF52A334449A240A3FDD6844EEA92C* L_2 = ___0_subsystem;
 		NullCheck(L_2);
 		XRHand_t42370E2B19E7613E9C8FFA4A4B749C91FF021471 L_3;
 		L_3 = XRHandSubsystem_get_rightHand_mDE333FDF35460E1A06BE051AF9C2144B7053ED3C_inline(L_2, NULL);
 		V_1 = L_3;
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandProcessor.cs:92>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandProcessor.cs:92>
 		bool L_4;
 		L_4 = XRHand_get_isTracked_mDFC9D4FDE271E2DC90D5459B1A6EA304F97B7428_inline((&V_0), NULL);
 		if (!L_4)
@@ -1432,15 +1432,15 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void HandProcessor_SmoothHandsExample_mA4CDE5
 		}
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandProcessor.cs:94>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandProcessor.cs:94>
 		Pose_t06BA69EAA6E9FAF60056D519A87D25F54AFE7971 L_6;
 		L_6 = XRHand_get_rootPose_m4F34E7F55AEBFD2FF7491364ADB00B27BF86F1A5_inline((&V_0), NULL);
 		V_2 = L_6;
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandProcessor.cs:95>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandProcessor.cs:95>
 		Pose_t06BA69EAA6E9FAF60056D519A87D25F54AFE7971 L_7 = V_2;
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_8 = L_7.___position;
 		V_3 = L_8;
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandProcessor.cs:96>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandProcessor.cs:96>
 		bool L_9 = __this->___m_FirstFrame;
 		if (L_9)
 		{
@@ -1455,31 +1455,31 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void HandProcessor_SmoothHandsExample_mA4CDE5
 		}
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandProcessor.cs:98>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandProcessor.cs:98>
 		float L_11;
 		L_11 = Time_get_deltaTime_mC3195000401F0FD167DD2F948FD2BC58330D0865(NULL);
 		float L_12 = __this->___m_LeftHandSmoothingFactor;
 		V_4 = ((float)il2cpp_codegen_multiply(L_11, L_12));
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandProcessor.cs:99>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandProcessor.cs:99>
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_13 = __this->___m_LastLeftHandPosition;
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_14 = V_3;
 		float L_15 = V_4;
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_16;
 		L_16 = Vector3_Lerp_m3A906D0530A94FAABB94F0F905E84D99BE85C3F8_inline(L_13, L_14, L_15, NULL);
 		V_3 = L_16;
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandProcessor.cs:100>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandProcessor.cs:100>
 		Pose_t06BA69EAA6E9FAF60056D519A87D25F54AFE7971* L_17 = (Pose_t06BA69EAA6E9FAF60056D519A87D25F54AFE7971*)(&__this->___m_LeftHandPose);
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_18 = V_3;
 		L_17->___position = L_18;
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandProcessor.cs:101>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandProcessor.cs:101>
 		Pose_t06BA69EAA6E9FAF60056D519A87D25F54AFE7971* L_19 = (Pose_t06BA69EAA6E9FAF60056D519A87D25F54AFE7971*)(&__this->___m_LeftHandPose);
 		Pose_t06BA69EAA6E9FAF60056D519A87D25F54AFE7971 L_20 = V_2;
 		Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 L_21 = L_20.___rotation;
 		L_19->___rotation = L_21;
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandProcessor.cs:103>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandProcessor.cs:103>
 		Pose_t06BA69EAA6E9FAF60056D519A87D25F54AFE7971 L_22 = __this->___m_LeftHandPose;
 		XRHandProcessingUtility_SetRootPose_m116319D83FE5DC86798991011D0230A2531E35EE((&V_0), L_22, NULL);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandProcessor.cs:104>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandProcessor.cs:104>
 		XRHandSubsystem_t0EB20D332ADF52A334449A240A3FDD6844EEA92C* L_23 = ___0_subsystem;
 		XRHand_t42370E2B19E7613E9C8FFA4A4B749C91FF021471 L_24 = V_0;
 		XRHandProcessingUtility_SetCorrespondingHand_m7AB9505CF0D27B84D54B7AB39746D4B66EED9CD7(L_23, L_24, NULL);
@@ -1487,14 +1487,14 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void HandProcessor_SmoothHandsExample_mA4CDE5
 
 IL_008d:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandProcessor.cs:106>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandProcessor.cs:106>
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_25 = V_3;
 		__this->___m_LastLeftHandPosition = L_25;
 	}
 
 IL_0094:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandProcessor.cs:109>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandProcessor.cs:109>
 		bool L_26;
 		L_26 = XRHand_get_isTracked_mDFC9D4FDE271E2DC90D5459B1A6EA304F97B7428_inline((&V_1), NULL);
 		if (!L_26)
@@ -1510,15 +1510,15 @@ IL_0094:
 		}
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandProcessor.cs:111>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandProcessor.cs:111>
 		Pose_t06BA69EAA6E9FAF60056D519A87D25F54AFE7971 L_28;
 		L_28 = XRHand_get_rootPose_m4F34E7F55AEBFD2FF7491364ADB00B27BF86F1A5_inline((&V_1), NULL);
 		V_5 = L_28;
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandProcessor.cs:112>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandProcessor.cs:112>
 		Pose_t06BA69EAA6E9FAF60056D519A87D25F54AFE7971 L_29 = V_5;
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_30 = L_29.___position;
 		V_6 = L_30;
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandProcessor.cs:113>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandProcessor.cs:113>
 		bool L_31 = __this->___m_FirstFrame;
 		if (L_31)
 		{
@@ -1533,31 +1533,31 @@ IL_0094:
 		}
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandProcessor.cs:115>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandProcessor.cs:115>
 		float L_33;
 		L_33 = Time_get_deltaTime_mC3195000401F0FD167DD2F948FD2BC58330D0865(NULL);
 		float L_34 = __this->___m_RightHandSmoothingFactor;
 		V_7 = ((float)il2cpp_codegen_multiply(L_33, L_34));
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandProcessor.cs:116>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandProcessor.cs:116>
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_35 = __this->___m_LastRightHandPosition;
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_36 = V_6;
 		float L_37 = V_7;
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_38;
 		L_38 = Vector3_Lerp_m3A906D0530A94FAABB94F0F905E84D99BE85C3F8_inline(L_35, L_36, L_37, NULL);
 		V_6 = L_38;
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandProcessor.cs:117>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandProcessor.cs:117>
 		Pose_t06BA69EAA6E9FAF60056D519A87D25F54AFE7971* L_39 = (Pose_t06BA69EAA6E9FAF60056D519A87D25F54AFE7971*)(&__this->___m_RightHandPose);
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_40 = V_6;
 		L_39->___position = L_40;
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandProcessor.cs:118>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandProcessor.cs:118>
 		Pose_t06BA69EAA6E9FAF60056D519A87D25F54AFE7971* L_41 = (Pose_t06BA69EAA6E9FAF60056D519A87D25F54AFE7971*)(&__this->___m_RightHandPose);
 		Pose_t06BA69EAA6E9FAF60056D519A87D25F54AFE7971 L_42 = V_5;
 		Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 L_43 = L_42.___rotation;
 		L_41->___rotation = L_43;
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandProcessor.cs:120>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandProcessor.cs:120>
 		Pose_t06BA69EAA6E9FAF60056D519A87D25F54AFE7971 L_44 = __this->___m_RightHandPose;
 		XRHandProcessingUtility_SetRootPose_m116319D83FE5DC86798991011D0230A2531E35EE((&V_1), L_44, NULL);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandProcessor.cs:121>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandProcessor.cs:121>
 		XRHandSubsystem_t0EB20D332ADF52A334449A240A3FDD6844EEA92C* L_45 = ___0_subsystem;
 		XRHand_t42370E2B19E7613E9C8FFA4A4B749C91FF021471 L_46 = V_1;
 		XRHandProcessingUtility_SetCorrespondingHand_m7AB9505CF0D27B84D54B7AB39746D4B66EED9CD7(L_45, L_46, NULL);
@@ -1565,14 +1565,14 @@ IL_0094:
 
 IL_011d:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandProcessor.cs:123>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandProcessor.cs:123>
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_47 = V_6;
 		__this->___m_LastRightHandPosition = L_47;
 	}
 
 IL_0125:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandProcessor.cs:125>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandProcessor.cs:125>
 		return;
 	}
 }
@@ -1588,27 +1588,27 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void HandProcessor_InvertHandsExample_m687CDD
 	Pose_t06BA69EAA6E9FAF60056D519A87D25F54AFE7971 V_3;
 	memset((&V_3), 0, sizeof(V_3));
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandProcessor.cs:130>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandProcessor.cs:130>
 		XRHandSubsystem_t0EB20D332ADF52A334449A240A3FDD6844EEA92C* L_0 = ___0_subsystem;
 		NullCheck(L_0);
 		XRHand_t42370E2B19E7613E9C8FFA4A4B749C91FF021471 L_1;
 		L_1 = XRHandSubsystem_get_leftHand_mD3B931E5129348FEE34C3965A0CF8E62A0CFFB97_inline(L_0, NULL);
 		V_0 = L_1;
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandProcessor.cs:131>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandProcessor.cs:131>
 		Pose_t06BA69EAA6E9FAF60056D519A87D25F54AFE7971 L_2;
 		L_2 = XRHand_get_rootPose_m4F34E7F55AEBFD2FF7491364ADB00B27BF86F1A5_inline((&V_0), NULL);
 		V_1 = L_2;
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandProcessor.cs:133>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandProcessor.cs:133>
 		XRHandSubsystem_t0EB20D332ADF52A334449A240A3FDD6844EEA92C* L_3 = ___0_subsystem;
 		NullCheck(L_3);
 		XRHand_t42370E2B19E7613E9C8FFA4A4B749C91FF021471 L_4;
 		L_4 = XRHandSubsystem_get_rightHand_mDE333FDF35460E1A06BE051AF9C2144B7053ED3C_inline(L_3, NULL);
 		V_2 = L_4;
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandProcessor.cs:134>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandProcessor.cs:134>
 		Pose_t06BA69EAA6E9FAF60056D519A87D25F54AFE7971 L_5;
 		L_5 = XRHand_get_rootPose_m4F34E7F55AEBFD2FF7491364ADB00B27BF86F1A5_inline((&V_2), NULL);
 		V_3 = L_5;
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandProcessor.cs:136>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandProcessor.cs:136>
 		bool L_6;
 		L_6 = XRHand_get_isTracked_mDFC9D4FDE271E2DC90D5459B1A6EA304F97B7428_inline((&V_0), NULL);
 		if (!L_6)
@@ -1617,17 +1617,17 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void HandProcessor_InvertHandsExample_m687CDD
 		}
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandProcessor.cs:138>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandProcessor.cs:138>
 		Pose_t06BA69EAA6E9FAF60056D519A87D25F54AFE7971 L_7 = V_3;
 		XRHandProcessingUtility_SetRootPose_m116319D83FE5DC86798991011D0230A2531E35EE((&V_0), L_7, NULL);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandProcessor.cs:139>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandProcessor.cs:139>
 		XRHandSubsystem_t0EB20D332ADF52A334449A240A3FDD6844EEA92C* L_8 = ___0_subsystem;
 		XRHand_t42370E2B19E7613E9C8FFA4A4B749C91FF021471 L_9 = V_0;
 		XRHandProcessingUtility_SetCorrespondingHand_m7AB9505CF0D27B84D54B7AB39746D4B66EED9CD7(L_8, L_9, NULL);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandProcessor.cs:141>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandProcessor.cs:141>
 		Pose_t06BA69EAA6E9FAF60056D519A87D25F54AFE7971 L_10 = V_1;
 		XRHandProcessingUtility_SetRootPose_m116319D83FE5DC86798991011D0230A2531E35EE((&V_2), L_10, NULL);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandProcessor.cs:142>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandProcessor.cs:142>
 		XRHandSubsystem_t0EB20D332ADF52A334449A240A3FDD6844EEA92C* L_11 = ___0_subsystem;
 		XRHand_t42370E2B19E7613E9C8FFA4A4B749C91FF021471 L_12 = V_2;
 		XRHandProcessingUtility_SetCorrespondingHand_m7AB9505CF0D27B84D54B7AB39746D4B66EED9CD7(L_11, L_12, NULL);
@@ -1635,7 +1635,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void HandProcessor_InvertHandsExample_m687CDD
 
 IL_0045:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandProcessor.cs:144>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandProcessor.cs:144>
 		return;
 	}
 }
@@ -1654,7 +1654,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void HandProcessor_Update_mBBDC1E75C79B02410E
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandProcessor.cs:148>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandProcessor.cs:148>
 		XRHandSubsystem_t0EB20D332ADF52A334449A240A3FDD6844EEA92C* L_0 = __this->___m_Subsystem;
 		if (!L_0)
 		{
@@ -1662,18 +1662,18 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void HandProcessor_Update_mBBDC1E75C79B02410E
 		}
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandProcessor.cs:149>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandProcessor.cs:149>
 		return;
 	}
 
 IL_0009:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandProcessor.cs:151>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandProcessor.cs:151>
 		il2cpp_codegen_runtime_class_init_inline(HandProcessor_tB65F4982827071531E5561C27DB783A11A3E9270_il2cpp_TypeInfo_var);
 		List_1_tE4111BEC044D13259EFD4EC5907636C855887179* L_1 = ((HandProcessor_tB65F4982827071531E5561C27DB783A11A3E9270_StaticFields*)il2cpp_codegen_static_fields_for(HandProcessor_tB65F4982827071531E5561C27DB783A11A3E9270_il2cpp_TypeInfo_var))->___s_SubsystemsReuse;
 		il2cpp_codegen_runtime_class_init_inline(SubsystemManager_t9A7261E4D0B53B996F04B8707D8E1C33AB65E824_il2cpp_TypeInfo_var);
 		SubsystemManager_GetSubsystems_TisXRHandSubsystem_t0EB20D332ADF52A334449A240A3FDD6844EEA92C_m80B420587E83801A6C5F75FED3B6CEF1693D2C73(L_1, SubsystemManager_GetSubsystems_TisXRHandSubsystem_t0EB20D332ADF52A334449A240A3FDD6844EEA92C_m80B420587E83801A6C5F75FED3B6CEF1693D2C73_RuntimeMethod_var);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandProcessor.cs:152>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandProcessor.cs:152>
 		List_1_tE4111BEC044D13259EFD4EC5907636C855887179* L_2 = ((HandProcessor_tB65F4982827071531E5561C27DB783A11A3E9270_StaticFields*)il2cpp_codegen_static_fields_for(HandProcessor_tB65F4982827071531E5561C27DB783A11A3E9270_il2cpp_TypeInfo_var))->___s_SubsystemsReuse;
 		NullCheck(L_2);
 		int32_t L_3;
@@ -1684,13 +1684,13 @@ IL_0009:
 		}
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandProcessor.cs:153>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandProcessor.cs:153>
 		return;
 	}
 
 IL_0020:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandProcessor.cs:155>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandProcessor.cs:155>
 		il2cpp_codegen_runtime_class_init_inline(HandProcessor_tB65F4982827071531E5561C27DB783A11A3E9270_il2cpp_TypeInfo_var);
 		List_1_tE4111BEC044D13259EFD4EC5907636C855887179* L_4 = ((HandProcessor_tB65F4982827071531E5561C27DB783A11A3E9270_StaticFields*)il2cpp_codegen_static_fields_for(HandProcessor_tB65F4982827071531E5561C27DB783A11A3E9270_il2cpp_TypeInfo_var))->___s_SubsystemsReuse;
 		NullCheck(L_4);
@@ -1698,11 +1698,11 @@ IL_0020:
 		L_5 = List_1_get_Item_m75273E2FDEA382223C6F78765C1A71E6A758CF9F(L_4, 0, List_1_get_Item_m75273E2FDEA382223C6F78765C1A71E6A758CF9F_RuntimeMethod_var);
 		__this->___m_Subsystem = L_5;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___m_Subsystem), (void*)L_5);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandProcessor.cs:156>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandProcessor.cs:156>
 		XRHandSubsystem_t0EB20D332ADF52A334449A240A3FDD6844EEA92C* L_6 = __this->___m_Subsystem;
 		NullCheck(L_6);
 		XRHandSubsystem_RegisterProcessor_TisHandProcessor_tB65F4982827071531E5561C27DB783A11A3E9270_mCD67CCBA02ABF3697173E24F8E496A84E9C01C3B(L_6, __this, XRHandSubsystem_RegisterProcessor_TisHandProcessor_tB65F4982827071531E5561C27DB783A11A3E9270_mCD67CCBA02ABF3697173E24F8E496A84E9C01C3B_RuntimeMethod_var);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandProcessor.cs:157>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandProcessor.cs:157>
 		return;
 	}
 }
@@ -1716,7 +1716,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void HandProcessor_OnDisable_m6974EEBFCE6402F
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandProcessor.cs:161>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandProcessor.cs:161>
 		XRHandSubsystem_t0EB20D332ADF52A334449A240A3FDD6844EEA92C* L_0 = __this->___m_Subsystem;
 		if (!L_0)
 		{
@@ -1724,18 +1724,18 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void HandProcessor_OnDisable_m6974EEBFCE6402F
 		}
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandProcessor.cs:163>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandProcessor.cs:163>
 		XRHandSubsystem_t0EB20D332ADF52A334449A240A3FDD6844EEA92C* L_1 = __this->___m_Subsystem;
 		NullCheck(L_1);
 		XRHandSubsystem_UnregisterProcessor_TisHandProcessor_tB65F4982827071531E5561C27DB783A11A3E9270_m65F55E11E864D525A4FC903D1E656577323E5DE7(L_1, __this, XRHandSubsystem_UnregisterProcessor_TisHandProcessor_tB65F4982827071531E5561C27DB783A11A3E9270_m65F55E11E864D525A4FC903D1E656577323E5DE7_RuntimeMethod_var);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandProcessor.cs:164>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandProcessor.cs:164>
 		__this->___m_Subsystem = (XRHandSubsystem_t0EB20D332ADF52A334449A240A3FDD6844EEA92C*)NULL;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___m_Subsystem), (void*)(XRHandSubsystem_t0EB20D332ADF52A334449A240A3FDD6844EEA92C*)NULL);
 	}
 
 IL_001b:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandProcessor.cs:166>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandProcessor.cs:166>
 		return;
 	}
 }
@@ -1749,20 +1749,20 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void HandProcessor__ctor_mF09F8BA24E05E370C6F
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandProcessor.cs:41>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandProcessor.cs:41>
 		il2cpp_codegen_runtime_class_init_inline(Pose_t06BA69EAA6E9FAF60056D519A87D25F54AFE7971_il2cpp_TypeInfo_var);
 		Pose_t06BA69EAA6E9FAF60056D519A87D25F54AFE7971 L_0;
 		L_0 = Pose_get_identity_m145C7BA9D895CD7F8CCE2483B69764F7A9FEC66E(NULL);
 		__this->___m_LeftHandPose = L_0;
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandProcessor.cs:42>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandProcessor.cs:42>
 		Pose_t06BA69EAA6E9FAF60056D519A87D25F54AFE7971 L_1;
 		L_1 = Pose_get_identity_m145C7BA9D895CD7F8CCE2483B69764F7A9FEC66E(NULL);
 		__this->___m_RightHandPose = L_1;
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandProcessor.cs:46>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandProcessor.cs:46>
 		__this->___m_ProcessorExampleMode = 1;
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandProcessor.cs:62>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandProcessor.cs:62>
 		__this->___m_LeftHandSmoothingFactor = (16.0f);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandProcessor.cs:66>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandProcessor.cs:66>
 		__this->___m_RightHandSmoothingFactor = (16.0f);
 		MonoBehaviour__ctor_m592DB0105CA0BC97AA1C5F4AD27B12D68A3B7C1E(__this, NULL);
 		return;
@@ -1780,7 +1780,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void HandProcessor__cctor_m167C4F42BCBA3FB91C
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandProcessor.cs:169>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandProcessor.cs:169>
 		List_1_tE4111BEC044D13259EFD4EC5907636C855887179* L_0 = (List_1_tE4111BEC044D13259EFD4EC5907636C855887179*)il2cpp_codegen_object_new(List_1_tE4111BEC044D13259EFD4EC5907636C855887179_il2cpp_TypeInfo_var);
 		List_1__ctor_m9991CB9E0E4608CAE947384283EE27BCF3DAC2D4(L_0, List_1__ctor_m9991CB9E0E4608CAE947384283EE27BCF3DAC2D4_RuntimeMethod_var);
 		((HandProcessor_tB65F4982827071531E5561C27DB783A11A3E9270_StaticFields*)il2cpp_codegen_static_fields_for(HandProcessor_tB65F4982827071531E5561C27DB783A11A3E9270_il2cpp_TypeInfo_var))->___s_SubsystemsReuse = L_0;
@@ -1808,7 +1808,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void HandProcessor__cctor_m167C4F42BCBA3FB91C
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool HandVisualizer_get_drawMeshes_m819F8F7A4BD67F4A2F1B900B0894DA8D1AAA35DA (HandVisualizer_tA85C45A230DA7AFCC9377FE418CDA2F75AFE49B6* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:58>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:58>
 		bool L_0 = __this->___m_DrawMeshes;
 		return L_0;
 	}
@@ -1817,7 +1817,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool HandVisualizer_get_drawMeshes_m819F8F7A4
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void HandVisualizer_set_drawMeshes_m04694763530BE9498ABECBB67CF61C1FAA404501 (HandVisualizer_tA85C45A230DA7AFCC9377FE418CDA2F75AFE49B6* __this, bool ___0_value, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:59>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:59>
 		bool L_0 = ___0_value;
 		__this->___m_DrawMeshes = L_0;
 		return;
@@ -1827,7 +1827,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void HandVisualizer_set_drawMeshes_m046947635
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool HandVisualizer_get_debugDrawJoints_mF00F4130C8C43341BA96062EA480188592A07E76 (HandVisualizer_tA85C45A230DA7AFCC9377FE418CDA2F75AFE49B6* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:76>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:76>
 		bool L_0 = __this->___m_DebugDrawJoints;
 		return L_0;
 	}
@@ -1836,7 +1836,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool HandVisualizer_get_debugDrawJoints_mF00F
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void HandVisualizer_set_debugDrawJoints_m48799BD9CCFCAB52720C5A66743B11632D1A334C (HandVisualizer_tA85C45A230DA7AFCC9377FE418CDA2F75AFE49B6* __this, bool ___0_value, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:77>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:77>
 		bool L_0 = ___0_value;
 		__this->___m_DebugDrawJoints = L_0;
 		return;
@@ -1846,7 +1846,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void HandVisualizer_set_debugDrawJoints_m4879
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t HandVisualizer_get_velocityType_m31F64C6FF2671B1019BBED2EF639959287698249 (HandVisualizer_tA85C45A230DA7AFCC9377FE418CDA2F75AFE49B6* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:94>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:94>
 		int32_t L_0 = __this->___m_VelocityType;
 		return L_0;
 	}
@@ -1855,7 +1855,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t HandVisualizer_get_velocityType_m31F6
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void HandVisualizer_set_velocityType_mE2593C4D1B6D37DF7DE56634995945D5F6BD0879 (HandVisualizer_tA85C45A230DA7AFCC9377FE418CDA2F75AFE49B6* __this, int32_t ___0_value, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:95>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:95>
 		int32_t L_0 = ___0_value;
 		__this->___m_VelocityType = L_0;
 		return;
@@ -1872,7 +1872,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void HandVisualizer_Awake_m5D0351B5F4C5D103A9
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:111>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:111>
 		bool L_0 = __this->___m_UseOptimizedControls;
 		if (!L_0)
 		{
@@ -1880,7 +1880,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void HandVisualizer_Awake_m5D0351B5F4C5D103A9
 		}
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:112>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:112>
 		il2cpp_codegen_runtime_class_init_inline(InputSystem_t4120CA4FE7DCFD56AF9391933FC3F1F485350164_il2cpp_TypeInfo_var);
 		InputSettings_tBA8835B505722A59702A08BCBA46ECF0B0274EEF* L_1;
 		L_1 = InputSystem_get_settings_m8E3E9C0907904CBDBAE96354142AB0A87C7A3B74(NULL);
@@ -1890,7 +1890,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void HandVisualizer_Awake_m5D0351B5F4C5D103A9
 
 IL_0018:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:114>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:114>
 		return;
 	}
 }
@@ -1900,7 +1900,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void HandVisualizer_OnEnable_m153D5811DA0274C
 	XRHand_t42370E2B19E7613E9C8FFA4A4B749C91FF021471 V_0;
 	memset((&V_0), 0, sizeof(V_0));
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:121>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:121>
 		XRHandSubsystem_t0EB20D332ADF52A334449A240A3FDD6844EEA92C* L_0 = __this->___m_Subsystem;
 		if (L_0)
 		{
@@ -1908,13 +1908,13 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void HandVisualizer_OnEnable_m153D5811DA0274C
 		}
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:122>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:122>
 		return;
 	}
 
 IL_0009:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:124>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:124>
 		HandGameObjects_t0E397BC6AC8B28ACD270CF428DF64801DF1AD26F* L_1 = __this->___m_LeftHandGameObjects;
 		XRHandSubsystem_t0EB20D332ADF52A334449A240A3FDD6844EEA92C* L_2 = __this->___m_Subsystem;
 		NullCheck(L_2);
@@ -1924,7 +1924,7 @@ IL_0009:
 		bool L_4;
 		L_4 = XRHand_get_isTracked_mDFC9D4FDE271E2DC90D5459B1A6EA304F97B7428_inline((&V_0), NULL);
 		HandVisualizer_UpdateRenderingVisibility_mFBC70B71322E6C97E3882E9DCE6E1F616CDC9BD1(__this, L_1, L_4, NULL);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:125>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:125>
 		HandGameObjects_t0E397BC6AC8B28ACD270CF428DF64801DF1AD26F* L_5 = __this->___m_RightHandGameObjects;
 		XRHandSubsystem_t0EB20D332ADF52A334449A240A3FDD6844EEA92C* L_6 = __this->___m_Subsystem;
 		NullCheck(L_6);
@@ -1934,7 +1934,7 @@ IL_0009:
 		bool L_8;
 		L_8 = XRHand_get_isTracked_mDFC9D4FDE271E2DC90D5459B1A6EA304F97B7428_inline((&V_0), NULL);
 		HandVisualizer_UpdateRenderingVisibility_mFBC70B71322E6C97E3882E9DCE6E1F616CDC9BD1(__this, L_5, L_8, NULL);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:126>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:126>
 		return;
 	}
 }
@@ -1952,7 +1952,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void HandVisualizer_OnDisable_m6AE8205BE1A2E4
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:133>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:133>
 		XRHandSubsystem_t0EB20D332ADF52A334449A240A3FDD6844EEA92C* L_0 = __this->___m_Subsystem;
 		if (!L_0)
 		{
@@ -1960,7 +1960,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void HandVisualizer_OnDisable_m6AE8205BE1A2E4
 		}
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:135>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:135>
 		XRHandSubsystem_t0EB20D332ADF52A334449A240A3FDD6844EEA92C* L_1 = __this->___m_Subsystem;
 		XRHandSubsystem_t0EB20D332ADF52A334449A240A3FDD6844EEA92C* L_2 = L_1;
 		NullCheck(L_2);
@@ -1972,7 +1972,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void HandVisualizer_OnDisable_m6AE8205BE1A2E4
 		NullCheck(L_2);
 		L_2->___trackingAcquired = ((Action_1_tEACFE9A51FCD1C277802D684B9FCD40906039752*)Castclass((RuntimeObject*)L_5, Action_1_tEACFE9A51FCD1C277802D684B9FCD40906039752_il2cpp_TypeInfo_var));
 		Il2CppCodeGenWriteBarrier((void**)(&L_2->___trackingAcquired), (void*)((Action_1_tEACFE9A51FCD1C277802D684B9FCD40906039752*)Castclass((RuntimeObject*)L_5, Action_1_tEACFE9A51FCD1C277802D684B9FCD40906039752_il2cpp_TypeInfo_var)));
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:136>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:136>
 		XRHandSubsystem_t0EB20D332ADF52A334449A240A3FDD6844EEA92C* L_6 = __this->___m_Subsystem;
 		XRHandSubsystem_t0EB20D332ADF52A334449A240A3FDD6844EEA92C* L_7 = L_6;
 		NullCheck(L_7);
@@ -1984,7 +1984,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void HandVisualizer_OnDisable_m6AE8205BE1A2E4
 		NullCheck(L_7);
 		L_7->___trackingLost = ((Action_1_tEACFE9A51FCD1C277802D684B9FCD40906039752*)Castclass((RuntimeObject*)L_10, Action_1_tEACFE9A51FCD1C277802D684B9FCD40906039752_il2cpp_TypeInfo_var));
 		Il2CppCodeGenWriteBarrier((void**)(&L_7->___trackingLost), (void*)((Action_1_tEACFE9A51FCD1C277802D684B9FCD40906039752*)Castclass((RuntimeObject*)L_10, Action_1_tEACFE9A51FCD1C277802D684B9FCD40906039752_il2cpp_TypeInfo_var)));
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:137>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:137>
 		XRHandSubsystem_t0EB20D332ADF52A334449A240A3FDD6844EEA92C* L_11 = __this->___m_Subsystem;
 		XRHandSubsystem_t0EB20D332ADF52A334449A240A3FDD6844EEA92C* L_12 = L_11;
 		NullCheck(L_12);
@@ -1996,20 +1996,20 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void HandVisualizer_OnDisable_m6AE8205BE1A2E4
 		NullCheck(L_12);
 		L_12->___updatedHands = ((Action_3_t7D778238CD0A45B8368B3EAC4062AD2D477E1997*)Castclass((RuntimeObject*)L_15, Action_3_t7D778238CD0A45B8368B3EAC4062AD2D477E1997_il2cpp_TypeInfo_var));
 		Il2CppCodeGenWriteBarrier((void**)(&L_12->___updatedHands), (void*)((Action_3_t7D778238CD0A45B8368B3EAC4062AD2D477E1997*)Castclass((RuntimeObject*)L_15, Action_3_t7D778238CD0A45B8368B3EAC4062AD2D477E1997_il2cpp_TypeInfo_var)));
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:138>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:138>
 		__this->___m_Subsystem = (XRHandSubsystem_t0EB20D332ADF52A334449A240A3FDD6844EEA92C*)NULL;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___m_Subsystem), (void*)(XRHandSubsystem_t0EB20D332ADF52A334449A240A3FDD6844EEA92C*)NULL);
 	}
 
 IL_0084:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:141>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:141>
 		HandGameObjects_t0E397BC6AC8B28ACD270CF428DF64801DF1AD26F* L_16 = __this->___m_LeftHandGameObjects;
 		HandVisualizer_UpdateRenderingVisibility_mFBC70B71322E6C97E3882E9DCE6E1F616CDC9BD1(__this, L_16, (bool)0, NULL);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:142>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:142>
 		HandGameObjects_t0E397BC6AC8B28ACD270CF428DF64801DF1AD26F* L_17 = __this->___m_RightHandGameObjects;
 		HandVisualizer_UpdateRenderingVisibility_mFBC70B71322E6C97E3882E9DCE6E1F616CDC9BD1(__this, L_17, (bool)0, NULL);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:143>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:143>
 		return;
 	}
 }
@@ -2017,7 +2017,7 @@ IL_0084:
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void HandVisualizer_OnDestroy_m09A391B0CC23056ACBF04B9FD1D467372BC5521E (HandVisualizer_tA85C45A230DA7AFCC9377FE418CDA2F75AFE49B6* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:150>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:150>
 		HandGameObjects_t0E397BC6AC8B28ACD270CF428DF64801DF1AD26F* L_0 = __this->___m_LeftHandGameObjects;
 		if (!L_0)
 		{
@@ -2025,18 +2025,18 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void HandVisualizer_OnDestroy_m09A391B0CC2305
 		}
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:152>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:152>
 		HandGameObjects_t0E397BC6AC8B28ACD270CF428DF64801DF1AD26F* L_1 = __this->___m_LeftHandGameObjects;
 		NullCheck(L_1);
 		HandGameObjects_OnDestroy_mDC01BE3680763342F2F89A8788D9B6A42ED7BBD6(L_1, NULL);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:153>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:153>
 		__this->___m_LeftHandGameObjects = (HandGameObjects_t0E397BC6AC8B28ACD270CF428DF64801DF1AD26F*)NULL;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___m_LeftHandGameObjects), (void*)(HandGameObjects_t0E397BC6AC8B28ACD270CF428DF64801DF1AD26F*)NULL);
 	}
 
 IL_001a:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:156>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:156>
 		HandGameObjects_t0E397BC6AC8B28ACD270CF428DF64801DF1AD26F* L_2 = __this->___m_RightHandGameObjects;
 		if (!L_2)
 		{
@@ -2044,18 +2044,18 @@ IL_001a:
 		}
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:158>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:158>
 		HandGameObjects_t0E397BC6AC8B28ACD270CF428DF64801DF1AD26F* L_3 = __this->___m_RightHandGameObjects;
 		NullCheck(L_3);
 		HandGameObjects_OnDestroy_mDC01BE3680763342F2F89A8788D9B6A42ED7BBD6(L_3, NULL);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:159>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:159>
 		__this->___m_RightHandGameObjects = (HandGameObjects_t0E397BC6AC8B28ACD270CF428DF64801DF1AD26F*)NULL;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___m_RightHandGameObjects), (void*)(HandGameObjects_t0E397BC6AC8B28ACD270CF428DF64801DF1AD26F*)NULL);
 	}
 
 IL_0034:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:161>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:161>
 		return;
 	}
 }
@@ -2079,7 +2079,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void HandVisualizer_Update_mCCBC611653726A607
 	XRHand_t42370E2B19E7613E9C8FFA4A4B749C91FF021471 V_3;
 	memset((&V_3), 0, sizeof(V_3));
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:168>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:168>
 		XRHandSubsystem_t0EB20D332ADF52A334449A240A3FDD6844EEA92C* L_0 = __this->___m_Subsystem;
 		if (!L_0)
 		{
@@ -2097,27 +2097,27 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void HandVisualizer_Update_mCCBC611653726A607
 		}
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:169>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:169>
 		return;
 	}
 
 IL_0016:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:171>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:171>
 		il2cpp_codegen_runtime_class_init_inline(HandVisualizer_tA85C45A230DA7AFCC9377FE418CDA2F75AFE49B6_il2cpp_TypeInfo_var);
 		List_1_tE4111BEC044D13259EFD4EC5907636C855887179* L_3 = ((HandVisualizer_tA85C45A230DA7AFCC9377FE418CDA2F75AFE49B6_StaticFields*)il2cpp_codegen_static_fields_for(HandVisualizer_tA85C45A230DA7AFCC9377FE418CDA2F75AFE49B6_il2cpp_TypeInfo_var))->___s_SubsystemsReuse;
 		il2cpp_codegen_runtime_class_init_inline(SubsystemManager_t9A7261E4D0B53B996F04B8707D8E1C33AB65E824_il2cpp_TypeInfo_var);
 		SubsystemManager_GetSubsystems_TisXRHandSubsystem_t0EB20D332ADF52A334449A240A3FDD6844EEA92C_m80B420587E83801A6C5F75FED3B6CEF1693D2C73(L_3, SubsystemManager_GetSubsystems_TisXRHandSubsystem_t0EB20D332ADF52A334449A240A3FDD6844EEA92C_m80B420587E83801A6C5F75FED3B6CEF1693D2C73_RuntimeMethod_var);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:172>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:172>
 		V_0 = (bool)0;
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:173>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:173>
 		V_1 = 0;
 		goto IL_004f;
 	}
 
 IL_0026:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:175>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:175>
 		il2cpp_codegen_runtime_class_init_inline(HandVisualizer_tA85C45A230DA7AFCC9377FE418CDA2F75AFE49B6_il2cpp_TypeInfo_var);
 		List_1_tE4111BEC044D13259EFD4EC5907636C855887179* L_4 = ((HandVisualizer_tA85C45A230DA7AFCC9377FE418CDA2F75AFE49B6_StaticFields*)il2cpp_codegen_static_fields_for(HandVisualizer_tA85C45A230DA7AFCC9377FE418CDA2F75AFE49B6_il2cpp_TypeInfo_var))->___s_SubsystemsReuse;
 		int32_t L_5 = V_1;
@@ -2125,7 +2125,7 @@ IL_0026:
 		XRHandSubsystem_t0EB20D332ADF52A334449A240A3FDD6844EEA92C* L_6;
 		L_6 = List_1_get_Item_m75273E2FDEA382223C6F78765C1A71E6A758CF9F(L_4, L_5, List_1_get_Item_m75273E2FDEA382223C6F78765C1A71E6A758CF9F_RuntimeMethod_var);
 		V_2 = L_6;
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:176>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:176>
 		XRHandSubsystem_t0EB20D332ADF52A334449A240A3FDD6844EEA92C* L_7 = V_2;
 		NullCheck(L_7);
 		bool L_8;
@@ -2136,28 +2136,28 @@ IL_0026:
 		}
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:178>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:178>
 		HandVisualizer_UnsubscribeHandSubsystem_m4FB54A65D825A9218998D66F0099C171D4A2DBB9(__this, NULL);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:179>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:179>
 		XRHandSubsystem_t0EB20D332ADF52A334449A240A3FDD6844EEA92C* L_9 = V_2;
 		__this->___m_Subsystem = L_9;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___m_Subsystem), (void*)L_9);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:180>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:180>
 		V_0 = (bool)1;
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:181>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:181>
 		goto IL_005c;
 	}
 
 IL_004b:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:173>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:173>
 		int32_t L_10 = V_1;
 		V_1 = ((int32_t)il2cpp_codegen_add(L_10, 1));
 	}
 
 IL_004f:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:173>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:173>
 		int32_t L_11 = V_1;
 		il2cpp_codegen_runtime_class_init_inline(HandVisualizer_tA85C45A230DA7AFCC9377FE418CDA2F75AFE49B6_il2cpp_TypeInfo_var);
 		List_1_tE4111BEC044D13259EFD4EC5907636C855887179* L_12 = ((HandVisualizer_tA85C45A230DA7AFCC9377FE418CDA2F75AFE49B6_StaticFields*)il2cpp_codegen_static_fields_for(HandVisualizer_tA85C45A230DA7AFCC9377FE418CDA2F75AFE49B6_il2cpp_TypeInfo_var))->___s_SubsystemsReuse;
@@ -2172,7 +2172,7 @@ IL_004f:
 
 IL_005c:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:185>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:185>
 		bool L_14 = V_0;
 		if (L_14)
 		{
@@ -2180,13 +2180,13 @@ IL_005c:
 		}
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:186>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:186>
 		return;
 	}
 
 IL_0060:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:188>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:188>
 		HandGameObjects_t0E397BC6AC8B28ACD270CF428DF64801DF1AD26F* L_15 = __this->___m_LeftHandGameObjects;
 		if (L_15)
 		{
@@ -2194,13 +2194,13 @@ IL_0060:
 		}
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:190>
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:191>
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:192>
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:193>
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:194>
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:195>
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:196>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:190>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:191>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:192>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:193>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:194>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:195>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:196>
 		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_16;
 		L_16 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(__this, NULL);
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_17 = __this->___m_LeftHandMesh;
@@ -2215,7 +2215,7 @@ IL_0060:
 
 IL_0092:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:199>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:199>
 		HandGameObjects_t0E397BC6AC8B28ACD270CF428DF64801DF1AD26F* L_22 = __this->___m_RightHandGameObjects;
 		if (L_22)
 		{
@@ -2223,13 +2223,13 @@ IL_0092:
 		}
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:201>
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:202>
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:203>
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:204>
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:205>
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:206>
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:207>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:201>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:202>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:203>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:204>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:205>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:206>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:207>
 		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_23;
 		L_23 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(__this, NULL);
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_24 = __this->___m_RightHandMesh;
@@ -2244,7 +2244,7 @@ IL_0092:
 
 IL_00c4:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:210>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:210>
 		HandGameObjects_t0E397BC6AC8B28ACD270CF428DF64801DF1AD26F* L_29 = __this->___m_LeftHandGameObjects;
 		XRHandSubsystem_t0EB20D332ADF52A334449A240A3FDD6844EEA92C* L_30 = __this->___m_Subsystem;
 		NullCheck(L_30);
@@ -2254,7 +2254,7 @@ IL_00c4:
 		bool L_32;
 		L_32 = XRHand_get_isTracked_mDFC9D4FDE271E2DC90D5459B1A6EA304F97B7428_inline((&V_3), NULL);
 		HandVisualizer_UpdateRenderingVisibility_mFBC70B71322E6C97E3882E9DCE6E1F616CDC9BD1(__this, L_29, L_32, NULL);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:211>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:211>
 		HandGameObjects_t0E397BC6AC8B28ACD270CF428DF64801DF1AD26F* L_33 = __this->___m_RightHandGameObjects;
 		XRHandSubsystem_t0EB20D332ADF52A334449A240A3FDD6844EEA92C* L_34 = __this->___m_Subsystem;
 		NullCheck(L_34);
@@ -2264,18 +2264,18 @@ IL_00c4:
 		bool L_36;
 		L_36 = XRHand_get_isTracked_mDFC9D4FDE271E2DC90D5459B1A6EA304F97B7428_inline((&V_3), NULL);
 		HandVisualizer_UpdateRenderingVisibility_mFBC70B71322E6C97E3882E9DCE6E1F616CDC9BD1(__this, L_33, L_36, NULL);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:213>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:213>
 		bool L_37 = __this->___m_DrawMeshes;
 		__this->___m_PreviousDrawMeshes = L_37;
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:214>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:214>
 		bool L_38 = __this->___m_DebugDrawJoints;
 		__this->___m_PreviousDebugDrawJoints = L_38;
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:215>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:215>
 		int32_t L_39 = __this->___m_VelocityType;
 		__this->___m_PreviousVelocityType = L_39;
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:217>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:217>
 		HandVisualizer_SubscribeHandSubsystem_mC8DF8C9AD2E5B23D5593833681DADD53C31B28FF(__this, NULL);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:218>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:218>
 		return;
 	}
 }
@@ -2293,7 +2293,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void HandVisualizer_SubscribeHandSubsystem_mC
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:222>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:222>
 		XRHandSubsystem_t0EB20D332ADF52A334449A240A3FDD6844EEA92C* L_0 = __this->___m_Subsystem;
 		if (L_0)
 		{
@@ -2301,13 +2301,13 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void HandVisualizer_SubscribeHandSubsystem_mC
 		}
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:223>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:223>
 		return;
 	}
 
 IL_0009:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:225>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:225>
 		XRHandSubsystem_t0EB20D332ADF52A334449A240A3FDD6844EEA92C* L_1 = __this->___m_Subsystem;
 		XRHandSubsystem_t0EB20D332ADF52A334449A240A3FDD6844EEA92C* L_2 = L_1;
 		NullCheck(L_2);
@@ -2319,7 +2319,7 @@ IL_0009:
 		NullCheck(L_2);
 		L_2->___trackingAcquired = ((Action_1_tEACFE9A51FCD1C277802D684B9FCD40906039752*)Castclass((RuntimeObject*)L_5, Action_1_tEACFE9A51FCD1C277802D684B9FCD40906039752_il2cpp_TypeInfo_var));
 		Il2CppCodeGenWriteBarrier((void**)(&L_2->___trackingAcquired), (void*)((Action_1_tEACFE9A51FCD1C277802D684B9FCD40906039752*)Castclass((RuntimeObject*)L_5, Action_1_tEACFE9A51FCD1C277802D684B9FCD40906039752_il2cpp_TypeInfo_var)));
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:226>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:226>
 		XRHandSubsystem_t0EB20D332ADF52A334449A240A3FDD6844EEA92C* L_6 = __this->___m_Subsystem;
 		XRHandSubsystem_t0EB20D332ADF52A334449A240A3FDD6844EEA92C* L_7 = L_6;
 		NullCheck(L_7);
@@ -2331,7 +2331,7 @@ IL_0009:
 		NullCheck(L_7);
 		L_7->___trackingLost = ((Action_1_tEACFE9A51FCD1C277802D684B9FCD40906039752*)Castclass((RuntimeObject*)L_10, Action_1_tEACFE9A51FCD1C277802D684B9FCD40906039752_il2cpp_TypeInfo_var));
 		Il2CppCodeGenWriteBarrier((void**)(&L_7->___trackingLost), (void*)((Action_1_tEACFE9A51FCD1C277802D684B9FCD40906039752*)Castclass((RuntimeObject*)L_10, Action_1_tEACFE9A51FCD1C277802D684B9FCD40906039752_il2cpp_TypeInfo_var)));
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:227>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:227>
 		XRHandSubsystem_t0EB20D332ADF52A334449A240A3FDD6844EEA92C* L_11 = __this->___m_Subsystem;
 		XRHandSubsystem_t0EB20D332ADF52A334449A240A3FDD6844EEA92C* L_12 = L_11;
 		NullCheck(L_12);
@@ -2343,7 +2343,7 @@ IL_0009:
 		NullCheck(L_12);
 		L_12->___updatedHands = ((Action_3_t7D778238CD0A45B8368B3EAC4062AD2D477E1997*)Castclass((RuntimeObject*)L_15, Action_3_t7D778238CD0A45B8368B3EAC4062AD2D477E1997_il2cpp_TypeInfo_var));
 		Il2CppCodeGenWriteBarrier((void**)(&L_12->___updatedHands), (void*)((Action_3_t7D778238CD0A45B8368B3EAC4062AD2D477E1997*)Castclass((RuntimeObject*)L_15, Action_3_t7D778238CD0A45B8368B3EAC4062AD2D477E1997_il2cpp_TypeInfo_var)));
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:228>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:228>
 		return;
 	}
 }
@@ -2361,7 +2361,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void HandVisualizer_UnsubscribeHandSubsystem_
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:232>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:232>
 		XRHandSubsystem_t0EB20D332ADF52A334449A240A3FDD6844EEA92C* L_0 = __this->___m_Subsystem;
 		if (L_0)
 		{
@@ -2369,13 +2369,13 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void HandVisualizer_UnsubscribeHandSubsystem_
 		}
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:233>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:233>
 		return;
 	}
 
 IL_0009:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:235>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:235>
 		XRHandSubsystem_t0EB20D332ADF52A334449A240A3FDD6844EEA92C* L_1 = __this->___m_Subsystem;
 		XRHandSubsystem_t0EB20D332ADF52A334449A240A3FDD6844EEA92C* L_2 = L_1;
 		NullCheck(L_2);
@@ -2387,7 +2387,7 @@ IL_0009:
 		NullCheck(L_2);
 		L_2->___trackingAcquired = ((Action_1_tEACFE9A51FCD1C277802D684B9FCD40906039752*)Castclass((RuntimeObject*)L_5, Action_1_tEACFE9A51FCD1C277802D684B9FCD40906039752_il2cpp_TypeInfo_var));
 		Il2CppCodeGenWriteBarrier((void**)(&L_2->___trackingAcquired), (void*)((Action_1_tEACFE9A51FCD1C277802D684B9FCD40906039752*)Castclass((RuntimeObject*)L_5, Action_1_tEACFE9A51FCD1C277802D684B9FCD40906039752_il2cpp_TypeInfo_var)));
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:236>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:236>
 		XRHandSubsystem_t0EB20D332ADF52A334449A240A3FDD6844EEA92C* L_6 = __this->___m_Subsystem;
 		XRHandSubsystem_t0EB20D332ADF52A334449A240A3FDD6844EEA92C* L_7 = L_6;
 		NullCheck(L_7);
@@ -2399,7 +2399,7 @@ IL_0009:
 		NullCheck(L_7);
 		L_7->___trackingLost = ((Action_1_tEACFE9A51FCD1C277802D684B9FCD40906039752*)Castclass((RuntimeObject*)L_10, Action_1_tEACFE9A51FCD1C277802D684B9FCD40906039752_il2cpp_TypeInfo_var));
 		Il2CppCodeGenWriteBarrier((void**)(&L_7->___trackingLost), (void*)((Action_1_tEACFE9A51FCD1C277802D684B9FCD40906039752*)Castclass((RuntimeObject*)L_10, Action_1_tEACFE9A51FCD1C277802D684B9FCD40906039752_il2cpp_TypeInfo_var)));
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:237>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:237>
 		XRHandSubsystem_t0EB20D332ADF52A334449A240A3FDD6844EEA92C* L_11 = __this->___m_Subsystem;
 		XRHandSubsystem_t0EB20D332ADF52A334449A240A3FDD6844EEA92C* L_12 = L_11;
 		NullCheck(L_12);
@@ -2411,7 +2411,7 @@ IL_0009:
 		NullCheck(L_12);
 		L_12->___updatedHands = ((Action_3_t7D778238CD0A45B8368B3EAC4062AD2D477E1997*)Castclass((RuntimeObject*)L_15, Action_3_t7D778238CD0A45B8368B3EAC4062AD2D477E1997_il2cpp_TypeInfo_var));
 		Il2CppCodeGenWriteBarrier((void**)(&L_12->___updatedHands), (void*)((Action_3_t7D778238CD0A45B8368B3EAC4062AD2D477E1997*)Castclass((RuntimeObject*)L_15, Action_3_t7D778238CD0A45B8368B3EAC4062AD2D477E1997_il2cpp_TypeInfo_var)));
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:238>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:238>
 		return;
 	}
 }
@@ -2423,7 +2423,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void HandVisualizer_UpdateRenderingVisibility
 	int32_t G_B5_0 = 0;
 	HandGameObjects_t0E397BC6AC8B28ACD270CF428DF64801DF1AD26F* G_B5_1 = NULL;
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:242>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:242>
 		HandGameObjects_t0E397BC6AC8B28ACD270CF428DF64801DF1AD26F* L_0 = ___0_handGameObjects;
 		if (L_0)
 		{
@@ -2431,24 +2431,24 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void HandVisualizer_UpdateRenderingVisibility
 		}
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:243>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:243>
 		return;
 	}
 
 IL_0004:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:245>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:245>
 		HandGameObjects_t0E397BC6AC8B28ACD270CF428DF64801DF1AD26F* L_1 = ___0_handGameObjects;
 		bool L_2 = __this->___m_DrawMeshes;
 		NullCheck(L_1);
 		HandGameObjects_ToggleDrawMesh_m3EC9E4B67721C48B59B52B1A6E146E7AF07BF259(L_1, L_2, NULL);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:246>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:246>
 		HandGameObjects_t0E397BC6AC8B28ACD270CF428DF64801DF1AD26F* L_3 = ___0_handGameObjects;
 		bool L_4 = __this->___m_DebugDrawJoints;
 		bool L_5 = ___1_isTracked;
 		NullCheck(L_3);
 		HandGameObjects_ToggleDebugDrawJoints_m5897D801494BFAAA40B96964AE976A7F71214752(L_3, (bool)((int32_t)((int32_t)L_4&(int32_t)L_5)), NULL);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:247>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:247>
 		HandGameObjects_t0E397BC6AC8B28ACD270CF428DF64801DF1AD26F* L_6 = ___0_handGameObjects;
 		bool L_7 = ___1_isTracked;
 		if (L_7)
@@ -2475,7 +2475,7 @@ IL_002b:
 	{
 		NullCheck(G_B5_1);
 		HandGameObjects_SetVelocityType_m13CFD04600696F6E2F6F158999D472867AE31C3C(G_B5_1, G_B5_0, NULL);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:248>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:248>
 		return;
 	}
 }
@@ -2484,7 +2484,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void HandVisualizer_OnTrackingAcquired_m0171A
 {
 	int32_t V_0 = 0;
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:252>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:252>
 		int32_t L_0;
 		L_0 = XRHand_get_handedness_m87563F81CAF693404C49463EAC73DA29D517F752_inline((&___0_hand), NULL);
 		V_0 = L_0;
@@ -2507,19 +2507,19 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void HandVisualizer_OnTrackingAcquired_m0171A
 
 IL_0011:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:255>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:255>
 		HandGameObjects_t0E397BC6AC8B28ACD270CF428DF64801DF1AD26F* L_3 = __this->___m_LeftHandGameObjects;
 		HandVisualizer_UpdateRenderingVisibility_mFBC70B71322E6C97E3882E9DCE6E1F616CDC9BD1(__this, L_3, (bool)1, NULL);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:256>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:256>
 		return;
 	}
 
 IL_001f:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:259>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:259>
 		HandGameObjects_t0E397BC6AC8B28ACD270CF428DF64801DF1AD26F* L_4 = __this->___m_RightHandGameObjects;
 		HandVisualizer_UpdateRenderingVisibility_mFBC70B71322E6C97E3882E9DCE6E1F616CDC9BD1(__this, L_4, (bool)1, NULL);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:262>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:262>
 		return;
 	}
 }
@@ -2528,7 +2528,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void HandVisualizer_OnTrackingLost_m1AE1681D3
 {
 	int32_t V_0 = 0;
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:266>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:266>
 		int32_t L_0;
 		L_0 = XRHand_get_handedness_m87563F81CAF693404C49463EAC73DA29D517F752_inline((&___0_hand), NULL);
 		V_0 = L_0;
@@ -2551,19 +2551,19 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void HandVisualizer_OnTrackingLost_m1AE1681D3
 
 IL_0011:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:269>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:269>
 		HandGameObjects_t0E397BC6AC8B28ACD270CF428DF64801DF1AD26F* L_3 = __this->___m_LeftHandGameObjects;
 		HandVisualizer_UpdateRenderingVisibility_mFBC70B71322E6C97E3882E9DCE6E1F616CDC9BD1(__this, L_3, (bool)0, NULL);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:270>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:270>
 		return;
 	}
 
 IL_001f:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:273>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:273>
 		HandGameObjects_t0E397BC6AC8B28ACD270CF428DF64801DF1AD26F* L_4 = __this->___m_RightHandGameObjects;
 		HandVisualizer_UpdateRenderingVisibility_mFBC70B71322E6C97E3882E9DCE6E1F616CDC9BD1(__this, L_4, (bool)0, NULL);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:276>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:276>
 		return;
 	}
 }
@@ -2583,7 +2583,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void HandVisualizer_OnUpdatedHands_m2609041B9
 	int32_t G_B13_0 = 0;
 	HandGameObjects_t0E397BC6AC8B28ACD270CF428DF64801DF1AD26F* G_B13_1 = NULL;
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:283>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:283>
 		int32_t L_0 = ___2_updateType;
 		if (L_0)
 		{
@@ -2591,13 +2591,13 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void HandVisualizer_OnUpdatedHands_m2609041B9
 		}
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:284>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:284>
 		return;
 	}
 
 IL_0004:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:286>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:286>
 		XRHandSubsystem_t0EB20D332ADF52A334449A240A3FDD6844EEA92C* L_1 = ___0_subsystem;
 		NullCheck(L_1);
 		XRHand_t42370E2B19E7613E9C8FFA4A4B749C91FF021471 L_2;
@@ -2606,7 +2606,7 @@ IL_0004:
 		bool L_3;
 		L_3 = XRHand_get_isTracked_mDFC9D4FDE271E2DC90D5459B1A6EA304F97B7428_inline((&V_2), NULL);
 		V_0 = L_3;
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:287>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:287>
 		XRHandSubsystem_t0EB20D332ADF52A334449A240A3FDD6844EEA92C* L_4 = ___0_subsystem;
 		NullCheck(L_4);
 		XRHand_t42370E2B19E7613E9C8FFA4A4B749C91FF021471 L_5;
@@ -2615,7 +2615,7 @@ IL_0004:
 		bool L_6;
 		L_6 = XRHand_get_isTracked_mDFC9D4FDE271E2DC90D5459B1A6EA304F97B7428_inline((&V_2), NULL);
 		V_1 = L_6;
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:289>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:289>
 		bool L_7 = __this->___m_PreviousDrawMeshes;
 		bool L_8 = __this->___m_DrawMeshes;
 		if ((((int32_t)L_7) == ((int32_t)L_8)))
@@ -2624,24 +2624,24 @@ IL_0004:
 		}
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:291>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:291>
 		HandGameObjects_t0E397BC6AC8B28ACD270CF428DF64801DF1AD26F* L_9 = __this->___m_LeftHandGameObjects;
 		bool L_10 = __this->___m_DrawMeshes;
 		NullCheck(L_9);
 		HandGameObjects_ToggleDrawMesh_m3EC9E4B67721C48B59B52B1A6E146E7AF07BF259(L_9, L_10, NULL);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:292>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:292>
 		HandGameObjects_t0E397BC6AC8B28ACD270CF428DF64801DF1AD26F* L_11 = __this->___m_RightHandGameObjects;
 		bool L_12 = __this->___m_DrawMeshes;
 		NullCheck(L_11);
 		HandGameObjects_ToggleDrawMesh_m3EC9E4B67721C48B59B52B1A6E146E7AF07BF259(L_11, L_12, NULL);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:293>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:293>
 		bool L_13 = __this->___m_DrawMeshes;
 		__this->___m_PreviousDrawMeshes = L_13;
 	}
 
 IL_005e:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:296>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:296>
 		bool L_14 = __this->___m_PreviousDebugDrawJoints;
 		bool L_15 = __this->___m_DebugDrawJoints;
 		if ((((int32_t)L_14) == ((int32_t)L_15)))
@@ -2650,26 +2650,26 @@ IL_005e:
 		}
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:298>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:298>
 		HandGameObjects_t0E397BC6AC8B28ACD270CF428DF64801DF1AD26F* L_16 = __this->___m_LeftHandGameObjects;
 		bool L_17 = __this->___m_DebugDrawJoints;
 		bool L_18 = V_0;
 		NullCheck(L_16);
 		HandGameObjects_ToggleDebugDrawJoints_m5897D801494BFAAA40B96964AE976A7F71214752(L_16, (bool)((int32_t)((int32_t)L_17&(int32_t)L_18)), NULL);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:299>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:299>
 		HandGameObjects_t0E397BC6AC8B28ACD270CF428DF64801DF1AD26F* L_19 = __this->___m_RightHandGameObjects;
 		bool L_20 = __this->___m_DebugDrawJoints;
 		bool L_21 = V_1;
 		NullCheck(L_19);
 		HandGameObjects_ToggleDebugDrawJoints_m5897D801494BFAAA40B96964AE976A7F71214752(L_19, (bool)((int32_t)((int32_t)L_20&(int32_t)L_21)), NULL);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:300>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:300>
 		bool L_22 = __this->___m_DebugDrawJoints;
 		__this->___m_PreviousDebugDrawJoints = L_22;
 	}
 
 IL_009e:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:303>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:303>
 		int32_t L_23 = __this->___m_PreviousVelocityType;
 		int32_t L_24 = __this->___m_VelocityType;
 		if ((((int32_t)L_23) == ((int32_t)L_24)))
@@ -2678,7 +2678,7 @@ IL_009e:
 		}
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:305>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:305>
 		HandGameObjects_t0E397BC6AC8B28ACD270CF428DF64801DF1AD26F* L_25 = __this->___m_LeftHandGameObjects;
 		bool L_26 = V_0;
 		if (L_26)
@@ -2705,7 +2705,7 @@ IL_00be:
 	{
 		NullCheck(G_B10_1);
 		HandGameObjects_SetVelocityType_m13CFD04600696F6E2F6F158999D472867AE31C3C(G_B10_1, G_B10_0, NULL);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:306>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:306>
 		HandGameObjects_t0E397BC6AC8B28ACD270CF428DF64801DF1AD26F* L_28 = __this->___m_RightHandGameObjects;
 		bool L_29 = V_1;
 		if (L_29)
@@ -2732,18 +2732,18 @@ IL_00d5:
 	{
 		NullCheck(G_B13_1);
 		HandGameObjects_SetVelocityType_m13CFD04600696F6E2F6F158999D472867AE31C3C(G_B13_1, G_B13_0, NULL);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:307>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:307>
 		int32_t L_31 = __this->___m_VelocityType;
 		__this->___m_PreviousVelocityType = L_31;
 	}
 
 IL_00e6:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:310>
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:311>
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:312>
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:313>
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:314>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:310>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:311>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:312>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:313>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:314>
 		HandGameObjects_t0E397BC6AC8B28ACD270CF428DF64801DF1AD26F* L_32 = __this->___m_LeftHandGameObjects;
 		XRHandSubsystem_t0EB20D332ADF52A334449A240A3FDD6844EEA92C* L_33 = ___0_subsystem;
 		NullCheck(L_33);
@@ -2754,11 +2754,11 @@ IL_00e6:
 		int32_t L_37 = __this->___m_VelocityType;
 		NullCheck(L_32);
 		HandGameObjects_UpdateJoints_m3CB0C822FD81C182BD37B90C2753724285A0BF2D(L_32, L_34, (bool)((!(((uint32_t)((int32_t)((int32_t)L_35&2))) <= ((uint32_t)0)))? 1 : 0), L_36, L_37, NULL);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:316>
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:317>
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:318>
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:319>
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:320>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:316>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:317>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:318>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:319>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:320>
 		HandGameObjects_t0E397BC6AC8B28ACD270CF428DF64801DF1AD26F* L_38 = __this->___m_RightHandGameObjects;
 		XRHandSubsystem_t0EB20D332ADF52A334449A240A3FDD6844EEA92C* L_39 = ___0_subsystem;
 		NullCheck(L_39);
@@ -2769,7 +2769,7 @@ IL_00e6:
 		int32_t L_43 = __this->___m_VelocityType;
 		NullCheck(L_38);
 		HandGameObjects_UpdateJoints_m3CB0C822FD81C182BD37B90C2753724285A0BF2D(L_38, L_40, (bool)((!(((uint32_t)((int32_t)((int32_t)L_41&8))) <= ((uint32_t)0)))? 1 : 0), L_42, L_43, NULL);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:321>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:321>
 		return;
 	}
 }
@@ -2793,7 +2793,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void HandVisualizer__cctor_m79DBF171BAC872350
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:103>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:103>
 		List_1_tE4111BEC044D13259EFD4EC5907636C855887179* L_0 = (List_1_tE4111BEC044D13259EFD4EC5907636C855887179*)il2cpp_codegen_object_new(List_1_tE4111BEC044D13259EFD4EC5907636C855887179_il2cpp_TypeInfo_var);
 		List_1__ctor_m9991CB9E0E4608CAE947384283EE27BCF3DAC2D4(L_0, List_1__ctor_m9991CB9E0E4608CAE947384283EE27BCF3DAC2D4_RuntimeMethod_var);
 		((HandVisualizer_tA85C45A230DA7AFCC9377FE418CDA2F75AFE49B6_StaticFields*)il2cpp_codegen_static_fields_for(HandVisualizer_tA85C45A230DA7AFCC9377FE418CDA2F75AFE49B6_il2cpp_TypeInfo_var))->___s_SubsystemsReuse = L_0;
@@ -2868,25 +2868,25 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void HandGameObjects__ctor_mE5FE6A2F0C183C672
 	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* G_B3_0 = NULL;
 	HandGameObjects_t0E397BC6AC8B28ACD270CF428DF64801DF1AD26F* G_B3_1 = NULL;
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:328>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:328>
 		int32_t L_0;
 		L_0 = XRHandJointIDUtility_ToIndex_mBF5EC77C077B14029F71E64F112F37544BFD9E02(((int32_t)27), NULL);
 		GameObjectU5BU5D_tFF67550DFCE87096D7A3734EA15B75896B2722CF* L_1 = (GameObjectU5BU5D_tFF67550DFCE87096D7A3734EA15B75896B2722CF*)(GameObjectU5BU5D_tFF67550DFCE87096D7A3734EA15B75896B2722CF*)SZArrayNew(GameObjectU5BU5D_tFF67550DFCE87096D7A3734EA15B75896B2722CF_il2cpp_TypeInfo_var, (uint32_t)L_0);
 		__this->___m_DrawJoints = L_1;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___m_DrawJoints), (void*)L_1);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:329>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:329>
 		int32_t L_2;
 		L_2 = XRHandJointIDUtility_ToIndex_mBF5EC77C077B14029F71E64F112F37544BFD9E02(((int32_t)27), NULL);
 		GameObjectU5BU5D_tFF67550DFCE87096D7A3734EA15B75896B2722CF* L_3 = (GameObjectU5BU5D_tFF67550DFCE87096D7A3734EA15B75896B2722CF*)(GameObjectU5BU5D_tFF67550DFCE87096D7A3734EA15B75896B2722CF*)SZArrayNew(GameObjectU5BU5D_tFF67550DFCE87096D7A3734EA15B75896B2722CF_il2cpp_TypeInfo_var, (uint32_t)L_2);
 		__this->___m_VelocityParents = L_3;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___m_VelocityParents), (void*)L_3);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:330>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:330>
 		int32_t L_4;
 		L_4 = XRHandJointIDUtility_ToIndex_mBF5EC77C077B14029F71E64F112F37544BFD9E02(((int32_t)27), NULL);
 		LineRendererU5BU5D_t5AA0E11EC99A18A11BCCCABDF088C854E50D394A* L_5 = (LineRendererU5BU5D_t5AA0E11EC99A18A11BCCCABDF088C854E50D394A*)(LineRendererU5BU5D_t5AA0E11EC99A18A11BCCCABDF088C854E50D394A*)SZArrayNew(LineRendererU5BU5D_t5AA0E11EC99A18A11BCCCABDF088C854E50D394A_il2cpp_TypeInfo_var, (uint32_t)L_4);
 		__this->___m_Lines = L_5;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___m_Lines), (void*)L_5);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:331>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:331>
 		int32_t L_6;
 		L_6 = XRHandJointIDUtility_ToIndex_mBF5EC77C077B14029F71E64F112F37544BFD9E02(((int32_t)27), NULL);
 		JointVisualizerU5BU5D_tBE9067F8E5E225E6A76C5027CD08047938471342* L_7 = (JointVisualizerU5BU5D_tBE9067F8E5E225E6A76C5027CD08047938471342*)(JointVisualizerU5BU5D_tBE9067F8E5E225E6A76C5027CD08047938471342*)SZArrayNew(JointVisualizerU5BU5D_tBE9067F8E5E225E6A76C5027CD08047938471342_il2cpp_TypeInfo_var, (uint32_t)L_6);
@@ -2898,17 +2898,17 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void HandGameObjects__ctor_mE5FE6A2F0C183C672
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_9 = ___5_velocityPrefab;
 		(&V_0)->___velocityPrefab = L_9;
 		Il2CppCodeGenWriteBarrier((void**)(&(&V_0)->___velocityPrefab), (void*)L_9);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:337>
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:338>
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:339>
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:340>
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:341>
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:342>
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:343>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:337>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:338>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:339>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:340>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:341>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:342>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:343>
 		Object__ctor_mE837C6B9FA8C6D5D109F4B2EC885D79919AC0EA2(__this, NULL);
 		(&V_0)->___U3CU3E4__this = __this;
 		Il2CppCodeGenWriteBarrier((void**)(&(&V_0)->___U3CU3E4__this), (void*)__this);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:367>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:367>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_10 = ___2_meshPrefab;
 		NullCheck(L_10);
 		Scene_tA1DC762B79745EB5140F054C884855B922318356 L_11;
@@ -2917,7 +2917,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void HandGameObjects__ctor_mE5FE6A2F0C183C672
 		bool L_12;
 		L_12 = Scene_IsValid_m0D5200731D3E26ECBBB55803F9242965A14A4599((&V_4), NULL);
 		V_1 = L_12;
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:368>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:368>
 		bool L_13 = V_1;
 		if (L_13)
 		{
@@ -2949,11 +2949,11 @@ IL_0086:
 		NullCheck(G_B3_1);
 		G_B3_1->___m_HandRoot = G_B3_0;
 		Il2CppCodeGenWriteBarrier((void**)(&G_B3_1->___m_HandRoot), (void*)G_B3_0);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:369>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:369>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_18 = __this->___m_HandRoot;
 		NullCheck(L_18);
 		GameObject_SetActive_m638E92E1E75E519E5B24CF150B08CA8E0CDFAB92(L_18, (bool)0, NULL);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:371>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:371>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_19 = __this->___m_HandRoot;
 		NullCheck(L_19);
 		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_20;
@@ -2962,7 +2962,7 @@ IL_0086:
 		L_21 = Vector3_get_zero_m0C1249C3F25B1C70EAD3CC8B31259975A457AE39_inline(NULL);
 		NullCheck(L_20);
 		Transform_set_localPosition_mDE1C997F7D79C0885210B7732B4BA50EE7D73134(L_20, L_21, NULL);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:372>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:372>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_22 = __this->___m_HandRoot;
 		NullCheck(L_22);
 		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_23;
@@ -2971,13 +2971,13 @@ IL_0086:
 		L_24 = Quaternion_get_identity_m7E701AE095ED10FD5EA0B50ABCFDE2EEFF2173A5_inline(NULL);
 		NullCheck(L_23);
 		Transform_set_localRotation_mAB4A011D134BA58AB780BECC0025CA65F16185FA(L_23, L_24, NULL);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:374>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:374>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_25 = __this->___m_HandRoot;
 		NullCheck(L_25);
 		XRHandTrackingEvents_tF1DA1153E15422968E62D8B84B99D5C00018574C* L_26;
 		L_26 = GameObject_GetComponent_TisXRHandTrackingEvents_tF1DA1153E15422968E62D8B84B99D5C00018574C_m6497F69000D8E4A8EB16945591E0EA5C21D1CA2A(L_25, GameObject_GetComponent_TisXRHandTrackingEvents_tF1DA1153E15422968E62D8B84B99D5C00018574C_m6497F69000D8E4A8EB16945591E0EA5C21D1CA2A_RuntimeMethod_var);
 		V_2 = L_26;
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:375>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:375>
 		XRHandTrackingEvents_tF1DA1153E15422968E62D8B84B99D5C00018574C* L_27 = V_2;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_28;
@@ -2988,17 +2988,17 @@ IL_0086:
 		}
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:377>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:377>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_29 = __this->___m_HandRoot;
 		NullCheck(L_29);
 		XRHandTrackingEvents_tF1DA1153E15422968E62D8B84B99D5C00018574C* L_30;
 		L_30 = GameObject_AddComponent_TisXRHandTrackingEvents_tF1DA1153E15422968E62D8B84B99D5C00018574C_mADC3C017664513070D3093477B302FC7198E8F2A(L_29, GameObject_AddComponent_TisXRHandTrackingEvents_tF1DA1153E15422968E62D8B84B99D5C00018574C_mADC3C017664513070D3093477B302FC7198E8F2A_RuntimeMethod_var);
 		V_2 = L_30;
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:378>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:378>
 		XRHandTrackingEvents_tF1DA1153E15422968E62D8B84B99D5C00018574C* L_31 = V_2;
 		NullCheck(L_31);
 		XRHandTrackingEvents_set_updateType_m7AD23779101D561EAEC21BA41FD45AF39679DFA7_inline(L_31, 1, NULL);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:379>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:379>
 		XRHandTrackingEvents_tF1DA1153E15422968E62D8B84B99D5C00018574C* L_32 = V_2;
 		int32_t L_33 = ___0_handedness;
 		NullCheck(L_32);
@@ -3007,14 +3007,14 @@ IL_0086:
 
 IL_00f0:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:382>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:382>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_34 = __this->___m_HandRoot;
 		NullCheck(L_34);
 		XRHandMeshController_t670ADAE830016D758ED74153F39334564CD3D687* L_35;
 		L_35 = GameObject_GetComponent_TisXRHandMeshController_t670ADAE830016D758ED74153F39334564CD3D687_mFAD7BA6D178A79C7E03843EA1B08D4CE16E248B2(L_34, GameObject_GetComponent_TisXRHandMeshController_t670ADAE830016D758ED74153F39334564CD3D687_mFAD7BA6D178A79C7E03843EA1B08D4CE16E248B2_RuntimeMethod_var);
 		__this->___m_MeshController = L_35;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___m_MeshController), (void*)L_35);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:383>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:383>
 		XRHandMeshController_t670ADAE830016D758ED74153F39334564CD3D687* L_36 = __this->___m_MeshController;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_37;
@@ -3025,21 +3025,21 @@ IL_00f0:
 		}
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:385>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:385>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_38 = __this->___m_HandRoot;
 		NullCheck(L_38);
 		XRHandMeshController_t670ADAE830016D758ED74153F39334564CD3D687* L_39;
 		L_39 = GameObject_AddComponent_TisXRHandMeshController_t670ADAE830016D758ED74153F39334564CD3D687_m0EF34ABB02714F807910BD0C78AB85F2D25D023D(L_38, GameObject_AddComponent_TisXRHandMeshController_t670ADAE830016D758ED74153F39334564CD3D687_m0EF34ABB02714F807910BD0C78AB85F2D25D023D_RuntimeMethod_var);
 		__this->___m_MeshController = L_39;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___m_MeshController), (void*)L_39);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:386>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:386>
 		V_5 = 0;
 		goto IL_0153;
 	}
 
 IL_0125:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:388>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:388>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_40 = __this->___m_HandRoot;
 		NullCheck(L_40);
 		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_41;
@@ -3048,7 +3048,7 @@ IL_0125:
 		NullCheck(L_41);
 		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_43;
 		L_43 = Transform_GetChild_mE686DF0C7AAC1F7AEF356967B1C04D8B8E240EAF(L_41, L_42, NULL);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:389>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:389>
 		NullCheck(L_43);
 		bool L_44;
 		L_44 = Component_TryGetComponent_TisSkinnedMeshRenderer_t020C4E8648EA1C4C6BA5C41502919B387E7E1C2E_m95CEC209AB48BA4465F3CB2C9453CCA6322D2A63(L_43, (&V_6), Component_TryGetComponent_TisSkinnedMeshRenderer_t020C4E8648EA1C4C6BA5C41502919B387E7E1C2E_m95CEC209AB48BA4465F3CB2C9453CCA6322D2A63_RuntimeMethod_var);
@@ -3058,7 +3058,7 @@ IL_0125:
 		}
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:390>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:390>
 		XRHandMeshController_t670ADAE830016D758ED74153F39334564CD3D687* L_45 = __this->___m_MeshController;
 		SkinnedMeshRenderer_t020C4E8648EA1C4C6BA5C41502919B387E7E1C2E* L_46 = V_6;
 		NullCheck(L_45);
@@ -3067,14 +3067,14 @@ IL_0125:
 
 IL_014d:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:386>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:386>
 		int32_t L_47 = V_5;
 		V_5 = ((int32_t)il2cpp_codegen_add(L_47, 1));
 	}
 
 IL_0153:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:386>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:386>
 		int32_t L_48 = V_5;
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_49 = __this->___m_HandRoot;
 		NullCheck(L_49);
@@ -3089,7 +3089,7 @@ IL_0153:
 		}
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:393>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:393>
 		XRHandMeshController_t670ADAE830016D758ED74153F39334564CD3D687* L_52 = __this->___m_MeshController;
 		XRHandTrackingEvents_tF1DA1153E15422968E62D8B84B99D5C00018574C* L_53 = V_2;
 		NullCheck(L_52);
@@ -3098,7 +3098,7 @@ IL_0153:
 
 IL_0173:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:396>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:396>
 		Material_t18053F08F347D0DCA5E1140EC7EC4533DD8A14E3* L_54 = ___3_meshMaterial;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_55;
@@ -3109,7 +3109,7 @@ IL_0173:
 		}
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:398>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:398>
 		XRHandMeshController_t670ADAE830016D758ED74153F39334564CD3D687* L_56 = __this->___m_MeshController;
 		NullCheck(L_56);
 		Renderer_t320575F223BCB177A982E5DDB5DB19FAA89E7FBF* L_57;
@@ -3121,13 +3121,13 @@ IL_0173:
 
 IL_018f:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:401>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:401>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_59 = __this->___m_HandRoot;
 		NullCheck(L_59);
 		XRHandSkeletonDriver_t549956F17FD2C98A8FC1C9DF04ED4218610321A9* L_60;
 		L_60 = GameObject_GetComponent_TisXRHandSkeletonDriver_t549956F17FD2C98A8FC1C9DF04ED4218610321A9_m3BF356CDEFCB41719801691285453F0D76FB5251(L_59, GameObject_GetComponent_TisXRHandSkeletonDriver_t549956F17FD2C98A8FC1C9DF04ED4218610321A9_m3BF356CDEFCB41719801691285453F0D76FB5251_RuntimeMethod_var);
 		V_3 = L_60;
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:402>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:402>
 		XRHandSkeletonDriver_t549956F17FD2C98A8FC1C9DF04ED4218610321A9* L_61 = V_3;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_62;
@@ -3138,28 +3138,28 @@ IL_018f:
 		}
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:404>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:404>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_63 = __this->___m_HandRoot;
 		NullCheck(L_63);
 		XRHandSkeletonDriver_t549956F17FD2C98A8FC1C9DF04ED4218610321A9* L_64;
 		L_64 = GameObject_AddComponent_TisXRHandSkeletonDriver_t549956F17FD2C98A8FC1C9DF04ED4218610321A9_m8D2D63A6AD343A90A9DDF71D360B7AD36BC3B4F2(L_63, GameObject_AddComponent_TisXRHandSkeletonDriver_t549956F17FD2C98A8FC1C9DF04ED4218610321A9_m8D2D63A6AD343A90A9DDF71D360B7AD36BC3B4F2_RuntimeMethod_var);
 		V_3 = L_64;
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:405>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:405>
 		XRHandSkeletonDriver_t549956F17FD2C98A8FC1C9DF04ED4218610321A9* L_65 = V_3;
 		List_1_t6374200280C9D4D9E197123BCF3B71CB8726B89F* L_66 = (List_1_t6374200280C9D4D9E197123BCF3B71CB8726B89F*)il2cpp_codegen_object_new(List_1_t6374200280C9D4D9E197123BCF3B71CB8726B89F_il2cpp_TypeInfo_var);
 		List_1__ctor_mF9E011AC0B45B83F28F733B52084915C67A264CD(L_66, List_1__ctor_mF9E011AC0B45B83F28F733B52084915C67A264CD_RuntimeMethod_var);
 		NullCheck(L_65);
 		XRHandSkeletonDriver_set_jointTransformReferences_m1498B75A0BDB9AF2603CF62C118DE8FFA84E9E36(L_65, L_66, NULL);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:406>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:406>
 		V_7 = (Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1*)NULL;
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:407>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:407>
 		V_8 = 0;
 		goto IL_0207;
 	}
 
 IL_01c6:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:409>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:409>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_67 = __this->___m_HandRoot;
 		NullCheck(L_67);
 		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_68;
@@ -3169,7 +3169,7 @@ IL_01c6:
 		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_70;
 		L_70 = Transform_GetChild_mE686DF0C7AAC1F7AEF356967B1C04D8B8E240EAF(L_68, L_69, NULL);
 		V_9 = L_70;
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:410>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:410>
 		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_71 = V_9;
 		NullCheck(L_71);
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_72;
@@ -3190,21 +3190,21 @@ IL_01c6:
 		}
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:411>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:411>
 		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_77 = V_9;
 		V_7 = L_77;
 	}
 
 IL_0201:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:407>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:407>
 		int32_t L_78 = V_8;
 		V_8 = ((int32_t)il2cpp_codegen_add(L_78, 1));
 	}
 
 IL_0207:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:407>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:407>
 		int32_t L_79 = V_8;
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_80 = __this->___m_HandRoot;
 		NullCheck(L_80);
@@ -3219,19 +3219,19 @@ IL_0207:
 		}
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:414>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:414>
 		XRHandSkeletonDriver_t549956F17FD2C98A8FC1C9DF04ED4218610321A9* L_83 = V_3;
 		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_84 = V_7;
 		NullCheck(L_83);
 		XRHandSkeletonDriver_set_rootTransform_mE5EA2C57F67949501CEC763615F2CFC3309BA34D(L_83, L_84, NULL);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:415>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:415>
 		XRHandSkeletonDriver_t549956F17FD2C98A8FC1C9DF04ED4218610321A9* L_85 = V_3;
 		XRHandSkeletonDriverUtility_FindJointsFromRoot_mF7F7E290233CB82676A5CEE92A8BBE25E320359D(L_85, (List_1_tF470A3BE5C1B5B68E1325EF3F109D172E60BD7CD*)NULL, NULL);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:416>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:416>
 		XRHandSkeletonDriver_t549956F17FD2C98A8FC1C9DF04ED4218610321A9* L_86 = V_3;
 		NullCheck(L_86);
 		XRHandSkeletonDriver_InitializeFromSerializedReferences_m1CADD44CEE67DBFF31D4C3D11CFC5C103573A314(L_86, NULL);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:417>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:417>
 		XRHandSkeletonDriver_t549956F17FD2C98A8FC1C9DF04ED4218610321A9* L_87 = V_3;
 		XRHandTrackingEvents_tF1DA1153E15422968E62D8B84B99D5C00018574C* L_88 = V_2;
 		NullCheck(L_87);
@@ -3240,12 +3240,12 @@ IL_0207:
 
 IL_0237:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:420>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:420>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_89 = (GameObject_t76FEDD663AB33C991A9C9A23129337651094216F*)il2cpp_codegen_object_new(GameObject_t76FEDD663AB33C991A9C9A23129337651094216F_il2cpp_TypeInfo_var);
 		GameObject__ctor_m7D0340DE160786E6EFA8DABD39EC3B694DA30AAD(L_89, NULL);
 		__this->___m_DrawJointsParent = L_89;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___m_DrawJointsParent), (void*)L_89);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:421>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:421>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_90 = __this->___m_DrawJointsParent;
 		NullCheck(L_90);
 		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_91;
@@ -3253,7 +3253,7 @@ IL_0237:
 		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_92 = ___1_parent;
 		NullCheck(L_91);
 		Transform_set_parent_m9BD5E563B539DD5BEC342736B03F97B38A243234(L_91, L_92, NULL);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:422>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:422>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_93 = __this->___m_DrawJointsParent;
 		NullCheck(L_93);
 		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_94;
@@ -3262,7 +3262,7 @@ IL_0237:
 		L_95 = Vector3_get_zero_m0C1249C3F25B1C70EAD3CC8B31259975A457AE39_inline(NULL);
 		NullCheck(L_94);
 		Transform_set_localPosition_mDE1C997F7D79C0885210B7732B4BA50EE7D73134(L_94, L_95, NULL);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:423>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:423>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_96 = __this->___m_DrawJointsParent;
 		NullCheck(L_96);
 		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_97;
@@ -3271,7 +3271,7 @@ IL_0237:
 		L_98 = Quaternion_get_identity_m7E701AE095ED10FD5EA0B50ABCFDE2EEFF2173A5_inline(NULL);
 		NullCheck(L_97);
 		Transform_set_localRotation_mAB4A011D134BA58AB780BECC0025CA65F16185FA(L_97, L_98, NULL);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:424>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:424>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_99 = __this->___m_DrawJointsParent;
 		Il2CppFakeBox<int32_t> L_100(Handedness_tC87DA4E9D99745447BF40B631E8B479E32D8E37F_il2cpp_TypeInfo_var, (&___0_handedness));
 		String_t* L_101;
@@ -3280,14 +3280,14 @@ IL_0237:
 		L_102 = String_Concat_m9E3155FB84015C823606188F53B47CB44C444991(L_101, _stringLiteral4A4955D176516025430352DFFE6DF5974DEB47AB, NULL);
 		NullCheck(L_99);
 		Object_set_name_mC79E6DC8FFD72479C90F0C4CC7F42A0FEAF5AE47(L_99, L_102, NULL);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:426>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:426>
 		V_11 = 0;
 		goto IL_02e2;
 	}
 
 IL_02a4:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:428>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:428>
 		XRHandSkeletonDriver_t549956F17FD2C98A8FC1C9DF04ED4218610321A9* L_103 = V_3;
 		NullCheck(L_103);
 		List_1_t6374200280C9D4D9E197123BCF3B71CB8726B89F* L_104;
@@ -3297,15 +3297,15 @@ IL_02a4:
 		JointToTransformReference_t5DC7424A5741B60B0DFA15056D7F7EBF38721202 L_106;
 		L_106 = List_1_get_Item_m86F4130198090303E1C3BF94F8DCDDB031FF0DDA(L_104, L_105, List_1_get_Item_m86F4130198090303E1C3BF94F8DCDDB031FF0DDA_RuntimeMethod_var);
 		V_12 = L_106;
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:429>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:429>
 		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_107;
 		L_107 = JointToTransformReference_get_jointTransform_m81EAC20A1665D7F6AA85653F77AFFD9E4980AC40_inline((&V_12), NULL);
 		V_13 = L_107;
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:430>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:430>
 		int32_t L_108;
 		L_108 = JointToTransformReference_get_xrHandJointID_m07248164E6B8E31BA297F25AFEBA64AF30F79BF4_inline((&V_12), NULL);
 		V_14 = L_108;
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:431>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:431>
 		int32_t L_109 = V_14;
 		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_110 = V_13;
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_111 = __this->___m_DrawJointsParent;
@@ -3313,14 +3313,14 @@ IL_02a4:
 		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_112;
 		L_112 = GameObject_get_transform_m0BC10ADFA1632166AE5544BDF9038A2650C2AE56(L_111, NULL);
 		HandGameObjects_U3C_ctorU3Eg__AssignJointU7C9_0_m7245539D5FC3F7CEBC5B6E4EBB30628DAA7DFE08(__this, L_109, L_110, L_112, (&V_0), NULL);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:426>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:426>
 		int32_t L_113 = V_11;
 		V_11 = ((int32_t)il2cpp_codegen_add(L_113, 1));
 	}
 
 IL_02e2:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:426>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:426>
 		int32_t L_114 = V_11;
 		XRHandSkeletonDriver_t549956F17FD2C98A8FC1C9DF04ED4218610321A9* L_115 = V_3;
 		NullCheck(L_115);
@@ -3335,11 +3335,11 @@ IL_02e2:
 		}
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:434>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:434>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_118 = __this->___m_HandRoot;
 		NullCheck(L_118);
 		GameObject_SetActive_m638E92E1E75E519E5B24CF150B08CA8E0CDFAB92(L_118, (bool)1, NULL);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:435>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:435>
 		return;
 	}
 }
@@ -3355,21 +3355,21 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void HandGameObjects_OnDestroy_mDC01BE3680763
 	int32_t V_0 = 0;
 	int32_t V_1 = 0;
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:439>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:439>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_0 = __this->___m_HandRoot;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		Object_Destroy_mE97D0A766419A81296E8D4E5C23D01D3FE91ACBB(L_0, NULL);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:440>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:440>
 		__this->___m_HandRoot = (GameObject_t76FEDD663AB33C991A9C9A23129337651094216F*)NULL;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___m_HandRoot), (void*)(GameObject_t76FEDD663AB33C991A9C9A23129337651094216F*)NULL);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:442>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:442>
 		V_0 = 0;
 		goto IL_0030;
 	}
 
 IL_0016:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:444>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:444>
 		GameObjectU5BU5D_tFF67550DFCE87096D7A3734EA15B75896B2722CF* L_1 = __this->___m_DrawJoints;
 		int32_t L_2 = V_0;
 		NullCheck(L_1);
@@ -3377,20 +3377,20 @@ IL_0016:
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_4 = (L_1)->GetAt(static_cast<il2cpp_array_size_t>(L_3));
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		Object_Destroy_mE97D0A766419A81296E8D4E5C23D01D3FE91ACBB(L_4, NULL);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:445>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:445>
 		GameObjectU5BU5D_tFF67550DFCE87096D7A3734EA15B75896B2722CF* L_5 = __this->___m_DrawJoints;
 		int32_t L_6 = V_0;
 		NullCheck(L_5);
 		ArrayElementTypeCheck (L_5, NULL);
 		(L_5)->SetAt(static_cast<il2cpp_array_size_t>(L_6), (GameObject_t76FEDD663AB33C991A9C9A23129337651094216F*)NULL);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:442>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:442>
 		int32_t L_7 = V_0;
 		V_0 = ((int32_t)il2cpp_codegen_add(L_7, 1));
 	}
 
 IL_0030:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:442>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:442>
 		int32_t L_8 = V_0;
 		GameObjectU5BU5D_tFF67550DFCE87096D7A3734EA15B75896B2722CF* L_9 = __this->___m_DrawJoints;
 		NullCheck(L_9);
@@ -3400,14 +3400,14 @@ IL_0030:
 		}
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:448>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:448>
 		V_1 = 0;
 		goto IL_0059;
 	}
 
 IL_003f:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:450>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:450>
 		GameObjectU5BU5D_tFF67550DFCE87096D7A3734EA15B75896B2722CF* L_10 = __this->___m_VelocityParents;
 		int32_t L_11 = V_1;
 		NullCheck(L_10);
@@ -3415,20 +3415,20 @@ IL_003f:
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_13 = (L_10)->GetAt(static_cast<il2cpp_array_size_t>(L_12));
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		Object_Destroy_mE97D0A766419A81296E8D4E5C23D01D3FE91ACBB(L_13, NULL);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:451>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:451>
 		GameObjectU5BU5D_tFF67550DFCE87096D7A3734EA15B75896B2722CF* L_14 = __this->___m_VelocityParents;
 		int32_t L_15 = V_1;
 		NullCheck(L_14);
 		ArrayElementTypeCheck (L_14, NULL);
 		(L_14)->SetAt(static_cast<il2cpp_array_size_t>(L_15), (GameObject_t76FEDD663AB33C991A9C9A23129337651094216F*)NULL);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:448>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:448>
 		int32_t L_16 = V_1;
 		V_1 = ((int32_t)il2cpp_codegen_add(L_16, 1));
 	}
 
 IL_0059:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:448>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:448>
 		int32_t L_17 = V_1;
 		GameObjectU5BU5D_tFF67550DFCE87096D7A3734EA15B75896B2722CF* L_18 = __this->___m_VelocityParents;
 		NullCheck(L_18);
@@ -3438,14 +3438,14 @@ IL_0059:
 		}
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:454>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:454>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_19 = __this->___m_DrawJointsParent;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		Object_Destroy_mE97D0A766419A81296E8D4E5C23D01D3FE91ACBB(L_19, NULL);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:455>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:455>
 		__this->___m_DrawJointsParent = (GameObject_t76FEDD663AB33C991A9C9A23129337651094216F*)NULL;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___m_DrawJointsParent), (void*)(GameObject_t76FEDD663AB33C991A9C9A23129337651094216F*)NULL);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:456>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:456>
 		return;
 	}
 }
@@ -3453,12 +3453,12 @@ IL_0059:
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void HandGameObjects_ToggleDrawMesh_m3EC9E4B67721C48B59B52B1A6E146E7AF07BF259 (HandGameObjects_t0E397BC6AC8B28ACD270CF428DF64801DF1AD26F* __this, bool ___0_drawMesh, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:460>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:460>
 		XRHandMeshController_t670ADAE830016D758ED74153F39334564CD3D687* L_0 = __this->___m_MeshController;
 		bool L_1 = ___0_drawMesh;
 		NullCheck(L_0);
 		Behaviour_set_enabled_mF1DCFE60EB09E0529FE9476CA804A3AA2D72B16A(L_0, L_1, NULL);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:461>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:461>
 		bool L_2 = ___0_drawMesh;
 		if (L_2)
 		{
@@ -3466,7 +3466,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void HandGameObjects_ToggleDrawMesh_m3EC9E4B6
 		}
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:462>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:462>
 		XRHandMeshController_t670ADAE830016D758ED74153F39334564CD3D687* L_3 = __this->___m_MeshController;
 		NullCheck(L_3);
 		Renderer_t320575F223BCB177A982E5DDB5DB19FAA89E7FBF* L_4;
@@ -3477,7 +3477,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void HandGameObjects_ToggleDrawMesh_m3EC9E4B6
 
 IL_0020:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:463>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:463>
 		return;
 	}
 }
@@ -3493,14 +3493,14 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void HandGameObjects_ToggleDebugDrawJoints_m5
 	}
 	int32_t V_0 = 0;
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:467>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:467>
 		V_0 = 0;
 		goto IL_0029;
 	}
 
 IL_0004:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:469>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:469>
 		bool L_0 = ___0_debugDrawJoints;
 		GameObjectU5BU5D_tFF67550DFCE87096D7A3734EA15B75896B2722CF* L_1 = __this->___m_DrawJoints;
 		int32_t L_2 = V_0;
@@ -3512,7 +3512,7 @@ IL_0004:
 		L_5 = GameObject_get_transform_m0BC10ADFA1632166AE5544BDF9038A2650C2AE56(L_4, NULL);
 		il2cpp_codegen_runtime_class_init_inline(HandGameObjects_t0E397BC6AC8B28ACD270CF428DF64801DF1AD26F_il2cpp_TypeInfo_var);
 		HandGameObjects_ToggleRenderers_TisMeshRenderer_t4B7747212F0B88244BB7790C61AE124BFC15BAAE_m8BC9ACC0C9BBB0A272F874B4A594AB98EF2FEFAD(L_0, L_5, HandGameObjects_ToggleRenderers_TisMeshRenderer_t4B7747212F0B88244BB7790C61AE124BFC15BAAE_m8BC9ACC0C9BBB0A272F874B4A594AB98EF2FEFAD_RuntimeMethod_var);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:470>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:470>
 		LineRendererU5BU5D_t5AA0E11EC99A18A11BCCCABDF088C854E50D394A* L_6 = __this->___m_Lines;
 		int32_t L_7 = V_0;
 		NullCheck(L_6);
@@ -3521,14 +3521,14 @@ IL_0004:
 		bool L_10 = ___0_debugDrawJoints;
 		NullCheck(L_9);
 		Renderer_set_enabled_m015E6D7B825528A31182F267234CC6A925F71DA8(L_9, L_10, NULL);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:467>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:467>
 		int32_t L_11 = V_0;
 		V_0 = ((int32_t)il2cpp_codegen_add(L_11, 1));
 	}
 
 IL_0029:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:467>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:467>
 		int32_t L_12 = V_0;
 		GameObjectU5BU5D_tFF67550DFCE87096D7A3734EA15B75896B2722CF* L_13 = __this->___m_DrawJoints;
 		NullCheck(L_13);
@@ -3538,14 +3538,14 @@ IL_0029:
 		}
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:473>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:473>
 		LineRendererU5BU5D_t5AA0E11EC99A18A11BCCCABDF088C854E50D394A* L_14 = __this->___m_Lines;
 		NullCheck(L_14);
 		int32_t L_15 = 0;
 		LineRenderer_tEFEF960672DB69CB14B6D181FAE6292F0CF8B63D* L_16 = (L_14)->GetAt(static_cast<il2cpp_array_size_t>(L_15));
 		NullCheck(L_16);
 		Renderer_set_enabled_m015E6D7B825528A31182F267234CC6A925F71DA8(L_16, (bool)0, NULL);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:474>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:474>
 		return;
 	}
 }
@@ -3561,14 +3561,14 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void HandGameObjects_SetVelocityType_m13CFD04
 	}
 	int32_t V_0 = 0;
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:478>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:478>
 		V_0 = 0;
 		goto IL_0021;
 	}
 
 IL_0004:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:479>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:479>
 		int32_t L_0 = ___0_velocityType;
 		GameObjectU5BU5D_tFF67550DFCE87096D7A3734EA15B75896B2722CF* L_1 = __this->___m_VelocityParents;
 		int32_t L_2 = V_0;
@@ -3580,14 +3580,14 @@ IL_0004:
 		L_5 = GameObject_get_transform_m0BC10ADFA1632166AE5544BDF9038A2650C2AE56(L_4, NULL);
 		il2cpp_codegen_runtime_class_init_inline(HandGameObjects_t0E397BC6AC8B28ACD270CF428DF64801DF1AD26F_il2cpp_TypeInfo_var);
 		HandGameObjects_ToggleRenderers_TisLineRenderer_tEFEF960672DB69CB14B6D181FAE6292F0CF8B63D_mD52F431B7896E3957C42E662CECB52F1226E2834((bool)((((int32_t)((((int32_t)L_0) == ((int32_t)2))? 1 : 0)) == ((int32_t)0))? 1 : 0), L_5, HandGameObjects_ToggleRenderers_TisLineRenderer_tEFEF960672DB69CB14B6D181FAE6292F0CF8B63D_mD52F431B7896E3957C42E662CECB52F1226E2834_RuntimeMethod_var);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:478>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:478>
 		int32_t L_6 = V_0;
 		V_0 = ((int32_t)il2cpp_codegen_add(L_6, 1));
 	}
 
 IL_0021:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:478>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:478>
 		int32_t L_7 = V_0;
 		GameObjectU5BU5D_tFF67550DFCE87096D7A3734EA15B75896B2722CF* L_8 = __this->___m_VelocityParents;
 		NullCheck(L_8);
@@ -3597,7 +3597,7 @@ IL_0021:
 		}
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:480>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:480>
 		return;
 	}
 }
@@ -3619,7 +3619,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void HandGameObjects_UpdateJoints_m3CB0C822FD
 	int32_t V_4 = 0;
 	int32_t V_5 = 0;
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:488>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:488>
 		bool L_0 = ___1_areJointsTracked;
 		if (L_0)
 		{
@@ -3627,57 +3627,57 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void HandGameObjects_UpdateJoints_m3CB0C822FD
 		}
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:489>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:489>
 		return;
 	}
 
 IL_0004:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:491>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:491>
 		il2cpp_codegen_runtime_class_init_inline(Pose_t06BA69EAA6E9FAF60056D519A87D25F54AFE7971_il2cpp_TypeInfo_var);
 		Pose_t06BA69EAA6E9FAF60056D519A87D25F54AFE7971 L_1;
 		L_1 = Pose_get_identity_m145C7BA9D895CD7F8CCE2483B69764F7A9FEC66E(NULL);
 		V_0 = L_1;
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:492>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:492>
 		int32_t L_2;
 		L_2 = XRHandJointIDUtility_ToIndex_mBF5EC77C077B14029F71E64F112F37544BFD9E02(1, NULL);
 		V_1 = L_2;
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:493>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:493>
 		bool L_3 = ___2_debugDrawJoints;
 		int32_t L_4 = ___3_velocityType;
 		XRHandJoint_tDB955774276659AFD2294D516FC8A76A51E94783 L_5;
 		L_5 = XRHand_GetJoint_mDD5E7D4F45C9701AF8911EA4394F258CB5E68035((&___0_hand), 1, NULL);
 		HandGameObjects_UpdateJoint_mC83C6757020AA8C0F9BCE9DB2D5AF8DFAEBD44B2(__this, L_3, L_4, L_5, (&V_0), (&V_1), (bool)1, NULL);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:494>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:494>
 		bool L_6 = ___2_debugDrawJoints;
 		int32_t L_7 = ___3_velocityType;
 		XRHandJoint_tDB955774276659AFD2294D516FC8A76A51E94783 L_8;
 		L_8 = XRHand_GetJoint_mDD5E7D4F45C9701AF8911EA4394F258CB5E68035((&___0_hand), 2, NULL);
 		HandGameObjects_UpdateJoint_mC83C6757020AA8C0F9BCE9DB2D5AF8DFAEBD44B2(__this, L_6, L_7, L_8, (&V_0), (&V_1), (bool)0, NULL);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:496>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:496>
 		V_2 = 0;
 		goto IL_0092;
 	}
 
 IL_0041:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:500>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:500>
 		Pose_t06BA69EAA6E9FAF60056D519A87D25F54AFE7971 L_9 = V_0;
 		V_3 = L_9;
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:501>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:501>
 		int32_t L_10 = V_2;
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:502>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:502>
 		int32_t L_11;
 		L_11 = XRHandJointIDUtility_ToIndex_mBF5EC77C077B14029F71E64F112F37544BFD9E02(1, NULL);
 		V_1 = L_11;
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:504>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:504>
 		int32_t L_12 = L_10;
 		int32_t L_13;
 		L_13 = XRHandJointIDUtility_GetBackJointID_m944463FBA57D581AFBF5A68F7CA59FC1673F386F(L_12, NULL);
 		int32_t L_14;
 		L_14 = XRHandJointIDUtility_ToIndex_mBF5EC77C077B14029F71E64F112F37544BFD9E02(L_13, NULL);
 		V_4 = L_14;
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:505>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:505>
 		int32_t L_15;
 		L_15 = XRHandJointIDUtility_GetFrontJointID_mDAAB2FBD81037762DB147BA18C1381192A2A7313(L_12, NULL);
 		int32_t L_16;
@@ -3688,7 +3688,7 @@ IL_0041:
 
 IL_0066:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:509>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:509>
 		bool L_17 = ___2_debugDrawJoints;
 		int32_t L_18 = ___3_velocityType;
 		int32_t L_19 = V_5;
@@ -3697,14 +3697,14 @@ IL_0066:
 		XRHandJoint_tDB955774276659AFD2294D516FC8A76A51E94783 L_21;
 		L_21 = XRHand_GetJoint_mDD5E7D4F45C9701AF8911EA4394F258CB5E68035((&___0_hand), L_20, NULL);
 		HandGameObjects_UpdateJoint_mC83C6757020AA8C0F9BCE9DB2D5AF8DFAEBD44B2(__this, L_17, L_18, L_21, (&V_3), (&V_1), (bool)1, NULL);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:507>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:507>
 		int32_t L_22 = V_5;
 		V_5 = ((int32_t)il2cpp_codegen_add(L_22, 1));
 	}
 
 IL_0088:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:506>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:506>
 		int32_t L_23 = V_5;
 		int32_t L_24 = V_4;
 		if ((((int32_t)L_23) <= ((int32_t)L_24)))
@@ -3713,14 +3713,14 @@ IL_0088:
 		}
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:498>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:498>
 		int32_t L_25 = V_2;
 		V_2 = ((int32_t)il2cpp_codegen_add(L_25, 1));
 	}
 
 IL_0092:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:497>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:497>
 		int32_t L_26 = V_2;
 		if ((((int32_t)L_26) <= ((int32_t)4)))
 		{
@@ -3728,7 +3728,7 @@ IL_0092:
 		}
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:512>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:512>
 		return;
 	}
 }
@@ -3753,7 +3753,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void HandGameObjects_UpdateJoint_mC83C6757020
 	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 V_5;
 	memset((&V_5), 0, sizeof(V_5));
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:522>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:522>
 		int32_t L_0;
 		L_0 = XRHandJoint_get_id_m22F4DAECB98383D196AA9549A8682B73270AB394((&___2_joint), NULL);
 		if (L_0)
@@ -3762,19 +3762,19 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void HandGameObjects_UpdateJoint_mC83C6757020
 		}
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:523>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:523>
 		return;
 	}
 
 IL_000a:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:525>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:525>
 		int32_t L_1;
 		L_1 = XRHandJoint_get_id_m22F4DAECB98383D196AA9549A8682B73270AB394((&___2_joint), NULL);
 		int32_t L_2;
 		L_2 = XRHandJointIDUtility_ToIndex_mBF5EC77C077B14029F71E64F112F37544BFD9E02(L_1, NULL);
 		V_0 = L_2;
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:526>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:526>
 		JointVisualizerU5BU5D_tBE9067F8E5E225E6A76C5027CD08047938471342* L_3 = __this->___m_JointVisualizers;
 		int32_t L_4 = V_0;
 		NullCheck(L_3);
@@ -3784,7 +3784,7 @@ IL_000a:
 		L_7 = XRHandJoint_get_trackingState_mD1202D64E796D92C38FA87BD02DFBD58AF5E4696_inline((&___2_joint), NULL);
 		NullCheck(L_6);
 		JointVisualizer_NotifyTrackingState_m34E6715AEB12229493AAFC3EF5B82584610B30BC(L_6, L_7, NULL);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:528>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:528>
 		bool L_8;
 		L_8 = XRHandJoint_TryGetPose_m1AA1E69E7753E1CC4E64F8649751BF7D30CE113E((&___2_joint), (&V_1), NULL);
 		if (L_8)
@@ -3793,13 +3793,13 @@ IL_000a:
 		}
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:529>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:529>
 		return;
 	}
 
 IL_0037:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:531>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:531>
 		GameObjectU5BU5D_tFF67550DFCE87096D7A3734EA15B75896B2722CF* L_9 = __this->___m_DrawJoints;
 		int32_t L_10 = V_0;
 		NullCheck(L_9);
@@ -3812,7 +3812,7 @@ IL_0037:
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_15 = L_14.___position;
 		NullCheck(L_13);
 		Transform_set_localPosition_mDE1C997F7D79C0885210B7732B4BA50EE7D73134(L_13, L_15, NULL);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:532>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:532>
 		GameObjectU5BU5D_tFF67550DFCE87096D7A3734EA15B75896B2722CF* L_16 = __this->___m_DrawJoints;
 		int32_t L_17 = V_0;
 		NullCheck(L_16);
@@ -3825,7 +3825,7 @@ IL_0037:
 		Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 L_22 = L_21.___rotation;
 		NullCheck(L_20);
 		Transform_set_localRotation_mAB4A011D134BA58AB780BECC0025CA65F16185FA(L_20, L_22, NULL);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:534>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:534>
 		bool L_23 = ___0_debugDrawJoints;
 		if (!L_23)
 		{
@@ -3841,7 +3841,7 @@ IL_0037:
 		}
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:536>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:536>
 		il2cpp_codegen_runtime_class_init_inline(HandGameObjects_t0E397BC6AC8B28ACD270CF428DF64801DF1AD26F_il2cpp_TypeInfo_var);
 		Vector3U5BU5D_tFF1859CCE176131B909E2044F76443064254679C* L_25 = ((HandGameObjects_t0E397BC6AC8B28ACD270CF428DF64801DF1AD26F_StaticFields*)il2cpp_codegen_static_fields_for(HandGameObjects_t0E397BC6AC8B28ACD270CF428DF64801DF1AD26F_il2cpp_TypeInfo_var))->___s_LinePointsReuse;
 		GameObjectU5BU5D_tFF67550DFCE87096D7A3734EA15B75896B2722CF* L_26 = __this->___m_DrawJoints;
@@ -3858,7 +3858,7 @@ IL_0037:
 		L_32 = Transform_get_position_m69CD5FA214FDAE7BB701552943674846C220FDE1(L_31, NULL);
 		NullCheck(L_25);
 		(L_25)->SetAt(static_cast<il2cpp_array_size_t>(0), (Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2)L_32);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:537>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:537>
 		Vector3U5BU5D_tFF1859CCE176131B909E2044F76443064254679C* L_33 = ((HandGameObjects_t0E397BC6AC8B28ACD270CF428DF64801DF1AD26F_StaticFields*)il2cpp_codegen_static_fields_for(HandGameObjects_t0E397BC6AC8B28ACD270CF428DF64801DF1AD26F_il2cpp_TypeInfo_var))->___s_LinePointsReuse;
 		GameObjectU5BU5D_tFF67550DFCE87096D7A3734EA15B75896B2722CF* L_34 = __this->___m_DrawJoints;
 		int32_t L_35 = V_0;
@@ -3873,7 +3873,7 @@ IL_0037:
 		L_39 = Transform_get_position_m69CD5FA214FDAE7BB701552943674846C220FDE1(L_38, NULL);
 		NullCheck(L_33);
 		(L_33)->SetAt(static_cast<il2cpp_array_size_t>(1), (Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2)L_39);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:538>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:538>
 		LineRendererU5BU5D_t5AA0E11EC99A18A11BCCCABDF088C854E50D394A* L_40 = __this->___m_Lines;
 		int32_t L_41 = V_0;
 		NullCheck(L_40);
@@ -3886,7 +3886,7 @@ IL_0037:
 
 IL_00c2:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:541>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:541>
 		bool L_45 = ___5_cacheParentPose;
 		if (!L_45)
 		{
@@ -3894,11 +3894,11 @@ IL_00c2:
 		}
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:543>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:543>
 		Pose_t06BA69EAA6E9FAF60056D519A87D25F54AFE7971* L_46 = ___3_parentPose;
 		Pose_t06BA69EAA6E9FAF60056D519A87D25F54AFE7971 L_47 = V_1;
 		*(Pose_t06BA69EAA6E9FAF60056D519A87D25F54AFE7971*)L_46 = L_47;
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:544>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:544>
 		int32_t* L_48 = ___4_parentIndex;
 		int32_t L_49 = V_0;
 		*((int32_t*)L_48) = (int32_t)L_49;
@@ -3906,7 +3906,7 @@ IL_00c2:
 
 IL_00d2:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:547>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:547>
 		int32_t L_50 = ___1_velocityType;
 		if ((((int32_t)L_50) == ((int32_t)2)))
 		{
@@ -3928,7 +3928,7 @@ IL_00d2:
 		}
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:549>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:549>
 		GameObjectU5BU5D_tFF67550DFCE87096D7A3734EA15B75896B2722CF* L_56 = __this->___m_VelocityParents;
 		int32_t L_57 = V_0;
 		NullCheck(L_56);
@@ -3941,7 +3941,7 @@ IL_00d2:
 		L_61 = Vector3_get_zero_m0C1249C3F25B1C70EAD3CC8B31259975A457AE39_inline(NULL);
 		NullCheck(L_60);
 		Transform_set_localPosition_mDE1C997F7D79C0885210B7732B4BA50EE7D73134(L_60, L_61, NULL);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:550>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:550>
 		GameObjectU5BU5D_tFF67550DFCE87096D7A3734EA15B75896B2722CF* L_62 = __this->___m_VelocityParents;
 		int32_t L_63 = V_0;
 		NullCheck(L_62);
@@ -3954,7 +3954,7 @@ IL_00d2:
 		L_67 = Quaternion_get_identity_m7E701AE095ED10FD5EA0B50ABCFDE2EEFF2173A5_inline(NULL);
 		NullCheck(L_66);
 		Transform_set_localRotation_mAB4A011D134BA58AB780BECC0025CA65F16185FA(L_66, L_67, NULL);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:552>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:552>
 		il2cpp_codegen_runtime_class_init_inline(HandGameObjects_t0E397BC6AC8B28ACD270CF428DF64801DF1AD26F_il2cpp_TypeInfo_var);
 		Vector3U5BU5D_tFF1859CCE176131B909E2044F76443064254679C* L_68 = ((HandGameObjects_t0E397BC6AC8B28ACD270CF428DF64801DF1AD26F_StaticFields*)il2cpp_codegen_static_fields_for(HandGameObjects_t0E397BC6AC8B28ACD270CF428DF64801DF1AD26F_il2cpp_TypeInfo_var))->___s_LinePointsReuse;
 		Vector3U5BU5D_tFF1859CCE176131B909E2044F76443064254679C* L_69 = ((HandGameObjects_t0E397BC6AC8B28ACD270CF428DF64801DF1AD26F_StaticFields*)il2cpp_codegen_static_fields_for(HandGameObjects_t0E397BC6AC8B28ACD270CF428DF64801DF1AD26F_il2cpp_TypeInfo_var))->___s_LinePointsReuse;
@@ -3976,7 +3976,7 @@ IL_00d2:
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_77 = V_3;
 		NullCheck(L_68);
 		(L_68)->SetAt(static_cast<il2cpp_array_size_t>(0), (Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2)L_77);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:553>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:553>
 		int32_t L_78 = ___1_velocityType;
 		if (L_78)
 		{
@@ -3984,7 +3984,7 @@ IL_00d2:
 		}
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:555>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:555>
 		bool L_79;
 		L_79 = XRHandJoint_TryGetLinearVelocity_m3BC24DBDEB210B51568D21317B1B3574A6B57F6B((&___2_joint), (&V_4), NULL);
 		if (!L_79)
@@ -3993,7 +3993,7 @@ IL_00d2:
 		}
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:556>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:556>
 		il2cpp_codegen_runtime_class_init_inline(HandGameObjects_t0E397BC6AC8B28ACD270CF428DF64801DF1AD26F_il2cpp_TypeInfo_var);
 		Vector3U5BU5D_tFF1859CCE176131B909E2044F76443064254679C* L_80 = ((HandGameObjects_t0E397BC6AC8B28ACD270CF428DF64801DF1AD26F_StaticFields*)il2cpp_codegen_static_fields_for(HandGameObjects_t0E397BC6AC8B28ACD270CF428DF64801DF1AD26F_il2cpp_TypeInfo_var))->___s_LinePointsReuse;
 		NullCheck(L_80);
@@ -4008,7 +4008,7 @@ IL_00d2:
 
 IL_0173:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:558>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:558>
 		int32_t L_85 = ___1_velocityType;
 		if ((!(((uint32_t)L_85) == ((uint32_t)1))))
 		{
@@ -4016,7 +4016,7 @@ IL_0173:
 		}
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:560>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:560>
 		bool L_86;
 		L_86 = XRHandJoint_TryGetAngularVelocity_mA486ED68AE5883EC4EE22A4403457E5F3F64CF63((&___2_joint), (&V_5), NULL);
 		if (!L_86)
@@ -4025,7 +4025,7 @@ IL_0173:
 		}
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:561>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:561>
 		il2cpp_codegen_runtime_class_init_inline(HandGameObjects_t0E397BC6AC8B28ACD270CF428DF64801DF1AD26F_il2cpp_TypeInfo_var);
 		Vector3U5BU5D_tFF1859CCE176131B909E2044F76443064254679C* L_87 = ((HandGameObjects_t0E397BC6AC8B28ACD270CF428DF64801DF1AD26F_StaticFields*)il2cpp_codegen_static_fields_for(HandGameObjects_t0E397BC6AC8B28ACD270CF428DF64801DF1AD26F_il2cpp_TypeInfo_var))->___s_LinePointsReuse;
 		NullCheck(L_87);
@@ -4042,7 +4042,7 @@ IL_0173:
 
 IL_01ae:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:564>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:564>
 		LineRenderer_tEFEF960672DB69CB14B6D181FAE6292F0CF8B63D* L_93 = V_2;
 		il2cpp_codegen_runtime_class_init_inline(HandGameObjects_t0E397BC6AC8B28ACD270CF428DF64801DF1AD26F_il2cpp_TypeInfo_var);
 		Vector3U5BU5D_tFF1859CCE176131B909E2044F76443064254679C* L_94 = ((HandGameObjects_t0E397BC6AC8B28ACD270CF428DF64801DF1AD26F_StaticFields*)il2cpp_codegen_static_fields_for(HandGameObjects_t0E397BC6AC8B28ACD270CF428DF64801DF1AD26F_il2cpp_TypeInfo_var))->___s_LinePointsReuse;
@@ -4052,7 +4052,7 @@ IL_01ae:
 
 IL_01b9:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:566>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:566>
 		return;
 	}
 }
@@ -4067,7 +4067,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void HandGameObjects__cctor_m1C6CD34AF6E59EB2
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:333>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:333>
 		Vector3U5BU5D_tFF1859CCE176131B909E2044F76443064254679C* L_0 = (Vector3U5BU5D_tFF1859CCE176131B909E2044F76443064254679C*)(Vector3U5BU5D_tFF1859CCE176131B909E2044F76443064254679C*)SZArrayNew(Vector3U5BU5D_tFF1859CCE176131B909E2044F76443064254679C_il2cpp_TypeInfo_var, (uint32_t)2);
 		((HandGameObjects_t0E397BC6AC8B28ACD270CF428DF64801DF1AD26F_StaticFields*)il2cpp_codegen_static_fields_for(HandGameObjects_t0E397BC6AC8B28ACD270CF428DF64801DF1AD26F_il2cpp_TypeInfo_var))->___s_LinePointsReuse = L_0;
 		Il2CppCodeGenWriteBarrier((void**)(&((HandGameObjects_t0E397BC6AC8B28ACD270CF428DF64801DF1AD26F_StaticFields*)il2cpp_codegen_static_fields_for(HandGameObjects_t0E397BC6AC8B28ACD270CF428DF64801DF1AD26F_il2cpp_TypeInfo_var))->___s_LinePointsReuse), (void*)L_0);
@@ -4094,12 +4094,12 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void HandGameObjects_U3C_ctorU3Eg__AssignJoin
 	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 V_3;
 	memset((&V_3), 0, sizeof(V_3));
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:350>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:350>
 		int32_t L_0 = ___0_jointId;
 		int32_t L_1;
 		L_1 = XRHandJointIDUtility_ToIndex_mBF5EC77C077B14029F71E64F112F37544BFD9E02(L_0, NULL);
 		V_0 = L_1;
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:351>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:351>
 		GameObjectU5BU5D_tFF67550DFCE87096D7A3734EA15B75896B2722CF* L_2 = __this->___m_DrawJoints;
 		int32_t L_3 = V_0;
 		U3CU3Ec__DisplayClass9_0_t18EF379C550C89A38B4C15EF582D09D97B3710DD* L_4 = ___3_p;
@@ -4109,7 +4109,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void HandGameObjects_U3C_ctorU3Eg__AssignJoin
 		L_6 = Object_Instantiate_TisGameObject_t76FEDD663AB33C991A9C9A23129337651094216F_m10D87C6E0708CA912BBB02555BF7D0FBC5D7A2B3(L_5, Object_Instantiate_TisGameObject_t76FEDD663AB33C991A9C9A23129337651094216F_m10D87C6E0708CA912BBB02555BF7D0FBC5D7A2B3_RuntimeMethod_var);
 		NullCheck(L_2);
 		(L_2)->SetAt(static_cast<il2cpp_array_size_t>(L_3), (GameObject_t76FEDD663AB33C991A9C9A23129337651094216F*)L_6);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:352>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:352>
 		GameObjectU5BU5D_tFF67550DFCE87096D7A3734EA15B75896B2722CF* L_7 = __this->___m_DrawJoints;
 		int32_t L_8 = V_0;
 		NullCheck(L_7);
@@ -4121,7 +4121,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void HandGameObjects_U3C_ctorU3Eg__AssignJoin
 		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_12 = ___2_drawJointsParent;
 		NullCheck(L_11);
 		Transform_set_parent_m9BD5E563B539DD5BEC342736B03F97B38A243234(L_11, L_12, NULL);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:353>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:353>
 		GameObjectU5BU5D_tFF67550DFCE87096D7A3734EA15B75896B2722CF* L_13 = __this->___m_DrawJoints;
 		int32_t L_14 = V_0;
 		NullCheck(L_13);
@@ -4132,7 +4132,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void HandGameObjects_U3C_ctorU3Eg__AssignJoin
 		L_18 = Enum_ToString_m946B0B83C4470457D0FF555D862022C72BB55741((Enum_t2A1A94B24E3B776EEF4E5E485E290BB9D4D072E2*)(&L_17), NULL);
 		NullCheck(L_16);
 		Object_set_name_mC79E6DC8FFD72479C90F0C4CC7F42A0FEAF5AE47(L_16, L_18, NULL);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:355>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:355>
 		GameObjectU5BU5D_tFF67550DFCE87096D7A3734EA15B75896B2722CF* L_19 = __this->___m_VelocityParents;
 		int32_t L_20 = V_0;
 		U3CU3Ec__DisplayClass9_0_t18EF379C550C89A38B4C15EF582D09D97B3710DD* L_21 = ___3_p;
@@ -4141,7 +4141,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void HandGameObjects_U3C_ctorU3Eg__AssignJoin
 		L_23 = Object_Instantiate_TisGameObject_t76FEDD663AB33C991A9C9A23129337651094216F_m10D87C6E0708CA912BBB02555BF7D0FBC5D7A2B3(L_22, Object_Instantiate_TisGameObject_t76FEDD663AB33C991A9C9A23129337651094216F_m10D87C6E0708CA912BBB02555BF7D0FBC5D7A2B3_RuntimeMethod_var);
 		NullCheck(L_19);
 		(L_19)->SetAt(static_cast<il2cpp_array_size_t>(L_20), (GameObject_t76FEDD663AB33C991A9C9A23129337651094216F*)L_23);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:356>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:356>
 		GameObjectU5BU5D_tFF67550DFCE87096D7A3734EA15B75896B2722CF* L_24 = __this->___m_VelocityParents;
 		int32_t L_25 = V_0;
 		NullCheck(L_24);
@@ -4153,7 +4153,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void HandGameObjects_U3C_ctorU3Eg__AssignJoin
 		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_29 = ___1_jointDrivenTransform;
 		NullCheck(L_28);
 		Transform_set_parent_m9BD5E563B539DD5BEC342736B03F97B38A243234(L_28, L_29, NULL);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:358>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:358>
 		LineRendererU5BU5D_t5AA0E11EC99A18A11BCCCABDF088C854E50D394A* L_30 = __this->___m_Lines;
 		int32_t L_31 = V_0;
 		GameObjectU5BU5D_tFF67550DFCE87096D7A3734EA15B75896B2722CF* L_32 = __this->___m_DrawJoints;
@@ -4166,7 +4166,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void HandGameObjects_U3C_ctorU3Eg__AssignJoin
 		L_36 = GameObject_GetComponent_TisLineRenderer_tEFEF960672DB69CB14B6D181FAE6292F0CF8B63D_mE703918F1B04E115CCE78A5FF891A12648B04D75(L_35, GameObject_GetComponent_TisLineRenderer_tEFEF960672DB69CB14B6D181FAE6292F0CF8B63D_mE703918F1B04E115CCE78A5FF891A12648B04D75_RuntimeMethod_var);
 		NullCheck(L_30);
 		(L_30)->SetAt(static_cast<il2cpp_array_size_t>(L_31), (LineRenderer_tEFEF960672DB69CB14B6D181FAE6292F0CF8B63D*)L_36);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:359>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:359>
 		LineRendererU5BU5D_t5AA0E11EC99A18A11BCCCABDF088C854E50D394A* L_37 = __this->___m_Lines;
 		int32_t L_38 = V_0;
 		NullCheck(L_37);
@@ -4184,7 +4184,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void HandGameObjects_U3C_ctorU3Eg__AssignJoin
 		float L_46 = V_2;
 		NullCheck(L_40);
 		LineRenderer_set_startWidth_m3899722E198D636DB216CB61C980214707069F4A(L_40, L_46, NULL);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:360>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:360>
 		il2cpp_codegen_runtime_class_init_inline(HandGameObjects_t0E397BC6AC8B28ACD270CF428DF64801DF1AD26F_il2cpp_TypeInfo_var);
 		Vector3U5BU5D_tFF1859CCE176131B909E2044F76443064254679C* L_47 = ((HandGameObjects_t0E397BC6AC8B28ACD270CF428DF64801DF1AD26F_StaticFields*)il2cpp_codegen_static_fields_for(HandGameObjects_t0E397BC6AC8B28ACD270CF428DF64801DF1AD26F_il2cpp_TypeInfo_var))->___s_LinePointsReuse;
 		Vector3U5BU5D_tFF1859CCE176131B909E2044F76443064254679C* L_48 = ((HandGameObjects_t0E397BC6AC8B28ACD270CF428DF64801DF1AD26F_StaticFields*)il2cpp_codegen_static_fields_for(HandGameObjects_t0E397BC6AC8B28ACD270CF428DF64801DF1AD26F_il2cpp_TypeInfo_var))->___s_LinePointsReuse;
@@ -4199,7 +4199,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void HandGameObjects_U3C_ctorU3Eg__AssignJoin
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_52 = V_3;
 		NullCheck(L_47);
 		(L_47)->SetAt(static_cast<il2cpp_array_size_t>(0), (Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2)L_52);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:361>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:361>
 		LineRendererU5BU5D_t5AA0E11EC99A18A11BCCCABDF088C854E50D394A* L_53 = __this->___m_Lines;
 		int32_t L_54 = V_0;
 		NullCheck(L_53);
@@ -4208,7 +4208,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void HandGameObjects_U3C_ctorU3Eg__AssignJoin
 		Vector3U5BU5D_tFF1859CCE176131B909E2044F76443064254679C* L_57 = ((HandGameObjects_t0E397BC6AC8B28ACD270CF428DF64801DF1AD26F_StaticFields*)il2cpp_codegen_static_fields_for(HandGameObjects_t0E397BC6AC8B28ACD270CF428DF64801DF1AD26F_il2cpp_TypeInfo_var))->___s_LinePointsReuse;
 		NullCheck(L_56);
 		LineRenderer_SetPositions_m7F7B7B54428437D0BF5256D4C82F92180B577B02(L_56, L_57, NULL);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:363>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:363>
 		GameObjectU5BU5D_tFF67550DFCE87096D7A3734EA15B75896B2722CF* L_58 = __this->___m_DrawJoints;
 		int32_t L_59 = V_0;
 		NullCheck(L_58);
@@ -4223,7 +4223,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void HandGameObjects_U3C_ctorU3Eg__AssignJoin
 		}
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:364>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:364>
 		JointVisualizerU5BU5D_tBE9067F8E5E225E6A76C5027CD08047938471342* L_63 = __this->___m_JointVisualizers;
 		int32_t L_64 = V_0;
 		JointVisualizer_t00D07115B1B09275653E1814C92C73DF8EEABFD6* L_65 = V_1;
@@ -4234,7 +4234,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void HandGameObjects_U3C_ctorU3Eg__AssignJoin
 
 IL_00f1:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:365>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/HandVisualizer.cs:365>
 		return;
 	}
 }
@@ -4263,10 +4263,10 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void JointVisualizer_NotifyTrackingState_m34E
 	Material_t18053F08F347D0DCA5E1140EC7EC4533DD8A14E3* G_B5_0 = NULL;
 	Renderer_t320575F223BCB177A982E5DDB5DB19FAA89E7FBF* G_B5_1 = NULL;
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/JointVisualizer.cs:23>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/JointVisualizer.cs:23>
 		int32_t L_0 = ___0_jointTrackingState;
 		V_0 = (bool)((((int32_t)((int32_t)((int32_t)L_0&((int32_t)32)))) == ((int32_t)((int32_t)32)))? 1 : 0);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/JointVisualizer.cs:24>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/JointVisualizer.cs:24>
 		bool L_1 = __this->___m_HighFidelityJoint;
 		bool L_2 = V_0;
 		if ((!(((uint32_t)L_1) == ((uint32_t)L_2))))
@@ -4275,13 +4275,13 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void JointVisualizer_NotifyTrackingState_m34E
 		}
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/JointVisualizer.cs:25>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/JointVisualizer.cs:25>
 		return;
 	}
 
 IL_0013:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/JointVisualizer.cs:27>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/JointVisualizer.cs:27>
 		Renderer_t320575F223BCB177A982E5DDB5DB19FAA89E7FBF* L_3 = __this->___m_JointRenderer;
 		bool L_4 = V_0;
 		if (L_4)
@@ -4309,10 +4309,10 @@ IL_002a:
 	{
 		NullCheck(G_B5_1);
 		Renderer_set_material_m21E88977071E0A914D62F3D9CFF0193B3117C45A(G_B5_1, G_B5_0, NULL);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/JointVisualizer.cs:29>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/JointVisualizer.cs:29>
 		bool L_7 = V_0;
 		__this->___m_HighFidelityJoint = L_7;
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/JointVisualizer.cs:30>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/JointVisualizer.cs:30>
 		return;
 	}
 }
@@ -4327,7 +4327,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void JointVisualizer_Start_mE04F86E1E635C532E
 	}
 	Renderer_t320575F223BCB177A982E5DDB5DB19FAA89E7FBF* V_0 = NULL;
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/JointVisualizer.cs:34>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/JointVisualizer.cs:34>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_0 = __this->___m_JointVisual;
 		NullCheck(L_0);
 		bool L_1;
@@ -4338,7 +4338,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void JointVisualizer_Start_mE04F86E1E635C532E
 		}
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/JointVisualizer.cs:35>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/JointVisualizer.cs:35>
 		Renderer_t320575F223BCB177A982E5DDB5DB19FAA89E7FBF* L_2 = V_0;
 		__this->___m_JointRenderer = L_2;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___m_JointRenderer), (void*)L_2);
@@ -4346,7 +4346,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void JointVisualizer_Start_mE04F86E1E635C532E
 
 IL_0016:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/JointVisualizer.cs:36>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Hands/1.5.0/HandVisualizer/Scripts/JointVisualizer.cs:36>
 		return;
 	}
 }

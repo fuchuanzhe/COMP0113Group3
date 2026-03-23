@@ -27,6 +27,8 @@ public class WordScanManager : MonoBehaviour
     public int minWordLength = 2;
     public float maxHeightAboveTable = 0.05f;
     public float maxHorizontalOffsetToCellCenter = 0.03f;
+    public AudioClip successSound;
+    public AudioClip failSound;
 
     private Vector3 GetCellCenterWorld(Vector2Int cell)
     {
@@ -199,6 +201,10 @@ public class WordScanManager : MonoBehaviour
                         spawnObj.BroadcastPosAndRot();
                     }
                 }
+                if (failSound != null)
+                {
+                    AudioSource.PlayClipAtPoint(failSound, transform.position);
+                }
             }
             else if (validator.CheckWord(word))
             {
@@ -227,6 +233,10 @@ public class WordScanManager : MonoBehaviour
 
                     tile.gameObject.SetActive(false);
                 }
+                if (successSound != null)
+                {
+                    AudioSource.PlayClipAtPoint(successSound, transform.position);
+                }
             }
             else
             {
@@ -241,6 +251,10 @@ public class WordScanManager : MonoBehaviour
                     {
                         spawnObj.BroadcastPosAndRot();
                     }
+                }
+                if (failSound != null)
+                {
+                    AudioSource.PlayClipAtPoint(failSound, transform.position);
                 }
             }
         }

@@ -25024,7 +25024,7 @@ IL2CPP_EXTERN_C  String_t* ListPair_2_ToString_mCB68193559D928E7F8F356C16645A41A
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR List_1_tA239CB83DE5615F348BB0507E45F490F4F7C9A8D* ListPool_1_Get_m8EA884213CCC035AC87D131D4667A3DD3DE2E0BD_gshared (const RuntimeMethod* method) 
 {
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/HammerSmasher.cs:214>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/HammerSmasher.cs:214>
 		il2cpp_codegen_runtime_class_init_inline(il2cpp_rgctx_data(InitializedTypeInfo(method->klass)->rgctx_data, 2));
 		Stack_1_t08E9B72954DC89AD9AC1DCAFDC7EFFDB16799DDF* L_0 = ((ListPool_1_t7122942B3C2281297CA21CDDBF9B91F035063DD0_StaticFields*)il2cpp_codegen_static_fields_for(il2cpp_rgctx_data(InitializedTypeInfo(method->klass)->rgctx_data, 2)))->____pool;
 		NullCheck(L_0);
@@ -25036,23 +25036,23 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR List_1_tA239CB83DE5615F348BB0507E45F490F4F7C9
 		}
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/HammerSmasher.cs:216>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/HammerSmasher.cs:216>
 		il2cpp_codegen_runtime_class_init_inline(il2cpp_rgctx_data(InitializedTypeInfo(method->klass)->rgctx_data, 2));
 		Stack_1_t08E9B72954DC89AD9AC1DCAFDC7EFFDB16799DDF* L_2 = ((ListPool_1_t7122942B3C2281297CA21CDDBF9B91F035063DD0_StaticFields*)il2cpp_codegen_static_fields_for(il2cpp_rgctx_data(InitializedTypeInfo(method->klass)->rgctx_data, 2)))->____pool;
 		NullCheck(L_2);
 		List_1_tA239CB83DE5615F348BB0507E45F490F4F7C9A8D* L_3;
 		L_3 = Stack_1_Pop_m2F4B269E1B3806830E40FA48571EBF67D0086A53(L_2, il2cpp_rgctx_method(InitializedTypeInfo(method->klass)->rgctx_data, 4));
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/HammerSmasher.cs:217>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/HammerSmasher.cs:217>
 		List_1_tA239CB83DE5615F348BB0507E45F490F4F7C9A8D* L_4 = L_3;
 		NullCheck(L_4);
 		List_1_Clear_m16C1F2C61FED5955F10EB36BC1CB2DF34B128994_inline(L_4, il2cpp_rgctx_method(InitializedTypeInfo(method->klass)->rgctx_data, 6));
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/HammerSmasher.cs:218>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/HammerSmasher.cs:218>
 		return L_4;
 	}
 
 IL_001e:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/HammerSmasher.cs:220>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/HammerSmasher.cs:220>
 		List_1_tA239CB83DE5615F348BB0507E45F490F4F7C9A8D* L_5 = (List_1_tA239CB83DE5615F348BB0507E45F490F4F7C9A8D*)il2cpp_codegen_object_new(il2cpp_rgctx_data(InitializedTypeInfo(method->klass)->rgctx_data, 5));
 		List_1__ctor_m76CBBC3E2F0583F5AD30CE592CEA1225C06A0428(L_5, ((int32_t)16), il2cpp_rgctx_method(InitializedTypeInfo(method->klass)->rgctx_data, 7));
 		return L_5;
@@ -25062,7 +25062,7 @@ IL_001e:
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ListPool_1_Release_m68DA9A3B0E10EE92B29E99FAFC316E8B3BF2FAB7_gshared (List_1_tA239CB83DE5615F348BB0507E45F490F4F7C9A8D* ___0_list, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/HammerSmasher.cs:224>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/HammerSmasher.cs:224>
 		List_1_tA239CB83DE5615F348BB0507E45F490F4F7C9A8D* L_0 = ___0_list;
 		if (L_0)
 		{
@@ -25070,17 +25070,17 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ListPool_1_Release_m68DA9A3B0E10EE92B29E
 		}
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/HammerSmasher.cs:224>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/HammerSmasher.cs:224>
 		return;
 	}
 
 IL_0004:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/HammerSmasher.cs:225>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/HammerSmasher.cs:225>
 		List_1_tA239CB83DE5615F348BB0507E45F490F4F7C9A8D* L_1 = ___0_list;
 		NullCheck(L_1);
 		List_1_Clear_m16C1F2C61FED5955F10EB36BC1CB2DF34B128994_inline(L_1, il2cpp_rgctx_method(InitializedTypeInfo(method->klass)->rgctx_data, 6));
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/HammerSmasher.cs:226>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/HammerSmasher.cs:226>
 		il2cpp_codegen_runtime_class_init_inline(il2cpp_rgctx_data(InitializedTypeInfo(method->klass)->rgctx_data, 2));
 		Stack_1_t08E9B72954DC89AD9AC1DCAFDC7EFFDB16799DDF* L_2 = ((ListPool_1_t7122942B3C2281297CA21CDDBF9B91F035063DD0_StaticFields*)il2cpp_codegen_static_fields_for(il2cpp_rgctx_data(InitializedTypeInfo(method->klass)->rgctx_data, 2)))->____pool;
 		NullCheck(L_2);
@@ -25092,7 +25092,7 @@ IL_0004:
 		}
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/HammerSmasher.cs:226>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/HammerSmasher.cs:226>
 		il2cpp_codegen_runtime_class_init_inline(il2cpp_rgctx_data(InitializedTypeInfo(method->klass)->rgctx_data, 2));
 		Stack_1_t08E9B72954DC89AD9AC1DCAFDC7EFFDB16799DDF* L_4 = ((ListPool_1_t7122942B3C2281297CA21CDDBF9B91F035063DD0_StaticFields*)il2cpp_codegen_static_fields_for(il2cpp_rgctx_data(InitializedTypeInfo(method->klass)->rgctx_data, 2)))->____pool;
 		List_1_tA239CB83DE5615F348BB0507E45F490F4F7C9A8D* L_5 = ___0_list;
@@ -25102,7 +25102,7 @@ IL_0004:
 
 IL_0023:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/HammerSmasher.cs:227>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/HammerSmasher.cs:227>
 		return;
 	}
 }
@@ -25110,7 +25110,7 @@ IL_0023:
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ListPool_1__cctor_mB1DBF052EFEFB64E7DDE3916BD8FF78C28893012_gshared (const RuntimeMethod* method) 
 {
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/HammerSmasher.cs:211>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/HammerSmasher.cs:211>
 		Stack_1_t08E9B72954DC89AD9AC1DCAFDC7EFFDB16799DDF* L_0 = (Stack_1_t08E9B72954DC89AD9AC1DCAFDC7EFFDB16799DDF*)il2cpp_codegen_object_new(il2cpp_rgctx_data(InitializedTypeInfo(method->klass)->rgctx_data, 1));
 		Stack_1__ctor_m10330F1701988ECC21BD6EE3E4922E1A19E841C2(L_0, 8, il2cpp_rgctx_method(InitializedTypeInfo(method->klass)->rgctx_data, 9));
 		((ListPool_1_t7122942B3C2281297CA21CDDBF9B91F035063DD0_StaticFields*)il2cpp_codegen_static_fields_for(il2cpp_rgctx_data(InitializedTypeInfo(method->klass)->rgctx_data, 2)))->____pool = L_0;
@@ -25130,7 +25130,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ListPool_1__cctor_mB1DBF052EFEFB64E7DDE3
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR List_1_tA239CB83DE5615F348BB0507E45F490F4F7C9A8D* ListPool_1_Get_m4C44CC024FFD225379C8F98C36F46504F79412A4_gshared (const RuntimeMethod* method) 
 {
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/KnifeCutter.cs:241>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/KnifeCutter.cs:241>
 		il2cpp_codegen_runtime_class_init_inline(il2cpp_rgctx_data(InitializedTypeInfo(method->klass)->rgctx_data, 2));
 		Stack_1_t08E9B72954DC89AD9AC1DCAFDC7EFFDB16799DDF* L_0 = ((ListPool_1_t5ECCC9F116CB40E128301D76D808EB1AC35FC76C_StaticFields*)il2cpp_codegen_static_fields_for(il2cpp_rgctx_data(InitializedTypeInfo(method->klass)->rgctx_data, 2)))->____pool;
 		NullCheck(L_0);
@@ -25142,23 +25142,23 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR List_1_tA239CB83DE5615F348BB0507E45F490F4F7C9
 		}
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/KnifeCutter.cs:243>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/KnifeCutter.cs:243>
 		il2cpp_codegen_runtime_class_init_inline(il2cpp_rgctx_data(InitializedTypeInfo(method->klass)->rgctx_data, 2));
 		Stack_1_t08E9B72954DC89AD9AC1DCAFDC7EFFDB16799DDF* L_2 = ((ListPool_1_t5ECCC9F116CB40E128301D76D808EB1AC35FC76C_StaticFields*)il2cpp_codegen_static_fields_for(il2cpp_rgctx_data(InitializedTypeInfo(method->klass)->rgctx_data, 2)))->____pool;
 		NullCheck(L_2);
 		List_1_tA239CB83DE5615F348BB0507E45F490F4F7C9A8D* L_3;
 		L_3 = Stack_1_Pop_m2F4B269E1B3806830E40FA48571EBF67D0086A53(L_2, il2cpp_rgctx_method(InitializedTypeInfo(method->klass)->rgctx_data, 4));
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/KnifeCutter.cs:244>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/KnifeCutter.cs:244>
 		List_1_tA239CB83DE5615F348BB0507E45F490F4F7C9A8D* L_4 = L_3;
 		NullCheck(L_4);
 		List_1_Clear_m16C1F2C61FED5955F10EB36BC1CB2DF34B128994_inline(L_4, il2cpp_rgctx_method(InitializedTypeInfo(method->klass)->rgctx_data, 6));
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/KnifeCutter.cs:245>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/KnifeCutter.cs:245>
 		return L_4;
 	}
 
 IL_001e:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/KnifeCutter.cs:247>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/KnifeCutter.cs:247>
 		List_1_tA239CB83DE5615F348BB0507E45F490F4F7C9A8D* L_5 = (List_1_tA239CB83DE5615F348BB0507E45F490F4F7C9A8D*)il2cpp_codegen_object_new(il2cpp_rgctx_data(InitializedTypeInfo(method->klass)->rgctx_data, 5));
 		List_1__ctor_m76CBBC3E2F0583F5AD30CE592CEA1225C06A0428(L_5, ((int32_t)16), il2cpp_rgctx_method(InitializedTypeInfo(method->klass)->rgctx_data, 7));
 		return L_5;
@@ -25168,7 +25168,7 @@ IL_001e:
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ListPool_1_Release_mA27CC4A7623800C1CDB0B1C7A77B95A677E8ABCD_gshared (List_1_tA239CB83DE5615F348BB0507E45F490F4F7C9A8D* ___0_list, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/KnifeCutter.cs:252>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/KnifeCutter.cs:252>
 		List_1_tA239CB83DE5615F348BB0507E45F490F4F7C9A8D* L_0 = ___0_list;
 		if (L_0)
 		{
@@ -25176,17 +25176,17 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ListPool_1_Release_mA27CC4A7623800C1CDB0
 		}
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/KnifeCutter.cs:252>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/KnifeCutter.cs:252>
 		return;
 	}
 
 IL_0004:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/KnifeCutter.cs:253>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/KnifeCutter.cs:253>
 		List_1_tA239CB83DE5615F348BB0507E45F490F4F7C9A8D* L_1 = ___0_list;
 		NullCheck(L_1);
 		List_1_Clear_m16C1F2C61FED5955F10EB36BC1CB2DF34B128994_inline(L_1, il2cpp_rgctx_method(InitializedTypeInfo(method->klass)->rgctx_data, 6));
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/KnifeCutter.cs:254>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/KnifeCutter.cs:254>
 		il2cpp_codegen_runtime_class_init_inline(il2cpp_rgctx_data(InitializedTypeInfo(method->klass)->rgctx_data, 2));
 		Stack_1_t08E9B72954DC89AD9AC1DCAFDC7EFFDB16799DDF* L_2 = ((ListPool_1_t5ECCC9F116CB40E128301D76D808EB1AC35FC76C_StaticFields*)il2cpp_codegen_static_fields_for(il2cpp_rgctx_data(InitializedTypeInfo(method->klass)->rgctx_data, 2)))->____pool;
 		NullCheck(L_2);
@@ -25198,7 +25198,7 @@ IL_0004:
 		}
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/KnifeCutter.cs:255>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/KnifeCutter.cs:255>
 		il2cpp_codegen_runtime_class_init_inline(il2cpp_rgctx_data(InitializedTypeInfo(method->klass)->rgctx_data, 2));
 		Stack_1_t08E9B72954DC89AD9AC1DCAFDC7EFFDB16799DDF* L_4 = ((ListPool_1_t5ECCC9F116CB40E128301D76D808EB1AC35FC76C_StaticFields*)il2cpp_codegen_static_fields_for(il2cpp_rgctx_data(InitializedTypeInfo(method->klass)->rgctx_data, 2)))->____pool;
 		List_1_tA239CB83DE5615F348BB0507E45F490F4F7C9A8D* L_5 = ___0_list;
@@ -25208,7 +25208,7 @@ IL_0004:
 
 IL_0023:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/KnifeCutter.cs:256>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/KnifeCutter.cs:256>
 		return;
 	}
 }
@@ -25216,7 +25216,7 @@ IL_0023:
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ListPool_1__cctor_m30C702D9223D3AA1BAC42E23EB57629F43670FF9_gshared (const RuntimeMethod* method) 
 {
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/KnifeCutter.cs:237>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/KnifeCutter.cs:237>
 		Stack_1_t08E9B72954DC89AD9AC1DCAFDC7EFFDB16799DDF* L_0 = (Stack_1_t08E9B72954DC89AD9AC1DCAFDC7EFFDB16799DDF*)il2cpp_codegen_object_new(il2cpp_rgctx_data(InitializedTypeInfo(method->klass)->rgctx_data, 1));
 		Stack_1__ctor_m10330F1701988ECC21BD6EE3E4922E1A19E841C2(L_0, 8, il2cpp_rgctx_method(InitializedTypeInfo(method->klass)->rgctx_data, 9));
 		((ListPool_1_t5ECCC9F116CB40E128301D76D808EB1AC35FC76C_StaticFields*)il2cpp_codegen_static_fields_for(il2cpp_rgctx_data(InitializedTypeInfo(method->klass)->rgctx_data, 2)))->____pool = L_0;
@@ -25236,7 +25236,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ListPool_1__cctor_m30C702D9223D3AA1BAC42
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR List_1_tDBA89B0E21BAC58CFBD3C1F76E4668E3B562761A* ListPool_1_Get_m125EE89DCB208C5FD59CA16787E211C171A6C1FB_gshared (const RuntimeMethod* method) 
 {
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/HammerSmasher.cs:214>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/HammerSmasher.cs:214>
 		il2cpp_codegen_runtime_class_init_inline(il2cpp_rgctx_data(InitializedTypeInfo(method->klass)->rgctx_data, 2));
 		Stack_1_tA64CACBCB3F0BEBD7D78014706D4080E7C6B0376* L_0 = ((ListPool_1_tC270E9F07D19CDF0C51C5DCC033BA03A3D4BA010_StaticFields*)il2cpp_codegen_static_fields_for(il2cpp_rgctx_data(InitializedTypeInfo(method->klass)->rgctx_data, 2)))->____pool;
 		NullCheck(L_0);
@@ -25248,23 +25248,23 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR List_1_tDBA89B0E21BAC58CFBD3C1F76E4668E3B5627
 		}
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/HammerSmasher.cs:216>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/HammerSmasher.cs:216>
 		il2cpp_codegen_runtime_class_init_inline(il2cpp_rgctx_data(InitializedTypeInfo(method->klass)->rgctx_data, 2));
 		Stack_1_tA64CACBCB3F0BEBD7D78014706D4080E7C6B0376* L_2 = ((ListPool_1_tC270E9F07D19CDF0C51C5DCC033BA03A3D4BA010_StaticFields*)il2cpp_codegen_static_fields_for(il2cpp_rgctx_data(InitializedTypeInfo(method->klass)->rgctx_data, 2)))->____pool;
 		NullCheck(L_2);
 		List_1_tDBA89B0E21BAC58CFBD3C1F76E4668E3B562761A* L_3;
 		L_3 = InvokerFuncInvoker0< List_1_tDBA89B0E21BAC58CFBD3C1F76E4668E3B562761A* >::Invoke(il2cpp_codegen_get_direct_method_pointer(il2cpp_rgctx_method(InitializedTypeInfo(method->klass)->rgctx_data, 4)), il2cpp_rgctx_method(InitializedTypeInfo(method->klass)->rgctx_data, 4), L_2);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/HammerSmasher.cs:217>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/HammerSmasher.cs:217>
 		List_1_tDBA89B0E21BAC58CFBD3C1F76E4668E3B562761A* L_4 = L_3;
 		NullCheck(L_4);
 		((  void (*) (List_1_tDBA89B0E21BAC58CFBD3C1F76E4668E3B562761A*, const RuntimeMethod*))il2cpp_codegen_get_direct_method_pointer(il2cpp_rgctx_method(InitializedTypeInfo(method->klass)->rgctx_data, 6)))(L_4, il2cpp_rgctx_method(InitializedTypeInfo(method->klass)->rgctx_data, 6));
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/HammerSmasher.cs:218>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/HammerSmasher.cs:218>
 		return L_4;
 	}
 
 IL_001e:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/HammerSmasher.cs:220>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/HammerSmasher.cs:220>
 		List_1_tDBA89B0E21BAC58CFBD3C1F76E4668E3B562761A* L_5 = (List_1_tDBA89B0E21BAC58CFBD3C1F76E4668E3B562761A*)il2cpp_codegen_object_new(il2cpp_rgctx_data(InitializedTypeInfo(method->klass)->rgctx_data, 5));
 		((  void (*) (List_1_tDBA89B0E21BAC58CFBD3C1F76E4668E3B562761A*, int32_t, const RuntimeMethod*))il2cpp_codegen_get_direct_method_pointer(il2cpp_rgctx_method(InitializedTypeInfo(method->klass)->rgctx_data, 7)))(L_5, ((int32_t)16), il2cpp_rgctx_method(InitializedTypeInfo(method->klass)->rgctx_data, 7));
 		return L_5;
@@ -25274,7 +25274,7 @@ IL_001e:
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ListPool_1_Release_m8F344229D02AC2F5E89F287D2FA5019410B3E017_gshared (List_1_tDBA89B0E21BAC58CFBD3C1F76E4668E3B562761A* ___0_list, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/HammerSmasher.cs:224>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/HammerSmasher.cs:224>
 		List_1_tDBA89B0E21BAC58CFBD3C1F76E4668E3B562761A* L_0 = ___0_list;
 		if (L_0)
 		{
@@ -25282,17 +25282,17 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ListPool_1_Release_m8F344229D02AC2F5E89F
 		}
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/HammerSmasher.cs:224>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/HammerSmasher.cs:224>
 		return;
 	}
 
 IL_0004:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/HammerSmasher.cs:225>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/HammerSmasher.cs:225>
 		List_1_tDBA89B0E21BAC58CFBD3C1F76E4668E3B562761A* L_1 = ___0_list;
 		NullCheck(L_1);
 		((  void (*) (List_1_tDBA89B0E21BAC58CFBD3C1F76E4668E3B562761A*, const RuntimeMethod*))il2cpp_codegen_get_direct_method_pointer(il2cpp_rgctx_method(InitializedTypeInfo(method->klass)->rgctx_data, 6)))(L_1, il2cpp_rgctx_method(InitializedTypeInfo(method->klass)->rgctx_data, 6));
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/HammerSmasher.cs:226>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/HammerSmasher.cs:226>
 		il2cpp_codegen_runtime_class_init_inline(il2cpp_rgctx_data(InitializedTypeInfo(method->klass)->rgctx_data, 2));
 		Stack_1_tA64CACBCB3F0BEBD7D78014706D4080E7C6B0376* L_2 = ((ListPool_1_tC270E9F07D19CDF0C51C5DCC033BA03A3D4BA010_StaticFields*)il2cpp_codegen_static_fields_for(il2cpp_rgctx_data(InitializedTypeInfo(method->klass)->rgctx_data, 2)))->____pool;
 		NullCheck(L_2);
@@ -25304,7 +25304,7 @@ IL_0004:
 		}
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/HammerSmasher.cs:226>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/HammerSmasher.cs:226>
 		il2cpp_codegen_runtime_class_init_inline(il2cpp_rgctx_data(InitializedTypeInfo(method->klass)->rgctx_data, 2));
 		Stack_1_tA64CACBCB3F0BEBD7D78014706D4080E7C6B0376* L_4 = ((ListPool_1_tC270E9F07D19CDF0C51C5DCC033BA03A3D4BA010_StaticFields*)il2cpp_codegen_static_fields_for(il2cpp_rgctx_data(InitializedTypeInfo(method->klass)->rgctx_data, 2)))->____pool;
 		List_1_tDBA89B0E21BAC58CFBD3C1F76E4668E3B562761A* L_5 = ___0_list;
@@ -25314,7 +25314,7 @@ IL_0004:
 
 IL_0023:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/HammerSmasher.cs:227>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/HammerSmasher.cs:227>
 		return;
 	}
 }
@@ -25322,7 +25322,7 @@ IL_0023:
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ListPool_1__cctor_m80AF886F2E6C25B2A78F0C6C4B1EBED651152D76_gshared (const RuntimeMethod* method) 
 {
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/HammerSmasher.cs:211>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/HammerSmasher.cs:211>
 		Stack_1_tA64CACBCB3F0BEBD7D78014706D4080E7C6B0376* L_0 = (Stack_1_tA64CACBCB3F0BEBD7D78014706D4080E7C6B0376*)il2cpp_codegen_object_new(il2cpp_rgctx_data(InitializedTypeInfo(method->klass)->rgctx_data, 1));
 		((  void (*) (Stack_1_tA64CACBCB3F0BEBD7D78014706D4080E7C6B0376*, int32_t, const RuntimeMethod*))il2cpp_codegen_get_direct_method_pointer(il2cpp_rgctx_method(InitializedTypeInfo(method->klass)->rgctx_data, 9)))(L_0, 8, il2cpp_rgctx_method(InitializedTypeInfo(method->klass)->rgctx_data, 9));
 		((ListPool_1_tC270E9F07D19CDF0C51C5DCC033BA03A3D4BA010_StaticFields*)il2cpp_codegen_static_fields_for(il2cpp_rgctx_data(InitializedTypeInfo(method->klass)->rgctx_data, 2)))->____pool = L_0;
@@ -25342,7 +25342,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ListPool_1__cctor_m80AF886F2E6C25B2A78F0
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR List_1_tDBA89B0E21BAC58CFBD3C1F76E4668E3B562761A* ListPool_1_Get_m0F466EDA5620F96286855C4C942DA47B450385FF_gshared (const RuntimeMethod* method) 
 {
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/KnifeCutter.cs:241>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/KnifeCutter.cs:241>
 		il2cpp_codegen_runtime_class_init_inline(il2cpp_rgctx_data(InitializedTypeInfo(method->klass)->rgctx_data, 2));
 		Stack_1_tA64CACBCB3F0BEBD7D78014706D4080E7C6B0376* L_0 = ((ListPool_1_tBB14356FA497D49E8FFD16330A1CA85595068877_StaticFields*)il2cpp_codegen_static_fields_for(il2cpp_rgctx_data(InitializedTypeInfo(method->klass)->rgctx_data, 2)))->____pool;
 		NullCheck(L_0);
@@ -25354,23 +25354,23 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR List_1_tDBA89B0E21BAC58CFBD3C1F76E4668E3B5627
 		}
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/KnifeCutter.cs:243>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/KnifeCutter.cs:243>
 		il2cpp_codegen_runtime_class_init_inline(il2cpp_rgctx_data(InitializedTypeInfo(method->klass)->rgctx_data, 2));
 		Stack_1_tA64CACBCB3F0BEBD7D78014706D4080E7C6B0376* L_2 = ((ListPool_1_tBB14356FA497D49E8FFD16330A1CA85595068877_StaticFields*)il2cpp_codegen_static_fields_for(il2cpp_rgctx_data(InitializedTypeInfo(method->klass)->rgctx_data, 2)))->____pool;
 		NullCheck(L_2);
 		List_1_tDBA89B0E21BAC58CFBD3C1F76E4668E3B562761A* L_3;
 		L_3 = InvokerFuncInvoker0< List_1_tDBA89B0E21BAC58CFBD3C1F76E4668E3B562761A* >::Invoke(il2cpp_codegen_get_direct_method_pointer(il2cpp_rgctx_method(InitializedTypeInfo(method->klass)->rgctx_data, 4)), il2cpp_rgctx_method(InitializedTypeInfo(method->klass)->rgctx_data, 4), L_2);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/KnifeCutter.cs:244>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/KnifeCutter.cs:244>
 		List_1_tDBA89B0E21BAC58CFBD3C1F76E4668E3B562761A* L_4 = L_3;
 		NullCheck(L_4);
 		((  void (*) (List_1_tDBA89B0E21BAC58CFBD3C1F76E4668E3B562761A*, const RuntimeMethod*))il2cpp_codegen_get_direct_method_pointer(il2cpp_rgctx_method(InitializedTypeInfo(method->klass)->rgctx_data, 6)))(L_4, il2cpp_rgctx_method(InitializedTypeInfo(method->klass)->rgctx_data, 6));
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/KnifeCutter.cs:245>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/KnifeCutter.cs:245>
 		return L_4;
 	}
 
 IL_001e:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/KnifeCutter.cs:247>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/KnifeCutter.cs:247>
 		List_1_tDBA89B0E21BAC58CFBD3C1F76E4668E3B562761A* L_5 = (List_1_tDBA89B0E21BAC58CFBD3C1F76E4668E3B562761A*)il2cpp_codegen_object_new(il2cpp_rgctx_data(InitializedTypeInfo(method->klass)->rgctx_data, 5));
 		((  void (*) (List_1_tDBA89B0E21BAC58CFBD3C1F76E4668E3B562761A*, int32_t, const RuntimeMethod*))il2cpp_codegen_get_direct_method_pointer(il2cpp_rgctx_method(InitializedTypeInfo(method->klass)->rgctx_data, 7)))(L_5, ((int32_t)16), il2cpp_rgctx_method(InitializedTypeInfo(method->klass)->rgctx_data, 7));
 		return L_5;
@@ -25380,7 +25380,7 @@ IL_001e:
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ListPool_1_Release_m80FB5737D872A9AA51C2E884B485F64C73EB1EBD_gshared (List_1_tDBA89B0E21BAC58CFBD3C1F76E4668E3B562761A* ___0_list, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/KnifeCutter.cs:252>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/KnifeCutter.cs:252>
 		List_1_tDBA89B0E21BAC58CFBD3C1F76E4668E3B562761A* L_0 = ___0_list;
 		if (L_0)
 		{
@@ -25388,17 +25388,17 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ListPool_1_Release_m80FB5737D872A9AA51C2
 		}
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/KnifeCutter.cs:252>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/KnifeCutter.cs:252>
 		return;
 	}
 
 IL_0004:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/KnifeCutter.cs:253>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/KnifeCutter.cs:253>
 		List_1_tDBA89B0E21BAC58CFBD3C1F76E4668E3B562761A* L_1 = ___0_list;
 		NullCheck(L_1);
 		((  void (*) (List_1_tDBA89B0E21BAC58CFBD3C1F76E4668E3B562761A*, const RuntimeMethod*))il2cpp_codegen_get_direct_method_pointer(il2cpp_rgctx_method(InitializedTypeInfo(method->klass)->rgctx_data, 6)))(L_1, il2cpp_rgctx_method(InitializedTypeInfo(method->klass)->rgctx_data, 6));
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/KnifeCutter.cs:254>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/KnifeCutter.cs:254>
 		il2cpp_codegen_runtime_class_init_inline(il2cpp_rgctx_data(InitializedTypeInfo(method->klass)->rgctx_data, 2));
 		Stack_1_tA64CACBCB3F0BEBD7D78014706D4080E7C6B0376* L_2 = ((ListPool_1_tBB14356FA497D49E8FFD16330A1CA85595068877_StaticFields*)il2cpp_codegen_static_fields_for(il2cpp_rgctx_data(InitializedTypeInfo(method->klass)->rgctx_data, 2)))->____pool;
 		NullCheck(L_2);
@@ -25410,7 +25410,7 @@ IL_0004:
 		}
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/KnifeCutter.cs:255>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/KnifeCutter.cs:255>
 		il2cpp_codegen_runtime_class_init_inline(il2cpp_rgctx_data(InitializedTypeInfo(method->klass)->rgctx_data, 2));
 		Stack_1_tA64CACBCB3F0BEBD7D78014706D4080E7C6B0376* L_4 = ((ListPool_1_tBB14356FA497D49E8FFD16330A1CA85595068877_StaticFields*)il2cpp_codegen_static_fields_for(il2cpp_rgctx_data(InitializedTypeInfo(method->klass)->rgctx_data, 2)))->____pool;
 		List_1_tDBA89B0E21BAC58CFBD3C1F76E4668E3B562761A* L_5 = ___0_list;
@@ -25420,7 +25420,7 @@ IL_0004:
 
 IL_0023:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/KnifeCutter.cs:256>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/KnifeCutter.cs:256>
 		return;
 	}
 }
@@ -25428,7 +25428,7 @@ IL_0023:
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ListPool_1__cctor_mAE88C6E2DB9DAEA52365C479085E2684927DEF61_gshared (const RuntimeMethod* method) 
 {
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/KnifeCutter.cs:237>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Resources/Scripts/KnifeCutter.cs:237>
 		Stack_1_tA64CACBCB3F0BEBD7D78014706D4080E7C6B0376* L_0 = (Stack_1_tA64CACBCB3F0BEBD7D78014706D4080E7C6B0376*)il2cpp_codegen_object_new(il2cpp_rgctx_data(InitializedTypeInfo(method->klass)->rgctx_data, 1));
 		((  void (*) (Stack_1_tA64CACBCB3F0BEBD7D78014706D4080E7C6B0376*, int32_t, const RuntimeMethod*))il2cpp_codegen_get_direct_method_pointer(il2cpp_rgctx_method(InitializedTypeInfo(method->klass)->rgctx_data, 9)))(L_0, 8, il2cpp_rgctx_method(InitializedTypeInfo(method->klass)->rgctx_data, 9));
 		((ListPool_1_tBB14356FA497D49E8FFD16330A1CA85595068877_StaticFields*)il2cpp_codegen_static_fields_for(il2cpp_rgctx_data(InitializedTypeInfo(method->klass)->rgctx_data, 2)))->____pool = L_0;

@@ -5500,6 +5500,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 657184242161839408, guid: d6878e1999eb4b44a9f5a263af86c185, type: 3}
   m_PrefabInstance: {fileID: 231856688}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &231856690 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2218496723442559054, guid: d6878e1999eb4b44a9f5a263af86c185, type: 3}
+  m_PrefabInstance: {fileID: 231856688}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &248410235
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -20090,7 +20095,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 976621329}
   m_LocalRotation: {x: 0, y: 0.7071068, z: -0, w: -0.7071068}
-  m_LocalPosition: {x: 0, y: 0, z: 2.736}
+  m_LocalPosition: {x: 0, y: 0, z: 2.729}
   m_LocalScale: {x: 0.00256065, y: 0.00256065, z: 0.00256065}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -20103,7 +20108,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 270, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: -4.446, y: 2.403}
+  m_AnchoredPosition: {x: -4.525, y: 2.403}
   m_SizeDelta: {x: 600, y: 400}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1001 &983137785
@@ -21722,6 +21727,8 @@ MonoBehaviour:
   minWordLength: 2
   maxHeightAboveTable: 0.08
   maxHorizontalOffsetToCellCenter: 0.04
+  successSound: {fileID: 8300000, guid: 639bd1025c3e94374bff8579dffd3e42, type: 3}
+  failSound: {fileID: 8300000, guid: 8841dcf657b8441b1915a10c83c4d144, type: 3}
 --- !u!114 &1056419519
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -26735,6 +26742,9 @@ MonoBehaviour:
   timerTextTeam1: {fileID: 261439564}
   timerTextTeam2: {fileID: 781946344}
   resultText: {fileID: 0}
+  player: {fileID: 231856690}
+  winSound: {fileID: 8300000, guid: 7a6e706d00c8642c091def7318ab3f97, type: 3}
+  loseSound: {fileID: 8300000, guid: a66702e24765b45659919b7eb498b788, type: 3}
 --- !u!4 &1349452089
 Transform:
   m_ObjectHideFlags: 0
@@ -34134,7 +34144,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!65 &1581427568
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -48181,6 +48191,8 @@ MonoBehaviour:
   minWordLength: 2
   maxHeightAboveTable: 0.08
   maxHorizontalOffsetToCellCenter: 0.04
+  successSound: {fileID: 8300000, guid: 639bd1025c3e94374bff8579dffd3e42, type: 3}
+  failSound: {fileID: 8300000, guid: 8841dcf657b8441b1915a10c83c4d144, type: 3}
 --- !u!114 &2085947808
 MonoBehaviour:
   m_ObjectHideFlags: 0

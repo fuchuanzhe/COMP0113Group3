@@ -18,6 +18,9 @@ public class GameManager : MonoBehaviour
     public TextMeshProUGUI timerTextTeam1;
     public TextMeshProUGUI timerTextTeam2;
     public TextMeshProUGUI resultText;
+    public GameObject player;
+    public AudioClip winSound;
+    public AudioClip loseSound;
 
     private float remainingTime;
     private bool gameEnded = false;
@@ -179,12 +182,28 @@ public class GameManager : MonoBehaviour
         {
             Debug.Log("Player 1 wins!");
             if (resultText != null) resultText.text = "Player 1 Wins!";
+            if(player.transform.position.z < 0 && winSound != null && loseSound != null)
+            {
+                AudioSource.PlayClipAtPoint(winSound, transform.position);
+            }
+            else
+            {
+                AudioSource.PlayClipAtPoint(loseSound, transform.position);
+            }
             PlayWinnerFireworks(1);
         }
         else if (winner == 2)
         {
             Debug.Log("Player 2 wins!");
             if (resultText != null) resultText.text = "Player 2 Wins!";
+            if(player.transform.position.z > 0 && winSound != null && loseSound != null)
+            {
+                AudioSource.PlayClipAtPoint(winSound, transform.position);
+            }
+            else
+            {
+                AudioSource.PlayClipAtPoint(loseSound, transform.position);
+            }
             PlayWinnerFireworks(2);
         }
         else

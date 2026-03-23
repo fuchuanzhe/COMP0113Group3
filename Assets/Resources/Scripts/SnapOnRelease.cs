@@ -8,6 +8,7 @@ public class SnapOnRelease : MonoBehaviour
     private XRGrabInteractable grab;
     private BlockFootprint footprint;
     private LetterTile letterTile;
+    public AudioClip snapSound;
 
     public bool IsSnappedOnTable { get; private set; }
 
@@ -30,7 +31,6 @@ public class SnapOnRelease : MonoBehaviour
 
         IsSnappedOnTable = false;
 
-        // 拿起来时恢复原色
         if (letterTile != null)
             letterTile.RestoreOriginalColor();
     }
@@ -54,6 +54,10 @@ public class SnapOnRelease : MonoBehaviour
         else
         {
             IsSnappedOnTable = true;
+            if (snapSound != null)
+            {
+                AudioSource.PlayClipAtPoint(snapSound, transform.position);
+            }
         }
     }
 
