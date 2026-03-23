@@ -38465,7 +38465,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t BitArray_get_Length_mC078
 		return L_0;
 	}
 }
-// Method Definition Index: 87675
+// Method Definition Index: 87692
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR double Complex_get_Real_m98291D3606A2D33FB2A4AFD94C5A6B594C4C8554_inline (Complex_tC7518465FEAE5F5138E1653314A611EEC09467A2* __this, const RuntimeMethod* method) 
 {
 	{
@@ -38473,7 +38473,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR double Complex_get_Real_m98291D36
 		return L_0;
 	}
 }
-// Method Definition Index: 87676
+// Method Definition Index: 87693
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR double Complex_get_Imaginary_m55DD546C177307031449E6814F9AE1671097FABD_inline (Complex_tC7518465FEAE5F5138E1653314A611EEC09467A2* __this, const RuntimeMethod* method) 
 {
 	{
