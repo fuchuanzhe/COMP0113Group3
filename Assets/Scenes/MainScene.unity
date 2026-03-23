@@ -50179,6 +50179,10 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3302545406050912175, guid: ce18fb1bfda024936973ca895c2667f2, type: 3}
+      propertyPath: smashSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 26122df41f6d23b4fb51d132b9b5f214, type: 3}
     - target: {fileID: 3767659853937482063, guid: ce18fb1bfda024936973ca895c2667f2, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.7
@@ -50391,6 +50395,10 @@ PrefabInstance:
       propertyPath: m_LocalPosition.x
       value: 4.8450003
       objectReference: {fileID: 0}
+    - target: {fileID: 7197500553211369046, guid: ce18fb1bfda024936973ca895c2667f2, type: 3}
+      propertyPath: cutSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 318fe9d51e2f2034e90c75e34ec8bbb4, type: 3}
     - target: {fileID: 8222351949784414489, guid: ce18fb1bfda024936973ca895c2667f2, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.7
