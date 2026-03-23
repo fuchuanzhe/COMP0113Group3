@@ -42,6 +42,19 @@ public class WordScanManager : MonoBehaviour
         return tableZone.gridOrigin.TransformPoint(localPos);
     }
 
+    private int CalculatePoints(string word)
+    {
+        int length = word.Length;
+        float multiplier = 1f;
+
+        if (length >= 10 && length <= 14)
+            multiplier = 1.5f;
+        else if (length == 15)
+            multiplier = 2f;
+
+        return Mathf.FloorToInt(length * multiplier);
+    }
+
     public void ScanWords()
     {
         if (gameManager != null && gameManager.IsGameEnded())
@@ -191,7 +204,7 @@ public class WordScanManager : MonoBehaviour
             {
                 Debug.Log($"<color=green>Valid word:</color> {word}");
 
-                int points = word.Length;
+                int points = CalculatePoints(word);
 
                 if (scoreManager != null)
                 {

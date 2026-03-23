@@ -23034,7 +23034,7 @@ struct U3CU3Ec_tEB482C1FAD595BD51A47BEA4EDB9F1CF1D9085E9_StaticFields
 struct U3CU3Ec_t3022502319866C96FEA49E8F5B080A1E31507577_StaticFields
 {
 	U3CU3Ec_t3022502319866C96FEA49E8F5B080A1E31507577* ___U3CU3E9;
-	Func_2_tD405B678AA6269AE97FB3582F3158147036EDDB2* ___U3CU3E9__16_0;
+	Func_2_tD405B678AA6269AE97FB3582F3158147036EDDB2* ___U3CU3E9__17_0;
 };
 struct CalculateBaseCurlThumb_00000153U24BurstDirectCall_t70087E2BBD175F8556A063A2D059563ACA315D35_StaticFields
 {
@@ -27340,7 +27340,7 @@ IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable10715[3] =
 	static_cast<int32_t>(sizeof(RuntimeObject)),0,0,};
 IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable10716[2] = 
 {
-	static_cast<int32_t>(offsetof(U3CU3Ec_t3022502319866C96FEA49E8F5B080A1E31507577_StaticFields, ___U3CU3E9)),static_cast<int32_t>(offsetof(U3CU3Ec_t3022502319866C96FEA49E8F5B080A1E31507577_StaticFields, ___U3CU3E9__16_0)),};
+	static_cast<int32_t>(offsetof(U3CU3Ec_t3022502319866C96FEA49E8F5B080A1E31507577_StaticFields, ___U3CU3E9)),static_cast<int32_t>(offsetof(U3CU3Ec_t3022502319866C96FEA49E8F5B080A1E31507577_StaticFields, ___U3CU3E9__17_0)),};
 IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable10717[12] = 
 {
 	static_cast<int32_t>(offsetof(WordScanManager_t5DFA8AA7ED2E7C3224B27D3CA0955AC965052C11, ___gameManager)),static_cast<int32_t>(offsetof(WordScanManager_t5DFA8AA7ED2E7C3224B27D3CA0955AC965052C11, ___playerType)),static_cast<int32_t>(offsetof(WordScanManager_t5DFA8AA7ED2E7C3224B27D3CA0955AC965052C11, ___tableZone)),static_cast<int32_t>(offsetof(WordScanManager_t5DFA8AA7ED2E7C3224B27D3CA0955AC965052C11, ___validator)),static_cast<int32_t>(offsetof(WordScanManager_t5DFA8AA7ED2E7C3224B27D3CA0955AC965052C11, ___sceneObjectValidator)),static_cast<int32_t>(offsetof(WordScanManager_t5DFA8AA7ED2E7C3224B27D3CA0955AC965052C11, ___scoreManager)),static_cast<int32_t>(offsetof(WordScanManager_t5DFA8AA7ED2E7C3224B27D3CA0955AC965052C11, ___detectionZone)),static_cast<int32_t>(offsetof(WordScanManager_t5DFA8AA7ED2E7C3224B27D3CA0955AC965052C11, ___allowHorizontal)),static_cast<int32_t>(offsetof(WordScanManager_t5DFA8AA7ED2E7C3224B27D3CA0955AC965052C11, ___allowVertical)),static_cast<int32_t>(offsetof(WordScanManager_t5DFA8AA7ED2E7C3224B27D3CA0955AC965052C11, ___minWordLength)),static_cast<int32_t>(offsetof(WordScanManager_t5DFA8AA7ED2E7C3224B27D3CA0955AC965052C11, ___maxHeightAboveTable)),static_cast<int32_t>(offsetof(WordScanManager_t5DFA8AA7ED2E7C3224B27D3CA0955AC965052C11, ___maxHorizontalOffsetToCellCenter)),};

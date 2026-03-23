@@ -730,7 +730,7 @@ IL2CPP_EXTERN_C const RuntimeMethod* U3CU3Ec_U3CCleanupSeatsU3Eb__20_0_m98A80313
 IL2CPP_EXTERN_C const RuntimeMethod* U3CU3Ec_U3CCleanupSeatsU3Eb__20_1_mE5145D608A36C58A34B06CEE755520B5D6919D1D_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* U3CU3Ec_U3CMoveToSeatsU3Eb__16_0_m3F4E97EDD9047F691CB6C2F3D8D6B67FDDE81984_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* U3CU3Ec_U3CMoveToSeatsU3Eb__16_1_m4FE5FFC1C7501E923D5DD7DB2E2BDD5E56A56375_RuntimeMethod_var;
-IL2CPP_EXTERN_C const RuntimeMethod* U3CU3Ec_U3CScanDirectionU3Eb__16_0_m6620A9C8AE7AFB3EAF986097C4655CF943DA0217_RuntimeMethod_var;
+IL2CPP_EXTERN_C const RuntimeMethod* U3CU3Ec_U3CScanDirectionU3Eb__17_0_m172853E8A736280660F1CFFAFC6EC1BA61660541_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* UnityEvent_1_AddListener_m58BD029288EB53E8C5D3BD2A0FF7EC39284A7421_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* UnityEvent_1_AddListener_m84DD6D5B7DEA12DA2FB966EEF5E172ED5323D810_RuntimeMethod_var;
 IL2CPP_EXTERN_C const RuntimeMethod* UnityEvent_1_AddListener_mAE71681FB0832FD7DBA813E5ADDBA574EA32EED2_RuntimeMethod_var;
@@ -4180,7 +4180,7 @@ struct U3CU3Ec_t85CCE64AB8B9A3D6939E3ADAB341EF8615034820_StaticFields
 struct U3CU3Ec_t3022502319866C96FEA49E8F5B080A1E31507577_StaticFields
 {
 	U3CU3Ec_t3022502319866C96FEA49E8F5B080A1E31507577* ___U3CU3E9;
-	Func_2_tD405B678AA6269AE97FB3582F3158147036EDDB2* ___U3CU3E9__16_0;
+	Func_2_tD405B678AA6269AE97FB3582F3158147036EDDB2* ___U3CU3E9__17_0;
 };
 struct Boolean_t09A6377A54BE2F9E6985A8149F19234FD7DDFE22_StaticFields
 {
@@ -5787,6 +5787,7 @@ inline bool Enumerator_MoveNext_m4235C59F7CDFCADA64416F44D70922B6B08F7F8C (Enume
 	return ((  bool (*) (Enumerator_t6735A01E8624C9A5B4DA2461922D3D4CEF85DFDA*, const RuntimeMethod*))Enumerator_MoveNext_mE921CC8F29FBBDE7CC3209A0ED0D921D58D00BCB_gshared)(__this, method);
 }
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool WordValidator_CheckWord_m55775AC32D645FFE2013D64CD40BE1D344CE718E (WordValidator_t0FC7E088593716BE97A671FBE4A3B870B7C72FA2* __this, String_t* ___0_input, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t WordScanManager_CalculatePoints_m281F24B3BB34B9D7751A1B899333D075C52648DF (WordScanManager_t5DFA8AA7ED2E7C3224B27D3CA0955AC965052C11* __this, String_t* ___0_word, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ScoreManager_AddPlayer1Score_m1FB7C03FCC00B3EA1220FA752ADE9077571CC9B5 (ScoreManager_t86D4A06D4B38717B8C529883F37DA25BA5750F39* __this, int32_t ___0_amount, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ScoreManager_AddPlayer2Score_m29E7EB1290EF76096CB04DA3F35B4844E821D547 (ScoreManager_t86D4A06D4B38717B8C529883F37DA25BA5750F39* __this, int32_t ___0_amount, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SpawnableObject_BroadcastActiveSelf_m22C0FF174127BC6D81FCD930EB197B5E77C95CA4 (SpawnableObject_tB01492418378D7AE527A7C2936955B071EC7B7FA* __this, bool ___0_isActive, const RuntimeMethod* method) ;
@@ -22017,6 +22018,64 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A
 	}
 }
 // Method Definition Index: 86005
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t WordScanManager_CalculatePoints_m281F24B3BB34B9D7751A1B899333D075C52648DF (WordScanManager_t5DFA8AA7ED2E7C3224B27D3CA0955AC965052C11* __this, String_t* ___0_word, const RuntimeMethod* method) 
+{
+	int32_t V_0 = 0;
+	float V_1 = 0.0f;
+	{
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:47>
+		String_t* L_0 = ___0_word;
+		NullCheck(L_0);
+		int32_t L_1;
+		L_1 = String_get_Length_m42625D67623FA5CC7A44D47425CE86FB946542D2_inline(L_0, NULL);
+		V_0 = L_1;
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:48>
+		V_1 = (1.0f);
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:50>
+		int32_t L_2 = V_0;
+		if ((((int32_t)L_2) < ((int32_t)((int32_t)10))))
+		{
+			goto IL_001f;
+		}
+	}
+	{
+		int32_t L_3 = V_0;
+		if ((((int32_t)L_3) > ((int32_t)((int32_t)14))))
+		{
+			goto IL_001f;
+		}
+	}
+	{
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:51>
+		V_1 = (1.20000005f);
+		goto IL_002a;
+	}
+
+IL_001f:
+	{
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:52>
+		int32_t L_4 = V_0;
+		if ((!(((uint32_t)L_4) == ((uint32_t)((int32_t)15)))))
+		{
+			goto IL_002a;
+		}
+	}
+	{
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:53>
+		V_1 = (1.5f);
+	}
+
+IL_002a:
+	{
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:55>
+		int32_t L_5 = V_0;
+		float L_6 = V_1;
+		int32_t L_7;
+		L_7 = Mathf_FloorToInt_m2A39AE881CAEE6B6A4B3BFEF9CA1ED40625F5AB7_inline(((float)il2cpp_codegen_multiply(((float)L_5), L_6)), NULL);
+		return L_7;
+	}
+}
+// Method Definition Index: 86006
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void WordScanManager_ScanWords_m1FD4DEB672A4C57259B856F3AEE078665089A01C (WordScanManager_t5DFA8AA7ED2E7C3224B27D3CA0955AC965052C11* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -22064,7 +22123,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void WordScanManager_ScanWords_m1FD4DEB672A4C
 	Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 V_15;
 	memset((&V_15), 0, sizeof(V_15));
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:47>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:60>
 		GameManager_tFE129A0017AF5BBD30FDCD4403B9CCEAE064C6B6* L_0 = __this->___gameManager;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_1;
@@ -22085,16 +22144,16 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void WordScanManager_ScanWords_m1FD4DEB672A4C
 		}
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:49>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:62>
 		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 		Debug_Log_m87A9A3C761FF5C43ED8A53B16190A53D08F818BB(_stringLiteral0DA060BDF2731AE73BDDAE14A5A16860D68CA684, NULL);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:50>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:63>
 		return;
 	}
 
 IL_0026:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:53>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:66>
 		TableSnapZone_t98DB6E46409D9D63B767218E4B11C273A4015EA7* L_4 = __this->___tableZone;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_5;
@@ -22137,22 +22196,22 @@ IL_0026:
 
 IL_005e:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:55>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:68>
 		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 		Debug_LogWarning_m33EF1B897E0C7C6FF538989610BFAFFEF4628CA9(_stringLiteral2A1EB1FD1D2B68766F4AC8DA0F106F82D9BDA39D, NULL);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:56>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:69>
 		return;
 	}
 
 IL_0069:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:59>
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:60>
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:61>
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:62>
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:63>
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:64>
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:65>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:72>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:73>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:74>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:75>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:76>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:77>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:78>
 		BoxCollider_tFA5D239388334D6DE0B8FFDAD6825C5B03786E23* L_12 = __this->___detectionZone;
 		NullCheck(L_12);
 		Bounds_t367E830C64BBF235ED8C3B2F8CF6254FDCAD39C3 L_13;
@@ -22177,11 +22236,11 @@ IL_0069:
 		il2cpp_codegen_runtime_class_init_inline(Physics_t1244C2983AEAFA149425AFFC3DF53BC91C18ED56_il2cpp_TypeInfo_var);
 		ColliderU5BU5D_t94A9D70F63D095AFF2A9B4613012A5F7F3141787* L_21;
 		L_21 = Physics_OverlapBox_mC38B579DEFD0341FCAEF8B8EC8B1E37A2C12366D(L_14, L_17, L_20, (-1), 1, NULL);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:67>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:80>
 		HashSet_1_tC6CC68EEF8568891A7F0FC4B2435372BD4EE9CFD* L_22 = (HashSet_1_tC6CC68EEF8568891A7F0FC4B2435372BD4EE9CFD*)il2cpp_codegen_object_new(HashSet_1_tC6CC68EEF8568891A7F0FC4B2435372BD4EE9CFD_il2cpp_TypeInfo_var);
 		HashSet_1__ctor_m355565FB374431AF255ADA72155ABADFAC6023A2(L_22, HashSet_1__ctor_m355565FB374431AF255ADA72155ABADFAC6023A2_RuntimeMethod_var);
 		V_0 = L_22;
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:69>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:82>
 		V_6 = L_21;
 		V_7 = 0;
 		goto IL_00e7;
@@ -22189,14 +22248,14 @@ IL_0069:
 
 IL_00b5:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:69>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:82>
 		ColliderU5BU5D_t94A9D70F63D095AFF2A9B4613012A5F7F3141787* L_23 = V_6;
 		int32_t L_24 = V_7;
 		NullCheck(L_23);
 		int32_t L_25 = L_24;
 		Collider_t1CC3163924FCD6C4CC2E816373A929C1E3D55E76* L_26 = (L_23)->GetAt(static_cast<il2cpp_array_size_t>(L_25));
 		V_8 = L_26;
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:71>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:84>
 		Collider_t1CC3163924FCD6C4CC2E816373A929C1E3D55E76* L_27 = V_8;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_28;
@@ -22207,13 +22266,13 @@ IL_00b5:
 		}
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:73>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:86>
 		Collider_t1CC3163924FCD6C4CC2E816373A929C1E3D55E76* L_29 = V_8;
 		NullCheck(L_29);
 		LetterTile_tB20E0D5265E6DEC4F697C65EBC185582BA0E3541* L_30;
 		L_30 = Component_GetComponentInParent_TisLetterTile_tB20E0D5265E6DEC4F697C65EBC185582BA0E3541_m92E7B10907D22B1792FAE847142614C7DFBC1B6A(L_29, Component_GetComponentInParent_TisLetterTile_tB20E0D5265E6DEC4F697C65EBC185582BA0E3541_m92E7B10907D22B1792FAE847142614C7DFBC1B6A_RuntimeMethod_var);
 		V_9 = L_30;
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:74>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:87>
 		LetterTile_tB20E0D5265E6DEC4F697C65EBC185582BA0E3541* L_31 = V_9;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_32;
@@ -22224,7 +22283,7 @@ IL_00b5:
 		}
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:75>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:88>
 		HashSet_1_tC6CC68EEF8568891A7F0FC4B2435372BD4EE9CFD* L_33 = V_0;
 		LetterTile_tB20E0D5265E6DEC4F697C65EBC185582BA0E3541* L_34 = V_9;
 		NullCheck(L_33);
@@ -22240,7 +22299,7 @@ IL_00e1:
 
 IL_00e7:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:69>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:82>
 		int32_t L_37 = V_7;
 		ColliderU5BU5D_t94A9D70F63D095AFF2A9B4613012A5F7F3141787* L_38 = V_6;
 		NullCheck(L_38);
@@ -22250,12 +22309,12 @@ IL_00e7:
 		}
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:78>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:91>
 		HashSet_1_tC6CC68EEF8568891A7F0FC4B2435372BD4EE9CFD* L_39 = V_0;
 		LetterTileU5BU5D_t59EDDCEA1B9A2F5C673BFBE24B9F52DD79789F57* L_40;
 		L_40 = Enumerable_ToArray_TisLetterTile_tB20E0D5265E6DEC4F697C65EBC185582BA0E3541_mBFB6B0A4755D2F316D10E962284412BF3A731B83(L_39, Enumerable_ToArray_TisLetterTile_tB20E0D5265E6DEC4F697C65EBC185582BA0E3541_mBFB6B0A4755D2F316D10E962284412BF3A731B83_RuntimeMethod_var);
 		V_1 = L_40;
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:80>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:93>
 		LetterTileU5BU5D_t59EDDCEA1B9A2F5C673BFBE24B9F52DD79789F57* L_41 = V_1;
 		V_10 = L_41;
 		V_7 = 0;
@@ -22264,13 +22323,13 @@ IL_00e7:
 
 IL_00fe:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:80>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:93>
 		LetterTileU5BU5D_t59EDDCEA1B9A2F5C673BFBE24B9F52DD79789F57* L_42 = V_10;
 		int32_t L_43 = V_7;
 		NullCheck(L_42);
 		int32_t L_44 = L_43;
 		LetterTile_tB20E0D5265E6DEC4F697C65EBC185582BA0E3541* L_45 = (L_42)->GetAt(static_cast<il2cpp_array_size_t>(L_44));
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:82>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:95>
 		NullCheck(L_45);
 		LetterTile_RestoreOriginalColor_mF6E472449A2DFCD1B01F1ABEF693A31C6209C94E(L_45, NULL);
 		int32_t L_46 = V_7;
@@ -22279,7 +22338,7 @@ IL_00fe:
 
 IL_010e:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:80>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:93>
 		int32_t L_47 = V_7;
 		LetterTileU5BU5D_t59EDDCEA1B9A2F5C673BFBE24B9F52DD79789F57* L_48 = V_10;
 		NullCheck(L_48);
@@ -22289,11 +22348,11 @@ IL_010e:
 		}
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:85>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:98>
 		Dictionary_2_tC4ACFBC4FA9DEC0736DD419613BD13FAF9350EA6* L_49 = (Dictionary_2_tC4ACFBC4FA9DEC0736DD419613BD13FAF9350EA6*)il2cpp_codegen_object_new(Dictionary_2_tC4ACFBC4FA9DEC0736DD419613BD13FAF9350EA6_il2cpp_TypeInfo_var);
 		Dictionary_2__ctor_m77B61C2FA8B5BDC3122DB7FE64BB293623DD368C(L_49, Dictionary_2__ctor_m77B61C2FA8B5BDC3122DB7FE64BB293623DD368C_RuntimeMethod_var);
 		V_2 = L_49;
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:87>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:100>
 		TableSnapZone_t98DB6E46409D9D63B767218E4B11C273A4015EA7* L_50 = __this->___tableZone;
 		NullCheck(L_50);
 		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_51 = L_50->___gridOrigin;
@@ -22302,7 +22361,7 @@ IL_010e:
 		L_52 = Transform_get_position_m69CD5FA214FDAE7BB701552943674846C220FDE1(L_51, NULL);
 		float L_53 = L_52.___y;
 		V_3 = L_53;
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:89>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:102>
 		LetterTileU5BU5D_t59EDDCEA1B9A2F5C673BFBE24B9F52DD79789F57* L_54 = V_1;
 		V_10 = L_54;
 		V_7 = 0;
@@ -22311,14 +22370,14 @@ IL_010e:
 
 IL_013d:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:89>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:102>
 		LetterTileU5BU5D_t59EDDCEA1B9A2F5C673BFBE24B9F52DD79789F57* L_55 = V_10;
 		int32_t L_56 = V_7;
 		NullCheck(L_55);
 		int32_t L_57 = L_56;
 		LetterTile_tB20E0D5265E6DEC4F697C65EBC185582BA0E3541* L_58 = (L_55)->GetAt(static_cast<il2cpp_array_size_t>(L_57));
 		V_11 = L_58;
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:91>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:104>
 		LetterTile_tB20E0D5265E6DEC4F697C65EBC185582BA0E3541* L_59 = V_11;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_60;
@@ -22329,7 +22388,7 @@ IL_013d:
 		}
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:93>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:106>
 		LetterTile_tB20E0D5265E6DEC4F697C65EBC185582BA0E3541* L_61 = V_11;
 		NullCheck(L_61);
 		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_62;
@@ -22338,7 +22397,7 @@ IL_013d:
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_63;
 		L_63 = Transform_get_position_m69CD5FA214FDAE7BB701552943674846C220FDE1(L_62, NULL);
 		V_12 = L_63;
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:96>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:109>
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_64 = V_12;
 		float L_65 = L_64.___y;
 		float L_66 = V_3;
@@ -22351,14 +22410,14 @@ IL_013d:
 		}
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:99>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:112>
 		TableSnapZone_t98DB6E46409D9D63B767218E4B11C273A4015EA7* L_69 = __this->___tableZone;
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_70 = V_12;
 		NullCheck(L_69);
 		Vector2Int_t69B2886EBAB732D9B880565E18E7568F3DE0CE6A L_71;
 		L_71 = TableSnapZone_WorldToCell_mAB8142B1C7D51A19A5FF201125A4463720A05847(L_69, L_70, NULL);
 		V_13 = L_71;
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:102>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:115>
 		Vector2Int_t69B2886EBAB732D9B880565E18E7568F3DE0CE6A L_72 = V_13;
 		bool L_73;
 		L_73 = WordScanManager_IsInsideGrid_mA361D8005CA6A8B125A99D6C1FAA6F7980C1FFC1(__this, L_72, NULL);
@@ -22368,12 +22427,12 @@ IL_013d:
 		}
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:106>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:119>
 		Vector2Int_t69B2886EBAB732D9B880565E18E7568F3DE0CE6A L_74 = V_13;
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_75;
 		L_75 = WordScanManager_GetCellCenterWorld_m02F3D3EF20CF81C0722C12288857F396BBE0B439(__this, L_74, NULL);
 		V_14 = L_75;
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:107>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:120>
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_76 = V_12;
 		float L_77 = L_76.___x;
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_78 = V_14;
@@ -22383,7 +22442,7 @@ IL_013d:
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_82 = V_14;
 		float L_83 = L_82.___z;
 		Vector2__ctor_m9525B79969AFFE3254B303A40997A56DEEB6F548_inline((&V_15), ((float)il2cpp_codegen_subtract(L_77, L_79)), ((float)il2cpp_codegen_subtract(L_81, L_83)), NULL);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:109>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:122>
 		float L_84;
 		L_84 = Vector2_get_magnitude_m5C59B4056420AEFDB291AD0914A3F675330A75CE_inline((&V_15), NULL);
 		float L_85 = __this->___maxHorizontalOffsetToCellCenter;
@@ -22393,7 +22452,7 @@ IL_013d:
 		}
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:112>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:125>
 		Dictionary_2_tC4ACFBC4FA9DEC0736DD419613BD13FAF9350EA6* L_86 = V_2;
 		Vector2Int_t69B2886EBAB732D9B880565E18E7568F3DE0CE6A L_87 = V_13;
 		NullCheck(L_86);
@@ -22405,7 +22464,7 @@ IL_013d:
 		}
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:114>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:127>
 		Dictionary_2_tC4ACFBC4FA9DEC0736DD419613BD13FAF9350EA6* L_89 = V_2;
 		Vector2Int_t69B2886EBAB732D9B880565E18E7568F3DE0CE6A L_90 = V_13;
 		LetterTile_tB20E0D5265E6DEC4F697C65EBC185582BA0E3541* L_91 = V_11;
@@ -22416,7 +22475,7 @@ IL_013d:
 
 IL_01e5:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:118>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:131>
 		Vector2Int_t69B2886EBAB732D9B880565E18E7568F3DE0CE6A L_92 = V_13;
 		Vector2Int_t69B2886EBAB732D9B880565E18E7568F3DE0CE6A L_93 = L_92;
 		RuntimeObject* L_94 = Box(Vector2Int_t69B2886EBAB732D9B880565E18E7568F3DE0CE6A_il2cpp_TypeInfo_var, &L_93);
@@ -22438,7 +22497,7 @@ IL_0202:
 
 IL_0208:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:89>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:102>
 		int32_t L_99 = V_7;
 		LetterTileU5BU5D_t59EDDCEA1B9A2F5C673BFBE24B9F52DD79789F57* L_100 = V_10;
 		NullCheck(L_100);
@@ -22448,7 +22507,7 @@ IL_0208:
 		}
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:122>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:135>
 		Dictionary_2_tC4ACFBC4FA9DEC0736DD419613BD13FAF9350EA6* L_101 = V_2;
 		NullCheck(L_101);
 		int32_t L_102;
@@ -22459,11 +22518,11 @@ IL_0208:
 		L_105 = String_Format_mA8DBB4C2516B9723C5A41E6CB1E2FAF4BBE96DD8(_stringLiteral00C3E1B629ABC60EC0AF4A0296FC6A4E81981397, L_104, NULL);
 		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 		Debug_Log_m87A9A3C761FF5C43ED8A53B16190A53D08F818BB(L_105, NULL);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:124>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:137>
 		HashSet_1_tC6CC68EEF8568891A7F0FC4B2435372BD4EE9CFD* L_106 = (HashSet_1_tC6CC68EEF8568891A7F0FC4B2435372BD4EE9CFD*)il2cpp_codegen_object_new(HashSet_1_tC6CC68EEF8568891A7F0FC4B2435372BD4EE9CFD_il2cpp_TypeInfo_var);
 		HashSet_1__ctor_m355565FB374431AF255ADA72155ABADFAC6023A2(L_106, HashSet_1__ctor_m355565FB374431AF255ADA72155ABADFAC6023A2_RuntimeMethod_var);
 		V_4 = L_106;
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:126>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:139>
 		bool L_107 = __this->___allowHorizontal;
 		if (!L_107)
 		{
@@ -22471,7 +22530,7 @@ IL_0208:
 		}
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:127>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:140>
 		Dictionary_2_tC4ACFBC4FA9DEC0736DD419613BD13FAF9350EA6* L_108 = V_2;
 		HashSet_1_tC6CC68EEF8568891A7F0FC4B2435372BD4EE9CFD* L_109 = V_4;
 		Vector2Int_t69B2886EBAB732D9B880565E18E7568F3DE0CE6A L_110;
@@ -22481,7 +22540,7 @@ IL_0208:
 
 IL_024a:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:129>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:142>
 		bool L_111 = __this->___allowVertical;
 		if (!L_111)
 		{
@@ -22489,7 +22548,7 @@ IL_024a:
 		}
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:130>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:143>
 		Dictionary_2_tC4ACFBC4FA9DEC0736DD419613BD13FAF9350EA6* L_112 = V_2;
 		HashSet_1_tC6CC68EEF8568891A7F0FC4B2435372BD4EE9CFD* L_113 = V_4;
 		Vector2Int_t69B2886EBAB732D9B880565E18E7568F3DE0CE6A L_114;
@@ -22499,18 +22558,18 @@ IL_024a:
 
 IL_0260:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:131>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:144>
 		return;
 	}
 }
-// Method Definition Index: 86006
+// Method Definition Index: 86007
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool WordScanManager_IsInsideGrid_mA361D8005CA6A8B125A99D6C1FAA6F7980C1FFC1 (WordScanManager_t5DFA8AA7ED2E7C3224B27D3CA0955AC965052C11* __this, Vector2Int_t69B2886EBAB732D9B880565E18E7568F3DE0CE6A ___0_cell, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:135>
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:136>
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:137>
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:138>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:148>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:149>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:150>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:151>
 		int32_t L_0;
 		L_0 = Vector2Int_get_x_mA2CACB1B6E6B5AD0CCC32B2CD2EDCE3ECEB50576_inline((&___0_cell), NULL);
 		if ((((int32_t)L_0) < ((int32_t)0)))
@@ -22555,7 +22614,7 @@ IL_0047:
 		return (bool)0;
 	}
 }
-// Method Definition Index: 86007
+// Method Definition Index: 86008
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void WordScanManager_ScanDirection_m6E154F32D3313344C4481DA302CE19D8476D1B77 (WordScanManager_t5DFA8AA7ED2E7C3224B27D3CA0955AC965052C11* __this, Dictionary_2_tC4ACFBC4FA9DEC0736DD419613BD13FAF9350EA6* ___0_cellMap, HashSet_1_tC6CC68EEF8568891A7F0FC4B2435372BD4EE9CFD* ___1_processed, Vector2Int_t69B2886EBAB732D9B880565E18E7568F3DE0CE6A ___2_dir, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -22588,7 +22647,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void WordScanManager_ScanDirection_m6E154F32D
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&List_1_t83778CDC4C8C3A5FD32A661A4D241173450265A1_il2cpp_TypeInfo_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&List_1_tB56F1028A724D2CE4E84861619D1CF68C68C983D_il2cpp_TypeInfo_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&U3CU3Ec_U3CScanDirectionU3Eb__16_0_m6620A9C8AE7AFB3EAF986097C4655CF943DA0217_RuntimeMethod_var);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&U3CU3Ec_U3CScanDirectionU3Eb__17_0_m172853E8A736280660F1CFFAFC6EC1BA61660541_RuntimeMethod_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&U3CU3Ec_t3022502319866C96FEA49E8F5B080A1E31507577_il2cpp_TypeInfo_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral2C29EDA00603EB942176E774B171B57C65ACE9B5);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteralA02D0A7615CA3C2CAA7E174375A3C7D2637015AD);
@@ -22622,7 +22681,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void WordScanManager_ScanDirection_m6E154F32D
 	Func_2_tD405B678AA6269AE97FB3582F3158147036EDDB2* G_B9_0 = NULL;
 	List_1_t83778CDC4C8C3A5FD32A661A4D241173450265A1* G_B9_1 = NULL;
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:146>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:159>
 		Dictionary_2_tC4ACFBC4FA9DEC0736DD419613BD13FAF9350EA6* L_0 = ___0_cellMap;
 		NullCheck(L_0);
 		Enumerator_tFF340CA8493E02027982A6FE053D70619046A55D L_1;
@@ -22633,7 +22692,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void WordScanManager_ScanDirection_m6E154F32D
 		auto __finallyBlock = il2cpp::utils::Finally([&]
 		{
 
-FINALLY_0283:
+FINALLY_0284:
 			{
 				Enumerator_Dispose_mBDD8EA06898CC08B2F2058F07DF78A3EA2872FA4((&V_0), Enumerator_Dispose_mBDD8EA06898CC08B2F2058F07DF78A3EA2872FA4_RuntimeMethod_var);
 				return;
@@ -22642,24 +22701,24 @@ FINALLY_0283:
 		try
 		{
 			{
-				goto IL_0275_1;
+				goto IL_0276_1;
 			}
 
 IL_000c_1:
 			{
-				//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:146>
+				//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:159>
 				KeyValuePair_2_t511D37B06E6BE8B21BCF130017D75ED906C9A7C6 L_2;
 				L_2 = Enumerator_get_Current_mDC991AC7C8F05903C8A8A8977D5F2D855923BAA2_inline((&V_0), Enumerator_get_Current_mDC991AC7C8F05903C8A8A8977D5F2D855923BAA2_RuntimeMethod_var);
 				V_1 = L_2;
-				//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:148>
+				//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:161>
 				Vector2Int_t69B2886EBAB732D9B880565E18E7568F3DE0CE6A L_3;
 				L_3 = KeyValuePair_2_get_Key_m5D88AEFDEF6624A1BF757689A44D1417B25BEA0A_inline((&V_1), KeyValuePair_2_get_Key_m5D88AEFDEF6624A1BF757689A44D1417B25BEA0A_RuntimeMethod_var);
 				V_2 = L_3;
-				//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:149>
+				//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:162>
 				LetterTile_tB20E0D5265E6DEC4F697C65EBC185582BA0E3541* L_4;
 				L_4 = KeyValuePair_2_get_Value_m8EF8C2FAA73F7F3CD93755201B8C2EA928ADAC9A_inline((&V_1), KeyValuePair_2_get_Value_m8EF8C2FAA73F7F3CD93755201B8C2EA928ADAC9A_RuntimeMethod_var);
 				V_3 = L_4;
-				//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:151>
+				//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:164>
 				HashSet_1_tC6CC68EEF8568891A7F0FC4B2435372BD4EE9CFD* L_5 = ___1_processed;
 				LetterTile_tB20E0D5265E6DEC4F697C65EBC185582BA0E3541* L_6 = V_3;
 				NullCheck(L_5);
@@ -22667,17 +22726,17 @@ IL_000c_1:
 				L_7 = HashSet_1_Contains_m411C89F3D656227FD71A3AFA7BB25033BA415E39(L_5, L_6, HashSet_1_Contains_m411C89F3D656227FD71A3AFA7BB25033BA415E39_RuntimeMethod_var);
 				if (L_7)
 				{
-					goto IL_0275_1;
+					goto IL_0276_1;
 				}
 			}
 			{
-				//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:154>
+				//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:167>
 				Vector2Int_t69B2886EBAB732D9B880565E18E7568F3DE0CE6A L_8 = V_2;
 				Vector2Int_t69B2886EBAB732D9B880565E18E7568F3DE0CE6A L_9 = ___2_dir;
 				Vector2Int_t69B2886EBAB732D9B880565E18E7568F3DE0CE6A L_10;
 				L_10 = Vector2Int_op_Subtraction_m5C9A4D049F8EE288878F37C991CA1BBB738D8059_inline(L_8, L_9, NULL);
 				V_4 = L_10;
-				//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:155>
+				//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:168>
 				Dictionary_2_tC4ACFBC4FA9DEC0736DD419613BD13FAF9350EA6* L_11 = ___0_cellMap;
 				Vector2Int_t69B2886EBAB732D9B880565E18E7568F3DE0CE6A L_12 = V_4;
 				NullCheck(L_11);
@@ -22685,26 +22744,26 @@ IL_000c_1:
 				L_13 = Dictionary_2_ContainsKey_m879213F7A630B58B08F2EA627D88B25A92953577(L_11, L_12, Dictionary_2_ContainsKey_m879213F7A630B58B08F2EA627D88B25A92953577_RuntimeMethod_var);
 				if (L_13)
 				{
-					goto IL_0275_1;
+					goto IL_0276_1;
 				}
 			}
 			{
-				//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:158>
+				//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:171>
 				List_1_t83778CDC4C8C3A5FD32A661A4D241173450265A1* L_14 = (List_1_t83778CDC4C8C3A5FD32A661A4D241173450265A1*)il2cpp_codegen_object_new(List_1_t83778CDC4C8C3A5FD32A661A4D241173450265A1_il2cpp_TypeInfo_var);
 				List_1__ctor_m3BF79E5ECB5ACC0F1F04369227155B54420C4A2F(L_14, List_1__ctor_m3BF79E5ECB5ACC0F1F04369227155B54420C4A2F_RuntimeMethod_var);
 				V_5 = L_14;
-				//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:159>
+				//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:172>
 				List_1_tB56F1028A724D2CE4E84861619D1CF68C68C983D* L_15 = (List_1_tB56F1028A724D2CE4E84861619D1CF68C68C983D*)il2cpp_codegen_object_new(List_1_tB56F1028A724D2CE4E84861619D1CF68C68C983D_il2cpp_TypeInfo_var);
 				List_1__ctor_mE1D9FD9DA1EF2CAC4F99EF4E013F05BB8C3507EF(L_15, List_1__ctor_mE1D9FD9DA1EF2CAC4F99EF4E013F05BB8C3507EF_RuntimeMethod_var);
 				V_6 = L_15;
-				//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:161>
+				//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:174>
 				Vector2Int_t69B2886EBAB732D9B880565E18E7568F3DE0CE6A L_16 = V_2;
 				V_7 = L_16;
 			}
 
 IL_0057_1:
 			{
-				//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:162>
+				//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:175>
 				Dictionary_2_tC4ACFBC4FA9DEC0736DD419613BD13FAF9350EA6* L_17 = ___0_cellMap;
 				Vector2Int_t69B2886EBAB732D9B880565E18E7568F3DE0CE6A L_18 = V_7;
 				NullCheck(L_17);
@@ -22716,35 +22775,35 @@ IL_0057_1:
 				}
 			}
 			{
-				//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:164>
+				//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:177>
 				List_1_t83778CDC4C8C3A5FD32A661A4D241173450265A1* L_20 = V_5;
 				LetterTile_tB20E0D5265E6DEC4F697C65EBC185582BA0E3541* L_21 = V_9;
 				NullCheck(L_20);
 				List_1_Add_m129D9D6C136541FC16EE70BAE863FC5EC633E96E_inline(L_20, L_21, List_1_Add_m129D9D6C136541FC16EE70BAE863FC5EC633E96E_RuntimeMethod_var);
-				//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:165>
+				//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:178>
 				List_1_tB56F1028A724D2CE4E84861619D1CF68C68C983D* L_22 = V_6;
 				Vector2Int_t69B2886EBAB732D9B880565E18E7568F3DE0CE6A L_23 = V_7;
 				NullCheck(L_22);
 				List_1_Add_m771AC7A01DFC931CCCFCCF949C1F4D56B5E98A1B_inline(L_22, L_23, List_1_Add_m771AC7A01DFC931CCCFCCF949C1F4D56B5E98A1B_RuntimeMethod_var);
-				//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:166>
+				//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:179>
 				HashSet_1_tC6CC68EEF8568891A7F0FC4B2435372BD4EE9CFD* L_24 = ___1_processed;
 				LetterTile_tB20E0D5265E6DEC4F697C65EBC185582BA0E3541* L_25 = V_9;
 				NullCheck(L_24);
 				bool L_26;
 				L_26 = HashSet_1_Add_mBB6D1B905FC34E06669E5AEFFC7EA590E67015AB(L_24, L_25, HashSet_1_Add_mBB6D1B905FC34E06669E5AEFFC7EA590E67015AB_RuntimeMethod_var);
-				//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:167>
+				//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:180>
 				Vector2Int_t69B2886EBAB732D9B880565E18E7568F3DE0CE6A L_27 = V_7;
 				Vector2Int_t69B2886EBAB732D9B880565E18E7568F3DE0CE6A L_28 = ___2_dir;
 				Vector2Int_t69B2886EBAB732D9B880565E18E7568F3DE0CE6A L_29;
 				L_29 = Vector2Int_op_Addition_m6358133A28BA913D2080FD44472D1FD1CE1AC28F_inline(L_27, L_28, NULL);
 				V_7 = L_29;
-				//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:168>
+				//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:181>
 				goto IL_0057_1;
 			}
 
 IL_008a_1:
 			{
-				//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:170>
+				//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:183>
 				List_1_t83778CDC4C8C3A5FD32A661A4D241173450265A1* L_30 = V_5;
 				NullCheck(L_30);
 				int32_t L_31;
@@ -22752,14 +22811,14 @@ IL_008a_1:
 				int32_t L_32 = __this->___minWordLength;
 				if ((((int32_t)L_31) < ((int32_t)L_32)))
 				{
-					goto IL_0275_1;
+					goto IL_0276_1;
 				}
 			}
 			{
-				//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:173>
+				//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:186>
 				List_1_t83778CDC4C8C3A5FD32A661A4D241173450265A1* L_33 = V_5;
 				il2cpp_codegen_runtime_class_init_inline(U3CU3Ec_t3022502319866C96FEA49E8F5B080A1E31507577_il2cpp_TypeInfo_var);
-				Func_2_tD405B678AA6269AE97FB3582F3158147036EDDB2* L_34 = ((U3CU3Ec_t3022502319866C96FEA49E8F5B080A1E31507577_StaticFields*)il2cpp_codegen_static_fields_for(U3CU3Ec_t3022502319866C96FEA49E8F5B080A1E31507577_il2cpp_TypeInfo_var))->___U3CU3E9__16_0;
+				Func_2_tD405B678AA6269AE97FB3582F3158147036EDDB2* L_34 = ((U3CU3Ec_t3022502319866C96FEA49E8F5B080A1E31507577_StaticFields*)il2cpp_codegen_static_fields_for(U3CU3Ec_t3022502319866C96FEA49E8F5B080A1E31507577_il2cpp_TypeInfo_var))->___U3CU3E9__17_0;
 				Func_2_tD405B678AA6269AE97FB3582F3158147036EDDB2* L_35 = L_34;
 				if (L_35)
 				{
@@ -22774,10 +22833,10 @@ IL_008a_1:
 				il2cpp_codegen_runtime_class_init_inline(U3CU3Ec_t3022502319866C96FEA49E8F5B080A1E31507577_il2cpp_TypeInfo_var);
 				U3CU3Ec_t3022502319866C96FEA49E8F5B080A1E31507577* L_36 = ((U3CU3Ec_t3022502319866C96FEA49E8F5B080A1E31507577_StaticFields*)il2cpp_codegen_static_fields_for(U3CU3Ec_t3022502319866C96FEA49E8F5B080A1E31507577_il2cpp_TypeInfo_var))->___U3CU3E9;
 				Func_2_tD405B678AA6269AE97FB3582F3158147036EDDB2* L_37 = (Func_2_tD405B678AA6269AE97FB3582F3158147036EDDB2*)il2cpp_codegen_object_new(Func_2_tD405B678AA6269AE97FB3582F3158147036EDDB2_il2cpp_TypeInfo_var);
-				Func_2__ctor_mBB82CE45173326DE27FDA4A8A0BD2887B6CE55D4(L_37, L_36, (intptr_t)((void*)U3CU3Ec_U3CScanDirectionU3Eb__16_0_m6620A9C8AE7AFB3EAF986097C4655CF943DA0217_RuntimeMethod_var), NULL);
+				Func_2__ctor_mBB82CE45173326DE27FDA4A8A0BD2887B6CE55D4(L_37, L_36, (intptr_t)((void*)U3CU3Ec_U3CScanDirectionU3Eb__17_0_m172853E8A736280660F1CFFAFC6EC1BA61660541_RuntimeMethod_var), NULL);
 				Func_2_tD405B678AA6269AE97FB3582F3158147036EDDB2* L_38 = L_37;
-				((U3CU3Ec_t3022502319866C96FEA49E8F5B080A1E31507577_StaticFields*)il2cpp_codegen_static_fields_for(U3CU3Ec_t3022502319866C96FEA49E8F5B080A1E31507577_il2cpp_TypeInfo_var))->___U3CU3E9__16_0 = L_38;
-				Il2CppCodeGenWriteBarrier((void**)(&((U3CU3Ec_t3022502319866C96FEA49E8F5B080A1E31507577_StaticFields*)il2cpp_codegen_static_fields_for(U3CU3Ec_t3022502319866C96FEA49E8F5B080A1E31507577_il2cpp_TypeInfo_var))->___U3CU3E9__16_0), (void*)L_38);
+				((U3CU3Ec_t3022502319866C96FEA49E8F5B080A1E31507577_StaticFields*)il2cpp_codegen_static_fields_for(U3CU3Ec_t3022502319866C96FEA49E8F5B080A1E31507577_il2cpp_TypeInfo_var))->___U3CU3E9__17_0 = L_38;
+				Il2CppCodeGenWriteBarrier((void**)(&((U3CU3Ec_t3022502319866C96FEA49E8F5B080A1E31507577_StaticFields*)il2cpp_codegen_static_fields_for(U3CU3Ec_t3022502319866C96FEA49E8F5B080A1E31507577_il2cpp_TypeInfo_var))->___U3CU3E9__17_0), (void*)L_38);
 				G_B10_0 = L_38;
 				G_B10_1 = G_B9_1;
 			}
@@ -22792,7 +22851,7 @@ IL_00bd_1:
 				String_t* L_41;
 				L_41 = String_ToLower_m6191ABA3DC514ED47C10BDA23FD0DDCEAE7ACFBD(L_40, NULL);
 				V_8 = L_41;
-				//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:175>
+				//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:188>
 				SceneObjectValidator_tBCB8A5AB6293DD4C8DFC7BBB492E65DC59CB2E32* L_42 = __this->___sceneObjectValidator;
 				String_t* L_43 = V_8;
 				NullCheck(L_42);
@@ -22804,13 +22863,13 @@ IL_00bd_1:
 				}
 			}
 			{
-				//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:177>
+				//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:190>
 				String_t* L_45 = V_8;
 				String_t* L_46;
 				L_46 = String_Concat_m9E3155FB84015C823606188F53B47CB44C444991(_stringLiteralDB141919FD751F63302FFC76998E94B166ECCC60, L_45, NULL);
 				il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 				Debug_Log_m87A9A3C761FF5C43ED8A53B16190A53D08F818BB(L_46, NULL);
-				//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:179>
+				//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:192>
 				List_1_t83778CDC4C8C3A5FD32A661A4D241173450265A1* L_47 = V_5;
 				NullCheck(L_47);
 				Enumerator_t6735A01E8624C9A5B4DA2461922D3D4CEF85DFDA L_48;
@@ -22835,19 +22894,19 @@ FINALLY_012c_1:
 
 IL_00f9_2:
 					{
-						//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:179>
+						//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:192>
 						LetterTile_tB20E0D5265E6DEC4F697C65EBC185582BA0E3541* L_49;
 						L_49 = Enumerator_get_Current_mAE7C9841355F6D3416F927D57980DB66AFC65E17_inline((&V_10), Enumerator_get_Current_mAE7C9841355F6D3416F927D57980DB66AFC65E17_RuntimeMethod_var);
-						//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:181>
+						//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:194>
 						LetterTile_tB20E0D5265E6DEC4F697C65EBC185582BA0E3541* L_50 = L_49;
 						NullCheck(L_50);
 						LetterTile_SetSceneObjectYellow_m9A90F74C516CA25221DE36C6A9CAB351A1E84BAA(L_50, NULL);
-						//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:183>
+						//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:196>
 						NullCheck(L_50);
 						SpawnableObject_tB01492418378D7AE527A7C2936955B071EC7B7FA* L_51;
 						L_51 = Component_GetComponent_TisSpawnableObject_tB01492418378D7AE527A7C2936955B071EC7B7FA_m93A5752467942CC4B1FA17C2235BB977DFF1B7FB(L_50, Component_GetComponent_TisSpawnableObject_tB01492418378D7AE527A7C2936955B071EC7B7FA_m93A5752467942CC4B1FA17C2235BB977DFF1B7FB_RuntimeMethod_var);
 						V_11 = L_51;
-						//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:184>
+						//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:197>
 						SpawnableObject_tB01492418378D7AE527A7C2936955B071EC7B7FA* L_52 = V_11;
 						il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 						bool L_53;
@@ -22858,7 +22917,7 @@ IL_00f9_2:
 						}
 					}
 					{
-						//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:186>
+						//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:199>
 						SpawnableObject_tB01492418378D7AE527A7C2936955B071EC7B7FA* L_54 = V_11;
 						NullCheck(L_54);
 						SpawnableObject_BroadcastPosAndRot_m6BD5E105513D3C1045495CE0D624BA0AA827CE44(L_54, NULL);
@@ -22866,7 +22925,7 @@ IL_00f9_2:
 
 IL_011e_2:
 					{
-						//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:179>
+						//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:192>
 						bool L_55;
 						L_55 = Enumerator_MoveNext_m4235C59F7CDFCADA64416F44D70922B6B08F7F8C((&V_10), Enumerator_MoveNext_m4235C59F7CDFCADA64416F44D70922B6B08F7F8C_RuntimeMethod_var);
 						if (L_55)
@@ -22875,7 +22934,7 @@ IL_011e_2:
 						}
 					}
 					{
-						goto IL_0275_1;
+						goto IL_0276_1;
 					}
 				}
 				catch(Il2CppExceptionWrapper& e)
@@ -22886,7 +22945,7 @@ IL_011e_2:
 
 IL_013a_1:
 			{
-				//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:190>
+				//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:203>
 				WordValidator_t0FC7E088593716BE97A671FBE4A3B870B7C72FA2* L_56 = __this->___validator;
 				String_t* L_57 = V_8;
 				NullCheck(L_56);
@@ -22894,69 +22953,68 @@ IL_013a_1:
 				L_58 = WordValidator_CheckWord_m55775AC32D645FFE2013D64CD40BE1D344CE718E(L_56, L_57, NULL);
 				if (!L_58)
 				{
-					goto IL_021b_1;
+					goto IL_021c_1;
 				}
 			}
 			{
-				//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:192>
+				//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:205>
 				String_t* L_59 = V_8;
 				String_t* L_60;
 				L_60 = String_Concat_m9E3155FB84015C823606188F53B47CB44C444991(_stringLiteralA02D0A7615CA3C2CAA7E174375A3C7D2637015AD, L_59, NULL);
 				il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 				Debug_Log_m87A9A3C761FF5C43ED8A53B16190A53D08F818BB(L_60, NULL);
-				//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:194>
+				//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:207>
 				String_t* L_61 = V_8;
-				NullCheck(L_61);
 				int32_t L_62;
-				L_62 = String_get_Length_m42625D67623FA5CC7A44D47425CE86FB946542D2_inline(L_61, NULL);
+				L_62 = WordScanManager_CalculatePoints_m281F24B3BB34B9D7751A1B899333D075C52648DF(__this, L_61, NULL);
 				V_12 = L_62;
-				//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:196>
+				//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:209>
 				ScoreManager_t86D4A06D4B38717B8C529883F37DA25BA5750F39* L_63 = __this->___scoreManager;
 				il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 				bool L_64;
 				L_64 = Object_op_Inequality_mD0BE578448EAA61948F25C32F8DD55AB1F778602(L_63, (Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C*)NULL, NULL);
 				if (!L_64)
 				{
-					goto IL_01a1_1;
+					goto IL_01a2_1;
 				}
 			}
 			{
-				//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:198>
+				//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:211>
 				int32_t L_65 = __this->___playerType;
 				if (L_65)
 				{
-					goto IL_018b_1;
+					goto IL_018c_1;
 				}
 			}
 			{
-				//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:199>
+				//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:212>
 				ScoreManager_t86D4A06D4B38717B8C529883F37DA25BA5750F39* L_66 = __this->___scoreManager;
 				int32_t L_67 = V_12;
 				NullCheck(L_66);
 				ScoreManager_AddPlayer1Score_m1FB7C03FCC00B3EA1220FA752ADE9077571CC9B5(L_66, L_67, NULL);
-				goto IL_01a1_1;
+				goto IL_01a2_1;
 			}
 
-IL_018b_1:
+IL_018c_1:
 			{
-				//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:200>
+				//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:213>
 				int32_t L_68 = __this->___playerType;
 				if ((!(((uint32_t)L_68) == ((uint32_t)1))))
 				{
-					goto IL_01a1_1;
+					goto IL_01a2_1;
 				}
 			}
 			{
-				//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:201>
+				//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:214>
 				ScoreManager_t86D4A06D4B38717B8C529883F37DA25BA5750F39* L_69 = __this->___scoreManager;
 				int32_t L_70 = V_12;
 				NullCheck(L_69);
 				ScoreManager_AddPlayer2Score_m29E7EB1290EF76096CB04DA3F35B4844E821D547(L_69, L_70, NULL);
 			}
 
-IL_01a1_1:
+IL_01a2_1:
 			{
-				//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:204>
+				//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:217>
 				List_1_t83778CDC4C8C3A5FD32A661A4D241173450265A1* L_71 = V_5;
 				NullCheck(L_71);
 				Enumerator_t6735A01E8624C9A5B4DA2461922D3D4CEF85DFDA L_72;
@@ -22967,7 +23025,7 @@ IL_01a1_1:
 				auto __finallyBlock = il2cpp::utils::Finally([&]
 				{
 
-FINALLY_020d_1:
+FINALLY_020e_1:
 					{
 						Enumerator_Dispose_m80E5ECA6220ADD00B39A97F258033B75C2A474BC((&V_10), Enumerator_Dispose_m80E5ECA6220ADD00B39A97F258033B75C2A474BC_RuntimeMethod_var);
 						return;
@@ -22976,27 +23034,27 @@ FINALLY_020d_1:
 				try
 				{
 					{
-						goto IL_0202_2;
+						goto IL_0203_2;
 					}
 
-IL_01ac_2:
+IL_01ad_2:
 					{
-						//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:204>
+						//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:217>
 						LetterTile_tB20E0D5265E6DEC4F697C65EBC185582BA0E3541* L_73;
 						L_73 = Enumerator_get_Current_mAE7C9841355F6D3416F927D57980DB66AFC65E17_inline((&V_10), Enumerator_get_Current_mAE7C9841355F6D3416F927D57980DB66AFC65E17_RuntimeMethod_var);
 						V_13 = L_73;
-						//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:206>
+						//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:219>
 						TableSnapZone_t98DB6E46409D9D63B767218E4B11C273A4015EA7* L_74 = __this->___tableZone;
 						il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 						bool L_75;
 						L_75 = Object_op_Inequality_mD0BE578448EAA61948F25C32F8DD55AB1F778602(L_74, (Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C*)NULL, NULL);
 						if (!L_75)
 						{
-							goto IL_01d5_2;
+							goto IL_01d6_2;
 						}
 					}
 					{
-						//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:207>
+						//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:220>
 						TableSnapZone_t98DB6E46409D9D63B767218E4B11C273A4015EA7* L_76 = __this->___tableZone;
 						LetterTile_tB20E0D5265E6DEC4F697C65EBC185582BA0E3541* L_77 = V_13;
 						NullCheck(L_77);
@@ -23006,9 +23064,9 @@ IL_01ac_2:
 						TableSnapZone_Unmark_m0F25F968ECCA4B654D5CD8AA73CAF3CD2317FAF2(L_76, L_78, NULL);
 					}
 
-IL_01d5_2:
+IL_01d6_2:
 					{
-						//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:209>
+						//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:222>
 						LetterTile_tB20E0D5265E6DEC4F697C65EBC185582BA0E3541* L_79 = V_13;
 						NullCheck(L_79);
 						GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_80;
@@ -23017,26 +23075,26 @@ IL_01d5_2:
 						SpawnableObject_tB01492418378D7AE527A7C2936955B071EC7B7FA* L_81;
 						L_81 = GameObject_GetComponent_TisSpawnableObject_tB01492418378D7AE527A7C2936955B071EC7B7FA_mF488A3B736C32806FEA5E7A9096D267180B8048F(L_80, GameObject_GetComponent_TisSpawnableObject_tB01492418378D7AE527A7C2936955B071EC7B7FA_mF488A3B736C32806FEA5E7A9096D267180B8048F_RuntimeMethod_var);
 						V_14 = L_81;
-						//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:210>
+						//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:223>
 						SpawnableObject_tB01492418378D7AE527A7C2936955B071EC7B7FA* L_82 = V_14;
 						il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 						bool L_83;
 						L_83 = Object_op_Inequality_mD0BE578448EAA61948F25C32F8DD55AB1F778602(L_82, (Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C*)NULL, NULL);
 						if (!L_83)
 						{
-							goto IL_01f5_2;
+							goto IL_01f6_2;
 						}
 					}
 					{
-						//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:212>
+						//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:225>
 						SpawnableObject_tB01492418378D7AE527A7C2936955B071EC7B7FA* L_84 = V_14;
 						NullCheck(L_84);
 						SpawnableObject_BroadcastActiveSelf_m22C0FF174127BC6D81FCD930EB197B5E77C95CA4(L_84, (bool)0, NULL);
 					}
 
-IL_01f5_2:
+IL_01f6_2:
 					{
-						//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:215>
+						//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:228>
 						LetterTile_tB20E0D5265E6DEC4F697C65EBC185582BA0E3541* L_85 = V_13;
 						NullCheck(L_85);
 						GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_86;
@@ -23045,18 +23103,18 @@ IL_01f5_2:
 						GameObject_SetActive_m638E92E1E75E519E5B24CF150B08CA8E0CDFAB92(L_86, (bool)0, NULL);
 					}
 
-IL_0202_2:
+IL_0203_2:
 					{
-						//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:204>
+						//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:217>
 						bool L_87;
 						L_87 = Enumerator_MoveNext_m4235C59F7CDFCADA64416F44D70922B6B08F7F8C((&V_10), Enumerator_MoveNext_m4235C59F7CDFCADA64416F44D70922B6B08F7F8C_RuntimeMethod_var);
 						if (L_87)
 						{
-							goto IL_01ac_2;
+							goto IL_01ad_2;
 						}
 					}
 					{
-						goto IL_0275_1;
+						goto IL_0276_1;
 					}
 				}
 				catch(Il2CppExceptionWrapper& e)
@@ -23065,15 +23123,15 @@ IL_0202_2:
 				}
 			}
 
-IL_021b_1:
+IL_021c_1:
 			{
-				//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:220>
+				//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:233>
 				String_t* L_88 = V_8;
 				String_t* L_89;
 				L_89 = String_Concat_m9E3155FB84015C823606188F53B47CB44C444991(_stringLiteral2C29EDA00603EB942176E774B171B57C65ACE9B5, L_88, NULL);
 				il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 				Debug_Log_m87A9A3C761FF5C43ED8A53B16190A53D08F818BB(L_89, NULL);
-				//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:222>
+				//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:235>
 				List_1_t83778CDC4C8C3A5FD32A661A4D241173450265A1* L_90 = V_5;
 				NullCheck(L_90);
 				Enumerator_t6735A01E8624C9A5B4DA2461922D3D4CEF85DFDA L_91;
@@ -23084,7 +23142,7 @@ IL_021b_1:
 				auto __finallyBlock = il2cpp::utils::Finally([&]
 				{
 
-FINALLY_0267_1:
+FINALLY_0268_1:
 					{
 						Enumerator_Dispose_m80E5ECA6220ADD00B39A97F258033B75C2A474BC((&V_10), Enumerator_Dispose_m80E5ECA6220ADD00B39A97F258033B75C2A474BC_RuntimeMethod_var);
 						return;
@@ -23093,52 +23151,52 @@ FINALLY_0267_1:
 				try
 				{
 					{
-						goto IL_025c_2;
+						goto IL_025d_2;
 					}
 
-IL_0237_2:
+IL_0238_2:
 					{
-						//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:222>
+						//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:235>
 						LetterTile_tB20E0D5265E6DEC4F697C65EBC185582BA0E3541* L_92;
 						L_92 = Enumerator_get_Current_mAE7C9841355F6D3416F927D57980DB66AFC65E17_inline((&V_10), Enumerator_get_Current_mAE7C9841355F6D3416F927D57980DB66AFC65E17_RuntimeMethod_var);
-						//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:224>
+						//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:237>
 						LetterTile_tB20E0D5265E6DEC4F697C65EBC185582BA0E3541* L_93 = L_92;
 						NullCheck(L_93);
 						LetterTile_SetInvalidRed_m56D5F3A46FDF8915D934DC5488C6AE2F9CA800AD(L_93, NULL);
-						//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:226>
+						//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:239>
 						NullCheck(L_93);
 						SpawnableObject_tB01492418378D7AE527A7C2936955B071EC7B7FA* L_94;
 						L_94 = Component_GetComponent_TisSpawnableObject_tB01492418378D7AE527A7C2936955B071EC7B7FA_m93A5752467942CC4B1FA17C2235BB977DFF1B7FB(L_93, Component_GetComponent_TisSpawnableObject_tB01492418378D7AE527A7C2936955B071EC7B7FA_m93A5752467942CC4B1FA17C2235BB977DFF1B7FB_RuntimeMethod_var);
 						V_15 = L_94;
-						//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:227>
+						//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:240>
 						SpawnableObject_tB01492418378D7AE527A7C2936955B071EC7B7FA* L_95 = V_15;
 						il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 						bool L_96;
 						L_96 = Object_op_Inequality_mD0BE578448EAA61948F25C32F8DD55AB1F778602(L_95, (Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C*)NULL, NULL);
 						if (!L_96)
 						{
-							goto IL_025c_2;
+							goto IL_025d_2;
 						}
 					}
 					{
-						//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:229>
+						//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:242>
 						SpawnableObject_tB01492418378D7AE527A7C2936955B071EC7B7FA* L_97 = V_15;
 						NullCheck(L_97);
 						SpawnableObject_BroadcastPosAndRot_m6BD5E105513D3C1045495CE0D624BA0AA827CE44(L_97, NULL);
 					}
 
-IL_025c_2:
+IL_025d_2:
 					{
-						//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:222>
+						//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:235>
 						bool L_98;
 						L_98 = Enumerator_MoveNext_m4235C59F7CDFCADA64416F44D70922B6B08F7F8C((&V_10), Enumerator_MoveNext_m4235C59F7CDFCADA64416F44D70922B6B08F7F8C_RuntimeMethod_var);
 						if (L_98)
 						{
-							goto IL_0237_2;
+							goto IL_0238_2;
 						}
 					}
 					{
-						goto IL_0275_1;
+						goto IL_0276_1;
 					}
 				}
 				catch(Il2CppExceptionWrapper& e)
@@ -23147,9 +23205,9 @@ IL_025c_2:
 				}
 			}
 
-IL_0275_1:
+IL_0276_1:
 			{
-				//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:146>
+				//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:159>
 				bool L_99;
 				L_99 = Enumerator_MoveNext_m624B713474E43DF4B1CA51521EC8296C0B7CE08C((&V_0), Enumerator_MoveNext_m624B713474E43DF4B1CA51521EC8296C0B7CE08C_RuntimeMethod_var);
 				if (L_99)
@@ -23158,7 +23216,7 @@ IL_0275_1:
 				}
 			}
 			{
-				goto IL_0291;
+				goto IL_0292;
 			}
 		}
 		catch(Il2CppExceptionWrapper& e)
@@ -23167,13 +23225,13 @@ IL_0275_1:
 		}
 	}
 
-IL_0291:
+IL_0292:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:234>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:247>
 		return;
 	}
 }
-// Method Definition Index: 86008
+// Method Definition Index: 86009
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void WordScanManager__ctor_m0604227BA0D14F729230853480C2C8997F132AC7 (WordScanManager_t5DFA8AA7ED2E7C3224B27D3CA0955AC965052C11* __this, const RuntimeMethod* method) 
 {
 	{
@@ -23205,7 +23263,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void WordScanManager__ctor_m0604227BA0D14F729
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 86009
+// Method Definition Index: 86010
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec__cctor_mF8C7D598D8B032EECF11E0978380BF8F928D3D49 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -23222,7 +23280,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec__cctor_mF8C7D598D8B032EECF11E097
 		return;
 	}
 }
-// Method Definition Index: 86010
+// Method Definition Index: 86011
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec__ctor_mEA6CB45D314E4289800540F993F224862B91AA19 (U3CU3Ec_t3022502319866C96FEA49E8F5B080A1E31507577* __this, const RuntimeMethod* method) 
 {
 	{
@@ -23230,11 +23288,11 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CU3Ec__ctor_mEA6CB45D314E4289800540F99
 		return;
 	}
 }
-// Method Definition Index: 86011
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* U3CU3Ec_U3CScanDirectionU3Eb__16_0_m6620A9C8AE7AFB3EAF986097C4655CF943DA0217 (U3CU3Ec_t3022502319866C96FEA49E8F5B080A1E31507577* __this, LetterTile_tB20E0D5265E6DEC4F697C65EBC185582BA0E3541* ___0_t, const RuntimeMethod* method) 
+// Method Definition Index: 86012
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* U3CU3Ec_U3CScanDirectionU3Eb__17_0_m172853E8A736280660F1CFFAFC6EC1BA61660541 (U3CU3Ec_t3022502319866C96FEA49E8F5B080A1E31507577* __this, LetterTile_tB20E0D5265E6DEC4F697C65EBC185582BA0E3541* ___0_t, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:173>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Resources/Scripts/WordScanManager.cs:186>
 		LetterTile_tB20E0D5265E6DEC4F697C65EBC185582BA0E3541* L_0 = ___0_t;
 		NullCheck(L_0);
 		String_t* L_1;
@@ -23250,7 +23308,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* U3CU3Ec_U3CScanDirectionU3Eb__16_0_
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 86012
+// Method Definition Index: 86013
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void WordValidator_Awake_m249EC81D2CDC5FE6AAF0B3A8B5E20AF521731BD4 (WordValidator_t0FC7E088593716BE97A671FBE4A3B870B7C72FA2* __this, const RuntimeMethod* method) 
 {
 	{
@@ -23263,7 +23321,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void WordValidator_Awake_m249EC81D2CDC5FE6AAF
 		return;
 	}
 }
-// Method Definition Index: 86013
+// Method Definition Index: 86014
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* WordValidator_LoadLocalDictionary_m3452A706B0C3817FEEF71F652F8BA784644E6A79 (WordValidator_t0FC7E088593716BE97A671FBE4A3B870B7C72FA2* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -23282,7 +23340,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* WordValidator_LoadLocalDiction
 		return L_1;
 	}
 }
-// Method Definition Index: 86014
+// Method Definition Index: 86015
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool WordValidator_CheckWord_m55775AC32D645FFE2013D64CD40BE1D344CE718E (WordValidator_t0FC7E088593716BE97A671FBE4A3B870B7C72FA2* __this, String_t* ___0_input, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -23327,7 +23385,7 @@ IL_000a:
 		return L_7;
 	}
 }
-// Method Definition Index: 86015
+// Method Definition Index: 86016
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void WordValidator__ctor_mAA73498223200E64AB7F986AB43C9732EE59A7D4 (WordValidator_t0FC7E088593716BE97A671FBE4A3B870B7C72FA2* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -23355,7 +23413,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void WordValidator__ctor_mAA73498223200E64AB7
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 86016
+// Method Definition Index: 86017
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CLoadLocalDictionaryU3Ed__2__ctor_mC613F54FCDA1CCE3E159CD3D7967C63677B093E1 (U3CLoadLocalDictionaryU3Ed__2_tECD5F87132D9F1B46535E2A2ED4337AA88A6AE76* __this, int32_t ___0_U3CU3E1__state, const RuntimeMethod* method) 
 {
 	{
@@ -23365,14 +23423,14 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CLoadLocalDictionaryU3Ed__2__ctor_mC61
 		return;
 	}
 }
-// Method Definition Index: 86017
+// Method Definition Index: 86018
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CLoadLocalDictionaryU3Ed__2_System_IDisposable_Dispose_mF3EDA13AD32643E31FE87E3FEB61566043B4B05C (U3CLoadLocalDictionaryU3Ed__2_tECD5F87132D9F1B46535E2A2ED4337AA88A6AE76* __this, const RuntimeMethod* method) 
 {
 	{
 		return;
 	}
 }
-// Method Definition Index: 86018
+// Method Definition Index: 86019
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool U3CLoadLocalDictionaryU3Ed__2_MoveNext_mB1DA2CCFBA4E4E24FE8824EA7015898671127889 (U3CLoadLocalDictionaryU3Ed__2_tECD5F87132D9F1B46535E2A2ED4337AA88A6AE76* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -23564,7 +23622,7 @@ IL_00f6:
 		return (bool)0;
 	}
 }
-// Method Definition Index: 86019
+// Method Definition Index: 86020
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CLoadLocalDictionaryU3Ed__2_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_mC176BA3ADEC2F3CFD9879DA08DC7DC64BED80E4C (U3CLoadLocalDictionaryU3Ed__2_tECD5F87132D9F1B46535E2A2ED4337AA88A6AE76* __this, const RuntimeMethod* method) 
 {
 	{
@@ -23572,7 +23630,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CLoadLocalDictionaryU3Ed__2_
 		return L_0;
 	}
 }
-// Method Definition Index: 86020
+// Method Definition Index: 86021
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CLoadLocalDictionaryU3Ed__2_System_Collections_IEnumerator_Reset_m6E954ED9F10F7682E3C749E404E0EE475363AB9F (U3CLoadLocalDictionaryU3Ed__2_tECD5F87132D9F1B46535E2A2ED4337AA88A6AE76* __this, const RuntimeMethod* method) 
 {
 	{
@@ -23581,7 +23639,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void U3CLoadLocalDictionaryU3Ed__2_System_Col
 		IL2CPP_RAISE_MANAGED_EXCEPTION(L_0, ((RuntimeMethod*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&U3CLoadLocalDictionaryU3Ed__2_System_Collections_IEnumerator_Reset_m6E954ED9F10F7682E3C749E404E0EE475363AB9F_RuntimeMethod_var)));
 	}
 }
-// Method Definition Index: 86021
+// Method Definition Index: 86022
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CLoadLocalDictionaryU3Ed__2_System_Collections_IEnumerator_get_Current_mF1AC9350A43BFBC9D4A69336B71FF925408A4784 (U3CLoadLocalDictionaryU3Ed__2_tECD5F87132D9F1B46535E2A2ED4337AA88A6AE76* __this, const RuntimeMethod* method) 
 {
 	{
@@ -23597,7 +23655,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* U3CLoadLocalDictionaryU3Ed__2_
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 86022
+// Method Definition Index: 86023
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR MonoScriptData_t8F50E352855B96FFFC1D9CB07EACC90C99D73A3E UnitySourceGeneratedAssemblyMonoScriptTypes_v1_Get_mBEB95BEB954BB63E9710BBC7AD5E78C4CB0A0033 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -23631,7 +23689,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR MonoScriptData_t8F50E352855B96FFFC1D9CB07EACC
 		return L_6;
 	}
 }
-// Method Definition Index: 86023
+// Method Definition Index: 86024
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void UnitySourceGeneratedAssemblyMonoScriptTypes_v1__ctor_mE70FB23ACC1EA12ABC948AA22C2E78B2D0AA39B1 (UnitySourceGeneratedAssemblyMonoScriptTypes_v1_tC95F24D0C6E6B77389433852BB389F39C692926E* __this, const RuntimeMethod* method) 
 {
 	{
