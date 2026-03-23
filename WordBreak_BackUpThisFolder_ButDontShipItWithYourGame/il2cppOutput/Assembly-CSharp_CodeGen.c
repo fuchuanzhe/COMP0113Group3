@@ -323,16 +323,9 @@ extern void U3CLoadLocalDictionaryU3Ed__2_MoveNext_mB1DA2CCFBA4E4E24FE8824EA7015
 extern void U3CLoadLocalDictionaryU3Ed__2_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_mC176BA3ADEC2F3CFD9879DA08DC7DC64BED80E4C (void);
 extern void U3CLoadLocalDictionaryU3Ed__2_System_Collections_IEnumerator_Reset_m6E954ED9F10F7682E3C749E404E0EE475363AB9F (void);
 extern void U3CLoadLocalDictionaryU3Ed__2_System_Collections_IEnumerator_get_Current_mF1AC9350A43BFBC9D4A69336B71FF925408A4784 (void);
-extern void TableManager_ScanTable_m8C78323701D4DE9739A5753AC7AEA84EECF35C85 (void);
-extern void TableManager__ctor_m114C77BE4CBF6BDAB002AC7C73319341F3AD3A95 (void);
-extern void U3CU3Ec__cctor_m2CC21BB6AB4E2B1A7EB69CC9D97C6FB01341082B (void);
-extern void U3CU3Ec__ctor_m1BD31AB993FA1B9043D69132939FF469C9C95647 (void);
-extern void U3CU3Ec_U3CScanTableU3Eb__2_0_m84489AB7D4FE37F2795520C6191AD6597A8331CA (void);
-extern void U3CU3Ec_U3CScanTableU3Eb__2_1_mA0EE08721AB9738A7D22A9153EDBF76C36AEB0C9 (void);
-extern void U3CU3Ec_U3CScanTableU3Eb__2_2_mD933704BA7E2FF8FE94EF03EF282ECD7B4CDE5F1 (void);
 extern void UnitySourceGeneratedAssemblyMonoScriptTypes_v1_Get_mBEB95BEB954BB63E9710BBC7AD5E78C4CB0A0033 (void);
 extern void UnitySourceGeneratedAssemblyMonoScriptTypes_v1__ctor_mE70FB23ACC1EA12ABC948AA22C2E78B2D0AA39B1 (void);
-static Il2CppMethodPointer s_methodPointers[331] = 
+static Il2CppMethodPointer s_methodPointers[324] = 
 {
 	AssignSeats_Start_m356359995EC02405407AA056466DA69551574EB6,
 	AssignSeats_Check_mFC9F13E5CD27EB3DE07C2EA3E68338BA31612206,
@@ -656,13 +649,6 @@ static Il2CppMethodPointer s_methodPointers[331] =
 	U3CLoadLocalDictionaryU3Ed__2_System_Collections_Generic_IEnumeratorU3CSystem_ObjectU3E_get_Current_mC176BA3ADEC2F3CFD9879DA08DC7DC64BED80E4C,
 	U3CLoadLocalDictionaryU3Ed__2_System_Collections_IEnumerator_Reset_m6E954ED9F10F7682E3C749E404E0EE475363AB9F,
 	U3CLoadLocalDictionaryU3Ed__2_System_Collections_IEnumerator_get_Current_mF1AC9350A43BFBC9D4A69336B71FF925408A4784,
-	TableManager_ScanTable_m8C78323701D4DE9739A5753AC7AEA84EECF35C85,
-	TableManager__ctor_m114C77BE4CBF6BDAB002AC7C73319341F3AD3A95,
-	U3CU3Ec__cctor_m2CC21BB6AB4E2B1A7EB69CC9D97C6FB01341082B,
-	U3CU3Ec__ctor_m1BD31AB993FA1B9043D69132939FF469C9C95647,
-	U3CU3Ec_U3CScanTableU3Eb__2_0_m84489AB7D4FE37F2795520C6191AD6597A8331CA,
-	U3CU3Ec_U3CScanTableU3Eb__2_1_mA0EE08721AB9738A7D22A9153EDBF76C36AEB0C9,
-	U3CU3Ec_U3CScanTableU3Eb__2_2_mD933704BA7E2FF8FE94EF03EF282ECD7B4CDE5F1,
 	UnitySourceGeneratedAssemblyMonoScriptTypes_v1_Get_mBEB95BEB954BB63E9710BBC7AD5E78C4CB0A0033,
 	UnitySourceGeneratedAssemblyMonoScriptTypes_v1__ctor_mE70FB23ACC1EA12ABC948AA22C2E78B2D0AA39B1,
 };
@@ -683,7 +669,7 @@ static Il2CppTokenAdjustorThunkPair s_adjustorThunks[7] =
 	{ 0x060000D2, Message__ctor_m99540459A60C891E65502A4536F361625DE443AC_AdjustorThunk },
 	{ 0x060000EC, Message__ctor_m914D3F1A31D77B966BAFB22E29788FAC80BE134D_AdjustorThunk },
 };
-static const int32_t s_InvokerIndices[331] = 
+static const int32_t s_InvokerIndices[324] = 
 {
 	16479,
 	16479,
@@ -698,7 +684,7 @@ static const int32_t s_InvokerIndices[331] =
 	12539,
 	12539,
 	12328,
-	28169,
+	28168,
 	16479,
 	10771,
 	10771,
@@ -821,8 +807,8 @@ static const int32_t s_InvokerIndices[331] =
 	-1,
 	-1,
 	-1,
-	28065,
-	26849,
+	28064,
+	26848,
 	16479,
 	6476,
 	10771,
@@ -994,7 +980,7 @@ static const int32_t s_InvokerIndices[331] =
 	9084,
 	2905,
 	16479,
-	28169,
+	28168,
 	16479,
 	10771,
 	16479,
@@ -1007,14 +993,7 @@ static const int32_t s_InvokerIndices[331] =
 	16250,
 	16479,
 	16250,
-	16479,
-	16479,
-	28169,
-	16479,
-	8886,
-	10976,
-	10771,
-	28206,
+	28205,
 	16479,
 };
 static const Il2CppTokenRangePair s_rgctxIndices[2] = 
@@ -1069,7 +1048,7 @@ IL2CPP_EXTERN_C const Il2CppCodeGenModule g_AssemblyU2DCSharp_CodeGenModule;
 const Il2CppCodeGenModule g_AssemblyU2DCSharp_CodeGenModule = 
 {
 	"Assembly-CSharp.dll",
-	331,
+	324,
 	s_methodPointers,
 	7,
 	s_adjustorThunks,
