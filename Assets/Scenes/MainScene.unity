@@ -9012,15 +9012,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: cc086abd3cc354ba29f15e8fc1d5abe4, type: 3}
       propertyPath: m_Name
-      value: crate0
+      value: crate02
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: cc086abd3cc354ba29f15e8fc1d5abe4, type: 3}
       propertyPath: m_Layer
-      value: 7
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8164078558771037576, guid: cc086abd3cc354ba29f15e8fc1d5abe4, type: 3}
       propertyPath: m_Layer
-      value: 7
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -18515,11 +18515,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: ba1db2387e7be49659a53430579591fb, type: 3}
       propertyPath: m_Layer
-      value: 7
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8164078558771037576, guid: ba1db2387e7be49659a53430579591fb, type: 3}
       propertyPath: m_Layer
-      value: 7
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -19431,28 +19431,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 948b468fc8ee44bd8932737bd815acc8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NetworkedObject
---- !u!64 &950812908
-MeshCollider:
+--- !u!114 &950812908
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 950812903}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
   m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 0}
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f378755c8c16f4cf68d62c3625ace468, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CuttableObject
+  halfPrefabA: {fileID: 0}
+  halfPrefabB: {fileID: 0}
+  spawnOffset: 0.01
+  addRigidbodyIfMissing: 0
+  destroyOriginal: 1
 --- !u!1 &951162021 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 79d2ccf35fa9c44b4af2f1cff7167147, type: 3}
@@ -21658,11 +21653,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: ba1db2387e7be49659a53430579591fb, type: 3}
       propertyPath: m_Layer
-      value: 7
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8164078558771037576, guid: ba1db2387e7be49659a53430579591fb, type: 3}
       propertyPath: m_Layer
-      value: 7
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -24839,11 +24834,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: cc086abd3cc354ba29f15e8fc1d5abe4, type: 3}
       propertyPath: m_Layer
-      value: 7
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8164078558771037576, guid: cc086abd3cc354ba29f15e8fc1d5abe4, type: 3}
       propertyPath: m_Layer
-      value: 7
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -30003,7 +29998,7 @@ PrefabInstance:
       addedObject: {fileID: 1457381609}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: dd92d0b05e95d45c59c0249da197d10a, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1457381608}
+      addedObject: {fileID: 1457381612}
     - targetCorrespondingSourceObject: {fileID: -6271093080892014963, guid: dd92d0b05e95d45c59c0249da197d10a, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1457381607}
@@ -30045,28 +30040,6 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: -6316266800271276957, guid: dd92d0b05e95d45c59c0249da197d10a, type: 3}
---- !u!64 &1457381608
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1457381606}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 0}
 --- !u!114 &1457381609
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -30228,6 +30201,23 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &1457381612
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1457381606}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f378755c8c16f4cf68d62c3625ace468, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CuttableObject
+  halfPrefabA: {fileID: 0}
+  halfPrefabB: {fileID: 0}
+  spawnOffset: 0.01
+  addRigidbodyIfMissing: 0
+  destroyOriginal: 1
 --- !u!1 &1463718026
 GameObject:
   m_ObjectHideFlags: 0
@@ -42604,11 +42594,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: cc086abd3cc354ba29f15e8fc1d5abe4, type: 3}
       propertyPath: m_Layer
-      value: 7
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8164078558771037576, guid: cc086abd3cc354ba29f15e8fc1d5abe4, type: 3}
       propertyPath: m_Layer
-      value: 7
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
