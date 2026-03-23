@@ -50350,6 +50350,10 @@ PrefabInstance:
       propertyPath: cutSound
       value: 
       objectReference: {fileID: 8300000, guid: 318fe9d51e2f2034e90c75e34ec8bbb4, type: 3}
+    - target: {fileID: 7518149792300162383, guid: ce18fb1bfda024936973ca895c2667f2, type: 3}
+      propertyPath: m_text
+      value: Small objects can be torn by grabbing and pulling both controllers away
+      objectReference: {fileID: 0}
     - target: {fileID: 8222351949784414489, guid: ce18fb1bfda024936973ca895c2667f2, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.7
