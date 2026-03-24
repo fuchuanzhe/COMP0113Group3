@@ -50,6 +50,7 @@ public class NetworkedObject : MonoBehaviour
 
     private void OnGrab(SelectEnterEventArgs args)
     {
+        // release grab if object is already grabbed by someone else
         if (!string.IsNullOrEmpty(currentOwner) && currentOwner != LocalId)
         {
             var interactor = args.interactorObject;
@@ -61,6 +62,7 @@ public class NetworkedObject : MonoBehaviour
 
     private void OnRelease(SelectExitEventArgs args)
     {
+        // set owner to no one once let go
         if (currentOwner == LocalId) roomClient.Room[id] = "";
     }
 

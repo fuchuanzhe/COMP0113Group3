@@ -15,6 +15,7 @@ public class PlayerOccupation : MonoBehaviour
     public bool CanUseKnife => MyOccupation == Occupation.Chef;
     public bool CanUseHammer => MyOccupation == Occupation.Butcher;
 
+    // each seat corresponds to certain occupation
     public void SetFromSeatIndex(int seatIndex)
     {
         MySeatIndex = seatIndex;

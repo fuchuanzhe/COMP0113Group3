@@ -1,4 +1,5 @@
 using UnityEngine;
+using System.Text.RegularExpressions;
 
 public class CuttableObject : MonoBehaviour
 {
@@ -11,7 +12,7 @@ public class CuttableObject : MonoBehaviour
 
     void Awake()
     {
-        word = gameObject.name.ToUpperInvariant();
+        word = Regex.Replace(gameObject.name.ToUpperInvariant(), "[^A-Z]", "");
     }
 
     public void DoCut(Vector3 cutCenter, Vector3 planeNormal, Vector3 initialVelocity)

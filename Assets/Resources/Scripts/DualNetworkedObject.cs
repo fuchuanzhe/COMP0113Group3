@@ -75,6 +75,7 @@ public class DualNetworkedObject : MonoBehaviour
     {
         int total = GetTotalGrabCount();
 
+        // freeze object tranform if multiple people grabbing
         if (total >= 2)
         {
             rb.constraints = RigidbodyConstraints.FreezeAll;

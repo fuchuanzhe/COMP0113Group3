@@ -2,6 +2,8 @@ using UnityEngine;
 using UnityEngine.XR.Interaction.Toolkit;
 using UnityEngine.XR.Interaction.Toolkit.Interactables;
 
+// block any raycast interaction
+// used to prevent players from grabbing objects from other teams
 public class BlockGrab : MonoBehaviour
 {
     private XRGrabInteractable grab;

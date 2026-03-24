@@ -3,6 +3,7 @@ using System.IO;
 using System;
 
 // adb pull /sdcard/Android/data/com.COMP0113Group3.WordBreak/files/log.txt
+// used for debugging purposes
 public class Logger : MonoBehaviour
 {
     public static Logger Instance;

@@ -3,6 +3,7 @@ using Ubiq.Messaging;
 using UnityEngine.XR.Interaction.Toolkit;
 using UnityEngine.XR.Interaction.Toolkit.Interactables;
 using Ubiq.Rooms;
+using System.Text.RegularExpressions;
 
 public class DualTearObject : MonoBehaviour
 {
@@ -19,9 +20,6 @@ public class DualTearObject : MonoBehaviour
     private string otherId;
     private Vector3? refControllerPos;
     public string word { get; private set; }
-
-    // Audio configuration for the dual tear interaction
-    [Header("Audio")]
     public AudioClip tearSound;
     [Range(0f, 1f)]
     public float soundVolume = 1.0f;
@@ -46,26 +44,33 @@ public class DualTearObject : MonoBehaviour
         grab.selectEntered.AddListener(OnGrab);
         grab.selectExited.AddListener(OnRelease);
         roomClient = RoomClient.Find(this);
-        word = gameObject.name.ToUpperInvariant();
+        word = Regex.Replace(gameObject.name.ToUpperInvariant(), "[^A-Z]", "");
     }
 
     void Update()
     {
         if(!isGrabbed) return;
         var pos = GetControllerPos();
+        // let other people know the object is grabbed
         context.SendJson(new Message(roomClient.Me.uuid, true, false));
 
+        // record position of own controller when other player is grabbing
         if(otherGrabbed && refControllerPos == null) refControllerPos = pos;
 
         if(refControllerPos != null)
         {
+            // measure distance between current postion of controller and 
+            // the previous position of controller when other player starts to grab
             float d = Vector3.Distance(pos, (Vector3)refControllerPos);
             isPulled = d >= tearDistance;
         }
 
         if (!isPulled) return;
+
+        // let other people know the object is being pulled
         context.SendJson(new Message(roomClient.Me.uuid, true, true));
 
+        // only tear when received that other people are also pulling
         if(otherPulled && !isTorn) DoTear();
     }
 
@@ -102,6 +107,7 @@ public class DualTearObject : MonoBehaviour
         return Vector3.zero;
     }
 
+    // get center of object from mesh boundaries
     private Vector3 GetSpawnPosition()
     {
         Renderer[] renderers = GetComponentsInChildren<Renderer>();
@@ -117,21 +123,18 @@ public class DualTearObject : MonoBehaviour
 
     private void DoTear()
     {
-        // Play sound locally for both clients before the return check
         if (tearSound != null)
         {
             AudioSource.PlayClipAtPoint(tearSound, transform.position, soundVolume);
         }
-        
         isTorn = true;
-        // only the client with smaller id spawns
+
+        // only the client with smaller id in charge of spawning
         if(string.Compare(roomClient.Me.uuid, otherId) >= 0) return;
 
         Vector3 spawnPos = GetSpawnPosition();
 
         LetterSpawner.Instance?.SpawnWord(word, spawnPos);
-
-        // LetterSpawner.Instance?.SpawnWord(word, transform.position);
         var networkObj = GetComponent<DualNetworkedObject>();
         networkObj.BroadcastActiveSelf(false);
         gameObject.SetActive(false);

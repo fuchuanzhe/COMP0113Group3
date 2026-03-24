@@ -1620,7 +1620,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR float Mathf_Clamp_mEB9AEA827D27D2
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 88948
+// Method Definition Index: 134319
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR MonoScriptData_tD9253525BE3C6B9C8A71F74CBA9E83D4ACE47D62 UnitySourceGeneratedAssemblyMonoScriptTypes_v1_Get_mF7F52B1E9B8B90BD7EC9327E4DB749DEA6D6908F (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -1654,7 +1654,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR MonoScriptData_tD9253525BE3C6B9C8A71F74CBA9E8
 		return L_6;
 	}
 }
-// Method Definition Index: 88949
+// Method Definition Index: 134320
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void UnitySourceGeneratedAssemblyMonoScriptTypes_v1__ctor_m691BF316532D530FEC1325CF7B7A1670EA9379AE (UnitySourceGeneratedAssemblyMonoScriptTypes_v1_t02648E5AF26AF0A5DE1766C2A5AEEFD554080E00* __this, const RuntimeMethod* method) 
 {
 	{
@@ -1740,7 +1740,7 @@ IL2CPP_EXTERN_C void MonoScriptData_tD9253525BE3C6B9C8A71F74CBA9E83D4ACE47D62_ma
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 88950
+// Method Definition Index: 134321
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void _10_JoinRoomClients_Start_mD06BB2674D138AFF3FDBC2CA51873BF6DA640996 (_10_JoinRoomClients_tFCEC2648FE6CA35FDE1AA9907C62C8512945BB93* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -1754,11 +1754,11 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void _10_JoinRoomClients_Start_mD06BB2674D138
 	RoomClientU5BU5D_t5932A3FEC7748463B7C227B5A12F1D34B3B74BE5* V_1 = NULL;
 	int32_t V_2 = 0;
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/10_Messages/_10_JoinRoomClients.cs:15>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/10_Messages/_10_JoinRoomClients.cs:15>
 		Guid_t L_0;
 		L_0 = Guid_NewGuid_m1F4894E8DC089811D6252148AD5858E58D43A7BD(NULL);
 		V_0 = L_0;
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/10_Messages/_10_JoinRoomClients.cs:16>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/10_Messages/_10_JoinRoomClients.cs:16>
 		RoomClientU5BU5D_t5932A3FEC7748463B7C227B5A12F1D34B3B74BE5* L_1;
 		L_1 = Component_GetComponentsInChildren_TisRoomClient_t124F52F8602AB535AC105F1E470809979EDA2A4F_m591E041E0D21D3049E3168B2886A3B0A6D91AD5E(__this, Component_GetComponentsInChildren_TisRoomClient_t124F52F8602AB535AC105F1E470809979EDA2A4F_m591E041E0D21D3049E3168B2886A3B0A6D91AD5E_RuntimeMethod_var);
 		V_1 = L_1;
@@ -1768,13 +1768,13 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void _10_JoinRoomClients_Start_mD06BB2674D138
 
 IL_0011:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/10_Messages/_10_JoinRoomClients.cs:16>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/10_Messages/_10_JoinRoomClients.cs:16>
 		RoomClientU5BU5D_t5932A3FEC7748463B7C227B5A12F1D34B3B74BE5* L_2 = V_1;
 		int32_t L_3 = V_2;
 		NullCheck(L_2);
 		int32_t L_4 = L_3;
 		RoomClient_t124F52F8602AB535AC105F1E470809979EDA2A4F* L_5 = (L_2)->GetAt(static_cast<il2cpp_array_size_t>(L_4));
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/10_Messages/_10_JoinRoomClients.cs:18>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/10_Messages/_10_JoinRoomClients.cs:18>
 		Guid_t L_6 = V_0;
 		NullCheck(L_5);
 		RoomClient_Join_m4A6D5CDB4FBC72BFD1DAC3D11E9DEB3A6998D7F3(L_5, L_6, NULL);
@@ -1784,7 +1784,7 @@ IL_0011:
 
 IL_001e:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/10_Messages/_10_JoinRoomClients.cs:16>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/10_Messages/_10_JoinRoomClients.cs:16>
 		int32_t L_8 = V_2;
 		RoomClientU5BU5D_t5932A3FEC7748463B7C227B5A12F1D34B3B74BE5* L_9 = V_1;
 		NullCheck(L_9);
@@ -1794,11 +1794,11 @@ IL_001e:
 		}
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/10_Messages/_10_JoinRoomClients.cs:20>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/10_Messages/_10_JoinRoomClients.cs:20>
 		return;
 	}
 }
-// Method Definition Index: 88951
+// Method Definition Index: 134322
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void _10_JoinRoomClients__ctor_mB3FE2DE14D29FAB0BB9F06646D8410EA2FAF088C (_10_JoinRoomClients_tFCEC2648FE6CA35FDE1AA9907C62C8512945BB93* __this, const RuntimeMethod* method) 
 {
 	{
@@ -1814,11 +1814,11 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void _10_JoinRoomClients__ctor_mB3FE2DE14D29F
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 88952
+// Method Definition Index: 134323
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void _10_Messager_Start_m59FC1BCAAC02BFD7D70901DE96DC06299C874271 (_10_Messager_tC1D70CA75A9C6D82A5B3387AF90385F3BBA0182A* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/10_Messages/_10_Messager.cs:14>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/10_Messages/_10_Messager.cs:14>
 		NetworkContext_t49239659157E00ACFF3A196AF00218DED40F9310 L_0;
 		L_0 = NetworkScene_Register_m0F251779B3FEA29EAE6A5DBCDDCC0E50596A6545(__this, NULL);
 		__this->___context = L_0;
@@ -1826,11 +1826,11 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void _10_Messager_Start_m59FC1BCAAC02BFD7D709
 		#if IL2CPP_ENABLE_STRICT_WRITE_BARRIERS
 		Il2CppCodeGenWriteBarrier((void**)&(((&__this->___context))->___Component), (void*)NULL);
 		#endif
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/10_Messages/_10_Messager.cs:15>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/10_Messages/_10_Messager.cs:15>
 		return;
 	}
 }
-// Method Definition Index: 88953
+// Method Definition Index: 134324
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void _10_Messager_SetColor_mD2C42BB7D58A2A9A13615CE17D1C16C12744E412 (_10_Messager_tC1D70CA75A9C6D82A5B3387AF90385F3BBA0182A* __this, Color32_t73C5004937BF5BB8AD55323D51AAA40A898EF48B ___0_color, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -1842,7 +1842,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void _10_Messager_SetColor_mD2C42BB7D58A2A9A1
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/10_Messages/_10_Messager.cs:19>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/10_Messages/_10_Messager.cs:19>
 		Renderer_t320575F223BCB177A982E5DDB5DB19FAA89E7FBF* L_0;
 		L_0 = Component_GetComponentInChildren_TisRenderer_t320575F223BCB177A982E5DDB5DB19FAA89E7FBF_m7CBAFA50AB995C9F53D6140718FCD31D7BEC7CC8(__this, Component_GetComponentInChildren_TisRenderer_t320575F223BCB177A982E5DDB5DB19FAA89E7FBF_m7CBAFA50AB995C9F53D6140718FCD31D7BEC7CC8_RuntimeMethod_var);
 		NullCheck(L_0);
@@ -1853,7 +1853,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void _10_Messager_SetColor_mD2C42BB7D58A2A9A1
 		L_3 = Color32_op_Implicit_m47CBB138122B400E0B1F4BFD7C30A6C2C00FCA3E_inline(L_2, NULL);
 		NullCheck(L_1);
 		Material_set_color_m5C32DEBB215FF9EE35E7B575297D8C2F29CC2A2D(L_1, L_3, NULL);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/10_Messages/_10_Messager.cs:21>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/10_Messages/_10_Messager.cs:21>
 		NetworkContext_t49239659157E00ACFF3A196AF00218DED40F9310* L_4 = (NetworkContext_t49239659157E00ACFF3A196AF00218DED40F9310*)(&__this->___context);
 		NetworkScene_t22A88D7C9BE8911B1600942992E757FE41FD2CA6* L_5 = L_4->___Scene;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
@@ -1865,7 +1865,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void _10_Messager_SetColor_mD2C42BB7D58A2A9A1
 		}
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/10_Messages/_10_Messager.cs:23>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/10_Messages/_10_Messager.cs:23>
 		NetworkContext_t49239659157E00ACFF3A196AF00218DED40F9310* L_7 = (NetworkContext_t49239659157E00ACFF3A196AF00218DED40F9310*)(&__this->___context);
 		Color32_t73C5004937BF5BB8AD55323D51AAA40A898EF48B L_8 = ___0_color;
 		NetworkContext_SendJson_TisColor32_t73C5004937BF5BB8AD55323D51AAA40A898EF48B_m85FC5561F48BCCC1AA79F3F132AAA31D274839E5(L_7, L_8, NetworkContext_SendJson_TisColor32_t73C5004937BF5BB8AD55323D51AAA40A898EF48B_m85FC5561F48BCCC1AA79F3F132AAA31D274839E5_RuntimeMethod_var);
@@ -1873,11 +1873,11 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void _10_Messager_SetColor_mD2C42BB7D58A2A9A1
 
 IL_0035:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/10_Messages/_10_Messager.cs:25>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/10_Messages/_10_Messager.cs:25>
 		return;
 	}
 }
-// Method Definition Index: 88954
+// Method Definition Index: 134325
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void _10_Messager_ProcessMessage_mBD370AFC98669F5CB762EF0A5A49821A4E976C05 (_10_Messager_tC1D70CA75A9C6D82A5B3387AF90385F3BBA0182A* __this, ReferenceCountedSceneGraphMessage_tC9DC0F8B3261AD62C7AEAE4C30AAB5D876E08F34 ___0_message, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -1890,11 +1890,11 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void _10_Messager_ProcessMessage_mBD370AFC986
 	Color32_t73C5004937BF5BB8AD55323D51AAA40A898EF48B V_0;
 	memset((&V_0), 0, sizeof(V_0));
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/10_Messages/_10_Messager.cs:29>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/10_Messages/_10_Messager.cs:29>
 		Color32_t73C5004937BF5BB8AD55323D51AAA40A898EF48B L_0;
 		L_0 = ReferenceCountedSceneGraphMessage_FromJson_TisColor32_t73C5004937BF5BB8AD55323D51AAA40A898EF48B_m652A116CB973E729E2816F4B900DC5C215EE0016((&___0_message), ReferenceCountedSceneGraphMessage_FromJson_TisColor32_t73C5004937BF5BB8AD55323D51AAA40A898EF48B_m652A116CB973E729E2816F4B900DC5C215EE0016_RuntimeMethod_var);
 		V_0 = L_0;
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/10_Messages/_10_Messager.cs:30>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/10_Messages/_10_Messager.cs:30>
 		Renderer_t320575F223BCB177A982E5DDB5DB19FAA89E7FBF* L_1;
 		L_1 = Component_GetComponentInChildren_TisRenderer_t320575F223BCB177A982E5DDB5DB19FAA89E7FBF_m7CBAFA50AB995C9F53D6140718FCD31D7BEC7CC8(__this, Component_GetComponentInChildren_TisRenderer_t320575F223BCB177A982E5DDB5DB19FAA89E7FBF_m7CBAFA50AB995C9F53D6140718FCD31D7BEC7CC8_RuntimeMethod_var);
 		NullCheck(L_1);
@@ -1905,11 +1905,11 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void _10_Messager_ProcessMessage_mBD370AFC986
 		L_4 = Color32_op_Implicit_m47CBB138122B400E0B1F4BFD7C30A6C2C00FCA3E_inline(L_3, NULL);
 		NullCheck(L_2);
 		Material_set_color_m5C32DEBB215FF9EE35E7B575297D8C2F29CC2A2D(L_2, L_4, NULL);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/10_Messages/_10_Messager.cs:31>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/10_Messages/_10_Messager.cs:31>
 		return;
 	}
 }
-// Method Definition Index: 88955
+// Method Definition Index: 134326
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void _10_Messager__ctor_mA0456F168A197BA13A866B07A15AAF77C640EFE8 (_10_Messager_tC1D70CA75A9C6D82A5B3387AF90385F3BBA0182A* __this, const RuntimeMethod* method) 
 {
 	{
@@ -1925,20 +1925,20 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void _10_Messager__ctor_mA0456F168A197BA13A86
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 88956
+// Method Definition Index: 134327
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void _10_SetColor_SetColor_m530E3CA235F9BA5066B1E7391B45464F81DF1DCA (_10_SetColor_t64D1A3D904473AB8A859F638F4D3B50FBFCE7652* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/10_Messages/_10_SetColor.cs:14>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/10_Messages/_10_SetColor.cs:14>
 		_10_Messager_tC1D70CA75A9C6D82A5B3387AF90385F3BBA0182A* L_0 = __this->___messager;
 		Color32_t73C5004937BF5BB8AD55323D51AAA40A898EF48B L_1 = __this->___color;
 		NullCheck(L_0);
 		_10_Messager_SetColor_mD2C42BB7D58A2A9A13615CE17D1C16C12744E412(L_0, L_1, NULL);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/10_Messages/_10_SetColor.cs:15>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/10_Messages/_10_SetColor.cs:15>
 		return;
 	}
 }
-// Method Definition Index: 88957
+// Method Definition Index: 134328
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void _10_SetColor__ctor_m7AB48C0145303E1AEE3A23892BC599E18513A579 (_10_SetColor_t64D1A3D904473AB8A859F638F4D3B50FBFCE7652* __this, const RuntimeMethod* method) 
 {
 	{
@@ -1954,11 +1954,11 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void _10_SetColor__ctor_m7AB48C0145303E1AEE3A
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 88958
+// Method Definition Index: 134329
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void _11_ColorMessager_Start_mB64BDA7D8577F2E553F9371EDA0AB8A6D0E3C579 (_11_ColorMessager_t1D84BA2E1657B1310A042A92E2B563183DC4FA14* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/11_MessagesAndPersistence/_11_ColorMessager.cs:14>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/11_MessagesAndPersistence/_11_ColorMessager.cs:14>
 		NetworkContext_t49239659157E00ACFF3A196AF00218DED40F9310 L_0;
 		L_0 = NetworkScene_Register_m0F251779B3FEA29EAE6A5DBCDDCC0E50596A6545(__this, NULL);
 		__this->___context = L_0;
@@ -1966,11 +1966,11 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void _11_ColorMessager_Start_mB64BDA7D8577F2E
 		#if IL2CPP_ENABLE_STRICT_WRITE_BARRIERS
 		Il2CppCodeGenWriteBarrier((void**)&(((&__this->___context))->___Component), (void*)NULL);
 		#endif
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/11_MessagesAndPersistence/_11_ColorMessager.cs:15>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/11_MessagesAndPersistence/_11_ColorMessager.cs:15>
 		return;
 	}
 }
-// Method Definition Index: 88959
+// Method Definition Index: 134330
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void _11_ColorMessager_SetColor_m6F726153AEF79551ECC5CEF12D298630370EF524 (_11_ColorMessager_t1D84BA2E1657B1310A042A92E2B563183DC4FA14* __this, Color32_t73C5004937BF5BB8AD55323D51AAA40A898EF48B ___0_color, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -1982,7 +1982,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void _11_ColorMessager_SetColor_m6F726153AEF7
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/11_MessagesAndPersistence/_11_ColorMessager.cs:19>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/11_MessagesAndPersistence/_11_ColorMessager.cs:19>
 		Renderer_t320575F223BCB177A982E5DDB5DB19FAA89E7FBF* L_0;
 		L_0 = Component_GetComponentInChildren_TisRenderer_t320575F223BCB177A982E5DDB5DB19FAA89E7FBF_m7CBAFA50AB995C9F53D6140718FCD31D7BEC7CC8(__this, Component_GetComponentInChildren_TisRenderer_t320575F223BCB177A982E5DDB5DB19FAA89E7FBF_m7CBAFA50AB995C9F53D6140718FCD31D7BEC7CC8_RuntimeMethod_var);
 		NullCheck(L_0);
@@ -1993,7 +1993,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void _11_ColorMessager_SetColor_m6F726153AEF7
 		L_3 = Color32_op_Implicit_m47CBB138122B400E0B1F4BFD7C30A6C2C00FCA3E_inline(L_2, NULL);
 		NullCheck(L_1);
 		Material_set_color_m5C32DEBB215FF9EE35E7B575297D8C2F29CC2A2D(L_1, L_3, NULL);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/11_MessagesAndPersistence/_11_ColorMessager.cs:21>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/11_MessagesAndPersistence/_11_ColorMessager.cs:21>
 		NetworkContext_t49239659157E00ACFF3A196AF00218DED40F9310* L_4 = (NetworkContext_t49239659157E00ACFF3A196AF00218DED40F9310*)(&__this->___context);
 		NetworkScene_t22A88D7C9BE8911B1600942992E757FE41FD2CA6* L_5 = L_4->___Scene;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
@@ -2005,7 +2005,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void _11_ColorMessager_SetColor_m6F726153AEF7
 		}
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/11_MessagesAndPersistence/_11_ColorMessager.cs:23>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/11_MessagesAndPersistence/_11_ColorMessager.cs:23>
 		NetworkContext_t49239659157E00ACFF3A196AF00218DED40F9310* L_7 = (NetworkContext_t49239659157E00ACFF3A196AF00218DED40F9310*)(&__this->___context);
 		Color32_t73C5004937BF5BB8AD55323D51AAA40A898EF48B L_8 = ___0_color;
 		NetworkContext_SendJson_TisColor32_t73C5004937BF5BB8AD55323D51AAA40A898EF48B_m85FC5561F48BCCC1AA79F3F132AAA31D274839E5(L_7, L_8, NetworkContext_SendJson_TisColor32_t73C5004937BF5BB8AD55323D51AAA40A898EF48B_m85FC5561F48BCCC1AA79F3F132AAA31D274839E5_RuntimeMethod_var);
@@ -2013,11 +2013,11 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void _11_ColorMessager_SetColor_m6F726153AEF7
 
 IL_0035:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/11_MessagesAndPersistence/_11_ColorMessager.cs:25>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/11_MessagesAndPersistence/_11_ColorMessager.cs:25>
 		return;
 	}
 }
-// Method Definition Index: 88960
+// Method Definition Index: 134331
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void _11_ColorMessager_ProcessMessage_m92F2D508895F1F26EF4E7C915C7FFC3898BADA94 (_11_ColorMessager_t1D84BA2E1657B1310A042A92E2B563183DC4FA14* __this, ReferenceCountedSceneGraphMessage_tC9DC0F8B3261AD62C7AEAE4C30AAB5D876E08F34 ___0_message, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -2030,11 +2030,11 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void _11_ColorMessager_ProcessMessage_m92F2D5
 	Color32_t73C5004937BF5BB8AD55323D51AAA40A898EF48B V_0;
 	memset((&V_0), 0, sizeof(V_0));
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/11_MessagesAndPersistence/_11_ColorMessager.cs:29>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/11_MessagesAndPersistence/_11_ColorMessager.cs:29>
 		Color32_t73C5004937BF5BB8AD55323D51AAA40A898EF48B L_0;
 		L_0 = ReferenceCountedSceneGraphMessage_FromJson_TisColor32_t73C5004937BF5BB8AD55323D51AAA40A898EF48B_m652A116CB973E729E2816F4B900DC5C215EE0016((&___0_message), ReferenceCountedSceneGraphMessage_FromJson_TisColor32_t73C5004937BF5BB8AD55323D51AAA40A898EF48B_m652A116CB973E729E2816F4B900DC5C215EE0016_RuntimeMethod_var);
 		V_0 = L_0;
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/11_MessagesAndPersistence/_11_ColorMessager.cs:30>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/11_MessagesAndPersistence/_11_ColorMessager.cs:30>
 		Renderer_t320575F223BCB177A982E5DDB5DB19FAA89E7FBF* L_1;
 		L_1 = Component_GetComponentInChildren_TisRenderer_t320575F223BCB177A982E5DDB5DB19FAA89E7FBF_m7CBAFA50AB995C9F53D6140718FCD31D7BEC7CC8(__this, Component_GetComponentInChildren_TisRenderer_t320575F223BCB177A982E5DDB5DB19FAA89E7FBF_m7CBAFA50AB995C9F53D6140718FCD31D7BEC7CC8_RuntimeMethod_var);
 		NullCheck(L_1);
@@ -2045,11 +2045,11 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void _11_ColorMessager_ProcessMessage_m92F2D5
 		L_4 = Color32_op_Implicit_m47CBB138122B400E0B1F4BFD7C30A6C2C00FCA3E_inline(L_3, NULL);
 		NullCheck(L_2);
 		Material_set_color_m5C32DEBB215FF9EE35E7B575297D8C2F29CC2A2D(L_2, L_4, NULL);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/11_MessagesAndPersistence/_11_ColorMessager.cs:31>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/11_MessagesAndPersistence/_11_ColorMessager.cs:31>
 		return;
 	}
 }
-// Method Definition Index: 88961
+// Method Definition Index: 134332
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void _11_ColorMessager__ctor_m46AECA9ECC35BC54363B4CABC83658314B63C49F (_11_ColorMessager_t1D84BA2E1657B1310A042A92E2B563183DC4FA14* __this, const RuntimeMethod* method) 
 {
 	{
@@ -2065,7 +2065,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void _11_ColorMessager__ctor_m46AECA9ECC35BC5
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 88962
+// Method Definition Index: 134333
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void _11_JoinOther_Join_m7FBA38C24D8F820FE7418671BEFF9EB493C31C0A (_11_JoinOther_t4FD2B911D2AFA77DBFECA5DC9605B22AEB2F3463* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -2076,7 +2076,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void _11_JoinOther_Join_m7FBA38C24D8F820FE741
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/11_MessagesAndPersistence/_11_JoinOther.cs:15>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/11_MessagesAndPersistence/_11_JoinOther.cs:15>
 		RoomClient_t124F52F8602AB535AC105F1E470809979EDA2A4F* L_0 = __this->___otherPeerRoomClient;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_1;
@@ -2097,7 +2097,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void _11_JoinOther_Join_m7FBA38C24D8F820FE741
 		}
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/11_MessagesAndPersistence/_11_JoinOther.cs:17>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/11_MessagesAndPersistence/_11_JoinOther.cs:17>
 		RoomClient_t124F52F8602AB535AC105F1E470809979EDA2A4F* L_4 = __this->___roomClient;
 		RoomClient_t124F52F8602AB535AC105F1E470809979EDA2A4F* L_5 = __this->___otherPeerRoomClient;
 		NullCheck(L_5);
@@ -2112,11 +2112,11 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void _11_JoinOther_Join_m7FBA38C24D8F820FE741
 
 IL_0036:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/11_MessagesAndPersistence/_11_JoinOther.cs:19>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/11_MessagesAndPersistence/_11_JoinOther.cs:19>
 		return;
 	}
 }
-// Method Definition Index: 88963
+// Method Definition Index: 134334
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void _11_JoinOther__ctor_m55B66A9BF3D1FCDCCA30064474EA024DA268A2E0 (_11_JoinOther_t4FD2B911D2AFA77DBFECA5DC9605B22AEB2F3463* __this, const RuntimeMethod* method) 
 {
 	{
@@ -2132,7 +2132,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void _11_JoinOther__ctor_m55B66A9BF3D1FCDCCA3
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 88964
+// Method Definition Index: 134335
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void _11_JoinRandom_JoinRandom_m0D619D30E18EE786D8662A88E7009B8F68EE522A (_11_JoinRandom_tF4CE491850A42877688CD9020034A3BF19C406C7* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -2142,7 +2142,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void _11_JoinRandom_JoinRandom_m0D619D30E18EE
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/11_MessagesAndPersistence/_11_JoinRandom.cs:15>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/11_MessagesAndPersistence/_11_JoinRandom.cs:15>
 		RoomClient_t124F52F8602AB535AC105F1E470809979EDA2A4F* L_0 = __this->___roomClient;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_1;
@@ -2153,7 +2153,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void _11_JoinRandom_JoinRandom_m0D619D30E18EE
 		}
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/11_MessagesAndPersistence/_11_JoinRandom.cs:17>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/11_MessagesAndPersistence/_11_JoinRandom.cs:17>
 		RoomClient_t124F52F8602AB535AC105F1E470809979EDA2A4F* L_2 = __this->___roomClient;
 		Guid_t L_3;
 		L_3 = Guid_NewGuid_m1F4894E8DC089811D6252148AD5858E58D43A7BD(NULL);
@@ -2163,11 +2163,11 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void _11_JoinRandom_JoinRandom_m0D619D30E18EE
 
 IL_001d:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/11_MessagesAndPersistence/_11_JoinRandom.cs:19>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/11_MessagesAndPersistence/_11_JoinRandom.cs:19>
 		return;
 	}
 }
-// Method Definition Index: 88965
+// Method Definition Index: 134336
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void _11_JoinRandom__ctor_m97925FB6AF32CC406EE5E3E7EFF4E1D8C6116FAF (_11_JoinRandom_tF4CE491850A42877688CD9020034A3BF19C406C7* __this, const RuntimeMethod* method) 
 {
 	{
@@ -2183,7 +2183,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void _11_JoinRandom__ctor_m97925FB6AF32CC406E
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 88966
+// Method Definition Index: 134337
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void _11_JoinRandomOnStart_Start_m33DFF2A91E13721D5C72FCE99DAF0DAA6B4705C1 (_11_JoinRandomOnStart_tA95CCD3772DB0AAE321E816143D1FB4050EBC4A4* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -2193,18 +2193,18 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void _11_JoinRandomOnStart_Start_m33DFF2A91E1
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/11_MessagesAndPersistence/_11_JoinRandomOnStart.cs:13>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/11_MessagesAndPersistence/_11_JoinRandomOnStart.cs:13>
 		RoomClient_t124F52F8602AB535AC105F1E470809979EDA2A4F* L_0;
 		L_0 = Component_GetComponent_TisRoomClient_t124F52F8602AB535AC105F1E470809979EDA2A4F_m5C5C417FD81C002C5C18F6F1E8463A66E9629806(__this, Component_GetComponent_TisRoomClient_t124F52F8602AB535AC105F1E470809979EDA2A4F_m5C5C417FD81C002C5C18F6F1E8463A66E9629806_RuntimeMethod_var);
 		Guid_t L_1;
 		L_1 = Guid_NewGuid_m1F4894E8DC089811D6252148AD5858E58D43A7BD(NULL);
 		NullCheck(L_0);
 		RoomClient_Join_m4A6D5CDB4FBC72BFD1DAC3D11E9DEB3A6998D7F3(L_0, L_1, NULL);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/11_MessagesAndPersistence/_11_JoinRandomOnStart.cs:14>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/11_MessagesAndPersistence/_11_JoinRandomOnStart.cs:14>
 		return;
 	}
 }
-// Method Definition Index: 88967
+// Method Definition Index: 134338
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void _11_JoinRandomOnStart__ctor_mB26D8F7182BF4B9C7C50B3CD51370B259D9D0F9F (_11_JoinRandomOnStart_tA95CCD3772DB0AAE321E816143D1FB4050EBC4A4* __this, const RuntimeMethod* method) 
 {
 	{
@@ -2220,7 +2220,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void _11_JoinRandomOnStart__ctor_mB26D8F7182B
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 88968
+// Method Definition Index: 134339
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void _11_RoomText_Start_m154D56E130CABC3E2945547A0B87678369F83987 (_11_RoomText_t8F7BE7AD2591D3426B661D248E75F574E3DFF3D8* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -2233,7 +2233,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void _11_RoomText_Start_m154D56E130CABC3E2945
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/11_MessagesAndPersistence/_11_RoomText.cs:17>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/11_MessagesAndPersistence/_11_RoomText.cs:17>
 		RoomClient_t124F52F8602AB535AC105F1E470809979EDA2A4F* L_0 = __this->___roomClient;
 		NullCheck(L_0);
 		RoomEvent_tE6D32AD7A63F6CD673561FD622109927395ED2B1* L_1 = L_0->___OnJoinedRoom;
@@ -2241,23 +2241,23 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void _11_RoomText_Start_m154D56E130CABC3E2945
 		UnityAction_1__ctor_m23CE9207FAC5524B00C270BC302D2B90D937E265(L_2, __this, (intptr_t)((void*)_11_RoomText_RoomClient_OnJoinedRoom_m5584A4C0C00A0E1977D83CFB7EB3C0306EF9BE8A_RuntimeMethod_var), NULL);
 		NullCheck(L_1);
 		UnityEvent_1_AddListener_m58BD029288EB53E8C5D3BD2A0FF7EC39284A7421(L_1, L_2, UnityEvent_1_AddListener_m58BD029288EB53E8C5D3BD2A0FF7EC39284A7421_RuntimeMethod_var);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/11_MessagesAndPersistence/_11_RoomText.cs:19>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/11_MessagesAndPersistence/_11_RoomText.cs:19>
 		Text_tD60B2346DAA6666BF0D822FF607F0B220C2B9E62* L_3;
 		L_3 = Component_GetComponent_TisText_tD60B2346DAA6666BF0D822FF607F0B220C2B9E62_mB85C5C0EEF6535E3FC0DBFC14E39FA5A51B6F888(__this, Component_GetComponent_TisText_tD60B2346DAA6666BF0D822FF607F0B220C2B9E62_mB85C5C0EEF6535E3FC0DBFC14E39FA5A51B6F888_RuntimeMethod_var);
 		__this->___text = L_3;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___text), (void*)L_3);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/11_MessagesAndPersistence/_11_RoomText.cs:20>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/11_MessagesAndPersistence/_11_RoomText.cs:20>
 		Text_tD60B2346DAA6666BF0D822FF607F0B220C2B9E62* L_4 = __this->___text;
 		NullCheck(L_4);
 		String_t* L_5;
 		L_5 = VirtualFuncInvoker0< String_t* >::Invoke(74, L_4);
 		__this->___originalTextContent = L_5;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___originalTextContent), (void*)L_5);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/11_MessagesAndPersistence/_11_RoomText.cs:21>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/11_MessagesAndPersistence/_11_RoomText.cs:21>
 		return;
 	}
 }
-// Method Definition Index: 88969
+// Method Definition Index: 134340
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void _11_RoomText_RoomClient_OnJoinedRoom_m5584A4C0C00A0E1977D83CFB7EB3C0306EF9BE8A (_11_RoomText_t8F7BE7AD2591D3426B661D248E75F574E3DFF3D8* __this, RuntimeObject* ___0_room, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -2268,7 +2268,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void _11_RoomText_RoomClient_OnJoinedRoom_m55
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/11_MessagesAndPersistence/_11_RoomText.cs:25>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/11_MessagesAndPersistence/_11_RoomText.cs:25>
 		RuntimeObject* L_0 = ___0_room;
 		if (!L_0)
 		{
@@ -2299,7 +2299,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void _11_RoomText_RoomClient_OnJoinedRoom_m55
 		}
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/11_MessagesAndPersistence/_11_RoomText.cs:27>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/11_MessagesAndPersistence/_11_RoomText.cs:27>
 		Text_tD60B2346DAA6666BF0D822FF607F0B220C2B9E62* L_6 = __this->___text;
 		String_t* L_7 = __this->___originalTextContent;
 		RuntimeObject* L_8 = ___0_room;
@@ -2317,11 +2317,11 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void _11_RoomText_RoomClient_OnJoinedRoom_m55
 
 IL_0041:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/11_MessagesAndPersistence/_11_RoomText.cs:29>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/11_MessagesAndPersistence/_11_RoomText.cs:29>
 		return;
 	}
 }
-// Method Definition Index: 88970
+// Method Definition Index: 134341
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void _11_RoomText__ctor_m1732653BE66F0B9B5A061714C069049923F3D701 (_11_RoomText_t8F7BE7AD2591D3426B661D248E75F574E3DFF3D8* __this, const RuntimeMethod* method) 
 {
 	{
@@ -2337,20 +2337,20 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void _11_RoomText__ctor_m1732653BE66F0B9B5A06
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 88971
+// Method Definition Index: 134342
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void _11_SetColor_SetColor_m7A56CA7C08E67C823915DAD0BCA4CB98358417FE (_11_SetColor_t87431419A78FE997184DE2E5F5455E49D6B5A7F8* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/11_MessagesAndPersistence/_11_SetColor.cs:14>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/11_MessagesAndPersistence/_11_SetColor.cs:14>
 		_11_ColorMessager_t1D84BA2E1657B1310A042A92E2B563183DC4FA14* L_0 = __this->___messager;
 		Color32_t73C5004937BF5BB8AD55323D51AAA40A898EF48B L_1 = __this->___color;
 		NullCheck(L_0);
 		_11_ColorMessager_SetColor_m6F726153AEF79551ECC5CEF12D298630370EF524(L_0, L_1, NULL);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/11_MessagesAndPersistence/_11_SetColor.cs:15>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/11_MessagesAndPersistence/_11_SetColor.cs:15>
 		return;
 	}
 }
-// Method Definition Index: 88972
+// Method Definition Index: 134343
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void _11_SetColor__ctor_m88723AA1F8A30157D707F19E9D362D019FF7F30E (_11_SetColor_t87431419A78FE997184DE2E5F5455E49D6B5A7F8* __this, const RuntimeMethod* method) 
 {
 	{
@@ -2366,7 +2366,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void _11_SetColor__ctor_m88723AA1F8A30157D707
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 88973
+// Method Definition Index: 134344
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void _12_JoinOther_Join_m8D8E4AFAB88B4EEC06CACA679F886D8CADCBF4D5 (_12_JoinOther_t078D4B5A58D94654800F136C19C473659A03E890* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -2377,7 +2377,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void _12_JoinOther_Join_m8D8E4AFAB88B4EEC06CA
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/12_Properties/_12_JoinOther.cs:15>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/12_Properties/_12_JoinOther.cs:15>
 		RoomClient_t124F52F8602AB535AC105F1E470809979EDA2A4F* L_0 = __this->___otherPeerRoomClient;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_1;
@@ -2398,7 +2398,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void _12_JoinOther_Join_m8D8E4AFAB88B4EEC06CA
 		}
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/12_Properties/_12_JoinOther.cs:17>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/12_Properties/_12_JoinOther.cs:17>
 		RoomClient_t124F52F8602AB535AC105F1E470809979EDA2A4F* L_4 = __this->___roomClient;
 		RoomClient_t124F52F8602AB535AC105F1E470809979EDA2A4F* L_5 = __this->___otherPeerRoomClient;
 		NullCheck(L_5);
@@ -2413,11 +2413,11 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void _12_JoinOther_Join_m8D8E4AFAB88B4EEC06CA
 
 IL_0036:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/12_Properties/_12_JoinOther.cs:19>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/12_Properties/_12_JoinOther.cs:19>
 		return;
 	}
 }
-// Method Definition Index: 88974
+// Method Definition Index: 134345
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void _12_JoinOther__ctor_m45BA9F0049E0CED050251FC1DAF0F296EADA6CDD (_12_JoinOther_t078D4B5A58D94654800F136C19C473659A03E890* __this, const RuntimeMethod* method) 
 {
 	{
@@ -2433,7 +2433,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void _12_JoinOther__ctor_m45BA9F0049E0CED0502
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 88975
+// Method Definition Index: 134346
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void _12_JoinRandom_JoinRandom_m1D3A58EB2FB44A053017EEBB95E66AA849299D4B (_12_JoinRandom_tED54252FD96EED0A5537135DD2F368174F78F6B0* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -2443,7 +2443,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void _12_JoinRandom_JoinRandom_m1D3A58EB2FB44
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/12_Properties/_12_JoinRandom.cs:15>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/12_Properties/_12_JoinRandom.cs:15>
 		RoomClient_t124F52F8602AB535AC105F1E470809979EDA2A4F* L_0 = __this->___roomClient;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_1;
@@ -2454,7 +2454,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void _12_JoinRandom_JoinRandom_m1D3A58EB2FB44
 		}
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/12_Properties/_12_JoinRandom.cs:17>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/12_Properties/_12_JoinRandom.cs:17>
 		RoomClient_t124F52F8602AB535AC105F1E470809979EDA2A4F* L_2 = __this->___roomClient;
 		Guid_t L_3;
 		L_3 = Guid_NewGuid_m1F4894E8DC089811D6252148AD5858E58D43A7BD(NULL);
@@ -2464,11 +2464,11 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void _12_JoinRandom_JoinRandom_m1D3A58EB2FB44
 
 IL_001d:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/12_Properties/_12_JoinRandom.cs:19>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/12_Properties/_12_JoinRandom.cs:19>
 		return;
 	}
 }
-// Method Definition Index: 88976
+// Method Definition Index: 134347
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void _12_JoinRandom__ctor_m6AB8734392E8EF5ECD8D8F2E39E8E804D14CCC3D (_12_JoinRandom_tED54252FD96EED0A5537135DD2F368174F78F6B0* __this, const RuntimeMethod* method) 
 {
 	{
@@ -2484,7 +2484,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void _12_JoinRandom__ctor_m6AB8734392E8EF5ECD
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 88977
+// Method Definition Index: 134348
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void _12_JoinRandomOnStart_Start_m9ADAF29D0DD8FFFDAE76F5F92279D21E8248F121 (_12_JoinRandomOnStart_t04AF5DD31D4924E980DD02A553E7B483D09ED3E2* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -2494,18 +2494,18 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void _12_JoinRandomOnStart_Start_m9ADAF29D0DD
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/12_Properties/_12_JoinRandomOnStart.cs:13>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/12_Properties/_12_JoinRandomOnStart.cs:13>
 		RoomClient_t124F52F8602AB535AC105F1E470809979EDA2A4F* L_0;
 		L_0 = Component_GetComponent_TisRoomClient_t124F52F8602AB535AC105F1E470809979EDA2A4F_m5C5C417FD81C002C5C18F6F1E8463A66E9629806(__this, Component_GetComponent_TisRoomClient_t124F52F8602AB535AC105F1E470809979EDA2A4F_m5C5C417FD81C002C5C18F6F1E8463A66E9629806_RuntimeMethod_var);
 		Guid_t L_1;
 		L_1 = Guid_NewGuid_m1F4894E8DC089811D6252148AD5858E58D43A7BD(NULL);
 		NullCheck(L_0);
 		RoomClient_Join_m4A6D5CDB4FBC72BFD1DAC3D11E9DEB3A6998D7F3(L_0, L_1, NULL);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/12_Properties/_12_JoinRandomOnStart.cs:14>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/12_Properties/_12_JoinRandomOnStart.cs:14>
 		return;
 	}
 }
-// Method Definition Index: 88978
+// Method Definition Index: 134349
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void _12_JoinRandomOnStart__ctor_m17238207C93DC751F329492F9F93FE4AC65E00E4 (_12_JoinRandomOnStart_t04AF5DD31D4924E980DD02A553E7B483D09ED3E2* __this, const RuntimeMethod* method) 
 {
 	{
@@ -2521,7 +2521,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void _12_JoinRandomOnStart__ctor_m17238207C93
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 88979
+// Method Definition Index: 134350
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void _12_RoomText_Start_mF9771EF11610F623A3B4BC82F0FBEE43D47A14CA (_12_RoomText_tE1517D922309DDFCC2DA5C1ED661D74DB894034A* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -2534,7 +2534,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void _12_RoomText_Start_mF9771EF11610F623A3B4
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/12_Properties/_12_RoomText.cs:17>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/12_Properties/_12_RoomText.cs:17>
 		RoomClient_t124F52F8602AB535AC105F1E470809979EDA2A4F* L_0 = __this->___roomClient;
 		NullCheck(L_0);
 		RoomEvent_tE6D32AD7A63F6CD673561FD622109927395ED2B1* L_1 = L_0->___OnJoinedRoom;
@@ -2542,23 +2542,23 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void _12_RoomText_Start_mF9771EF11610F623A3B4
 		UnityAction_1__ctor_m23CE9207FAC5524B00C270BC302D2B90D937E265(L_2, __this, (intptr_t)((void*)_12_RoomText_RoomClient_OnJoinedRoom_m5FD4B9D95B88232DFE428621E8421C1F3AA64CC0_RuntimeMethod_var), NULL);
 		NullCheck(L_1);
 		UnityEvent_1_AddListener_m58BD029288EB53E8C5D3BD2A0FF7EC39284A7421(L_1, L_2, UnityEvent_1_AddListener_m58BD029288EB53E8C5D3BD2A0FF7EC39284A7421_RuntimeMethod_var);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/12_Properties/_12_RoomText.cs:19>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/12_Properties/_12_RoomText.cs:19>
 		Text_tD60B2346DAA6666BF0D822FF607F0B220C2B9E62* L_3;
 		L_3 = Component_GetComponent_TisText_tD60B2346DAA6666BF0D822FF607F0B220C2B9E62_mB85C5C0EEF6535E3FC0DBFC14E39FA5A51B6F888(__this, Component_GetComponent_TisText_tD60B2346DAA6666BF0D822FF607F0B220C2B9E62_mB85C5C0EEF6535E3FC0DBFC14E39FA5A51B6F888_RuntimeMethod_var);
 		__this->___text = L_3;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___text), (void*)L_3);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/12_Properties/_12_RoomText.cs:20>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/12_Properties/_12_RoomText.cs:20>
 		Text_tD60B2346DAA6666BF0D822FF607F0B220C2B9E62* L_4 = __this->___text;
 		NullCheck(L_4);
 		String_t* L_5;
 		L_5 = VirtualFuncInvoker0< String_t* >::Invoke(74, L_4);
 		__this->___originalTextContent = L_5;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___originalTextContent), (void*)L_5);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/12_Properties/_12_RoomText.cs:21>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/12_Properties/_12_RoomText.cs:21>
 		return;
 	}
 }
-// Method Definition Index: 88980
+// Method Definition Index: 134351
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void _12_RoomText_RoomClient_OnJoinedRoom_m5FD4B9D95B88232DFE428621E8421C1F3AA64CC0 (_12_RoomText_tE1517D922309DDFCC2DA5C1ED661D74DB894034A* __this, RuntimeObject* ___0_room, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -2569,7 +2569,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void _12_RoomText_RoomClient_OnJoinedRoom_m5F
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/12_Properties/_12_RoomText.cs:25>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/12_Properties/_12_RoomText.cs:25>
 		RuntimeObject* L_0 = ___0_room;
 		if (!L_0)
 		{
@@ -2600,7 +2600,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void _12_RoomText_RoomClient_OnJoinedRoom_m5F
 		}
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/12_Properties/_12_RoomText.cs:27>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/12_Properties/_12_RoomText.cs:27>
 		Text_tD60B2346DAA6666BF0D822FF607F0B220C2B9E62* L_6 = __this->___text;
 		String_t* L_7 = __this->___originalTextContent;
 		RuntimeObject* L_8 = ___0_room;
@@ -2618,11 +2618,11 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void _12_RoomText_RoomClient_OnJoinedRoom_m5F
 
 IL_0041:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/12_Properties/_12_RoomText.cs:29>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/12_Properties/_12_RoomText.cs:29>
 		return;
 	}
 }
-// Method Definition Index: 88981
+// Method Definition Index: 134352
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void _12_RoomText__ctor_m9FE781B4FA6F5593260C23911575083BA6AB9E34 (_12_RoomText_tE1517D922309DDFCC2DA5C1ED661D74DB894034A* __this, const RuntimeMethod* method) 
 {
 	{
@@ -2638,7 +2638,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void _12_RoomText__ctor_m9FE781B4FA6F5593260C
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 88982
+// Method Definition Index: 134353
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void _12_SizePropertySetter_Start_m34006652512EFFD45FAA0C2D3C94D1208C344F2B (_12_SizePropertySetter_t6A3B2F0CE2D02EA1B57A93D7D460D1482D4C6919* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -2653,7 +2653,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void _12_SizePropertySetter_Start_m3400665251
 	NetworkId_tD5FA0360D2F8AE544493A7D1A6C7C90B28735CE7 V_0;
 	memset((&V_0), 0, sizeof(V_0));
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/12_Properties/_12_SizePropertySetter.cs:16>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/12_Properties/_12_SizePropertySetter.cs:16>
 		NetworkId_tD5FA0360D2F8AE544493A7D1A6C7C90B28735CE7 L_0;
 		L_0 = NetworkId_Create_mCCF322BE02BC428984ED26020286B09707F5CD5E(__this, NULL);
 		V_0 = L_0;
@@ -2661,12 +2661,12 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void _12_SizePropertySetter_Start_m3400665251
 		L_1 = NetworkId_ToString_m84BE8372502BBDBC5F1BE05FF48CAB237702E013((&V_0), NULL);
 		__this->___networkIdString = L_1;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___networkIdString), (void*)L_1);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/12_Properties/_12_SizePropertySetter.cs:17>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/12_Properties/_12_SizePropertySetter.cs:17>
 		RoomClient_t124F52F8602AB535AC105F1E470809979EDA2A4F* L_2;
 		L_2 = Component_GetComponent_TisRoomClient_t124F52F8602AB535AC105F1E470809979EDA2A4F_m5C5C417FD81C002C5C18F6F1E8463A66E9629806(__this, Component_GetComponent_TisRoomClient_t124F52F8602AB535AC105F1E470809979EDA2A4F_m5C5C417FD81C002C5C18F6F1E8463A66E9629806_RuntimeMethod_var);
 		__this->___roomClient = L_2;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___roomClient), (void*)L_2);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/12_Properties/_12_SizePropertySetter.cs:18>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/12_Properties/_12_SizePropertySetter.cs:18>
 		RoomClient_t124F52F8602AB535AC105F1E470809979EDA2A4F* L_3 = __this->___roomClient;
 		NullCheck(L_3);
 		RoomEvent_tE6D32AD7A63F6CD673561FD622109927395ED2B1* L_4 = L_3->___OnRoomUpdated;
@@ -2674,11 +2674,11 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void _12_SizePropertySetter_Start_m3400665251
 		UnityAction_1__ctor_m23CE9207FAC5524B00C270BC302D2B90D937E265(L_5, __this, (intptr_t)((void*)_12_SizePropertySetter_RoomClient_OnRoomUpdated_m2E66176EE75ABED647E78F584DE570A9B0430681_RuntimeMethod_var), NULL);
 		NullCheck(L_4);
 		UnityEvent_1_AddListener_m58BD029288EB53E8C5D3BD2A0FF7EC39284A7421(L_4, L_5, UnityEvent_1_AddListener_m58BD029288EB53E8C5D3BD2A0FF7EC39284A7421_RuntimeMethod_var);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/12_Properties/_12_SizePropertySetter.cs:19>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/12_Properties/_12_SizePropertySetter.cs:19>
 		return;
 	}
 }
-// Method Definition Index: 88983
+// Method Definition Index: 134354
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void _12_SizePropertySetter_RoomClient_OnRoomUpdated_m2E66176EE75ABED647E78F584DE570A9B0430681 (_12_SizePropertySetter_t6A3B2F0CE2D02EA1B57A93D7D460D1482D4C6919* __this, RuntimeObject* ___0_room, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -2691,14 +2691,14 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void _12_SizePropertySetter_RoomClient_OnRoom
 	String_t* V_0 = NULL;
 	float V_1 = 0.0f;
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/12_Properties/_12_SizePropertySetter.cs:23>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/12_Properties/_12_SizePropertySetter.cs:23>
 		RuntimeObject* L_0 = ___0_room;
 		String_t* L_1 = __this->___networkIdString;
 		NullCheck(L_0);
 		String_t* L_2;
 		L_2 = InterfaceFuncInvoker1< String_t*, String_t* >::Invoke(4, IRoom_tE9F34CE2E028BF3AF61025BC3BBB92B06DC44EE8_il2cpp_TypeInfo_var, L_0, L_1);
 		V_0 = L_2;
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/12_Properties/_12_SizePropertySetter.cs:24>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/12_Properties/_12_SizePropertySetter.cs:24>
 		String_t* L_3 = V_0;
 		bool L_4;
 		L_4 = String_IsNullOrEmpty_mEA9E3FB005AC28FE02E69FCF95A7B8456192B478(L_3, NULL);
@@ -2708,7 +2708,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void _12_SizePropertySetter_RoomClient_OnRoom
 		}
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/12_Properties/_12_SizePropertySetter.cs:26>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/12_Properties/_12_SizePropertySetter.cs:26>
 		String_t* L_5 = V_0;
 		bool L_6;
 		L_6 = Single_TryParse_mC39FC2D8F1F33DE64685F3A8CE6BDD2164FB9423(L_5, (&V_1), NULL);
@@ -2718,7 +2718,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void _12_SizePropertySetter_RoomClient_OnRoom
 		}
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/12_Properties/_12_SizePropertySetter.cs:28>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/12_Properties/_12_SizePropertySetter.cs:28>
 		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_7;
 		L_7 = Component_GetComponent_TisTransform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1_m60E86366B3E431D4C4A549CF4FE5951087686F7F(__this, Component_GetComponent_TisTransform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1_m60E86366B3E431D4C4A549CF4FE5951087686F7F_RuntimeMethod_var);
 		NullCheck(L_7);
@@ -2735,11 +2735,11 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void _12_SizePropertySetter_RoomClient_OnRoom
 
 IL_003a:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/12_Properties/_12_SizePropertySetter.cs:31>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/12_Properties/_12_SizePropertySetter.cs:31>
 		return;
 	}
 }
-// Method Definition Index: 88984
+// Method Definition Index: 134355
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void _12_SizePropertySetter_SetSize_m023CDFEE614482FD9586F89761C9DBCBAABEBA5F (_12_SizePropertySetter_t6A3B2F0CE2D02EA1B57A93D7D460D1482D4C6919* __this, float ___0_size, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -2750,7 +2750,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void _12_SizePropertySetter_SetSize_m023CDFEE
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/12_Properties/_12_SizePropertySetter.cs:35>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/12_Properties/_12_SizePropertySetter.cs:35>
 		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_0;
 		L_0 = Component_GetComponent_TisTransform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1_m60E86366B3E431D4C4A549CF4FE5951087686F7F(__this, Component_GetComponent_TisTransform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1_m60E86366B3E431D4C4A549CF4FE5951087686F7F_RuntimeMethod_var);
 		NullCheck(L_0);
@@ -2763,7 +2763,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void _12_SizePropertySetter_SetSize_m023CDFEE
 		L_4 = Vector3_op_Multiply_m7F3B0FA9256CE368D7636558EFEFC4AB0E1A0F41_inline(L_2, L_3, NULL);
 		NullCheck(L_1);
 		Transform_set_localScale_mBA79E811BAF6C47B80FF76414C12B47B3CD03633(L_1, L_4, NULL);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/12_Properties/_12_SizePropertySetter.cs:36>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/12_Properties/_12_SizePropertySetter.cs:36>
 		RoomClient_t124F52F8602AB535AC105F1E470809979EDA2A4F* L_5 = __this->___roomClient;
 		NullCheck(L_5);
 		RuntimeObject* L_6;
@@ -2773,11 +2773,11 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void _12_SizePropertySetter_SetSize_m023CDFEE
 		L_8 = Single_ToString_mE282EDA9CA4F7DF88432D807732837A629D04972((&___0_size), NULL);
 		NullCheck(L_6);
 		InterfaceActionInvoker2< String_t*, String_t* >::Invoke(5, IRoom_tE9F34CE2E028BF3AF61025BC3BBB92B06DC44EE8_il2cpp_TypeInfo_var, L_6, L_7, L_8);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/12_Properties/_12_SizePropertySetter.cs:37>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/12_Properties/_12_SizePropertySetter.cs:37>
 		return;
 	}
 }
-// Method Definition Index: 88985
+// Method Definition Index: 134356
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void _12_SizePropertySetter__ctor_mC1158F389178848C83B5432F8CEA59D9FA98D6A8 (_12_SizePropertySetter_t6A3B2F0CE2D02EA1B57A93D7D460D1482D4C6919* __this, const RuntimeMethod* method) 
 {
 	{
@@ -2793,7 +2793,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void _12_SizePropertySetter__ctor_mC1158F3891
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 88986
+// Method Definition Index: 134357
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void _13_JoinRoomClients_Start_m881DF6846467CE6B10819E936EA0CAB02A9B3017 (_13_JoinRoomClients_t19A1D2FC9929EC1FAB8BC5F3DE8336DF1D925D6F* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -2807,11 +2807,11 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void _13_JoinRoomClients_Start_m881DF6846467C
 	RoomClientU5BU5D_t5932A3FEC7748463B7C227B5A12F1D34B3B74BE5* V_1 = NULL;
 	int32_t V_2 = 0;
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/13_NetworkedBehaviours/_13_JoinRoomClients.cs:13>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/13_NetworkedBehaviours/_13_JoinRoomClients.cs:13>
 		Guid_t L_0;
 		L_0 = Guid_NewGuid_m1F4894E8DC089811D6252148AD5858E58D43A7BD(NULL);
 		V_0 = L_0;
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/13_NetworkedBehaviours/_13_JoinRoomClients.cs:14>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/13_NetworkedBehaviours/_13_JoinRoomClients.cs:14>
 		RoomClientU5BU5D_t5932A3FEC7748463B7C227B5A12F1D34B3B74BE5* L_1;
 		L_1 = Component_GetComponentsInChildren_TisRoomClient_t124F52F8602AB535AC105F1E470809979EDA2A4F_m591E041E0D21D3049E3168B2886A3B0A6D91AD5E(__this, Component_GetComponentsInChildren_TisRoomClient_t124F52F8602AB535AC105F1E470809979EDA2A4F_m591E041E0D21D3049E3168B2886A3B0A6D91AD5E_RuntimeMethod_var);
 		V_1 = L_1;
@@ -2821,13 +2821,13 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void _13_JoinRoomClients_Start_m881DF6846467C
 
 IL_0011:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/13_NetworkedBehaviours/_13_JoinRoomClients.cs:14>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/13_NetworkedBehaviours/_13_JoinRoomClients.cs:14>
 		RoomClientU5BU5D_t5932A3FEC7748463B7C227B5A12F1D34B3B74BE5* L_2 = V_1;
 		int32_t L_3 = V_2;
 		NullCheck(L_2);
 		int32_t L_4 = L_3;
 		RoomClient_t124F52F8602AB535AC105F1E470809979EDA2A4F* L_5 = (L_2)->GetAt(static_cast<il2cpp_array_size_t>(L_4));
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/13_NetworkedBehaviours/_13_JoinRoomClients.cs:16>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/13_NetworkedBehaviours/_13_JoinRoomClients.cs:16>
 		Guid_t L_6 = V_0;
 		NullCheck(L_5);
 		RoomClient_Join_m4A6D5CDB4FBC72BFD1DAC3D11E9DEB3A6998D7F3(L_5, L_6, NULL);
@@ -2837,7 +2837,7 @@ IL_0011:
 
 IL_001e:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/13_NetworkedBehaviours/_13_JoinRoomClients.cs:14>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/13_NetworkedBehaviours/_13_JoinRoomClients.cs:14>
 		int32_t L_8 = V_2;
 		RoomClientU5BU5D_t5932A3FEC7748463B7C227B5A12F1D34B3B74BE5* L_9 = V_1;
 		NullCheck(L_9);
@@ -2847,11 +2847,11 @@ IL_001e:
 		}
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/13_NetworkedBehaviours/_13_JoinRoomClients.cs:18>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/13_NetworkedBehaviours/_13_JoinRoomClients.cs:18>
 		return;
 	}
 }
-// Method Definition Index: 88987
+// Method Definition Index: 134358
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void _13_JoinRoomClients__ctor_m207F1DB869B408A91AA6AFDBA4E5B6B5ED36669C (_13_JoinRoomClients_t19A1D2FC9929EC1FAB8BC5F3DE8336DF1D925D6F* __this, const RuntimeMethod* method) 
 {
 	{
@@ -2867,7 +2867,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void _13_JoinRoomClients__ctor_m207F1DB869B40
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 88988
+// Method Definition Index: 134359
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void _13_LocalCube_Update_m86C968B28AE7784E560618AE0C8A46C8701A93EF (_13_LocalCube_tDD380C6E083CCD591C1C59D9D3BB5ECA08E55913* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -2891,22 +2891,22 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void _13_LocalCube_Update_m86C968B28AE7784E56
 	Color_tD001788D726C3A7F1379BEED0260B9591F440C1F V_7;
 	memset((&V_7), 0, sizeof(V_7));
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/13_NetworkedBehaviours/_13_LocalCube.cs:11>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/13_NetworkedBehaviours/_13_LocalCube.cs:11>
 		float L_0;
 		L_0 = Time_get_time_m3A271BB1B20041144AC5B7863B71AB1F0150374B(NULL);
 		float L_1;
 		L_1 = Mathf_PingPong_mB1D6A10F386CE1EEA99DB69486DDA6DA531D799D_inline(L_0, (1.0f), NULL);
 		V_0 = L_1;
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/13_NetworkedBehaviours/_13_LocalCube.cs:13>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/13_NetworkedBehaviours/_13_LocalCube.cs:13>
 		Vector3__ctor_m376936E6B999EF1ECBE57D990A386303E2283DE0_inline((&V_1), (0.0f), (1.5f), (0.0f), NULL);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/13_NetworkedBehaviours/_13_LocalCube.cs:14>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/13_NetworkedBehaviours/_13_LocalCube.cs:14>
 		Vector3__ctor_m376936E6B999EF1ECBE57D990A386303E2283DE0_inline((&V_2), (0.0f), (0.5f), (0.0f), NULL);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/13_NetworkedBehaviours/_13_LocalCube.cs:15>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/13_NetworkedBehaviours/_13_LocalCube.cs:15>
 		float L_2 = V_0;
 		float L_3;
 		L_3 = Mathf_SmoothStep_mEFDC738EB0AA162D71013BDBBDD157B080A8E524_inline((0.0f), (1.0f), L_2, NULL);
 		V_3 = L_3;
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/13_NetworkedBehaviours/_13_LocalCube.cs:16>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/13_NetworkedBehaviours/_13_LocalCube.cs:16>
 		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_4;
 		L_4 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(__this, NULL);
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_5 = V_2;
@@ -2916,20 +2916,20 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void _13_LocalCube_Update_m86C968B28AE7784E56
 		L_8 = Vector3_Lerp_m3A906D0530A94FAABB94F0F905E84D99BE85C3F8_inline(L_5, L_6, L_7, NULL);
 		NullCheck(L_4);
 		Transform_set_localPosition_mDE1C997F7D79C0885210B7732B4BA50EE7D73134(L_4, L_8, NULL);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/13_NetworkedBehaviours/_13_LocalCube.cs:18>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/13_NetworkedBehaviours/_13_LocalCube.cs:18>
 		Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 L_9;
 		L_9 = Quaternion_Euler_m9262AB29E3E9CE94EF71051F38A28E82AEC73F90_inline((0.0f), (-30.0f), (0.0f), NULL);
 		V_4 = L_9;
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/13_NetworkedBehaviours/_13_LocalCube.cs:19>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/13_NetworkedBehaviours/_13_LocalCube.cs:19>
 		Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 L_10;
 		L_10 = Quaternion_Euler_m9262AB29E3E9CE94EF71051F38A28E82AEC73F90_inline((0.0f), (30.0f), (0.0f), NULL);
 		V_5 = L_10;
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/13_NetworkedBehaviours/_13_LocalCube.cs:20>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/13_NetworkedBehaviours/_13_LocalCube.cs:20>
 		float L_11 = V_0;
 		float L_12;
 		L_12 = Mathf_SmoothStep_mEFDC738EB0AA162D71013BDBBDD157B080A8E524_inline((0.0f), (1.0f), L_11, NULL);
 		V_3 = L_12;
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/13_NetworkedBehaviours/_13_LocalCube.cs:21>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/13_NetworkedBehaviours/_13_LocalCube.cs:21>
 		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_13;
 		L_13 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(__this, NULL);
 		Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 L_14 = V_4;
@@ -2939,35 +2939,35 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void _13_LocalCube_Update_m86C968B28AE7784E56
 		L_17 = Quaternion_Slerp_m0A9969F500E7716EA4F6BC4E7D5464372D8E9E15_inline(L_14, L_15, L_16, NULL);
 		NullCheck(L_13);
 		Transform_set_localRotation_mAB4A011D134BA58AB780BECC0025CA65F16185FA(L_13, L_17, NULL);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/13_NetworkedBehaviours/_13_LocalCube.cs:23>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/13_NetworkedBehaviours/_13_LocalCube.cs:23>
 		Color_tD001788D726C3A7F1379BEED0260B9591F440C1F L_18;
 		L_18 = Color_get_green_mEB001F2CD8C68C6BBAEF9101990B779D3AA2A6EF_inline(NULL);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/13_NetworkedBehaviours/_13_LocalCube.cs:24>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/13_NetworkedBehaviours/_13_LocalCube.cs:24>
 		Color_tD001788D726C3A7F1379BEED0260B9591F440C1F L_19;
 		L_19 = Color_get_blue_mF04A26CE61D6DA3C0D8B1C4720901B1028C7AB87_inline(NULL);
 		V_6 = L_19;
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/13_NetworkedBehaviours/_13_LocalCube.cs:25>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/13_NetworkedBehaviours/_13_LocalCube.cs:25>
 		float L_20 = V_0;
 		float L_21;
 		L_21 = Mathf_SmoothStep_mEFDC738EB0AA162D71013BDBBDD157B080A8E524_inline((0.0f), (1.0f), L_20, NULL);
 		V_3 = L_21;
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/13_NetworkedBehaviours/_13_LocalCube.cs:26>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/13_NetworkedBehaviours/_13_LocalCube.cs:26>
 		Color_tD001788D726C3A7F1379BEED0260B9591F440C1F L_22 = V_6;
 		float L_23 = V_3;
 		Color_tD001788D726C3A7F1379BEED0260B9591F440C1F L_24;
 		L_24 = Color_Lerp_mE79F87889843ECDC188E4CB5B5E1F1B2256E5EBE_inline(L_18, L_22, L_23, NULL);
 		V_7 = L_24;
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/13_NetworkedBehaviours/_13_LocalCube.cs:27>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/13_NetworkedBehaviours/_13_LocalCube.cs:27>
 		_13_NetworkedBehaviourCube_t5F44D44FCFA406D237CEACBD7C31E26080B56B30* L_25;
 		L_25 = Component_GetComponent_Tis_13_NetworkedBehaviourCube_t5F44D44FCFA406D237CEACBD7C31E26080B56B30_mB2CABF66CEAE06160156DBAE17752B034E2DACDA(__this, Component_GetComponent_Tis_13_NetworkedBehaviourCube_t5F44D44FCFA406D237CEACBD7C31E26080B56B30_mB2CABF66CEAE06160156DBAE17752B034E2DACDA_RuntimeMethod_var);
 		Color_tD001788D726C3A7F1379BEED0260B9591F440C1F L_26 = V_7;
 		NullCheck(L_25);
 		L_25->___color = L_26;
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/13_NetworkedBehaviours/_13_LocalCube.cs:28>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/13_NetworkedBehaviours/_13_LocalCube.cs:28>
 		return;
 	}
 }
-// Method Definition Index: 88989
+// Method Definition Index: 134360
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void _13_LocalCube__ctor_m4C30DC9E17031032616084CC5419F32CEF44E6B5 (_13_LocalCube_tDD380C6E083CCD591C1C59D9D3BB5ECA08E55913* __this, const RuntimeMethod* method) 
 {
 	{
@@ -2983,7 +2983,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void _13_LocalCube__ctor_m4C30DC9E17031032616
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 88990
+// Method Definition Index: 134361
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void _13_NetworkedBehaviourCube_Start_m68CB35A591997FAF3848B6280B8C3F84A60EC92E (_13_NetworkedBehaviourCube_t5F44D44FCFA406D237CEACBD7C31E26080B56B30* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -2993,14 +2993,14 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void _13_NetworkedBehaviourCube_Start_m68CB35
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/13_NetworkedBehaviours/_13_NetworkedBehaviourCube.cs:35>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/13_NetworkedBehaviours/_13_NetworkedBehaviourCube.cs:35>
 		il2cpp_codegen_runtime_class_init_inline(NetworkedBehaviours_tE1E1B616F1D01286DE4D642EB7B519342A169BED_il2cpp_TypeInfo_var);
 		NetworkedBehaviours_Register_mA7B0FD7AC5EE1DD593330FE59F6DDE4D877FFEC7(__this, NULL);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/13_NetworkedBehaviours/_13_NetworkedBehaviourCube.cs:36>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/13_NetworkedBehaviours/_13_NetworkedBehaviourCube.cs:36>
 		return;
 	}
 }
-// Method Definition Index: 88991
+// Method Definition Index: 134362
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void _13_NetworkedBehaviourCube_Update_m86669AFA86297B8537D604DE4F15CB48A2E17F80 (_13_NetworkedBehaviourCube_t5F44D44FCFA406D237CEACBD7C31E26080B56B30* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -3010,7 +3010,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void _13_NetworkedBehaviourCube_Update_m86669
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/13_NetworkedBehaviours/_13_NetworkedBehaviourCube.cs:40>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/13_NetworkedBehaviours/_13_NetworkedBehaviourCube.cs:40>
 		Renderer_t320575F223BCB177A982E5DDB5DB19FAA89E7FBF* L_0;
 		L_0 = Component_GetComponent_TisRenderer_t320575F223BCB177A982E5DDB5DB19FAA89E7FBF_mC91ACC92AD57CA6CA00991DAF1DB3830BCE07AF8(__this, Component_GetComponent_TisRenderer_t320575F223BCB177A982E5DDB5DB19FAA89E7FBF_mC91ACC92AD57CA6CA00991DAF1DB3830BCE07AF8_RuntimeMethod_var);
 		NullCheck(L_0);
@@ -3019,11 +3019,11 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void _13_NetworkedBehaviourCube_Update_m86669
 		Color_tD001788D726C3A7F1379BEED0260B9591F440C1F L_2 = __this->___color;
 		NullCheck(L_1);
 		Material_set_color_m5C32DEBB215FF9EE35E7B575297D8C2F29CC2A2D(L_1, L_2, NULL);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/13_NetworkedBehaviours/_13_NetworkedBehaviourCube.cs:41>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/13_NetworkedBehaviours/_13_NetworkedBehaviourCube.cs:41>
 		return;
 	}
 }
-// Method Definition Index: 88992
+// Method Definition Index: 134363
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void _13_NetworkedBehaviourCube__ctor_mA8EF740B7BDE9E9A94D841CA2FA34C76A72842E3 (_13_NetworkedBehaviourCube_t5F44D44FCFA406D237CEACBD7C31E26080B56B30* __this, const RuntimeMethod* method) 
 {
 	{
@@ -3039,7 +3039,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void _13_NetworkedBehaviourCube__ctor_mA8EF74
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 88993
+// Method Definition Index: 134364
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void _20_JoinRoomClients_Start_m27A3FB76F1C96104F889F203C7F5AB14EE530964 (_20_JoinRoomClients_t19F95783082543C775D9B9135E085BCB1C4DD554* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -3053,11 +3053,11 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void _20_JoinRoomClients_Start_m27A3FB76F1C96
 	RoomClientU5BU5D_t5932A3FEC7748463B7C227B5A12F1D34B3B74BE5* V_1 = NULL;
 	int32_t V_2 = 0;
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/20_Spawning/_20_JoinRoomClients.cs:15>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/20_Spawning/_20_JoinRoomClients.cs:15>
 		Guid_t L_0;
 		L_0 = Guid_NewGuid_m1F4894E8DC089811D6252148AD5858E58D43A7BD(NULL);
 		V_0 = L_0;
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/20_Spawning/_20_JoinRoomClients.cs:16>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/20_Spawning/_20_JoinRoomClients.cs:16>
 		RoomClientU5BU5D_t5932A3FEC7748463B7C227B5A12F1D34B3B74BE5* L_1;
 		L_1 = Component_GetComponentsInChildren_TisRoomClient_t124F52F8602AB535AC105F1E470809979EDA2A4F_m591E041E0D21D3049E3168B2886A3B0A6D91AD5E(__this, Component_GetComponentsInChildren_TisRoomClient_t124F52F8602AB535AC105F1E470809979EDA2A4F_m591E041E0D21D3049E3168B2886A3B0A6D91AD5E_RuntimeMethod_var);
 		V_1 = L_1;
@@ -3067,13 +3067,13 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void _20_JoinRoomClients_Start_m27A3FB76F1C96
 
 IL_0011:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/20_Spawning/_20_JoinRoomClients.cs:16>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/20_Spawning/_20_JoinRoomClients.cs:16>
 		RoomClientU5BU5D_t5932A3FEC7748463B7C227B5A12F1D34B3B74BE5* L_2 = V_1;
 		int32_t L_3 = V_2;
 		NullCheck(L_2);
 		int32_t L_4 = L_3;
 		RoomClient_t124F52F8602AB535AC105F1E470809979EDA2A4F* L_5 = (L_2)->GetAt(static_cast<il2cpp_array_size_t>(L_4));
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/20_Spawning/_20_JoinRoomClients.cs:18>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/20_Spawning/_20_JoinRoomClients.cs:18>
 		Guid_t L_6 = V_0;
 		NullCheck(L_5);
 		RoomClient_Join_m4A6D5CDB4FBC72BFD1DAC3D11E9DEB3A6998D7F3(L_5, L_6, NULL);
@@ -3083,7 +3083,7 @@ IL_0011:
 
 IL_001e:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/20_Spawning/_20_JoinRoomClients.cs:16>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/20_Spawning/_20_JoinRoomClients.cs:16>
 		int32_t L_8 = V_2;
 		RoomClientU5BU5D_t5932A3FEC7748463B7C227B5A12F1D34B3B74BE5* L_9 = V_1;
 		NullCheck(L_9);
@@ -3093,11 +3093,11 @@ IL_001e:
 		}
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/20_Spawning/_20_JoinRoomClients.cs:20>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/20_Spawning/_20_JoinRoomClients.cs:20>
 		return;
 	}
 }
-// Method Definition Index: 88994
+// Method Definition Index: 134365
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void _20_JoinRoomClients__ctor_m99F061D89C296EA887E0FAC78E4D9013510450BB (_20_JoinRoomClients_t19F95783082543C775D9B9135E085BCB1C4DD554* __this, const RuntimeMethod* method) 
 {
 	{
@@ -3113,7 +3113,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void _20_JoinRoomClients__ctor_m99F061D89C296
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 88995
+// Method Definition Index: 134366
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void _20_Spawner_Start_mED279E7971C73A14C97C626ECD2BEC3835EB5C76 (_20_Spawner_t9C8F1F576871011485D6CC7C65BD2E9D20A20081* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -3126,12 +3126,12 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void _20_Spawner_Start_mED279E7971C73A14C97C6
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/20_Spawning/_20_Spawner.cs:18>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/20_Spawning/_20_Spawner.cs:18>
 		NetworkSpawnManager_tFCB3B1216C5FF4535A3F8AF00C08A89C3CADA00D* L_0;
 		L_0 = Component_GetComponentInParent_TisNetworkSpawnManager_tFCB3B1216C5FF4535A3F8AF00C08A89C3CADA00D_m4834858C5916740116F089DF8F8C3DC345BD6151(__this, Component_GetComponentInParent_TisNetworkSpawnManager_tFCB3B1216C5FF4535A3F8AF00C08A89C3CADA00D_m4834858C5916740116F089DF8F8C3DC345BD6151_RuntimeMethod_var);
 		__this->___manager = L_0;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___manager), (void*)L_0);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/20_Spawning/_20_Spawner.cs:19>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/20_Spawning/_20_Spawner.cs:19>
 		NetworkSpawnManager_tFCB3B1216C5FF4535A3F8AF00C08A89C3CADA00D* L_1 = __this->___manager;
 		NullCheck(L_1);
 		OnSpawnedEvent_tA12C5DFE8BF66F325845DA94018B7559F1626340* L_2 = L_1->___OnSpawned;
@@ -3139,11 +3139,11 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void _20_Spawner_Start_mED279E7971C73A14C97C6
 		UnityAction_4__ctor_mA7839AE3C721F62077BAA2310173BC00698FF35F(L_3, __this, (intptr_t)((void*)_20_Spawner_Manager_OnSpawned_mD0D30B681442D6701866091FCE755F2D4C1B4497_RuntimeMethod_var), NULL);
 		NullCheck(L_2);
 		UnityEvent_4_AddListener_m0639DEDB32CC7C43BB08C900DCF121CE0685347E(L_2, L_3, UnityEvent_4_AddListener_m0639DEDB32CC7C43BB08C900DCF121CE0685347E_RuntimeMethod_var);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/20_Spawning/_20_Spawner.cs:20>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/20_Spawning/_20_Spawner.cs:20>
 		return;
 	}
 }
-// Method Definition Index: 88996
+// Method Definition Index: 134367
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void _20_Spawner_Manager_OnSpawned_mD0D30B681442D6701866091FCE755F2D4C1B4497 (_20_Spawner_t9C8F1F576871011485D6CC7C65BD2E9D20A20081* __this, GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___0_go, RuntimeObject* ___1_room, RuntimeObject* ___2_peer, int32_t ___3_origin, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -3158,7 +3158,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void _20_Spawner_Manager_OnSpawned_mD0D30B681
 	Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 V_1;
 	memset((&V_1), 0, sizeof(V_1));
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/20_Spawning/_20_Spawner.cs:24>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/20_Spawning/_20_Spawner.cs:24>
 		RuntimeObject* L_0 = ___2_peer;
 		RoomClient_t124F52F8602AB535AC105F1E470809979EDA2A4F* L_1;
 		L_1 = Component_GetComponent_TisRoomClient_t124F52F8602AB535AC105F1E470809979EDA2A4F_m5C5C417FD81C002C5C18F6F1E8463A66E9629806(__this, Component_GetComponent_TisRoomClient_t124F52F8602AB535AC105F1E470809979EDA2A4F_m5C5C417FD81C002C5C18F6F1E8463A66E9629806_RuntimeMethod_var);
@@ -3171,7 +3171,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void _20_Spawner_Manager_OnSpawned_mD0D30B681
 		}
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/20_Spawning/_20_Spawner.cs:26>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/20_Spawning/_20_Spawner.cs:26>
 		List_1_tB951CE80B58D1BF9650862451D8DAD8C231F207B* L_3 = __this->___locallySpawned;
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_4 = ___0_go;
 		NullCheck(L_3);
@@ -3180,11 +3180,11 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void _20_Spawner_Manager_OnSpawned_mD0D30B681
 
 IL_001a:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/20_Spawning/_20_Spawner.cs:28>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/20_Spawning/_20_Spawner.cs:28>
 		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_5 = __this->___spawnPoint;
 		NullCheck(L_5);
 		Transform_GetPositionAndRotation_m8362D08B48A97BFB7CA7ACD207FF67773F1150E7(L_5, (&V_0), (&V_1), NULL);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/20_Spawning/_20_Spawner.cs:31>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/20_Spawning/_20_Spawner.cs:31>
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_6 = V_0;
 		float L_7;
 		L_7 = Random_Range_m5236C99A7D8AE6AC9190592DC66016652A2D2494((0.0f), (0.0500000007f), NULL);
@@ -3195,7 +3195,7 @@ IL_001a:
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_10;
 		L_10 = Vector3_op_Addition_m78C0EC70CB66E8DCAC225743D82B268DAEE92067_inline(L_6, L_9, NULL);
 		V_0 = L_10;
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/20_Spawning/_20_Spawner.cs:33>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/20_Spawning/_20_Spawner.cs:33>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_11 = ___0_go;
 		NullCheck(L_11);
 		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_12;
@@ -3204,11 +3204,11 @@ IL_001a:
 		Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 L_14 = V_1;
 		NullCheck(L_12);
 		Transform_SetPositionAndRotation_m418859BF59086EEAA084FFD6F258A43FAB408F5A(L_12, L_13, L_14, NULL);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/20_Spawning/_20_Spawner.cs:34>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/20_Spawning/_20_Spawner.cs:34>
 		return;
 	}
 }
-// Method Definition Index: 88997
+// Method Definition Index: 134368
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void _20_Spawner_Clear_m4A777634BD546B2FCB73102EC0A7FA7CB1E6B31B (_20_Spawner_t9C8F1F576871011485D6CC7C65BD2E9D20A20081* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -3225,7 +3225,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void _20_Spawner_Clear_m4A777634BD546B2FCB731
 	memset((&V_0), 0, sizeof(V_0));
 	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* V_1 = NULL;
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/20_Spawning/_20_Spawner.cs:38>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/20_Spawning/_20_Spawner.cs:38>
 		List_1_tB951CE80B58D1BF9650862451D8DAD8C231F207B* L_0 = __this->___locallySpawned;
 		NullCheck(L_0);
 		Enumerator_t88BD1282EF117E59AACFC9EC55B89F0B9EDACE60 L_1;
@@ -3250,11 +3250,11 @@ FINALLY_002d:
 
 IL_000e_1:
 			{
-				//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/20_Spawning/_20_Spawner.cs:38>
+				//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/20_Spawning/_20_Spawner.cs:38>
 				GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_2;
 				L_2 = Enumerator_get_Current_m7236EBE1CFCB6533F96E030500D322B13D0CA5A4_inline((&V_0), Enumerator_get_Current_m7236EBE1CFCB6533F96E030500D322B13D0CA5A4_RuntimeMethod_var);
 				V_1 = L_2;
-				//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/20_Spawning/_20_Spawner.cs:40>
+				//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/20_Spawning/_20_Spawner.cs:40>
 				NetworkSpawnManager_tFCB3B1216C5FF4535A3F8AF00C08A89C3CADA00D* L_3 = __this->___manager;
 				GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_4 = V_1;
 				NullCheck(L_3);
@@ -3263,7 +3263,7 @@ IL_000e_1:
 
 IL_0022_1:
 			{
-				//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/20_Spawning/_20_Spawner.cs:38>
+				//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/20_Spawning/_20_Spawner.cs:38>
 				bool L_5;
 				L_5 = Enumerator_MoveNext_m96F4B0BD0A5485C8E8CC57D961DF6F1FA256AF27((&V_0), Enumerator_MoveNext_m96F4B0BD0A5485C8E8CC57D961DF6F1FA256AF27_RuntimeMethod_var);
 				if (L_5)
@@ -3283,15 +3283,15 @@ IL_0022_1:
 
 IL_003b:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/20_Spawning/_20_Spawner.cs:42>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/20_Spawning/_20_Spawner.cs:42>
 		List_1_tB951CE80B58D1BF9650862451D8DAD8C231F207B* L_6 = __this->___locallySpawned;
 		NullCheck(L_6);
 		List_1_Clear_m32D399BDD753B5BD6CE27560249096418F3F0867_inline(L_6, List_1_Clear_m32D399BDD753B5BD6CE27560249096418F3F0867_RuntimeMethod_var);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/20_Spawning/_20_Spawner.cs:43>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/20_Spawning/_20_Spawner.cs:43>
 		return;
 	}
 }
-// Method Definition Index: 88998
+// Method Definition Index: 134369
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void _20_Spawner_Spawn_mE893B7E166E524183E1042BF50E756D350932422 (_20_Spawner_t9C8F1F576871011485D6CC7C65BD2E9D20A20081* __this, int32_t ___0_prefabIndex, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -3302,7 +3302,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void _20_Spawner_Spawn_mE893B7E166E524183E104
 	}
 	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* V_0 = NULL;
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/20_Spawning/_20_Spawner.cs:47>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/20_Spawning/_20_Spawner.cs:47>
 		NetworkSpawnManager_tFCB3B1216C5FF4535A3F8AF00C08A89C3CADA00D* L_0 = __this->___manager;
 		NullCheck(L_0);
 		PrefabCatalogue_tFB3A0794FB7272CDFD33FBF11A89214F1BB1C820* L_1 = L_0->___catalogue;
@@ -3313,17 +3313,17 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void _20_Spawner_Spawn_mE893B7E166E524183E104
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_4;
 		L_4 = List_1_get_Item_mE8DBE527F24D9CFED839C34216C475B716169979(L_2, L_3, List_1_get_Item_mE8DBE527F24D9CFED839C34216C475B716169979_RuntimeMethod_var);
 		V_0 = L_4;
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/20_Spawning/_20_Spawner.cs:48>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/20_Spawning/_20_Spawner.cs:48>
 		NetworkSpawnManager_tFCB3B1216C5FF4535A3F8AF00C08A89C3CADA00D* L_5 = __this->___manager;
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_6 = V_0;
 		NullCheck(L_5);
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_7;
 		L_7 = NetworkSpawnManager_SpawnWithPeerScope_m253F79B92C3D7293F46F49C65005C1379719E418(L_5, L_6, NULL);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/20_Spawning/_20_Spawner.cs:49>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/20_Spawning/_20_Spawner.cs:49>
 		return;
 	}
 }
-// Method Definition Index: 88999
+// Method Definition Index: 134370
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void _20_Spawner__ctor_m426B7397955EA4F1A49F05EA168B83B29055B53F (_20_Spawner_t9C8F1F576871011485D6CC7C65BD2E9D20A20081* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -3334,7 +3334,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void _20_Spawner__ctor_m426B7397955EA4F1A49F0
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/20_Spawning/_20_Spawner.cs:14>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/20_Spawning/_20_Spawner.cs:14>
 		List_1_tB951CE80B58D1BF9650862451D8DAD8C231F207B* L_0 = (List_1_tB951CE80B58D1BF9650862451D8DAD8C231F207B*)il2cpp_codegen_object_new(List_1_tB951CE80B58D1BF9650862451D8DAD8C231F207B_il2cpp_TypeInfo_var);
 		List_1__ctor_m447372C1EF7141193B93090A77395B786C72C7BC(L_0, List_1__ctor_m447372C1EF7141193B93090A77395B786C72C7BC_RuntimeMethod_var);
 		__this->___locallySpawned = L_0;
@@ -3351,7 +3351,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void _20_Spawner__ctor_m426B7397955EA4F1A49F0
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 89000
+// Method Definition Index: 134371
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void _21_JoinRoomClients_Start_mD58AF45434AA45142428CDF193A1B62861C23D31 (_21_JoinRoomClients_tC33F9B22785CAFBD39F997A073A00FC8AE73838B* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -3365,11 +3365,11 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void _21_JoinRoomClients_Start_mD58AF45434AA4
 	RoomClientU5BU5D_t5932A3FEC7748463B7C227B5A12F1D34B3B74BE5* V_1 = NULL;
 	int32_t V_2 = 0;
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/21_SpawningCatalogues/_21_JoinRoomClients.cs:15>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/21_SpawningCatalogues/_21_JoinRoomClients.cs:15>
 		Guid_t L_0;
 		L_0 = Guid_NewGuid_m1F4894E8DC089811D6252148AD5858E58D43A7BD(NULL);
 		V_0 = L_0;
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/21_SpawningCatalogues/_21_JoinRoomClients.cs:16>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/21_SpawningCatalogues/_21_JoinRoomClients.cs:16>
 		RoomClientU5BU5D_t5932A3FEC7748463B7C227B5A12F1D34B3B74BE5* L_1;
 		L_1 = Component_GetComponentsInChildren_TisRoomClient_t124F52F8602AB535AC105F1E470809979EDA2A4F_m591E041E0D21D3049E3168B2886A3B0A6D91AD5E(__this, Component_GetComponentsInChildren_TisRoomClient_t124F52F8602AB535AC105F1E470809979EDA2A4F_m591E041E0D21D3049E3168B2886A3B0A6D91AD5E_RuntimeMethod_var);
 		V_1 = L_1;
@@ -3379,13 +3379,13 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void _21_JoinRoomClients_Start_mD58AF45434AA4
 
 IL_0011:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/21_SpawningCatalogues/_21_JoinRoomClients.cs:16>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/21_SpawningCatalogues/_21_JoinRoomClients.cs:16>
 		RoomClientU5BU5D_t5932A3FEC7748463B7C227B5A12F1D34B3B74BE5* L_2 = V_1;
 		int32_t L_3 = V_2;
 		NullCheck(L_2);
 		int32_t L_4 = L_3;
 		RoomClient_t124F52F8602AB535AC105F1E470809979EDA2A4F* L_5 = (L_2)->GetAt(static_cast<il2cpp_array_size_t>(L_4));
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/21_SpawningCatalogues/_21_JoinRoomClients.cs:18>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/21_SpawningCatalogues/_21_JoinRoomClients.cs:18>
 		Guid_t L_6 = V_0;
 		NullCheck(L_5);
 		RoomClient_Join_m4A6D5CDB4FBC72BFD1DAC3D11E9DEB3A6998D7F3(L_5, L_6, NULL);
@@ -3395,7 +3395,7 @@ IL_0011:
 
 IL_001e:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/21_SpawningCatalogues/_21_JoinRoomClients.cs:16>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/21_SpawningCatalogues/_21_JoinRoomClients.cs:16>
 		int32_t L_8 = V_2;
 		RoomClientU5BU5D_t5932A3FEC7748463B7C227B5A12F1D34B3B74BE5* L_9 = V_1;
 		NullCheck(L_9);
@@ -3405,11 +3405,11 @@ IL_001e:
 		}
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/21_SpawningCatalogues/_21_JoinRoomClients.cs:20>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/21_SpawningCatalogues/_21_JoinRoomClients.cs:20>
 		return;
 	}
 }
-// Method Definition Index: 89001
+// Method Definition Index: 134372
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void _21_JoinRoomClients__ctor_mBC7791D79B9807D9C2C8C5A3CD4EE8ADEA717997 (_21_JoinRoomClients_tC33F9B22785CAFBD39F997A073A00FC8AE73838B* __this, const RuntimeMethod* method) 
 {
 	{
@@ -3425,7 +3425,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void _21_JoinRoomClients__ctor_mBC7791D79B980
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 89002
+// Method Definition Index: 134373
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void _21_Spawner_Start_mB3F26B8E4AE528A4E6901798CD680D2F8269A273 (_21_Spawner_t758AA30C6BB2AB5034E5C1A55B5D19858264F6FA* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -3438,12 +3438,12 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void _21_Spawner_Start_mB3F26B8E4AE528A4E6901
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/21_SpawningCatalogues/_21_Spawner.cs:18>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/21_SpawningCatalogues/_21_Spawner.cs:18>
 		NetworkSpawnManager_tFCB3B1216C5FF4535A3F8AF00C08A89C3CADA00D* L_0;
 		L_0 = Component_GetComponentInParent_TisNetworkSpawnManager_tFCB3B1216C5FF4535A3F8AF00C08A89C3CADA00D_m4834858C5916740116F089DF8F8C3DC345BD6151(__this, Component_GetComponentInParent_TisNetworkSpawnManager_tFCB3B1216C5FF4535A3F8AF00C08A89C3CADA00D_m4834858C5916740116F089DF8F8C3DC345BD6151_RuntimeMethod_var);
 		__this->___manager = L_0;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___manager), (void*)L_0);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/21_SpawningCatalogues/_21_Spawner.cs:19>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/21_SpawningCatalogues/_21_Spawner.cs:19>
 		NetworkSpawnManager_tFCB3B1216C5FF4535A3F8AF00C08A89C3CADA00D* L_1 = __this->___manager;
 		NullCheck(L_1);
 		OnSpawnedEvent_tA12C5DFE8BF66F325845DA94018B7559F1626340* L_2 = L_1->___OnSpawned;
@@ -3451,11 +3451,11 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void _21_Spawner_Start_mB3F26B8E4AE528A4E6901
 		UnityAction_4__ctor_mA7839AE3C721F62077BAA2310173BC00698FF35F(L_3, __this, (intptr_t)((void*)_21_Spawner_Manager_OnSpawned_mBE7900B4FD34A84D1F3AF56D3C33E74576711B9C_RuntimeMethod_var), NULL);
 		NullCheck(L_2);
 		UnityEvent_4_AddListener_m0639DEDB32CC7C43BB08C900DCF121CE0685347E(L_2, L_3, UnityEvent_4_AddListener_m0639DEDB32CC7C43BB08C900DCF121CE0685347E_RuntimeMethod_var);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/21_SpawningCatalogues/_21_Spawner.cs:20>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/21_SpawningCatalogues/_21_Spawner.cs:20>
 		return;
 	}
 }
-// Method Definition Index: 89003
+// Method Definition Index: 134374
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void _21_Spawner_Manager_OnSpawned_mBE7900B4FD34A84D1F3AF56D3C33E74576711B9C (_21_Spawner_t758AA30C6BB2AB5034E5C1A55B5D19858264F6FA* __this, GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___0_go, RuntimeObject* ___1_room, RuntimeObject* ___2_peer, int32_t ___3_origin, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -3470,7 +3470,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void _21_Spawner_Manager_OnSpawned_mBE7900B4F
 	Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 V_1;
 	memset((&V_1), 0, sizeof(V_1));
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/21_SpawningCatalogues/_21_Spawner.cs:24>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/21_SpawningCatalogues/_21_Spawner.cs:24>
 		RuntimeObject* L_0 = ___2_peer;
 		RoomClient_t124F52F8602AB535AC105F1E470809979EDA2A4F* L_1;
 		L_1 = Component_GetComponent_TisRoomClient_t124F52F8602AB535AC105F1E470809979EDA2A4F_m5C5C417FD81C002C5C18F6F1E8463A66E9629806(__this, Component_GetComponent_TisRoomClient_t124F52F8602AB535AC105F1E470809979EDA2A4F_m5C5C417FD81C002C5C18F6F1E8463A66E9629806_RuntimeMethod_var);
@@ -3483,7 +3483,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void _21_Spawner_Manager_OnSpawned_mBE7900B4F
 		}
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/21_SpawningCatalogues/_21_Spawner.cs:26>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/21_SpawningCatalogues/_21_Spawner.cs:26>
 		List_1_tB951CE80B58D1BF9650862451D8DAD8C231F207B* L_3 = __this->___locallySpawned;
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_4 = ___0_go;
 		NullCheck(L_3);
@@ -3492,11 +3492,11 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void _21_Spawner_Manager_OnSpawned_mBE7900B4F
 
 IL_001a:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/21_SpawningCatalogues/_21_Spawner.cs:28>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/21_SpawningCatalogues/_21_Spawner.cs:28>
 		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_5 = __this->___spawnPoint;
 		NullCheck(L_5);
 		Transform_GetPositionAndRotation_m8362D08B48A97BFB7CA7ACD207FF67773F1150E7(L_5, (&V_0), (&V_1), NULL);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/21_SpawningCatalogues/_21_Spawner.cs:31>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/21_SpawningCatalogues/_21_Spawner.cs:31>
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_6 = V_0;
 		float L_7;
 		L_7 = Random_Range_m5236C99A7D8AE6AC9190592DC66016652A2D2494((0.0f), (0.0500000007f), NULL);
@@ -3507,7 +3507,7 @@ IL_001a:
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_10;
 		L_10 = Vector3_op_Addition_m78C0EC70CB66E8DCAC225743D82B268DAEE92067_inline(L_6, L_9, NULL);
 		V_0 = L_10;
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/21_SpawningCatalogues/_21_Spawner.cs:33>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/21_SpawningCatalogues/_21_Spawner.cs:33>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_11 = ___0_go;
 		NullCheck(L_11);
 		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_12;
@@ -3516,11 +3516,11 @@ IL_001a:
 		Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 L_14 = V_1;
 		NullCheck(L_12);
 		Transform_SetPositionAndRotation_m418859BF59086EEAA084FFD6F258A43FAB408F5A(L_12, L_13, L_14, NULL);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/21_SpawningCatalogues/_21_Spawner.cs:34>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/21_SpawningCatalogues/_21_Spawner.cs:34>
 		return;
 	}
 }
-// Method Definition Index: 89004
+// Method Definition Index: 134375
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void _21_Spawner_Clear_mC4EBD7FFE17A5D0E611964DABAFFBA2232C3331E (_21_Spawner_t758AA30C6BB2AB5034E5C1A55B5D19858264F6FA* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -3537,7 +3537,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void _21_Spawner_Clear_mC4EBD7FFE17A5D0E61196
 	memset((&V_0), 0, sizeof(V_0));
 	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* V_1 = NULL;
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/21_SpawningCatalogues/_21_Spawner.cs:38>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/21_SpawningCatalogues/_21_Spawner.cs:38>
 		List_1_tB951CE80B58D1BF9650862451D8DAD8C231F207B* L_0 = __this->___locallySpawned;
 		NullCheck(L_0);
 		Enumerator_t88BD1282EF117E59AACFC9EC55B89F0B9EDACE60 L_1;
@@ -3562,11 +3562,11 @@ FINALLY_002d:
 
 IL_000e_1:
 			{
-				//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/21_SpawningCatalogues/_21_Spawner.cs:38>
+				//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/21_SpawningCatalogues/_21_Spawner.cs:38>
 				GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_2;
 				L_2 = Enumerator_get_Current_m7236EBE1CFCB6533F96E030500D322B13D0CA5A4_inline((&V_0), Enumerator_get_Current_m7236EBE1CFCB6533F96E030500D322B13D0CA5A4_RuntimeMethod_var);
 				V_1 = L_2;
-				//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/21_SpawningCatalogues/_21_Spawner.cs:40>
+				//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/21_SpawningCatalogues/_21_Spawner.cs:40>
 				NetworkSpawnManager_tFCB3B1216C5FF4535A3F8AF00C08A89C3CADA00D* L_3 = __this->___manager;
 				GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_4 = V_1;
 				NullCheck(L_3);
@@ -3575,7 +3575,7 @@ IL_000e_1:
 
 IL_0022_1:
 			{
-				//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/21_SpawningCatalogues/_21_Spawner.cs:38>
+				//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/21_SpawningCatalogues/_21_Spawner.cs:38>
 				bool L_5;
 				L_5 = Enumerator_MoveNext_m96F4B0BD0A5485C8E8CC57D961DF6F1FA256AF27((&V_0), Enumerator_MoveNext_m96F4B0BD0A5485C8E8CC57D961DF6F1FA256AF27_RuntimeMethod_var);
 				if (L_5)
@@ -3595,15 +3595,15 @@ IL_0022_1:
 
 IL_003b:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/21_SpawningCatalogues/_21_Spawner.cs:42>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/21_SpawningCatalogues/_21_Spawner.cs:42>
 		List_1_tB951CE80B58D1BF9650862451D8DAD8C231F207B* L_6 = __this->___locallySpawned;
 		NullCheck(L_6);
 		List_1_Clear_m32D399BDD753B5BD6CE27560249096418F3F0867_inline(L_6, List_1_Clear_m32D399BDD753B5BD6CE27560249096418F3F0867_RuntimeMethod_var);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/21_SpawningCatalogues/_21_Spawner.cs:43>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/21_SpawningCatalogues/_21_Spawner.cs:43>
 		return;
 	}
 }
-// Method Definition Index: 89005
+// Method Definition Index: 134376
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void _21_Spawner_Spawn_mC14385A55BC53D925F7E16A8C2B86842EE092D9C (_21_Spawner_t758AA30C6BB2AB5034E5C1A55B5D19858264F6FA* __this, int32_t ___0_prefabIndex, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -3614,7 +3614,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void _21_Spawner_Spawn_mC14385A55BC53D925F7E1
 	}
 	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* V_0 = NULL;
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/21_SpawningCatalogues/_21_Spawner.cs:47>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/21_SpawningCatalogues/_21_Spawner.cs:47>
 		NetworkSpawnManager_tFCB3B1216C5FF4535A3F8AF00C08A89C3CADA00D* L_0 = __this->___manager;
 		NullCheck(L_0);
 		PrefabCatalogue_tFB3A0794FB7272CDFD33FBF11A89214F1BB1C820* L_1 = L_0->___catalogue;
@@ -3625,17 +3625,17 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void _21_Spawner_Spawn_mC14385A55BC53D925F7E1
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_4;
 		L_4 = List_1_get_Item_mE8DBE527F24D9CFED839C34216C475B716169979(L_2, L_3, List_1_get_Item_mE8DBE527F24D9CFED839C34216C475B716169979_RuntimeMethod_var);
 		V_0 = L_4;
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/21_SpawningCatalogues/_21_Spawner.cs:48>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/21_SpawningCatalogues/_21_Spawner.cs:48>
 		NetworkSpawnManager_tFCB3B1216C5FF4535A3F8AF00C08A89C3CADA00D* L_5 = __this->___manager;
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_6 = V_0;
 		NullCheck(L_5);
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_7;
 		L_7 = NetworkSpawnManager_SpawnWithPeerScope_m253F79B92C3D7293F46F49C65005C1379719E418(L_5, L_6, NULL);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/21_SpawningCatalogues/_21_Spawner.cs:49>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/21_SpawningCatalogues/_21_Spawner.cs:49>
 		return;
 	}
 }
-// Method Definition Index: 89006
+// Method Definition Index: 134377
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void _21_Spawner__ctor_m21F081DC0746505E483B4F9A0871D3973564C59D (_21_Spawner_t758AA30C6BB2AB5034E5C1A55B5D19858264F6FA* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -3646,7 +3646,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void _21_Spawner__ctor_m21F081DC0746505E483B4
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/21_SpawningCatalogues/_21_Spawner.cs:14>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/21_SpawningCatalogues/_21_Spawner.cs:14>
 		List_1_tB951CE80B58D1BF9650862451D8DAD8C231F207B* L_0 = (List_1_tB951CE80B58D1BF9650862451D8DAD8C231F207B*)il2cpp_codegen_object_new(List_1_tB951CE80B58D1BF9650862451D8DAD8C231F207B_il2cpp_TypeInfo_var);
 		List_1__ctor_m447372C1EF7141193B93090A77395B786C72C7BC(L_0, List_1__ctor_m447372C1EF7141193B93090A77395B786C72C7BC_RuntimeMethod_var);
 		__this->___locallySpawned = L_0;
@@ -3663,7 +3663,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void _21_Spawner__ctor_m21F081DC0746505E483B4
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 89007
+// Method Definition Index: 134378
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void _22_JoinOther_Join_m79E2C205C4A5C3D203B6CDD1963931C032418D62 (_22_JoinOther_t895E50D9C1260ABEDC0C077A71BCAC4F3C33511B* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -3674,7 +3674,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void _22_JoinOther_Join_m79E2C205C4A5C3D203B6
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/22_SpawningWithScope/_22_JoinOther.cs:15>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/22_SpawningWithScope/_22_JoinOther.cs:15>
 		RoomClient_t124F52F8602AB535AC105F1E470809979EDA2A4F* L_0 = __this->___otherPeerRoomClient;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_1;
@@ -3695,7 +3695,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void _22_JoinOther_Join_m79E2C205C4A5C3D203B6
 		}
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/22_SpawningWithScope/_22_JoinOther.cs:17>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/22_SpawningWithScope/_22_JoinOther.cs:17>
 		RoomClient_t124F52F8602AB535AC105F1E470809979EDA2A4F* L_4 = __this->___roomClient;
 		RoomClient_t124F52F8602AB535AC105F1E470809979EDA2A4F* L_5 = __this->___otherPeerRoomClient;
 		NullCheck(L_5);
@@ -3710,11 +3710,11 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void _22_JoinOther_Join_m79E2C205C4A5C3D203B6
 
 IL_0036:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/22_SpawningWithScope/_22_JoinOther.cs:19>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/22_SpawningWithScope/_22_JoinOther.cs:19>
 		return;
 	}
 }
-// Method Definition Index: 89008
+// Method Definition Index: 134379
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void _22_JoinOther__ctor_mAF8D61DB4302E0742F966DE3EB4DADB5FD7D0850 (_22_JoinOther_t895E50D9C1260ABEDC0C077A71BCAC4F3C33511B* __this, const RuntimeMethod* method) 
 {
 	{
@@ -3730,7 +3730,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void _22_JoinOther__ctor_mAF8D61DB4302E0742F9
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 89009
+// Method Definition Index: 134380
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void _22_JoinRandom_JoinRandom_m4A20D38385DE6C5B0B9566BF8356DE9FB5EC3DDD (_22_JoinRandom_tB7E160ABE644EF03B004DB7E5A9CBB89A505FF47* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -3740,7 +3740,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void _22_JoinRandom_JoinRandom_m4A20D38385DE6
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/22_SpawningWithScope/_22_JoinRandom.cs:15>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/22_SpawningWithScope/_22_JoinRandom.cs:15>
 		RoomClient_t124F52F8602AB535AC105F1E470809979EDA2A4F* L_0 = __this->___roomClient;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_1;
@@ -3751,7 +3751,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void _22_JoinRandom_JoinRandom_m4A20D38385DE6
 		}
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/22_SpawningWithScope/_22_JoinRandom.cs:17>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/22_SpawningWithScope/_22_JoinRandom.cs:17>
 		RoomClient_t124F52F8602AB535AC105F1E470809979EDA2A4F* L_2 = __this->___roomClient;
 		Guid_t L_3;
 		L_3 = Guid_NewGuid_m1F4894E8DC089811D6252148AD5858E58D43A7BD(NULL);
@@ -3761,11 +3761,11 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void _22_JoinRandom_JoinRandom_m4A20D38385DE6
 
 IL_001d:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/22_SpawningWithScope/_22_JoinRandom.cs:19>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/22_SpawningWithScope/_22_JoinRandom.cs:19>
 		return;
 	}
 }
-// Method Definition Index: 89010
+// Method Definition Index: 134381
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void _22_JoinRandom__ctor_m703AE33F0F7A8D0BDBBC31DE643356D5F0569BC4 (_22_JoinRandom_tB7E160ABE644EF03B004DB7E5A9CBB89A505FF47* __this, const RuntimeMethod* method) 
 {
 	{
@@ -3781,7 +3781,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void _22_JoinRandom__ctor_m703AE33F0F7A8D0BDB
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 89011
+// Method Definition Index: 134382
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void _22_JoinRandomOnStart_Start_m95CE68CBF9AA50138D89250645CE87A716BEFE94 (_22_JoinRandomOnStart_t787628F83E1B323ED40B2DA8C5153EF092B5356B* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -3791,18 +3791,18 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void _22_JoinRandomOnStart_Start_m95CE68CBF9A
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/22_SpawningWithScope/_22_JoinRandomOnStart.cs:13>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/22_SpawningWithScope/_22_JoinRandomOnStart.cs:13>
 		RoomClient_t124F52F8602AB535AC105F1E470809979EDA2A4F* L_0;
 		L_0 = Component_GetComponent_TisRoomClient_t124F52F8602AB535AC105F1E470809979EDA2A4F_m5C5C417FD81C002C5C18F6F1E8463A66E9629806(__this, Component_GetComponent_TisRoomClient_t124F52F8602AB535AC105F1E470809979EDA2A4F_m5C5C417FD81C002C5C18F6F1E8463A66E9629806_RuntimeMethod_var);
 		Guid_t L_1;
 		L_1 = Guid_NewGuid_m1F4894E8DC089811D6252148AD5858E58D43A7BD(NULL);
 		NullCheck(L_0);
 		RoomClient_Join_m4A6D5CDB4FBC72BFD1DAC3D11E9DEB3A6998D7F3(L_0, L_1, NULL);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/22_SpawningWithScope/_22_JoinRandomOnStart.cs:14>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/22_SpawningWithScope/_22_JoinRandomOnStart.cs:14>
 		return;
 	}
 }
-// Method Definition Index: 89012
+// Method Definition Index: 134383
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void _22_JoinRandomOnStart__ctor_mCD3955BAC75EA641F4EFF7A8C18B55E9E641CDCF (_22_JoinRandomOnStart_t787628F83E1B323ED40B2DA8C5153EF092B5356B* __this, const RuntimeMethod* method) 
 {
 	{
@@ -3818,7 +3818,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void _22_JoinRandomOnStart__ctor_mCD3955BAC75
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 89013
+// Method Definition Index: 134384
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void _22_RoomText_Start_mFA0768F529688A88281928A83D8B1C4052E14D15 (_22_RoomText_t9BCF4ADA146380DE55E99A2EDEBDA7B2A4B91259* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -3831,7 +3831,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void _22_RoomText_Start_mFA0768F529688A882819
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/22_SpawningWithScope/_22_RoomText.cs:17>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/22_SpawningWithScope/_22_RoomText.cs:17>
 		RoomClient_t124F52F8602AB535AC105F1E470809979EDA2A4F* L_0 = __this->___roomClient;
 		NullCheck(L_0);
 		RoomEvent_tE6D32AD7A63F6CD673561FD622109927395ED2B1* L_1 = L_0->___OnJoinedRoom;
@@ -3839,23 +3839,23 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void _22_RoomText_Start_mFA0768F529688A882819
 		UnityAction_1__ctor_m23CE9207FAC5524B00C270BC302D2B90D937E265(L_2, __this, (intptr_t)((void*)_22_RoomText_RoomClient_OnJoinedRoom_m31EFDD2252E13DAFDDF5CFBB4EA055AA93D519F2_RuntimeMethod_var), NULL);
 		NullCheck(L_1);
 		UnityEvent_1_AddListener_m58BD029288EB53E8C5D3BD2A0FF7EC39284A7421(L_1, L_2, UnityEvent_1_AddListener_m58BD029288EB53E8C5D3BD2A0FF7EC39284A7421_RuntimeMethod_var);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/22_SpawningWithScope/_22_RoomText.cs:19>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/22_SpawningWithScope/_22_RoomText.cs:19>
 		Text_tD60B2346DAA6666BF0D822FF607F0B220C2B9E62* L_3;
 		L_3 = Component_GetComponent_TisText_tD60B2346DAA6666BF0D822FF607F0B220C2B9E62_mB85C5C0EEF6535E3FC0DBFC14E39FA5A51B6F888(__this, Component_GetComponent_TisText_tD60B2346DAA6666BF0D822FF607F0B220C2B9E62_mB85C5C0EEF6535E3FC0DBFC14E39FA5A51B6F888_RuntimeMethod_var);
 		__this->___text = L_3;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___text), (void*)L_3);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/22_SpawningWithScope/_22_RoomText.cs:20>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/22_SpawningWithScope/_22_RoomText.cs:20>
 		Text_tD60B2346DAA6666BF0D822FF607F0B220C2B9E62* L_4 = __this->___text;
 		NullCheck(L_4);
 		String_t* L_5;
 		L_5 = VirtualFuncInvoker0< String_t* >::Invoke(74, L_4);
 		__this->___originalTextContent = L_5;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___originalTextContent), (void*)L_5);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/22_SpawningWithScope/_22_RoomText.cs:21>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/22_SpawningWithScope/_22_RoomText.cs:21>
 		return;
 	}
 }
-// Method Definition Index: 89014
+// Method Definition Index: 134385
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void _22_RoomText_RoomClient_OnJoinedRoom_m31EFDD2252E13DAFDDF5CFBB4EA055AA93D519F2 (_22_RoomText_t9BCF4ADA146380DE55E99A2EDEBDA7B2A4B91259* __this, RuntimeObject* ___0_room, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -3866,7 +3866,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void _22_RoomText_RoomClient_OnJoinedRoom_m31
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/22_SpawningWithScope/_22_RoomText.cs:25>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/22_SpawningWithScope/_22_RoomText.cs:25>
 		RuntimeObject* L_0 = ___0_room;
 		if (!L_0)
 		{
@@ -3897,7 +3897,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void _22_RoomText_RoomClient_OnJoinedRoom_m31
 		}
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/22_SpawningWithScope/_22_RoomText.cs:27>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/22_SpawningWithScope/_22_RoomText.cs:27>
 		Text_tD60B2346DAA6666BF0D822FF607F0B220C2B9E62* L_6 = __this->___text;
 		String_t* L_7 = __this->___originalTextContent;
 		RuntimeObject* L_8 = ___0_room;
@@ -3915,11 +3915,11 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void _22_RoomText_RoomClient_OnJoinedRoom_m31
 
 IL_0041:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/22_SpawningWithScope/_22_RoomText.cs:29>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/22_SpawningWithScope/_22_RoomText.cs:29>
 		return;
 	}
 }
-// Method Definition Index: 89015
+// Method Definition Index: 134386
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void _22_RoomText__ctor_m18FA8248A2A41D79B86A783D9A6BEEA77277072D (_22_RoomText_t9BCF4ADA146380DE55E99A2EDEBDA7B2A4B91259* __this, const RuntimeMethod* method) 
 {
 	{
@@ -3935,7 +3935,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void _22_RoomText__ctor_m18FA8248A2A41D79B86A
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 89016
+// Method Definition Index: 134387
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void _22_SpawnerWithScope_Start_m216D26101D087597DC85827143560D190BD98D43 (_22_SpawnerWithScope_tD16C8F35DC543A5D1F07430F106714D7AAE49EF5* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -3948,12 +3948,12 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void _22_SpawnerWithScope_Start_m216D26101D08
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/22_SpawningWithScope/_22_SpawnerWithScope.cs:16>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/22_SpawningWithScope/_22_SpawnerWithScope.cs:16>
 		NetworkSpawnManager_tFCB3B1216C5FF4535A3F8AF00C08A89C3CADA00D* L_0;
 		L_0 = Component_GetComponentInParent_TisNetworkSpawnManager_tFCB3B1216C5FF4535A3F8AF00C08A89C3CADA00D_m4834858C5916740116F089DF8F8C3DC345BD6151(__this, Component_GetComponentInParent_TisNetworkSpawnManager_tFCB3B1216C5FF4535A3F8AF00C08A89C3CADA00D_m4834858C5916740116F089DF8F8C3DC345BD6151_RuntimeMethod_var);
 		__this->___manager = L_0;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___manager), (void*)L_0);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/22_SpawningWithScope/_22_SpawnerWithScope.cs:17>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/22_SpawningWithScope/_22_SpawnerWithScope.cs:17>
 		NetworkSpawnManager_tFCB3B1216C5FF4535A3F8AF00C08A89C3CADA00D* L_1 = __this->___manager;
 		NullCheck(L_1);
 		OnSpawnedEvent_tA12C5DFE8BF66F325845DA94018B7559F1626340* L_2 = L_1->___OnSpawned;
@@ -3961,11 +3961,11 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void _22_SpawnerWithScope_Start_m216D26101D08
 		UnityAction_4__ctor_mA7839AE3C721F62077BAA2310173BC00698FF35F(L_3, __this, (intptr_t)((void*)_22_SpawnerWithScope_Manager_OnSpawned_m872B5F2F83D1A1748A47FBD1DB8ED8B6D2EB056C_RuntimeMethod_var), NULL);
 		NullCheck(L_2);
 		UnityEvent_4_AddListener_m0639DEDB32CC7C43BB08C900DCF121CE0685347E(L_2, L_3, UnityEvent_4_AddListener_m0639DEDB32CC7C43BB08C900DCF121CE0685347E_RuntimeMethod_var);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/22_SpawningWithScope/_22_SpawnerWithScope.cs:18>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/22_SpawningWithScope/_22_SpawnerWithScope.cs:18>
 		return;
 	}
 }
-// Method Definition Index: 89017
+// Method Definition Index: 134388
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void _22_SpawnerWithScope_Manager_OnSpawned_m872B5F2F83D1A1748A47FBD1DB8ED8B6D2EB056C (_22_SpawnerWithScope_tD16C8F35DC543A5D1F07430F106714D7AAE49EF5* __this, GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___0_go, RuntimeObject* ___1_room, RuntimeObject* ___2_peer, int32_t ___3_origin, const RuntimeMethod* method) 
 {
 	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 V_0;
@@ -3973,11 +3973,11 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void _22_SpawnerWithScope_Manager_OnSpawned_m
 	Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 V_1;
 	memset((&V_1), 0, sizeof(V_1));
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/22_SpawningWithScope/_22_SpawnerWithScope.cs:22>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/22_SpawningWithScope/_22_SpawnerWithScope.cs:22>
 		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_0 = __this->___spawnPoint;
 		NullCheck(L_0);
 		Transform_GetPositionAndRotation_m8362D08B48A97BFB7CA7ACD207FF67773F1150E7(L_0, (&V_0), (&V_1), NULL);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/22_SpawningWithScope/_22_SpawnerWithScope.cs:25>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/22_SpawningWithScope/_22_SpawnerWithScope.cs:25>
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_1 = V_0;
 		float L_2;
 		L_2 = Random_Range_m5236C99A7D8AE6AC9190592DC66016652A2D2494((0.0f), (0.0500000007f), NULL);
@@ -3988,7 +3988,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void _22_SpawnerWithScope_Manager_OnSpawned_m
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_5;
 		L_5 = Vector3_op_Addition_m78C0EC70CB66E8DCAC225743D82B268DAEE92067_inline(L_1, L_4, NULL);
 		V_0 = L_5;
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/22_SpawningWithScope/_22_SpawnerWithScope.cs:27>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/22_SpawningWithScope/_22_SpawnerWithScope.cs:27>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_6 = ___0_go;
 		NullCheck(L_6);
 		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_7;
@@ -3997,11 +3997,11 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void _22_SpawnerWithScope_Manager_OnSpawned_m
 		Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 L_9 = V_1;
 		NullCheck(L_7);
 		Transform_SetPositionAndRotation_m418859BF59086EEAA084FFD6F258A43FAB408F5A(L_7, L_8, L_9, NULL);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/22_SpawningWithScope/_22_SpawnerWithScope.cs:28>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/22_SpawningWithScope/_22_SpawnerWithScope.cs:28>
 		return;
 	}
 }
-// Method Definition Index: 89018
+// Method Definition Index: 134389
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void _22_SpawnerWithScope_SpawnWithPeerScope_m2B8FE34281E61D02AAD141CB703E68907BA657C4 (_22_SpawnerWithScope_tD16C8F35DC543A5D1F07430F106714D7AAE49EF5* __this, int32_t ___0_index, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -4012,7 +4012,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void _22_SpawnerWithScope_SpawnWithPeerScope_
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/22_SpawningWithScope/_22_SpawnerWithScope.cs:32>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/22_SpawningWithScope/_22_SpawnerWithScope.cs:32>
 		NetworkSpawnManager_tFCB3B1216C5FF4535A3F8AF00C08A89C3CADA00D* L_0 = __this->___manager;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_1;
@@ -4023,7 +4023,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void _22_SpawnerWithScope_SpawnWithPeerScope_
 		}
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/22_SpawningWithScope/_22_SpawnerWithScope.cs:34>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/22_SpawningWithScope/_22_SpawnerWithScope.cs:34>
 		NetworkSpawnManager_tFCB3B1216C5FF4535A3F8AF00C08A89C3CADA00D* L_2 = __this->___manager;
 		NetworkSpawnManager_tFCB3B1216C5FF4535A3F8AF00C08A89C3CADA00D* L_3 = __this->___manager;
 		NullCheck(L_3);
@@ -4041,11 +4041,11 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void _22_SpawnerWithScope_SpawnWithPeerScope_
 
 IL_002f:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/22_SpawningWithScope/_22_SpawnerWithScope.cs:36>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/22_SpawningWithScope/_22_SpawnerWithScope.cs:36>
 		return;
 	}
 }
-// Method Definition Index: 89019
+// Method Definition Index: 134390
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void _22_SpawnerWithScope_SpawnWithRoomScope_m3C4D919C99E699DF7F0A7D155655AA2B63A21D1E (_22_SpawnerWithScope_tD16C8F35DC543A5D1F07430F106714D7AAE49EF5* __this, int32_t ___0_index, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -4056,7 +4056,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void _22_SpawnerWithScope_SpawnWithRoomScope_
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/22_SpawningWithScope/_22_SpawnerWithScope.cs:40>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/22_SpawningWithScope/_22_SpawnerWithScope.cs:40>
 		NetworkSpawnManager_tFCB3B1216C5FF4535A3F8AF00C08A89C3CADA00D* L_0 = __this->___manager;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_1;
@@ -4067,7 +4067,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void _22_SpawnerWithScope_SpawnWithRoomScope_
 		}
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/22_SpawningWithScope/_22_SpawnerWithScope.cs:42>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/22_SpawningWithScope/_22_SpawnerWithScope.cs:42>
 		NetworkSpawnManager_tFCB3B1216C5FF4535A3F8AF00C08A89C3CADA00D* L_2 = __this->___manager;
 		NetworkSpawnManager_tFCB3B1216C5FF4535A3F8AF00C08A89C3CADA00D* L_3 = __this->___manager;
 		NullCheck(L_3);
@@ -4084,11 +4084,11 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void _22_SpawnerWithScope_SpawnWithRoomScope_
 
 IL_002e:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/22_SpawningWithScope/_22_SpawnerWithScope.cs:44>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/22_SpawningWithScope/_22_SpawnerWithScope.cs:44>
 		return;
 	}
 }
-// Method Definition Index: 89020
+// Method Definition Index: 134391
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void _22_SpawnerWithScope__ctor_m6B6D08F50EAEFE95240C68FD75E47412FF5D72D7 (_22_SpawnerWithScope_tD16C8F35DC543A5D1F07430F106714D7AAE49EF5* __this, const RuntimeMethod* method) 
 {
 	{
@@ -4104,7 +4104,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void _22_SpawnerWithScope__ctor_m6B6D08F50EAE
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 89021
+// Method Definition Index: 134392
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void _30_JoinOther_Join_m8C1D3117698CFEA0F343A1FFE40F48BB232E906D (_30_JoinOther_tD472E3AE7238D869F29E5501DD6ABD88C392F207* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -4115,7 +4115,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void _30_JoinOther_Join_m8C1D3117698CFEA0F343
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/30_Avatars/_30_JoinOther.cs:15>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/30_Avatars/_30_JoinOther.cs:15>
 		RoomClient_t124F52F8602AB535AC105F1E470809979EDA2A4F* L_0 = __this->___otherPeerRoomClient;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_1;
@@ -4136,7 +4136,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void _30_JoinOther_Join_m8C1D3117698CFEA0F343
 		}
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/30_Avatars/_30_JoinOther.cs:17>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/30_Avatars/_30_JoinOther.cs:17>
 		RoomClient_t124F52F8602AB535AC105F1E470809979EDA2A4F* L_4 = __this->___roomClient;
 		RoomClient_t124F52F8602AB535AC105F1E470809979EDA2A4F* L_5 = __this->___otherPeerRoomClient;
 		NullCheck(L_5);
@@ -4151,11 +4151,11 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void _30_JoinOther_Join_m8C1D3117698CFEA0F343
 
 IL_0036:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/30_Avatars/_30_JoinOther.cs:19>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/30_Avatars/_30_JoinOther.cs:19>
 		return;
 	}
 }
-// Method Definition Index: 89022
+// Method Definition Index: 134393
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void _30_JoinOther__ctor_m5D51F5C2A8E4CF4857B9C61F109ADEDEEBADD8D2 (_30_JoinOther_tD472E3AE7238D869F29E5501DD6ABD88C392F207* __this, const RuntimeMethod* method) 
 {
 	{
@@ -4171,7 +4171,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void _30_JoinOther__ctor_m5D51F5C2A8E4CF4857B
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 89023
+// Method Definition Index: 134394
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void _30_JoinRandom_JoinRandom_m9712661CF32B784F96AD7EDC2BF267655DA3130A (_30_JoinRandom_tDAB27D7FBE68578AA9C8CAF08EA6C8EDDC6DBCCF* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -4181,7 +4181,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void _30_JoinRandom_JoinRandom_m9712661CF32B7
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/30_Avatars/_30_JoinRandom.cs:15>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/30_Avatars/_30_JoinRandom.cs:15>
 		RoomClient_t124F52F8602AB535AC105F1E470809979EDA2A4F* L_0 = __this->___roomClient;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_1;
@@ -4192,7 +4192,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void _30_JoinRandom_JoinRandom_m9712661CF32B7
 		}
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/30_Avatars/_30_JoinRandom.cs:17>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/30_Avatars/_30_JoinRandom.cs:17>
 		RoomClient_t124F52F8602AB535AC105F1E470809979EDA2A4F* L_2 = __this->___roomClient;
 		Guid_t L_3;
 		L_3 = Guid_NewGuid_m1F4894E8DC089811D6252148AD5858E58D43A7BD(NULL);
@@ -4202,11 +4202,11 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void _30_JoinRandom_JoinRandom_m9712661CF32B7
 
 IL_001d:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/30_Avatars/_30_JoinRandom.cs:19>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/30_Avatars/_30_JoinRandom.cs:19>
 		return;
 	}
 }
-// Method Definition Index: 89024
+// Method Definition Index: 134395
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void _30_JoinRandom__ctor_mF31F7196863E0D74A03E1F33C323B1574832FE4F (_30_JoinRandom_tDAB27D7FBE68578AA9C8CAF08EA6C8EDDC6DBCCF* __this, const RuntimeMethod* method) 
 {
 	{
@@ -4222,7 +4222,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void _30_JoinRandom__ctor_mF31F7196863E0D74A0
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 89025
+// Method Definition Index: 134396
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void _30_JoinRandomOnStart_Start_m04A263D9A82412B2CC0A8B74FF4381DB13C088EA (_30_JoinRandomOnStart_tBE44A926457701CF46E6A8A6BFA2AA9E2F1E944C* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -4232,18 +4232,18 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void _30_JoinRandomOnStart_Start_m04A263D9A82
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/30_Avatars/_30_JoinRandomOnStart.cs:13>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/30_Avatars/_30_JoinRandomOnStart.cs:13>
 		RoomClient_t124F52F8602AB535AC105F1E470809979EDA2A4F* L_0;
 		L_0 = Component_GetComponent_TisRoomClient_t124F52F8602AB535AC105F1E470809979EDA2A4F_m5C5C417FD81C002C5C18F6F1E8463A66E9629806(__this, Component_GetComponent_TisRoomClient_t124F52F8602AB535AC105F1E470809979EDA2A4F_m5C5C417FD81C002C5C18F6F1E8463A66E9629806_RuntimeMethod_var);
 		Guid_t L_1;
 		L_1 = Guid_NewGuid_m1F4894E8DC089811D6252148AD5858E58D43A7BD(NULL);
 		NullCheck(L_0);
 		RoomClient_Join_m4A6D5CDB4FBC72BFD1DAC3D11E9DEB3A6998D7F3(L_0, L_1, NULL);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/30_Avatars/_30_JoinRandomOnStart.cs:14>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/30_Avatars/_30_JoinRandomOnStart.cs:14>
 		return;
 	}
 }
-// Method Definition Index: 89026
+// Method Definition Index: 134397
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void _30_JoinRandomOnStart__ctor_m5562FE6A4290D7B97A6CD3451768ADA5C143F57B (_30_JoinRandomOnStart_tBE44A926457701CF46E6A8A6BFA2AA9E2F1E944C* __this, const RuntimeMethod* method) 
 {
 	{
@@ -4259,7 +4259,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void _30_JoinRandomOnStart__ctor_m5562FE6A429
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 89027
+// Method Definition Index: 134398
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void _30_RoomText_Start_m0E1BB8755DAA6B0897A499FAC17021F5E6AB6DCB (_30_RoomText_tC2DBAD12BC7E30F53C82F74521EE687DA12953C9* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -4272,7 +4272,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void _30_RoomText_Start_m0E1BB8755DAA6B0897A4
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/30_Avatars/_30_RoomText.cs:17>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/30_Avatars/_30_RoomText.cs:17>
 		RoomClient_t124F52F8602AB535AC105F1E470809979EDA2A4F* L_0 = __this->___roomClient;
 		NullCheck(L_0);
 		RoomEvent_tE6D32AD7A63F6CD673561FD622109927395ED2B1* L_1 = L_0->___OnJoinedRoom;
@@ -4280,23 +4280,23 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void _30_RoomText_Start_m0E1BB8755DAA6B0897A4
 		UnityAction_1__ctor_m23CE9207FAC5524B00C270BC302D2B90D937E265(L_2, __this, (intptr_t)((void*)_30_RoomText_RoomClient_OnJoinedRoom_m478D79270B9F7EE8792A941F07D2482618CE6304_RuntimeMethod_var), NULL);
 		NullCheck(L_1);
 		UnityEvent_1_AddListener_m58BD029288EB53E8C5D3BD2A0FF7EC39284A7421(L_1, L_2, UnityEvent_1_AddListener_m58BD029288EB53E8C5D3BD2A0FF7EC39284A7421_RuntimeMethod_var);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/30_Avatars/_30_RoomText.cs:19>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/30_Avatars/_30_RoomText.cs:19>
 		Text_tD60B2346DAA6666BF0D822FF607F0B220C2B9E62* L_3;
 		L_3 = Component_GetComponent_TisText_tD60B2346DAA6666BF0D822FF607F0B220C2B9E62_mB85C5C0EEF6535E3FC0DBFC14E39FA5A51B6F888(__this, Component_GetComponent_TisText_tD60B2346DAA6666BF0D822FF607F0B220C2B9E62_mB85C5C0EEF6535E3FC0DBFC14E39FA5A51B6F888_RuntimeMethod_var);
 		__this->___text = L_3;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___text), (void*)L_3);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/30_Avatars/_30_RoomText.cs:20>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/30_Avatars/_30_RoomText.cs:20>
 		Text_tD60B2346DAA6666BF0D822FF607F0B220C2B9E62* L_4 = __this->___text;
 		NullCheck(L_4);
 		String_t* L_5;
 		L_5 = VirtualFuncInvoker0< String_t* >::Invoke(74, L_4);
 		__this->___originalTextContent = L_5;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___originalTextContent), (void*)L_5);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/30_Avatars/_30_RoomText.cs:21>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/30_Avatars/_30_RoomText.cs:21>
 		return;
 	}
 }
-// Method Definition Index: 89028
+// Method Definition Index: 134399
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void _30_RoomText_RoomClient_OnJoinedRoom_m478D79270B9F7EE8792A941F07D2482618CE6304 (_30_RoomText_tC2DBAD12BC7E30F53C82F74521EE687DA12953C9* __this, RuntimeObject* ___0_room, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -4307,7 +4307,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void _30_RoomText_RoomClient_OnJoinedRoom_m47
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/30_Avatars/_30_RoomText.cs:25>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/30_Avatars/_30_RoomText.cs:25>
 		RuntimeObject* L_0 = ___0_room;
 		if (!L_0)
 		{
@@ -4338,7 +4338,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void _30_RoomText_RoomClient_OnJoinedRoom_m47
 		}
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/30_Avatars/_30_RoomText.cs:27>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/30_Avatars/_30_RoomText.cs:27>
 		Text_tD60B2346DAA6666BF0D822FF607F0B220C2B9E62* L_6 = __this->___text;
 		String_t* L_7 = __this->___originalTextContent;
 		RuntimeObject* L_8 = ___0_room;
@@ -4356,11 +4356,11 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void _30_RoomText_RoomClient_OnJoinedRoom_m47
 
 IL_0041:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/30_Avatars/_30_RoomText.cs:29>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/30_Avatars/_30_RoomText.cs:29>
 		return;
 	}
 }
-// Method Definition Index: 89029
+// Method Definition Index: 134400
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void _30_RoomText__ctor_m294CEEFF27021D6701EEA5DC4F7837D42C03DD59 (_30_RoomText_tC2DBAD12BC7E30F53C82F74521EE687DA12953C9* __this, const RuntimeMethod* method) 
 {
 	{
@@ -4376,7 +4376,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void _30_RoomText__ctor_m294CEEFF27021D6701EE
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 89030
+// Method Definition Index: 134401
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void _30_SimpleAvatar_Start_mD75E412647C7DDE09251D1D918943F30B7606310 (_30_SimpleAvatar_t297B1B3C10C7EE8319736F2CCBD311CCB78A18EA* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -4389,12 +4389,12 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void _30_SimpleAvatar_Start_mD75E412647C7DDE0
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/30_Avatars/_30_SimpleAvatar.cs:12>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/30_Avatars/_30_SimpleAvatar.cs:12>
 		PoseAvatar_tE59911E739BD7F8519FA0B09C32B5D7A7C498007* L_0;
 		L_0 = Component_GetComponent_TisPoseAvatar_tE59911E739BD7F8519FA0B09C32B5D7A7C498007_m76CA2B100243EA7CA21CC0E501F353A9721DFAF3(__this, Component_GetComponent_TisPoseAvatar_tE59911E739BD7F8519FA0B09C32B5D7A7C498007_m76CA2B100243EA7CA21CC0E501F353A9721DFAF3_RuntimeMethod_var);
 		__this->___poseAvatar = L_0;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___poseAvatar), (void*)L_0);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/30_Avatars/_30_SimpleAvatar.cs:13>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/30_Avatars/_30_SimpleAvatar.cs:13>
 		PoseAvatar_tE59911E739BD7F8519FA0B09C32B5D7A7C498007* L_1 = __this->___poseAvatar;
 		NullCheck(L_1);
 		PoseUpdateEvent_tB4E6AD445FA7A08287529BC8A8D464A0C70A0DD3* L_2 = L_1->___OnPoseUpdate;
@@ -4402,13 +4402,13 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void _30_SimpleAvatar_Start_mD75E412647C7DDE0
 		UnityAction_1__ctor_m8D075D6758844080438E98377769ECE251E8708E(L_3, __this, (intptr_t)((void*)_30_SimpleAvatar_PoseAvatar_OnPoseUpdate_mAC592BAF75B43A08DC7FF536F9C05C1690CB08E7_RuntimeMethod_var), NULL);
 		NullCheck(L_2);
 		UnityEvent_1_AddListener_mCE980C17C5463D340958E5454E4D8ACBC80EBA7B(L_2, L_3, UnityEvent_1_AddListener_mCE980C17C5463D340958E5454E4D8ACBC80EBA7B_RuntimeMethod_var);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/30_Avatars/_30_SimpleAvatar.cs:15>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/30_Avatars/_30_SimpleAvatar.cs:15>
 		_30_SimpleAvatar_SetVisibility_m408B8D3297A6E31202178703CC9CF0D9048F8ED0(__this, (bool)0, (bool)1, NULL);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/30_Avatars/_30_SimpleAvatar.cs:16>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/30_Avatars/_30_SimpleAvatar.cs:16>
 		return;
 	}
 }
-// Method Definition Index: 89031
+// Method Definition Index: 134402
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void _30_SimpleAvatar_OnDestroy_m0CC275BBFDFEE09574078FFBC8C1DAD0671AEF53 (_30_SimpleAvatar_t297B1B3C10C7EE8319736F2CCBD311CCB78A18EA* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -4421,7 +4421,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void _30_SimpleAvatar_OnDestroy_m0CC275BBFDFE
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/30_Avatars/_30_SimpleAvatar.cs:20>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/30_Avatars/_30_SimpleAvatar.cs:20>
 		PoseAvatar_tE59911E739BD7F8519FA0B09C32B5D7A7C498007* L_0 = __this->___poseAvatar;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_1;
@@ -4432,7 +4432,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void _30_SimpleAvatar_OnDestroy_m0CC275BBFDFE
 		}
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/30_Avatars/_30_SimpleAvatar.cs:22>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/30_Avatars/_30_SimpleAvatar.cs:22>
 		PoseAvatar_tE59911E739BD7F8519FA0B09C32B5D7A7C498007* L_2 = __this->___poseAvatar;
 		NullCheck(L_2);
 		PoseUpdateEvent_tB4E6AD445FA7A08287529BC8A8D464A0C70A0DD3* L_3 = L_2->___OnPoseUpdate;
@@ -4444,11 +4444,11 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void _30_SimpleAvatar_OnDestroy_m0CC275BBFDFE
 
 IL_0029:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/30_Avatars/_30_SimpleAvatar.cs:24>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/30_Avatars/_30_SimpleAvatar.cs:24>
 		return;
 	}
 }
-// Method Definition Index: 89032
+// Method Definition Index: 134403
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void _30_SimpleAvatar_PoseAvatar_OnPoseUpdate_mAC592BAF75B43A08DC7FF536F9C05C1690CB08E7 (_30_SimpleAvatar_t297B1B3C10C7EE8319736F2CCBD311CCB78A18EA* __this, InputVar_1_tAD456A36ADD509DFB2A4C85888DE43B0BA052069 ___0_pose, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -4459,7 +4459,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void _30_SimpleAvatar_PoseAvatar_OnPoseUpdate
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/30_Avatars/_30_SimpleAvatar.cs:28>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/30_Avatars/_30_SimpleAvatar.cs:28>
 		bool L_0;
 		L_0 = InputVar_1_get_valid_m0592A87C83419CF3F7D807905831004B71371C01_inline((&___0_pose), InputVar_1_get_valid_m0592A87C83419CF3F7D807905831004B71371C01_RuntimeMethod_var);
 		if (L_0)
@@ -4468,17 +4468,17 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void _30_SimpleAvatar_PoseAvatar_OnPoseUpdate
 		}
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/30_Avatars/_30_SimpleAvatar.cs:30>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/30_Avatars/_30_SimpleAvatar.cs:30>
 		_30_SimpleAvatar_SetVisibility_m408B8D3297A6E31202178703CC9CF0D9048F8ED0(__this, (bool)0, (bool)0, NULL);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/30_Avatars/_30_SimpleAvatar.cs:31>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/30_Avatars/_30_SimpleAvatar.cs:31>
 		return;
 	}
 
 IL_0012:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/30_Avatars/_30_SimpleAvatar.cs:34>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/30_Avatars/_30_SimpleAvatar.cs:34>
 		_30_SimpleAvatar_SetVisibility_m408B8D3297A6E31202178703CC9CF0D9048F8ED0(__this, (bool)1, (bool)0, NULL);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/30_Avatars/_30_SimpleAvatar.cs:35>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/30_Avatars/_30_SimpleAvatar.cs:35>
 		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_1;
 		L_1 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(__this, NULL);
 		Pose_t06BA69EAA6E9FAF60056D519A87D25F54AFE7971 L_2;
@@ -4489,11 +4489,11 @@ IL_0012:
 		Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 L_5 = L_4.___rotation;
 		NullCheck(L_1);
 		Transform_SetPositionAndRotation_m418859BF59086EEAA084FFD6F258A43FAB408F5A(L_1, L_3, L_5, NULL);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/30_Avatars/_30_SimpleAvatar.cs:36>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/30_Avatars/_30_SimpleAvatar.cs:36>
 		return;
 	}
 }
-// Method Definition Index: 89033
+// Method Definition Index: 134404
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void _30_SimpleAvatar_SetVisibility_m408B8D3297A6E31202178703CC9CF0D9048F8ED0 (_30_SimpleAvatar_t297B1B3C10C7EE8319736F2CCBD311CCB78A18EA* __this, bool ___0_visible, bool ___1_force, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -4506,7 +4506,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void _30_SimpleAvatar_SetVisibility_m408B8D32
 	}
 	int32_t V_0 = 0;
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/30_Avatars/_30_SimpleAvatar.cs:43>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/30_Avatars/_30_SimpleAvatar.cs:43>
 		bool L_0 = ___1_force;
 		if (L_0)
 		{
@@ -4522,23 +4522,23 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void _30_SimpleAvatar_SetVisibility_m408B8D32
 		}
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/30_Avatars/_30_SimpleAvatar.cs:45>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/30_Avatars/_30_SimpleAvatar.cs:45>
 		return;
 	}
 
 IL_000d:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/30_Avatars/_30_SimpleAvatar.cs:48>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/30_Avatars/_30_SimpleAvatar.cs:48>
 		List_1_tD435DCC2A88E36DFC551EA5392CE0182F0C50E93* L_3 = __this->____reusableRenderers;
 		Component_GetComponentsInChildren_TisRenderer_t320575F223BCB177A982E5DDB5DB19FAA89E7FBF_mBBF8A68E10A9B71E580782A0FF65484595D61966(__this, L_3, Component_GetComponentsInChildren_TisRenderer_t320575F223BCB177A982E5DDB5DB19FAA89E7FBF_mBBF8A68E10A9B71E580782A0FF65484595D61966_RuntimeMethod_var);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/30_Avatars/_30_SimpleAvatar.cs:49>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/30_Avatars/_30_SimpleAvatar.cs:49>
 		V_0 = 0;
 		goto IL_0033;
 	}
 
 IL_001d:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/30_Avatars/_30_SimpleAvatar.cs:51>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/30_Avatars/_30_SimpleAvatar.cs:51>
 		List_1_tD435DCC2A88E36DFC551EA5392CE0182F0C50E93* L_4 = __this->____reusableRenderers;
 		int32_t L_5 = V_0;
 		NullCheck(L_4);
@@ -4547,14 +4547,14 @@ IL_001d:
 		bool L_7 = ___0_visible;
 		NullCheck(L_6);
 		Renderer_set_enabled_m015E6D7B825528A31182F267234CC6A925F71DA8(L_6, L_7, NULL);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/30_Avatars/_30_SimpleAvatar.cs:49>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/30_Avatars/_30_SimpleAvatar.cs:49>
 		int32_t L_8 = V_0;
 		V_0 = ((int32_t)il2cpp_codegen_add(L_8, 1));
 	}
 
 IL_0033:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/30_Avatars/_30_SimpleAvatar.cs:49>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/30_Avatars/_30_SimpleAvatar.cs:49>
 		int32_t L_9 = V_0;
 		List_1_tD435DCC2A88E36DFC551EA5392CE0182F0C50E93* L_10 = __this->____reusableRenderers;
 		NullCheck(L_10);
@@ -4566,14 +4566,14 @@ IL_0033:
 		}
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/30_Avatars/_30_SimpleAvatar.cs:54>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/30_Avatars/_30_SimpleAvatar.cs:54>
 		bool L_12 = ___0_visible;
 		__this->___visible = L_12;
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/30_Avatars/_30_SimpleAvatar.cs:55>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/30_Avatars/_30_SimpleAvatar.cs:55>
 		return;
 	}
 }
-// Method Definition Index: 89034
+// Method Definition Index: 134405
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void _30_SimpleAvatar__ctor_mB5332BC8941717A040C1C23806EA32D2A17D4D4F (_30_SimpleAvatar_t297B1B3C10C7EE8319736F2CCBD311CCB78A18EA* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -4584,7 +4584,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void _30_SimpleAvatar__ctor_mB5332BC8941717A0
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/30_Avatars/_30_SimpleAvatar.cs:38>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/30_Avatars/_30_SimpleAvatar.cs:38>
 		List_1_tD435DCC2A88E36DFC551EA5392CE0182F0C50E93* L_0 = (List_1_tD435DCC2A88E36DFC551EA5392CE0182F0C50E93*)il2cpp_codegen_object_new(List_1_tD435DCC2A88E36DFC551EA5392CE0182F0C50E93_il2cpp_TypeInfo_var);
 		List_1__ctor_m803E10F7A50EB22BF82C0C1AB251D5407B4496DE(L_0, List_1__ctor_m803E10F7A50EB22BF82C0C1AB251D5407B4496DE_RuntimeMethod_var);
 		__this->____reusableRenderers = L_0;
@@ -4601,7 +4601,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void _30_SimpleAvatar__ctor_mB5332BC8941717A0
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 89035
+// Method Definition Index: 134406
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void _31_AvatarPrefabSetter_Set_mF2D34909D63B0936150658677B6D76B73052BF19 (_31_AvatarPrefabSetter_t5C14A8B9D13AEA33E38BF737372B1F00CB668A47* __this, int32_t ___0_index, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -4612,10 +4612,10 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void _31_AvatarPrefabSetter_Set_mF2D34909D63B
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/31_AvatarCatalogues/_31_AvatarPrefabSetter.cs:12>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/31_AvatarCatalogues/_31_AvatarPrefabSetter.cs:12>
 		AvatarManager_t902408E7686210803F733074BABBE10D300F5041* L_0;
 		L_0 = Component_GetComponent_TisAvatarManager_t902408E7686210803F733074BABBE10D300F5041_mCD273B19B3DA8EE0109AFCFAF736BBAF0F2366F4(__this, Component_GetComponent_TisAvatarManager_t902408E7686210803F733074BABBE10D300F5041_mCD273B19B3DA8EE0109AFCFAF736BBAF0F2366F4_RuntimeMethod_var);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/31_AvatarCatalogues/_31_AvatarPrefabSetter.cs:13>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/31_AvatarCatalogues/_31_AvatarPrefabSetter.cs:13>
 		AvatarManager_t902408E7686210803F733074BABBE10D300F5041* L_1 = L_0;
 		NullCheck(L_1);
 		PrefabCatalogue_tFB3A0794FB7272CDFD33FBF11A89214F1BB1C820* L_2 = L_1->___avatarCatalogue;
@@ -4628,11 +4628,11 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void _31_AvatarPrefabSetter_Set_mF2D34909D63B
 		NullCheck(L_1);
 		L_1->___avatarPrefab = L_5;
 		Il2CppCodeGenWriteBarrier((void**)(&L_1->___avatarPrefab), (void*)L_5);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/31_AvatarCatalogues/_31_AvatarPrefabSetter.cs:14>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/31_AvatarCatalogues/_31_AvatarPrefabSetter.cs:14>
 		return;
 	}
 }
-// Method Definition Index: 89036
+// Method Definition Index: 134407
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void _31_AvatarPrefabSetter__ctor_m5DA59C57EF0D6AF9673F04FA8D3B9C8924A06C8B (_31_AvatarPrefabSetter_t5C14A8B9D13AEA33E38BF737372B1F00CB668A47* __this, const RuntimeMethod* method) 
 {
 	{
@@ -4648,7 +4648,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void _31_AvatarPrefabSetter__ctor_m5DA59C57EF
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 89037
+// Method Definition Index: 134408
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void _31_JoinRoomClients_Start_m792ED14B56A7E415D1DAB1AC842114F2CCFD1C83 (_31_JoinRoomClients_tCEC7A0494D9EC671F52602BAB1BA704478371C97* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -4662,11 +4662,11 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void _31_JoinRoomClients_Start_m792ED14B56A7E
 	RoomClientU5BU5D_t5932A3FEC7748463B7C227B5A12F1D34B3B74BE5* V_1 = NULL;
 	int32_t V_2 = 0;
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/31_AvatarCatalogues/_31_JoinRoomClients.cs:15>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/31_AvatarCatalogues/_31_JoinRoomClients.cs:15>
 		Guid_t L_0;
 		L_0 = Guid_NewGuid_m1F4894E8DC089811D6252148AD5858E58D43A7BD(NULL);
 		V_0 = L_0;
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/31_AvatarCatalogues/_31_JoinRoomClients.cs:16>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/31_AvatarCatalogues/_31_JoinRoomClients.cs:16>
 		RoomClientU5BU5D_t5932A3FEC7748463B7C227B5A12F1D34B3B74BE5* L_1;
 		L_1 = Component_GetComponentsInChildren_TisRoomClient_t124F52F8602AB535AC105F1E470809979EDA2A4F_m591E041E0D21D3049E3168B2886A3B0A6D91AD5E(__this, Component_GetComponentsInChildren_TisRoomClient_t124F52F8602AB535AC105F1E470809979EDA2A4F_m591E041E0D21D3049E3168B2886A3B0A6D91AD5E_RuntimeMethod_var);
 		V_1 = L_1;
@@ -4676,13 +4676,13 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void _31_JoinRoomClients_Start_m792ED14B56A7E
 
 IL_0011:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/31_AvatarCatalogues/_31_JoinRoomClients.cs:16>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/31_AvatarCatalogues/_31_JoinRoomClients.cs:16>
 		RoomClientU5BU5D_t5932A3FEC7748463B7C227B5A12F1D34B3B74BE5* L_2 = V_1;
 		int32_t L_3 = V_2;
 		NullCheck(L_2);
 		int32_t L_4 = L_3;
 		RoomClient_t124F52F8602AB535AC105F1E470809979EDA2A4F* L_5 = (L_2)->GetAt(static_cast<il2cpp_array_size_t>(L_4));
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/31_AvatarCatalogues/_31_JoinRoomClients.cs:18>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/31_AvatarCatalogues/_31_JoinRoomClients.cs:18>
 		Guid_t L_6 = V_0;
 		NullCheck(L_5);
 		RoomClient_Join_m4A6D5CDB4FBC72BFD1DAC3D11E9DEB3A6998D7F3(L_5, L_6, NULL);
@@ -4692,7 +4692,7 @@ IL_0011:
 
 IL_001e:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/31_AvatarCatalogues/_31_JoinRoomClients.cs:16>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/31_AvatarCatalogues/_31_JoinRoomClients.cs:16>
 		int32_t L_8 = V_2;
 		RoomClientU5BU5D_t5932A3FEC7748463B7C227B5A12F1D34B3B74BE5* L_9 = V_1;
 		NullCheck(L_9);
@@ -4702,11 +4702,11 @@ IL_001e:
 		}
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/31_AvatarCatalogues/_31_JoinRoomClients.cs:20>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/31_AvatarCatalogues/_31_JoinRoomClients.cs:20>
 		return;
 	}
 }
-// Method Definition Index: 89038
+// Method Definition Index: 134409
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void _31_JoinRoomClients__ctor_m7B92E84619BBF45C2D3BC86C063F172CBBABD79D (_31_JoinRoomClients_tCEC7A0494D9EC671F52602BAB1BA704478371C97* __this, const RuntimeMethod* method) 
 {
 	{
@@ -4722,7 +4722,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void _31_JoinRoomClients__ctor_m7B92E84619BBF
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 89039
+// Method Definition Index: 134410
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void _31_SimpleAvatar_Start_m28F19E0F3C0135AF7587440C248FEFD438046BC2 (_31_SimpleAvatar_tA4063756A26D322C629485752ED9A183E06067F1* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -4735,12 +4735,12 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void _31_SimpleAvatar_Start_m28F19E0F3C0135AF
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/31_AvatarCatalogues/_31_SimpleAvatar.cs:12>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/31_AvatarCatalogues/_31_SimpleAvatar.cs:12>
 		PoseAvatar_tE59911E739BD7F8519FA0B09C32B5D7A7C498007* L_0;
 		L_0 = Component_GetComponent_TisPoseAvatar_tE59911E739BD7F8519FA0B09C32B5D7A7C498007_m76CA2B100243EA7CA21CC0E501F353A9721DFAF3(__this, Component_GetComponent_TisPoseAvatar_tE59911E739BD7F8519FA0B09C32B5D7A7C498007_m76CA2B100243EA7CA21CC0E501F353A9721DFAF3_RuntimeMethod_var);
 		__this->___poseAvatar = L_0;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___poseAvatar), (void*)L_0);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/31_AvatarCatalogues/_31_SimpleAvatar.cs:13>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/31_AvatarCatalogues/_31_SimpleAvatar.cs:13>
 		PoseAvatar_tE59911E739BD7F8519FA0B09C32B5D7A7C498007* L_1 = __this->___poseAvatar;
 		NullCheck(L_1);
 		PoseUpdateEvent_tB4E6AD445FA7A08287529BC8A8D464A0C70A0DD3* L_2 = L_1->___OnPoseUpdate;
@@ -4748,13 +4748,13 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void _31_SimpleAvatar_Start_m28F19E0F3C0135AF
 		UnityAction_1__ctor_m8D075D6758844080438E98377769ECE251E8708E(L_3, __this, (intptr_t)((void*)_31_SimpleAvatar_PoseAvatar_OnPoseUpdate_m4A84CF5BF87D3B1D9A0C1472A3E51C2CDCF3FD84_RuntimeMethod_var), NULL);
 		NullCheck(L_2);
 		UnityEvent_1_AddListener_mCE980C17C5463D340958E5454E4D8ACBC80EBA7B(L_2, L_3, UnityEvent_1_AddListener_mCE980C17C5463D340958E5454E4D8ACBC80EBA7B_RuntimeMethod_var);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/31_AvatarCatalogues/_31_SimpleAvatar.cs:15>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/31_AvatarCatalogues/_31_SimpleAvatar.cs:15>
 		_31_SimpleAvatar_SetVisibility_mCE2D6536B72FC0482623A1974A476A2E9C12901F(__this, (bool)0, (bool)1, NULL);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/31_AvatarCatalogues/_31_SimpleAvatar.cs:16>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/31_AvatarCatalogues/_31_SimpleAvatar.cs:16>
 		return;
 	}
 }
-// Method Definition Index: 89040
+// Method Definition Index: 134411
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void _31_SimpleAvatar_OnDestroy_m6224E9C69E6A6673AFA2C9A80A434A03DC2D53C3 (_31_SimpleAvatar_tA4063756A26D322C629485752ED9A183E06067F1* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -4767,7 +4767,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void _31_SimpleAvatar_OnDestroy_m6224E9C69E6A
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/31_AvatarCatalogues/_31_SimpleAvatar.cs:20>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/31_AvatarCatalogues/_31_SimpleAvatar.cs:20>
 		PoseAvatar_tE59911E739BD7F8519FA0B09C32B5D7A7C498007* L_0 = __this->___poseAvatar;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_1;
@@ -4778,7 +4778,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void _31_SimpleAvatar_OnDestroy_m6224E9C69E6A
 		}
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/31_AvatarCatalogues/_31_SimpleAvatar.cs:22>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/31_AvatarCatalogues/_31_SimpleAvatar.cs:22>
 		PoseAvatar_tE59911E739BD7F8519FA0B09C32B5D7A7C498007* L_2 = __this->___poseAvatar;
 		NullCheck(L_2);
 		PoseUpdateEvent_tB4E6AD445FA7A08287529BC8A8D464A0C70A0DD3* L_3 = L_2->___OnPoseUpdate;
@@ -4790,11 +4790,11 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void _31_SimpleAvatar_OnDestroy_m6224E9C69E6A
 
 IL_0029:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/31_AvatarCatalogues/_31_SimpleAvatar.cs:24>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/31_AvatarCatalogues/_31_SimpleAvatar.cs:24>
 		return;
 	}
 }
-// Method Definition Index: 89041
+// Method Definition Index: 134412
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void _31_SimpleAvatar_PoseAvatar_OnPoseUpdate_m4A84CF5BF87D3B1D9A0C1472A3E51C2CDCF3FD84 (_31_SimpleAvatar_tA4063756A26D322C629485752ED9A183E06067F1* __this, InputVar_1_tAD456A36ADD509DFB2A4C85888DE43B0BA052069 ___0_pose, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -4805,7 +4805,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void _31_SimpleAvatar_PoseAvatar_OnPoseUpdate
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/31_AvatarCatalogues/_31_SimpleAvatar.cs:28>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/31_AvatarCatalogues/_31_SimpleAvatar.cs:28>
 		bool L_0;
 		L_0 = InputVar_1_get_valid_m0592A87C83419CF3F7D807905831004B71371C01_inline((&___0_pose), InputVar_1_get_valid_m0592A87C83419CF3F7D807905831004B71371C01_RuntimeMethod_var);
 		if (L_0)
@@ -4814,17 +4814,17 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void _31_SimpleAvatar_PoseAvatar_OnPoseUpdate
 		}
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/31_AvatarCatalogues/_31_SimpleAvatar.cs:30>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/31_AvatarCatalogues/_31_SimpleAvatar.cs:30>
 		_31_SimpleAvatar_SetVisibility_mCE2D6536B72FC0482623A1974A476A2E9C12901F(__this, (bool)0, (bool)0, NULL);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/31_AvatarCatalogues/_31_SimpleAvatar.cs:31>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/31_AvatarCatalogues/_31_SimpleAvatar.cs:31>
 		return;
 	}
 
 IL_0012:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/31_AvatarCatalogues/_31_SimpleAvatar.cs:34>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/31_AvatarCatalogues/_31_SimpleAvatar.cs:34>
 		_31_SimpleAvatar_SetVisibility_mCE2D6536B72FC0482623A1974A476A2E9C12901F(__this, (bool)1, (bool)0, NULL);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/31_AvatarCatalogues/_31_SimpleAvatar.cs:35>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/31_AvatarCatalogues/_31_SimpleAvatar.cs:35>
 		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_1;
 		L_1 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(__this, NULL);
 		Pose_t06BA69EAA6E9FAF60056D519A87D25F54AFE7971 L_2;
@@ -4835,11 +4835,11 @@ IL_0012:
 		Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 L_5 = L_4.___rotation;
 		NullCheck(L_1);
 		Transform_SetPositionAndRotation_m418859BF59086EEAA084FFD6F258A43FAB408F5A(L_1, L_3, L_5, NULL);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/31_AvatarCatalogues/_31_SimpleAvatar.cs:36>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/31_AvatarCatalogues/_31_SimpleAvatar.cs:36>
 		return;
 	}
 }
-// Method Definition Index: 89042
+// Method Definition Index: 134413
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void _31_SimpleAvatar_SetVisibility_mCE2D6536B72FC0482623A1974A476A2E9C12901F (_31_SimpleAvatar_tA4063756A26D322C629485752ED9A183E06067F1* __this, bool ___0_visible, bool ___1_force, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -4852,7 +4852,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void _31_SimpleAvatar_SetVisibility_mCE2D6536
 	}
 	int32_t V_0 = 0;
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/31_AvatarCatalogues/_31_SimpleAvatar.cs:43>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/31_AvatarCatalogues/_31_SimpleAvatar.cs:43>
 		bool L_0 = ___1_force;
 		if (L_0)
 		{
@@ -4868,23 +4868,23 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void _31_SimpleAvatar_SetVisibility_mCE2D6536
 		}
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/31_AvatarCatalogues/_31_SimpleAvatar.cs:45>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/31_AvatarCatalogues/_31_SimpleAvatar.cs:45>
 		return;
 	}
 
 IL_000d:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/31_AvatarCatalogues/_31_SimpleAvatar.cs:48>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/31_AvatarCatalogues/_31_SimpleAvatar.cs:48>
 		List_1_tD435DCC2A88E36DFC551EA5392CE0182F0C50E93* L_3 = __this->____reusableRenderers;
 		Component_GetComponentsInChildren_TisRenderer_t320575F223BCB177A982E5DDB5DB19FAA89E7FBF_mBBF8A68E10A9B71E580782A0FF65484595D61966(__this, L_3, Component_GetComponentsInChildren_TisRenderer_t320575F223BCB177A982E5DDB5DB19FAA89E7FBF_mBBF8A68E10A9B71E580782A0FF65484595D61966_RuntimeMethod_var);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/31_AvatarCatalogues/_31_SimpleAvatar.cs:49>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/31_AvatarCatalogues/_31_SimpleAvatar.cs:49>
 		V_0 = 0;
 		goto IL_0033;
 	}
 
 IL_001d:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/31_AvatarCatalogues/_31_SimpleAvatar.cs:51>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/31_AvatarCatalogues/_31_SimpleAvatar.cs:51>
 		List_1_tD435DCC2A88E36DFC551EA5392CE0182F0C50E93* L_4 = __this->____reusableRenderers;
 		int32_t L_5 = V_0;
 		NullCheck(L_4);
@@ -4893,14 +4893,14 @@ IL_001d:
 		bool L_7 = ___0_visible;
 		NullCheck(L_6);
 		Renderer_set_enabled_m015E6D7B825528A31182F267234CC6A925F71DA8(L_6, L_7, NULL);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/31_AvatarCatalogues/_31_SimpleAvatar.cs:49>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/31_AvatarCatalogues/_31_SimpleAvatar.cs:49>
 		int32_t L_8 = V_0;
 		V_0 = ((int32_t)il2cpp_codegen_add(L_8, 1));
 	}
 
 IL_0033:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/31_AvatarCatalogues/_31_SimpleAvatar.cs:49>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/31_AvatarCatalogues/_31_SimpleAvatar.cs:49>
 		int32_t L_9 = V_0;
 		List_1_tD435DCC2A88E36DFC551EA5392CE0182F0C50E93* L_10 = __this->____reusableRenderers;
 		NullCheck(L_10);
@@ -4912,14 +4912,14 @@ IL_0033:
 		}
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/31_AvatarCatalogues/_31_SimpleAvatar.cs:54>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/31_AvatarCatalogues/_31_SimpleAvatar.cs:54>
 		bool L_12 = ___0_visible;
 		__this->___visible = L_12;
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/31_AvatarCatalogues/_31_SimpleAvatar.cs:55>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/31_AvatarCatalogues/_31_SimpleAvatar.cs:55>
 		return;
 	}
 }
-// Method Definition Index: 89043
+// Method Definition Index: 134414
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void _31_SimpleAvatar__ctor_m595D1F126074933C42764D2D3B4DC81EF3590F0A (_31_SimpleAvatar_tA4063756A26D322C629485752ED9A183E06067F1* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -4930,7 +4930,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void _31_SimpleAvatar__ctor_m595D1F126074933C
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/31_AvatarCatalogues/_31_SimpleAvatar.cs:38>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/31_AvatarCatalogues/_31_SimpleAvatar.cs:38>
 		List_1_tD435DCC2A88E36DFC551EA5392CE0182F0C50E93* L_0 = (List_1_tD435DCC2A88E36DFC551EA5392CE0182F0C50E93*)il2cpp_codegen_object_new(List_1_tD435DCC2A88E36DFC551EA5392CE0182F0C50E93_il2cpp_TypeInfo_var);
 		List_1__ctor_m803E10F7A50EB22BF82C0C1AB251D5407B4496DE(L_0, List_1__ctor_m803E10F7A50EB22BF82C0C1AB251D5407B4496DE_RuntimeMethod_var);
 		__this->____reusableRenderers = L_0;
@@ -4947,19 +4947,19 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void _31_SimpleAvatar__ctor_m595D1F126074933C
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 89044
+// Method Definition Index: 134415
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void _32_AnimateSlide_Update_mD244EFFD25FB4075A90F612779390EF33BD2E5A8 (_32_AnimateSlide_tAF9CB5CFC70027F6E1DEE08A05149308DD238B70* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/32_AvatarInput/_32_AnimateSlide.cs:11>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/32_AvatarInput/_32_AnimateSlide.cs:11>
 		float L_0 = __this->___theta;
 		float L_1;
 		L_1 = Time_get_deltaTime_mC3195000401F0FD167DD2F948FD2BC58330D0865(NULL);
 		__this->___theta = ((float)il2cpp_codegen_add(L_0, ((float)il2cpp_codegen_multiply(L_1, (3.0f)))));
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/32_AvatarInput/_32_AnimateSlide.cs:12>
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/32_AvatarInput/_32_AnimateSlide.cs:13>
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/32_AvatarInput/_32_AnimateSlide.cs:14>
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/32_AvatarInput/_32_AnimateSlide.cs:15>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/32_AvatarInput/_32_AnimateSlide.cs:12>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/32_AvatarInput/_32_AnimateSlide.cs:13>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/32_AvatarInput/_32_AnimateSlide.cs:14>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/32_AvatarInput/_32_AnimateSlide.cs:15>
 		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_2;
 		L_2 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(__this, NULL);
 		float L_3 = __this->___theta;
@@ -4982,11 +4982,11 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void _32_AnimateSlide_Update_mD244EFFD25FB407
 		Vector3__ctor_m376936E6B999EF1ECBE57D990A386303E2283DE0_inline((&L_11), ((float)il2cpp_codegen_subtract(L_4, (3.0f))), L_7, L_10, NULL);
 		NullCheck(L_2);
 		Transform_set_position_mA1A817124BB41B685043DED2A9BA48CDF37C4156(L_2, L_11, NULL);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/32_AvatarInput/_32_AnimateSlide.cs:16>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/32_AvatarInput/_32_AnimateSlide.cs:16>
 		return;
 	}
 }
-// Method Definition Index: 89045
+// Method Definition Index: 134416
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void _32_AnimateSlide__ctor_mF92A855327347256E5575478C7E8448DE962B142 (_32_AnimateSlide_tAF9CB5CFC70027F6E1DEE08A05149308DD238B70* __this, const RuntimeMethod* method) 
 {
 	{
@@ -5002,11 +5002,11 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void _32_AnimateSlide__ctor_mF92A855327347256
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 89046
+// Method Definition Index: 134417
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void _32_AnimateSpin_Update_mE30FA26A4EB485594DCE86C30BB8BA11D940A331 (_32_AnimateSpin_t2E992E105290E3E4262DD68410393B605BC0DE82* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/32_AvatarInput/_32_AnimateSpin.cs:9>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/32_AvatarInput/_32_AnimateSpin.cs:9>
 		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_0;
 		L_0 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(__this, NULL);
 		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_1;
@@ -5017,11 +5017,11 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void _32_AnimateSpin_Update_mE30FA26A4EB48559
 		L_3 = Vector3_op_Multiply_m87BA7C578F96C8E49BB07088DAAC4649F83B0353_inline(L_1, ((float)il2cpp_codegen_multiply(L_2, (180.0f))), NULL);
 		NullCheck(L_0);
 		Transform_Rotate_m2A308205498AFEEA3DF784B1C86E4F7C126CA2EE(L_0, L_3, NULL);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/32_AvatarInput/_32_AnimateSpin.cs:10>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/32_AvatarInput/_32_AnimateSpin.cs:10>
 		return;
 	}
 }
-// Method Definition Index: 89047
+// Method Definition Index: 134418
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void _32_AnimateSpin__ctor_m542FCCC6F8A68842111BFA6BB972AC7A1BF05137 (_32_AnimateSpin_t2E992E105290E3E4262DD68410393B605BC0DE82* __this, const RuntimeMethod* method) 
 {
 	{
@@ -5037,7 +5037,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void _32_AnimateSpin__ctor_m542FCCC6F8A688421
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 89048
+// Method Definition Index: 134419
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void _32_EnableButton_Start_mA0F2CB05582E44ED4AF1212039816AF7DD007893 (_32_EnableButton_t518F86B20F5D14BB19A3925D8730C8DFA43E1B35* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -5052,12 +5052,12 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void _32_EnableButton_Start_mA0F2CB05582E44ED
 	ColorBlock_tDD7C62E7AFE442652FC98F8D058CE8AE6BFD7C11 V_0;
 	memset((&V_0), 0, sizeof(V_0));
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/32_AvatarInput/_32_EnableButton.cs:22>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/32_AvatarInput/_32_EnableButton.cs:22>
 		Button_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098* L_0;
 		L_0 = Component_GetComponent_TisButton_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098_mFF8BA4CA5D7158D1D6249559A3289E7A6DF0A2BB(__this, Component_GetComponent_TisButton_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098_mFF8BA4CA5D7158D1D6249559A3289E7A6DF0A2BB_RuntimeMethod_var);
 		__this->___button = L_0;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___button), (void*)L_0);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/32_AvatarInput/_32_EnableButton.cs:23>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/32_AvatarInput/_32_EnableButton.cs:23>
 		Button_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098* L_1 = __this->___button;
 		NullCheck(L_1);
 		ColorBlock_tDD7C62E7AFE442652FC98F8D058CE8AE6BFD7C11 L_2;
@@ -5067,7 +5067,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void _32_EnableButton_Start_mA0F2CB05582E44ED
 		Color_tD001788D726C3A7F1379BEED0260B9591F440C1F L_3;
 		L_3 = ColorBlock_get_normalColor_m08A07A74ED743B4B0C1B5A5C35774F2D78F1F20E_inline((&V_0), NULL);
 		__this->___defaultColor = L_3;
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/32_AvatarInput/_32_EnableButton.cs:24>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/32_AvatarInput/_32_EnableButton.cs:24>
 		Button_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098* L_4 = __this->___button;
 		NullCheck(L_4);
 		ColorBlock_tDD7C62E7AFE442652FC98F8D058CE8AE6BFD7C11 L_5;
@@ -5076,7 +5076,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void _32_EnableButton_Start_mA0F2CB05582E44ED
 		Color_tD001788D726C3A7F1379BEED0260B9591F440C1F L_6;
 		L_6 = ColorBlock_get_highlightedColor_m4D1A3D268CB00B351F56934F7F244DBC68855301_inline((&V_0), NULL);
 		__this->___highlightedColor = L_6;
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/32_AvatarInput/_32_EnableButton.cs:25>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/32_AvatarInput/_32_EnableButton.cs:25>
 		Button_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098* L_7 = __this->___button;
 		NullCheck(L_7);
 		ColorBlock_tDD7C62E7AFE442652FC98F8D058CE8AE6BFD7C11 L_8;
@@ -5085,7 +5085,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void _32_EnableButton_Start_mA0F2CB05582E44ED
 		Color_tD001788D726C3A7F1379BEED0260B9591F440C1F L_9;
 		L_9 = ColorBlock_get_selectedColor_m41CD59090E997A5982EE5AB9D23811FEB35C82CF_inline((&V_0), NULL);
 		__this->___selectedColor = L_9;
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/32_AvatarInput/_32_EnableButton.cs:26>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/32_AvatarInput/_32_EnableButton.cs:26>
 		Button_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098* L_10 = __this->___button;
 		NullCheck(L_10);
 		ColorBlock_tDD7C62E7AFE442652FC98F8D058CE8AE6BFD7C11 L_11;
@@ -5094,7 +5094,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void _32_EnableButton_Start_mA0F2CB05582E44ED
 		Color_tD001788D726C3A7F1379BEED0260B9591F440C1F L_12;
 		L_12 = ColorBlock_get_disabledColor_m2E20FC772B592ADD71CE1336D29B3C3C1523669E_inline((&V_0), NULL);
 		__this->___disabledColor = L_12;
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/32_AvatarInput/_32_EnableButton.cs:28>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/32_AvatarInput/_32_EnableButton.cs:28>
 		Button_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098* L_13 = __this->___button;
 		NullCheck(L_13);
 		ButtonClickedEvent_t8EA72E90B3BD1392FB3B3EF167D5121C23569E4C* L_14;
@@ -5103,46 +5103,46 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void _32_EnableButton_Start_mA0F2CB05582E44ED
 		UnityAction__ctor_mC53E20D6B66E0D5688CD81B88DBB34F5A58B7131(L_15, __this, (intptr_t)((void*)_32_EnableButton_Button_OnClick_mE969F38E9743FFA2AC4A9B690E327D255D35026F_RuntimeMethod_var), NULL);
 		NullCheck(L_14);
 		UnityEvent_AddListener_m8AA4287C16628486B41DA41CA5E7A856A706D302(L_14, L_15, NULL);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/32_AvatarInput/_32_EnableButton.cs:30>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/32_AvatarInput/_32_EnableButton.cs:30>
 		bool L_16 = __this->___pushOnStart;
 		__this->___pushed = L_16;
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/32_AvatarInput/_32_EnableButton.cs:31>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/32_AvatarInput/_32_EnableButton.cs:31>
 		_32_EnableButton_Refresh_mDFE6D42016327A8F03B7277880379C18D7B2CCFA(__this, NULL);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/32_AvatarInput/_32_EnableButton.cs:32>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/32_AvatarInput/_32_EnableButton.cs:32>
 		return;
 	}
 }
-// Method Definition Index: 89049
+// Method Definition Index: 134420
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void _32_EnableButton_Button_OnClick_mE969F38E9743FFA2AC4A9B690E327D255D35026F (_32_EnableButton_t518F86B20F5D14BB19A3925D8730C8DFA43E1B35* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/32_AvatarInput/_32_EnableButton.cs:36>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/32_AvatarInput/_32_EnableButton.cs:36>
 		bool L_0 = __this->___pushed;
 		__this->___pushed = (bool)((((int32_t)L_0) == ((int32_t)0))? 1 : 0);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/32_AvatarInput/_32_EnableButton.cs:37>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/32_AvatarInput/_32_EnableButton.cs:37>
 		_32_EnableButton_Refresh_mDFE6D42016327A8F03B7277880379C18D7B2CCFA(__this, NULL);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/32_AvatarInput/_32_EnableButton.cs:38>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/32_AvatarInput/_32_EnableButton.cs:38>
 		return;
 	}
 }
-// Method Definition Index: 89050
+// Method Definition Index: 134421
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void _32_EnableButton_Refresh_mDFE6D42016327A8F03B7277880379C18D7B2CCFA (_32_EnableButton_t518F86B20F5D14BB19A3925D8730C8DFA43E1B35* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/32_AvatarInput/_32_EnableButton.cs:42>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/32_AvatarInput/_32_EnableButton.cs:42>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_0 = __this->___toToggle;
 		bool L_1 = __this->___pushed;
 		NullCheck(L_0);
 		GameObject_SetActive_m638E92E1E75E519E5B24CF150B08CA8E0CDFAB92(L_0, L_1, NULL);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/32_AvatarInput/_32_EnableButton.cs:43>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/32_AvatarInput/_32_EnableButton.cs:43>
 		Button_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098* L_2 = __this->___button;
 		bool L_3 = __this->___pushed;
 		_32_EnableButton_SetColors_m4565B2D5B6E9D399585BDC08C0CEC98BBFBF4677(__this, L_2, L_3, NULL);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/32_AvatarInput/_32_EnableButton.cs:44>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/32_AvatarInput/_32_EnableButton.cs:44>
 		return;
 	}
 }
-// Method Definition Index: 89051
+// Method Definition Index: 134422
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void _32_EnableButton_SetColors_m4565B2D5B6E9D399585BDC08C0CEC98BBFBF4677 (_32_EnableButton_t518F86B20F5D14BB19A3925D8730C8DFA43E1B35* __this, Button_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098* ___0_button, bool ___1_pushed, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -5169,13 +5169,13 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void _32_EnableButton_SetColors_m4565B2D5B6E9
 	memset((&G_B9_0), 0, sizeof(G_B9_0));
 	ColorBlock_tDD7C62E7AFE442652FC98F8D058CE8AE6BFD7C11* G_B9_1 = NULL;
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/32_AvatarInput/_32_EnableButton.cs:48>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/32_AvatarInput/_32_EnableButton.cs:48>
 		Button_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098* L_0 = ___0_button;
 		NullCheck(L_0);
 		ColorBlock_tDD7C62E7AFE442652FC98F8D058CE8AE6BFD7C11 L_1;
 		L_1 = Selectable_get_colors_mB53E365D02351D4B64084295C4B2A7AF2DEC4750_inline(L_0, NULL);
 		V_0 = L_1;
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/32_AvatarInput/_32_EnableButton.cs:49>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/32_AvatarInput/_32_EnableButton.cs:49>
 		bool L_2 = ___1_pushed;
 		if (L_2)
 		{
@@ -5202,7 +5202,7 @@ IL_001a:
 	{
 		il2cpp_codegen_runtime_class_init_inline(ColorBlock_tDD7C62E7AFE442652FC98F8D058CE8AE6BFD7C11_il2cpp_TypeInfo_var);
 		ColorBlock_set_normalColor_m3EBF594F6FA2C6494ACA9FCB9B458807D85B96F8_inline(G_B3_1, G_B3_0, NULL);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/32_AvatarInput/_32_EnableButton.cs:50>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/32_AvatarInput/_32_EnableButton.cs:50>
 		bool L_5 = ___1_pushed;
 		if (L_5)
 		{
@@ -5229,7 +5229,7 @@ IL_0032:
 	{
 		il2cpp_codegen_runtime_class_init_inline(ColorBlock_tDD7C62E7AFE442652FC98F8D058CE8AE6BFD7C11_il2cpp_TypeInfo_var);
 		ColorBlock_set_highlightedColor_m04E97DF2CCE7CAC47120D8F486E18BF62F16FF86_inline(G_B6_1, G_B6_0, NULL);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/32_AvatarInput/_32_EnableButton.cs:51>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/32_AvatarInput/_32_EnableButton.cs:51>
 		bool L_8 = ___1_pushed;
 		if (L_8)
 		{
@@ -5256,16 +5256,16 @@ IL_004a:
 	{
 		il2cpp_codegen_runtime_class_init_inline(ColorBlock_tDD7C62E7AFE442652FC98F8D058CE8AE6BFD7C11_il2cpp_TypeInfo_var);
 		ColorBlock_set_selectedColor_m76FEFB1148798B7A356C974CDEA3BA2E2E3C1D21_inline(G_B9_1, G_B9_0, NULL);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/32_AvatarInput/_32_EnableButton.cs:52>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/32_AvatarInput/_32_EnableButton.cs:52>
 		Button_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098* L_11 = ___0_button;
 		ColorBlock_tDD7C62E7AFE442652FC98F8D058CE8AE6BFD7C11 L_12 = V_0;
 		NullCheck(L_11);
 		Selectable_set_colors_m0A49ED3ACD6647B7E5A2DA10B3D417E8FE1BE55A(L_11, L_12, NULL);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/32_AvatarInput/_32_EnableButton.cs:53>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/32_AvatarInput/_32_EnableButton.cs:53>
 		return;
 	}
 }
-// Method Definition Index: 89052
+// Method Definition Index: 134423
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void _32_EnableButton__ctor_m6BD443102D4D3BB469B781226EFB7BE614B1BF80 (_32_EnableButton_t518F86B20F5D14BB19A3925D8730C8DFA43E1B35* __this, const RuntimeMethod* method) 
 {
 	{
@@ -5281,7 +5281,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void _32_EnableButton__ctor_m6BD443102D4D3BB4
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 89053
+// Method Definition Index: 134424
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void _32_JoinRoomClients_Start_m498D16E34CF00573309D2A995897BAB50C1CA9ED (_32_JoinRoomClients_tFB99322093EB26C469E1B13318D2F60E2E8DEC09* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -5295,11 +5295,11 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void _32_JoinRoomClients_Start_m498D16E34CF00
 	RoomClientU5BU5D_t5932A3FEC7748463B7C227B5A12F1D34B3B74BE5* V_1 = NULL;
 	int32_t V_2 = 0;
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/32_AvatarInput/_32_JoinRoomClients.cs:15>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/32_AvatarInput/_32_JoinRoomClients.cs:15>
 		Guid_t L_0;
 		L_0 = Guid_NewGuid_m1F4894E8DC089811D6252148AD5858E58D43A7BD(NULL);
 		V_0 = L_0;
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/32_AvatarInput/_32_JoinRoomClients.cs:16>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/32_AvatarInput/_32_JoinRoomClients.cs:16>
 		RoomClientU5BU5D_t5932A3FEC7748463B7C227B5A12F1D34B3B74BE5* L_1;
 		L_1 = Component_GetComponentsInChildren_TisRoomClient_t124F52F8602AB535AC105F1E470809979EDA2A4F_m591E041E0D21D3049E3168B2886A3B0A6D91AD5E(__this, Component_GetComponentsInChildren_TisRoomClient_t124F52F8602AB535AC105F1E470809979EDA2A4F_m591E041E0D21D3049E3168B2886A3B0A6D91AD5E_RuntimeMethod_var);
 		V_1 = L_1;
@@ -5309,13 +5309,13 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void _32_JoinRoomClients_Start_m498D16E34CF00
 
 IL_0011:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/32_AvatarInput/_32_JoinRoomClients.cs:16>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/32_AvatarInput/_32_JoinRoomClients.cs:16>
 		RoomClientU5BU5D_t5932A3FEC7748463B7C227B5A12F1D34B3B74BE5* L_2 = V_1;
 		int32_t L_3 = V_2;
 		NullCheck(L_2);
 		int32_t L_4 = L_3;
 		RoomClient_t124F52F8602AB535AC105F1E470809979EDA2A4F* L_5 = (L_2)->GetAt(static_cast<il2cpp_array_size_t>(L_4));
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/32_AvatarInput/_32_JoinRoomClients.cs:18>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/32_AvatarInput/_32_JoinRoomClients.cs:18>
 		Guid_t L_6 = V_0;
 		NullCheck(L_5);
 		RoomClient_Join_m4A6D5CDB4FBC72BFD1DAC3D11E9DEB3A6998D7F3(L_5, L_6, NULL);
@@ -5325,7 +5325,7 @@ IL_0011:
 
 IL_001e:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/32_AvatarInput/_32_JoinRoomClients.cs:16>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/32_AvatarInput/_32_JoinRoomClients.cs:16>
 		int32_t L_8 = V_2;
 		RoomClientU5BU5D_t5932A3FEC7748463B7C227B5A12F1D34B3B74BE5* L_9 = V_1;
 		NullCheck(L_9);
@@ -5335,11 +5335,11 @@ IL_001e:
 		}
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/32_AvatarInput/_32_JoinRoomClients.cs:20>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/32_AvatarInput/_32_JoinRoomClients.cs:20>
 		return;
 	}
 }
-// Method Definition Index: 89054
+// Method Definition Index: 134425
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void _32_JoinRoomClients__ctor_mE8796574094E6051EFB927529753CFA07070E001 (_32_JoinRoomClients_tFB99322093EB26C469E1B13318D2F60E2E8DEC09* __this, const RuntimeMethod* method) 
 {
 	{
@@ -5355,7 +5355,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void _32_JoinRoomClients__ctor_mE8796574094E6
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 89055
+// Method Definition Index: 134426
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void _32_PriorityButton_Start_m7156EE537D959D10DD5BBB5582452D2DB2A18E20 (_32_PriorityButton_t11D5D2ED35E1DC57D5F89A163D0DEDDE4E2FA486* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -5367,12 +5367,12 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void _32_PriorityButton_Start_m7156EE537D959D
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/32_AvatarInput/_32_PriorityButton.cs:16>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/32_AvatarInput/_32_PriorityButton.cs:16>
 		Button_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098* L_0;
 		L_0 = Component_GetComponent_TisButton_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098_mFF8BA4CA5D7158D1D6249559A3289E7A6DF0A2BB(__this, Component_GetComponent_TisButton_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098_mFF8BA4CA5D7158D1D6249559A3289E7A6DF0A2BB_RuntimeMethod_var);
 		__this->___button = L_0;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___button), (void*)L_0);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/32_AvatarInput/_32_PriorityButton.cs:18>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/32_AvatarInput/_32_PriorityButton.cs:18>
 		Button_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098* L_1 = __this->___button;
 		NullCheck(L_1);
 		ButtonClickedEvent_t8EA72E90B3BD1392FB3B3EF167D5121C23569E4C* L_2;
@@ -5381,17 +5381,17 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void _32_PriorityButton_Start_m7156EE537D959D
 		UnityAction__ctor_mC53E20D6B66E0D5688CD81B88DBB34F5A58B7131(L_3, __this, (intptr_t)((void*)_32_PriorityButton_Button_OnClick_mE794CE3AC7C4ECA394D7ED74023DCE3FEBD6BE73_RuntimeMethod_var), NULL);
 		NullCheck(L_2);
 		UnityEvent_AddListener_m8AA4287C16628486B41DA41CA5E7A856A706D302(L_2, L_3, NULL);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/32_AvatarInput/_32_PriorityButton.cs:19>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/32_AvatarInput/_32_PriorityButton.cs:19>
 		_32_PriorityButton_Refresh_mCB557297C4AC00E02E2ADDE6EBC3CF49E375D179(__this, NULL);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/32_AvatarInput/_32_PriorityButton.cs:20>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/32_AvatarInput/_32_PriorityButton.cs:20>
 		return;
 	}
 }
-// Method Definition Index: 89056
+// Method Definition Index: 134427
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void _32_PriorityButton_Button_OnClick_mE794CE3AC7C4ECA394D7ED74023DCE3FEBD6BE73 (_32_PriorityButton_t11D5D2ED35E1DC57D5F89A163D0DEDDE4E2FA486* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/32_AvatarInput/_32_PriorityButton.cs:24>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/32_AvatarInput/_32_PriorityButton.cs:24>
 		PoseAvatarInput_t82E27D437F99744B1C84415BBCE51426DD1E22DC* L_0 = __this->___poseAvatarInput;
 		PoseAvatarInput_t82E27D437F99744B1C84415BBCE51426DD1E22DC* L_1 = L_0;
 		NullCheck(L_1);
@@ -5399,17 +5399,17 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void _32_PriorityButton_Button_OnClick_mE794C
 		int32_t L_3 = __this->___changePerClick;
 		NullCheck(L_1);
 		L_1->___priority = ((int32_t)il2cpp_codegen_add(L_2, L_3));
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/32_AvatarInput/_32_PriorityButton.cs:25>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/32_AvatarInput/_32_PriorityButton.cs:25>
 		_32_PriorityButton_Refresh_mCB557297C4AC00E02E2ADDE6EBC3CF49E375D179(__this, NULL);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/32_AvatarInput/_32_PriorityButton.cs:26>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/32_AvatarInput/_32_PriorityButton.cs:26>
 		return;
 	}
 }
-// Method Definition Index: 89057
+// Method Definition Index: 134428
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void _32_PriorityButton_Refresh_mCB557297C4AC00E02E2ADDE6EBC3CF49E375D179 (_32_PriorityButton_t11D5D2ED35E1DC57D5F89A163D0DEDDE4E2FA486* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/32_AvatarInput/_32_PriorityButton.cs:30>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/32_AvatarInput/_32_PriorityButton.cs:30>
 		Text_tD60B2346DAA6666BF0D822FF607F0B220C2B9E62* L_0 = __this->___priorityText;
 		PoseAvatarInput_t82E27D437F99744B1C84415BBCE51426DD1E22DC* L_1 = __this->___poseAvatarInput;
 		NullCheck(L_1);
@@ -5418,15 +5418,15 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void _32_PriorityButton_Refresh_mCB557297C4AC
 		L_3 = Int32_ToString_m030E01C24E294D6762FB0B6F37CB541581F55CA5(L_2, NULL);
 		NullCheck(L_0);
 		VirtualActionInvoker1< String_t* >::Invoke(75, L_0, L_3);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/32_AvatarInput/_32_PriorityButton.cs:31>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/32_AvatarInput/_32_PriorityButton.cs:31>
 		return;
 	}
 }
-// Method Definition Index: 89058
+// Method Definition Index: 134429
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void _32_PriorityButton__ctor_m9783BD7549B77F0BCA0F0ABA890AC9780DF6D271 (_32_PriorityButton_t11D5D2ED35E1DC57D5F89A163D0DEDDE4E2FA486* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/32_AvatarInput/_32_PriorityButton.cs:10>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/32_AvatarInput/_32_PriorityButton.cs:10>
 		__this->___changePerClick = 1;
 		MonoBehaviour__ctor_m592DB0105CA0BC97AA1C5F4AD27B12D68A3B7C1E(__this, NULL);
 		return;
@@ -5440,7 +5440,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void _32_PriorityButton__ctor_m9783BD7549B77F
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// Method Definition Index: 89059
+// Method Definition Index: 134430
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void _32_SimpleAvatar_Start_mC2842381D5E369CB336258742A544ADD41CB21EF (_32_SimpleAvatar_t40D06CE6CBEEA2CA0D6DA456F31BF81F64784404* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -5453,12 +5453,12 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void _32_SimpleAvatar_Start_mC2842381D5E369CB
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/32_AvatarInput/_32_SimpleAvatar.cs:12>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/32_AvatarInput/_32_SimpleAvatar.cs:12>
 		PoseAvatar_tE59911E739BD7F8519FA0B09C32B5D7A7C498007* L_0;
 		L_0 = Component_GetComponent_TisPoseAvatar_tE59911E739BD7F8519FA0B09C32B5D7A7C498007_m76CA2B100243EA7CA21CC0E501F353A9721DFAF3(__this, Component_GetComponent_TisPoseAvatar_tE59911E739BD7F8519FA0B09C32B5D7A7C498007_m76CA2B100243EA7CA21CC0E501F353A9721DFAF3_RuntimeMethod_var);
 		__this->___poseAvatar = L_0;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___poseAvatar), (void*)L_0);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/32_AvatarInput/_32_SimpleAvatar.cs:13>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/32_AvatarInput/_32_SimpleAvatar.cs:13>
 		PoseAvatar_tE59911E739BD7F8519FA0B09C32B5D7A7C498007* L_1 = __this->___poseAvatar;
 		NullCheck(L_1);
 		PoseUpdateEvent_tB4E6AD445FA7A08287529BC8A8D464A0C70A0DD3* L_2 = L_1->___OnPoseUpdate;
@@ -5466,13 +5466,13 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void _32_SimpleAvatar_Start_mC2842381D5E369CB
 		UnityAction_1__ctor_m8D075D6758844080438E98377769ECE251E8708E(L_3, __this, (intptr_t)((void*)_32_SimpleAvatar_PoseAvatar_OnPoseUpdate_m0C18CB7E74F935DD2F53085DA200B5C5D4219E6C_RuntimeMethod_var), NULL);
 		NullCheck(L_2);
 		UnityEvent_1_AddListener_mCE980C17C5463D340958E5454E4D8ACBC80EBA7B(L_2, L_3, UnityEvent_1_AddListener_mCE980C17C5463D340958E5454E4D8ACBC80EBA7B_RuntimeMethod_var);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/32_AvatarInput/_32_SimpleAvatar.cs:15>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/32_AvatarInput/_32_SimpleAvatar.cs:15>
 		_32_SimpleAvatar_SetVisibility_mD76ABACDCA6F3573CACEDCB970C1778C0258AA1B(__this, (bool)0, (bool)1, NULL);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/32_AvatarInput/_32_SimpleAvatar.cs:16>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/32_AvatarInput/_32_SimpleAvatar.cs:16>
 		return;
 	}
 }
-// Method Definition Index: 89060
+// Method Definition Index: 134431
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void _32_SimpleAvatar_OnDestroy_mD20EF43DD989A091D6083204CF6BE49BC7666FF0 (_32_SimpleAvatar_t40D06CE6CBEEA2CA0D6DA456F31BF81F64784404* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -5485,7 +5485,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void _32_SimpleAvatar_OnDestroy_mD20EF43DD989
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/32_AvatarInput/_32_SimpleAvatar.cs:20>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/32_AvatarInput/_32_SimpleAvatar.cs:20>
 		PoseAvatar_tE59911E739BD7F8519FA0B09C32B5D7A7C498007* L_0 = __this->___poseAvatar;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_1;
@@ -5496,7 +5496,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void _32_SimpleAvatar_OnDestroy_mD20EF43DD989
 		}
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/32_AvatarInput/_32_SimpleAvatar.cs:22>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/32_AvatarInput/_32_SimpleAvatar.cs:22>
 		PoseAvatar_tE59911E739BD7F8519FA0B09C32B5D7A7C498007* L_2 = __this->___poseAvatar;
 		NullCheck(L_2);
 		PoseUpdateEvent_tB4E6AD445FA7A08287529BC8A8D464A0C70A0DD3* L_3 = L_2->___OnPoseUpdate;
@@ -5508,11 +5508,11 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void _32_SimpleAvatar_OnDestroy_mD20EF43DD989
 
 IL_0029:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/32_AvatarInput/_32_SimpleAvatar.cs:24>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/32_AvatarInput/_32_SimpleAvatar.cs:24>
 		return;
 	}
 }
-// Method Definition Index: 89061
+// Method Definition Index: 134432
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void _32_SimpleAvatar_PoseAvatar_OnPoseUpdate_m0C18CB7E74F935DD2F53085DA200B5C5D4219E6C (_32_SimpleAvatar_t40D06CE6CBEEA2CA0D6DA456F31BF81F64784404* __this, InputVar_1_tAD456A36ADD509DFB2A4C85888DE43B0BA052069 ___0_pose, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -5523,7 +5523,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void _32_SimpleAvatar_PoseAvatar_OnPoseUpdate
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/32_AvatarInput/_32_SimpleAvatar.cs:28>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/32_AvatarInput/_32_SimpleAvatar.cs:28>
 		bool L_0;
 		L_0 = InputVar_1_get_valid_m0592A87C83419CF3F7D807905831004B71371C01_inline((&___0_pose), InputVar_1_get_valid_m0592A87C83419CF3F7D807905831004B71371C01_RuntimeMethod_var);
 		if (L_0)
@@ -5532,17 +5532,17 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void _32_SimpleAvatar_PoseAvatar_OnPoseUpdate
 		}
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/32_AvatarInput/_32_SimpleAvatar.cs:30>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/32_AvatarInput/_32_SimpleAvatar.cs:30>
 		_32_SimpleAvatar_SetVisibility_mD76ABACDCA6F3573CACEDCB970C1778C0258AA1B(__this, (bool)0, (bool)0, NULL);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/32_AvatarInput/_32_SimpleAvatar.cs:31>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/32_AvatarInput/_32_SimpleAvatar.cs:31>
 		return;
 	}
 
 IL_0012:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/32_AvatarInput/_32_SimpleAvatar.cs:34>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/32_AvatarInput/_32_SimpleAvatar.cs:34>
 		_32_SimpleAvatar_SetVisibility_mD76ABACDCA6F3573CACEDCB970C1778C0258AA1B(__this, (bool)1, (bool)0, NULL);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/32_AvatarInput/_32_SimpleAvatar.cs:35>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/32_AvatarInput/_32_SimpleAvatar.cs:35>
 		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_1;
 		L_1 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(__this, NULL);
 		Pose_t06BA69EAA6E9FAF60056D519A87D25F54AFE7971 L_2;
@@ -5553,11 +5553,11 @@ IL_0012:
 		Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 L_5 = L_4.___rotation;
 		NullCheck(L_1);
 		Transform_SetPositionAndRotation_m418859BF59086EEAA084FFD6F258A43FAB408F5A(L_1, L_3, L_5, NULL);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/32_AvatarInput/_32_SimpleAvatar.cs:36>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/32_AvatarInput/_32_SimpleAvatar.cs:36>
 		return;
 	}
 }
-// Method Definition Index: 89062
+// Method Definition Index: 134433
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void _32_SimpleAvatar_SetVisibility_mD76ABACDCA6F3573CACEDCB970C1778C0258AA1B (_32_SimpleAvatar_t40D06CE6CBEEA2CA0D6DA456F31BF81F64784404* __this, bool ___0_visible, bool ___1_force, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -5570,7 +5570,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void _32_SimpleAvatar_SetVisibility_mD76ABACD
 	}
 	int32_t V_0 = 0;
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/32_AvatarInput/_32_SimpleAvatar.cs:43>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/32_AvatarInput/_32_SimpleAvatar.cs:43>
 		bool L_0 = ___1_force;
 		if (L_0)
 		{
@@ -5586,23 +5586,23 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void _32_SimpleAvatar_SetVisibility_mD76ABACD
 		}
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/32_AvatarInput/_32_SimpleAvatar.cs:45>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/32_AvatarInput/_32_SimpleAvatar.cs:45>
 		return;
 	}
 
 IL_000d:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/32_AvatarInput/_32_SimpleAvatar.cs:48>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/32_AvatarInput/_32_SimpleAvatar.cs:48>
 		List_1_tD435DCC2A88E36DFC551EA5392CE0182F0C50E93* L_3 = __this->____reusableRenderers;
 		Component_GetComponentsInChildren_TisRenderer_t320575F223BCB177A982E5DDB5DB19FAA89E7FBF_mBBF8A68E10A9B71E580782A0FF65484595D61966(__this, L_3, Component_GetComponentsInChildren_TisRenderer_t320575F223BCB177A982E5DDB5DB19FAA89E7FBF_mBBF8A68E10A9B71E580782A0FF65484595D61966_RuntimeMethod_var);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/32_AvatarInput/_32_SimpleAvatar.cs:49>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/32_AvatarInput/_32_SimpleAvatar.cs:49>
 		V_0 = 0;
 		goto IL_0033;
 	}
 
 IL_001d:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/32_AvatarInput/_32_SimpleAvatar.cs:51>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/32_AvatarInput/_32_SimpleAvatar.cs:51>
 		List_1_tD435DCC2A88E36DFC551EA5392CE0182F0C50E93* L_4 = __this->____reusableRenderers;
 		int32_t L_5 = V_0;
 		NullCheck(L_4);
@@ -5611,14 +5611,14 @@ IL_001d:
 		bool L_7 = ___0_visible;
 		NullCheck(L_6);
 		Renderer_set_enabled_m015E6D7B825528A31182F267234CC6A925F71DA8(L_6, L_7, NULL);
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/32_AvatarInput/_32_SimpleAvatar.cs:49>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/32_AvatarInput/_32_SimpleAvatar.cs:49>
 		int32_t L_8 = V_0;
 		V_0 = ((int32_t)il2cpp_codegen_add(L_8, 1));
 	}
 
 IL_0033:
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/32_AvatarInput/_32_SimpleAvatar.cs:49>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/32_AvatarInput/_32_SimpleAvatar.cs:49>
 		int32_t L_9 = V_0;
 		List_1_tD435DCC2A88E36DFC551EA5392CE0182F0C50E93* L_10 = __this->____reusableRenderers;
 		NullCheck(L_10);
@@ -5630,14 +5630,14 @@ IL_0033:
 		}
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/32_AvatarInput/_32_SimpleAvatar.cs:54>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/32_AvatarInput/_32_SimpleAvatar.cs:54>
 		bool L_12 = ___0_visible;
 		__this->___visible = L_12;
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/32_AvatarInput/_32_SimpleAvatar.cs:55>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/32_AvatarInput/_32_SimpleAvatar.cs:55>
 		return;
 	}
 }
-// Method Definition Index: 89063
+// Method Definition Index: 134434
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void _32_SimpleAvatar__ctor_m3B13E05069E809B3257F6877F7803A444FFF195A (_32_SimpleAvatar_t40D06CE6CBEEA2CA0D6DA456F31BF81F64784404* __this, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -5648,7 +5648,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void _32_SimpleAvatar__ctor_m3B13E05069E809B3
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/32_AvatarInput/_32_SimpleAvatar.cs:38>
+		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/Ubiq/1.0.0-pre.16/Examples/Assets/32_AvatarInput/_32_SimpleAvatar.cs:38>
 		List_1_tD435DCC2A88E36DFC551EA5392CE0182F0C50E93* L_0 = (List_1_tD435DCC2A88E36DFC551EA5392CE0182F0C50E93*)il2cpp_codegen_object_new(List_1_tD435DCC2A88E36DFC551EA5392CE0182F0C50E93_il2cpp_TypeInfo_var);
 		List_1__ctor_m803E10F7A50EB22BF82C0C1AB251D5407B4496DE(L_0, List_1__ctor_m803E10F7A50EB22BF82C0C1AB251D5407B4496DE_RuntimeMethod_var);
 		__this->____reusableRenderers = L_0;
@@ -5684,7 +5684,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void _32_SimpleAvatar__ctor_m3B13E05069E809B3
 #ifdef __clang__
 #pragma clang diagnostic pop
 #endif
-// Method Definition Index: 43344
+// Method Definition Index: 71365
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Color_tD001788D726C3A7F1379BEED0260B9591F440C1F Color32_op_Implicit_m47CBB138122B400E0B1F4BFD7C30A6C2C00FCA3E_inline (Color32_t73C5004937BF5BB8AD55323D51AAA40A898EF48B ___0_c, const RuntimeMethod* method) 
 {
 	Color_tD001788D726C3A7F1379BEED0260B9591F440C1F V_0;
@@ -5707,7 +5707,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Color_tD001788D726C3A7F1379BEED02
 		return L_8;
 	}
 }
-// Method Definition Index: 67794
+// Method Definition Index: 108224
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR RuntimeObject* RoomClient_get_Room_m37BF20D8A0F6A98ECEBE7B4F4908B54C920A96D3_inline (RoomClient_t124F52F8602AB535AC105F1E470809979EDA2A4F* __this, const RuntimeMethod* method) 
 {
 	{
@@ -5716,7 +5716,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR RuntimeObject* RoomClient_get_Roo
 		return L_0;
 	}
 }
-// Method Definition Index: 696
+// Method Definition Index: 699
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t String_get_Length_m42625D67623FA5CC7A44D47425CE86FB946542D2_inline (String_t* __this, const RuntimeMethod* method) 
 {
 	{
@@ -5724,7 +5724,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t String_get_Length_m42625D
 		return L_0;
 	}
 }
-// Method Definition Index: 43491
+// Method Definition Index: 71521
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 Vector3_get_one_mC9B289F1E15C42C597180C9FE6FB492495B51D02_inline (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -5738,7 +5738,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Vector3_t24C512C7B96BBABAD472002D
 		return L_0;
 	}
 }
-// Method Definition Index: 43502
+// Method Definition Index: 71533
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 Vector3_op_Multiply_m7F3B0FA9256CE368D7636558EFEFC4AB0E1A0F41_inline (float ___0_d, Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___1_a, const RuntimeMethod* method) 
 {
 	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 V_0;
@@ -5761,7 +5761,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Vector3_t24C512C7B96BBABAD472002D
 		return L_9;
 	}
 }
-// Method Definition Index: 43607
+// Method Definition Index: 71647
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR float Mathf_PingPong_mB1D6A10F386CE1EEA99DB69486DDA6DA531D799D_inline (float ___0_t, float ___1_length, const RuntimeMethod* method) 
 {
 	float V_0 = 0.0f;
@@ -5786,7 +5786,7 @@ IL_001d:
 		return L_7;
 	}
 }
-// Method Definition Index: 43460
+// Method Definition Index: 71488
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void Vector3__ctor_m376936E6B999EF1ECBE57D990A386303E2283DE0_inline (Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2* __this, float ___0_x, float ___1_y, float ___2_z, const RuntimeMethod* method) 
 {
 	{
@@ -5799,7 +5799,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void Vector3__ctor_m376936E6B999E
 		return;
 	}
 }
-// Method Definition Index: 43603
+// Method Definition Index: 71643
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR float Mathf_SmoothStep_mEFDC738EB0AA162D71013BDBBDD157B080A8E524_inline (float ___0_from, float ___1_to, float ___2_t, const RuntimeMethod* method) 
 {
 	float V_0 = 0.0f;
@@ -5828,7 +5828,7 @@ IL_0030:
 		return L_11;
 	}
 }
-// Method Definition Index: 43454
+// Method Definition Index: 71481
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 Vector3_Lerp_m3A906D0530A94FAABB94F0F905E84D99BE85C3F8_inline (Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___0_a, Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___1_b, float ___2_t, const RuntimeMethod* method) 
 {
 	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 V_0;
@@ -5875,7 +5875,7 @@ IL_0064:
 		return L_24;
 	}
 }
-// Method Definition Index: 43541
+// Method Definition Index: 71579
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 Quaternion_Euler_m9262AB29E3E9CE94EF71051F38A28E82AEC73F90_inline (float ___0_x, float ___1_y, float ___2_z, const RuntimeMethod* method) 
 {
 	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 V_0;
@@ -5893,7 +5893,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Quaternion_tDA59F214EF07D7700B26E
 		return L_3;
 	}
 }
-// Method Definition Index: 43518
+// Method Definition Index: 71549
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 Quaternion_Slerp_m0A9969F500E7716EA4F6BC4E7D5464372D8E9E15_inline (Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 ___0_a, Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 ___1_b, float ___2_t, const RuntimeMethod* method) 
 {
 	{
@@ -5903,7 +5903,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Quaternion_tDA59F214EF07D7700B26E
 		return L_1;
 	}
 }
-// Method Definition Index: 43337
+// Method Definition Index: 71358
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Color_tD001788D726C3A7F1379BEED0260B9591F440C1F Color_get_green_mEB001F2CD8C68C6BBAEF9101990B779D3AA2A6EF_inline (const RuntimeMethod* method) 
 {
 	{
@@ -5913,7 +5913,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Color_tD001788D726C3A7F1379BEED02
 		return L_0;
 	}
 }
-// Method Definition Index: 43331
+// Method Definition Index: 71352
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Color_tD001788D726C3A7F1379BEED0260B9591F440C1F Color_get_blue_mF04A26CE61D6DA3C0D8B1C4720901B1028C7AB87_inline (const RuntimeMethod* method) 
 {
 	{
@@ -5923,7 +5923,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Color_tD001788D726C3A7F1379BEED02
 		return L_0;
 	}
 }
-// Method Definition Index: 43318
+// Method Definition Index: 71338
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Color_tD001788D726C3A7F1379BEED0260B9591F440C1F Color_Lerp_mE79F87889843ECDC188E4CB5B5E1F1B2256E5EBE_inline (Color_tD001788D726C3A7F1379BEED0260B9591F440C1F ___0_a, Color_tD001788D726C3A7F1379BEED0260B9591F440C1F ___1_b, float ___2_t, const RuntimeMethod* method) 
 {
 	Color_tD001788D726C3A7F1379BEED0260B9591F440C1F V_0;
@@ -5979,7 +5979,7 @@ IL_0089:
 		return L_31;
 	}
 }
-// Method Definition Index: 67795
+// Method Definition Index: 108225
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR RuntimeObject* RoomClient_get_Me_m8CBFDCD575023FB5AF5187B54009E90149B66616_inline (RoomClient_t124F52F8602AB535AC105F1E470809979EDA2A4F* __this, const RuntimeMethod* method) 
 {
 	{
@@ -5988,7 +5988,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR RuntimeObject* RoomClient_get_Me_
 		return L_0;
 	}
 }
-// Method Definition Index: 43498
+// Method Definition Index: 71529
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 Vector3_op_Addition_m78C0EC70CB66E8DCAC225743D82B268DAEE92067_inline (Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___0_a, Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___1_b, const RuntimeMethod* method) 
 {
 	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 V_0;
@@ -6014,7 +6014,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Vector3_t24C512C7B96BBABAD472002D
 		return L_12;
 	}
 }
-// Method Definition Index: 43494
+// Method Definition Index: 71524
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 Vector3_get_up_m128AF3FDC820BF59D5DE86D973E7DE3F20C3AEBA_inline (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -6028,7 +6028,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Vector3_t24C512C7B96BBABAD472002D
 		return L_0;
 	}
 }
-// Method Definition Index: 43501
+// Method Definition Index: 71532
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 Vector3_op_Multiply_m87BA7C578F96C8E49BB07088DAAC4649F83B0353_inline (Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___0_a, float ___1_d, const RuntimeMethod* method) 
 {
 	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 V_0;
@@ -6051,7 +6051,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Vector3_t24C512C7B96BBABAD472002D
 		return L_9;
 	}
 }
-// Method Definition Index: 76751
+// Method Definition Index: 117181
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR ColorBlock_tDD7C62E7AFE442652FC98F8D058CE8AE6BFD7C11 Selectable_get_colors_mB53E365D02351D4B64084295C4B2A7AF2DEC4750_inline (Selectable_t3251808068A17B8E92FB33590A4C2FA66D456712* __this, const RuntimeMethod* method) 
 {
 	{
@@ -6060,7 +6060,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR ColorBlock_tDD7C62E7AFE442652FC98
 		return L_0;
 	}
 }
-// Method Definition Index: 75732
+// Method Definition Index: 116162
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Color_tD001788D726C3A7F1379BEED0260B9591F440C1F ColorBlock_get_normalColor_m08A07A74ED743B4B0C1B5A5C35774F2D78F1F20E_inline (ColorBlock_tDD7C62E7AFE442652FC98F8D058CE8AE6BFD7C11* __this, const RuntimeMethod* method) 
 {
 	{
@@ -6069,7 +6069,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Color_tD001788D726C3A7F1379BEED02
 		return L_0;
 	}
 }
-// Method Definition Index: 75734
+// Method Definition Index: 116164
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Color_tD001788D726C3A7F1379BEED0260B9591F440C1F ColorBlock_get_highlightedColor_m4D1A3D268CB00B351F56934F7F244DBC68855301_inline (ColorBlock_tDD7C62E7AFE442652FC98F8D058CE8AE6BFD7C11* __this, const RuntimeMethod* method) 
 {
 	{
@@ -6078,7 +6078,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Color_tD001788D726C3A7F1379BEED02
 		return L_0;
 	}
 }
-// Method Definition Index: 75738
+// Method Definition Index: 116168
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Color_tD001788D726C3A7F1379BEED0260B9591F440C1F ColorBlock_get_selectedColor_m41CD59090E997A5982EE5AB9D23811FEB35C82CF_inline (ColorBlock_tDD7C62E7AFE442652FC98F8D058CE8AE6BFD7C11* __this, const RuntimeMethod* method) 
 {
 	{
@@ -6087,7 +6087,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Color_tD001788D726C3A7F1379BEED02
 		return L_0;
 	}
 }
-// Method Definition Index: 75740
+// Method Definition Index: 116170
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Color_tD001788D726C3A7F1379BEED0260B9591F440C1F ColorBlock_get_disabledColor_m2E20FC772B592ADD71CE1336D29B3C3C1523669E_inline (ColorBlock_tDD7C62E7AFE442652FC98F8D058CE8AE6BFD7C11* __this, const RuntimeMethod* method) 
 {
 	{
@@ -6096,7 +6096,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Color_tD001788D726C3A7F1379BEED02
 		return L_0;
 	}
 }
-// Method Definition Index: 75692
+// Method Definition Index: 116122
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR ButtonClickedEvent_t8EA72E90B3BD1392FB3B3EF167D5121C23569E4C* Button_get_onClick_m701712A7F7F000CC80D517C4510697E15722C35C_inline (Button_t6786514A57F7AFDEE5431112FEA0CAB24F5AE098* __this, const RuntimeMethod* method) 
 {
 	{
@@ -6105,7 +6105,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR ButtonClickedEvent_t8EA72E90B3BD1
 		return L_0;
 	}
 }
-// Method Definition Index: 75733
+// Method Definition Index: 116163
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void ColorBlock_set_normalColor_m3EBF594F6FA2C6494ACA9FCB9B458807D85B96F8_inline (ColorBlock_tDD7C62E7AFE442652FC98F8D058CE8AE6BFD7C11* __this, Color_tD001788D726C3A7F1379BEED0260B9591F440C1F ___0_value, const RuntimeMethod* method) 
 {
 	{
@@ -6116,7 +6116,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void ColorBlock_set_normalColor_m
 		return;
 	}
 }
-// Method Definition Index: 75735
+// Method Definition Index: 116165
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void ColorBlock_set_highlightedColor_m04E97DF2CCE7CAC47120D8F486E18BF62F16FF86_inline (ColorBlock_tDD7C62E7AFE442652FC98F8D058CE8AE6BFD7C11* __this, Color_tD001788D726C3A7F1379BEED0260B9591F440C1F ___0_value, const RuntimeMethod* method) 
 {
 	{
@@ -6127,7 +6127,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void ColorBlock_set_highlightedCo
 		return;
 	}
 }
-// Method Definition Index: 75739
+// Method Definition Index: 116169
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void ColorBlock_set_selectedColor_m76FEFB1148798B7A356C974CDEA3BA2E2E3C1D21_inline (ColorBlock_tDD7C62E7AFE442652FC98F8D058CE8AE6BFD7C11* __this, Color_tD001788D726C3A7F1379BEED0260B9591F440C1F ___0_value, const RuntimeMethod* method) 
 {
 	{
@@ -6138,7 +6138,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void ColorBlock_set_selectedColor
 		return;
 	}
 }
-// Method Definition Index: 10679
+// Method Definition Index: 11642
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void List_1_Add_mEBCF994CC3814631017F46A387B1A192ED6C85C7_gshared_inline (List_1_tA239CB83DE5615F348BB0507E45F490F4F7C9A8D* __this, RuntimeObject* ___0_item, const RuntimeMethod* method) 
 {
 	ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* V_0 = NULL;
@@ -6176,7 +6176,7 @@ IL_0034:
 		return;
 	}
 }
-// Method Definition Index: 10728
+// Method Definition Index: 11694
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR RuntimeObject* Enumerator_get_Current_m6330F15D18EE4F547C05DF9BF83C5EB710376027_gshared_inline (Enumerator_t9473BAB568A27E2339D48C1F91319E0F6D244D7A* __this, const RuntimeMethod* method) 
 {
 	{
@@ -6184,7 +6184,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR RuntimeObject* Enumerator_get_Cur
 		return L_0;
 	}
 }
-// Method Definition Index: 10687
+// Method Definition Index: 11650
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void List_1_Clear_m16C1F2C61FED5955F10EB36BC1CB2DF34B128994_gshared_inline (List_1_tA239CB83DE5615F348BB0507E45F490F4F7C9A8D* __this, const RuntimeMethod* method) 
 {
 	int32_t V_0 = 0;
@@ -6214,7 +6214,7 @@ IL_003c:
 		return;
 	}
 }
-// Method Definition Index: 67631
+// Method Definition Index: 108061
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR bool InputVar_1_get_valid_m0592A87C83419CF3F7D807905831004B71371C01_gshared_inline (InputVar_1_tAD456A36ADD509DFB2A4C85888DE43B0BA052069* __this, const RuntimeMethod* method) 
 {
 	{
@@ -6223,7 +6223,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR bool InputVar_1_get_valid_m0592A8
 		return L_0;
 	}
 }
-// Method Definition Index: 67630
+// Method Definition Index: 108060
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Pose_t06BA69EAA6E9FAF60056D519A87D25F54AFE7971 InputVar_1_get_value_m53E2FC2537D4B2FA4F62964C7534370BA28901D1_gshared_inline (InputVar_1_tAD456A36ADD509DFB2A4C85888DE43B0BA052069* __this, const RuntimeMethod* method) 
 {
 	{
@@ -6232,7 +6232,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Pose_t06BA69EAA6E9FAF60056D519A87
 		return L_0;
 	}
 }
-// Method Definition Index: 10669
+// Method Definition Index: 11631
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t List_1_get_Count_m4407E4C389F22B8CEC282C15D56516658746C383_gshared_inline (List_1_tA239CB83DE5615F348BB0507E45F490F4F7C9A8D* __this, const RuntimeMethod* method) 
 {
 	{
@@ -6240,7 +6240,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t List_1_get_Count_m4407E4C
 		return L_0;
 	}
 }
-// Method Definition Index: 43606
+// Method Definition Index: 71646
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR float Mathf_Repeat_m6F1560A163481BB311D685294E1B463C3E4EB3BA_inline (float ___0_t, float ___1_length, const RuntimeMethod* method) 
 {
 	float V_0 = 0.0f;
@@ -6264,7 +6264,7 @@ IL_001b:
 		return L_7;
 	}
 }
-// Method Definition Index: 43599
+// Method Definition Index: 71639
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR float Mathf_Clamp01_mA7E048DBDA832D399A581BE4D6DED9FA44CE0F14_inline (float ___0_value, const RuntimeMethod* method) 
 {
 	bool V_0 = false;
@@ -6312,7 +6312,7 @@ IL_002d:
 		return L_5;
 	}
 }
-// Method Definition Index: 43304
+// Method Definition Index: 71324
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void Color__ctor_m3786F0D6E510D9CFA544523A955870BD2A514C8C_inline (Color_tD001788D726C3A7F1379BEED0260B9591F440C1F* __this, float ___0_r, float ___1_g, float ___2_b, float ___3_a, const RuntimeMethod* method) 
 {
 	{
@@ -6327,7 +6327,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void Color__ctor_m3786F0D6E510D9C
 		return;
 	}
 }
-// Method Definition Index: 43597
+// Method Definition Index: 71637
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR float Mathf_Clamp_mEB9AEA827D27D20FCC787F7375156AF46BB12BBF_inline (float ___0_value, float ___1_min, float ___2_max, const RuntimeMethod* method) 
 {
 	bool V_0 = false;

@@ -1,4 +1,5 @@
 using UnityEngine;
+using System.Text.RegularExpressions;
 
 public class SmashableObject : MonoBehaviour
 {
@@ -8,7 +9,7 @@ public class SmashableObject : MonoBehaviour
 
     void Awake()
     {
-        word = gameObject.name.ToUpperInvariant();
+        word = Regex.Replace(gameObject.name.ToUpperInvariant(), "[^A-Z]", "");
     }
 
     public void DoSmash(Vector3 hitPoint)

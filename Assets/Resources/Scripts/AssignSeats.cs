@@ -38,11 +38,8 @@ public class AssignSeats : MonoBehaviour
         roomClient.OnJoinedRoom.AddListener(_ =>
         {
             started = false;
-            Debug.Log("Joined");
-            // Check();
         });
 
-        // roomClient.OnPeerAdded.AddListener(_ => Check());
         roomClient.OnPeerRemoved.AddListener(_ => CleanupSeats());
         occupation = GetComponent<PlayerOccupation>();
         occupationUI.SetActive(false);
@@ -51,20 +48,7 @@ public class AssignSeats : MonoBehaviour
             bgmManager = FindAnyObjectByType<BgmPlaylistManager>();
     }
 
-    private void Check()
-    {
-        int remote = roomClient.Peers.Count();
-        int total = remote + 1;
-
-        Debug.Log($"Players: {total}/{requiredPlayers}");
-
-        if (!started && total >= requiredPlayers)
-        {
-            started = true;
-            MoveToSeats();
-        }
-    }
-
+    // triggered by button in waiting room
     public void GameStart()
     {
         if (!started)
@@ -128,6 +112,7 @@ public class AssignSeats : MonoBehaviour
         uiCoroutine = StartCoroutine(ShowOccupationUICoroutine(i));
     }
 
+    // display ui with occupation info when game begins
     private IEnumerator ShowOccupationUICoroutine(int i)
     {
         if(i >= 2)
@@ -163,6 +148,7 @@ public class AssignSeats : MonoBehaviour
     {
         var activeUuids = roomClient.Peers.Select(p => p.uuid).Append(roomClient.Me.uuid).OrderBy(x => x).ToList();
 
+        // remove room property if player exited
         for (int i = 0; i < seats.Length; i++)
         {
             string key = $"seat_{i}";

@@ -2,6 +2,7 @@ using UnityEngine;
 using Ubiq.Messaging;
 using Ubiq.Spawning;
 
+// used for objects that are created during runtime
 public class SpawnableObject : MonoBehaviour, INetworkSpawnable
 {
     public NetworkId NetworkId { get; set; }
@@ -67,6 +68,7 @@ public class SpawnableObject : MonoBehaviour, INetworkSpawnable
         transform.rotation = m.rotation;
 
         var tile = GetComponent<LetterTile>();
+        // set appearance of letters depending on state
         if (tile != null)
         {
             if (m.isSceneObjectWord)

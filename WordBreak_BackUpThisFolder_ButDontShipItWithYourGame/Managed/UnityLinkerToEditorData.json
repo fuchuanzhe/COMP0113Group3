@@ -11,6 +11,18 @@
             "icon": null
           },
           {
+            "name": "NavMeshData",
+            "scenes": [],
+            "dependencyType": 0,
+            "icon": null
+          },
+          {
+            "name": "NavMeshObstacle",
+            "scenes": [],
+            "dependencyType": 0,
+            "icon": null
+          },
+          {
             "name": "NavMeshProjectSettings",
             "scenes": [],
             "dependencyType": 1,
@@ -184,7 +196,9 @@
           },
           {
             "name": "ComputeShader",
-            "scenes": [],
+            "scenes": [
+              "Assets/Scenes/MainScene.unity"
+            ],
             "dependencyType": 0,
             "icon": null
           },
@@ -623,6 +637,12 @@
             "icon": "package/com.unity.modules.identifiers"
           },
           {
+            "name": "Required by ImageConversion Module",
+            "scenes": [],
+            "dependencyType": 2,
+            "icon": "package/com.unity.modules.imageconversion"
+          },
+          {
             "name": "Required by Input Module",
             "scenes": [],
             "dependencyType": 2,
@@ -865,6 +885,10 @@
         ]
       },
       {
+        "name": "ImageConversion",
+        "dependencies": []
+      },
+      {
         "name": "Input",
         "dependencies": [
           {
@@ -1056,6 +1080,24 @@
             "icon": null
           },
           {
+            "name": "ConfigurableJoint",
+            "scenes": [],
+            "dependencyType": 0,
+            "icon": null
+          },
+          {
+            "name": "FixedJoint",
+            "scenes": [],
+            "dependencyType": 0,
+            "icon": null
+          },
+          {
+            "name": "Joint",
+            "scenes": [],
+            "dependencyType": 1,
+            "icon": null
+          },
+          {
             "name": "MeshCollider",
             "scenes": [
               "Assets/Scenes/MainScene.unity"
@@ -1067,6 +1109,12 @@
             "name": "PhysicsManager",
             "scenes": [],
             "dependencyType": 1,
+            "icon": null
+          },
+          {
+            "name": "PhysicsMaterial",
+            "scenes": [],
+            "dependencyType": 0,
             "icon": null
           },
           {
@@ -1227,6 +1275,12 @@
             "scenes": [],
             "dependencyType": 2,
             "icon": "package/com.unity.modules.identifiers"
+          },
+          {
+            "name": "Required by ImageConversion Module",
+            "scenes": [],
+            "dependencyType": 2,
+            "icon": "package/com.unity.modules.imageconversion"
           },
           {
             "name": "Required by Input Module",

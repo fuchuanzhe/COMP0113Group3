@@ -286,10 +286,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7ddfc3236bddf41679ba2de62510eda6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SmashableObject
-  smashedPrefab: {fileID: 0}
-  destroyOriginal: 1
-  addRigidbodyIfMissing: 0
-  randomAngular: 6
 --- !u!114 &13081058
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1122,8 +1118,6 @@ MonoBehaviour:
   halfPrefabA: {fileID: 0}
   halfPrefabB: {fileID: 0}
   spawnOffset: 0.01
-  addRigidbodyIfMissing: 1
-  destroyOriginal: 1
 --- !u!114 &65159507
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5044,8 +5038,6 @@ MonoBehaviour:
   halfPrefabA: {fileID: 919132149155446097, guid: 212c1625c13694c7c915852cdbd25101, type: 3}
   halfPrefabB: {fileID: 919132149155446097, guid: 212c1625c13694c7c915852cdbd25101, type: 3}
   spawnOffset: 0.01
-  addRigidbodyIfMissing: 1
-  destroyOriginal: 1
 --- !u!114 &221241768
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7069,10 +7061,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7ddfc3236bddf41679ba2de62510eda6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SmashableObject
-  smashedPrefab: {fileID: 0}
-  destroyOriginal: 1
-  addRigidbodyIfMissing: 0
-  randomAngular: 6
 --- !u!114 &346937025
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8511,10 +8499,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7ddfc3236bddf41679ba2de62510eda6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SmashableObject
-  smashedPrefab: {fileID: 0}
-  destroyOriginal: 1
-  addRigidbodyIfMissing: 0
-  randomAngular: 6
 --- !u!114 &405145469
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8889,8 +8873,6 @@ MonoBehaviour:
   halfPrefabA: {fileID: 0}
   halfPrefabB: {fileID: 0}
   spawnOffset: 0.01
-  addRigidbodyIfMissing: 1
-  destroyOriginal: 1
 --- !u!114 &415034904
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10796,10 +10778,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7ddfc3236bddf41679ba2de62510eda6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SmashableObject
-  smashedPrefab: {fileID: 0}
-  destroyOriginal: 1
-  addRigidbodyIfMissing: 0
-  randomAngular: 6
 --- !u!114 &475406697
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13298,10 +13276,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7ddfc3236bddf41679ba2de62510eda6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SmashableObject
-  smashedPrefab: {fileID: 0}
-  destroyOriginal: 1
-  addRigidbodyIfMissing: 0
-  randomAngular: 6
 --- !u!114 &596182712
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14865,8 +14839,6 @@ MonoBehaviour:
   halfPrefabA: {fileID: 919132149155446097, guid: 31f7c4f5eb7814d0f91dea1746af94ce, type: 3}
   halfPrefabB: {fileID: 919132149155446097, guid: 31f7c4f5eb7814d0f91dea1746af94ce, type: 3}
   spawnOffset: 0.01
-  addRigidbodyIfMissing: 1
-  destroyOriginal: 1
 --- !u!114 &666063857
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19504,7 +19476,7 @@ Transform:
   m_GameObject: {fileID: 941713588}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: -0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: -2.89, y: 4.41, z: 0.19}
+  m_LocalPosition: {x: -5.18, y: 4.41, z: 0.19}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -19694,8 +19666,6 @@ MonoBehaviour:
   halfPrefabA: {fileID: 0}
   halfPrefabB: {fileID: 0}
   spawnOffset: 0.01
-  addRigidbodyIfMissing: 1
-  destroyOriginal: 1
 --- !u!1 &951162021 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 79d2ccf35fa9c44b4af2f1cff7167147, type: 3}
@@ -20479,10 +20449,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7ddfc3236bddf41679ba2de62510eda6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SmashableObject
-  smashedPrefab: {fileID: 0}
-  destroyOriginal: 1
-  addRigidbodyIfMissing: 0
-  randomAngular: 6
 --- !u!114 &983137791
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22162,8 +22128,6 @@ MonoBehaviour:
   halfPrefabA: {fileID: 0}
   halfPrefabB: {fileID: 0}
   spawnOffset: 0.01
-  addRigidbodyIfMissing: 1
-  destroyOriginal: 1
 --- !u!1 &1072740207 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5340511599875704685, guid: f5bcbb44c48d94f2e99c431ec9aca756, type: 3}
@@ -22599,10 +22563,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7ddfc3236bddf41679ba2de62510eda6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SmashableObject
-  smashedPrefab: {fileID: 0}
-  destroyOriginal: 1
-  addRigidbodyIfMissing: 0
-  randomAngular: 6
 --- !u!1 &1082803224 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 845ba2120074e4be7a697f56efbab904, type: 3}
@@ -23674,10 +23634,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7ddfc3236bddf41679ba2de62510eda6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SmashableObject
-  smashedPrefab: {fileID: 0}
-  destroyOriginal: 1
-  addRigidbodyIfMissing: 0
-  randomAngular: 6
 --- !u!1001 &1153279766
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -23992,8 +23948,6 @@ MonoBehaviour:
   halfPrefabA: {fileID: 0}
   halfPrefabB: {fileID: 0}
   spawnOffset: 0.01
-  addRigidbodyIfMissing: 1
-  destroyOriginal: 1
 --- !u!1 &1161079644 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8164078558771037576, guid: cc086abd3cc354ba29f15e8fc1d5abe4, type: 3}
@@ -24161,8 +24115,6 @@ MonoBehaviour:
   halfPrefabA: {fileID: 919132149155446097, guid: cda329c271457413794055785a10d888, type: 3}
   halfPrefabB: {fileID: 919132149155446097, guid: cda329c271457413794055785a10d888, type: 3}
   spawnOffset: 0.01
-  addRigidbodyIfMissing: 1
-  destroyOriginal: 1
 --- !u!114 &1163301821
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -24920,10 +24872,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7ddfc3236bddf41679ba2de62510eda6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SmashableObject
-  smashedPrefab: {fileID: 0}
-  destroyOriginal: 1
-  addRigidbodyIfMissing: 0
-  randomAngular: 6
 --- !u!1001 &1206622335
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -26532,10 +26480,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7ddfc3236bddf41679ba2de62510eda6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SmashableObject
-  smashedPrefab: {fileID: 0}
-  destroyOriginal: 1
-  addRigidbodyIfMissing: 0
-  randomAngular: 6
 --- !u!114 &1319255697
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -28020,10 +27964,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7ddfc3236bddf41679ba2de62510eda6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SmashableObject
-  smashedPrefab: {fileID: 0}
-  destroyOriginal: 1
-  addRigidbodyIfMissing: 0
-  randomAngular: 6
 --- !u!1001 &1375332941
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -30596,8 +30536,6 @@ MonoBehaviour:
   halfPrefabA: {fileID: 0}
   halfPrefabB: {fileID: 0}
   spawnOffset: 0.01
-  addRigidbodyIfMissing: 1
-  destroyOriginal: 1
 --- !u!1 &1463718026
 GameObject:
   m_ObjectHideFlags: 0
@@ -34842,10 +34780,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7ddfc3236bddf41679ba2de62510eda6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SmashableObject
-  smashedPrefab: {fileID: 0}
-  destroyOriginal: 1
-  addRigidbodyIfMissing: 0
-  randomAngular: 6
 --- !u!114 &1591749790
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -36341,8 +36275,6 @@ MonoBehaviour:
   halfPrefabA: {fileID: 919132149155446097, guid: 212c1625c13694c7c915852cdbd25101, type: 3}
   halfPrefabB: {fileID: 919132149155446097, guid: 212c1625c13694c7c915852cdbd25101, type: 3}
   spawnOffset: 0.01
-  addRigidbodyIfMissing: 1
-  destroyOriginal: 1
 --- !u!1001 &1649764311
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -36774,10 +36706,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7ddfc3236bddf41679ba2de62510eda6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SmashableObject
-  smashedPrefab: {fileID: 0}
-  destroyOriginal: 1
-  addRigidbodyIfMissing: 0
-  randomAngular: 6
 --- !u!114 &1650248430
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -37117,10 +37045,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7ddfc3236bddf41679ba2de62510eda6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SmashableObject
-  smashedPrefab: {fileID: 0}
-  destroyOriginal: 1
-  addRigidbodyIfMissing: 0
-  randomAngular: 6
 --- !u!1001 &1674576517
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -37227,10 +37151,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7ddfc3236bddf41679ba2de62510eda6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SmashableObject
-  smashedPrefab: {fileID: 0}
-  destroyOriginal: 1
-  addRigidbodyIfMissing: 0
-  randomAngular: 6
 --- !u!114 &1674576521
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -38719,8 +38639,6 @@ MonoBehaviour:
   halfPrefabA: {fileID: 0}
   halfPrefabB: {fileID: 0}
   spawnOffset: 0.01
-  addRigidbodyIfMissing: 1
-  destroyOriginal: 1
 --- !u!114 &1757618993
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -39164,10 +39082,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7ddfc3236bddf41679ba2de62510eda6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SmashableObject
-  smashedPrefab: {fileID: 0}
-  destroyOriginal: 1
-  addRigidbodyIfMissing: 0
-  randomAngular: 6
 --- !u!1 &1764283606 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3528203020590415751, guid: e7d3adbde8a1e4e1898def576e462464, type: 3}
@@ -40341,8 +40255,6 @@ MonoBehaviour:
   halfPrefabA: {fileID: 0}
   halfPrefabB: {fileID: 0}
   spawnOffset: 0.01
-  addRigidbodyIfMissing: 1
-  destroyOriginal: 1
 --- !u!1 &1808238353
 GameObject:
   m_ObjectHideFlags: 0
@@ -40747,10 +40659,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7ddfc3236bddf41679ba2de62510eda6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SmashableObject
-  smashedPrefab: {fileID: 0}
-  destroyOriginal: 1
-  addRigidbodyIfMissing: 0
-  randomAngular: 6
 --- !u!114 &1824139935
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -41418,10 +41326,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7ddfc3236bddf41679ba2de62510eda6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SmashableObject
-  smashedPrefab: {fileID: 0}
-  destroyOriginal: 1
-  addRigidbodyIfMissing: 0
-  randomAngular: 6
 --- !u!114 &1830041534
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -41888,8 +41792,6 @@ MonoBehaviour:
   halfPrefabA: {fileID: 0}
   halfPrefabB: {fileID: 0}
   spawnOffset: 0.01
-  addRigidbodyIfMissing: 1
-  destroyOriginal: 1
 --- !u!114 &1836314995
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -43523,10 +43425,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7ddfc3236bddf41679ba2de62510eda6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SmashableObject
-  smashedPrefab: {fileID: 0}
-  destroyOriginal: 1
-  addRigidbodyIfMissing: 0
-  randomAngular: 6
 --- !u!114 &1907297006
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -44387,10 +44285,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7ddfc3236bddf41679ba2de62510eda6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SmashableObject
-  smashedPrefab: {fileID: 0}
-  destroyOriginal: 1
-  addRigidbodyIfMissing: 0
-  randomAngular: 6
 --- !u!114 &1941116707
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -45007,8 +44901,6 @@ MonoBehaviour:
   halfPrefabA: {fileID: 0}
   halfPrefabB: {fileID: 0}
   spawnOffset: 0.01
-  addRigidbodyIfMissing: 1
-  destroyOriginal: 1
 --- !u!1001 &1945187116
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -45154,10 +45046,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7ddfc3236bddf41679ba2de62510eda6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SmashableObject
-  smashedPrefab: {fileID: 0}
-  destroyOriginal: 1
-  addRigidbodyIfMissing: 0
-  randomAngular: 6
 --- !u!114 &1945187123
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -45580,10 +45468,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7ddfc3236bddf41679ba2de62510eda6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SmashableObject
-  smashedPrefab: {fileID: 0}
-  destroyOriginal: 1
-  addRigidbodyIfMissing: 0
-  randomAngular: 6
 --- !u!114 &1972299251
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -46702,8 +46586,6 @@ MonoBehaviour:
   halfPrefabA: {fileID: 919132149155446097, guid: 31f7c4f5eb7814d0f91dea1746af94ce, type: 3}
   halfPrefabB: {fileID: 919132149155446097, guid: 31f7c4f5eb7814d0f91dea1746af94ce, type: 3}
   spawnOffset: 0.01
-  addRigidbodyIfMissing: 1
-  destroyOriginal: 1
 --- !u!114 &2034806488
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -47488,8 +47370,6 @@ MonoBehaviour:
   halfPrefabA: {fileID: 919132149155446097, guid: cda329c271457413794055785a10d888, type: 3}
   halfPrefabB: {fileID: 919132149155446097, guid: cda329c271457413794055785a10d888, type: 3}
   spawnOffset: 0.01
-  addRigidbodyIfMissing: 1
-  destroyOriginal: 1
 --- !u!114 &2058872668
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -48043,10 +47923,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7ddfc3236bddf41679ba2de62510eda6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SmashableObject
-  smashedPrefab: {fileID: 0}
-  destroyOriginal: 1
-  addRigidbodyIfMissing: 0
-  randomAngular: 6
 --- !u!1 &2079356451 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 692b814684b4f4958b796054f4ecf52d, type: 3}
@@ -49187,10 +49063,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7ddfc3236bddf41679ba2de62510eda6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SmashableObject
-  smashedPrefab: {fileID: 0}
-  destroyOriginal: 1
-  addRigidbodyIfMissing: 0
-  randomAngular: 6
 --- !u!114 &2108480198
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -50549,7 +50421,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4285995466560740919, guid: ce18fb1bfda024936973ca895c2667f2, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -48
+      value: -19
       objectReference: {fileID: 0}
     - target: {fileID: 4616165200164398447, guid: ce18fb1bfda024936973ca895c2667f2, type: 3}
       propertyPath: m_LocalScale.x
@@ -50721,18 +50593,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5703001028324800205, guid: ce18fb1bfda024936973ca895c2667f2, type: 3}
       propertyPath: m_text
-      value: "1.\tComplete the tutorial in the waiting room before starting the game.\n2.\tAfter
-        pressing the start button, all players will be transported to the kitchen
-        scene.\n3.\tYour assigned role will be displayed for 3 seconds, after which
-        the game will begin.\n4.\tYou may interact with and deform any objects in
-        the scene (e.g., including large items such as the fridge).\n5.\tPlace collected
-        letters onto the table; they will automatically attach to the surface.\n6.\tArrange
-        letters on the table to form words, then press the validation button.\n7.\tIf
-        the word is valid, the letters will disappear and points will be awarded
-        to your team.\n8.\tIf the letters turn red, the word is invalid.\n9.\tWords
-        formed using object names from the scene (e.g., \u201Capple\u201D) are not
-        allowed; such letters will turn yellow and no points will be awarded.\n10.\tWhen
-        the time expires, the team with the highest score wins the game."
+      value: "* \tAll actions are done using the grip button!\n\n1.\tComplete the
+        tutorial in the waiting room before starting the game.\n2.\tAfter pressing
+        the start button, all players will be transported to the kitchen scene.\n3.\tYour
+        assigned role will be displayed for 3 seconds, after which the game will
+        begin.\n4.\tYou may interact with and deform any objects in the scene (e.g.,
+        including large items such as the fridge).\n5.\tPlace collected letters onto
+        the table; they will automatically attach to the surface.\n6.\tArrange letters
+        on the table to form words, then press the validation button.\n7.\tIf the
+        word is valid, the letters will disappear and points will be awarded to your
+        team.\n8.\tIf the letters turn red, the word is invalid.\n9.\tWords formed
+        using object names from the scene (e.g., \u201Capple\u201D) are not allowed;
+        such letters will turn yellow and no points will be awarded.\n10.\tWhen the
+        time expires, the team with the highest score wins the game."
       objectReference: {fileID: 0}
     - target: {fileID: 5703001028324800205, guid: ce18fb1bfda024936973ca895c2667f2, type: 3}
       propertyPath: m_margin.w
@@ -50858,7 +50731,8 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 4916032099292324327, guid: ce18fb1bfda024936973ca895c2667f2, type: 3}
     m_RemovedGameObjects:
     - {fileID: 4592587161565237100, guid: ce18fb1bfda024936973ca895c2667f2, type: 3}
     - {fileID: 1290613260522618696, guid: ce18fb1bfda024936973ca895c2667f2, type: 3}
