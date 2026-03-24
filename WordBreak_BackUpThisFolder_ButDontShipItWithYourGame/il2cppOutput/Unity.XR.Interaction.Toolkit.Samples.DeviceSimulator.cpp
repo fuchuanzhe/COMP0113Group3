@@ -3164,12 +3164,12 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XRDeviceSimulatorControllerUI_Awake_mA1B
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorControllerUI.cs:96>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorControllerUI.cs:96>
 		XRDeviceSimulatorUI_t83558A12FEB0C923A821ED77A9214E829ABA8E53* L_0;
 		L_0 = Component_GetComponent_TisXRDeviceSimulatorUI_t83558A12FEB0C923A821ED77A9214E829ABA8E53_mCDDFA2A82F2766BB6B04A316FBEB2F1200D0444F(__this, Component_GetComponent_TisXRDeviceSimulatorUI_t83558A12FEB0C923A821ED77A9214E829ABA8E53_mCDDFA2A82F2766BB6B04A316FBEB2F1200D0444F_RuntimeMethod_var);
 		__this->___m_MainUIManager = L_0;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___m_MainUIManager), (void*)L_0);
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorControllerUI.cs:97>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorControllerUI.cs:97>
 		return;
 	}
 }
@@ -3187,7 +3187,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XRDeviceSimulatorControllerUI_Initialize
 	ReadOnlyArray_1_tA1DF7A256AD2BF17FB155224CB2611ED215EFCD3 V_1;
 	memset((&V_1), 0, sizeof(V_1));
 	{
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorControllerUI.cs:101>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorControllerUI.cs:101>
 		Text_tD60B2346DAA6666BF0D822FF607F0B220C2B9E62* L_0 = __this->___m_PrimaryButtonText;
 		XRDeviceSimulator_t2BEF1AB226D797BE78F5B291FCCB8A8B4274B30C* L_1 = ___0_simulator;
 		NullCheck(L_1);
@@ -3207,7 +3207,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XRDeviceSimulatorControllerUI_Initialize
 		L_6 = InputControl_get_displayName_m9F6CBDDD6B25EC0E25BEE1DD51105667F0BA9A23(L_5, NULL);
 		NullCheck(L_0);
 		VirtualActionInvoker1< String_t* >::Invoke(75, L_0, L_6);
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorControllerUI.cs:102>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorControllerUI.cs:102>
 		Text_tD60B2346DAA6666BF0D822FF607F0B220C2B9E62* L_7 = __this->___m_SecondaryButtonText;
 		XRDeviceSimulator_t2BEF1AB226D797BE78F5B291FCCB8A8B4274B30C* L_8 = ___0_simulator;
 		NullCheck(L_8);
@@ -3227,7 +3227,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XRDeviceSimulatorControllerUI_Initialize
 		L_13 = InputControl_get_displayName_m9F6CBDDD6B25EC0E25BEE1DD51105667F0BA9A23(L_12, NULL);
 		NullCheck(L_7);
 		VirtualActionInvoker1< String_t* >::Invoke(75, L_7, L_13);
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorControllerUI.cs:103>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorControllerUI.cs:103>
 		Text_tD60B2346DAA6666BF0D822FF607F0B220C2B9E62* L_14 = __this->___m_GripButtonText;
 		XRDeviceSimulator_t2BEF1AB226D797BE78F5B291FCCB8A8B4274B30C* L_15 = ___0_simulator;
 		NullCheck(L_15);
@@ -3247,7 +3247,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XRDeviceSimulatorControllerUI_Initialize
 		L_20 = InputControl_get_displayName_m9F6CBDDD6B25EC0E25BEE1DD51105667F0BA9A23(L_19, NULL);
 		NullCheck(L_14);
 		VirtualActionInvoker1< String_t* >::Invoke(75, L_14, L_20);
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorControllerUI.cs:104>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorControllerUI.cs:104>
 		Text_tD60B2346DAA6666BF0D822FF607F0B220C2B9E62* L_21 = __this->___m_TriggerButtonText;
 		XRDeviceSimulator_t2BEF1AB226D797BE78F5B291FCCB8A8B4274B30C* L_22 = ___0_simulator;
 		NullCheck(L_22);
@@ -3267,7 +3267,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XRDeviceSimulatorControllerUI_Initialize
 		L_27 = InputControl_get_displayName_m9F6CBDDD6B25EC0E25BEE1DD51105667F0BA9A23(L_26, NULL);
 		NullCheck(L_21);
 		VirtualActionInvoker1< String_t* >::Invoke(75, L_21, L_27);
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorControllerUI.cs:105>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorControllerUI.cs:105>
 		Text_tD60B2346DAA6666BF0D822FF607F0B220C2B9E62* L_28 = __this->___m_MenuButtonText;
 		XRDeviceSimulator_t2BEF1AB226D797BE78F5B291FCCB8A8B4274B30C* L_29 = ___0_simulator;
 		NullCheck(L_29);
@@ -3287,18 +3287,18 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XRDeviceSimulatorControllerUI_Initialize
 		L_34 = InputControl_get_displayName_m9F6CBDDD6B25EC0E25BEE1DD51105667F0BA9A23(L_33, NULL);
 		NullCheck(L_28);
 		VirtualActionInvoker1< String_t* >::Invoke(75, L_28, L_34);
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorControllerUI.cs:107>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorControllerUI.cs:107>
 		XRDeviceSimulatorUI_t83558A12FEB0C923A821ED77A9214E829ABA8E53* L_35 = __this->___m_MainUIManager;
 		NullCheck(L_35);
 		Color_tD001788D726C3A7F1379BEED0260B9591F440C1F L_36;
 		L_36 = XRDeviceSimulatorUI_get_disabledColor_mC000FAFE05980DA097DC89580B9EDFB22FE80C78(L_35, NULL);
 		V_0 = L_36;
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorControllerUI.cs:108>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorControllerUI.cs:108>
 		Image_tBC1D03F63BF71132E9A5E472B8742F172A011E7E* L_37 = __this->___m_ThumbstickButtonImage;
 		Color_tD001788D726C3A7F1379BEED0260B9591F440C1F L_38 = V_0;
 		NullCheck(L_37);
 		VirtualActionInvoker1< Color_tD001788D726C3A7F1379BEED0260B9591F440C1F >::Invoke(23, L_37, L_38);
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorControllerUI.cs:109>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorControllerUI.cs:109>
 		Image_tBC1D03F63BF71132E9A5E472B8742F172A011E7E* L_39 = __this->___m_ControllerImage;
 		XRDeviceSimulatorUI_t83558A12FEB0C923A821ED77A9214E829ABA8E53* L_40 = __this->___m_MainUIManager;
 		NullCheck(L_40);
@@ -3306,12 +3306,12 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XRDeviceSimulatorControllerUI_Initialize
 		L_41 = XRDeviceSimulatorUI_get_disabledDeviceColor_m43DBF92FBE52AC2755AE9555D3AD677D33DA8FAA(L_40, NULL);
 		NullCheck(L_39);
 		VirtualActionInvoker1< Color_tD001788D726C3A7F1379BEED0260B9591F440C1F >::Invoke(23, L_39, L_41);
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorControllerUI.cs:110>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorControllerUI.cs:110>
 		Image_tBC1D03F63BF71132E9A5E472B8742F172A011E7E* L_42 = __this->___m_ControllerOverlayImage;
 		Color_tD001788D726C3A7F1379BEED0260B9591F440C1F L_43 = V_0;
 		NullCheck(L_42);
 		VirtualActionInvoker1< Color_tD001788D726C3A7F1379BEED0260B9591F440C1F >::Invoke(23, L_42, L_43);
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorControllerUI.cs:111>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorControllerUI.cs:111>
 		return;
 	}
 }
@@ -3344,9 +3344,9 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XRDeviceSimulatorControllerUI_SetAsActiv
 	int32_t G_B12_0 = 0;
 	XRDeviceSimulatorControllerUI_t9748C4B40D05E0409282C9AA2921E78339D0D0B1* G_B12_1 = NULL;
 	{
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorControllerUI.cs:115>
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorControllerUI.cs:116>
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorControllerUI.cs:117>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorControllerUI.cs:115>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorControllerUI.cs:116>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorControllerUI.cs:117>
 		bool L_0 = ___2_isRestingHand;
 		if (L_0)
 		{
@@ -3386,7 +3386,7 @@ IL_0015:
 IL_0025:
 	{
 		V_0 = G_B3_0;
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorControllerUI.cs:119>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorControllerUI.cs:119>
 		Text_tD60B2346DAA6666BF0D822FF607F0B220C2B9E62* L_9 = __this->___m_ThumbstickButtonText;
 		StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_10 = (StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248*)(StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248*)SZArrayNew(StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248_il2cpp_TypeInfo_var, (uint32_t)7);
 		StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_11 = L_10;
@@ -3434,7 +3434,7 @@ IL_0025:
 		L_26 = String_Concat_m647EBF831F54B6DF7D5AFA5FD012CF4EE7571B6A(L_23, NULL);
 		NullCheck(L_9);
 		VirtualActionInvoker1< String_t* >::Invoke(75, L_9, L_26);
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorControllerUI.cs:121>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorControllerUI.cs:121>
 		bool L_27 = ___0_active;
 		Image_tBC1D03F63BF71132E9A5E472B8742F172A011E7E* L_28 = __this->___m_PrimaryButtonIcon;
 		Text_tD60B2346DAA6666BF0D822FF607F0B220C2B9E62* L_29 = __this->___m_PrimaryButtonText;
@@ -3452,7 +3452,7 @@ IL_0025:
 		InputControl_t74F06B623518F992BF8E38656A5E0857169E3E2E* L_34;
 		L_34 = ReadOnlyArray_1_get_Item_mF7217A9697E8EAA3A574FCDCB611597EC9C1836A((&V_1), 0, ReadOnlyArray_1_get_Item_mF7217A9697E8EAA3A574FCDCB611597EC9C1836A_RuntimeMethod_var);
 		XRDeviceSimulatorControllerUI_UpdateButtonVisuals_m9306235EE681ED0997D1C78182441CAB45121E26(__this, L_27, L_28, L_29, L_34, NULL);
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorControllerUI.cs:122>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorControllerUI.cs:122>
 		bool L_35 = ___0_active;
 		Image_tBC1D03F63BF71132E9A5E472B8742F172A011E7E* L_36 = __this->___m_SecondaryButtonIcon;
 		Text_tD60B2346DAA6666BF0D822FF607F0B220C2B9E62* L_37 = __this->___m_SecondaryButtonText;
@@ -3470,7 +3470,7 @@ IL_0025:
 		InputControl_t74F06B623518F992BF8E38656A5E0857169E3E2E* L_42;
 		L_42 = ReadOnlyArray_1_get_Item_mF7217A9697E8EAA3A574FCDCB611597EC9C1836A((&V_1), 0, ReadOnlyArray_1_get_Item_mF7217A9697E8EAA3A574FCDCB611597EC9C1836A_RuntimeMethod_var);
 		XRDeviceSimulatorControllerUI_UpdateButtonVisuals_m9306235EE681ED0997D1C78182441CAB45121E26(__this, L_35, L_36, L_37, L_42, NULL);
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorControllerUI.cs:123>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorControllerUI.cs:123>
 		bool L_43 = ___0_active;
 		Image_tBC1D03F63BF71132E9A5E472B8742F172A011E7E* L_44 = __this->___m_TriggerButtonIcon;
 		Text_tD60B2346DAA6666BF0D822FF607F0B220C2B9E62* L_45 = __this->___m_TriggerButtonText;
@@ -3488,7 +3488,7 @@ IL_0025:
 		InputControl_t74F06B623518F992BF8E38656A5E0857169E3E2E* L_50;
 		L_50 = ReadOnlyArray_1_get_Item_mF7217A9697E8EAA3A574FCDCB611597EC9C1836A((&V_1), 0, ReadOnlyArray_1_get_Item_mF7217A9697E8EAA3A574FCDCB611597EC9C1836A_RuntimeMethod_var);
 		XRDeviceSimulatorControllerUI_UpdateButtonVisuals_m9306235EE681ED0997D1C78182441CAB45121E26(__this, L_43, L_44, L_45, L_50, NULL);
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorControllerUI.cs:124>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorControllerUI.cs:124>
 		bool L_51 = ___0_active;
 		Image_tBC1D03F63BF71132E9A5E472B8742F172A011E7E* L_52 = __this->___m_GripButtonIcon;
 		Text_tD60B2346DAA6666BF0D822FF607F0B220C2B9E62* L_53 = __this->___m_GripButtonText;
@@ -3506,7 +3506,7 @@ IL_0025:
 		InputControl_t74F06B623518F992BF8E38656A5E0857169E3E2E* L_58;
 		L_58 = ReadOnlyArray_1_get_Item_mF7217A9697E8EAA3A574FCDCB611597EC9C1836A((&V_1), 0, ReadOnlyArray_1_get_Item_mF7217A9697E8EAA3A574FCDCB611597EC9C1836A_RuntimeMethod_var);
 		XRDeviceSimulatorControllerUI_UpdateButtonVisuals_m9306235EE681ED0997D1C78182441CAB45121E26(__this, L_51, L_52, L_53, L_58, NULL);
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorControllerUI.cs:125>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorControllerUI.cs:125>
 		bool L_59 = ___0_active;
 		Image_tBC1D03F63BF71132E9A5E472B8742F172A011E7E* L_60 = __this->___m_MenuButtonIcon;
 		Text_tD60B2346DAA6666BF0D822FF607F0B220C2B9E62* L_61 = __this->___m_MenuButtonText;
@@ -3524,7 +3524,7 @@ IL_0025:
 		InputControl_t74F06B623518F992BF8E38656A5E0857169E3E2E* L_66;
 		L_66 = ReadOnlyArray_1_get_Item_mF7217A9697E8EAA3A574FCDCB611597EC9C1836A((&V_1), 0, ReadOnlyArray_1_get_Item_mF7217A9697E8EAA3A574FCDCB611597EC9C1836A_RuntimeMethod_var);
 		XRDeviceSimulatorControllerUI_UpdateButtonVisuals_m9306235EE681ED0997D1C78182441CAB45121E26(__this, L_59, L_60, L_61, L_66, NULL);
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorControllerUI.cs:126>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorControllerUI.cs:126>
 		bool L_67 = ___0_active;
 		bool L_68 = ___2_isRestingHand;
 		Image_tBC1D03F63BF71132E9A5E472B8742F172A011E7E* L_69 = __this->___m_ThumbstickButtonIcon;
@@ -3543,7 +3543,7 @@ IL_0025:
 		InputControl_t74F06B623518F992BF8E38656A5E0857169E3E2E* L_75;
 		L_75 = ReadOnlyArray_1_get_Item_mF7217A9697E8EAA3A574FCDCB611597EC9C1836A((&V_1), 0, ReadOnlyArray_1_get_Item_mF7217A9697E8EAA3A574FCDCB611597EC9C1836A_RuntimeMethod_var);
 		XRDeviceSimulatorControllerUI_UpdateButtonVisuals_m9306235EE681ED0997D1C78182441CAB45121E26(__this, (bool)((int32_t)((int32_t)L_67|(int32_t)L_68)), L_69, L_70, L_75, NULL);
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorControllerUI.cs:128>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorControllerUI.cs:128>
 		bool L_76 = ___0_active;
 		if (!L_76)
 		{
@@ -3551,27 +3551,27 @@ IL_0025:
 		}
 	}
 	{
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorControllerUI.cs:130>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorControllerUI.cs:130>
 		Image_tBC1D03F63BF71132E9A5E472B8742F172A011E7E* L_77 = __this->___m_PrimaryButtonImage;
 		bool L_78 = __this->___m_PrimaryButtonActivated;
 		XRDeviceSimulatorControllerUI_UpdateButtonColor_mB1B3D999A05CA5CDD05002FBCCB49A10482FD815(__this, L_77, L_78, NULL);
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorControllerUI.cs:131>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorControllerUI.cs:131>
 		Image_tBC1D03F63BF71132E9A5E472B8742F172A011E7E* L_79 = __this->___m_SecondaryButtonImage;
 		bool L_80 = __this->___m_SecondaryButtonActivated;
 		XRDeviceSimulatorControllerUI_UpdateButtonColor_mB1B3D999A05CA5CDD05002FBCCB49A10482FD815(__this, L_79, L_80, NULL);
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorControllerUI.cs:132>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorControllerUI.cs:132>
 		Image_tBC1D03F63BF71132E9A5E472B8742F172A011E7E* L_81 = __this->___m_TriggerButtonImage;
 		bool L_82 = __this->___m_TriggerActivated;
 		XRDeviceSimulatorControllerUI_UpdateButtonColor_mB1B3D999A05CA5CDD05002FBCCB49A10482FD815(__this, L_81, L_82, NULL);
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorControllerUI.cs:133>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorControllerUI.cs:133>
 		Image_tBC1D03F63BF71132E9A5E472B8742F172A011E7E* L_83 = __this->___m_GripButtonImage;
 		bool L_84 = __this->___m_GripActivated;
 		XRDeviceSimulatorControllerUI_UpdateButtonColor_mB1B3D999A05CA5CDD05002FBCCB49A10482FD815(__this, L_83, L_84, NULL);
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorControllerUI.cs:134>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorControllerUI.cs:134>
 		Image_tBC1D03F63BF71132E9A5E472B8742F172A011E7E* L_85 = __this->___m_MenuButtonImage;
 		bool L_86 = __this->___m_MenuActivated;
 		XRDeviceSimulatorControllerUI_UpdateButtonColor_mB1B3D999A05CA5CDD05002FBCCB49A10482FD815(__this, L_85, L_86, NULL);
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorControllerUI.cs:135>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorControllerUI.cs:135>
 		Image_tBC1D03F63BF71132E9A5E472B8742F172A011E7E* L_87 = __this->___m_ThumbstickButtonImage;
 		bool L_88 = __this->___m_XAxisTranslateActivated;
 		if (L_88)
@@ -3602,7 +3602,7 @@ IL_0216:
 	{
 		NullCheck(G_B7_2);
 		XRDeviceSimulatorControllerUI_UpdateButtonColor_mB1B3D999A05CA5CDD05002FBCCB49A10482FD815(G_B7_2, G_B7_1, (bool)G_B7_0, NULL);
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorControllerUI.cs:137>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorControllerUI.cs:137>
 		Image_tBC1D03F63BF71132E9A5E472B8742F172A011E7E* L_90 = __this->___m_ControllerImage;
 		XRDeviceSimulatorUI_t83558A12FEB0C923A821ED77A9214E829ABA8E53* L_91 = __this->___m_MainUIManager;
 		NullCheck(L_91);
@@ -3610,7 +3610,7 @@ IL_0216:
 		L_92 = XRDeviceSimulatorUI_get_deviceColor_m112E6DA8155859BBD13FF31769641B057480B54D(L_91, NULL);
 		NullCheck(L_90);
 		VirtualActionInvoker1< Color_tD001788D726C3A7F1379BEED0260B9591F440C1F >::Invoke(23, L_90, L_92);
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorControllerUI.cs:138>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorControllerUI.cs:138>
 		Image_tBC1D03F63BF71132E9A5E472B8742F172A011E7E* L_93 = __this->___m_ControllerOverlayImage;
 		XRDeviceSimulatorUI_t83558A12FEB0C923A821ED77A9214E829ABA8E53* L_94 = __this->___m_MainUIManager;
 		NullCheck(L_94);
@@ -3623,37 +3623,37 @@ IL_0216:
 
 IL_0248:
 	{
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorControllerUI.cs:142>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorControllerUI.cs:142>
 		bool L_96 = __this->___m_PrimaryButtonActivated;
 		Image_tBC1D03F63BF71132E9A5E472B8742F172A011E7E* L_97 = __this->___m_PrimaryButtonImage;
 		Image_tBC1D03F63BF71132E9A5E472B8742F172A011E7E* L_98 = __this->___m_PrimaryButtonIcon;
 		Text_tD60B2346DAA6666BF0D822FF607F0B220C2B9E62* L_99 = __this->___m_PrimaryButtonText;
 		XRDeviceSimulatorControllerUI_UpdateDisableControllerButton_mA5125F7A6B0E371F21B4AE2390F381542E4ADED2(__this, L_96, L_97, L_98, L_99, NULL);
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorControllerUI.cs:143>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorControllerUI.cs:143>
 		bool L_100 = __this->___m_SecondaryButtonActivated;
 		Image_tBC1D03F63BF71132E9A5E472B8742F172A011E7E* L_101 = __this->___m_SecondaryButtonImage;
 		Image_tBC1D03F63BF71132E9A5E472B8742F172A011E7E* L_102 = __this->___m_SecondaryButtonIcon;
 		Text_tD60B2346DAA6666BF0D822FF607F0B220C2B9E62* L_103 = __this->___m_SecondaryButtonText;
 		XRDeviceSimulatorControllerUI_UpdateDisableControllerButton_mA5125F7A6B0E371F21B4AE2390F381542E4ADED2(__this, L_100, L_101, L_102, L_103, NULL);
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorControllerUI.cs:144>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorControllerUI.cs:144>
 		bool L_104 = __this->___m_TriggerActivated;
 		Image_tBC1D03F63BF71132E9A5E472B8742F172A011E7E* L_105 = __this->___m_TriggerButtonImage;
 		Image_tBC1D03F63BF71132E9A5E472B8742F172A011E7E* L_106 = __this->___m_TriggerButtonIcon;
 		Text_tD60B2346DAA6666BF0D822FF607F0B220C2B9E62* L_107 = __this->___m_TriggerButtonText;
 		XRDeviceSimulatorControllerUI_UpdateDisableControllerButton_mA5125F7A6B0E371F21B4AE2390F381542E4ADED2(__this, L_104, L_105, L_106, L_107, NULL);
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorControllerUI.cs:145>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorControllerUI.cs:145>
 		bool L_108 = __this->___m_GripActivated;
 		Image_tBC1D03F63BF71132E9A5E472B8742F172A011E7E* L_109 = __this->___m_GripButtonImage;
 		Image_tBC1D03F63BF71132E9A5E472B8742F172A011E7E* L_110 = __this->___m_GripButtonIcon;
 		Text_tD60B2346DAA6666BF0D822FF607F0B220C2B9E62* L_111 = __this->___m_GripButtonText;
 		XRDeviceSimulatorControllerUI_UpdateDisableControllerButton_mA5125F7A6B0E371F21B4AE2390F381542E4ADED2(__this, L_108, L_109, L_110, L_111, NULL);
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorControllerUI.cs:146>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorControllerUI.cs:146>
 		bool L_112 = __this->___m_MenuActivated;
 		Image_tBC1D03F63BF71132E9A5E472B8742F172A011E7E* L_113 = __this->___m_MenuButtonImage;
 		Image_tBC1D03F63BF71132E9A5E472B8742F172A011E7E* L_114 = __this->___m_MenuButtonIcon;
 		Text_tD60B2346DAA6666BF0D822FF607F0B220C2B9E62* L_115 = __this->___m_MenuButtonText;
 		XRDeviceSimulatorControllerUI_UpdateDisableControllerButton_mA5125F7A6B0E371F21B4AE2390F381542E4ADED2(__this, L_112, L_113, L_114, L_115, NULL);
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorControllerUI.cs:148>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorControllerUI.cs:148>
 		bool L_116 = ___2_isRestingHand;
 		if (L_116)
 		{
@@ -3661,7 +3661,7 @@ IL_0248:
 		}
 	}
 	{
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorControllerUI.cs:149>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorControllerUI.cs:149>
 		bool L_117 = __this->___m_XAxisTranslateActivated;
 		if (L_117)
 		{
@@ -3695,7 +3695,7 @@ IL_02f3:
 
 IL_030c:
 	{
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorControllerUI.cs:151>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorControllerUI.cs:151>
 		Image_tBC1D03F63BF71132E9A5E472B8742F172A011E7E* L_122 = __this->___m_ThumbstickButtonImage;
 		XRDeviceSimulatorUI_t83558A12FEB0C923A821ED77A9214E829ABA8E53* L_123 = __this->___m_MainUIManager;
 		NullCheck(L_123);
@@ -3707,7 +3707,7 @@ IL_030c:
 
 IL_0322:
 	{
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorControllerUI.cs:153>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorControllerUI.cs:153>
 		Image_tBC1D03F63BF71132E9A5E472B8742F172A011E7E* L_125 = __this->___m_ControllerImage;
 		XRDeviceSimulatorUI_t83558A12FEB0C923A821ED77A9214E829ABA8E53* L_126 = __this->___m_MainUIManager;
 		NullCheck(L_126);
@@ -3715,7 +3715,7 @@ IL_0322:
 		L_127 = XRDeviceSimulatorUI_get_disabledDeviceColor_m43DBF92FBE52AC2755AE9555D3AD677D33DA8FAA(L_126, NULL);
 		NullCheck(L_125);
 		VirtualActionInvoker1< Color_tD001788D726C3A7F1379BEED0260B9591F440C1F >::Invoke(23, L_125, L_127);
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorControllerUI.cs:154>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorControllerUI.cs:154>
 		Image_tBC1D03F63BF71132E9A5E472B8742F172A011E7E* L_128 = __this->___m_ControllerOverlayImage;
 		XRDeviceSimulatorUI_t83558A12FEB0C923A821ED77A9214E829ABA8E53* L_129 = __this->___m_MainUIManager;
 		NullCheck(L_129);
@@ -3723,7 +3723,7 @@ IL_0322:
 		L_130 = XRDeviceSimulatorUI_get_disabledColor_mC000FAFE05980DA097DC89580B9EDFB22FE80C78(L_129, NULL);
 		NullCheck(L_128);
 		VirtualActionInvoker1< Color_tD001788D726C3A7F1379BEED0260B9591F440C1F >::Invoke(23, L_128, L_130);
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorControllerUI.cs:156>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorControllerUI.cs:156>
 		return;
 	}
 }
@@ -3733,7 +3733,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XRDeviceSimulatorControllerUI_UpdateDisa
 	Color_tD001788D726C3A7F1379BEED0260B9591F440C1F V_0;
 	memset((&V_0), 0, sizeof(V_0));
 	{
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorControllerUI.cs:162>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorControllerUI.cs:162>
 		bool L_0 = ___0_active;
 		if (!L_0)
 		{
@@ -3741,27 +3741,27 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XRDeviceSimulatorControllerUI_UpdateDisa
 		}
 	}
 	{
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorControllerUI.cs:164>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorControllerUI.cs:164>
 		XRDeviceSimulatorUI_t83558A12FEB0C923A821ED77A9214E829ABA8E53* L_1 = __this->___m_MainUIManager;
 		NullCheck(L_1);
 		Color_tD001788D726C3A7F1379BEED0260B9591F440C1F L_2;
 		L_2 = XRDeviceSimulatorUI_get_selectedColor_m1A0333F7892987F43D726871D74A1A979CF16F7E(L_1, NULL);
 		V_0 = L_2;
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorControllerUI.cs:165>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorControllerUI.cs:165>
 		(&V_0)->___a = (0.5f);
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorControllerUI.cs:166>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorControllerUI.cs:166>
 		Image_tBC1D03F63BF71132E9A5E472B8742F172A011E7E* L_3 = ___1_button;
 		Color_tD001788D726C3A7F1379BEED0260B9591F440C1F L_4 = V_0;
 		NullCheck(L_3);
 		VirtualActionInvoker1< Color_tD001788D726C3A7F1379BEED0260B9591F440C1F >::Invoke(23, L_3, L_4);
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorControllerUI.cs:167>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorControllerUI.cs:167>
 		Text_tD60B2346DAA6666BF0D822FF607F0B220C2B9E62* L_5 = ___3_buttonText;
 		NullCheck(L_5);
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_6;
 		L_6 = Component_get_gameObject_m57AEFBB14DB39EC476F740BA000E170355DE691B(L_5, NULL);
 		NullCheck(L_6);
 		GameObject_SetActive_m638E92E1E75E519E5B24CF150B08CA8E0CDFAB92(L_6, (bool)1, NULL);
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorControllerUI.cs:168>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorControllerUI.cs:168>
 		Image_tBC1D03F63BF71132E9A5E472B8742F172A011E7E* L_7 = ___2_buttonIcon;
 		NullCheck(L_7);
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_8;
@@ -3773,7 +3773,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XRDeviceSimulatorControllerUI_UpdateDisa
 
 IL_003c:
 	{
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorControllerUI.cs:172>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorControllerUI.cs:172>
 		Image_tBC1D03F63BF71132E9A5E472B8742F172A011E7E* L_9 = ___1_button;
 		XRDeviceSimulatorUI_t83558A12FEB0C923A821ED77A9214E829ABA8E53* L_10 = __this->___m_MainUIManager;
 		NullCheck(L_10);
@@ -3781,21 +3781,21 @@ IL_003c:
 		L_11 = XRDeviceSimulatorUI_get_disabledButtonColor_m875DDF89DE23A6A769EBBBE4E9689BBBA1E5CC18(L_10, NULL);
 		NullCheck(L_9);
 		VirtualActionInvoker1< Color_tD001788D726C3A7F1379BEED0260B9591F440C1F >::Invoke(23, L_9, L_11);
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorControllerUI.cs:173>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorControllerUI.cs:173>
 		Text_tD60B2346DAA6666BF0D822FF607F0B220C2B9E62* L_12 = ___3_buttonText;
 		NullCheck(L_12);
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_13;
 		L_13 = Component_get_gameObject_m57AEFBB14DB39EC476F740BA000E170355DE691B(L_12, NULL);
 		NullCheck(L_13);
 		GameObject_SetActive_m638E92E1E75E519E5B24CF150B08CA8E0CDFAB92(L_13, (bool)0, NULL);
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorControllerUI.cs:174>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorControllerUI.cs:174>
 		Image_tBC1D03F63BF71132E9A5E472B8742F172A011E7E* L_14 = ___2_buttonIcon;
 		NullCheck(L_14);
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_15;
 		L_15 = Component_get_gameObject_m57AEFBB14DB39EC476F740BA000E170355DE691B(L_14, NULL);
 		NullCheck(L_15);
 		GameObject_SetActive_m638E92E1E75E519E5B24CF150B08CA8E0CDFAB92(L_15, (bool)0, NULL);
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorControllerUI.cs:176>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorControllerUI.cs:176>
 		return;
 	}
 }
@@ -3817,7 +3817,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XRDeviceSimulatorControllerUI_UpdateButt
 	Color_tD001788D726C3A7F1379BEED0260B9591F440C1F G_B3_0;
 	memset((&G_B3_0), 0, sizeof(G_B3_0));
 	{
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorControllerUI.cs:180>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorControllerUI.cs:180>
 		Text_tD60B2346DAA6666BF0D822FF607F0B220C2B9E62* L_0 = ___2_buttonText;
 		NullCheck(L_0);
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_1;
@@ -3825,7 +3825,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XRDeviceSimulatorControllerUI_UpdateButt
 		bool L_2 = ___0_active;
 		NullCheck(L_1);
 		GameObject_SetActive_m638E92E1E75E519E5B24CF150B08CA8E0CDFAB92(L_1, L_2, NULL);
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorControllerUI.cs:181>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorControllerUI.cs:181>
 		Image_tBC1D03F63BF71132E9A5E472B8742F172A011E7E* L_3 = ___1_buttonIcon;
 		NullCheck(L_3);
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_4;
@@ -3833,7 +3833,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XRDeviceSimulatorControllerUI_UpdateButt
 		bool L_5 = ___0_active;
 		NullCheck(L_4);
 		GameObject_SetActive_m638E92E1E75E519E5B24CF150B08CA8E0CDFAB92(L_4, L_5, NULL);
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorControllerUI.cs:183>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorControllerUI.cs:183>
 		bool L_6 = ___0_active;
 		if (L_6)
 		{
@@ -3861,17 +3861,17 @@ IL_0028:
 IL_0033:
 	{
 		V_0 = G_B3_0;
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorControllerUI.cs:184>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorControllerUI.cs:184>
 		Text_tD60B2346DAA6666BF0D822FF607F0B220C2B9E62* L_11 = ___2_buttonText;
 		Color_tD001788D726C3A7F1379BEED0260B9591F440C1F L_12 = V_0;
 		NullCheck(L_11);
 		VirtualActionInvoker1< Color_tD001788D726C3A7F1379BEED0260B9591F440C1F >::Invoke(23, L_11, L_12);
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorControllerUI.cs:185>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorControllerUI.cs:185>
 		Image_tBC1D03F63BF71132E9A5E472B8742F172A011E7E* L_13 = ___1_buttonIcon;
 		Color_tD001788D726C3A7F1379BEED0260B9591F440C1F L_14 = V_0;
 		NullCheck(L_13);
 		VirtualActionInvoker1< Color_tD001788D726C3A7F1379BEED0260B9591F440C1F >::Invoke(23, L_13, L_14);
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorControllerUI.cs:187>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorControllerUI.cs:187>
 		Image_tBC1D03F63BF71132E9A5E472B8742F172A011E7E* L_15 = ___1_buttonIcon;
 		NullCheck(L_15);
 		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_16;
@@ -3880,7 +3880,7 @@ IL_0033:
 		L_17 = Vector3_get_one_mC9B289F1E15C42C597180C9FE6FB492495B51D02_inline(NULL);
 		NullCheck(L_16);
 		Transform_set_localScale_mBA79E811BAF6C47B80FF76414C12B47B3CD03633(L_16, L_17, NULL);
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorControllerUI.cs:188>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorControllerUI.cs:188>
 		Image_tBC1D03F63BF71132E9A5E472B8742F172A011E7E* L_18 = ___1_buttonIcon;
 		XRDeviceSimulatorUI_t83558A12FEB0C923A821ED77A9214E829ABA8E53* L_19 = __this->___m_MainUIManager;
 		InputControl_t74F06B623518F992BF8E38656A5E0857169E3E2E* L_20 = ___3_control;
@@ -3889,7 +3889,7 @@ IL_0033:
 		L_21 = XRDeviceSimulatorUI_GetInputIcon_mB9CDF23EC95E89E38BA562EEE9B9872D76088986(L_19, L_20, NULL);
 		NullCheck(L_18);
 		Image_set_sprite_mC0C248340BA27AAEE56855A3FAFA0D8CA12956DE(L_18, L_21, NULL);
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorControllerUI.cs:189>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorControllerUI.cs:189>
 		InputControl_t74F06B623518F992BF8E38656A5E0857169E3E2E* L_22 = ___3_control;
 		NullCheck(L_22);
 		String_t* L_23;
@@ -3918,17 +3918,17 @@ IL_0033:
 
 IL_0089:
 	{
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorControllerUI.cs:192>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorControllerUI.cs:192>
 		Text_tD60B2346DAA6666BF0D822FF607F0B220C2B9E62* L_28 = ___2_buttonText;
 		NullCheck(L_28);
 		VirtualActionInvoker1< String_t* >::Invoke(75, L_28, _stringLiteral33A674C5B19A8E8CE70BB746840755D642FC6AAA);
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorControllerUI.cs:193>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorControllerUI.cs:193>
 		Image_tBC1D03F63BF71132E9A5E472B8742F172A011E7E* L_29 = ___1_buttonIcon;
 		Color_tD001788D726C3A7F1379BEED0260B9591F440C1F L_30;
 		L_30 = Color_get_white_m068F5AF879B0FCA584E3693F762EA41BB65532C6_inline(NULL);
 		NullCheck(L_29);
 		VirtualActionInvoker1< Color_tD001788D726C3A7F1379BEED0260B9591F440C1F >::Invoke(23, L_29, L_30);
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorControllerUI.cs:194>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorControllerUI.cs:194>
 		Image_tBC1D03F63BF71132E9A5E472B8742F172A011E7E* L_31 = ___1_buttonIcon;
 		NullCheck(L_31);
 		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_32;
@@ -3938,29 +3938,29 @@ IL_0089:
 		Vector3__ctor_m376936E6B999EF1ECBE57D990A386303E2283DE0_inline((&L_33), (-1.0f), (1.0f), (1.0f), NULL);
 		NullCheck(L_32);
 		Transform_set_localScale_mBA79E811BAF6C47B80FF76414C12B47B3CD03633(L_32, L_33, NULL);
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorControllerUI.cs:195>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorControllerUI.cs:195>
 		return;
 	}
 
 IL_00bf:
 	{
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorControllerUI.cs:197>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorControllerUI.cs:197>
 		Text_tD60B2346DAA6666BF0D822FF607F0B220C2B9E62* L_34 = ___2_buttonText;
 		NullCheck(L_34);
 		VirtualActionInvoker1< String_t* >::Invoke(75, L_34, _stringLiteral02A764E4251AC38D73244BF0497560A10A2A8B6A);
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorControllerUI.cs:198>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorControllerUI.cs:198>
 		Image_tBC1D03F63BF71132E9A5E472B8742F172A011E7E* L_35 = ___1_buttonIcon;
 		Color_tD001788D726C3A7F1379BEED0260B9591F440C1F L_36;
 		L_36 = Color_get_white_m068F5AF879B0FCA584E3693F762EA41BB65532C6_inline(NULL);
 		NullCheck(L_35);
 		VirtualActionInvoker1< Color_tD001788D726C3A7F1379BEED0260B9591F440C1F >::Invoke(23, L_35, L_36);
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorControllerUI.cs:199>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorControllerUI.cs:199>
 		return;
 	}
 
 IL_00d6:
 	{
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorControllerUI.cs:201>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorControllerUI.cs:201>
 		Image_tBC1D03F63BF71132E9A5E472B8742F172A011E7E* L_37 = ___1_buttonIcon;
 		XRDeviceSimulatorUI_t83558A12FEB0C923A821ED77A9214E829ABA8E53* L_38 = __this->___m_MainUIManager;
 		NullCheck(L_38);
@@ -3968,7 +3968,7 @@ IL_00d6:
 		L_39 = XRDeviceSimulatorUI_get_keyboardSprite_m3A43AAFB3F31DDF61E398E6C39AD06909F3B02F4_inline(L_38, NULL);
 		NullCheck(L_37);
 		Image_set_sprite_mC0C248340BA27AAEE56855A3FAFA0D8CA12956DE(L_37, L_39, NULL);
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorControllerUI.cs:204>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorControllerUI.cs:204>
 		return;
 	}
 }
@@ -3981,7 +3981,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XRDeviceSimulatorControllerUI_UpdateButt
 	memset((&G_B3_0), 0, sizeof(G_B3_0));
 	Image_tBC1D03F63BF71132E9A5E472B8742F172A011E7E* G_B3_1 = NULL;
 	{
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorControllerUI.cs:208>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorControllerUI.cs:208>
 		Image_tBC1D03F63BF71132E9A5E472B8742F172A011E7E* L_0 = ___0_image;
 		bool L_1 = ___1_activated;
 		if (L_1)
@@ -4015,7 +4015,7 @@ IL_001c:
 	{
 		NullCheck(G_B3_1);
 		VirtualActionInvoker1< Color_tD001788D726C3A7F1379BEED0260B9591F440C1F >::Invoke(23, G_B3_1, G_B3_0);
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorControllerUI.cs:209>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorControllerUI.cs:209>
 		return;
 	}
 }
@@ -4023,14 +4023,14 @@ IL_001c:
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XRDeviceSimulatorControllerUI_OnPrimaryButton_m075B91C55B4A84AFC0D921B8786A0941948742AC (XRDeviceSimulatorControllerUI_t9748C4B40D05E0409282C9AA2921E78339D0D0B1* __this, bool ___0_activated, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorControllerUI.cs:213>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorControllerUI.cs:213>
 		bool L_0 = ___0_activated;
 		__this->___m_PrimaryButtonActivated = L_0;
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorControllerUI.cs:214>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorControllerUI.cs:214>
 		Image_tBC1D03F63BF71132E9A5E472B8742F172A011E7E* L_1 = __this->___m_PrimaryButtonImage;
 		bool L_2 = ___0_activated;
 		XRDeviceSimulatorControllerUI_UpdateButtonColor_mB1B3D999A05CA5CDD05002FBCCB49A10482FD815(__this, L_1, L_2, NULL);
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorControllerUI.cs:215>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorControllerUI.cs:215>
 		return;
 	}
 }
@@ -4038,14 +4038,14 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XRDeviceSimulatorControllerUI_OnPrimaryB
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XRDeviceSimulatorControllerUI_OnSecondaryButton_mA6BE705CCB42BD041CD2D585D25E606ACAD1FF03 (XRDeviceSimulatorControllerUI_t9748C4B40D05E0409282C9AA2921E78339D0D0B1* __this, bool ___0_activated, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorControllerUI.cs:219>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorControllerUI.cs:219>
 		bool L_0 = ___0_activated;
 		__this->___m_SecondaryButtonActivated = L_0;
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorControllerUI.cs:220>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorControllerUI.cs:220>
 		Image_tBC1D03F63BF71132E9A5E472B8742F172A011E7E* L_1 = __this->___m_SecondaryButtonImage;
 		bool L_2 = ___0_activated;
 		XRDeviceSimulatorControllerUI_UpdateButtonColor_mB1B3D999A05CA5CDD05002FBCCB49A10482FD815(__this, L_1, L_2, NULL);
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorControllerUI.cs:221>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorControllerUI.cs:221>
 		return;
 	}
 }
@@ -4053,14 +4053,14 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XRDeviceSimulatorControllerUI_OnSecondar
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XRDeviceSimulatorControllerUI_OnTrigger_m815F2CDF6DBF3D5CE8AD89986DA3B4EEB07F344B (XRDeviceSimulatorControllerUI_t9748C4B40D05E0409282C9AA2921E78339D0D0B1* __this, bool ___0_activated, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorControllerUI.cs:225>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorControllerUI.cs:225>
 		bool L_0 = ___0_activated;
 		__this->___m_TriggerActivated = L_0;
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorControllerUI.cs:226>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorControllerUI.cs:226>
 		Image_tBC1D03F63BF71132E9A5E472B8742F172A011E7E* L_1 = __this->___m_TriggerButtonImage;
 		bool L_2 = ___0_activated;
 		XRDeviceSimulatorControllerUI_UpdateButtonColor_mB1B3D999A05CA5CDD05002FBCCB49A10482FD815(__this, L_1, L_2, NULL);
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorControllerUI.cs:227>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorControllerUI.cs:227>
 		return;
 	}
 }
@@ -4068,14 +4068,14 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XRDeviceSimulatorControllerUI_OnTrigger_
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XRDeviceSimulatorControllerUI_OnGrip_m86A43B1AE7E99FA688F86F9B74E3C3D629D854A0 (XRDeviceSimulatorControllerUI_t9748C4B40D05E0409282C9AA2921E78339D0D0B1* __this, bool ___0_activated, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorControllerUI.cs:231>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorControllerUI.cs:231>
 		bool L_0 = ___0_activated;
 		__this->___m_GripActivated = L_0;
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorControllerUI.cs:232>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorControllerUI.cs:232>
 		Image_tBC1D03F63BF71132E9A5E472B8742F172A011E7E* L_1 = __this->___m_GripButtonImage;
 		bool L_2 = ___0_activated;
 		XRDeviceSimulatorControllerUI_UpdateButtonColor_mB1B3D999A05CA5CDD05002FBCCB49A10482FD815(__this, L_1, L_2, NULL);
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorControllerUI.cs:233>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorControllerUI.cs:233>
 		return;
 	}
 }
@@ -4083,14 +4083,14 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XRDeviceSimulatorControllerUI_OnGrip_m86
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XRDeviceSimulatorControllerUI_OnMenu_m85ED56869E8B75EB4D26B4D2B240FF97EF9E706E (XRDeviceSimulatorControllerUI_t9748C4B40D05E0409282C9AA2921E78339D0D0B1* __this, bool ___0_activated, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorControllerUI.cs:237>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorControllerUI.cs:237>
 		bool L_0 = ___0_activated;
 		__this->___m_MenuActivated = L_0;
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorControllerUI.cs:238>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorControllerUI.cs:238>
 		Image_tBC1D03F63BF71132E9A5E472B8742F172A011E7E* L_1 = __this->___m_MenuButtonImage;
 		bool L_2 = ___0_activated;
 		XRDeviceSimulatorControllerUI_UpdateButtonColor_mB1B3D999A05CA5CDD05002FBCCB49A10482FD815(__this, L_1, L_2, NULL);
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorControllerUI.cs:239>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorControllerUI.cs:239>
 		return;
 	}
 }
@@ -4098,14 +4098,14 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XRDeviceSimulatorControllerUI_OnMenu_m85
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XRDeviceSimulatorControllerUI_OnXAxisTranslatePerformed_mEF728B26A740B89F8AD987D528F1E63564B95A92 (XRDeviceSimulatorControllerUI_t9748C4B40D05E0409282C9AA2921E78339D0D0B1* __this, bool ___0_activated, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorControllerUI.cs:243>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorControllerUI.cs:243>
 		bool L_0 = ___0_activated;
 		__this->___m_XAxisTranslateActivated = L_0;
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorControllerUI.cs:244>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorControllerUI.cs:244>
 		Image_tBC1D03F63BF71132E9A5E472B8742F172A011E7E* L_1 = __this->___m_ThumbstickButtonImage;
 		bool L_2 = ___0_activated;
 		XRDeviceSimulatorControllerUI_UpdateButtonColor_mB1B3D999A05CA5CDD05002FBCCB49A10482FD815(__this, L_1, L_2, NULL);
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorControllerUI.cs:245>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorControllerUI.cs:245>
 		return;
 	}
 }
@@ -4113,14 +4113,14 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XRDeviceSimulatorControllerUI_OnXAxisTra
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XRDeviceSimulatorControllerUI_OnZAxisTranslatePerformed_m71730B8575DA5B161DAC1B7DFBA89B3FF190ACFA (XRDeviceSimulatorControllerUI_t9748C4B40D05E0409282C9AA2921E78339D0D0B1* __this, bool ___0_activated, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorControllerUI.cs:249>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorControllerUI.cs:249>
 		bool L_0 = ___0_activated;
 		__this->___m_YAxisTranslateActivated = L_0;
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorControllerUI.cs:250>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorControllerUI.cs:250>
 		Image_tBC1D03F63BF71132E9A5E472B8742F172A011E7E* L_1 = __this->___m_ThumbstickButtonImage;
 		bool L_2 = ___0_activated;
 		XRDeviceSimulatorControllerUI_UpdateButtonColor_mB1B3D999A05CA5CDD05002FBCCB49A10482FD815(__this, L_1, L_2, NULL);
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorControllerUI.cs:251>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorControllerUI.cs:251>
 		return;
 	}
 }
@@ -4150,12 +4150,12 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XRDeviceSimulatorHandsUI_Awake_m18C4A7DA
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorHandsUI.cs:85>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorHandsUI.cs:85>
 		XRDeviceSimulatorUI_t83558A12FEB0C923A821ED77A9214E829ABA8E53* L_0;
 		L_0 = Component_GetComponent_TisXRDeviceSimulatorUI_t83558A12FEB0C923A821ED77A9214E829ABA8E53_mCDDFA2A82F2766BB6B04A316FBEB2F1200D0444F(__this, Component_GetComponent_TisXRDeviceSimulatorUI_t83558A12FEB0C923A821ED77A9214E829ABA8E53_mCDDFA2A82F2766BB6B04A316FBEB2F1200D0444F_RuntimeMethod_var);
 		__this->___m_MainUIManager = L_0;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___m_MainUIManager), (void*)L_0);
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorHandsUI.cs:86>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorHandsUI.cs:86>
 		return;
 	}
 }
@@ -4176,14 +4176,14 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XRDeviceSimulatorHandsUI_Initialize_m05C
 	int32_t V_0 = 0;
 	SimulatedHandExpression_t182C654EA8E45C3AB60BF8AA3BEFDFCBBD8F3CAD* V_1 = NULL;
 	{
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorHandsUI.cs:90>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorHandsUI.cs:90>
 		V_0 = 0;
 		goto IL_0058;
 	}
 
 IL_0004:
 	{
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorHandsUI.cs:92>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorHandsUI.cs:92>
 		XRDeviceSimulator_t2BEF1AB226D797BE78F5B291FCCB8A8B4274B30C* L_0 = ___0_simulator;
 		NullCheck(L_0);
 		List_1_tC5D2825C62051A5FA567CE68202ACEE33C59D2FB* L_1;
@@ -4193,7 +4193,7 @@ IL_0004:
 		SimulatedHandExpression_t182C654EA8E45C3AB60BF8AA3BEFDFCBBD8F3CAD* L_3;
 		L_3 = List_1_get_Item_m995D3B1A08FEFEE03EFD1FE47DCBA56E7FF72F8F(L_1, L_2, List_1_get_Item_m995D3B1A08FEFEE03EFD1FE47DCBA56E7FF72F8F_RuntimeMethod_var);
 		V_1 = L_3;
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorHandsUI.cs:93>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorHandsUI.cs:93>
 		int32_t L_4 = V_0;
 		List_1_t8208E545BCD6039843AE16CC2FC2E1E70DA13042* L_5 = __this->___m_Expressions;
 		NullCheck(L_5);
@@ -4205,7 +4205,7 @@ IL_0004:
 		}
 	}
 	{
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorHandsUI.cs:95>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorHandsUI.cs:95>
 		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 		Debug_LogWarning_m23033D7E2F0F298BE465B7F3A63CDF40A4EB70EB(_stringLiteral04A71C24056593142E340244F95A20C940D8CFFD, __this, NULL);
 		goto IL_0054;
@@ -4213,7 +4213,7 @@ IL_0004:
 
 IL_002c:
 	{
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorHandsUI.cs:99>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorHandsUI.cs:99>
 		List_1_t8208E545BCD6039843AE16CC2FC2E1E70DA13042* L_7 = __this->___m_Expressions;
 		int32_t L_8 = V_0;
 		NullCheck(L_7);
@@ -4239,14 +4239,14 @@ IL_002c:
 
 IL_0054:
 	{
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorHandsUI.cs:90>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorHandsUI.cs:90>
 		int32_t L_17 = V_0;
 		V_0 = ((int32_t)il2cpp_codegen_add(L_17, 1));
 	}
 
 IL_0058:
 	{
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorHandsUI.cs:90>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorHandsUI.cs:90>
 		int32_t L_18 = V_0;
 		XRDeviceSimulator_t2BEF1AB226D797BE78F5B291FCCB8A8B4274B30C* L_19 = ___0_simulator;
 		NullCheck(L_19);
@@ -4261,7 +4261,7 @@ IL_0058:
 		}
 	}
 	{
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorHandsUI.cs:103>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorHandsUI.cs:103>
 		Image_tBC1D03F63BF71132E9A5E472B8742F172A011E7E* L_22 = __this->___m_HandImage;
 		XRDeviceSimulatorUI_t83558A12FEB0C923A821ED77A9214E829ABA8E53* L_23 = __this->___m_MainUIManager;
 		NullCheck(L_23);
@@ -4269,7 +4269,7 @@ IL_0058:
 		L_24 = XRDeviceSimulatorUI_get_disabledDeviceColor_m43DBF92FBE52AC2755AE9555D3AD677D33DA8FAA(L_23, NULL);
 		NullCheck(L_22);
 		VirtualActionInvoker1< Color_tD001788D726C3A7F1379BEED0260B9591F440C1F >::Invoke(23, L_22, L_24);
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorHandsUI.cs:104>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorHandsUI.cs:104>
 		return;
 	}
 }
@@ -4304,7 +4304,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XRDeviceSimulatorHandsUI_SetActive_m935D
 	memset((&G_B22_0), 0, sizeof(G_B22_0));
 	HandExpressionUI_tE9AE042B2CBC3FF2ACD826C99B43C0B6BDAE2CDA* G_B22_1 = NULL;
 	{
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorHandsUI.cs:108>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorHandsUI.cs:108>
 		List_1_t8208E545BCD6039843AE16CC2FC2E1E70DA13042* L_0 = __this->___m_Expressions;
 		NullCheck(L_0);
 		Enumerator_tC8C6641CDE02995355C90A332D0AA55A262A0274 L_1;
@@ -4329,10 +4329,10 @@ FINALLY_002c:
 
 IL_000e_1:
 			{
-				//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorHandsUI.cs:108>
+				//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorHandsUI.cs:108>
 				HandExpressionUI_tE9AE042B2CBC3FF2ACD826C99B43C0B6BDAE2CDA* L_2;
 				L_2 = Enumerator_get_Current_m42590A142C38F97BF27896F9239750F68792E955_inline((&V_0), Enumerator_get_Current_m42590A142C38F97BF27896F9239750F68792E955_RuntimeMethod_var);
-				//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorHandsUI.cs:110>
+				//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorHandsUI.cs:110>
 				bool L_3 = ___0_active;
 				XRDeviceSimulatorUI_t83558A12FEB0C923A821ED77A9214E829ABA8E53* L_4 = __this->___m_MainUIManager;
 				NullCheck(L_2);
@@ -4341,7 +4341,7 @@ IL_000e_1:
 
 IL_0021_1:
 			{
-				//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorHandsUI.cs:108>
+				//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorHandsUI.cs:108>
 				bool L_5;
 				L_5 = Enumerator_MoveNext_mC9610CC879FF939E1B54458F6DBEE6B4B99FAD98((&V_0), Enumerator_MoveNext_mC9610CC879FF939E1B54458F6DBEE6B4B99FAD98_RuntimeMethod_var);
 				if (L_5)
@@ -4361,7 +4361,7 @@ IL_0021_1:
 
 IL_003a:
 	{
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorHandsUI.cs:113>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorHandsUI.cs:113>
 		bool L_6 = ___0_active;
 		if (!L_6)
 		{
@@ -4369,7 +4369,7 @@ IL_003a:
 		}
 	}
 	{
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorHandsUI.cs:115>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorHandsUI.cs:115>
 		List_1_t8208E545BCD6039843AE16CC2FC2E1E70DA13042* L_7 = __this->___m_Expressions;
 		NullCheck(L_7);
 		Enumerator_tC8C6641CDE02995355C90A332D0AA55A262A0274 L_8;
@@ -4394,15 +4394,15 @@ FINALLY_0089:
 
 IL_004b_1:
 			{
-				//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorHandsUI.cs:115>
+				//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorHandsUI.cs:115>
 				HandExpressionUI_tE9AE042B2CBC3FF2ACD826C99B43C0B6BDAE2CDA* L_9;
 				L_9 = Enumerator_get_Current_m42590A142C38F97BF27896F9239750F68792E955_inline((&V_0), Enumerator_get_Current_m42590A142C38F97BF27896F9239750F68792E955_RuntimeMethod_var);
 				V_1 = L_9;
-				//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorHandsUI.cs:117>
+				//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorHandsUI.cs:117>
 				HandExpressionUI_tE9AE042B2CBC3FF2ACD826C99B43C0B6BDAE2CDA* L_10 = __this->___m_ActiveExpression;
 				HandExpressionUI_tE9AE042B2CBC3FF2ACD826C99B43C0B6BDAE2CDA* L_11 = V_1;
 				V_2 = (bool)((((RuntimeObject*)(HandExpressionUI_tE9AE042B2CBC3FF2ACD826C99B43C0B6BDAE2CDA*)L_10) == ((RuntimeObject*)(HandExpressionUI_tE9AE042B2CBC3FF2ACD826C99B43C0B6BDAE2CDA*)L_11))? 1 : 0);
-				//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorHandsUI.cs:118>
+				//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorHandsUI.cs:118>
 				HandExpressionUI_tE9AE042B2CBC3FF2ACD826C99B43C0B6BDAE2CDA* L_12 = V_1;
 				bool L_13 = V_2;
 				if (L_13)
@@ -4440,7 +4440,7 @@ IL_0079_1:
 
 IL_007e_1:
 			{
-				//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorHandsUI.cs:115>
+				//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorHandsUI.cs:115>
 				bool L_18;
 				L_18 = Enumerator_MoveNext_mC9610CC879FF939E1B54458F6DBEE6B4B99FAD98((&V_0), Enumerator_MoveNext_mC9610CC879FF939E1B54458F6DBEE6B4B99FAD98_RuntimeMethod_var);
 				if (L_18)
@@ -4460,7 +4460,7 @@ IL_007e_1:
 
 IL_0097:
 	{
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorHandsUI.cs:121>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorHandsUI.cs:121>
 		Image_tBC1D03F63BF71132E9A5E472B8742F172A011E7E* L_19 = __this->___m_HandImage;
 		XRDeviceSimulatorUI_t83558A12FEB0C923A821ED77A9214E829ABA8E53* L_20 = __this->___m_MainUIManager;
 		NullCheck(L_20);
@@ -4473,15 +4473,15 @@ IL_0097:
 
 IL_00ae:
 	{
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorHandsUI.cs:125>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorHandsUI.cs:125>
 		XRDeviceSimulatorUI_t83558A12FEB0C923A821ED77A9214E829ABA8E53* L_22 = __this->___m_MainUIManager;
 		NullCheck(L_22);
 		Color_tD001788D726C3A7F1379BEED0260B9591F440C1F L_23;
 		L_23 = XRDeviceSimulatorUI_get_selectedColor_m1A0333F7892987F43D726871D74A1A979CF16F7E(L_22, NULL);
 		V_3 = L_23;
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorHandsUI.cs:126>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorHandsUI.cs:126>
 		(&V_3)->___a = (0.5f);
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorHandsUI.cs:127>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorHandsUI.cs:127>
 		List_1_t8208E545BCD6039843AE16CC2FC2E1E70DA13042* L_24 = __this->___m_Expressions;
 		NullCheck(L_24);
 		Enumerator_tC8C6641CDE02995355C90A332D0AA55A262A0274 L_25;
@@ -4506,15 +4506,15 @@ FINALLY_0116:
 
 IL_00d4_1:
 			{
-				//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorHandsUI.cs:127>
+				//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorHandsUI.cs:127>
 				HandExpressionUI_tE9AE042B2CBC3FF2ACD826C99B43C0B6BDAE2CDA* L_26;
 				L_26 = Enumerator_get_Current_m42590A142C38F97BF27896F9239750F68792E955_inline((&V_0), Enumerator_get_Current_m42590A142C38F97BF27896F9239750F68792E955_RuntimeMethod_var);
 				V_4 = L_26;
-				//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorHandsUI.cs:129>
+				//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorHandsUI.cs:129>
 				HandExpressionUI_tE9AE042B2CBC3FF2ACD826C99B43C0B6BDAE2CDA* L_27 = __this->___m_ActiveExpression;
 				HandExpressionUI_tE9AE042B2CBC3FF2ACD826C99B43C0B6BDAE2CDA* L_28 = V_4;
 				V_5 = (bool)((((RuntimeObject*)(HandExpressionUI_tE9AE042B2CBC3FF2ACD826C99B43C0B6BDAE2CDA*)L_27) == ((RuntimeObject*)(HandExpressionUI_tE9AE042B2CBC3FF2ACD826C99B43C0B6BDAE2CDA*)L_28))? 1 : 0);
-				//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorHandsUI.cs:130>
+				//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorHandsUI.cs:130>
 				HandExpressionUI_tE9AE042B2CBC3FF2ACD826C99B43C0B6BDAE2CDA* L_29 = V_4;
 				bool L_30 = V_5;
 				if (L_30)
@@ -4545,7 +4545,7 @@ IL_00fd_1:
 			{
 				NullCheck(G_B22_1);
 				HandExpressionUI_SetButtonColor_m07655CF9779BE7E63BC9BC299219DDA9C156E8EC(G_B22_1, G_B22_0, NULL);
-				//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorHandsUI.cs:131>
+				//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorHandsUI.cs:131>
 				HandExpressionUI_tE9AE042B2CBC3FF2ACD826C99B43C0B6BDAE2CDA* L_34 = V_4;
 				bool L_35 = V_5;
 				NullCheck(L_34);
@@ -4554,7 +4554,7 @@ IL_00fd_1:
 
 IL_010b_1:
 			{
-				//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorHandsUI.cs:127>
+				//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorHandsUI.cs:127>
 				bool L_36;
 				L_36 = Enumerator_MoveNext_mC9610CC879FF939E1B54458F6DBEE6B4B99FAD98((&V_0), Enumerator_MoveNext_mC9610CC879FF939E1B54458F6DBEE6B4B99FAD98_RuntimeMethod_var);
 				if (L_36)
@@ -4574,7 +4574,7 @@ IL_010b_1:
 
 IL_0124:
 	{
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorHandsUI.cs:134>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorHandsUI.cs:134>
 		Image_tBC1D03F63BF71132E9A5E472B8742F172A011E7E* L_37 = __this->___m_HandImage;
 		XRDeviceSimulatorUI_t83558A12FEB0C923A821ED77A9214E829ABA8E53* L_38 = __this->___m_MainUIManager;
 		NullCheck(L_38);
@@ -4582,7 +4582,7 @@ IL_0124:
 		L_39 = XRDeviceSimulatorUI_get_disabledDeviceColor_m43DBF92FBE52AC2755AE9555D3AD677D33DA8FAA(L_38, NULL);
 		NullCheck(L_37);
 		VirtualActionInvoker1< Color_tD001788D726C3A7F1379BEED0260B9591F440C1F >::Invoke(23, L_37, L_39);
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorHandsUI.cs:136>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorHandsUI.cs:136>
 		return;
 	}
 }
@@ -4603,7 +4603,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XRDeviceSimulatorHandsUI_ToggleExpressio
 	}
 	int32_t V_0 = 0;
 	{
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorHandsUI.cs:141>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorHandsUI.cs:141>
 		XRDeviceSimulator_t2BEF1AB226D797BE78F5B291FCCB8A8B4274B30C* L_0 = ___1_simulator;
 		NullCheck(L_0);
 		List_1_tC5D2825C62051A5FA567CE68202ACEE33C59D2FB* L_1;
@@ -4613,7 +4613,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XRDeviceSimulatorHandsUI_ToggleExpressio
 		int32_t L_3;
 		L_3 = List_1_IndexOf_m8616AF023BB089C862CA8E6D84A3945611851157(L_1, L_2, List_1_IndexOf_m8616AF023BB089C862CA8E6D84A3945611851157_RuntimeMethod_var);
 		V_0 = L_3;
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorHandsUI.cs:142>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorHandsUI.cs:142>
 		int32_t L_4 = V_0;
 		List_1_t8208E545BCD6039843AE16CC2FC2E1E70DA13042* L_5 = __this->___m_Expressions;
 		NullCheck(L_5);
@@ -4625,7 +4625,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XRDeviceSimulatorHandsUI_ToggleExpressio
 		}
 	}
 	{
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorHandsUI.cs:144>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorHandsUI.cs:144>
 		il2cpp_codegen_runtime_class_init_inline(Debug_t8394C7EEAECA3689C2C9B9DE9C7166D73596276F_il2cpp_TypeInfo_var);
 		Debug_LogWarning_m23033D7E2F0F298BE465B7F3A63CDF40A4EB70EB(_stringLiteral04A71C24056593142E340244F95A20C940D8CFFD, __this, NULL);
 		return;
@@ -4633,7 +4633,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XRDeviceSimulatorHandsUI_ToggleExpressio
 
 IL_0027:
 	{
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorHandsUI.cs:146>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorHandsUI.cs:146>
 		int32_t L_7 = V_0;
 		if ((((int32_t)L_7) >= ((int32_t)0)))
 		{
@@ -4641,7 +4641,7 @@ IL_0027:
 		}
 	}
 	{
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorHandsUI.cs:148>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorHandsUI.cs:148>
 		SimulatedHandExpression_t182C654EA8E45C3AB60BF8AA3BEFDFCBBD8F3CAD* L_8 = ___0_simulatedExpression;
 		NullCheck(L_8);
 		String_t* L_9;
@@ -4655,14 +4655,14 @@ IL_0027:
 
 IL_0047:
 	{
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorHandsUI.cs:152>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorHandsUI.cs:152>
 		List_1_t8208E545BCD6039843AE16CC2FC2E1E70DA13042* L_11 = __this->___m_Expressions;
 		int32_t L_12 = V_0;
 		NullCheck(L_11);
 		HandExpressionUI_tE9AE042B2CBC3FF2ACD826C99B43C0B6BDAE2CDA* L_13;
 		L_13 = List_1_get_Item_m2A289209CB1542C6D2F4B098F454B27C4339BE0E(L_11, L_12, List_1_get_Item_m2A289209CB1542C6D2F4B098F454B27C4339BE0E_RuntimeMethod_var);
 		XRDeviceSimulatorHandsUI_ToggleExpression_m9DE097D6F4F1E37DDAA4C46F063A299C67BCDFAB(__this, L_13, NULL);
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorHandsUI.cs:154>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorHandsUI.cs:154>
 		return;
 	}
 }
@@ -4670,7 +4670,7 @@ IL_0047:
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XRDeviceSimulatorHandsUI_ToggleExpression_m9DE097D6F4F1E37DDAA4C46F063A299C67BCDFAB (XRDeviceSimulatorHandsUI_t1BE09C7DB972DF8CF28AF0FDABE67DA9EF68070C* __this, HandExpressionUI_tE9AE042B2CBC3FF2ACD826C99B43C0B6BDAE2CDA* ___0_expression, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorHandsUI.cs:158>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorHandsUI.cs:158>
 		HandExpressionUI_tE9AE042B2CBC3FF2ACD826C99B43C0B6BDAE2CDA* L_0 = __this->___m_ActiveExpression;
 		HandExpressionUI_tE9AE042B2CBC3FF2ACD826C99B43C0B6BDAE2CDA* L_1 = ___0_expression;
 		if ((!(((RuntimeObject*)(HandExpressionUI_tE9AE042B2CBC3FF2ACD826C99B43C0B6BDAE2CDA*)L_0) == ((RuntimeObject*)(HandExpressionUI_tE9AE042B2CBC3FF2ACD826C99B43C0B6BDAE2CDA*)L_1))))
@@ -4679,13 +4679,13 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XRDeviceSimulatorHandsUI_ToggleExpressio
 		}
 	}
 	{
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorHandsUI.cs:160>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorHandsUI.cs:160>
 		HandExpressionUI_tE9AE042B2CBC3FF2ACD826C99B43C0B6BDAE2CDA* L_2 = ___0_expression;
 		XRDeviceSimulatorHandsUI_SetExpressionActiveStatus_m0255732DCFD927168628DBAF4B212F8932D5023A(__this, (bool)0, L_2, NULL);
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorHandsUI.cs:161>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorHandsUI.cs:161>
 		__this->___m_ActiveExpression = (HandExpressionUI_tE9AE042B2CBC3FF2ACD826C99B43C0B6BDAE2CDA*)NULL;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___m_ActiveExpression), (void*)(HandExpressionUI_tE9AE042B2CBC3FF2ACD826C99B43C0B6BDAE2CDA*)NULL);
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorHandsUI.cs:162>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorHandsUI.cs:162>
 		Image_tBC1D03F63BF71132E9A5E472B8742F172A011E7E* L_3 = __this->___m_HandImage;
 		Sprite_tAFF74BC83CD68037494CB0B4F28CBDF8971CAB99* L_4 = __this->___m_HandDefaultSprite;
 		NullCheck(L_3);
@@ -4695,7 +4695,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XRDeviceSimulatorHandsUI_ToggleExpressio
 
 IL_002a:
 	{
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorHandsUI.cs:166>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorHandsUI.cs:166>
 		HandExpressionUI_tE9AE042B2CBC3FF2ACD826C99B43C0B6BDAE2CDA* L_5 = __this->___m_ActiveExpression;
 		if (!L_5)
 		{
@@ -4703,21 +4703,21 @@ IL_002a:
 		}
 	}
 	{
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorHandsUI.cs:167>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorHandsUI.cs:167>
 		HandExpressionUI_tE9AE042B2CBC3FF2ACD826C99B43C0B6BDAE2CDA* L_6 = __this->___m_ActiveExpression;
 		XRDeviceSimulatorHandsUI_SetExpressionActiveStatus_m0255732DCFD927168628DBAF4B212F8932D5023A(__this, (bool)0, L_6, NULL);
 	}
 
 IL_003f:
 	{
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorHandsUI.cs:169>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorHandsUI.cs:169>
 		HandExpressionUI_tE9AE042B2CBC3FF2ACD826C99B43C0B6BDAE2CDA* L_7 = ___0_expression;
 		XRDeviceSimulatorHandsUI_SetExpressionActiveStatus_m0255732DCFD927168628DBAF4B212F8932D5023A(__this, (bool)1, L_7, NULL);
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorHandsUI.cs:170>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorHandsUI.cs:170>
 		HandExpressionUI_tE9AE042B2CBC3FF2ACD826C99B43C0B6BDAE2CDA* L_8 = ___0_expression;
 		__this->___m_ActiveExpression = L_8;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___m_ActiveExpression), (void*)L_8);
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorHandsUI.cs:172>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorHandsUI.cs:172>
 		return;
 	}
 }
@@ -4730,7 +4730,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XRDeviceSimulatorHandsUI_SetExpressionAc
 	memset((&G_B3_0), 0, sizeof(G_B3_0));
 	HandExpressionUI_tE9AE042B2CBC3FF2ACD826C99B43C0B6BDAE2CDA* G_B3_1 = NULL;
 	{
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorHandsUI.cs:176>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorHandsUI.cs:176>
 		HandExpressionUI_tE9AE042B2CBC3FF2ACD826C99B43C0B6BDAE2CDA* L_0 = ___1_expression;
 		bool L_1 = ___0_isActive;
 		if (L_1)
@@ -4764,7 +4764,7 @@ IL_001c:
 	{
 		NullCheck(G_B3_1);
 		HandExpressionUI_SetButtonColor_m07655CF9779BE7E63BC9BC299219DDA9C156E8EC(G_B3_1, G_B3_0, NULL);
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorHandsUI.cs:177>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorHandsUI.cs:177>
 		bool L_6 = ___0_isActive;
 		if (!L_6)
 		{
@@ -4772,7 +4772,7 @@ IL_001c:
 		}
 	}
 	{
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorHandsUI.cs:178>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorHandsUI.cs:178>
 		Image_tBC1D03F63BF71132E9A5E472B8742F172A011E7E* L_7 = __this->___m_HandImage;
 		HandExpressionUI_tE9AE042B2CBC3FF2ACD826C99B43C0B6BDAE2CDA* L_8 = ___1_expression;
 		NullCheck(L_8);
@@ -4784,7 +4784,7 @@ IL_001c:
 
 IL_0035:
 	{
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorHandsUI.cs:179>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorHandsUI.cs:179>
 		return;
 	}
 }
@@ -4799,7 +4799,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XRDeviceSimulatorHandsUI__ctor_mE807E50B
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorHandsUI.cs:78>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorHandsUI.cs:78>
 		List_1_t8208E545BCD6039843AE16CC2FC2E1E70DA13042* L_0 = (List_1_t8208E545BCD6039843AE16CC2FC2E1E70DA13042*)il2cpp_codegen_object_new(List_1_t8208E545BCD6039843AE16CC2FC2E1E70DA13042_il2cpp_TypeInfo_var);
 		List_1__ctor_mACA8D83767E4ADCF5E03F5F19677EDCE3EE51465(L_0, List_1__ctor_mACA8D83767E4ADCF5E03F5F19677EDCE3EE51465_RuntimeMethod_var);
 		__this->___m_Expressions = L_0;
@@ -4820,7 +4820,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XRDeviceSimulatorHandsUI__ctor_mE807E50B
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Sprite_tAFF74BC83CD68037494CB0B4F28CBDF8971CAB99* HandExpressionUI_get_sprite_m02DA9002C80B580908B081989EB1F471E6BD4F49 (HandExpressionUI_tE9AE042B2CBC3FF2ACD826C99B43C0B6BDAE2CDA* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorHandsUI.cs:30>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorHandsUI.cs:30>
 		Sprite_tAFF74BC83CD68037494CB0B4F28CBDF8971CAB99* L_0 = __this->___m_Sprite;
 		return L_0;
 	}
@@ -4829,7 +4829,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Sprite_tAFF74BC83CD68037494CB0B4F28CBDF8971CA
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void HandExpressionUI_set_sprite_m7450E5FE94DD96021F1917B759AA248FF8C1753A (HandExpressionUI_tE9AE042B2CBC3FF2ACD826C99B43C0B6BDAE2CDA* __this, Sprite_tAFF74BC83CD68037494CB0B4F28CBDF8971CAB99* ___0_value, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorHandsUI.cs:31>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorHandsUI.cs:31>
 		Sprite_tAFF74BC83CD68037494CB0B4F28CBDF8971CAB99* L_0 = ___0_value;
 		__this->___m_Sprite = L_0;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___m_Sprite), (void*)L_0);
@@ -4851,11 +4851,11 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void HandExpressionUI_Initialize_m1C71990BCFA
 	ReadOnlyArray_1_tA1DF7A256AD2BF17FB155224CB2611ED215EFCD3 V_0;
 	memset((&V_0), 0, sizeof(V_0));
 	{
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorHandsUI.cs:36>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorHandsUI.cs:36>
 		InputAction_t1B550AD2B55AF322AFB53CD28DA64081220D01CD* L_0 = ___0_action;
 		__this->___m_Action = L_0;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___m_Action), (void*)L_0);
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorHandsUI.cs:37>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorHandsUI.cs:37>
 		Text_tD60B2346DAA6666BF0D822FF607F0B220C2B9E62* L_1 = __this->___m_BindText;
 		InputAction_t1B550AD2B55AF322AFB53CD28DA64081220D01CD* L_2 = __this->___m_Action;
 		NullCheck(L_2);
@@ -4869,14 +4869,14 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void HandExpressionUI_Initialize_m1C71990BCFA
 		L_5 = InputControl_get_displayName_m9F6CBDDD6B25EC0E25BEE1DD51105667F0BA9A23(L_4, NULL);
 		NullCheck(L_1);
 		VirtualActionInvoker1< String_t* >::Invoke(75, L_1, L_5);
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorHandsUI.cs:38>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorHandsUI.cs:38>
 		Text_tD60B2346DAA6666BF0D822FF607F0B220C2B9E62* L_6 = __this->___m_TitleText;
 		String_t* L_7 = ___1_name;
 		String_t* L_8;
 		L_8 = String_Concat_m8855A6DE10F84DA7F4EC113CADDB59873A25573B(_stringLiteralD9691C4FD8A1F6B09DB1147CA32B442772FB46A1, L_7, _stringLiteralE166C9564FBDE461738077E3B1B506525EB6ACCC, NULL);
 		NullCheck(L_6);
 		VirtualActionInvoker1< String_t* >::Invoke(75, L_6, L_8);
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorHandsUI.cs:39>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorHandsUI.cs:39>
 		Sprite_tAFF74BC83CD68037494CB0B4F28CBDF8971CAB99* L_9 = ___2_icon;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_10;
@@ -4887,7 +4887,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void HandExpressionUI_Initialize_m1C71990BCFA
 		}
 	}
 	{
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorHandsUI.cs:40>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorHandsUI.cs:40>
 		Sprite_tAFF74BC83CD68037494CB0B4F28CBDF8971CAB99* L_11 = ___2_icon;
 		__this->___m_Sprite = L_11;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___m_Sprite), (void*)L_11);
@@ -4895,7 +4895,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void HandExpressionUI_Initialize_m1C71990BCFA
 
 IL_0056:
 	{
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorHandsUI.cs:41>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorHandsUI.cs:41>
 		return;
 	}
 }
@@ -4924,10 +4924,10 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void HandExpressionUI_UpdateButtonVisuals_mC6
 	XRDeviceSimulatorUI_t83558A12FEB0C923A821ED77A9214E829ABA8E53* G_B6_1 = NULL;
 	Image_tBC1D03F63BF71132E9A5E472B8742F172A011E7E* G_B6_2 = NULL;
 	{
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorHandsUI.cs:45>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorHandsUI.cs:45>
 		bool L_0 = ___0_active;
 		HandExpressionUI_UpdateButtonActive_m9D797F02CA444574DE52D9F9886EBF5C59D0BB54(__this, L_0, NULL);
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorHandsUI.cs:47>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorHandsUI.cs:47>
 		bool L_1 = ___0_active;
 		if (L_1)
 		{
@@ -4955,22 +4955,22 @@ IL_0012:
 IL_0018:
 	{
 		V_0 = G_B3_0;
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorHandsUI.cs:48>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorHandsUI.cs:48>
 		Text_tD60B2346DAA6666BF0D822FF607F0B220C2B9E62* L_6 = __this->___m_BindText;
 		Color_tD001788D726C3A7F1379BEED0260B9591F440C1F L_7 = V_0;
 		NullCheck(L_6);
 		VirtualActionInvoker1< Color_tD001788D726C3A7F1379BEED0260B9591F440C1F >::Invoke(23, L_6, L_7);
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorHandsUI.cs:49>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorHandsUI.cs:49>
 		Text_tD60B2346DAA6666BF0D822FF607F0B220C2B9E62* L_8 = __this->___m_TitleText;
 		Color_tD001788D726C3A7F1379BEED0260B9591F440C1F L_9 = V_0;
 		NullCheck(L_8);
 		VirtualActionInvoker1< Color_tD001788D726C3A7F1379BEED0260B9591F440C1F >::Invoke(23, L_8, L_9);
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorHandsUI.cs:50>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorHandsUI.cs:50>
 		Image_tBC1D03F63BF71132E9A5E472B8742F172A011E7E* L_10 = __this->___m_Icon;
 		Color_tD001788D726C3A7F1379BEED0260B9591F440C1F L_11 = V_0;
 		NullCheck(L_10);
 		VirtualActionInvoker1< Color_tD001788D726C3A7F1379BEED0260B9591F440C1F >::Invoke(23, L_10, L_11);
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorHandsUI.cs:52>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorHandsUI.cs:52>
 		Image_tBC1D03F63BF71132E9A5E472B8742F172A011E7E* L_12 = __this->___m_Icon;
 		NullCheck(L_12);
 		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_13;
@@ -4979,7 +4979,7 @@ IL_0018:
 		L_14 = Vector3_get_one_mC9B289F1E15C42C597180C9FE6FB492495B51D02_inline(NULL);
 		NullCheck(L_13);
 		Transform_set_localScale_mBA79E811BAF6C47B80FF76414C12B47B3CD03633(L_13, L_14, NULL);
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorHandsUI.cs:53>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorHandsUI.cs:53>
 		Image_tBC1D03F63BF71132E9A5E472B8742F172A011E7E* L_15 = __this->___m_Icon;
 		XRDeviceSimulatorUI_t83558A12FEB0C923A821ED77A9214E829ABA8E53* L_16 = ___1_uiManager;
 		InputAction_t1B550AD2B55AF322AFB53CD28DA64081220D01CD* L_17 = __this->___m_Action;
@@ -5022,7 +5022,7 @@ IL_0074:
 		L_21 = XRDeviceSimulatorUI_GetInputIcon_mB9CDF23EC95E89E38BA562EEE9B9872D76088986(G_B6_1, G_B6_0, NULL);
 		NullCheck(G_B6_2);
 		Image_set_sprite_mC0C248340BA27AAEE56855A3FAFA0D8CA12956DE(G_B6_2, L_21, NULL);
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorHandsUI.cs:54>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorHandsUI.cs:54>
 		return;
 	}
 }
@@ -5030,12 +5030,12 @@ IL_0074:
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void HandExpressionUI_SetButtonColor_m07655CF9779BE7E63BC9BC299219DDA9C156E8EC (HandExpressionUI_tE9AE042B2CBC3FF2ACD826C99B43C0B6BDAE2CDA* __this, Color_tD001788D726C3A7F1379BEED0260B9591F440C1F ___0_color, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorHandsUI.cs:58>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorHandsUI.cs:58>
 		Image_tBC1D03F63BF71132E9A5E472B8742F172A011E7E* L_0 = __this->___m_ButtonImage;
 		Color_tD001788D726C3A7F1379BEED0260B9591F440C1F L_1 = ___0_color;
 		NullCheck(L_0);
 		VirtualActionInvoker1< Color_tD001788D726C3A7F1379BEED0260B9591F440C1F >::Invoke(23, L_0, L_1);
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorHandsUI.cs:59>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorHandsUI.cs:59>
 		return;
 	}
 }
@@ -5043,7 +5043,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void HandExpressionUI_SetButtonColor_m07655CF
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void HandExpressionUI_UpdateButtonActive_m9D797F02CA444574DE52D9F9886EBF5C59D0BB54 (HandExpressionUI_tE9AE042B2CBC3FF2ACD826C99B43C0B6BDAE2CDA* __this, bool ___0_active, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorHandsUI.cs:63>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorHandsUI.cs:63>
 		Text_tD60B2346DAA6666BF0D822FF607F0B220C2B9E62* L_0 = __this->___m_BindText;
 		NullCheck(L_0);
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_1;
@@ -5051,7 +5051,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void HandExpressionUI_UpdateButtonActive_m9D7
 		bool L_2 = ___0_active;
 		NullCheck(L_1);
 		GameObject_SetActive_m638E92E1E75E519E5B24CF150B08CA8E0CDFAB92(L_1, L_2, NULL);
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorHandsUI.cs:64>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorHandsUI.cs:64>
 		Text_tD60B2346DAA6666BF0D822FF607F0B220C2B9E62* L_3 = __this->___m_TitleText;
 		NullCheck(L_3);
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_4;
@@ -5059,7 +5059,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void HandExpressionUI_UpdateButtonActive_m9D7
 		bool L_5 = ___0_active;
 		NullCheck(L_4);
 		GameObject_SetActive_m638E92E1E75E519E5B24CF150B08CA8E0CDFAB92(L_4, L_5, NULL);
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorHandsUI.cs:65>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorHandsUI.cs:65>
 		Image_tBC1D03F63BF71132E9A5E472B8742F172A011E7E* L_6 = __this->___m_Icon;
 		NullCheck(L_6);
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_7;
@@ -5067,7 +5067,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void HandExpressionUI_UpdateButtonActive_m9D7
 		bool L_8 = ___0_active;
 		NullCheck(L_7);
 		GameObject_SetActive_m638E92E1E75E519E5B24CF150B08CA8E0CDFAB92(L_7, L_8, NULL);
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorHandsUI.cs:66>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorHandsUI.cs:66>
 		return;
 	}
 }
@@ -5091,7 +5091,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void HandExpressionUI__ctor_m434283CB13C4EE3B
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool XRDeviceSimulatorUI_get_isMenuOpen_m7BF140ABDA90813062F19E0387E03CEC3FB824FF (XRDeviceSimulatorUI_t83558A12FEB0C923A821ED77A9214E829ABA8E53* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:35>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:35>
 		bool L_0 = __this->___m_IsMenuOpen;
 		return L_0;
 	}
@@ -5100,10 +5100,10 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool XRDeviceSimulatorUI_get_isMenuOpen_m7BF1
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XRDeviceSimulatorUI_set_isMenuOpen_m839BAEEDE92E048CA2EF33ADEF1950C54A4B3A05 (XRDeviceSimulatorUI_t83558A12FEB0C923A821ED77A9214E829ABA8E53* __this, bool ___0_value, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:40>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:40>
 		bool L_0 = ___0_value;
 		__this->___m_IsMenuOpen = L_0;
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:44>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:44>
 		return;
 	}
 }
@@ -5111,7 +5111,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XRDeviceSimulatorUI_set_isMenuOpen_m839B
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Sprite_tAFF74BC83CD68037494CB0B4F28CBDF8971CAB99* XRDeviceSimulatorUI_get_keyboardSprite_m3A43AAFB3F31DDF61E398E6C39AD06909F3B02F4 (XRDeviceSimulatorUI_t83558A12FEB0C923A821ED77A9214E829ABA8E53* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:63>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:63>
 		Sprite_tAFF74BC83CD68037494CB0B4F28CBDF8971CAB99* L_0 = __this->___m_KeyboardSprite;
 		return L_0;
 	}
@@ -5120,7 +5120,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Sprite_tAFF74BC83CD68037494CB0B4F28CBDF8971CA
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Sprite_tAFF74BC83CD68037494CB0B4F28CBDF8971CAB99* XRDeviceSimulatorUI_get_mouseSprite_m555D8F18EEB48C7D1FBD596960855E2C4A08FE9E (XRDeviceSimulatorUI_t83558A12FEB0C923A821ED77A9214E829ABA8E53* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:67>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:67>
 		Sprite_tAFF74BC83CD68037494CB0B4F28CBDF8971CAB99* L_0 = __this->___m_MouseSprite;
 		return L_0;
 	}
@@ -5129,7 +5129,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Sprite_tAFF74BC83CD68037494CB0B4F28CBDF8971CA
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Sprite_tAFF74BC83CD68037494CB0B4F28CBDF8971CAB99* XRDeviceSimulatorUI_get_rMouseSpriteDark_m313DA442C957779187A66FFFD759D526F72BCDD2 (XRDeviceSimulatorUI_t83558A12FEB0C923A821ED77A9214E829ABA8E53* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:71>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:71>
 		Sprite_tAFF74BC83CD68037494CB0B4F28CBDF8971CAB99* L_0 = __this->___m_RMouseSpriteDark;
 		return L_0;
 	}
@@ -5138,7 +5138,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Sprite_tAFF74BC83CD68037494CB0B4F28CBDF8971CA
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Sprite_tAFF74BC83CD68037494CB0B4F28CBDF8971CAB99* XRDeviceSimulatorUI_get_rMouseSpriteLight_mB3B29C649156EAA17AA7084017C18687E44636B0 (XRDeviceSimulatorUI_t83558A12FEB0C923A821ED77A9214E829ABA8E53* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:75>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:75>
 		Sprite_tAFF74BC83CD68037494CB0B4F28CBDF8971CAB99* L_0 = __this->___m_RMouseSpriteLight;
 		return L_0;
 	}
@@ -5153,7 +5153,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Sprite_tAFF74BC83CD68037494CB0B4F28CBDF8971CA
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:85>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:85>
 		Sprite_tAFF74BC83CD68037494CB0B4F28CBDF8971CAB99* L_0 = __this->___m_RMouseSprite;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_1;
@@ -5164,7 +5164,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Sprite_tAFF74BC83CD68037494CB0B4F28CBDF8971CA
 		}
 	}
 	{
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:86>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:86>
 		Sprite_tAFF74BC83CD68037494CB0B4F28CBDF8971CAB99* L_2 = __this->___m_RMouseSpriteDark;
 		__this->___m_RMouseSprite = L_2;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___m_RMouseSprite), (void*)L_2);
@@ -5172,7 +5172,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Sprite_tAFF74BC83CD68037494CB0B4F28CBDF8971CA
 
 IL_001a:
 	{
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:88>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:88>
 		Sprite_tAFF74BC83CD68037494CB0B4F28CBDF8971CAB99* L_3 = __this->___m_RMouseSprite;
 		return L_3;
 	}
@@ -5187,7 +5187,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Color_tD001788D726C3A7F1379BEED0260B9591F440C
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:244>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:244>
 		Color_tD001788D726C3A7F1379BEED0260B9591F440C1F L_0 = __this->___m_EnabledColor;
 		Color_tD001788D726C3A7F1379BEED0260B9591F440C1F L_1;
 		L_1 = Color_get_clear_m02E023A7D396B973288B3915F6F24FBF7E0DC81D_inline(NULL);
@@ -5199,7 +5199,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Color_tD001788D726C3A7F1379BEED0260B9591F440C
 		}
 	}
 	{
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:245>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:245>
 		il2cpp_codegen_runtime_class_init_inline(XRDeviceSimulatorUI_t83558A12FEB0C923A821ED77A9214E829ABA8E53_il2cpp_TypeInfo_var);
 		Color_tD001788D726C3A7F1379BEED0260B9591F440C1F L_3 = ((XRDeviceSimulatorUI_t83558A12FEB0C923A821ED77A9214E829ABA8E53_StaticFields*)il2cpp_codegen_static_fields_for(XRDeviceSimulatorUI_t83558A12FEB0C923A821ED77A9214E829ABA8E53_il2cpp_TypeInfo_var))->___k_EnabledColorDark;
 		__this->___m_EnabledColor = L_3;
@@ -5207,7 +5207,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Color_tD001788D726C3A7F1379BEED0260B9591F440C
 
 IL_001d:
 	{
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:247>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:247>
 		Color_tD001788D726C3A7F1379BEED0260B9591F440C1F L_4 = __this->___m_EnabledColor;
 		return L_4;
 	}
@@ -5222,7 +5222,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Color_tD001788D726C3A7F1379BEED0260B9591F440C
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:261>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:261>
 		Color_tD001788D726C3A7F1379BEED0260B9591F440C1F L_0 = __this->___m_DisabledColor;
 		Color_tD001788D726C3A7F1379BEED0260B9591F440C1F L_1;
 		L_1 = Color_get_clear_m02E023A7D396B973288B3915F6F24FBF7E0DC81D_inline(NULL);
@@ -5234,7 +5234,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Color_tD001788D726C3A7F1379BEED0260B9591F440C
 		}
 	}
 	{
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:262>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:262>
 		il2cpp_codegen_runtime_class_init_inline(XRDeviceSimulatorUI_t83558A12FEB0C923A821ED77A9214E829ABA8E53_il2cpp_TypeInfo_var);
 		Color_tD001788D726C3A7F1379BEED0260B9591F440C1F L_3 = ((XRDeviceSimulatorUI_t83558A12FEB0C923A821ED77A9214E829ABA8E53_StaticFields*)il2cpp_codegen_static_fields_for(XRDeviceSimulatorUI_t83558A12FEB0C923A821ED77A9214E829ABA8E53_il2cpp_TypeInfo_var))->___k_DisabledColorDark;
 		__this->___m_DisabledColor = L_3;
@@ -5242,7 +5242,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Color_tD001788D726C3A7F1379BEED0260B9591F440C
 
 IL_001d:
 	{
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:264>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:264>
 		Color_tD001788D726C3A7F1379BEED0260B9591F440C1F L_4 = __this->___m_DisabledColor;
 		return L_4;
 	}
@@ -5257,7 +5257,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Color_tD001788D726C3A7F1379BEED0260B9591F440C
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:278>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:278>
 		Color_tD001788D726C3A7F1379BEED0260B9591F440C1F L_0 = __this->___m_ButtonColor;
 		Color_tD001788D726C3A7F1379BEED0260B9591F440C1F L_1;
 		L_1 = Color_get_clear_m02E023A7D396B973288B3915F6F24FBF7E0DC81D_inline(NULL);
@@ -5269,7 +5269,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Color_tD001788D726C3A7F1379BEED0260B9591F440C
 		}
 	}
 	{
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:279>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:279>
 		il2cpp_codegen_runtime_class_init_inline(XRDeviceSimulatorUI_t83558A12FEB0C923A821ED77A9214E829ABA8E53_il2cpp_TypeInfo_var);
 		Color_tD001788D726C3A7F1379BEED0260B9591F440C1F L_3 = ((XRDeviceSimulatorUI_t83558A12FEB0C923A821ED77A9214E829ABA8E53_StaticFields*)il2cpp_codegen_static_fields_for(XRDeviceSimulatorUI_t83558A12FEB0C923A821ED77A9214E829ABA8E53_il2cpp_TypeInfo_var))->___k_ButtonColorDark;
 		__this->___m_ButtonColor = L_3;
@@ -5277,7 +5277,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Color_tD001788D726C3A7F1379BEED0260B9591F440C
 
 IL_001d:
 	{
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:281>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:281>
 		Color_tD001788D726C3A7F1379BEED0260B9591F440C1F L_4 = __this->___m_ButtonColor;
 		return L_4;
 	}
@@ -5292,7 +5292,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Color_tD001788D726C3A7F1379BEED0260B9591F440C
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:295>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:295>
 		Color_tD001788D726C3A7F1379BEED0260B9591F440C1F L_0 = __this->___m_DisabledButtonColor;
 		Color_tD001788D726C3A7F1379BEED0260B9591F440C1F L_1;
 		L_1 = Color_get_clear_m02E023A7D396B973288B3915F6F24FBF7E0DC81D_inline(NULL);
@@ -5304,7 +5304,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Color_tD001788D726C3A7F1379BEED0260B9591F440C
 		}
 	}
 	{
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:296>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:296>
 		il2cpp_codegen_runtime_class_init_inline(XRDeviceSimulatorUI_t83558A12FEB0C923A821ED77A9214E829ABA8E53_il2cpp_TypeInfo_var);
 		Color_tD001788D726C3A7F1379BEED0260B9591F440C1F L_3 = ((XRDeviceSimulatorUI_t83558A12FEB0C923A821ED77A9214E829ABA8E53_StaticFields*)il2cpp_codegen_static_fields_for(XRDeviceSimulatorUI_t83558A12FEB0C923A821ED77A9214E829ABA8E53_il2cpp_TypeInfo_var))->___k_DisabledButtonColorDark;
 		__this->___m_DisabledButtonColor = L_3;
@@ -5312,7 +5312,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Color_tD001788D726C3A7F1379BEED0260B9591F440C
 
 IL_001d:
 	{
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:298>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:298>
 		Color_tD001788D726C3A7F1379BEED0260B9591F440C1F L_4 = __this->___m_DisabledButtonColor;
 		return L_4;
 	}
@@ -5327,7 +5327,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Color_tD001788D726C3A7F1379BEED0260B9591F440C
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:312>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:312>
 		Color_tD001788D726C3A7F1379BEED0260B9591F440C1F L_0 = __this->___m_SelectedColor;
 		Color_tD001788D726C3A7F1379BEED0260B9591F440C1F L_1;
 		L_1 = Color_get_clear_m02E023A7D396B973288B3915F6F24FBF7E0DC81D_inline(NULL);
@@ -5339,7 +5339,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Color_tD001788D726C3A7F1379BEED0260B9591F440C
 		}
 	}
 	{
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:313>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:313>
 		il2cpp_codegen_runtime_class_init_inline(XRDeviceSimulatorUI_t83558A12FEB0C923A821ED77A9214E829ABA8E53_il2cpp_TypeInfo_var);
 		Color_tD001788D726C3A7F1379BEED0260B9591F440C1F L_3 = ((XRDeviceSimulatorUI_t83558A12FEB0C923A821ED77A9214E829ABA8E53_StaticFields*)il2cpp_codegen_static_fields_for(XRDeviceSimulatorUI_t83558A12FEB0C923A821ED77A9214E829ABA8E53_il2cpp_TypeInfo_var))->___k_SelectedColorDark;
 		__this->___m_SelectedColor = L_3;
@@ -5347,7 +5347,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Color_tD001788D726C3A7F1379BEED0260B9591F440C
 
 IL_001d:
 	{
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:315>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:315>
 		Color_tD001788D726C3A7F1379BEED0260B9591F440C1F L_4 = __this->___m_SelectedColor;
 		return L_4;
 	}
@@ -5362,7 +5362,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Color_tD001788D726C3A7F1379BEED0260B9591F440C
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:329>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:329>
 		Color_tD001788D726C3A7F1379BEED0260B9591F440C1F L_0 = __this->___m_BackgroundColor;
 		Color_tD001788D726C3A7F1379BEED0260B9591F440C1F L_1;
 		L_1 = Color_get_clear_m02E023A7D396B973288B3915F6F24FBF7E0DC81D_inline(NULL);
@@ -5374,7 +5374,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Color_tD001788D726C3A7F1379BEED0260B9591F440C
 		}
 	}
 	{
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:330>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:330>
 		il2cpp_codegen_runtime_class_init_inline(XRDeviceSimulatorUI_t83558A12FEB0C923A821ED77A9214E829ABA8E53_il2cpp_TypeInfo_var);
 		Color_tD001788D726C3A7F1379BEED0260B9591F440C1F L_3 = ((XRDeviceSimulatorUI_t83558A12FEB0C923A821ED77A9214E829ABA8E53_StaticFields*)il2cpp_codegen_static_fields_for(XRDeviceSimulatorUI_t83558A12FEB0C923A821ED77A9214E829ABA8E53_il2cpp_TypeInfo_var))->___k_BackgroundColorDark;
 		__this->___m_BackgroundColor = L_3;
@@ -5382,7 +5382,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Color_tD001788D726C3A7F1379BEED0260B9591F440C
 
 IL_001d:
 	{
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:332>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:332>
 		Color_tD001788D726C3A7F1379BEED0260B9591F440C1F L_4 = __this->___m_BackgroundColor;
 		return L_4;
 	}
@@ -5397,7 +5397,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Color_tD001788D726C3A7F1379BEED0260B9591F440C
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:346>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:346>
 		Color_tD001788D726C3A7F1379BEED0260B9591F440C1F L_0 = __this->___m_DeviceColor;
 		Color_tD001788D726C3A7F1379BEED0260B9591F440C1F L_1;
 		L_1 = Color_get_clear_m02E023A7D396B973288B3915F6F24FBF7E0DC81D_inline(NULL);
@@ -5409,7 +5409,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Color_tD001788D726C3A7F1379BEED0260B9591F440C
 		}
 	}
 	{
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:347>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:347>
 		il2cpp_codegen_runtime_class_init_inline(XRDeviceSimulatorUI_t83558A12FEB0C923A821ED77A9214E829ABA8E53_il2cpp_TypeInfo_var);
 		Color_tD001788D726C3A7F1379BEED0260B9591F440C1F L_3 = ((XRDeviceSimulatorUI_t83558A12FEB0C923A821ED77A9214E829ABA8E53_StaticFields*)il2cpp_codegen_static_fields_for(XRDeviceSimulatorUI_t83558A12FEB0C923A821ED77A9214E829ABA8E53_il2cpp_TypeInfo_var))->___k_DeviceColorDark;
 		__this->___m_DeviceColor = L_3;
@@ -5417,7 +5417,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Color_tD001788D726C3A7F1379BEED0260B9591F440C
 
 IL_001d:
 	{
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:349>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:349>
 		Color_tD001788D726C3A7F1379BEED0260B9591F440C1F L_4 = __this->___m_DeviceColor;
 		return L_4;
 	}
@@ -5432,7 +5432,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Color_tD001788D726C3A7F1379BEED0260B9591F440C
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:363>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:363>
 		Color_tD001788D726C3A7F1379BEED0260B9591F440C1F L_0 = __this->___m_DisabledDeviceColor;
 		Color_tD001788D726C3A7F1379BEED0260B9591F440C1F L_1;
 		L_1 = Color_get_clear_m02E023A7D396B973288B3915F6F24FBF7E0DC81D_inline(NULL);
@@ -5444,7 +5444,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Color_tD001788D726C3A7F1379BEED0260B9591F440C
 		}
 	}
 	{
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:364>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:364>
 		il2cpp_codegen_runtime_class_init_inline(XRDeviceSimulatorUI_t83558A12FEB0C923A821ED77A9214E829ABA8E53_il2cpp_TypeInfo_var);
 		Color_tD001788D726C3A7F1379BEED0260B9591F440C1F L_3 = ((XRDeviceSimulatorUI_t83558A12FEB0C923A821ED77A9214E829ABA8E53_StaticFields*)il2cpp_codegen_static_fields_for(XRDeviceSimulatorUI_t83558A12FEB0C923A821ED77A9214E829ABA8E53_il2cpp_TypeInfo_var))->___k_DisabledDeviceColorDark;
 		__this->___m_DisabledDeviceColor = L_3;
@@ -5452,7 +5452,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Color_tD001788D726C3A7F1379BEED0260B9591F440C
 
 IL_001d:
 	{
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:366>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:366>
 		Color_tD001788D726C3A7F1379BEED0260B9591F440C1F L_4 = __this->___m_DisabledDeviceColor;
 		return L_4;
 	}
@@ -5469,11 +5469,11 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XRDeviceSimulatorUI_Start_m739C7F6F32D7C
 	}
 	XRDeviceSimulator_t2BEF1AB226D797BE78F5B291FCCB8A8B4274B30C* V_0 = NULL;
 	{
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:380>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:380>
 		XRDeviceSimulator_t2BEF1AB226D797BE78F5B291FCCB8A8B4274B30C* L_0;
 		L_0 = Component_GetComponentInParent_TisXRDeviceSimulator_t2BEF1AB226D797BE78F5B291FCCB8A8B4274B30C_m16D8340753559CE6BE4B1FDC8001ABA313C9F813(__this, Component_GetComponentInParent_TisXRDeviceSimulator_t2BEF1AB226D797BE78F5B291FCCB8A8B4274B30C_m16D8340753559CE6BE4B1FDC8001ABA313C9F813_RuntimeMethod_var);
 		V_0 = L_0;
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:381>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:381>
 		XRDeviceSimulator_t2BEF1AB226D797BE78F5B291FCCB8A8B4274B30C* L_1 = V_0;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_2;
@@ -5484,14 +5484,14 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XRDeviceSimulatorUI_Start_m739C7F6F32D7C
 		}
 	}
 	{
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:382>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:382>
 		XRDeviceSimulator_t2BEF1AB226D797BE78F5B291FCCB8A8B4274B30C* L_3 = V_0;
 		XRDeviceSimulatorUI_Initialize_m425B01133D22C13F1D38B878155DDFC94406872B(__this, L_3, NULL);
 	}
 
 IL_0017:
 	{
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:383>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:383>
 		return;
 	}
 }
@@ -5536,7 +5536,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XRDeviceSimulatorUI_OnDestroy_mF98E3E18D
 	Enumerator_tD1119497D994ECC40721896D685789028CCEDEB5 V_0;
 	memset((&V_0), 0, sizeof(V_0));
 	{
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:390>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:390>
 		XRDeviceSimulator_t2BEF1AB226D797BE78F5B291FCCB8A8B4274B30C* L_0 = __this->___m_Simulator;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_1;
@@ -5547,7 +5547,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XRDeviceSimulatorUI_OnDestroy_mF98E3E18D
 		}
 	}
 	{
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:392>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:392>
 		XRDeviceSimulator_t2BEF1AB226D797BE78F5B291FCCB8A8B4274B30C* L_2 = __this->___m_Simulator;
 		NullCheck(L_2);
 		InputActionReference_t64730C6B41271E0983FC21BFB416169F5D6BC4A1* L_3;
@@ -5556,7 +5556,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XRDeviceSimulatorUI_OnDestroy_mF98E3E18D
 		Action_1__ctor_mA763900B34C3394F230AE63708F530CA9A192B57(L_4, __this, (intptr_t)((void*)XRDeviceSimulatorUI_OnManipulateLeftAction_m4B6A407FA44F0F0D9780F2D94A23B309BBEC3832_RuntimeMethod_var), NULL);
 		il2cpp_codegen_runtime_class_init_inline(XRDeviceSimulatorUI_t83558A12FEB0C923A821ED77A9214E829ABA8E53_il2cpp_TypeInfo_var);
 		XRDeviceSimulatorUI_Unsubscribe_mE56100C367B596785956AF3AC5BD05D26EE19A0F(L_3, L_4, NULL);
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:393>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:393>
 		XRDeviceSimulator_t2BEF1AB226D797BE78F5B291FCCB8A8B4274B30C* L_5 = __this->___m_Simulator;
 		NullCheck(L_5);
 		InputActionReference_t64730C6B41271E0983FC21BFB416169F5D6BC4A1* L_6;
@@ -5564,7 +5564,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XRDeviceSimulatorUI_OnDestroy_mF98E3E18D
 		Action_1_tEB0353AA1A112B6F2D921B58DCC9D9D4C0498E6E* L_7 = (Action_1_tEB0353AA1A112B6F2D921B58DCC9D9D4C0498E6E*)il2cpp_codegen_object_new(Action_1_tEB0353AA1A112B6F2D921B58DCC9D9D4C0498E6E_il2cpp_TypeInfo_var);
 		Action_1__ctor_mA763900B34C3394F230AE63708F530CA9A192B57(L_7, __this, (intptr_t)((void*)XRDeviceSimulatorUI_OnManipulateRightAction_m312F96E19C9256B6FA40E2A09F99540B340BBF47_RuntimeMethod_var), NULL);
 		XRDeviceSimulatorUI_Unsubscribe_mE56100C367B596785956AF3AC5BD05D26EE19A0F(L_6, L_7, NULL);
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:394>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:394>
 		XRDeviceSimulator_t2BEF1AB226D797BE78F5B291FCCB8A8B4274B30C* L_8 = __this->___m_Simulator;
 		NullCheck(L_8);
 		InputActionReference_t64730C6B41271E0983FC21BFB416169F5D6BC4A1* L_9;
@@ -5572,7 +5572,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XRDeviceSimulatorUI_OnDestroy_mF98E3E18D
 		Action_1_tEB0353AA1A112B6F2D921B58DCC9D9D4C0498E6E* L_10 = (Action_1_tEB0353AA1A112B6F2D921B58DCC9D9D4C0498E6E*)il2cpp_codegen_object_new(Action_1_tEB0353AA1A112B6F2D921B58DCC9D9D4C0498E6E_il2cpp_TypeInfo_var);
 		Action_1__ctor_mA763900B34C3394F230AE63708F530CA9A192B57(L_10, __this, (intptr_t)((void*)XRDeviceSimulatorUI_OnToggleManipulateLeftAction_m4425E496DDEACF85F83685BB8B0D07CB382E0676_RuntimeMethod_var), NULL);
 		XRDeviceSimulatorUI_Unsubscribe_mE56100C367B596785956AF3AC5BD05D26EE19A0F(L_9, L_10, NULL);
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:395>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:395>
 		XRDeviceSimulator_t2BEF1AB226D797BE78F5B291FCCB8A8B4274B30C* L_11 = __this->___m_Simulator;
 		NullCheck(L_11);
 		InputActionReference_t64730C6B41271E0983FC21BFB416169F5D6BC4A1* L_12;
@@ -5580,7 +5580,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XRDeviceSimulatorUI_OnDestroy_mF98E3E18D
 		Action_1_tEB0353AA1A112B6F2D921B58DCC9D9D4C0498E6E* L_13 = (Action_1_tEB0353AA1A112B6F2D921B58DCC9D9D4C0498E6E*)il2cpp_codegen_object_new(Action_1_tEB0353AA1A112B6F2D921B58DCC9D9D4C0498E6E_il2cpp_TypeInfo_var);
 		Action_1__ctor_mA763900B34C3394F230AE63708F530CA9A192B57(L_13, __this, (intptr_t)((void*)XRDeviceSimulatorUI_OnToggleManipulateRightAction_m08E50EFFF01396EC2C00B78CD1BF70187B8CFB65_RuntimeMethod_var), NULL);
 		XRDeviceSimulatorUI_Unsubscribe_mE56100C367B596785956AF3AC5BD05D26EE19A0F(L_12, L_13, NULL);
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:396>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:396>
 		XRDeviceSimulator_t2BEF1AB226D797BE78F5B291FCCB8A8B4274B30C* L_14 = __this->___m_Simulator;
 		NullCheck(L_14);
 		InputActionReference_t64730C6B41271E0983FC21BFB416169F5D6BC4A1* L_15;
@@ -5588,7 +5588,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XRDeviceSimulatorUI_OnDestroy_mF98E3E18D
 		Action_1_tEB0353AA1A112B6F2D921B58DCC9D9D4C0498E6E* L_16 = (Action_1_tEB0353AA1A112B6F2D921B58DCC9D9D4C0498E6E*)il2cpp_codegen_object_new(Action_1_tEB0353AA1A112B6F2D921B58DCC9D9D4C0498E6E_il2cpp_TypeInfo_var);
 		Action_1__ctor_mA763900B34C3394F230AE63708F530CA9A192B57(L_16, __this, (intptr_t)((void*)XRDeviceSimulatorUI_OnToggleManipulateBodyAction_m3E2FF42E6E229E0B52D7212E98A40539D8D68942_RuntimeMethod_var), NULL);
 		XRDeviceSimulatorUI_Unsubscribe_mE56100C367B596785956AF3AC5BD05D26EE19A0F(L_15, L_16, NULL);
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:397>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:397>
 		XRDeviceSimulator_t2BEF1AB226D797BE78F5B291FCCB8A8B4274B30C* L_17 = __this->___m_Simulator;
 		NullCheck(L_17);
 		InputActionReference_t64730C6B41271E0983FC21BFB416169F5D6BC4A1* L_18;
@@ -5596,7 +5596,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XRDeviceSimulatorUI_OnDestroy_mF98E3E18D
 		Action_1_tEB0353AA1A112B6F2D921B58DCC9D9D4C0498E6E* L_19 = (Action_1_tEB0353AA1A112B6F2D921B58DCC9D9D4C0498E6E*)il2cpp_codegen_object_new(Action_1_tEB0353AA1A112B6F2D921B58DCC9D9D4C0498E6E_il2cpp_TypeInfo_var);
 		Action_1__ctor_mA763900B34C3394F230AE63708F530CA9A192B57(L_19, __this, (intptr_t)((void*)XRDeviceSimulatorUI_OnManipulateHeadAction_m562653ABA3A03416C37690E25BD3D4941BF676E1_RuntimeMethod_var), NULL);
 		XRDeviceSimulatorUI_Unsubscribe_mE56100C367B596785956AF3AC5BD05D26EE19A0F(L_18, L_19, NULL);
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:398>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:398>
 		XRDeviceSimulator_t2BEF1AB226D797BE78F5B291FCCB8A8B4274B30C* L_20 = __this->___m_Simulator;
 		NullCheck(L_20);
 		InputActionReference_t64730C6B41271E0983FC21BFB416169F5D6BC4A1* L_21;
@@ -5604,7 +5604,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XRDeviceSimulatorUI_OnDestroy_mF98E3E18D
 		Action_1_tEB0353AA1A112B6F2D921B58DCC9D9D4C0498E6E* L_22 = (Action_1_tEB0353AA1A112B6F2D921B58DCC9D9D4C0498E6E*)il2cpp_codegen_object_new(Action_1_tEB0353AA1A112B6F2D921B58DCC9D9D4C0498E6E_il2cpp_TypeInfo_var);
 		Action_1__ctor_mA763900B34C3394F230AE63708F530CA9A192B57(L_22, __this, (intptr_t)((void*)XRDeviceSimulatorUI_OnHandControllerModeAction_m19010BBFC5E2679B59904AF60665B84066F5128C_RuntimeMethod_var), NULL);
 		XRDeviceSimulatorUI_Unsubscribe_mE56100C367B596785956AF3AC5BD05D26EE19A0F(L_21, L_22, NULL);
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:399>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:399>
 		XRDeviceSimulator_t2BEF1AB226D797BE78F5B291FCCB8A8B4274B30C* L_23 = __this->___m_Simulator;
 		NullCheck(L_23);
 		InputActionReference_t64730C6B41271E0983FC21BFB416169F5D6BC4A1* L_24;
@@ -5612,7 +5612,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XRDeviceSimulatorUI_OnDestroy_mF98E3E18D
 		Action_1_tEB0353AA1A112B6F2D921B58DCC9D9D4C0498E6E* L_25 = (Action_1_tEB0353AA1A112B6F2D921B58DCC9D9D4C0498E6E*)il2cpp_codegen_object_new(Action_1_tEB0353AA1A112B6F2D921B58DCC9D9D4C0498E6E_il2cpp_TypeInfo_var);
 		Action_1__ctor_mA763900B34C3394F230AE63708F530CA9A192B57(L_25, __this, (intptr_t)((void*)XRDeviceSimulatorUI_OnCycleDevicesAction_m06D5E6B758F0962ED8DF77F44F160F2AF27CFABB_RuntimeMethod_var), NULL);
 		XRDeviceSimulatorUI_Unsubscribe_mE56100C367B596785956AF3AC5BD05D26EE19A0F(L_24, L_25, NULL);
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:400>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:400>
 		XRDeviceSimulator_t2BEF1AB226D797BE78F5B291FCCB8A8B4274B30C* L_26 = __this->___m_Simulator;
 		NullCheck(L_26);
 		InputActionReference_t64730C6B41271E0983FC21BFB416169F5D6BC4A1* L_27;
@@ -5620,7 +5620,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XRDeviceSimulatorUI_OnDestroy_mF98E3E18D
 		Action_1_tEB0353AA1A112B6F2D921B58DCC9D9D4C0498E6E* L_28 = (Action_1_tEB0353AA1A112B6F2D921B58DCC9D9D4C0498E6E*)il2cpp_codegen_object_new(Action_1_tEB0353AA1A112B6F2D921B58DCC9D9D4C0498E6E_il2cpp_TypeInfo_var);
 		Action_1__ctor_mA763900B34C3394F230AE63708F530CA9A192B57(L_28, __this, (intptr_t)((void*)XRDeviceSimulatorUI_OnStopManipulationAction_m212983E80F4D415F2476EA74358748F5D1EB7235_RuntimeMethod_var), NULL);
 		XRDeviceSimulatorUI_Unsubscribe_mE56100C367B596785956AF3AC5BD05D26EE19A0F(L_27, L_28, NULL);
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:401>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:401>
 		XRDeviceSimulator_t2BEF1AB226D797BE78F5B291FCCB8A8B4274B30C* L_29 = __this->___m_Simulator;
 		NullCheck(L_29);
 		InputActionReference_t64730C6B41271E0983FC21BFB416169F5D6BC4A1* L_30;
@@ -5628,7 +5628,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XRDeviceSimulatorUI_OnDestroy_mF98E3E18D
 		Action_1_tEB0353AA1A112B6F2D921B58DCC9D9D4C0498E6E* L_31 = (Action_1_tEB0353AA1A112B6F2D921B58DCC9D9D4C0498E6E*)il2cpp_codegen_object_new(Action_1_tEB0353AA1A112B6F2D921B58DCC9D9D4C0498E6E_il2cpp_TypeInfo_var);
 		Action_1__ctor_mA763900B34C3394F230AE63708F530CA9A192B57(L_31, __this, (intptr_t)((void*)XRDeviceSimulatorUI_OnToggleMouseTransformationModeAction_mBCD407AAD41886BAEE366E3523251CD14BF222C7_RuntimeMethod_var), NULL);
 		XRDeviceSimulatorUI_Unsubscribe_mE56100C367B596785956AF3AC5BD05D26EE19A0F(L_30, L_31, NULL);
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:402>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:402>
 		XRDeviceSimulator_t2BEF1AB226D797BE78F5B291FCCB8A8B4274B30C* L_32 = __this->___m_Simulator;
 		NullCheck(L_32);
 		InputActionReference_t64730C6B41271E0983FC21BFB416169F5D6BC4A1* L_33;
@@ -5636,7 +5636,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XRDeviceSimulatorUI_OnDestroy_mF98E3E18D
 		Action_1_tEB0353AA1A112B6F2D921B58DCC9D9D4C0498E6E* L_34 = (Action_1_tEB0353AA1A112B6F2D921B58DCC9D9D4C0498E6E*)il2cpp_codegen_object_new(Action_1_tEB0353AA1A112B6F2D921B58DCC9D9D4C0498E6E_il2cpp_TypeInfo_var);
 		Action_1__ctor_mA763900B34C3394F230AE63708F530CA9A192B57(L_34, __this, (intptr_t)((void*)XRDeviceSimulatorUI_OnNegateModeAction_mC48377DE1D0E36F2E4DF4A61B8FD1E09081752EC_RuntimeMethod_var), NULL);
 		XRDeviceSimulatorUI_Unsubscribe_mE56100C367B596785956AF3AC5BD05D26EE19A0F(L_33, L_34, NULL);
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:403>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:403>
 		XRDeviceSimulator_t2BEF1AB226D797BE78F5B291FCCB8A8B4274B30C* L_35 = __this->___m_Simulator;
 		NullCheck(L_35);
 		InputActionReference_t64730C6B41271E0983FC21BFB416169F5D6BC4A1* L_36;
@@ -5644,7 +5644,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XRDeviceSimulatorUI_OnDestroy_mF98E3E18D
 		Action_1_tEB0353AA1A112B6F2D921B58DCC9D9D4C0498E6E* L_37 = (Action_1_tEB0353AA1A112B6F2D921B58DCC9D9D4C0498E6E*)il2cpp_codegen_object_new(Action_1_tEB0353AA1A112B6F2D921B58DCC9D9D4C0498E6E_il2cpp_TypeInfo_var);
 		Action_1__ctor_mA763900B34C3394F230AE63708F530CA9A192B57(L_37, __this, (intptr_t)((void*)XRDeviceSimulatorUI_OnToggleCursorLockAction_m0CD3BD8878447C011FC2A804BBF88AF03D729E06_RuntimeMethod_var), NULL);
 		XRDeviceSimulatorUI_Unsubscribe_mE56100C367B596785956AF3AC5BD05D26EE19A0F(L_36, L_37, NULL);
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:404>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:404>
 		XRDeviceSimulator_t2BEF1AB226D797BE78F5B291FCCB8A8B4274B30C* L_38 = __this->___m_Simulator;
 		NullCheck(L_38);
 		InputActionReference_t64730C6B41271E0983FC21BFB416169F5D6BC4A1* L_39;
@@ -5652,7 +5652,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XRDeviceSimulatorUI_OnDestroy_mF98E3E18D
 		Action_1_tEB0353AA1A112B6F2D921B58DCC9D9D4C0498E6E* L_40 = (Action_1_tEB0353AA1A112B6F2D921B58DCC9D9D4C0498E6E*)il2cpp_codegen_object_new(Action_1_tEB0353AA1A112B6F2D921B58DCC9D9D4C0498E6E_il2cpp_TypeInfo_var);
 		Action_1__ctor_mA763900B34C3394F230AE63708F530CA9A192B57(L_40, __this, (intptr_t)((void*)XRDeviceSimulatorUI_OnKeyboardXTranslateAction_mD15F59FAAE0813CB8FB290DC92366EDEBEE17CD9_RuntimeMethod_var), NULL);
 		XRDeviceSimulatorUI_Unsubscribe_mE56100C367B596785956AF3AC5BD05D26EE19A0F(L_39, L_40, NULL);
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:405>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:405>
 		XRDeviceSimulator_t2BEF1AB226D797BE78F5B291FCCB8A8B4274B30C* L_41 = __this->___m_Simulator;
 		NullCheck(L_41);
 		InputActionReference_t64730C6B41271E0983FC21BFB416169F5D6BC4A1* L_42;
@@ -5660,7 +5660,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XRDeviceSimulatorUI_OnDestroy_mF98E3E18D
 		Action_1_tEB0353AA1A112B6F2D921B58DCC9D9D4C0498E6E* L_43 = (Action_1_tEB0353AA1A112B6F2D921B58DCC9D9D4C0498E6E*)il2cpp_codegen_object_new(Action_1_tEB0353AA1A112B6F2D921B58DCC9D9D4C0498E6E_il2cpp_TypeInfo_var);
 		Action_1__ctor_mA763900B34C3394F230AE63708F530CA9A192B57(L_43, __this, (intptr_t)((void*)XRDeviceSimulatorUI_OnKeyboardYTranslateAction_m1E41187896D73B09F2693D94227BB9440B43D46C_RuntimeMethod_var), NULL);
 		XRDeviceSimulatorUI_Unsubscribe_mE56100C367B596785956AF3AC5BD05D26EE19A0F(L_42, L_43, NULL);
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:406>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:406>
 		XRDeviceSimulator_t2BEF1AB226D797BE78F5B291FCCB8A8B4274B30C* L_44 = __this->___m_Simulator;
 		NullCheck(L_44);
 		InputActionReference_t64730C6B41271E0983FC21BFB416169F5D6BC4A1* L_45;
@@ -5668,7 +5668,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XRDeviceSimulatorUI_OnDestroy_mF98E3E18D
 		Action_1_tEB0353AA1A112B6F2D921B58DCC9D9D4C0498E6E* L_46 = (Action_1_tEB0353AA1A112B6F2D921B58DCC9D9D4C0498E6E*)il2cpp_codegen_object_new(Action_1_tEB0353AA1A112B6F2D921B58DCC9D9D4C0498E6E_il2cpp_TypeInfo_var);
 		Action_1__ctor_mA763900B34C3394F230AE63708F530CA9A192B57(L_46, __this, (intptr_t)((void*)XRDeviceSimulatorUI_OnKeyboardZTranslateAction_m878A205BB14E48CEF4D1323360F9B1BEC0B32BB3_RuntimeMethod_var), NULL);
 		XRDeviceSimulatorUI_Unsubscribe_mE56100C367B596785956AF3AC5BD05D26EE19A0F(L_45, L_46, NULL);
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:407>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:407>
 		XRDeviceSimulator_t2BEF1AB226D797BE78F5B291FCCB8A8B4274B30C* L_47 = __this->___m_Simulator;
 		NullCheck(L_47);
 		InputActionReference_t64730C6B41271E0983FC21BFB416169F5D6BC4A1* L_48;
@@ -5676,7 +5676,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XRDeviceSimulatorUI_OnDestroy_mF98E3E18D
 		Action_1_tEB0353AA1A112B6F2D921B58DCC9D9D4C0498E6E* L_49 = (Action_1_tEB0353AA1A112B6F2D921B58DCC9D9D4C0498E6E*)il2cpp_codegen_object_new(Action_1_tEB0353AA1A112B6F2D921B58DCC9D9D4C0498E6E_il2cpp_TypeInfo_var);
 		Action_1__ctor_mA763900B34C3394F230AE63708F530CA9A192B57(L_49, __this, (intptr_t)((void*)XRDeviceSimulatorUI_OnRestingHandAxis2DAction_mFD0FEAF0EF6E3581F7E7F420D68BFCB0047323C6_RuntimeMethod_var), NULL);
 		XRDeviceSimulatorUI_Unsubscribe_mE56100C367B596785956AF3AC5BD05D26EE19A0F(L_48, L_49, NULL);
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:408>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:408>
 		XRDeviceSimulator_t2BEF1AB226D797BE78F5B291FCCB8A8B4274B30C* L_50 = __this->___m_Simulator;
 		NullCheck(L_50);
 		InputActionReference_t64730C6B41271E0983FC21BFB416169F5D6BC4A1* L_51;
@@ -5684,7 +5684,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XRDeviceSimulatorUI_OnDestroy_mF98E3E18D
 		Action_1_tEB0353AA1A112B6F2D921B58DCC9D9D4C0498E6E* L_52 = (Action_1_tEB0353AA1A112B6F2D921B58DCC9D9D4C0498E6E*)il2cpp_codegen_object_new(Action_1_tEB0353AA1A112B6F2D921B58DCC9D9D4C0498E6E_il2cpp_TypeInfo_var);
 		Action_1__ctor_mA763900B34C3394F230AE63708F530CA9A192B57(L_52, __this, (intptr_t)((void*)XRDeviceSimulatorUI_OnGripAction_m33135607635A751290AADD67F007A452216A56F7_RuntimeMethod_var), NULL);
 		XRDeviceSimulatorUI_Unsubscribe_mE56100C367B596785956AF3AC5BD05D26EE19A0F(L_51, L_52, NULL);
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:409>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:409>
 		XRDeviceSimulator_t2BEF1AB226D797BE78F5B291FCCB8A8B4274B30C* L_53 = __this->___m_Simulator;
 		NullCheck(L_53);
 		InputActionReference_t64730C6B41271E0983FC21BFB416169F5D6BC4A1* L_54;
@@ -5692,7 +5692,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XRDeviceSimulatorUI_OnDestroy_mF98E3E18D
 		Action_1_tEB0353AA1A112B6F2D921B58DCC9D9D4C0498E6E* L_55 = (Action_1_tEB0353AA1A112B6F2D921B58DCC9D9D4C0498E6E*)il2cpp_codegen_object_new(Action_1_tEB0353AA1A112B6F2D921B58DCC9D9D4C0498E6E_il2cpp_TypeInfo_var);
 		Action_1__ctor_mA763900B34C3394F230AE63708F530CA9A192B57(L_55, __this, (intptr_t)((void*)XRDeviceSimulatorUI_OnTriggerAction_mBC71C10EB435D0FF5AFD68605BC8BCEBB9AA6099_RuntimeMethod_var), NULL);
 		XRDeviceSimulatorUI_Unsubscribe_mE56100C367B596785956AF3AC5BD05D26EE19A0F(L_54, L_55, NULL);
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:410>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:410>
 		XRDeviceSimulator_t2BEF1AB226D797BE78F5B291FCCB8A8B4274B30C* L_56 = __this->___m_Simulator;
 		NullCheck(L_56);
 		InputActionReference_t64730C6B41271E0983FC21BFB416169F5D6BC4A1* L_57;
@@ -5700,7 +5700,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XRDeviceSimulatorUI_OnDestroy_mF98E3E18D
 		Action_1_tEB0353AA1A112B6F2D921B58DCC9D9D4C0498E6E* L_58 = (Action_1_tEB0353AA1A112B6F2D921B58DCC9D9D4C0498E6E*)il2cpp_codegen_object_new(Action_1_tEB0353AA1A112B6F2D921B58DCC9D9D4C0498E6E_il2cpp_TypeInfo_var);
 		Action_1__ctor_mA763900B34C3394F230AE63708F530CA9A192B57(L_58, __this, (intptr_t)((void*)XRDeviceSimulatorUI_OnMenuAction_m06014E5810FBF8B8CB8575204F6C0B33D69F46AC_RuntimeMethod_var), NULL);
 		XRDeviceSimulatorUI_Unsubscribe_mE56100C367B596785956AF3AC5BD05D26EE19A0F(L_57, L_58, NULL);
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:411>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:411>
 		XRDeviceSimulator_t2BEF1AB226D797BE78F5B291FCCB8A8B4274B30C* L_59 = __this->___m_Simulator;
 		NullCheck(L_59);
 		InputActionReference_t64730C6B41271E0983FC21BFB416169F5D6BC4A1* L_60;
@@ -5708,7 +5708,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XRDeviceSimulatorUI_OnDestroy_mF98E3E18D
 		Action_1_tEB0353AA1A112B6F2D921B58DCC9D9D4C0498E6E* L_61 = (Action_1_tEB0353AA1A112B6F2D921B58DCC9D9D4C0498E6E*)il2cpp_codegen_object_new(Action_1_tEB0353AA1A112B6F2D921B58DCC9D9D4C0498E6E_il2cpp_TypeInfo_var);
 		Action_1__ctor_mA763900B34C3394F230AE63708F530CA9A192B57(L_61, __this, (intptr_t)((void*)XRDeviceSimulatorUI_OnPrimaryButtonAction_mAEA274E9DE7E1EC10955EC2B4914B95C8B009F5F_RuntimeMethod_var), NULL);
 		XRDeviceSimulatorUI_Unsubscribe_mE56100C367B596785956AF3AC5BD05D26EE19A0F(L_60, L_61, NULL);
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:412>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:412>
 		XRDeviceSimulator_t2BEF1AB226D797BE78F5B291FCCB8A8B4274B30C* L_62 = __this->___m_Simulator;
 		NullCheck(L_62);
 		InputActionReference_t64730C6B41271E0983FC21BFB416169F5D6BC4A1* L_63;
@@ -5716,7 +5716,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XRDeviceSimulatorUI_OnDestroy_mF98E3E18D
 		Action_1_tEB0353AA1A112B6F2D921B58DCC9D9D4C0498E6E* L_64 = (Action_1_tEB0353AA1A112B6F2D921B58DCC9D9D4C0498E6E*)il2cpp_codegen_object_new(Action_1_tEB0353AA1A112B6F2D921B58DCC9D9D4C0498E6E_il2cpp_TypeInfo_var);
 		Action_1__ctor_mA763900B34C3394F230AE63708F530CA9A192B57(L_64, __this, (intptr_t)((void*)XRDeviceSimulatorUI_OnSecondaryButtonAction_m1E86508C1CC1AD1FBC2C5BBBC5B3DEDB0B07882E_RuntimeMethod_var), NULL);
 		XRDeviceSimulatorUI_Unsubscribe_mE56100C367B596785956AF3AC5BD05D26EE19A0F(L_63, L_64, NULL);
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:414>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:414>
 		XRDeviceSimulator_t2BEF1AB226D797BE78F5B291FCCB8A8B4274B30C* L_65 = __this->___m_Simulator;
 		NullCheck(L_65);
 		List_1_tC5D2825C62051A5FA567CE68202ACEE33C59D2FB* L_66;
@@ -5744,10 +5744,10 @@ FINALLY_0293:
 
 IL_0270_1:
 			{
-				//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:414>
+				//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:414>
 				SimulatedHandExpression_t182C654EA8E45C3AB60BF8AA3BEFDFCBBD8F3CAD* L_68;
 				L_68 = Enumerator_get_Current_m073D5B3C00CE54166670904C566A35AC4C66BC16_inline((&V_0), Enumerator_get_Current_m073D5B3C00CE54166670904C566A35AC4C66BC16_RuntimeMethod_var);
-				//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:416>
+				//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:416>
 				Action_2_t076BA6FDFFF3C0B66A2114AC66FD274184606690* L_69 = (Action_2_t076BA6FDFFF3C0B66A2114AC66FD274184606690*)il2cpp_codegen_object_new(Action_2_t076BA6FDFFF3C0B66A2114AC66FD274184606690_il2cpp_TypeInfo_var);
 				Action_2__ctor_m5482F7BA6B5F160B391E7138C1D304D7BC7A3A47(L_69, __this, (intptr_t)((void*)XRDeviceSimulatorUI_OnHandExpressionAction_m75963B1E3E0DD29856773AD847449B7DB5168617_RuntimeMethod_var), NULL);
 				NullCheck(L_68);
@@ -5756,7 +5756,7 @@ IL_0270_1:
 
 IL_0288_1:
 			{
-				//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:414>
+				//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:414>
 				bool L_70;
 				L_70 = Enumerator_MoveNext_m1BB285AD78B9621615C298FE565F4D9063D29E54((&V_0), Enumerator_MoveNext_m1BB285AD78B9621615C298FE565F4D9063D29E54_RuntimeMethod_var);
 				if (L_70)
@@ -5776,7 +5776,7 @@ IL_0288_1:
 
 IL_02a1:
 	{
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:421>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:421>
 		return;
 	}
 }
@@ -5784,19 +5784,19 @@ IL_02a1:
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XRDeviceSimulatorUI_Initialize_m425B01133D22C13F1D38B878155DDFC94406872B (XRDeviceSimulatorUI_t83558A12FEB0C923A821ED77A9214E829ABA8E53* __this, XRDeviceSimulator_t2BEF1AB226D797BE78F5B291FCCB8A8B4274B30C* ___0_simulator, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:425>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:425>
 		XRDeviceSimulator_t2BEF1AB226D797BE78F5B291FCCB8A8B4274B30C* L_0 = ___0_simulator;
 		__this->___m_Simulator = L_0;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___m_Simulator), (void*)L_0);
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:426>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:426>
 		XRDeviceSimulatorUI_InitColorTheme_m83254C50763AF914736363495F36A2A11593C0F3(__this, NULL);
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:427>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:427>
 		XRDeviceSimulatorUI_Initialize_mE0A53F5111B2AC5A0B2A36BE979BE21DD802F241(__this, NULL);
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:429>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:429>
 		XRDeviceSimulatorUI_OnSetMouseMode_mEF57C0283E7FE9D7265692970D0A61619D0F06D0(__this, NULL);
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:430>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:430>
 		XRDeviceSimulatorUI_OnActivateHeadsetDevice_m10763B4667D62E69C21E889D1227DD11C78AE071(__this, (bool)1, NULL);
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:431>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:431>
 		return;
 	}
 }
@@ -5804,7 +5804,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XRDeviceSimulatorUI_Initialize_m425B0113
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XRDeviceSimulatorUI_InitColorTheme_m83254C50763AF914736363495F36A2A11593C0F3 (XRDeviceSimulatorUI_t83558A12FEB0C923A821ED77A9214E829ABA8E53* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:448>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:448>
 		return;
 	}
 }
@@ -5904,7 +5904,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XRDeviceSimulatorUI_Initialize_mE0A53F51
 	String_t* G_B25_0 = NULL;
 	Text_tD60B2346DAA6666BF0D822FF607F0B220C2B9E62* G_B25_1 = NULL;
 	{
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:452>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:452>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_0 = __this->___m_XRDeviceSimulatorMainPanel;
 		NullCheck(L_0);
 		Image_tBC1D03F63BF71132E9A5E472B8742F172A011E7E* L_1;
@@ -5914,7 +5914,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XRDeviceSimulatorUI_Initialize_mE0A53F51
 		L_2 = VirtualFuncInvoker0< Color_tD001788D726C3A7F1379BEED0260B9591F440C1F >::Invoke(22, L_1);
 		float L_3 = L_2.___a;
 		V_0 = L_3;
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:454>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:454>
 		ImageU5BU5D_t8869694C217655DA7B1315DC02C80F1308B78B78* L_4;
 		L_4 = Component_GetComponentsInChildren_TisImage_tBC1D03F63BF71132E9A5E472B8742F172A011E7E_m40E1B2191581E16FCBEBE5B653EFBDB8D039B797(__this, (bool)1, Component_GetComponentsInChildren_TisImage_tBC1D03F63BF71132E9A5E472B8742F172A011E7E_m40E1B2191581E16FCBEBE5B653EFBDB8D039B797_RuntimeMethod_var);
 		V_8 = L_4;
@@ -5924,14 +5924,14 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XRDeviceSimulatorUI_Initialize_mE0A53F51
 
 IL_0024:
 	{
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:454>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:454>
 		ImageU5BU5D_t8869694C217655DA7B1315DC02C80F1308B78B78* L_5 = V_8;
 		int32_t L_6 = V_9;
 		NullCheck(L_5);
 		int32_t L_7 = L_6;
 		Image_tBC1D03F63BF71132E9A5E472B8742F172A011E7E* L_8 = (L_5)->GetAt(static_cast<il2cpp_array_size_t>(L_7));
 		V_10 = L_8;
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:455>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:455>
 		Image_tBC1D03F63BF71132E9A5E472B8742F172A011E7E* L_9 = V_10;
 		Image_tBC1D03F63BF71132E9A5E472B8742F172A011E7E* L_10 = V_10;
 		NullCheck(L_10);
@@ -5989,7 +5989,7 @@ IL_005e:
 
 IL_0069:
 	{
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:454>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:454>
 		int32_t L_20 = V_9;
 		ImageU5BU5D_t8869694C217655DA7B1315DC02C80F1308B78B78* L_21 = V_8;
 		NullCheck(L_21);
@@ -5999,7 +5999,7 @@ IL_0069:
 		}
 	}
 	{
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:458>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:458>
 		TextU5BU5D_t1D476A037C4542F053D17ADAFA2723F311F9A353* L_22;
 		L_22 = Component_GetComponentsInChildren_TisText_tD60B2346DAA6666BF0D822FF607F0B220C2B9E62_m83C8DBC43D39A757C6346855FF0B7E8A4534C449(__this, (bool)1, Component_GetComponentsInChildren_TisText_tD60B2346DAA6666BF0D822FF607F0B220C2B9E62_m83C8DBC43D39A757C6346855FF0B7E8A4534C449_RuntimeMethod_var);
 		V_11 = L_22;
@@ -6009,13 +6009,13 @@ IL_0069:
 
 IL_007f:
 	{
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:458>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:458>
 		TextU5BU5D_t1D476A037C4542F053D17ADAFA2723F311F9A353* L_23 = V_11;
 		int32_t L_24 = V_9;
 		NullCheck(L_23);
 		int32_t L_25 = L_24;
 		Text_tD60B2346DAA6666BF0D822FF607F0B220C2B9E62* L_26 = (L_23)->GetAt(static_cast<il2cpp_array_size_t>(L_25));
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:459>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:459>
 		Color_tD001788D726C3A7F1379BEED0260B9591F440C1F L_27;
 		L_27 = XRDeviceSimulatorUI_get_enabledColor_mB975913853742DC6B1CF8A6BDB1A12C28FE37318(__this, NULL);
 		NullCheck(L_26);
@@ -6026,7 +6026,7 @@ IL_007f:
 
 IL_0095:
 	{
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:458>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:458>
 		int32_t L_29 = V_9;
 		TextU5BU5D_t1D476A037C4542F053D17ADAFA2723F311F9A353* L_30 = V_11;
 		NullCheck(L_30);
@@ -6036,20 +6036,20 @@ IL_0095:
 		}
 	}
 	{
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:461>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:461>
 		Image_tBC1D03F63BF71132E9A5E472B8742F172A011E7E* L_31 = __this->___m_HeadsetImage;
 		Color_tD001788D726C3A7F1379BEED0260B9591F440C1F L_32;
 		L_32 = Color_get_white_m068F5AF879B0FCA584E3693F762EA41BB65532C6_inline(NULL);
 		NullCheck(L_31);
 		VirtualActionInvoker1< Color_tD001788D726C3A7F1379BEED0260B9591F440C1F >::Invoke(23, L_31, L_32);
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:463>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:463>
 		Color_tD001788D726C3A7F1379BEED0260B9591F440C1F L_33;
 		L_33 = XRDeviceSimulatorUI_get_backgroundColor_mF378ACE3D75AB279378BBED48C249E19154EFC8A(__this, NULL);
 		V_1 = L_33;
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:464>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:464>
 		float L_34 = V_0;
 		(&V_1)->___a = L_34;
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:465>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:465>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_35 = __this->___m_XRDeviceSimulatorMainPanel;
 		NullCheck(L_35);
 		Image_tBC1D03F63BF71132E9A5E472B8742F172A011E7E* L_36;
@@ -6057,7 +6057,7 @@ IL_0095:
 		Color_tD001788D726C3A7F1379BEED0260B9591F440C1F L_37 = V_1;
 		NullCheck(L_36);
 		VirtualActionInvoker1< Color_tD001788D726C3A7F1379BEED0260B9591F440C1F >::Invoke(23, L_36, L_37);
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:466>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:466>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_38 = __this->___m_XRDeviceSimulatorCollapsedPanel;
 		NullCheck(L_38);
 		Image_tBC1D03F63BF71132E9A5E472B8742F172A011E7E* L_39;
@@ -6065,7 +6065,7 @@ IL_0095:
 		Color_tD001788D726C3A7F1379BEED0260B9591F440C1F L_40 = V_1;
 		NullCheck(L_39);
 		VirtualActionInvoker1< Color_tD001788D726C3A7F1379BEED0260B9591F440C1F >::Invoke(23, L_39, L_40);
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:468>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:468>
 		Text_tD60B2346DAA6666BF0D822FF607F0B220C2B9E62* L_41 = __this->___m_CycleDevicesText;
 		XRDeviceSimulator_t2BEF1AB226D797BE78F5B291FCCB8A8B4274B30C* L_42 = __this->___m_Simulator;
 		NullCheck(L_42);
@@ -6085,7 +6085,7 @@ IL_0095:
 		L_47 = InputControl_get_displayName_m9F6CBDDD6B25EC0E25BEE1DD51105667F0BA9A23(L_46, NULL);
 		NullCheck(L_41);
 		VirtualActionInvoker1< String_t* >::Invoke(75, L_41, L_47);
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:471>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:471>
 		XRDeviceSimulator_t2BEF1AB226D797BE78F5B291FCCB8A8B4274B30C* L_48 = __this->___m_Simulator;
 		NullCheck(L_48);
 		InputActionReference_t64730C6B41271E0983FC21BFB416169F5D6BC4A1* L_49;
@@ -6100,7 +6100,7 @@ IL_0095:
 		InputControl_t74F06B623518F992BF8E38656A5E0857169E3E2E* L_52;
 		L_52 = ReadOnlyArray_1_get_Item_mF7217A9697E8EAA3A574FCDCB611597EC9C1836A((&V_12), 0, ReadOnlyArray_1_get_Item_mF7217A9697E8EAA3A574FCDCB611597EC9C1836A_RuntimeMethod_var);
 		V_2 = L_52;
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:472>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:472>
 		Text_tD60B2346DAA6666BF0D822FF607F0B220C2B9E62* L_53 = __this->___m_HeadsetSelectedValueText;
 		InputControl_t74F06B623518F992BF8E38656A5E0857169E3E2E* L_54 = V_2;
 		NullCheck(L_54);
@@ -6125,7 +6125,7 @@ IL_0142:
 	{
 		NullCheck(G_B12_1);
 		VirtualActionInvoker1< String_t* >::Invoke(75, G_B12_1, G_B12_0);
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:474>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:474>
 		XRDeviceSimulator_t2BEF1AB226D797BE78F5B291FCCB8A8B4274B30C* L_57 = __this->___m_Simulator;
 		NullCheck(L_57);
 		InputActionReference_t64730C6B41271E0983FC21BFB416169F5D6BC4A1* L_58;
@@ -6137,7 +6137,7 @@ IL_0142:
 		ReadOnlyArray_1_tA1DF7A256AD2BF17FB155224CB2611ED215EFCD3 L_60;
 		L_60 = InputAction_get_controls_mC677AD1ABF680C5D2175E704FFAF0C6C3A86FE82(L_59, NULL);
 		V_3 = L_60;
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:475>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:475>
 		XRDeviceSimulator_t2BEF1AB226D797BE78F5B291FCCB8A8B4274B30C* L_61 = __this->___m_Simulator;
 		NullCheck(L_61);
 		InputActionReference_t64730C6B41271E0983FC21BFB416169F5D6BC4A1* L_62;
@@ -6149,8 +6149,8 @@ IL_0142:
 		ReadOnlyArray_1_tA1DF7A256AD2BF17FB155224CB2611ED215EFCD3 L_64;
 		L_64 = InputAction_get_controls_mC677AD1ABF680C5D2175E704FFAF0C6C3A86FE82(L_63, NULL);
 		V_4 = L_64;
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:476>
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:477>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:476>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:477>
 		Text_tD60B2346DAA6666BF0D822FF607F0B220C2B9E62* L_65 = __this->___m_HeadsetMoveValueText;
 		StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_66 = (StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248*)(StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248*)SZArrayNew(StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248_il2cpp_TypeInfo_var, (uint32_t)((int32_t)11));
 		StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_67 = L_66;
@@ -6220,7 +6220,7 @@ IL_0142:
 		L_90 = String_Concat_m647EBF831F54B6DF7D5AFA5FD012CF4EE7571B6A(L_87, NULL);
 		NullCheck(L_65);
 		VirtualActionInvoker1< String_t* >::Invoke(75, L_65, L_90);
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:479>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:479>
 		Text_tD60B2346DAA6666BF0D822FF607F0B220C2B9E62* L_91 = __this->___m_CursorLockValueText;
 		XRDeviceSimulator_t2BEF1AB226D797BE78F5B291FCCB8A8B4274B30C* L_92 = __this->___m_Simulator;
 		NullCheck(L_92);
@@ -6240,7 +6240,7 @@ IL_0142:
 		L_97 = InputControl_get_displayName_m9F6CBDDD6B25EC0E25BEE1DD51105667F0BA9A23(L_96, NULL);
 		NullCheck(L_91);
 		VirtualActionInvoker1< String_t* >::Invoke(75, L_91, L_97);
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:480>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:480>
 		Image_tBC1D03F63BF71132E9A5E472B8742F172A011E7E* L_98 = __this->___m_CursorLockButton;
 		int32_t L_99;
 		L_99 = Cursor_get_lockState_m9AD145AFB215DFEDA0074AC1F129EF02CCE5B632(NULL);
@@ -6271,7 +6271,7 @@ IL_0260:
 	{
 		NullCheck(G_B15_1);
 		VirtualActionInvoker1< Color_tD001788D726C3A7F1379BEED0260B9591F440C1F >::Invoke(23, G_B15_1, G_B15_0);
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:482>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:482>
 		Text_tD60B2346DAA6666BF0D822FF607F0B220C2B9E62* L_102 = __this->___m_HeadsetLookButtonText;
 		XRDeviceSimulator_t2BEF1AB226D797BE78F5B291FCCB8A8B4274B30C* L_103 = __this->___m_Simulator;
 		NullCheck(L_103);
@@ -6300,7 +6300,7 @@ IL_0284:
 	{
 		NullCheck(G_B18_1);
 		VirtualActionInvoker1< String_t* >::Invoke(75, G_B18_1, G_B18_0);
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:483>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:483>
 		Text_tD60B2346DAA6666BF0D822FF607F0B220C2B9E62* L_105 = __this->___m_MouseModeValueText;
 		XRDeviceSimulator_t2BEF1AB226D797BE78F5B291FCCB8A8B4274B30C* L_106 = __this->___m_Simulator;
 		NullCheck(L_106);
@@ -6320,7 +6320,7 @@ IL_0284:
 		L_111 = InputControl_get_displayName_m9F6CBDDD6B25EC0E25BEE1DD51105667F0BA9A23(L_110, NULL);
 		NullCheck(L_105);
 		VirtualActionInvoker1< String_t* >::Invoke(75, L_105, L_111);
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:485>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:485>
 		XRDeviceSimulator_t2BEF1AB226D797BE78F5B291FCCB8A8B4274B30C* L_112 = __this->___m_Simulator;
 		NullCheck(L_112);
 		InputActionReference_t64730C6B41271E0983FC21BFB416169F5D6BC4A1* L_113;
@@ -6335,14 +6335,14 @@ IL_0284:
 		InputControl_t74F06B623518F992BF8E38656A5E0857169E3E2E* L_116;
 		L_116 = ReadOnlyArray_1_get_Item_mF7217A9697E8EAA3A574FCDCB611597EC9C1836A((&V_12), 0, ReadOnlyArray_1_get_Item_mF7217A9697E8EAA3A574FCDCB611597EC9C1836A_RuntimeMethod_var);
 		V_5 = L_116;
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:486>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:486>
 		Image_tBC1D03F63BF71132E9A5E472B8742F172A011E7E* L_117 = __this->___m_HeadsetLookValueIcon;
 		InputControl_t74F06B623518F992BF8E38656A5E0857169E3E2E* L_118 = V_5;
 		Sprite_tAFF74BC83CD68037494CB0B4F28CBDF8971CAB99* L_119;
 		L_119 = XRDeviceSimulatorUI_GetInputIcon_mB9CDF23EC95E89E38BA562EEE9B9872D76088986(__this, L_118, NULL);
 		NullCheck(L_117);
 		Image_set_sprite_mC0C248340BA27AAEE56855A3FAFA0D8CA12956DE(L_117, L_119, NULL);
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:487>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:487>
 		InputControl_t74F06B623518F992BF8E38656A5E0857169E3E2E* L_120 = V_5;
 		NullCheck(L_120);
 		String_t* L_121;
@@ -6371,13 +6371,13 @@ IL_0284:
 
 IL_0312:
 	{
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:489>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:489>
 		Image_tBC1D03F63BF71132E9A5E472B8742F172A011E7E* L_126 = __this->___m_HeadsetLookValueIcon;
 		Color_tD001788D726C3A7F1379BEED0260B9591F440C1F L_127;
 		L_127 = Color_get_white_m068F5AF879B0FCA584E3693F762EA41BB65532C6_inline(NULL);
 		NullCheck(L_126);
 		VirtualActionInvoker1< Color_tD001788D726C3A7F1379BEED0260B9591F440C1F >::Invoke(23, L_126, L_127);
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:492>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:492>
 		InputControl_t74F06B623518F992BF8E38656A5E0857169E3E2E* L_128 = V_5;
 		NullCheck(L_128);
 		String_t* L_129;
@@ -6391,7 +6391,7 @@ IL_0312:
 		}
 	}
 	{
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:493>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:493>
 		Image_tBC1D03F63BF71132E9A5E472B8742F172A011E7E* L_131 = __this->___m_HeadsetLookValueIcon;
 		NullCheck(L_131);
 		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_132;
@@ -6405,7 +6405,7 @@ IL_0312:
 
 IL_0359:
 	{
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:495>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:495>
 		Text_tD60B2346DAA6666BF0D822FF607F0B220C2B9E62* L_134 = __this->___m_HeadsetLookValueText;
 		InputControl_t74F06B623518F992BF8E38656A5E0857169E3E2E* L_135 = V_5;
 		NullCheck(L_135);
@@ -6443,17 +6443,17 @@ IL_0385:
 	{
 		NullCheck(G_B25_1);
 		VirtualActionInvoker1< String_t* >::Invoke(75, G_B25_1, G_B25_0);
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:497>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:497>
 		XRDeviceSimulatorControllerUI_t9748C4B40D05E0409282C9AA2921E78339D0D0B1* L_141 = __this->___m_LeftController;
 		XRDeviceSimulator_t2BEF1AB226D797BE78F5B291FCCB8A8B4274B30C* L_142 = __this->___m_Simulator;
 		NullCheck(L_141);
 		XRDeviceSimulatorControllerUI_Initialize_m82ACC05D1F298764A40B8B1D9D56A9179EBFC363(L_141, L_142, NULL);
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:498>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:498>
 		XRDeviceSimulatorControllerUI_t9748C4B40D05E0409282C9AA2921E78339D0D0B1* L_143 = __this->___m_RightController;
 		XRDeviceSimulator_t2BEF1AB226D797BE78F5B291FCCB8A8B4274B30C* L_144 = __this->___m_Simulator;
 		NullCheck(L_143);
 		XRDeviceSimulatorControllerUI_Initialize_m82ACC05D1F298764A40B8B1D9D56A9179EBFC363(L_143, L_144, NULL);
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:499>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:499>
 		XRDeviceSimulator_t2BEF1AB226D797BE78F5B291FCCB8A8B4274B30C* L_145 = __this->___m_Simulator;
 		NullCheck(L_145);
 		InputActionReference_t64730C6B41271E0983FC21BFB416169F5D6BC4A1* L_146;
@@ -6489,7 +6489,7 @@ IL_0385:
 		String_t* L_157;
 		L_157 = String_Concat_m093934F71A9B351911EE46311674ED463B180006(L_150, _stringLiteral8F8BFCFC439A636B20C06C334A493AB7004843ED, L_156, _stringLiteral44F840CD2F40ADB814D44EA51A7753812FECBF05, NULL);
 		V_6 = L_157;
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:500>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:500>
 		XRDeviceSimulator_t2BEF1AB226D797BE78F5B291FCCB8A8B4274B30C* L_158 = __this->___m_Simulator;
 		NullCheck(L_158);
 		InputActionReference_t64730C6B41271E0983FC21BFB416169F5D6BC4A1* L_159;
@@ -6525,59 +6525,59 @@ IL_0385:
 		String_t* L_170;
 		L_170 = String_Concat_m093934F71A9B351911EE46311674ED463B180006(L_163, _stringLiteral8F8BFCFC439A636B20C06C334A493AB7004843ED, L_169, _stringLiteral44F840CD2F40ADB814D44EA51A7753812FECBF05, NULL);
 		V_7 = L_170;
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:501>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:501>
 		Text_tD60B2346DAA6666BF0D822FF607F0B220C2B9E62* L_171 = __this->___m_LeftControllerButtonText;
 		String_t* L_172 = V_6;
 		NullCheck(L_171);
 		VirtualActionInvoker1< String_t* >::Invoke(75, L_171, L_172);
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:502>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:502>
 		Text_tD60B2346DAA6666BF0D822FF607F0B220C2B9E62* L_173 = __this->___m_RightControllerButtonText;
 		String_t* L_174 = V_7;
 		NullCheck(L_173);
 		VirtualActionInvoker1< String_t* >::Invoke(75, L_173, L_174);
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:504>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:504>
 		XRDeviceSimulatorHandsUI_t1BE09C7DB972DF8CF28AF0FDABE67DA9EF68070C* L_175 = __this->___m_LeftHand;
 		XRDeviceSimulator_t2BEF1AB226D797BE78F5B291FCCB8A8B4274B30C* L_176 = __this->___m_Simulator;
 		NullCheck(L_175);
 		XRDeviceSimulatorHandsUI_Initialize_m05C76F596E6794512FB73F7D34F14610067842EA(L_175, L_176, NULL);
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:505>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:505>
 		XRDeviceSimulatorHandsUI_t1BE09C7DB972DF8CF28AF0FDABE67DA9EF68070C* L_177 = __this->___m_RightHand;
 		XRDeviceSimulator_t2BEF1AB226D797BE78F5B291FCCB8A8B4274B30C* L_178 = __this->___m_Simulator;
 		NullCheck(L_177);
 		XRDeviceSimulatorHandsUI_Initialize_m05C76F596E6794512FB73F7D34F14610067842EA(L_177, L_178, NULL);
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:506>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:506>
 		Text_tD60B2346DAA6666BF0D822FF607F0B220C2B9E62* L_179 = __this->___m_LeftHandButtonText;
 		String_t* L_180 = V_6;
 		NullCheck(L_179);
 		VirtualActionInvoker1< String_t* >::Invoke(75, L_179, L_180);
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:507>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:507>
 		Text_tD60B2346DAA6666BF0D822FF607F0B220C2B9E62* L_181 = __this->___m_RightHandButtonText;
 		String_t* L_182 = V_7;
 		NullCheck(L_181);
 		VirtualActionInvoker1< String_t* >::Invoke(75, L_181, L_182);
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:509>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:509>
 		XRDeviceSimulatorUI_UpdateDeviceInputMethod_m03BC2018A877F28CD0AB84221DEC08E24EF467CA(__this, NULL);
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:511>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:511>
 		XRDeviceSimulatorUI_HandsSetActive_m5E9FF5FBB235313B1B9FD736797C10D210181545(__this, (bool)0, (bool)0, NULL);
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:514>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:514>
 		Image_tBC1D03F63BF71132E9A5E472B8742F172A011E7E* L_183 = __this->___m_HandsSelectedValueIcon;
 		Color_tD001788D726C3A7F1379BEED0260B9591F440C1F L_184;
 		L_184 = XRDeviceSimulatorUI_get_enabledColor_mB975913853742DC6B1CF8A6BDB1A12C28FE37318(__this, NULL);
 		NullCheck(L_183);
 		VirtualActionInvoker1< Color_tD001788D726C3A7F1379BEED0260B9591F440C1F >::Invoke(23, L_183, L_184);
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:515>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:515>
 		Text_tD60B2346DAA6666BF0D822FF607F0B220C2B9E62* L_185 = __this->___m_HandsSelectedValueText;
 		Color_tD001788D726C3A7F1379BEED0260B9591F440C1F L_186;
 		L_186 = XRDeviceSimulatorUI_get_enabledColor_mB975913853742DC6B1CF8A6BDB1A12C28FE37318(__this, NULL);
 		NullCheck(L_185);
 		VirtualActionInvoker1< Color_tD001788D726C3A7F1379BEED0260B9591F440C1F >::Invoke(23, L_185, L_186);
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:521>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:521>
 		Image_tBC1D03F63BF71132E9A5E472B8742F172A011E7E* L_187 = __this->___m_HeadsetMoveButtonIcon;
 		Color_tD001788D726C3A7F1379BEED0260B9591F440C1F L_188;
 		L_188 = XRDeviceSimulatorUI_get_enabledColor_mB975913853742DC6B1CF8A6BDB1A12C28FE37318(__this, NULL);
 		NullCheck(L_187);
 		VirtualActionInvoker1< Color_tD001788D726C3A7F1379BEED0260B9591F440C1F >::Invoke(23, L_187, L_188);
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:524>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:524>
 		XRDeviceSimulator_t2BEF1AB226D797BE78F5B291FCCB8A8B4274B30C* L_189 = __this->___m_Simulator;
 		NullCheck(L_189);
 		InputActionReference_t64730C6B41271E0983FC21BFB416169F5D6BC4A1* L_190;
@@ -6586,7 +6586,7 @@ IL_0385:
 		Action_1__ctor_mA763900B34C3394F230AE63708F530CA9A192B57(L_191, __this, (intptr_t)((void*)XRDeviceSimulatorUI_OnManipulateLeftAction_m4B6A407FA44F0F0D9780F2D94A23B309BBEC3832_RuntimeMethod_var), NULL);
 		il2cpp_codegen_runtime_class_init_inline(XRDeviceSimulatorUI_t83558A12FEB0C923A821ED77A9214E829ABA8E53_il2cpp_TypeInfo_var);
 		XRDeviceSimulatorUI_Subscribe_m862226F72498E4BAE4DD6653FF879B2361B29B39(L_190, L_191, NULL);
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:525>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:525>
 		XRDeviceSimulator_t2BEF1AB226D797BE78F5B291FCCB8A8B4274B30C* L_192 = __this->___m_Simulator;
 		NullCheck(L_192);
 		InputActionReference_t64730C6B41271E0983FC21BFB416169F5D6BC4A1* L_193;
@@ -6594,7 +6594,7 @@ IL_0385:
 		Action_1_tEB0353AA1A112B6F2D921B58DCC9D9D4C0498E6E* L_194 = (Action_1_tEB0353AA1A112B6F2D921B58DCC9D9D4C0498E6E*)il2cpp_codegen_object_new(Action_1_tEB0353AA1A112B6F2D921B58DCC9D9D4C0498E6E_il2cpp_TypeInfo_var);
 		Action_1__ctor_mA763900B34C3394F230AE63708F530CA9A192B57(L_194, __this, (intptr_t)((void*)XRDeviceSimulatorUI_OnManipulateRightAction_m312F96E19C9256B6FA40E2A09F99540B340BBF47_RuntimeMethod_var), NULL);
 		XRDeviceSimulatorUI_Subscribe_m862226F72498E4BAE4DD6653FF879B2361B29B39(L_193, L_194, NULL);
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:526>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:526>
 		XRDeviceSimulator_t2BEF1AB226D797BE78F5B291FCCB8A8B4274B30C* L_195 = __this->___m_Simulator;
 		NullCheck(L_195);
 		InputActionReference_t64730C6B41271E0983FC21BFB416169F5D6BC4A1* L_196;
@@ -6602,7 +6602,7 @@ IL_0385:
 		Action_1_tEB0353AA1A112B6F2D921B58DCC9D9D4C0498E6E* L_197 = (Action_1_tEB0353AA1A112B6F2D921B58DCC9D9D4C0498E6E*)il2cpp_codegen_object_new(Action_1_tEB0353AA1A112B6F2D921B58DCC9D9D4C0498E6E_il2cpp_TypeInfo_var);
 		Action_1__ctor_mA763900B34C3394F230AE63708F530CA9A192B57(L_197, __this, (intptr_t)((void*)XRDeviceSimulatorUI_OnToggleManipulateLeftAction_m4425E496DDEACF85F83685BB8B0D07CB382E0676_RuntimeMethod_var), NULL);
 		XRDeviceSimulatorUI_Subscribe_m862226F72498E4BAE4DD6653FF879B2361B29B39(L_196, L_197, NULL);
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:527>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:527>
 		XRDeviceSimulator_t2BEF1AB226D797BE78F5B291FCCB8A8B4274B30C* L_198 = __this->___m_Simulator;
 		NullCheck(L_198);
 		InputActionReference_t64730C6B41271E0983FC21BFB416169F5D6BC4A1* L_199;
@@ -6610,7 +6610,7 @@ IL_0385:
 		Action_1_tEB0353AA1A112B6F2D921B58DCC9D9D4C0498E6E* L_200 = (Action_1_tEB0353AA1A112B6F2D921B58DCC9D9D4C0498E6E*)il2cpp_codegen_object_new(Action_1_tEB0353AA1A112B6F2D921B58DCC9D9D4C0498E6E_il2cpp_TypeInfo_var);
 		Action_1__ctor_mA763900B34C3394F230AE63708F530CA9A192B57(L_200, __this, (intptr_t)((void*)XRDeviceSimulatorUI_OnToggleManipulateRightAction_m08E50EFFF01396EC2C00B78CD1BF70187B8CFB65_RuntimeMethod_var), NULL);
 		XRDeviceSimulatorUI_Subscribe_m862226F72498E4BAE4DD6653FF879B2361B29B39(L_199, L_200, NULL);
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:528>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:528>
 		XRDeviceSimulator_t2BEF1AB226D797BE78F5B291FCCB8A8B4274B30C* L_201 = __this->___m_Simulator;
 		NullCheck(L_201);
 		InputActionReference_t64730C6B41271E0983FC21BFB416169F5D6BC4A1* L_202;
@@ -6618,7 +6618,7 @@ IL_0385:
 		Action_1_tEB0353AA1A112B6F2D921B58DCC9D9D4C0498E6E* L_203 = (Action_1_tEB0353AA1A112B6F2D921B58DCC9D9D4C0498E6E*)il2cpp_codegen_object_new(Action_1_tEB0353AA1A112B6F2D921B58DCC9D9D4C0498E6E_il2cpp_TypeInfo_var);
 		Action_1__ctor_mA763900B34C3394F230AE63708F530CA9A192B57(L_203, __this, (intptr_t)((void*)XRDeviceSimulatorUI_OnToggleManipulateBodyAction_m3E2FF42E6E229E0B52D7212E98A40539D8D68942_RuntimeMethod_var), NULL);
 		XRDeviceSimulatorUI_Subscribe_m862226F72498E4BAE4DD6653FF879B2361B29B39(L_202, L_203, NULL);
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:529>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:529>
 		XRDeviceSimulator_t2BEF1AB226D797BE78F5B291FCCB8A8B4274B30C* L_204 = __this->___m_Simulator;
 		NullCheck(L_204);
 		InputActionReference_t64730C6B41271E0983FC21BFB416169F5D6BC4A1* L_205;
@@ -6626,7 +6626,7 @@ IL_0385:
 		Action_1_tEB0353AA1A112B6F2D921B58DCC9D9D4C0498E6E* L_206 = (Action_1_tEB0353AA1A112B6F2D921B58DCC9D9D4C0498E6E*)il2cpp_codegen_object_new(Action_1_tEB0353AA1A112B6F2D921B58DCC9D9D4C0498E6E_il2cpp_TypeInfo_var);
 		Action_1__ctor_mA763900B34C3394F230AE63708F530CA9A192B57(L_206, __this, (intptr_t)((void*)XRDeviceSimulatorUI_OnManipulateHeadAction_m562653ABA3A03416C37690E25BD3D4941BF676E1_RuntimeMethod_var), NULL);
 		XRDeviceSimulatorUI_Subscribe_m862226F72498E4BAE4DD6653FF879B2361B29B39(L_205, L_206, NULL);
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:530>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:530>
 		XRDeviceSimulator_t2BEF1AB226D797BE78F5B291FCCB8A8B4274B30C* L_207 = __this->___m_Simulator;
 		NullCheck(L_207);
 		InputActionReference_t64730C6B41271E0983FC21BFB416169F5D6BC4A1* L_208;
@@ -6634,7 +6634,7 @@ IL_0385:
 		Action_1_tEB0353AA1A112B6F2D921B58DCC9D9D4C0498E6E* L_209 = (Action_1_tEB0353AA1A112B6F2D921B58DCC9D9D4C0498E6E*)il2cpp_codegen_object_new(Action_1_tEB0353AA1A112B6F2D921B58DCC9D9D4C0498E6E_il2cpp_TypeInfo_var);
 		Action_1__ctor_mA763900B34C3394F230AE63708F530CA9A192B57(L_209, __this, (intptr_t)((void*)XRDeviceSimulatorUI_OnHandControllerModeAction_m19010BBFC5E2679B59904AF60665B84066F5128C_RuntimeMethod_var), NULL);
 		XRDeviceSimulatorUI_Subscribe_m862226F72498E4BAE4DD6653FF879B2361B29B39(L_208, L_209, NULL);
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:531>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:531>
 		XRDeviceSimulator_t2BEF1AB226D797BE78F5B291FCCB8A8B4274B30C* L_210 = __this->___m_Simulator;
 		NullCheck(L_210);
 		InputActionReference_t64730C6B41271E0983FC21BFB416169F5D6BC4A1* L_211;
@@ -6642,7 +6642,7 @@ IL_0385:
 		Action_1_tEB0353AA1A112B6F2D921B58DCC9D9D4C0498E6E* L_212 = (Action_1_tEB0353AA1A112B6F2D921B58DCC9D9D4C0498E6E*)il2cpp_codegen_object_new(Action_1_tEB0353AA1A112B6F2D921B58DCC9D9D4C0498E6E_il2cpp_TypeInfo_var);
 		Action_1__ctor_mA763900B34C3394F230AE63708F530CA9A192B57(L_212, __this, (intptr_t)((void*)XRDeviceSimulatorUI_OnCycleDevicesAction_m06D5E6B758F0962ED8DF77F44F160F2AF27CFABB_RuntimeMethod_var), NULL);
 		XRDeviceSimulatorUI_Subscribe_m862226F72498E4BAE4DD6653FF879B2361B29B39(L_211, L_212, NULL);
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:532>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:532>
 		XRDeviceSimulator_t2BEF1AB226D797BE78F5B291FCCB8A8B4274B30C* L_213 = __this->___m_Simulator;
 		NullCheck(L_213);
 		InputActionReference_t64730C6B41271E0983FC21BFB416169F5D6BC4A1* L_214;
@@ -6650,7 +6650,7 @@ IL_0385:
 		Action_1_tEB0353AA1A112B6F2D921B58DCC9D9D4C0498E6E* L_215 = (Action_1_tEB0353AA1A112B6F2D921B58DCC9D9D4C0498E6E*)il2cpp_codegen_object_new(Action_1_tEB0353AA1A112B6F2D921B58DCC9D9D4C0498E6E_il2cpp_TypeInfo_var);
 		Action_1__ctor_mA763900B34C3394F230AE63708F530CA9A192B57(L_215, __this, (intptr_t)((void*)XRDeviceSimulatorUI_OnStopManipulationAction_m212983E80F4D415F2476EA74358748F5D1EB7235_RuntimeMethod_var), NULL);
 		XRDeviceSimulatorUI_Subscribe_m862226F72498E4BAE4DD6653FF879B2361B29B39(L_214, L_215, NULL);
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:533>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:533>
 		XRDeviceSimulator_t2BEF1AB226D797BE78F5B291FCCB8A8B4274B30C* L_216 = __this->___m_Simulator;
 		NullCheck(L_216);
 		InputActionReference_t64730C6B41271E0983FC21BFB416169F5D6BC4A1* L_217;
@@ -6658,7 +6658,7 @@ IL_0385:
 		Action_1_tEB0353AA1A112B6F2D921B58DCC9D9D4C0498E6E* L_218 = (Action_1_tEB0353AA1A112B6F2D921B58DCC9D9D4C0498E6E*)il2cpp_codegen_object_new(Action_1_tEB0353AA1A112B6F2D921B58DCC9D9D4C0498E6E_il2cpp_TypeInfo_var);
 		Action_1__ctor_mA763900B34C3394F230AE63708F530CA9A192B57(L_218, __this, (intptr_t)((void*)XRDeviceSimulatorUI_OnToggleMouseTransformationModeAction_mBCD407AAD41886BAEE366E3523251CD14BF222C7_RuntimeMethod_var), NULL);
 		XRDeviceSimulatorUI_Subscribe_m862226F72498E4BAE4DD6653FF879B2361B29B39(L_217, L_218, NULL);
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:534>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:534>
 		XRDeviceSimulator_t2BEF1AB226D797BE78F5B291FCCB8A8B4274B30C* L_219 = __this->___m_Simulator;
 		NullCheck(L_219);
 		InputActionReference_t64730C6B41271E0983FC21BFB416169F5D6BC4A1* L_220;
@@ -6666,7 +6666,7 @@ IL_0385:
 		Action_1_tEB0353AA1A112B6F2D921B58DCC9D9D4C0498E6E* L_221 = (Action_1_tEB0353AA1A112B6F2D921B58DCC9D9D4C0498E6E*)il2cpp_codegen_object_new(Action_1_tEB0353AA1A112B6F2D921B58DCC9D9D4C0498E6E_il2cpp_TypeInfo_var);
 		Action_1__ctor_mA763900B34C3394F230AE63708F530CA9A192B57(L_221, __this, (intptr_t)((void*)XRDeviceSimulatorUI_OnNegateModeAction_mC48377DE1D0E36F2E4DF4A61B8FD1E09081752EC_RuntimeMethod_var), NULL);
 		XRDeviceSimulatorUI_Subscribe_m862226F72498E4BAE4DD6653FF879B2361B29B39(L_220, L_221, NULL);
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:535>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:535>
 		XRDeviceSimulator_t2BEF1AB226D797BE78F5B291FCCB8A8B4274B30C* L_222 = __this->___m_Simulator;
 		NullCheck(L_222);
 		InputActionReference_t64730C6B41271E0983FC21BFB416169F5D6BC4A1* L_223;
@@ -6674,7 +6674,7 @@ IL_0385:
 		Action_1_tEB0353AA1A112B6F2D921B58DCC9D9D4C0498E6E* L_224 = (Action_1_tEB0353AA1A112B6F2D921B58DCC9D9D4C0498E6E*)il2cpp_codegen_object_new(Action_1_tEB0353AA1A112B6F2D921B58DCC9D9D4C0498E6E_il2cpp_TypeInfo_var);
 		Action_1__ctor_mA763900B34C3394F230AE63708F530CA9A192B57(L_224, __this, (intptr_t)((void*)XRDeviceSimulatorUI_OnToggleCursorLockAction_m0CD3BD8878447C011FC2A804BBF88AF03D729E06_RuntimeMethod_var), NULL);
 		XRDeviceSimulatorUI_Subscribe_m862226F72498E4BAE4DD6653FF879B2361B29B39(L_223, L_224, NULL);
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:536>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:536>
 		XRDeviceSimulator_t2BEF1AB226D797BE78F5B291FCCB8A8B4274B30C* L_225 = __this->___m_Simulator;
 		NullCheck(L_225);
 		InputActionReference_t64730C6B41271E0983FC21BFB416169F5D6BC4A1* L_226;
@@ -6682,7 +6682,7 @@ IL_0385:
 		Action_1_tEB0353AA1A112B6F2D921B58DCC9D9D4C0498E6E* L_227 = (Action_1_tEB0353AA1A112B6F2D921B58DCC9D9D4C0498E6E*)il2cpp_codegen_object_new(Action_1_tEB0353AA1A112B6F2D921B58DCC9D9D4C0498E6E_il2cpp_TypeInfo_var);
 		Action_1__ctor_mA763900B34C3394F230AE63708F530CA9A192B57(L_227, __this, (intptr_t)((void*)XRDeviceSimulatorUI_OnKeyboardXTranslateAction_mD15F59FAAE0813CB8FB290DC92366EDEBEE17CD9_RuntimeMethod_var), NULL);
 		XRDeviceSimulatorUI_Subscribe_m862226F72498E4BAE4DD6653FF879B2361B29B39(L_226, L_227, NULL);
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:537>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:537>
 		XRDeviceSimulator_t2BEF1AB226D797BE78F5B291FCCB8A8B4274B30C* L_228 = __this->___m_Simulator;
 		NullCheck(L_228);
 		InputActionReference_t64730C6B41271E0983FC21BFB416169F5D6BC4A1* L_229;
@@ -6690,7 +6690,7 @@ IL_0385:
 		Action_1_tEB0353AA1A112B6F2D921B58DCC9D9D4C0498E6E* L_230 = (Action_1_tEB0353AA1A112B6F2D921B58DCC9D9D4C0498E6E*)il2cpp_codegen_object_new(Action_1_tEB0353AA1A112B6F2D921B58DCC9D9D4C0498E6E_il2cpp_TypeInfo_var);
 		Action_1__ctor_mA763900B34C3394F230AE63708F530CA9A192B57(L_230, __this, (intptr_t)((void*)XRDeviceSimulatorUI_OnKeyboardYTranslateAction_m1E41187896D73B09F2693D94227BB9440B43D46C_RuntimeMethod_var), NULL);
 		XRDeviceSimulatorUI_Subscribe_m862226F72498E4BAE4DD6653FF879B2361B29B39(L_229, L_230, NULL);
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:538>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:538>
 		XRDeviceSimulator_t2BEF1AB226D797BE78F5B291FCCB8A8B4274B30C* L_231 = __this->___m_Simulator;
 		NullCheck(L_231);
 		InputActionReference_t64730C6B41271E0983FC21BFB416169F5D6BC4A1* L_232;
@@ -6698,7 +6698,7 @@ IL_0385:
 		Action_1_tEB0353AA1A112B6F2D921B58DCC9D9D4C0498E6E* L_233 = (Action_1_tEB0353AA1A112B6F2D921B58DCC9D9D4C0498E6E*)il2cpp_codegen_object_new(Action_1_tEB0353AA1A112B6F2D921B58DCC9D9D4C0498E6E_il2cpp_TypeInfo_var);
 		Action_1__ctor_mA763900B34C3394F230AE63708F530CA9A192B57(L_233, __this, (intptr_t)((void*)XRDeviceSimulatorUI_OnKeyboardZTranslateAction_m878A205BB14E48CEF4D1323360F9B1BEC0B32BB3_RuntimeMethod_var), NULL);
 		XRDeviceSimulatorUI_Subscribe_m862226F72498E4BAE4DD6653FF879B2361B29B39(L_232, L_233, NULL);
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:539>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:539>
 		XRDeviceSimulator_t2BEF1AB226D797BE78F5B291FCCB8A8B4274B30C* L_234 = __this->___m_Simulator;
 		NullCheck(L_234);
 		InputActionReference_t64730C6B41271E0983FC21BFB416169F5D6BC4A1* L_235;
@@ -6706,7 +6706,7 @@ IL_0385:
 		Action_1_tEB0353AA1A112B6F2D921B58DCC9D9D4C0498E6E* L_236 = (Action_1_tEB0353AA1A112B6F2D921B58DCC9D9D4C0498E6E*)il2cpp_codegen_object_new(Action_1_tEB0353AA1A112B6F2D921B58DCC9D9D4C0498E6E_il2cpp_TypeInfo_var);
 		Action_1__ctor_mA763900B34C3394F230AE63708F530CA9A192B57(L_236, __this, (intptr_t)((void*)XRDeviceSimulatorUI_OnRestingHandAxis2DAction_mFD0FEAF0EF6E3581F7E7F420D68BFCB0047323C6_RuntimeMethod_var), NULL);
 		XRDeviceSimulatorUI_Subscribe_m862226F72498E4BAE4DD6653FF879B2361B29B39(L_235, L_236, NULL);
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:540>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:540>
 		XRDeviceSimulator_t2BEF1AB226D797BE78F5B291FCCB8A8B4274B30C* L_237 = __this->___m_Simulator;
 		NullCheck(L_237);
 		InputActionReference_t64730C6B41271E0983FC21BFB416169F5D6BC4A1* L_238;
@@ -6714,7 +6714,7 @@ IL_0385:
 		Action_1_tEB0353AA1A112B6F2D921B58DCC9D9D4C0498E6E* L_239 = (Action_1_tEB0353AA1A112B6F2D921B58DCC9D9D4C0498E6E*)il2cpp_codegen_object_new(Action_1_tEB0353AA1A112B6F2D921B58DCC9D9D4C0498E6E_il2cpp_TypeInfo_var);
 		Action_1__ctor_mA763900B34C3394F230AE63708F530CA9A192B57(L_239, __this, (intptr_t)((void*)XRDeviceSimulatorUI_OnGripAction_m33135607635A751290AADD67F007A452216A56F7_RuntimeMethod_var), NULL);
 		XRDeviceSimulatorUI_Subscribe_m862226F72498E4BAE4DD6653FF879B2361B29B39(L_238, L_239, NULL);
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:541>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:541>
 		XRDeviceSimulator_t2BEF1AB226D797BE78F5B291FCCB8A8B4274B30C* L_240 = __this->___m_Simulator;
 		NullCheck(L_240);
 		InputActionReference_t64730C6B41271E0983FC21BFB416169F5D6BC4A1* L_241;
@@ -6722,7 +6722,7 @@ IL_0385:
 		Action_1_tEB0353AA1A112B6F2D921B58DCC9D9D4C0498E6E* L_242 = (Action_1_tEB0353AA1A112B6F2D921B58DCC9D9D4C0498E6E*)il2cpp_codegen_object_new(Action_1_tEB0353AA1A112B6F2D921B58DCC9D9D4C0498E6E_il2cpp_TypeInfo_var);
 		Action_1__ctor_mA763900B34C3394F230AE63708F530CA9A192B57(L_242, __this, (intptr_t)((void*)XRDeviceSimulatorUI_OnTriggerAction_mBC71C10EB435D0FF5AFD68605BC8BCEBB9AA6099_RuntimeMethod_var), NULL);
 		XRDeviceSimulatorUI_Subscribe_m862226F72498E4BAE4DD6653FF879B2361B29B39(L_241, L_242, NULL);
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:542>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:542>
 		XRDeviceSimulator_t2BEF1AB226D797BE78F5B291FCCB8A8B4274B30C* L_243 = __this->___m_Simulator;
 		NullCheck(L_243);
 		InputActionReference_t64730C6B41271E0983FC21BFB416169F5D6BC4A1* L_244;
@@ -6730,7 +6730,7 @@ IL_0385:
 		Action_1_tEB0353AA1A112B6F2D921B58DCC9D9D4C0498E6E* L_245 = (Action_1_tEB0353AA1A112B6F2D921B58DCC9D9D4C0498E6E*)il2cpp_codegen_object_new(Action_1_tEB0353AA1A112B6F2D921B58DCC9D9D4C0498E6E_il2cpp_TypeInfo_var);
 		Action_1__ctor_mA763900B34C3394F230AE63708F530CA9A192B57(L_245, __this, (intptr_t)((void*)XRDeviceSimulatorUI_OnMenuAction_m06014E5810FBF8B8CB8575204F6C0B33D69F46AC_RuntimeMethod_var), NULL);
 		XRDeviceSimulatorUI_Subscribe_m862226F72498E4BAE4DD6653FF879B2361B29B39(L_244, L_245, NULL);
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:543>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:543>
 		XRDeviceSimulator_t2BEF1AB226D797BE78F5B291FCCB8A8B4274B30C* L_246 = __this->___m_Simulator;
 		NullCheck(L_246);
 		InputActionReference_t64730C6B41271E0983FC21BFB416169F5D6BC4A1* L_247;
@@ -6738,7 +6738,7 @@ IL_0385:
 		Action_1_tEB0353AA1A112B6F2D921B58DCC9D9D4C0498E6E* L_248 = (Action_1_tEB0353AA1A112B6F2D921B58DCC9D9D4C0498E6E*)il2cpp_codegen_object_new(Action_1_tEB0353AA1A112B6F2D921B58DCC9D9D4C0498E6E_il2cpp_TypeInfo_var);
 		Action_1__ctor_mA763900B34C3394F230AE63708F530CA9A192B57(L_248, __this, (intptr_t)((void*)XRDeviceSimulatorUI_OnPrimaryButtonAction_mAEA274E9DE7E1EC10955EC2B4914B95C8B009F5F_RuntimeMethod_var), NULL);
 		XRDeviceSimulatorUI_Subscribe_m862226F72498E4BAE4DD6653FF879B2361B29B39(L_247, L_248, NULL);
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:544>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:544>
 		XRDeviceSimulator_t2BEF1AB226D797BE78F5B291FCCB8A8B4274B30C* L_249 = __this->___m_Simulator;
 		NullCheck(L_249);
 		InputActionReference_t64730C6B41271E0983FC21BFB416169F5D6BC4A1* L_250;
@@ -6746,7 +6746,7 @@ IL_0385:
 		Action_1_tEB0353AA1A112B6F2D921B58DCC9D9D4C0498E6E* L_251 = (Action_1_tEB0353AA1A112B6F2D921B58DCC9D9D4C0498E6E*)il2cpp_codegen_object_new(Action_1_tEB0353AA1A112B6F2D921B58DCC9D9D4C0498E6E_il2cpp_TypeInfo_var);
 		Action_1__ctor_mA763900B34C3394F230AE63708F530CA9A192B57(L_251, __this, (intptr_t)((void*)XRDeviceSimulatorUI_OnSecondaryButtonAction_m1E86508C1CC1AD1FBC2C5BBBC5B3DEDB0B07882E_RuntimeMethod_var), NULL);
 		XRDeviceSimulatorUI_Subscribe_m862226F72498E4BAE4DD6653FF879B2361B29B39(L_250, L_251, NULL);
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:546>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:546>
 		XRDeviceSimulator_t2BEF1AB226D797BE78F5B291FCCB8A8B4274B30C* L_252 = __this->___m_Simulator;
 		NullCheck(L_252);
 		List_1_tC5D2825C62051A5FA567CE68202ACEE33C59D2FB* L_253;
@@ -6774,10 +6774,10 @@ FINALLY_0778:
 
 IL_0755_1:
 			{
-				//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:546>
+				//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:546>
 				SimulatedHandExpression_t182C654EA8E45C3AB60BF8AA3BEFDFCBBD8F3CAD* L_255;
 				L_255 = Enumerator_get_Current_m073D5B3C00CE54166670904C566A35AC4C66BC16_inline((&V_13), Enumerator_get_Current_m073D5B3C00CE54166670904C566A35AC4C66BC16_RuntimeMethod_var);
-				//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:548>
+				//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:548>
 				Action_2_t076BA6FDFFF3C0B66A2114AC66FD274184606690* L_256 = (Action_2_t076BA6FDFFF3C0B66A2114AC66FD274184606690*)il2cpp_codegen_object_new(Action_2_t076BA6FDFFF3C0B66A2114AC66FD274184606690_il2cpp_TypeInfo_var);
 				Action_2__ctor_m5482F7BA6B5F160B391E7138C1D304D7BC7A3A47(L_256, __this, (intptr_t)((void*)XRDeviceSimulatorUI_OnHandExpressionAction_m75963B1E3E0DD29856773AD847449B7DB5168617_RuntimeMethod_var), NULL);
 				NullCheck(L_255);
@@ -6786,7 +6786,7 @@ IL_0755_1:
 
 IL_076d_1:
 			{
-				//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:546>
+				//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:546>
 				bool L_257;
 				L_257 = Enumerator_MoveNext_m1BB285AD78B9621615C298FE565F4D9063D29E54((&V_13), Enumerator_MoveNext_m1BB285AD78B9621615C298FE565F4D9063D29E54_RuntimeMethod_var);
 				if (L_257)
@@ -6806,19 +6806,19 @@ IL_076d_1:
 
 IL_0786:
 	{
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:552>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:552>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_258 = __this->___m_XRDeviceSimulatorMainPanel;
 		bool L_259;
 		L_259 = XRDeviceSimulatorUI_get_isMenuOpen_m7BF140ABDA90813062F19E0387E03CEC3FB824FF_inline(__this, NULL);
 		NullCheck(L_258);
 		GameObject_SetActive_m638E92E1E75E519E5B24CF150B08CA8E0CDFAB92(L_258, L_259, NULL);
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:553>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:553>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_260 = __this->___m_XRDeviceSimulatorCollapsedPanel;
 		bool L_261;
 		L_261 = XRDeviceSimulatorUI_get_isMenuOpen_m7BF140ABDA90813062F19E0387E03CEC3FB824FF_inline(__this, NULL);
 		NullCheck(L_260);
 		GameObject_SetActive_m638E92E1E75E519E5B24CF150B08CA8E0CDFAB92(L_260, (bool)((((int32_t)L_261) == ((int32_t)0))? 1 : 0), NULL);
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:554>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:554>
 		return;
 	}
 }
@@ -6856,7 +6856,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XRDeviceSimulatorUI_UpdateDeviceInputMet
 	Color_tD001788D726C3A7F1379BEED0260B9591F440C1F G_B16_0;
 	memset((&G_B16_0), 0, sizeof(G_B16_0));
 	{
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:558>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:558>
 		XRDeviceSimulator_t2BEF1AB226D797BE78F5B291FCCB8A8B4274B30C* L_0 = __this->___m_Simulator;
 		NullCheck(L_0);
 		InputActionReference_t64730C6B41271E0983FC21BFB416169F5D6BC4A1* L_1;
@@ -6892,7 +6892,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XRDeviceSimulatorUI_UpdateDeviceInputMet
 		String_t* L_12;
 		L_12 = String_Concat_m093934F71A9B351911EE46311674ED463B180006(L_5, _stringLiteral758733BDBED83CBFF4F635AC26CA92AAE477F75D, L_11, _stringLiteral0D6F43F451E5A156511D4FA3F9B728127500A84D, NULL);
 		V_0 = L_12;
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:560>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:560>
 		XRDeviceSimulator_t2BEF1AB226D797BE78F5B291FCCB8A8B4274B30C* L_13 = __this->___m_Simulator;
 		NullCheck(L_13);
 		InputActionReference_t64730C6B41271E0983FC21BFB416169F5D6BC4A1* L_14;
@@ -6944,7 +6944,7 @@ IL_0070:
 IL_009c:
 	{
 		V_1 = G_B4_0;
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:565>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:565>
 		Text_tD60B2346DAA6666BF0D822FF607F0B220C2B9E62* L_24 = __this->___m_ControllersSelectedValueText;
 		XRDeviceSimulator_t2BEF1AB226D797BE78F5B291FCCB8A8B4274B30C* L_25 = __this->___m_Simulator;
 		NullCheck(L_25);
@@ -6975,7 +6975,7 @@ IL_00b4:
 	{
 		NullCheck(G_B7_1);
 		VirtualActionInvoker1< String_t* >::Invoke(75, G_B7_1, G_B7_0);
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:566>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:566>
 		Text_tD60B2346DAA6666BF0D822FF607F0B220C2B9E62* L_29 = __this->___m_HandsSelectedValueText;
 		XRDeviceSimulator_t2BEF1AB226D797BE78F5B291FCCB8A8B4274B30C* L_30 = __this->___m_Simulator;
 		NullCheck(L_30);
@@ -7006,7 +7006,7 @@ IL_00d1:
 	{
 		NullCheck(G_B10_1);
 		VirtualActionInvoker1< String_t* >::Invoke(75, G_B10_1, G_B10_0);
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:568>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:568>
 		XRDeviceSimulator_t2BEF1AB226D797BE78F5B291FCCB8A8B4274B30C* L_34 = __this->___m_Simulator;
 		NullCheck(L_34);
 		int32_t L_35;
@@ -7033,17 +7033,17 @@ IL_00eb:
 IL_00f1:
 	{
 		V_2 = G_B13_0;
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:569>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:569>
 		Image_tBC1D03F63BF71132E9A5E472B8742F172A011E7E* L_38 = __this->___m_ControllerSelectedIcon;
 		Color_tD001788D726C3A7F1379BEED0260B9591F440C1F L_39 = V_2;
 		NullCheck(L_38);
 		VirtualActionInvoker1< Color_tD001788D726C3A7F1379BEED0260B9591F440C1F >::Invoke(23, L_38, L_39);
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:570>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:570>
 		Text_tD60B2346DAA6666BF0D822FF607F0B220C2B9E62* L_40 = __this->___m_ControllerSelectedText;
 		Color_tD001788D726C3A7F1379BEED0260B9591F440C1F L_41 = V_2;
 		NullCheck(L_40);
 		VirtualActionInvoker1< Color_tD001788D726C3A7F1379BEED0260B9591F440C1F >::Invoke(23, L_40, L_41);
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:572>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:572>
 		XRDeviceSimulator_t2BEF1AB226D797BE78F5B291FCCB8A8B4274B30C* L_42 = __this->___m_Simulator;
 		NullCheck(L_42);
 		int32_t L_43;
@@ -7070,17 +7070,17 @@ IL_0120:
 IL_0126:
 	{
 		V_2 = G_B16_0;
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:573>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:573>
 		Image_tBC1D03F63BF71132E9A5E472B8742F172A011E7E* L_46 = __this->___m_HandsSelectedIcon;
 		Color_tD001788D726C3A7F1379BEED0260B9591F440C1F L_47 = V_2;
 		NullCheck(L_46);
 		VirtualActionInvoker1< Color_tD001788D726C3A7F1379BEED0260B9591F440C1F >::Invoke(23, L_46, L_47);
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:574>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:574>
 		Text_tD60B2346DAA6666BF0D822FF607F0B220C2B9E62* L_48 = __this->___m_HandsSelectedText;
 		Color_tD001788D726C3A7F1379BEED0260B9591F440C1F L_49 = V_2;
 		NullCheck(L_48);
 		VirtualActionInvoker1< Color_tD001788D726C3A7F1379BEED0260B9591F440C1F >::Invoke(23, L_48, L_49);
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:575>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:575>
 		return;
 	}
 }
@@ -7098,7 +7098,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Sprite_tAFF74BC83CD68037494CB0B4F28CBDF8971CA
 	Sprite_tAFF74BC83CD68037494CB0B4F28CBDF8971CAB99* V_0 = NULL;
 	String_t* V_1 = NULL;
 	{
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:579>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:579>
 		InputControl_t74F06B623518F992BF8E38656A5E0857169E3E2E* L_0 = ___0_control;
 		if (L_0)
 		{
@@ -7106,17 +7106,17 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Sprite_tAFF74BC83CD68037494CB0B4F28CBDF8971CA
 		}
 	}
 	{
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:580>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:580>
 		return (Sprite_tAFF74BC83CD68037494CB0B4F28CBDF8971CAB99*)NULL;
 	}
 
 IL_0005:
 	{
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:582>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:582>
 		Sprite_tAFF74BC83CD68037494CB0B4F28CBDF8971CAB99* L_1;
 		L_1 = XRDeviceSimulatorUI_get_keyboardSprite_m3A43AAFB3F31DDF61E398E6C39AD06909F3B02F4_inline(__this, NULL);
 		V_0 = L_1;
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:583>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:583>
 		InputControl_t74F06B623518F992BF8E38656A5E0857169E3E2E* L_2 = ___0_control;
 		NullCheck(L_2);
 		InputDevice_t8BCF67533E872A75779C24C93D1D7085B72D364B* L_3;
@@ -7132,7 +7132,7 @@ IL_0005:
 		}
 	}
 	{
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:585>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:585>
 		InputControl_t74F06B623518F992BF8E38656A5E0857169E3E2E* L_6 = ___0_control;
 		NullCheck(L_6);
 		String_t* L_7;
@@ -7158,17 +7158,17 @@ IL_0005:
 
 IL_0044:
 	{
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:589>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:589>
 		Sprite_tAFF74BC83CD68037494CB0B4F28CBDF8971CAB99* L_12;
 		L_12 = XRDeviceSimulatorUI_get_rMouseSprite_m0412C31A1AE04A801E9A246F1FBD07CAD246DE48(__this, NULL);
 		V_0 = L_12;
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:590>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:590>
 		goto IL_0054;
 	}
 
 IL_004d:
 	{
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:592>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:592>
 		Sprite_tAFF74BC83CD68037494CB0B4F28CBDF8971CAB99* L_13;
 		L_13 = XRDeviceSimulatorUI_get_mouseSprite_m555D8F18EEB48C7D1FBD596960855E2C4A08FE9E_inline(__this, NULL);
 		V_0 = L_13;
@@ -7176,7 +7176,7 @@ IL_004d:
 
 IL_0054:
 	{
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:597>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:597>
 		Sprite_tAFF74BC83CD68037494CB0B4F28CBDF8971CAB99* L_14 = V_0;
 		return L_14;
 	}
@@ -7185,17 +7185,17 @@ IL_0054:
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XRDeviceSimulatorUI_OnClickCloseSimulatorUIPanel_mCC552AA6E8926EF7CA0F5D3509D6C778492A8893 (XRDeviceSimulatorUI_t83558A12FEB0C923A821ED77A9214E829ABA8E53* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:605>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:605>
 		XRDeviceSimulatorUI_set_isMenuOpen_m839BAEEDE92E048CA2EF33ADEF1950C54A4B3A05_inline(__this, (bool)0, NULL);
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:606>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:606>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_0 = __this->___m_XRDeviceSimulatorMainPanel;
 		NullCheck(L_0);
 		GameObject_SetActive_m638E92E1E75E519E5B24CF150B08CA8E0CDFAB92(L_0, (bool)0, NULL);
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:607>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:607>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_1 = __this->___m_XRDeviceSimulatorCollapsedPanel;
 		NullCheck(L_1);
 		GameObject_SetActive_m638E92E1E75E519E5B24CF150B08CA8E0CDFAB92(L_1, (bool)1, NULL);
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:608>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:608>
 		return;
 	}
 }
@@ -7203,17 +7203,17 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XRDeviceSimulatorUI_OnClickCloseSimulato
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XRDeviceSimulatorUI_OnClickOpenSimulatorUIPanel_m32AF47151801F8D282AE1889FCC8320AE0C72513 (XRDeviceSimulatorUI_t83558A12FEB0C923A821ED77A9214E829ABA8E53* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:615>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:615>
 		XRDeviceSimulatorUI_set_isMenuOpen_m839BAEEDE92E048CA2EF33ADEF1950C54A4B3A05_inline(__this, (bool)1, NULL);
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:616>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:616>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_0 = __this->___m_XRDeviceSimulatorMainPanel;
 		NullCheck(L_0);
 		GameObject_SetActive_m638E92E1E75E519E5B24CF150B08CA8E0CDFAB92(L_0, (bool)1, NULL);
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:617>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:617>
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_1 = __this->___m_XRDeviceSimulatorCollapsedPanel;
 		NullCheck(L_1);
 		GameObject_SetActive_m638E92E1E75E519E5B24CF150B08CA8E0CDFAB92(L_1, (bool)0, NULL);
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:618>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:618>
 		return;
 	}
 }
@@ -7221,7 +7221,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XRDeviceSimulatorUI_OnClickOpenSimulator
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XRDeviceSimulatorUI_OnActivateLeftDevice_m56B6D15341F34C3E729C6845D3364366C043B6F3 (XRDeviceSimulatorUI_t83558A12FEB0C923A821ED77A9214E829ABA8E53* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:622>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:622>
 		XRDeviceSimulator_t2BEF1AB226D797BE78F5B291FCCB8A8B4274B30C* L_0 = __this->___m_Simulator;
 		NullCheck(L_0);
 		int32_t L_1;
@@ -7232,14 +7232,14 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XRDeviceSimulatorUI_OnActivateLeftDevice
 		}
 	}
 	{
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:623>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:623>
 		XRDeviceSimulatorUI_OnActivateLeftController_mF17E09AD2336CD0F1E1960C354853F049828DC66(__this, NULL);
 		return;
 	}
 
 IL_0014:
 	{
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:624>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:624>
 		XRDeviceSimulator_t2BEF1AB226D797BE78F5B291FCCB8A8B4274B30C* L_2 = __this->___m_Simulator;
 		NullCheck(L_2);
 		int32_t L_3;
@@ -7250,13 +7250,13 @@ IL_0014:
 		}
 	}
 	{
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:625>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:625>
 		XRDeviceSimulatorUI_OnActivateLeftHand_mCF5FCCBEE928FD7B78C41BCEE3289B2DC89ED794(__this, NULL);
 	}
 
 IL_0028:
 	{
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:626>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:626>
 		return;
 	}
 }
@@ -7264,7 +7264,7 @@ IL_0028:
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XRDeviceSimulatorUI_OnActivateRightDevice_m09805C7C0E11317F07DC2F9BF896DA85A512F020 (XRDeviceSimulatorUI_t83558A12FEB0C923A821ED77A9214E829ABA8E53* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:630>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:630>
 		XRDeviceSimulator_t2BEF1AB226D797BE78F5B291FCCB8A8B4274B30C* L_0 = __this->___m_Simulator;
 		NullCheck(L_0);
 		int32_t L_1;
@@ -7275,14 +7275,14 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XRDeviceSimulatorUI_OnActivateRightDevic
 		}
 	}
 	{
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:631>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:631>
 		XRDeviceSimulatorUI_OnActivateRightController_mB0B47BD67827B6B9544918A99F8AF64DD9DEBB45(__this, NULL);
 		return;
 	}
 
 IL_0014:
 	{
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:632>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:632>
 		XRDeviceSimulator_t2BEF1AB226D797BE78F5B291FCCB8A8B4274B30C* L_2 = __this->___m_Simulator;
 		NullCheck(L_2);
 		int32_t L_3;
@@ -7293,13 +7293,13 @@ IL_0014:
 		}
 	}
 	{
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:633>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:633>
 		XRDeviceSimulatorUI_OnActivateRightHand_m9BF8116CB253160AAA28D173B5071938BA75A52B(__this, NULL);
 	}
 
 IL_0028:
 	{
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:634>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:634>
 		return;
 	}
 }
@@ -7307,7 +7307,7 @@ IL_0028:
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XRDeviceSimulatorUI_OnActivateBothDevices_mAEB3893E3C004325009189DF5FF12EE9E001E086 (XRDeviceSimulatorUI_t83558A12FEB0C923A821ED77A9214E829ABA8E53* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:638>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:638>
 		XRDeviceSimulator_t2BEF1AB226D797BE78F5B291FCCB8A8B4274B30C* L_0 = __this->___m_Simulator;
 		NullCheck(L_0);
 		int32_t L_1;
@@ -7318,14 +7318,14 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XRDeviceSimulatorUI_OnActivateBothDevice
 		}
 	}
 	{
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:639>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:639>
 		XRDeviceSimulatorUI_OnActivateBothControllers_m1AE770B344C11718515901DAD7F2EBBD2FC16554(__this, NULL);
 		return;
 	}
 
 IL_0014:
 	{
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:640>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:640>
 		XRDeviceSimulator_t2BEF1AB226D797BE78F5B291FCCB8A8B4274B30C* L_2 = __this->___m_Simulator;
 		NullCheck(L_2);
 		int32_t L_3;
@@ -7336,13 +7336,13 @@ IL_0014:
 		}
 	}
 	{
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:641>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:641>
 		XRDeviceSimulatorUI_OnActivateBothHands_m6BA911DBB465CDE0844408F3C9793953B07711C7(__this, NULL);
 	}
 
 IL_0028:
 	{
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:642>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:642>
 		return;
 	}
 }
@@ -7356,14 +7356,14 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XRDeviceSimulatorUI_OnActivateLeftContro
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:649>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:649>
 		Text_tD60B2346DAA6666BF0D822FF607F0B220C2B9E62* L_0 = __this->___m_CurrentSelectedDeviceText;
 		NullCheck(L_0);
 		VirtualActionInvoker1< String_t* >::Invoke(75, L_0, _stringLiteral874BE1B2177F8C02B786BA933E78AD9FE1D377DD);
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:650>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:650>
 		XRDeviceSimulatorControllerUI_t9748C4B40D05E0409282C9AA2921E78339D0D0B1* L_1 = __this->___m_LeftController;
 		XRDeviceSimulatorUI_OnActivateController_m617F507A893841B1C489A2E5129966DDC48749EB(__this, L_1, NULL);
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:651>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:651>
 		return;
 	}
 }
@@ -7377,14 +7377,14 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XRDeviceSimulatorUI_OnActivateRightContr
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:658>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:658>
 		Text_tD60B2346DAA6666BF0D822FF607F0B220C2B9E62* L_0 = __this->___m_CurrentSelectedDeviceText;
 		NullCheck(L_0);
 		VirtualActionInvoker1< String_t* >::Invoke(75, L_0, _stringLiteral98018BE8EB53CB8EC9307D4EEAAA001D606E788C);
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:659>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:659>
 		XRDeviceSimulatorControllerUI_t9748C4B40D05E0409282C9AA2921E78339D0D0B1* L_1 = __this->___m_RightController;
 		XRDeviceSimulatorUI_OnActivateController_m617F507A893841B1C489A2E5129966DDC48749EB(__this, L_1, NULL);
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:660>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:660>
 		return;
 	}
 }
@@ -7399,17 +7399,17 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XRDeviceSimulatorUI_OnActivateController
 	}
 	XRDeviceSimulatorControllerUI_t9748C4B40D05E0409282C9AA2921E78339D0D0B1* G_B3_0 = NULL;
 	{
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:664>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:664>
 		XRDeviceSimulatorUI_ControllersSetActive_mDCC0928409C8F1EA403972142D6329963AA37B47(__this, (bool)1, (bool)0, NULL);
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:665>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:665>
 		XRDeviceSimulatorControllerUI_t9748C4B40D05E0409282C9AA2921E78339D0D0B1* L_0 = ___0_controller;
 		XRDeviceSimulatorUI_PushCurrentButtonState_m44B81E41997DD79216A1268FED8E1A8CACEC9D8D(__this, L_0, NULL);
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:666>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:666>
 		XRDeviceSimulatorControllerUI_t9748C4B40D05E0409282C9AA2921E78339D0D0B1* L_1 = ___0_controller;
 		XRDeviceSimulator_t2BEF1AB226D797BE78F5B291FCCB8A8B4274B30C* L_2 = __this->___m_Simulator;
 		NullCheck(L_1);
 		XRDeviceSimulatorControllerUI_SetAsActiveController_m1550E62F7727558E451C7E260C3769AA2E33E56C(L_1, (bool)1, L_2, (bool)0, NULL);
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:667>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:667>
 		XRDeviceSimulatorControllerUI_t9748C4B40D05E0409282C9AA2921E78339D0D0B1* L_3 = ___0_controller;
 		XRDeviceSimulatorControllerUI_t9748C4B40D05E0409282C9AA2921E78339D0D0B1* L_4 = __this->___m_LeftController;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
@@ -7434,15 +7434,15 @@ IL_0033:
 
 IL_0039:
 	{
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:668>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:668>
 		XRDeviceSimulator_t2BEF1AB226D797BE78F5B291FCCB8A8B4274B30C* L_8 = __this->___m_Simulator;
 		NullCheck(G_B3_0);
 		XRDeviceSimulatorControllerUI_SetAsActiveController_m1550E62F7727558E451C7E260C3769AA2E33E56C(G_B3_0, (bool)0, L_8, (bool)1, NULL);
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:670>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:670>
 		XRDeviceSimulatorUI_HeadDeviceSetActive_m0392A433693A2558E34413A42FEBA15A6A498F8F(__this, (bool)0, NULL);
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:671>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:671>
 		XRDeviceSimulatorUI_HandsSetActive_m5E9FF5FBB235313B1B9FD736797C10D210181545(__this, (bool)0, (bool)0, NULL);
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:672>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:672>
 		return;
 	}
 }
@@ -7456,33 +7456,33 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XRDeviceSimulatorUI_OnActivateBothContro
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:679>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:679>
 		XRDeviceSimulatorUI_ControllersSetActive_mDCC0928409C8F1EA403972142D6329963AA37B47(__this, (bool)1, (bool)0, NULL);
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:680>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:680>
 		Text_tD60B2346DAA6666BF0D822FF607F0B220C2B9E62* L_0 = __this->___m_CurrentSelectedDeviceText;
 		NullCheck(L_0);
 		VirtualActionInvoker1< String_t* >::Invoke(75, L_0, _stringLiteral69E149C19EBE275A194380AED6A65C33679CF612);
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:681>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:681>
 		XRDeviceSimulatorControllerUI_t9748C4B40D05E0409282C9AA2921E78339D0D0B1* L_1 = __this->___m_LeftController;
 		XRDeviceSimulatorUI_PushCurrentButtonState_m44B81E41997DD79216A1268FED8E1A8CACEC9D8D(__this, L_1, NULL);
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:682>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:682>
 		XRDeviceSimulatorControllerUI_t9748C4B40D05E0409282C9AA2921E78339D0D0B1* L_2 = __this->___m_RightController;
 		XRDeviceSimulatorUI_PushCurrentButtonState_m44B81E41997DD79216A1268FED8E1A8CACEC9D8D(__this, L_2, NULL);
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:683>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:683>
 		XRDeviceSimulatorControllerUI_t9748C4B40D05E0409282C9AA2921E78339D0D0B1* L_3 = __this->___m_LeftController;
 		XRDeviceSimulator_t2BEF1AB226D797BE78F5B291FCCB8A8B4274B30C* L_4 = __this->___m_Simulator;
 		NullCheck(L_3);
 		XRDeviceSimulatorControllerUI_SetAsActiveController_m1550E62F7727558E451C7E260C3769AA2E33E56C(L_3, (bool)1, L_4, (bool)0, NULL);
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:684>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:684>
 		XRDeviceSimulatorControllerUI_t9748C4B40D05E0409282C9AA2921E78339D0D0B1* L_5 = __this->___m_RightController;
 		XRDeviceSimulator_t2BEF1AB226D797BE78F5B291FCCB8A8B4274B30C* L_6 = __this->___m_Simulator;
 		NullCheck(L_5);
 		XRDeviceSimulatorControllerUI_SetAsActiveController_m1550E62F7727558E451C7E260C3769AA2E33E56C(L_5, (bool)1, L_6, (bool)0, NULL);
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:686>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:686>
 		XRDeviceSimulatorUI_HeadDeviceSetActive_m0392A433693A2558E34413A42FEBA15A6A498F8F(__this, (bool)0, NULL);
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:687>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:687>
 		XRDeviceSimulatorUI_HandsSetActive_m5E9FF5FBB235313B1B9FD736797C10D210181545(__this, (bool)0, (bool)0, NULL);
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:688>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:688>
 		return;
 	}
 }
@@ -7490,7 +7490,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XRDeviceSimulatorUI_OnActivateBothContro
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XRDeviceSimulatorUI_PushCurrentButtonState_m44B81E41997DD79216A1268FED8E1A8CACEC9D8D (XRDeviceSimulatorUI_t83558A12FEB0C923A821ED77A9214E829ABA8E53* __this, XRDeviceSimulatorControllerUI_t9748C4B40D05E0409282C9AA2921E78339D0D0B1* ___0_controller, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:692>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:692>
 		XRDeviceSimulatorControllerUI_t9748C4B40D05E0409282C9AA2921E78339D0D0B1* L_0 = ___0_controller;
 		XRDeviceSimulator_t2BEF1AB226D797BE78F5B291FCCB8A8B4274B30C* L_1 = __this->___m_Simulator;
 		NullCheck(L_1);
@@ -7504,7 +7504,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XRDeviceSimulatorUI_PushCurrentButtonSta
 		L_4 = InputAction_get_inProgress_mB377612C6CA96C5E96C5D0434DDD7078A4DA740E(L_3, NULL);
 		NullCheck(L_0);
 		XRDeviceSimulatorControllerUI_OnGrip_m86A43B1AE7E99FA688F86F9B74E3C3D629D854A0(L_0, L_4, NULL);
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:693>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:693>
 		XRDeviceSimulatorControllerUI_t9748C4B40D05E0409282C9AA2921E78339D0D0B1* L_5 = ___0_controller;
 		XRDeviceSimulator_t2BEF1AB226D797BE78F5B291FCCB8A8B4274B30C* L_6 = __this->___m_Simulator;
 		NullCheck(L_6);
@@ -7518,7 +7518,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XRDeviceSimulatorUI_PushCurrentButtonSta
 		L_9 = InputAction_get_inProgress_mB377612C6CA96C5E96C5D0434DDD7078A4DA740E(L_8, NULL);
 		NullCheck(L_5);
 		XRDeviceSimulatorControllerUI_OnTrigger_m815F2CDF6DBF3D5CE8AD89986DA3B4EEB07F344B(L_5, L_9, NULL);
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:694>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:694>
 		XRDeviceSimulatorControllerUI_t9748C4B40D05E0409282C9AA2921E78339D0D0B1* L_10 = ___0_controller;
 		XRDeviceSimulator_t2BEF1AB226D797BE78F5B291FCCB8A8B4274B30C* L_11 = __this->___m_Simulator;
 		NullCheck(L_11);
@@ -7532,7 +7532,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XRDeviceSimulatorUI_PushCurrentButtonSta
 		L_14 = InputAction_get_inProgress_mB377612C6CA96C5E96C5D0434DDD7078A4DA740E(L_13, NULL);
 		NullCheck(L_10);
 		XRDeviceSimulatorControllerUI_OnMenu_m85ED56869E8B75EB4D26B4D2B240FF97EF9E706E(L_10, L_14, NULL);
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:695>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:695>
 		XRDeviceSimulatorControllerUI_t9748C4B40D05E0409282C9AA2921E78339D0D0B1* L_15 = ___0_controller;
 		XRDeviceSimulator_t2BEF1AB226D797BE78F5B291FCCB8A8B4274B30C* L_16 = __this->___m_Simulator;
 		NullCheck(L_16);
@@ -7546,7 +7546,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XRDeviceSimulatorUI_PushCurrentButtonSta
 		L_19 = InputAction_get_inProgress_mB377612C6CA96C5E96C5D0434DDD7078A4DA740E(L_18, NULL);
 		NullCheck(L_15);
 		XRDeviceSimulatorControllerUI_OnPrimaryButton_m075B91C55B4A84AFC0D921B8786A0941948742AC(L_15, L_19, NULL);
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:696>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:696>
 		XRDeviceSimulatorControllerUI_t9748C4B40D05E0409282C9AA2921E78339D0D0B1* L_20 = ___0_controller;
 		XRDeviceSimulator_t2BEF1AB226D797BE78F5B291FCCB8A8B4274B30C* L_21 = __this->___m_Simulator;
 		NullCheck(L_21);
@@ -7560,7 +7560,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XRDeviceSimulatorUI_PushCurrentButtonSta
 		L_24 = InputAction_get_inProgress_mB377612C6CA96C5E96C5D0434DDD7078A4DA740E(L_23, NULL);
 		NullCheck(L_20);
 		XRDeviceSimulatorControllerUI_OnSecondaryButton_mA6BE705CCB42BD041CD2D585D25E606ACAD1FF03(L_20, L_24, NULL);
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:697>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:697>
 		XRDeviceSimulatorControllerUI_t9748C4B40D05E0409282C9AA2921E78339D0D0B1* L_25 = ___0_controller;
 		XRDeviceSimulator_t2BEF1AB226D797BE78F5B291FCCB8A8B4274B30C* L_26 = __this->___m_Simulator;
 		NullCheck(L_26);
@@ -7574,7 +7574,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XRDeviceSimulatorUI_PushCurrentButtonSta
 		L_29 = InputAction_get_inProgress_mB377612C6CA96C5E96C5D0434DDD7078A4DA740E(L_28, NULL);
 		NullCheck(L_25);
 		XRDeviceSimulatorControllerUI_OnXAxisTranslatePerformed_mEF728B26A740B89F8AD987D528F1E63564B95A92(L_25, L_29, NULL);
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:698>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:698>
 		XRDeviceSimulatorControllerUI_t9748C4B40D05E0409282C9AA2921E78339D0D0B1* L_30 = ___0_controller;
 		XRDeviceSimulator_t2BEF1AB226D797BE78F5B291FCCB8A8B4274B30C* L_31 = __this->___m_Simulator;
 		NullCheck(L_31);
@@ -7588,7 +7588,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XRDeviceSimulatorUI_PushCurrentButtonSta
 		L_34 = InputAction_get_inProgress_mB377612C6CA96C5E96C5D0434DDD7078A4DA740E(L_33, NULL);
 		NullCheck(L_30);
 		XRDeviceSimulatorControllerUI_OnZAxisTranslatePerformed_m71730B8575DA5B161DAC1B7DFBA89B3FF190ACFA(L_30, L_34, NULL);
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:699>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:699>
 		return;
 	}
 }
@@ -7602,14 +7602,14 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XRDeviceSimulatorUI_OnActivateLeftHand_m
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:706>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:706>
 		Text_tD60B2346DAA6666BF0D822FF607F0B220C2B9E62* L_0 = __this->___m_CurrentSelectedDeviceText;
 		NullCheck(L_0);
 		VirtualActionInvoker1< String_t* >::Invoke(75, L_0, _stringLiteral5BD3CB78FDCF42B418FDF2A7150ABF6EB4D64927);
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:707>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:707>
 		XRDeviceSimulatorHandsUI_t1BE09C7DB972DF8CF28AF0FDABE67DA9EF68070C* L_1 = __this->___m_LeftHand;
 		XRDeviceSimulatorUI_OnActivateHand_mE87C0DFD3387AC668301538ABEF764FFED58CE0F(__this, L_1, NULL);
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:708>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:708>
 		return;
 	}
 }
@@ -7623,14 +7623,14 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XRDeviceSimulatorUI_OnActivateRightHand_
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:715>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:715>
 		Text_tD60B2346DAA6666BF0D822FF607F0B220C2B9E62* L_0 = __this->___m_CurrentSelectedDeviceText;
 		NullCheck(L_0);
 		VirtualActionInvoker1< String_t* >::Invoke(75, L_0, _stringLiteral27106F942A54634C382B8844354021F5250B0327);
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:716>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:716>
 		XRDeviceSimulatorHandsUI_t1BE09C7DB972DF8CF28AF0FDABE67DA9EF68070C* L_1 = __this->___m_RightHand;
 		XRDeviceSimulatorUI_OnActivateHand_mE87C0DFD3387AC668301538ABEF764FFED58CE0F(__this, L_1, NULL);
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:717>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:717>
 		return;
 	}
 }
@@ -7645,14 +7645,14 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XRDeviceSimulatorUI_OnActivateHand_mE87C
 	}
 	XRDeviceSimulatorHandsUI_t1BE09C7DB972DF8CF28AF0FDABE67DA9EF68070C* G_B3_0 = NULL;
 	{
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:721>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:721>
 		XRDeviceSimulatorUI_HandsSetActive_m5E9FF5FBB235313B1B9FD736797C10D210181545(__this, (bool)1, (bool)0, NULL);
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:722>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:722>
 		XRDeviceSimulatorHandsUI_t1BE09C7DB972DF8CF28AF0FDABE67DA9EF68070C* L_0 = ___0_hand;
 		XRDeviceSimulator_t2BEF1AB226D797BE78F5B291FCCB8A8B4274B30C* L_1 = __this->___m_Simulator;
 		NullCheck(L_0);
 		XRDeviceSimulatorHandsUI_SetActive_m935D3CC41AD4F62C742218FFC62A62F681AFCD60(L_0, (bool)1, L_1, NULL);
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:723>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:723>
 		XRDeviceSimulatorHandsUI_t1BE09C7DB972DF8CF28AF0FDABE67DA9EF68070C* L_2 = ___0_hand;
 		XRDeviceSimulatorHandsUI_t1BE09C7DB972DF8CF28AF0FDABE67DA9EF68070C* L_3 = __this->___m_LeftHand;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
@@ -7677,15 +7677,15 @@ IL_002b:
 
 IL_0031:
 	{
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:724>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:724>
 		XRDeviceSimulator_t2BEF1AB226D797BE78F5B291FCCB8A8B4274B30C* L_7 = __this->___m_Simulator;
 		NullCheck(G_B3_0);
 		XRDeviceSimulatorHandsUI_SetActive_m935D3CC41AD4F62C742218FFC62A62F681AFCD60(G_B3_0, (bool)0, L_7, NULL);
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:726>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:726>
 		XRDeviceSimulatorUI_HeadDeviceSetActive_m0392A433693A2558E34413A42FEBA15A6A498F8F(__this, (bool)0, NULL);
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:727>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:727>
 		XRDeviceSimulatorUI_ControllersSetActive_mDCC0928409C8F1EA403972142D6329963AA37B47(__this, (bool)0, (bool)0, NULL);
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:728>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:728>
 		return;
 	}
 }
@@ -7699,27 +7699,27 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XRDeviceSimulatorUI_OnActivateBothHands_
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:735>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:735>
 		XRDeviceSimulatorUI_HandsSetActive_m5E9FF5FBB235313B1B9FD736797C10D210181545(__this, (bool)1, (bool)0, NULL);
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:736>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:736>
 		Text_tD60B2346DAA6666BF0D822FF607F0B220C2B9E62* L_0 = __this->___m_CurrentSelectedDeviceText;
 		NullCheck(L_0);
 		VirtualActionInvoker1< String_t* >::Invoke(75, L_0, _stringLiteralE82869167C008D2D8937A0C3441EAC839008F2BF);
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:737>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:737>
 		XRDeviceSimulatorHandsUI_t1BE09C7DB972DF8CF28AF0FDABE67DA9EF68070C* L_1 = __this->___m_LeftHand;
 		XRDeviceSimulator_t2BEF1AB226D797BE78F5B291FCCB8A8B4274B30C* L_2 = __this->___m_Simulator;
 		NullCheck(L_1);
 		XRDeviceSimulatorHandsUI_SetActive_m935D3CC41AD4F62C742218FFC62A62F681AFCD60(L_1, (bool)1, L_2, NULL);
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:738>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:738>
 		XRDeviceSimulatorHandsUI_t1BE09C7DB972DF8CF28AF0FDABE67DA9EF68070C* L_3 = __this->___m_RightHand;
 		XRDeviceSimulator_t2BEF1AB226D797BE78F5B291FCCB8A8B4274B30C* L_4 = __this->___m_Simulator;
 		NullCheck(L_3);
 		XRDeviceSimulatorHandsUI_SetActive_m935D3CC41AD4F62C742218FFC62A62F681AFCD60(L_3, (bool)1, L_4, NULL);
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:740>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:740>
 		XRDeviceSimulatorUI_HeadDeviceSetActive_m0392A433693A2558E34413A42FEBA15A6A498F8F(__this, (bool)0, NULL);
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:741>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:741>
 		XRDeviceSimulatorUI_ControllersSetActive_mDCC0928409C8F1EA403972142D6329963AA37B47(__this, (bool)0, (bool)0, NULL);
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:742>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:742>
 		return;
 	}
 }
@@ -7738,27 +7738,27 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XRDeviceSimulatorUI_OnActivateHeadsetDev
 	String_t* G_B3_0 = NULL;
 	Text_tD60B2346DAA6666BF0D822FF607F0B220C2B9E62* G_B3_1 = NULL;
 	{
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:749>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:749>
 		XRDeviceSimulatorControllerUI_t9748C4B40D05E0409282C9AA2921E78339D0D0B1* L_0 = __this->___m_LeftController;
 		XRDeviceSimulator_t2BEF1AB226D797BE78F5B291FCCB8A8B4274B30C* L_1 = __this->___m_Simulator;
 		NullCheck(L_0);
 		XRDeviceSimulatorControllerUI_SetAsActiveController_m1550E62F7727558E451C7E260C3769AA2E33E56C(L_0, (bool)0, L_1, (bool)0, NULL);
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:750>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:750>
 		XRDeviceSimulatorControllerUI_t9748C4B40D05E0409282C9AA2921E78339D0D0B1* L_2 = __this->___m_RightController;
 		XRDeviceSimulator_t2BEF1AB226D797BE78F5B291FCCB8A8B4274B30C* L_3 = __this->___m_Simulator;
 		NullCheck(L_2);
 		XRDeviceSimulatorControllerUI_SetAsActiveController_m1550E62F7727558E451C7E260C3769AA2E33E56C(L_2, (bool)0, L_3, (bool)0, NULL);
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:752>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:752>
 		XRDeviceSimulatorHandsUI_t1BE09C7DB972DF8CF28AF0FDABE67DA9EF68070C* L_4 = __this->___m_LeftHand;
 		XRDeviceSimulator_t2BEF1AB226D797BE78F5B291FCCB8A8B4274B30C* L_5 = __this->___m_Simulator;
 		NullCheck(L_4);
 		XRDeviceSimulatorHandsUI_SetActive_m935D3CC41AD4F62C742218FFC62A62F681AFCD60(L_4, (bool)0, L_5, NULL);
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:753>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:753>
 		XRDeviceSimulatorHandsUI_t1BE09C7DB972DF8CF28AF0FDABE67DA9EF68070C* L_6 = __this->___m_RightHand;
 		XRDeviceSimulator_t2BEF1AB226D797BE78F5B291FCCB8A8B4274B30C* L_7 = __this->___m_Simulator;
 		NullCheck(L_6);
 		XRDeviceSimulatorHandsUI_SetActive_m935D3CC41AD4F62C742218FFC62A62F681AFCD60(L_6, (bool)0, L_7, NULL);
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:755>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:755>
 		Text_tD60B2346DAA6666BF0D822FF607F0B220C2B9E62* L_8 = __this->___m_CurrentSelectedDeviceText;
 		bool L_9 = ___0_activated;
 		if (L_9)
@@ -7784,7 +7784,7 @@ IL_005f:
 	{
 		NullCheck(G_B3_1);
 		VirtualActionInvoker1< String_t* >::Invoke(75, G_B3_1, G_B3_0);
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:756>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:756>
 		Image_tBC1D03F63BF71132E9A5E472B8742F172A011E7E* L_10 = __this->___m_HeadsetImage;
 		NullCheck(L_10);
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_11;
@@ -7792,10 +7792,10 @@ IL_005f:
 		bool L_12 = ___0_activated;
 		NullCheck(L_11);
 		GameObject_SetActive_m638E92E1E75E519E5B24CF150B08CA8E0CDFAB92(L_11, L_12, NULL);
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:758>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:758>
 		bool L_13 = ___0_activated;
 		XRDeviceSimulatorUI_HeadDeviceSetActive_m0392A433693A2558E34413A42FEBA15A6A498F8F(__this, L_13, NULL);
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:760>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:760>
 		XRDeviceSimulator_t2BEF1AB226D797BE78F5B291FCCB8A8B4274B30C* L_14 = __this->___m_Simulator;
 		NullCheck(L_14);
 		bool L_15;
@@ -7806,13 +7806,13 @@ IL_005f:
 		}
 	}
 	{
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:762>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:762>
 		XRDeviceSimulator_t2BEF1AB226D797BE78F5B291FCCB8A8B4274B30C* L_16 = __this->___m_Simulator;
 		NullCheck(L_16);
 		int32_t L_17;
 		L_17 = XRDeviceSimulator_get_deviceMode_m3ABDC08519CC63AF8A5586F1D0C52AA052C0ADDE_inline(L_16, NULL);
 		XRDeviceSimulatorUI_ControllersSetActive_mDCC0928409C8F1EA403972142D6329963AA37B47(__this, (bool)0, (bool)((((int32_t)L_17) == ((int32_t)0))? 1 : 0), NULL);
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:763>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:763>
 		XRDeviceSimulator_t2BEF1AB226D797BE78F5B291FCCB8A8B4274B30C* L_18 = __this->___m_Simulator;
 		NullCheck(L_18);
 		int32_t L_19;
@@ -7823,7 +7823,7 @@ IL_005f:
 
 IL_00b4:
 	{
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:767>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:767>
 		CanvasGroup_t048C1461B14628CFAEBE6E7353093ADB04EBC094* L_20 = __this->___m_HandsCanvasGroup;
 		NullCheck(L_20);
 		float L_21;
@@ -7831,7 +7831,7 @@ IL_00b4:
 		bool L_22;
 		L_22 = Mathf_Approximately_m1DADD012A8FC82E11FB282501AE2EBBF9A77150B_inline(L_21, (1.0f), NULL);
 		XRDeviceSimulatorUI_HandsSetActive_m5E9FF5FBB235313B1B9FD736797C10D210181545(__this, (bool)0, L_22, NULL);
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:768>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:768>
 		CanvasGroup_t048C1461B14628CFAEBE6E7353093ADB04EBC094* L_23 = __this->___m_ControllersCanvasGroup;
 		NullCheck(L_23);
 		float L_24;
@@ -7839,7 +7839,7 @@ IL_00b4:
 		bool L_25;
 		L_25 = Mathf_Approximately_m1DADD012A8FC82E11FB282501AE2EBBF9A77150B_inline(L_24, (1.0f), NULL);
 		XRDeviceSimulatorUI_ControllersSetActive_mDCC0928409C8F1EA403972142D6329963AA37B47(__this, (bool)0, L_25, NULL);
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:770>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:770>
 		return;
 	}
 }
@@ -7861,7 +7861,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XRDeviceSimulatorUI_HeadDeviceSetActive_
 	memset((&G_B9_0), 0, sizeof(G_B9_0));
 	Image_tBC1D03F63BF71132E9A5E472B8742F172A011E7E* G_B9_1 = NULL;
 	{
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:778>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:778>
 		Image_tBC1D03F63BF71132E9A5E472B8742F172A011E7E* L_0 = __this->___m_HeadsetImage;
 		NullCheck(L_0);
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_1;
@@ -7869,7 +7869,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XRDeviceSimulatorUI_HeadDeviceSetActive_
 		bool L_2 = ___0_active;
 		NullCheck(L_1);
 		GameObject_SetActive_m638E92E1E75E519E5B24CF150B08CA8E0CDFAB92(L_1, L_2, NULL);
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:779>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:779>
 		Image_tBC1D03F63BF71132E9A5E472B8742F172A011E7E* L_3 = __this->___m_HeadsetSelectedButton;
 		bool L_4 = ___0_active;
 		if (L_4)
@@ -7899,7 +7899,7 @@ IL_0028:
 	{
 		NullCheck(G_B3_1);
 		VirtualActionInvoker1< Color_tD001788D726C3A7F1379BEED0260B9591F440C1F >::Invoke(23, G_B3_1, G_B3_0);
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:781>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:781>
 		bool L_7 = ___0_active;
 		if (L_7)
 		{
@@ -7923,27 +7923,27 @@ IL_0038:
 IL_003e:
 	{
 		V_0 = G_B6_0;
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:782>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:782>
 		Image_tBC1D03F63BF71132E9A5E472B8742F172A011E7E* L_10 = __this->___m_HeadsetMoveButtonIcon;
 		Color_tD001788D726C3A7F1379BEED0260B9591F440C1F L_11 = V_0;
 		NullCheck(L_10);
 		VirtualActionInvoker1< Color_tD001788D726C3A7F1379BEED0260B9591F440C1F >::Invoke(23, L_10, L_11);
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:783>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:783>
 		Text_tD60B2346DAA6666BF0D822FF607F0B220C2B9E62* L_12 = __this->___m_HeadsetMoveButtonText;
 		Color_tD001788D726C3A7F1379BEED0260B9591F440C1F L_13 = V_0;
 		NullCheck(L_12);
 		VirtualActionInvoker1< Color_tD001788D726C3A7F1379BEED0260B9591F440C1F >::Invoke(23, L_12, L_13);
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:784>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:784>
 		Image_tBC1D03F63BF71132E9A5E472B8742F172A011E7E* L_14 = __this->___m_HeadsetMoveValueIcon;
 		Color_tD001788D726C3A7F1379BEED0260B9591F440C1F L_15 = V_0;
 		NullCheck(L_14);
 		VirtualActionInvoker1< Color_tD001788D726C3A7F1379BEED0260B9591F440C1F >::Invoke(23, L_14, L_15);
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:785>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:785>
 		Text_tD60B2346DAA6666BF0D822FF607F0B220C2B9E62* L_16 = __this->___m_HeadsetMoveValueText;
 		Color_tD001788D726C3A7F1379BEED0260B9591F440C1F L_17 = V_0;
 		NullCheck(L_16);
 		VirtualActionInvoker1< Color_tD001788D726C3A7F1379BEED0260B9591F440C1F >::Invoke(23, L_16, L_17);
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:787>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:787>
 		Image_tBC1D03F63BF71132E9A5E472B8742F172A011E7E* L_18 = __this->___m_HeadsetMoveButton;
 		bool L_19 = ___0_active;
 		if (L_19)
@@ -7973,7 +7973,7 @@ IL_0086:
 	{
 		NullCheck(G_B9_1);
 		VirtualActionInvoker1< Color_tD001788D726C3A7F1379BEED0260B9591F440C1F >::Invoke(23, G_B9_1, G_B9_0);
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:788>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:788>
 		return;
 	}
 }
@@ -7990,7 +7990,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XRDeviceSimulatorUI_HandsSetActive_m5E9F
 	memset((&G_B6_0), 0, sizeof(G_B6_0));
 	Image_tBC1D03F63BF71132E9A5E472B8742F172A011E7E* G_B6_1 = NULL;
 	{
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:792>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:792>
 		CanvasGroup_t048C1461B14628CFAEBE6E7353093ADB04EBC094* L_0 = __this->___m_HandsCanvasGroup;
 		bool L_1 = ___0_isActive;
 		bool L_2 = ___1_showCanvasGroup;
@@ -8017,7 +8017,7 @@ IL_0017:
 	{
 		NullCheck(G_B3_1);
 		CanvasGroup_set_alpha_m5C06839316D948BB4F75ED72C87FA1F1A20C333F(G_B3_1, G_B3_0, NULL);
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:795>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:795>
 		Image_tBC1D03F63BF71132E9A5E472B8742F172A011E7E* L_3 = __this->___m_HandsSelectedButton;
 		bool L_4 = ___0_isActive;
 		if (L_4)
@@ -8047,7 +8047,7 @@ IL_0033:
 	{
 		NullCheck(G_B6_1);
 		VirtualActionInvoker1< Color_tD001788D726C3A7F1379BEED0260B9591F440C1F >::Invoke(23, G_B6_1, G_B6_0);
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:799>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:799>
 		return;
 	}
 }
@@ -8064,7 +8064,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XRDeviceSimulatorUI_ControllersSetActive
 	memset((&G_B6_0), 0, sizeof(G_B6_0));
 	Image_tBC1D03F63BF71132E9A5E472B8742F172A011E7E* G_B6_1 = NULL;
 	{
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:803>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:803>
 		CanvasGroup_t048C1461B14628CFAEBE6E7353093ADB04EBC094* L_0 = __this->___m_ControllersCanvasGroup;
 		bool L_1 = ___0_isActive;
 		bool L_2 = ___1_showCanvasGroup;
@@ -8091,7 +8091,7 @@ IL_0017:
 	{
 		NullCheck(G_B3_1);
 		CanvasGroup_set_alpha_m5C06839316D948BB4F75ED72C87FA1F1A20C333F(G_B3_1, G_B3_0, NULL);
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:804>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:804>
 		Image_tBC1D03F63BF71132E9A5E472B8742F172A011E7E* L_3 = __this->___m_ControllerSelectedButton;
 		bool L_4 = ___0_isActive;
 		if (L_4)
@@ -8121,7 +8121,7 @@ IL_0033:
 	{
 		NullCheck(G_B6_1);
 		VirtualActionInvoker1< Color_tD001788D726C3A7F1379BEED0260B9591F440C1F >::Invoke(23, G_B6_1, G_B6_0);
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:805>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:805>
 		return;
 	}
 }
@@ -8137,7 +8137,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XRDeviceSimulatorUI_Subscribe_m862226F72
 	InputAction_t1B550AD2B55AF322AFB53CD28DA64081220D01CD* V_0 = NULL;
 	InputAction_t1B550AD2B55AF322AFB53CD28DA64081220D01CD* G_B3_0 = NULL;
 	{
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:809>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:809>
 		InputActionReference_t64730C6B41271E0983FC21BFB416169F5D6BC4A1* L_0 = ___0_reference;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_1;
@@ -8164,7 +8164,7 @@ IL_000c:
 IL_0012:
 	{
 		V_0 = G_B3_0;
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:810>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:810>
 		InputAction_t1B550AD2B55AF322AFB53CD28DA64081220D01CD* L_4 = V_0;
 		if (!L_4)
 		{
@@ -8179,12 +8179,12 @@ IL_0012:
 		}
 	}
 	{
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:812>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:812>
 		InputAction_t1B550AD2B55AF322AFB53CD28DA64081220D01CD* L_6 = V_0;
 		Action_1_tEB0353AA1A112B6F2D921B58DCC9D9D4C0498E6E* L_7 = ___1_performedOrCanceled;
 		NullCheck(L_6);
 		InputAction_add_performed_m0337FFA16EBEF7AE365C3B558CFDFF7BB9747B54(L_6, L_7, NULL);
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:813>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:813>
 		InputAction_t1B550AD2B55AF322AFB53CD28DA64081220D01CD* L_8 = V_0;
 		Action_1_tEB0353AA1A112B6F2D921B58DCC9D9D4C0498E6E* L_9 = ___1_performedOrCanceled;
 		NullCheck(L_8);
@@ -8193,7 +8193,7 @@ IL_0012:
 
 IL_0027:
 	{
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:815>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:815>
 		return;
 	}
 }
@@ -8209,7 +8209,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XRDeviceSimulatorUI_Unsubscribe_mE56100C
 	InputAction_t1B550AD2B55AF322AFB53CD28DA64081220D01CD* V_0 = NULL;
 	InputAction_t1B550AD2B55AF322AFB53CD28DA64081220D01CD* G_B3_0 = NULL;
 	{
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:819>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:819>
 		InputActionReference_t64730C6B41271E0983FC21BFB416169F5D6BC4A1* L_0 = ___0_reference;
 		il2cpp_codegen_runtime_class_init_inline(Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		bool L_1;
@@ -8236,7 +8236,7 @@ IL_000c:
 IL_0012:
 	{
 		V_0 = G_B3_0;
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:820>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:820>
 		InputAction_t1B550AD2B55AF322AFB53CD28DA64081220D01CD* L_4 = V_0;
 		if (!L_4)
 		{
@@ -8251,12 +8251,12 @@ IL_0012:
 		}
 	}
 	{
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:822>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:822>
 		InputAction_t1B550AD2B55AF322AFB53CD28DA64081220D01CD* L_6 = V_0;
 		Action_1_tEB0353AA1A112B6F2D921B58DCC9D9D4C0498E6E* L_7 = ___1_performedOrCanceled;
 		NullCheck(L_6);
 		InputAction_remove_performed_m1BE84CED38F11F17C825FA782B35C92D708E6E44(L_6, L_7, NULL);
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:823>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:823>
 		InputAction_t1B550AD2B55AF322AFB53CD28DA64081220D01CD* L_8 = V_0;
 		Action_1_tEB0353AA1A112B6F2D921B58DCC9D9D4C0498E6E* L_9 = ___1_performedOrCanceled;
 		NullCheck(L_8);
@@ -8265,7 +8265,7 @@ IL_0012:
 
 IL_0027:
 	{
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:825>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:825>
 		return;
 	}
 }
@@ -8273,7 +8273,7 @@ IL_0027:
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XRDeviceSimulatorUI_OnManipulateLeftAction_m4B6A407FA44F0F0D9780F2D94A23B309BBEC3832 (XRDeviceSimulatorUI_t83558A12FEB0C923A821ED77A9214E829ABA8E53* __this, CallbackContext_tB251EE41F509C6E8A6B05EC97C029A45DF4F5FA8 ___0_context, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:829>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:829>
 		int32_t L_0;
 		L_0 = CallbackContext_get_phase_mBF36959BEB4B081303626F616535A84137580702((&___0_context), NULL);
 		bool L_1;
@@ -8284,7 +8284,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XRDeviceSimulatorUI_OnManipulateLeftActi
 		}
 	}
 	{
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:831>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:831>
 		XRDeviceSimulator_t2BEF1AB226D797BE78F5B291FCCB8A8B4274B30C* L_2 = __this->___m_Simulator;
 		NullCheck(L_2);
 		bool L_3;
@@ -8305,14 +8305,14 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XRDeviceSimulatorUI_OnManipulateLeftActi
 		}
 	}
 	{
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:832>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:832>
 		XRDeviceSimulatorUI_OnActivateBothDevices_mAEB3893E3C004325009189DF5FF12EE9E001E086(__this, NULL);
 		return;
 	}
 
 IL_002f:
 	{
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:833>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:833>
 		XRDeviceSimulator_t2BEF1AB226D797BE78F5B291FCCB8A8B4274B30C* L_6 = __this->___m_Simulator;
 		NullCheck(L_6);
 		bool L_7;
@@ -8323,14 +8323,14 @@ IL_002f:
 		}
 	}
 	{
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:834>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:834>
 		XRDeviceSimulatorUI_OnActivateLeftDevice_m56B6D15341F34C3E729C6845D3364366C043B6F3(__this, NULL);
 		return;
 	}
 
 IL_0043:
 	{
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:838>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:838>
 		XRDeviceSimulator_t2BEF1AB226D797BE78F5B291FCCB8A8B4274B30C* L_8 = __this->___m_Simulator;
 		NullCheck(L_8);
 		bool L_9;
@@ -8341,14 +8341,14 @@ IL_0043:
 		}
 	}
 	{
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:839>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:839>
 		XRDeviceSimulatorUI_OnActivateRightDevice_m09805C7C0E11317F07DC2F9BF896DA85A512F020(__this, NULL);
 		return;
 	}
 
 IL_0057:
 	{
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:841>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:841>
 		XRDeviceSimulator_t2BEF1AB226D797BE78F5B291FCCB8A8B4274B30C* L_10 = __this->___m_Simulator;
 		NullCheck(L_10);
 		bool L_11;
@@ -8358,7 +8358,7 @@ IL_0057:
 
 IL_0068:
 	{
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:843>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:843>
 		return;
 	}
 }
@@ -8366,7 +8366,7 @@ IL_0068:
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XRDeviceSimulatorUI_OnManipulateRightAction_m312F96E19C9256B6FA40E2A09F99540B340BBF47 (XRDeviceSimulatorUI_t83558A12FEB0C923A821ED77A9214E829ABA8E53* __this, CallbackContext_tB251EE41F509C6E8A6B05EC97C029A45DF4F5FA8 ___0_context, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:847>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:847>
 		int32_t L_0;
 		L_0 = CallbackContext_get_phase_mBF36959BEB4B081303626F616535A84137580702((&___0_context), NULL);
 		bool L_1;
@@ -8377,7 +8377,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XRDeviceSimulatorUI_OnManipulateRightAct
 		}
 	}
 	{
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:849>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:849>
 		XRDeviceSimulator_t2BEF1AB226D797BE78F5B291FCCB8A8B4274B30C* L_2 = __this->___m_Simulator;
 		NullCheck(L_2);
 		bool L_3;
@@ -8398,14 +8398,14 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XRDeviceSimulatorUI_OnManipulateRightAct
 		}
 	}
 	{
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:850>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:850>
 		XRDeviceSimulatorUI_OnActivateBothDevices_mAEB3893E3C004325009189DF5FF12EE9E001E086(__this, NULL);
 		return;
 	}
 
 IL_002f:
 	{
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:851>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:851>
 		XRDeviceSimulator_t2BEF1AB226D797BE78F5B291FCCB8A8B4274B30C* L_6 = __this->___m_Simulator;
 		NullCheck(L_6);
 		bool L_7;
@@ -8416,14 +8416,14 @@ IL_002f:
 		}
 	}
 	{
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:852>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:852>
 		XRDeviceSimulatorUI_OnActivateRightDevice_m09805C7C0E11317F07DC2F9BF896DA85A512F020(__this, NULL);
 		return;
 	}
 
 IL_0043:
 	{
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:856>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:856>
 		XRDeviceSimulator_t2BEF1AB226D797BE78F5B291FCCB8A8B4274B30C* L_8 = __this->___m_Simulator;
 		NullCheck(L_8);
 		bool L_9;
@@ -8434,14 +8434,14 @@ IL_0043:
 		}
 	}
 	{
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:857>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:857>
 		XRDeviceSimulatorUI_OnActivateLeftDevice_m56B6D15341F34C3E729C6845D3364366C043B6F3(__this, NULL);
 		return;
 	}
 
 IL_0057:
 	{
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:859>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:859>
 		XRDeviceSimulator_t2BEF1AB226D797BE78F5B291FCCB8A8B4274B30C* L_10 = __this->___m_Simulator;
 		NullCheck(L_10);
 		bool L_11;
@@ -8451,7 +8451,7 @@ IL_0057:
 
 IL_0068:
 	{
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:861>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:861>
 		return;
 	}
 }
@@ -8459,7 +8459,7 @@ IL_0068:
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XRDeviceSimulatorUI_OnToggleManipulateLeftAction_m4425E496DDEACF85F83685BB8B0D07CB382E0676 (XRDeviceSimulatorUI_t83558A12FEB0C923A821ED77A9214E829ABA8E53* __this, CallbackContext_tB251EE41F509C6E8A6B05EC97C029A45DF4F5FA8 ___0_context, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:865>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:865>
 		int32_t L_0;
 		L_0 = CallbackContext_get_phase_mBF36959BEB4B081303626F616535A84137580702((&___0_context), NULL);
 		bool L_1;
@@ -8470,7 +8470,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XRDeviceSimulatorUI_OnToggleManipulateLe
 		}
 	}
 	{
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:867>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:867>
 		XRDeviceSimulator_t2BEF1AB226D797BE78F5B291FCCB8A8B4274B30C* L_2 = __this->___m_Simulator;
 		NullCheck(L_2);
 		bool L_3;
@@ -8481,20 +8481,20 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XRDeviceSimulatorUI_OnToggleManipulateLe
 		}
 	}
 	{
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:868>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:868>
 		XRDeviceSimulatorUI_OnActivateLeftDevice_m56B6D15341F34C3E729C6845D3364366C043B6F3(__this, NULL);
 		return;
 	}
 
 IL_0022:
 	{
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:870>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:870>
 		XRDeviceSimulatorUI_OnActivateHeadsetDevice_m10763B4667D62E69C21E889D1227DD11C78AE071(__this, (bool)1, NULL);
 	}
 
 IL_0029:
 	{
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:872>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:872>
 		return;
 	}
 }
@@ -8502,7 +8502,7 @@ IL_0029:
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XRDeviceSimulatorUI_OnToggleManipulateRightAction_m08E50EFFF01396EC2C00B78CD1BF70187B8CFB65 (XRDeviceSimulatorUI_t83558A12FEB0C923A821ED77A9214E829ABA8E53* __this, CallbackContext_tB251EE41F509C6E8A6B05EC97C029A45DF4F5FA8 ___0_context, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:876>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:876>
 		int32_t L_0;
 		L_0 = CallbackContext_get_phase_mBF36959BEB4B081303626F616535A84137580702((&___0_context), NULL);
 		bool L_1;
@@ -8513,7 +8513,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XRDeviceSimulatorUI_OnToggleManipulateRi
 		}
 	}
 	{
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:878>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:878>
 		XRDeviceSimulator_t2BEF1AB226D797BE78F5B291FCCB8A8B4274B30C* L_2 = __this->___m_Simulator;
 		NullCheck(L_2);
 		bool L_3;
@@ -8524,20 +8524,20 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XRDeviceSimulatorUI_OnToggleManipulateRi
 		}
 	}
 	{
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:879>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:879>
 		XRDeviceSimulatorUI_OnActivateRightDevice_m09805C7C0E11317F07DC2F9BF896DA85A512F020(__this, NULL);
 		return;
 	}
 
 IL_0022:
 	{
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:881>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:881>
 		XRDeviceSimulatorUI_OnActivateHeadsetDevice_m10763B4667D62E69C21E889D1227DD11C78AE071(__this, (bool)1, NULL);
 	}
 
 IL_0029:
 	{
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:883>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:883>
 		return;
 	}
 }
@@ -8545,7 +8545,7 @@ IL_0029:
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XRDeviceSimulatorUI_OnToggleManipulateBodyAction_m3E2FF42E6E229E0B52D7212E98A40539D8D68942 (XRDeviceSimulatorUI_t83558A12FEB0C923A821ED77A9214E829ABA8E53* __this, CallbackContext_tB251EE41F509C6E8A6B05EC97C029A45DF4F5FA8 ___0_context, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:887>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:887>
 		int32_t L_0;
 		L_0 = CallbackContext_get_phase_mBF36959BEB4B081303626F616535A84137580702((&___0_context), NULL);
 		bool L_1;
@@ -8556,13 +8556,13 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XRDeviceSimulatorUI_OnToggleManipulateBo
 		}
 	}
 	{
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:889>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:889>
 		XRDeviceSimulatorUI_OnActivateHeadsetDevice_m10763B4667D62E69C21E889D1227DD11C78AE071(__this, (bool)1, NULL);
 	}
 
 IL_0015:
 	{
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:891>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:891>
 		return;
 	}
 }
@@ -8578,13 +8578,13 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XRDeviceSimulatorUI_OnManipulateHeadActi
 	memset((&G_B11_0), 0, sizeof(G_B11_0));
 	Image_tBC1D03F63BF71132E9A5E472B8742F172A011E7E* G_B11_1 = NULL;
 	{
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:895>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:895>
 		int32_t L_0;
 		L_0 = CallbackContext_get_phase_mBF36959BEB4B081303626F616535A84137580702((&___0_context), NULL);
 		bool L_1;
 		L_1 = InputExtensions_IsInProgress_m25007106321076468BF7FE0FA4B3685FC6A6B7BA(L_0, NULL);
 		V_0 = L_1;
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:896>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:896>
 		XRDeviceSimulator_t2BEF1AB226D797BE78F5B291FCCB8A8B4274B30C* L_2 = __this->___m_Simulator;
 		NullCheck(L_2);
 		bool L_3;
@@ -8611,7 +8611,7 @@ IL_002a:
 IL_002b:
 	{
 		V_1 = (bool)G_B3_0;
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:897>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:897>
 		bool L_6 = V_0;
 		if (!L_6)
 		{
@@ -8619,7 +8619,7 @@ IL_002b:
 		}
 	}
 	{
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:899>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:899>
 		XRDeviceSimulator_t2BEF1AB226D797BE78F5B291FCCB8A8B4274B30C* L_7 = __this->___m_Simulator;
 		NullCheck(L_7);
 		bool L_8;
@@ -8631,14 +8631,14 @@ IL_002b:
 		}
 	}
 	{
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:900>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:900>
 		XRDeviceSimulatorUI_OnActivateHeadsetDevice_m10763B4667D62E69C21E889D1227DD11C78AE071(__this, (bool)1, NULL);
 		goto IL_005b;
 	}
 
 IL_0047:
 	{
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:902>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:902>
 		bool L_10 = V_1;
 		if (!L_10)
 		{
@@ -8646,7 +8646,7 @@ IL_0047:
 		}
 	}
 	{
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:904>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:904>
 		XRDeviceSimulator_t2BEF1AB226D797BE78F5B291FCCB8A8B4274B30C* L_11 = __this->___m_Simulator;
 		NullCheck(L_11);
 		bool L_12;
@@ -8656,7 +8656,7 @@ IL_0047:
 
 IL_005b:
 	{
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:907>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:907>
 		Image_tBC1D03F63BF71132E9A5E472B8742F172A011E7E* L_13 = __this->___m_HeadsetLookButton;
 		bool L_14 = V_0;
 		if (L_14)
@@ -8686,7 +8686,7 @@ IL_0072:
 	{
 		NullCheck(G_B11_1);
 		VirtualActionInvoker1< Color_tD001788D726C3A7F1379BEED0260B9591F440C1F >::Invoke(23, G_B11_1, G_B11_0);
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:908>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:908>
 		return;
 	}
 }
@@ -8694,7 +8694,7 @@ IL_0072:
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XRDeviceSimulatorUI_OnHandControllerModeAction_m19010BBFC5E2679B59904AF60665B84066F5128C (XRDeviceSimulatorUI_t83558A12FEB0C923A821ED77A9214E829ABA8E53* __this, CallbackContext_tB251EE41F509C6E8A6B05EC97C029A45DF4F5FA8 ___0_context, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:913>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:913>
 		int32_t L_0;
 		L_0 = CallbackContext_get_phase_mBF36959BEB4B081303626F616535A84137580702((&___0_context), NULL);
 		bool L_1;
@@ -8705,7 +8705,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XRDeviceSimulatorUI_OnHandControllerMode
 		}
 	}
 	{
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:915>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:915>
 		XRDeviceSimulator_t2BEF1AB226D797BE78F5B291FCCB8A8B4274B30C* L_2 = __this->___m_Simulator;
 		NullCheck(L_2);
 		bool L_3;
@@ -8726,14 +8726,14 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XRDeviceSimulatorUI_OnHandControllerMode
 		}
 	}
 	{
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:916>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:916>
 		XRDeviceSimulatorUI_OnActivateBothDevices_mAEB3893E3C004325009189DF5FF12EE9E001E086(__this, NULL);
 		goto IL_009d;
 	}
 
 IL_0033:
 	{
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:917>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:917>
 		XRDeviceSimulator_t2BEF1AB226D797BE78F5B291FCCB8A8B4274B30C* L_6 = __this->___m_Simulator;
 		NullCheck(L_6);
 		bool L_7;
@@ -8744,14 +8744,14 @@ IL_0033:
 		}
 	}
 	{
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:918>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:918>
 		XRDeviceSimulatorUI_OnActivateLeftDevice_m56B6D15341F34C3E729C6845D3364366C043B6F3(__this, NULL);
 		goto IL_009d;
 	}
 
 IL_0048:
 	{
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:919>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:919>
 		XRDeviceSimulator_t2BEF1AB226D797BE78F5B291FCCB8A8B4274B30C* L_8 = __this->___m_Simulator;
 		NullCheck(L_8);
 		bool L_9;
@@ -8762,14 +8762,14 @@ IL_0048:
 		}
 	}
 	{
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:920>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:920>
 		XRDeviceSimulatorUI_OnActivateRightDevice_m09805C7C0E11317F07DC2F9BF896DA85A512F020(__this, NULL);
 		goto IL_009d;
 	}
 
 IL_005d:
 	{
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:921>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:921>
 		XRDeviceSimulator_t2BEF1AB226D797BE78F5B291FCCB8A8B4274B30C* L_10 = __this->___m_Simulator;
 		NullCheck(L_10);
 		bool L_11;
@@ -8780,20 +8780,20 @@ IL_005d:
 		}
 	}
 	{
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:922>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:922>
 		XRDeviceSimulatorUI_OnActivateHeadsetDevice_m10763B4667D62E69C21E889D1227DD11C78AE071(__this, (bool)1, NULL);
 		goto IL_009d;
 	}
 
 IL_0073:
 	{
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:925>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:925>
 		XRDeviceSimulator_t2BEF1AB226D797BE78F5B291FCCB8A8B4274B30C* L_12 = __this->___m_Simulator;
 		NullCheck(L_12);
 		int32_t L_13;
 		L_13 = XRDeviceSimulator_get_deviceMode_m3ABDC08519CC63AF8A5586F1D0C52AA052C0ADDE_inline(L_12, NULL);
 		XRDeviceSimulatorUI_ControllersSetActive_mDCC0928409C8F1EA403972142D6329963AA37B47(__this, (bool)0, (bool)((((int32_t)L_13) == ((int32_t)0))? 1 : 0), NULL);
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:926>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:926>
 		XRDeviceSimulator_t2BEF1AB226D797BE78F5B291FCCB8A8B4274B30C* L_14 = __this->___m_Simulator;
 		NullCheck(L_14);
 		int32_t L_15;
@@ -8803,9 +8803,9 @@ IL_0073:
 
 IL_009d:
 	{
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:930>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:930>
 		XRDeviceSimulatorUI_UpdateDeviceInputMethod_m03BC2018A877F28CD0AB84221DEC08E24EF467CA(__this, NULL);
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:932>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:932>
 		return;
 	}
 }
@@ -8813,7 +8813,7 @@ IL_009d:
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XRDeviceSimulatorUI_OnCycleDevicesAction_m06D5E6B758F0962ED8DF77F44F160F2AF27CFABB (XRDeviceSimulatorUI_t83558A12FEB0C923A821ED77A9214E829ABA8E53* __this, CallbackContext_tB251EE41F509C6E8A6B05EC97C029A45DF4F5FA8 ___0_context, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:936>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:936>
 		int32_t L_0;
 		L_0 = CallbackContext_get_phase_mBF36959BEB4B081303626F616535A84137580702((&___0_context), NULL);
 		bool L_1;
@@ -8824,7 +8824,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XRDeviceSimulatorUI_OnCycleDevicesAction
 		}
 	}
 	{
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:938>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:938>
 		XRDeviceSimulator_t2BEF1AB226D797BE78F5B291FCCB8A8B4274B30C* L_2 = __this->___m_Simulator;
 		NullCheck(L_2);
 		bool L_3;
@@ -8835,13 +8835,13 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XRDeviceSimulatorUI_OnCycleDevicesAction
 		}
 	}
 	{
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:939>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:939>
 		XRDeviceSimulatorUI_OnActivateHeadsetDevice_m10763B4667D62E69C21E889D1227DD11C78AE071(__this, (bool)1, NULL);
 	}
 
 IL_0022:
 	{
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:941>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:941>
 		XRDeviceSimulator_t2BEF1AB226D797BE78F5B291FCCB8A8B4274B30C* L_4 = __this->___m_Simulator;
 		NullCheck(L_4);
 		bool L_5;
@@ -8852,13 +8852,13 @@ IL_0022:
 		}
 	}
 	{
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:942>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:942>
 		XRDeviceSimulatorUI_OnActivateLeftDevice_m56B6D15341F34C3E729C6845D3364366C043B6F3(__this, NULL);
 	}
 
 IL_0035:
 	{
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:944>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:944>
 		XRDeviceSimulator_t2BEF1AB226D797BE78F5B291FCCB8A8B4274B30C* L_6 = __this->___m_Simulator;
 		NullCheck(L_6);
 		bool L_7;
@@ -8869,13 +8869,13 @@ IL_0035:
 		}
 	}
 	{
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:945>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:945>
 		XRDeviceSimulatorUI_OnActivateRightDevice_m09805C7C0E11317F07DC2F9BF896DA85A512F020(__this, NULL);
 	}
 
 IL_0048:
 	{
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:947>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:947>
 		return;
 	}
 }
@@ -8883,7 +8883,7 @@ IL_0048:
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XRDeviceSimulatorUI_OnStopManipulationAction_m212983E80F4D415F2476EA74358748F5D1EB7235 (XRDeviceSimulatorUI_t83558A12FEB0C923A821ED77A9214E829ABA8E53* __this, CallbackContext_tB251EE41F509C6E8A6B05EC97C029A45DF4F5FA8 ___0_context, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:951>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:951>
 		int32_t L_0;
 		L_0 = CallbackContext_get_phase_mBF36959BEB4B081303626F616535A84137580702((&___0_context), NULL);
 		bool L_1;
@@ -8894,7 +8894,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XRDeviceSimulatorUI_OnStopManipulationAc
 		}
 	}
 	{
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:952>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:952>
 		XRDeviceSimulator_t2BEF1AB226D797BE78F5B291FCCB8A8B4274B30C* L_2 = __this->___m_Simulator;
 		NullCheck(L_2);
 		bool L_3;
@@ -8904,7 +8904,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XRDeviceSimulatorUI_OnStopManipulationAc
 
 IL_001f:
 	{
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:953>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:953>
 		return;
 	}
 }
@@ -8912,7 +8912,7 @@ IL_001f:
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XRDeviceSimulatorUI_OnToggleMouseTransformationModeAction_mBCD407AAD41886BAEE366E3523251CD14BF222C7 (XRDeviceSimulatorUI_t83558A12FEB0C923A821ED77A9214E829ABA8E53* __this, CallbackContext_tB251EE41F509C6E8A6B05EC97C029A45DF4F5FA8 ___0_context, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:957>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:957>
 		int32_t L_0;
 		L_0 = CallbackContext_get_phase_mBF36959BEB4B081303626F616535A84137580702((&___0_context), NULL);
 		bool L_1;
@@ -8923,13 +8923,13 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XRDeviceSimulatorUI_OnToggleMouseTransfo
 		}
 	}
 	{
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:958>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:958>
 		XRDeviceSimulatorUI_OnSetMouseMode_mEF57C0283E7FE9D7265692970D0A61619D0F06D0(__this, NULL);
 	}
 
 IL_0014:
 	{
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:959>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:959>
 		return;
 	}
 }
@@ -8937,9 +8937,9 @@ IL_0014:
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XRDeviceSimulatorUI_OnNegateModeAction_mC48377DE1D0E36F2E4DF4A61B8FD1E09081752EC (XRDeviceSimulatorUI_t83558A12FEB0C923A821ED77A9214E829ABA8E53* __this, CallbackContext_tB251EE41F509C6E8A6B05EC97C029A45DF4F5FA8 ___0_context, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:963>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:963>
 		XRDeviceSimulatorUI_OnSetMouseMode_mEF57C0283E7FE9D7265692970D0A61619D0F06D0(__this, NULL);
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:964>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:964>
 		return;
 	}
 }
@@ -8947,7 +8947,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XRDeviceSimulatorUI_OnNegateModeAction_m
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XRDeviceSimulatorUI_OnToggleCursorLockAction_m0CD3BD8878447C011FC2A804BBF88AF03D729E06 (XRDeviceSimulatorUI_t83558A12FEB0C923A821ED77A9214E829ABA8E53* __this, CallbackContext_tB251EE41F509C6E8A6B05EC97C029A45DF4F5FA8 ___0_context, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:968>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:968>
 		int32_t L_0;
 		L_0 = CallbackContext_get_phase_mBF36959BEB4B081303626F616535A84137580702((&___0_context), NULL);
 		bool L_1;
@@ -8958,13 +8958,13 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XRDeviceSimulatorUI_OnToggleCursorLockAc
 		}
 	}
 	{
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:969>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:969>
 		XRDeviceSimulatorUI_OnCursorLockChanged_mAC74593A9B0335BF439B40C306218C2F83005D9C(__this, NULL);
 	}
 
 IL_0014:
 	{
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:970>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:970>
 		return;
 	}
 }
@@ -8972,13 +8972,13 @@ IL_0014:
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XRDeviceSimulatorUI_OnKeyboardXTranslateAction_mD15F59FAAE0813CB8FB290DC92366EDEBEE17CD9 (XRDeviceSimulatorUI_t83558A12FEB0C923A821ED77A9214E829ABA8E53* __this, CallbackContext_tB251EE41F509C6E8A6B05EC97C029A45DF4F5FA8 ___0_context, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:974>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:974>
 		int32_t L_0;
 		L_0 = CallbackContext_get_phase_mBF36959BEB4B081303626F616535A84137580702((&___0_context), NULL);
 		bool L_1;
 		L_1 = InputExtensions_IsInProgress_m25007106321076468BF7FE0FA4B3685FC6A6B7BA(L_0, NULL);
 		XRDeviceSimulatorUI_OnXAxisTranslatePerformed_m9ABE4BB056D160E1891409BB9199FD00A498C772(__this, L_1, (bool)0, NULL);
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:975>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:975>
 		return;
 	}
 }
@@ -8986,13 +8986,13 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XRDeviceSimulatorUI_OnKeyboardXTranslate
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XRDeviceSimulatorUI_OnKeyboardYTranslateAction_m1E41187896D73B09F2693D94227BB9440B43D46C (XRDeviceSimulatorUI_t83558A12FEB0C923A821ED77A9214E829ABA8E53* __this, CallbackContext_tB251EE41F509C6E8A6B05EC97C029A45DF4F5FA8 ___0_context, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:979>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:979>
 		int32_t L_0;
 		L_0 = CallbackContext_get_phase_mBF36959BEB4B081303626F616535A84137580702((&___0_context), NULL);
 		bool L_1;
 		L_1 = InputExtensions_IsInProgress_m25007106321076468BF7FE0FA4B3685FC6A6B7BA(L_0, NULL);
 		XRDeviceSimulatorUI_OnYAxisTranslatePerformed_mCA1B216AD5902D0070A7C66370EE80F408EAD189(__this, L_1, NULL);
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:980>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:980>
 		return;
 	}
 }
@@ -9000,13 +9000,13 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XRDeviceSimulatorUI_OnKeyboardYTranslate
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XRDeviceSimulatorUI_OnKeyboardZTranslateAction_m878A205BB14E48CEF4D1323360F9B1BEC0B32BB3 (XRDeviceSimulatorUI_t83558A12FEB0C923A821ED77A9214E829ABA8E53* __this, CallbackContext_tB251EE41F509C6E8A6B05EC97C029A45DF4F5FA8 ___0_context, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:984>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:984>
 		int32_t L_0;
 		L_0 = CallbackContext_get_phase_mBF36959BEB4B081303626F616535A84137580702((&___0_context), NULL);
 		bool L_1;
 		L_1 = InputExtensions_IsInProgress_m25007106321076468BF7FE0FA4B3685FC6A6B7BA(L_0, NULL);
 		XRDeviceSimulatorUI_OnZAxisTranslatePerformed_m82EB0AC6832C7DDB021FE98A10C3CB84A22315D5(__this, L_1, (bool)0, NULL);
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:985>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:985>
 		return;
 	}
 }
@@ -9022,13 +9022,13 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XRDeviceSimulatorUI_OnRestingHandAxis2DA
 	Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 V_0;
 	memset((&V_0), 0, sizeof(V_0));
 	{
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:989>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:989>
 		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_0;
 		L_0 = CallbackContext_ReadValue_TisVector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7_m454ADEAE74A5A469E011CF78D6303A1034659830((&___0_context), CallbackContext_ReadValue_TisVector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7_m454ADEAE74A5A469E011CF78D6303A1034659830_RuntimeMethod_var);
 		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_1;
 		L_1 = Vector2_ClampMagnitude_m9BF093877BD11282C41088022FE4AE70A3A0ECA9_inline(L_0, (1.0f), NULL);
 		V_0 = L_1;
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:990>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:990>
 		int32_t L_2;
 		L_2 = CallbackContext_get_phase_mBF36959BEB4B081303626F616535A84137580702((&___0_context), NULL);
 		bool L_3;
@@ -9039,7 +9039,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XRDeviceSimulatorUI_OnRestingHandAxis2DA
 		}
 	}
 	{
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:992>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:992>
 		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_4 = V_0;
 		float L_5 = L_4.___x;
 		if ((((float)L_5) == ((float)(0.0f))))
@@ -9048,13 +9048,13 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XRDeviceSimulatorUI_OnRestingHandAxis2DA
 		}
 	}
 	{
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:993>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:993>
 		XRDeviceSimulatorUI_OnXAxisTranslatePerformed_m9ABE4BB056D160E1891409BB9199FD00A498C772(__this, (bool)1, (bool)1, NULL);
 	}
 
 IL_0035:
 	{
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:994>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:994>
 		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_6 = V_0;
 		float L_7 = L_6.___y;
 		if ((((float)L_7) == ((float)(0.0f))))
@@ -9063,14 +9063,14 @@ IL_0035:
 		}
 	}
 	{
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:995>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:995>
 		XRDeviceSimulatorUI_OnZAxisTranslatePerformed_m82EB0AC6832C7DDB021FE98A10C3CB84A22315D5(__this, (bool)1, (bool)1, NULL);
 		return;
 	}
 
 IL_004b:
 	{
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:999>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:999>
 		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_8 = V_0;
 		float L_9 = L_8.___x;
 		if ((!(((float)L_9) == ((float)(0.0f)))))
@@ -9079,13 +9079,13 @@ IL_004b:
 		}
 	}
 	{
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:1000>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:1000>
 		XRDeviceSimulatorUI_OnXAxisTranslatePerformed_m9ABE4BB056D160E1891409BB9199FD00A498C772(__this, (bool)0, (bool)1, NULL);
 	}
 
 IL_0060:
 	{
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:1001>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:1001>
 		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_10 = V_0;
 		float L_11 = L_10.___y;
 		if ((!(((float)L_11) == ((float)(0.0f)))))
@@ -9094,13 +9094,13 @@ IL_0060:
 		}
 	}
 	{
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:1002>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:1002>
 		XRDeviceSimulatorUI_OnZAxisTranslatePerformed_m82EB0AC6832C7DDB021FE98A10C3CB84A22315D5(__this, (bool)0, (bool)1, NULL);
 	}
 
 IL_0075:
 	{
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:1004>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:1004>
 		return;
 	}
 }
@@ -9108,13 +9108,13 @@ IL_0075:
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XRDeviceSimulatorUI_OnGripAction_m33135607635A751290AADD67F007A452216A56F7 (XRDeviceSimulatorUI_t83558A12FEB0C923A821ED77A9214E829ABA8E53* __this, CallbackContext_tB251EE41F509C6E8A6B05EC97C029A45DF4F5FA8 ___0_context, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:1008>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:1008>
 		int32_t L_0;
 		L_0 = CallbackContext_get_phase_mBF36959BEB4B081303626F616535A84137580702((&___0_context), NULL);
 		bool L_1;
 		L_1 = InputExtensions_IsInProgress_m25007106321076468BF7FE0FA4B3685FC6A6B7BA(L_0, NULL);
 		XRDeviceSimulatorUI_OnGripPerformed_m1A6210B656389E1522F1F95AE934D1426AAE8268(__this, L_1, NULL);
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:1009>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:1009>
 		return;
 	}
 }
@@ -9122,13 +9122,13 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XRDeviceSimulatorUI_OnGripAction_m331356
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XRDeviceSimulatorUI_OnTriggerAction_mBC71C10EB435D0FF5AFD68605BC8BCEBB9AA6099 (XRDeviceSimulatorUI_t83558A12FEB0C923A821ED77A9214E829ABA8E53* __this, CallbackContext_tB251EE41F509C6E8A6B05EC97C029A45DF4F5FA8 ___0_context, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:1013>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:1013>
 		int32_t L_0;
 		L_0 = CallbackContext_get_phase_mBF36959BEB4B081303626F616535A84137580702((&___0_context), NULL);
 		bool L_1;
 		L_1 = InputExtensions_IsInProgress_m25007106321076468BF7FE0FA4B3685FC6A6B7BA(L_0, NULL);
 		XRDeviceSimulatorUI_OnTriggerPerformed_m1ECBB93FF7681376A594992C37C9181DC3F39ADE(__this, L_1, NULL);
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:1014>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:1014>
 		return;
 	}
 }
@@ -9136,13 +9136,13 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XRDeviceSimulatorUI_OnTriggerAction_mBC7
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XRDeviceSimulatorUI_OnMenuAction_m06014E5810FBF8B8CB8575204F6C0B33D69F46AC (XRDeviceSimulatorUI_t83558A12FEB0C923A821ED77A9214E829ABA8E53* __this, CallbackContext_tB251EE41F509C6E8A6B05EC97C029A45DF4F5FA8 ___0_context, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:1018>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:1018>
 		int32_t L_0;
 		L_0 = CallbackContext_get_phase_mBF36959BEB4B081303626F616535A84137580702((&___0_context), NULL);
 		bool L_1;
 		L_1 = InputExtensions_IsInProgress_m25007106321076468BF7FE0FA4B3685FC6A6B7BA(L_0, NULL);
 		XRDeviceSimulatorUI_OnMenuPerformed_mFC6D382875DCFA6A8F0334E689756F9DFBCED699(__this, L_1, NULL);
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:1019>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:1019>
 		return;
 	}
 }
@@ -9150,13 +9150,13 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XRDeviceSimulatorUI_OnMenuAction_m06014E
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XRDeviceSimulatorUI_OnPrimaryButtonAction_mAEA274E9DE7E1EC10955EC2B4914B95C8B009F5F (XRDeviceSimulatorUI_t83558A12FEB0C923A821ED77A9214E829ABA8E53* __this, CallbackContext_tB251EE41F509C6E8A6B05EC97C029A45DF4F5FA8 ___0_context, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:1023>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:1023>
 		int32_t L_0;
 		L_0 = CallbackContext_get_phase_mBF36959BEB4B081303626F616535A84137580702((&___0_context), NULL);
 		bool L_1;
 		L_1 = InputExtensions_IsInProgress_m25007106321076468BF7FE0FA4B3685FC6A6B7BA(L_0, NULL);
 		XRDeviceSimulatorUI_OnPrimaryButtonPerformed_m0488603E1F0A4136D6FB07B136705A4B371C05F1(__this, L_1, NULL);
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:1024>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:1024>
 		return;
 	}
 }
@@ -9164,13 +9164,13 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XRDeviceSimulatorUI_OnPrimaryButtonActio
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XRDeviceSimulatorUI_OnSecondaryButtonAction_m1E86508C1CC1AD1FBC2C5BBBC5B3DEDB0B07882E (XRDeviceSimulatorUI_t83558A12FEB0C923A821ED77A9214E829ABA8E53* __this, CallbackContext_tB251EE41F509C6E8A6B05EC97C029A45DF4F5FA8 ___0_context, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:1028>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:1028>
 		int32_t L_0;
 		L_0 = CallbackContext_get_phase_mBF36959BEB4B081303626F616535A84137580702((&___0_context), NULL);
 		bool L_1;
 		L_1 = InputExtensions_IsInProgress_m25007106321076468BF7FE0FA4B3685FC6A6B7BA(L_0, NULL);
 		XRDeviceSimulatorUI_OnSecondaryButtonPerformed_m8DE0AD38CD973260A8F15F08418C6687F57F97E1(__this, L_1, NULL);
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:1029>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:1029>
 		return;
 	}
 }
@@ -9178,7 +9178,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XRDeviceSimulatorUI_OnSecondaryButtonAct
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XRDeviceSimulatorUI_OnHandExpressionAction_m75963B1E3E0DD29856773AD847449B7DB5168617 (XRDeviceSimulatorUI_t83558A12FEB0C923A821ED77A9214E829ABA8E53* __this, SimulatedHandExpression_t182C654EA8E45C3AB60BF8AA3BEFDFCBBD8F3CAD* ___0_simulatedExpression, CallbackContext_tB251EE41F509C6E8A6B05EC97C029A45DF4F5FA8 ___1_context, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:1033>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:1033>
 		int32_t L_0;
 		L_0 = CallbackContext_get_phase_mBF36959BEB4B081303626F616535A84137580702((&___1_context), NULL);
 		bool L_1;
@@ -9189,7 +9189,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XRDeviceSimulatorUI_OnHandExpressionActi
 		}
 	}
 	{
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:1035>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:1035>
 		XRDeviceSimulator_t2BEF1AB226D797BE78F5B291FCCB8A8B4274B30C* L_2 = __this->___m_Simulator;
 		NullCheck(L_2);
 		bool L_3;
@@ -9200,7 +9200,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XRDeviceSimulatorUI_OnHandExpressionActi
 		}
 	}
 	{
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:1036>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:1036>
 		XRDeviceSimulatorHandsUI_t1BE09C7DB972DF8CF28AF0FDABE67DA9EF68070C* L_4 = __this->___m_LeftHand;
 		SimulatedHandExpression_t182C654EA8E45C3AB60BF8AA3BEFDFCBBD8F3CAD* L_5 = ___0_simulatedExpression;
 		XRDeviceSimulator_t2BEF1AB226D797BE78F5B291FCCB8A8B4274B30C* L_6 = __this->___m_Simulator;
@@ -9210,7 +9210,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XRDeviceSimulatorUI_OnHandExpressionActi
 
 IL_002d:
 	{
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:1038>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:1038>
 		XRDeviceSimulator_t2BEF1AB226D797BE78F5B291FCCB8A8B4274B30C* L_7 = __this->___m_Simulator;
 		NullCheck(L_7);
 		bool L_8;
@@ -9221,7 +9221,7 @@ IL_002d:
 		}
 	}
 	{
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:1039>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:1039>
 		XRDeviceSimulatorHandsUI_t1BE09C7DB972DF8CF28AF0FDABE67DA9EF68070C* L_9 = __this->___m_RightHand;
 		SimulatedHandExpression_t182C654EA8E45C3AB60BF8AA3BEFDFCBBD8F3CAD* L_10 = ___0_simulatedExpression;
 		XRDeviceSimulator_t2BEF1AB226D797BE78F5B291FCCB8A8B4274B30C* L_11 = __this->___m_Simulator;
@@ -9231,7 +9231,7 @@ IL_002d:
 
 IL_004c:
 	{
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:1041>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:1041>
 		return;
 	}
 }
@@ -9257,9 +9257,9 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XRDeviceSimulatorUI_OnSetMouseMode_mEF57
 	String_t* G_B6_0 = NULL;
 	Text_tD60B2346DAA6666BF0D822FF607F0B220C2B9E62* G_B6_1 = NULL;
 	{
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:1046>
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:1047>
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:1048>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:1046>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:1047>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:1048>
 		Text_tD60B2346DAA6666BF0D822FF607F0B220C2B9E62* L_0 = __this->___m_MouseModeButtonText;
 		XRDeviceSimulator_t2BEF1AB226D797BE78F5B291FCCB8A8B4274B30C* L_1 = __this->___m_Simulator;
 		NullCheck(L_1);
@@ -9307,10 +9307,10 @@ IL_004c:
 	{
 		NullCheck(G_B3_1);
 		VirtualActionInvoker1< String_t* >::Invoke(75, G_B3_1, G_B3_0);
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:1050>
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:1051>
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:1052>
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:1053>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:1050>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:1051>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:1052>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:1053>
 		Text_tD60B2346DAA6666BF0D822FF607F0B220C2B9E62* L_12 = __this->___m_HeadsetLookButtonText;
 		XRDeviceSimulator_t2BEF1AB226D797BE78F5B291FCCB8A8B4274B30C* L_13 = __this->___m_Simulator;
 		NullCheck(L_13);
@@ -9339,7 +9339,7 @@ IL_0070:
 	{
 		NullCheck(G_B6_1);
 		VirtualActionInvoker1< String_t* >::Invoke(75, G_B6_1, G_B6_0);
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:1054>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:1054>
 		return;
 	}
 }
@@ -9352,7 +9352,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XRDeviceSimulatorUI_OnCursorLockChanged_
 	memset((&G_B3_0), 0, sizeof(G_B3_0));
 	Image_tBC1D03F63BF71132E9A5E472B8742F172A011E7E* G_B3_1 = NULL;
 	{
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:1058>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:1058>
 		Image_tBC1D03F63BF71132E9A5E472B8742F172A011E7E* L_0 = __this->___m_CursorLockButton;
 		int32_t L_1;
 		L_1 = Cursor_get_lockState_m9AD145AFB215DFEDA0074AC1F129EF02CCE5B632(NULL);
@@ -9383,7 +9383,7 @@ IL_001c:
 	{
 		NullCheck(G_B3_1);
 		VirtualActionInvoker1< Color_tD001788D726C3A7F1379BEED0260B9591F440C1F >::Invoke(23, G_B3_1, G_B3_0);
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:1059>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:1059>
 		return;
 	}
 }
@@ -9399,10 +9399,10 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XRDeviceSimulatorUI_OnXAxisTranslatePerf
 	memset((&G_B16_0), 0, sizeof(G_B16_0));
 	Image_tBC1D03F63BF71132E9A5E472B8742F172A011E7E* G_B16_1 = NULL;
 	{
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:1064>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:1064>
 		bool L_0 = ___0_activated;
 		V_0 = L_0;
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:1065>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:1065>
 		bool L_1 = ___1_restingHand;
 		if (L_1)
 		{
@@ -9410,10 +9410,10 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XRDeviceSimulatorUI_OnXAxisTranslatePerf
 		}
 	}
 	{
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:1067>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:1067>
 		bool L_2 = ___0_activated;
 		__this->___m_XAxisActivated = L_2;
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:1068>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:1068>
 		bool L_3 = V_0;
 		bool L_4 = __this->___m_ZAxisActivated;
 		V_0 = (bool)((int32_t)((int32_t)L_3|(int32_t)L_4));
@@ -9421,7 +9421,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XRDeviceSimulatorUI_OnXAxisTranslatePerf
 
 IL_0015:
 	{
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:1071>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:1071>
 		XRDeviceSimulator_t2BEF1AB226D797BE78F5B291FCCB8A8B4274B30C* L_5 = __this->___m_Simulator;
 		NullCheck(L_5);
 		bool L_6;
@@ -9432,7 +9432,7 @@ IL_0015:
 		}
 	}
 	{
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:1073>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:1073>
 		bool L_7 = ___1_restingHand;
 		if (L_7)
 		{
@@ -9453,7 +9453,7 @@ IL_002d:
 
 IL_0033:
 	{
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:1074>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:1074>
 		bool L_10 = V_0;
 		NullCheck(G_B6_0);
 		XRDeviceSimulatorControllerUI_OnXAxisTranslatePerformed_mEF728B26A740B89F8AD987D528F1E63564B95A92(G_B6_0, L_10, NULL);
@@ -9461,7 +9461,7 @@ IL_0033:
 
 IL_0039:
 	{
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:1077>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:1077>
 		XRDeviceSimulator_t2BEF1AB226D797BE78F5B291FCCB8A8B4274B30C* L_11 = __this->___m_Simulator;
 		NullCheck(L_11);
 		bool L_12;
@@ -9472,7 +9472,7 @@ IL_0039:
 		}
 	}
 	{
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:1079>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:1079>
 		bool L_13 = ___1_restingHand;
 		if (L_13)
 		{
@@ -9493,7 +9493,7 @@ IL_0051:
 
 IL_0057:
 	{
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:1080>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:1080>
 		bool L_16 = V_0;
 		NullCheck(G_B11_0);
 		XRDeviceSimulatorControllerUI_OnXAxisTranslatePerformed_mEF728B26A740B89F8AD987D528F1E63564B95A92(G_B11_0, L_16, NULL);
@@ -9501,7 +9501,7 @@ IL_0057:
 
 IL_005d:
 	{
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:1083>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:1083>
 		XRDeviceSimulator_t2BEF1AB226D797BE78F5B291FCCB8A8B4274B30C* L_17 = __this->___m_Simulator;
 		NullCheck(L_17);
 		bool L_18;
@@ -9512,7 +9512,7 @@ IL_005d:
 		}
 	}
 	{
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:1084>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:1084>
 		Image_tBC1D03F63BF71132E9A5E472B8742F172A011E7E* L_19 = __this->___m_HeadsetMoveButton;
 		bool L_20 = V_0;
 		if (L_20)
@@ -9546,7 +9546,7 @@ IL_0081:
 
 IL_0086:
 	{
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:1085>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:1085>
 		return;
 	}
 }
@@ -9559,7 +9559,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XRDeviceSimulatorUI_OnYAxisTranslatePerf
 	memset((&G_B4_0), 0, sizeof(G_B4_0));
 	Image_tBC1D03F63BF71132E9A5E472B8742F172A011E7E* G_B4_1 = NULL;
 	{
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:1090>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:1090>
 		XRDeviceSimulator_t2BEF1AB226D797BE78F5B291FCCB8A8B4274B30C* L_0 = __this->___m_Simulator;
 		NullCheck(L_0);
 		bool L_1;
@@ -9570,7 +9570,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XRDeviceSimulatorUI_OnYAxisTranslatePerf
 		}
 	}
 	{
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:1091>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:1091>
 		Image_tBC1D03F63BF71132E9A5E472B8742F172A011E7E* L_2 = __this->___m_HeadsetMoveButton;
 		bool L_3 = ___0_activated;
 		if (L_3)
@@ -9604,7 +9604,7 @@ IL_0024:
 
 IL_0029:
 	{
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:1092>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:1092>
 		return;
 	}
 }
@@ -9620,10 +9620,10 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XRDeviceSimulatorUI_OnZAxisTranslatePerf
 	memset((&G_B16_0), 0, sizeof(G_B16_0));
 	Image_tBC1D03F63BF71132E9A5E472B8742F172A011E7E* G_B16_1 = NULL;
 	{
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:1097>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:1097>
 		bool L_0 = ___0_activated;
 		V_0 = L_0;
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:1098>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:1098>
 		bool L_1 = ___1_restingHand;
 		if (L_1)
 		{
@@ -9631,10 +9631,10 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XRDeviceSimulatorUI_OnZAxisTranslatePerf
 		}
 	}
 	{
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:1100>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:1100>
 		bool L_2 = ___0_activated;
 		__this->___m_ZAxisActivated = L_2;
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:1101>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:1101>
 		bool L_3 = V_0;
 		bool L_4 = __this->___m_XAxisActivated;
 		V_0 = (bool)((int32_t)((int32_t)L_3|(int32_t)L_4));
@@ -9642,7 +9642,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XRDeviceSimulatorUI_OnZAxisTranslatePerf
 
 IL_0015:
 	{
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:1104>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:1104>
 		XRDeviceSimulator_t2BEF1AB226D797BE78F5B291FCCB8A8B4274B30C* L_5 = __this->___m_Simulator;
 		NullCheck(L_5);
 		bool L_6;
@@ -9653,7 +9653,7 @@ IL_0015:
 		}
 	}
 	{
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:1106>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:1106>
 		bool L_7 = ___1_restingHand;
 		if (L_7)
 		{
@@ -9674,7 +9674,7 @@ IL_002d:
 
 IL_0033:
 	{
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:1107>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:1107>
 		bool L_10 = V_0;
 		NullCheck(G_B6_0);
 		XRDeviceSimulatorControllerUI_OnZAxisTranslatePerformed_m71730B8575DA5B161DAC1B7DFBA89B3FF190ACFA(G_B6_0, L_10, NULL);
@@ -9682,7 +9682,7 @@ IL_0033:
 
 IL_0039:
 	{
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:1110>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:1110>
 		XRDeviceSimulator_t2BEF1AB226D797BE78F5B291FCCB8A8B4274B30C* L_11 = __this->___m_Simulator;
 		NullCheck(L_11);
 		bool L_12;
@@ -9693,7 +9693,7 @@ IL_0039:
 		}
 	}
 	{
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:1112>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:1112>
 		bool L_13 = ___1_restingHand;
 		if (L_13)
 		{
@@ -9714,7 +9714,7 @@ IL_0051:
 
 IL_0057:
 	{
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:1113>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:1113>
 		bool L_16 = V_0;
 		NullCheck(G_B11_0);
 		XRDeviceSimulatorControllerUI_OnZAxisTranslatePerformed_m71730B8575DA5B161DAC1B7DFBA89B3FF190ACFA(G_B11_0, L_16, NULL);
@@ -9722,7 +9722,7 @@ IL_0057:
 
 IL_005d:
 	{
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:1116>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:1116>
 		XRDeviceSimulator_t2BEF1AB226D797BE78F5B291FCCB8A8B4274B30C* L_17 = __this->___m_Simulator;
 		NullCheck(L_17);
 		bool L_18;
@@ -9733,7 +9733,7 @@ IL_005d:
 		}
 	}
 	{
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:1117>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:1117>
 		Image_tBC1D03F63BF71132E9A5E472B8742F172A011E7E* L_19 = __this->___m_HeadsetMoveButton;
 		bool L_20 = V_0;
 		if (L_20)
@@ -9767,7 +9767,7 @@ IL_0081:
 
 IL_0086:
 	{
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:1118>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:1118>
 		return;
 	}
 }
@@ -9775,7 +9775,7 @@ IL_0086:
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XRDeviceSimulatorUI_OnMenuPerformed_mFC6D382875DCFA6A8F0334E689756F9DFBCED699 (XRDeviceSimulatorUI_t83558A12FEB0C923A821ED77A9214E829ABA8E53* __this, bool ___0_activated, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:1122>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:1122>
 		XRDeviceSimulator_t2BEF1AB226D797BE78F5B291FCCB8A8B4274B30C* L_0 = __this->___m_Simulator;
 		NullCheck(L_0);
 		bool L_1;
@@ -9786,7 +9786,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XRDeviceSimulatorUI_OnMenuPerformed_mFC6
 		}
 	}
 	{
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:1123>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:1123>
 		XRDeviceSimulatorControllerUI_t9748C4B40D05E0409282C9AA2921E78339D0D0B1* L_2 = __this->___m_LeftController;
 		bool L_3 = ___0_activated;
 		NullCheck(L_2);
@@ -9795,7 +9795,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XRDeviceSimulatorUI_OnMenuPerformed_mFC6
 
 IL_0019:
 	{
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:1125>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:1125>
 		XRDeviceSimulator_t2BEF1AB226D797BE78F5B291FCCB8A8B4274B30C* L_4 = __this->___m_Simulator;
 		NullCheck(L_4);
 		bool L_5;
@@ -9806,7 +9806,7 @@ IL_0019:
 		}
 	}
 	{
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:1126>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:1126>
 		XRDeviceSimulatorControllerUI_t9748C4B40D05E0409282C9AA2921E78339D0D0B1* L_6 = __this->___m_RightController;
 		bool L_7 = ___0_activated;
 		NullCheck(L_6);
@@ -9815,7 +9815,7 @@ IL_0019:
 
 IL_0032:
 	{
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:1127>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:1127>
 		return;
 	}
 }
@@ -9823,7 +9823,7 @@ IL_0032:
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XRDeviceSimulatorUI_OnGripPerformed_m1A6210B656389E1522F1F95AE934D1426AAE8268 (XRDeviceSimulatorUI_t83558A12FEB0C923A821ED77A9214E829ABA8E53* __this, bool ___0_activated, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:1131>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:1131>
 		XRDeviceSimulator_t2BEF1AB226D797BE78F5B291FCCB8A8B4274B30C* L_0 = __this->___m_Simulator;
 		NullCheck(L_0);
 		bool L_1;
@@ -9834,7 +9834,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XRDeviceSimulatorUI_OnGripPerformed_m1A6
 		}
 	}
 	{
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:1132>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:1132>
 		XRDeviceSimulatorControllerUI_t9748C4B40D05E0409282C9AA2921E78339D0D0B1* L_2 = __this->___m_LeftController;
 		bool L_3 = ___0_activated;
 		NullCheck(L_2);
@@ -9843,7 +9843,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XRDeviceSimulatorUI_OnGripPerformed_m1A6
 
 IL_0019:
 	{
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:1134>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:1134>
 		XRDeviceSimulator_t2BEF1AB226D797BE78F5B291FCCB8A8B4274B30C* L_4 = __this->___m_Simulator;
 		NullCheck(L_4);
 		bool L_5;
@@ -9854,7 +9854,7 @@ IL_0019:
 		}
 	}
 	{
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:1135>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:1135>
 		XRDeviceSimulatorControllerUI_t9748C4B40D05E0409282C9AA2921E78339D0D0B1* L_6 = __this->___m_RightController;
 		bool L_7 = ___0_activated;
 		NullCheck(L_6);
@@ -9863,7 +9863,7 @@ IL_0019:
 
 IL_0032:
 	{
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:1136>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:1136>
 		return;
 	}
 }
@@ -9871,7 +9871,7 @@ IL_0032:
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XRDeviceSimulatorUI_OnTriggerPerformed_m1ECBB93FF7681376A594992C37C9181DC3F39ADE (XRDeviceSimulatorUI_t83558A12FEB0C923A821ED77A9214E829ABA8E53* __this, bool ___0_activated, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:1140>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:1140>
 		XRDeviceSimulator_t2BEF1AB226D797BE78F5B291FCCB8A8B4274B30C* L_0 = __this->___m_Simulator;
 		NullCheck(L_0);
 		bool L_1;
@@ -9882,7 +9882,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XRDeviceSimulatorUI_OnTriggerPerformed_m
 		}
 	}
 	{
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:1141>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:1141>
 		XRDeviceSimulatorControllerUI_t9748C4B40D05E0409282C9AA2921E78339D0D0B1* L_2 = __this->___m_LeftController;
 		bool L_3 = ___0_activated;
 		NullCheck(L_2);
@@ -9891,7 +9891,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XRDeviceSimulatorUI_OnTriggerPerformed_m
 
 IL_0019:
 	{
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:1143>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:1143>
 		XRDeviceSimulator_t2BEF1AB226D797BE78F5B291FCCB8A8B4274B30C* L_4 = __this->___m_Simulator;
 		NullCheck(L_4);
 		bool L_5;
@@ -9902,7 +9902,7 @@ IL_0019:
 		}
 	}
 	{
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:1144>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:1144>
 		XRDeviceSimulatorControllerUI_t9748C4B40D05E0409282C9AA2921E78339D0D0B1* L_6 = __this->___m_RightController;
 		bool L_7 = ___0_activated;
 		NullCheck(L_6);
@@ -9911,7 +9911,7 @@ IL_0019:
 
 IL_0032:
 	{
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:1145>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:1145>
 		return;
 	}
 }
@@ -9919,7 +9919,7 @@ IL_0032:
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XRDeviceSimulatorUI_OnPrimaryButtonPerformed_m0488603E1F0A4136D6FB07B136705A4B371C05F1 (XRDeviceSimulatorUI_t83558A12FEB0C923A821ED77A9214E829ABA8E53* __this, bool ___0_activated, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:1149>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:1149>
 		XRDeviceSimulator_t2BEF1AB226D797BE78F5B291FCCB8A8B4274B30C* L_0 = __this->___m_Simulator;
 		NullCheck(L_0);
 		bool L_1;
@@ -9930,7 +9930,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XRDeviceSimulatorUI_OnPrimaryButtonPerfo
 		}
 	}
 	{
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:1150>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:1150>
 		XRDeviceSimulatorControllerUI_t9748C4B40D05E0409282C9AA2921E78339D0D0B1* L_2 = __this->___m_LeftController;
 		bool L_3 = ___0_activated;
 		NullCheck(L_2);
@@ -9939,7 +9939,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XRDeviceSimulatorUI_OnPrimaryButtonPerfo
 
 IL_0019:
 	{
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:1152>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:1152>
 		XRDeviceSimulator_t2BEF1AB226D797BE78F5B291FCCB8A8B4274B30C* L_4 = __this->___m_Simulator;
 		NullCheck(L_4);
 		bool L_5;
@@ -9950,7 +9950,7 @@ IL_0019:
 		}
 	}
 	{
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:1153>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:1153>
 		XRDeviceSimulatorControllerUI_t9748C4B40D05E0409282C9AA2921E78339D0D0B1* L_6 = __this->___m_RightController;
 		bool L_7 = ___0_activated;
 		NullCheck(L_6);
@@ -9959,7 +9959,7 @@ IL_0019:
 
 IL_0032:
 	{
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:1154>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:1154>
 		return;
 	}
 }
@@ -9967,7 +9967,7 @@ IL_0032:
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XRDeviceSimulatorUI_OnSecondaryButtonPerformed_m8DE0AD38CD973260A8F15F08418C6687F57F97E1 (XRDeviceSimulatorUI_t83558A12FEB0C923A821ED77A9214E829ABA8E53* __this, bool ___0_activated, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:1158>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:1158>
 		XRDeviceSimulator_t2BEF1AB226D797BE78F5B291FCCB8A8B4274B30C* L_0 = __this->___m_Simulator;
 		NullCheck(L_0);
 		bool L_1;
@@ -9978,7 +9978,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XRDeviceSimulatorUI_OnSecondaryButtonPer
 		}
 	}
 	{
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:1159>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:1159>
 		XRDeviceSimulatorControllerUI_t9748C4B40D05E0409282C9AA2921E78339D0D0B1* L_2 = __this->___m_LeftController;
 		bool L_3 = ___0_activated;
 		NullCheck(L_2);
@@ -9987,7 +9987,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XRDeviceSimulatorUI_OnSecondaryButtonPer
 
 IL_0019:
 	{
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:1161>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:1161>
 		XRDeviceSimulator_t2BEF1AB226D797BE78F5B291FCCB8A8B4274B30C* L_4 = __this->___m_Simulator;
 		NullCheck(L_4);
 		bool L_5;
@@ -9998,7 +9998,7 @@ IL_0019:
 		}
 	}
 	{
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:1162>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:1162>
 		XRDeviceSimulatorControllerUI_t9748C4B40D05E0409282C9AA2921E78339D0D0B1* L_6 = __this->___m_RightController;
 		bool L_7 = ___0_activated;
 		NullCheck(L_6);
@@ -10007,7 +10007,7 @@ IL_0019:
 
 IL_0032:
 	{
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:1163>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:1163>
 		return;
 	}
 }
@@ -10015,37 +10015,37 @@ IL_0032:
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XRDeviceSimulatorUI__ctor_mA10A376757C28B721BC6FF62B5D5EAB460C2FDE8 (XRDeviceSimulatorUI_t83558A12FEB0C923A821ED77A9214E829ABA8E53* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:26>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:26>
 		__this->___m_IsMenuOpen = (bool)1;
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:238>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:238>
 		Color_tD001788D726C3A7F1379BEED0260B9591F440C1F L_0;
 		L_0 = Color_get_clear_m02E023A7D396B973288B3915F6F24FBF7E0DC81D_inline(NULL);
 		__this->___m_EnabledColor = L_0;
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:255>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:255>
 		Color_tD001788D726C3A7F1379BEED0260B9591F440C1F L_1;
 		L_1 = Color_get_clear_m02E023A7D396B973288B3915F6F24FBF7E0DC81D_inline(NULL);
 		__this->___m_DisabledColor = L_1;
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:272>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:272>
 		Color_tD001788D726C3A7F1379BEED0260B9591F440C1F L_2;
 		L_2 = Color_get_clear_m02E023A7D396B973288B3915F6F24FBF7E0DC81D_inline(NULL);
 		__this->___m_ButtonColor = L_2;
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:289>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:289>
 		Color_tD001788D726C3A7F1379BEED0260B9591F440C1F L_3;
 		L_3 = Color_get_clear_m02E023A7D396B973288B3915F6F24FBF7E0DC81D_inline(NULL);
 		__this->___m_DisabledButtonColor = L_3;
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:306>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:306>
 		Color_tD001788D726C3A7F1379BEED0260B9591F440C1F L_4;
 		L_4 = Color_get_clear_m02E023A7D396B973288B3915F6F24FBF7E0DC81D_inline(NULL);
 		__this->___m_SelectedColor = L_4;
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:323>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:323>
 		Color_tD001788D726C3A7F1379BEED0260B9591F440C1F L_5;
 		L_5 = Color_get_clear_m02E023A7D396B973288B3915F6F24FBF7E0DC81D_inline(NULL);
 		__this->___m_BackgroundColor = L_5;
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:340>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:340>
 		Color_tD001788D726C3A7F1379BEED0260B9591F440C1F L_6;
 		L_6 = Color_get_clear_m02E023A7D396B973288B3915F6F24FBF7E0DC81D_inline(NULL);
 		__this->___m_DeviceColor = L_6;
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:357>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:357>
 		Color_tD001788D726C3A7F1379BEED0260B9591F440C1F L_7;
 		L_7 = Color_get_clear_m02E023A7D396B973288B3915F6F24FBF7E0DC81D_inline(NULL);
 		__this->___m_DisabledDeviceColor = L_7;
@@ -10063,81 +10063,81 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XRDeviceSimulatorUI__cctor_m69A8D348C2A1
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:234>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:234>
 		Color_tD001788D726C3A7F1379BEED0260B9591F440C1F L_0;
 		memset((&L_0), 0, sizeof(L_0));
 		Color__ctor_mCD6889CDE39F18704CD6EA8E2EFBFA48BA3E13B0_inline((&L_0), (0.768627465f), (0.768627465f), (0.768627465f), NULL);
 		((XRDeviceSimulatorUI_t83558A12FEB0C923A821ED77A9214E829ABA8E53_StaticFields*)il2cpp_codegen_static_fields_for(XRDeviceSimulatorUI_t83558A12FEB0C923A821ED77A9214E829ABA8E53_il2cpp_TypeInfo_var))->___k_EnabledColorDark = L_0;
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:235>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:235>
 		Color_tD001788D726C3A7F1379BEED0260B9591F440C1F L_1;
 		memset((&L_1), 0, sizeof(L_1));
 		Color__ctor_mCD6889CDE39F18704CD6EA8E2EFBFA48BA3E13B0_inline((&L_1), (0.333333343f), (0.333333343f), (0.333333343f), NULL);
 		((XRDeviceSimulatorUI_t83558A12FEB0C923A821ED77A9214E829ABA8E53_StaticFields*)il2cpp_codegen_static_fields_for(XRDeviceSimulatorUI_t83558A12FEB0C923A821ED77A9214E829ABA8E53_il2cpp_TypeInfo_var))->___k_EnabledColorLight = L_1;
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:251>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:251>
 		Color_tD001788D726C3A7F1379BEED0260B9591F440C1F L_2;
 		memset((&L_2), 0, sizeof(L_2));
 		Color__ctor_m3786F0D6E510D9CFA544523A955870BD2A514C8C_inline((&L_2), (0.768627465f), (0.768627465f), (0.768627465f), (0.5f), NULL);
 		((XRDeviceSimulatorUI_t83558A12FEB0C923A821ED77A9214E829ABA8E53_StaticFields*)il2cpp_codegen_static_fields_for(XRDeviceSimulatorUI_t83558A12FEB0C923A821ED77A9214E829ABA8E53_il2cpp_TypeInfo_var))->___k_DisabledColorDark = L_2;
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:252>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:252>
 		Color_tD001788D726C3A7F1379BEED0260B9591F440C1F L_3;
 		memset((&L_3), 0, sizeof(L_3));
 		Color__ctor_m3786F0D6E510D9CFA544523A955870BD2A514C8C_inline((&L_3), (0.333333343f), (0.333333343f), (0.333333343f), (0.5f), NULL);
 		((XRDeviceSimulatorUI_t83558A12FEB0C923A821ED77A9214E829ABA8E53_StaticFields*)il2cpp_codegen_static_fields_for(XRDeviceSimulatorUI_t83558A12FEB0C923A821ED77A9214E829ABA8E53_il2cpp_TypeInfo_var))->___k_DisabledColorLight = L_3;
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:268>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:268>
 		Color_tD001788D726C3A7F1379BEED0260B9591F440C1F L_4;
 		memset((&L_4), 0, sizeof(L_4));
 		Color__ctor_mCD6889CDE39F18704CD6EA8E2EFBFA48BA3E13B0_inline((&L_4), (0.333333343f), (0.333333343f), (0.333333343f), NULL);
 		((XRDeviceSimulatorUI_t83558A12FEB0C923A821ED77A9214E829ABA8E53_StaticFields*)il2cpp_codegen_static_fields_for(XRDeviceSimulatorUI_t83558A12FEB0C923A821ED77A9214E829ABA8E53_il2cpp_TypeInfo_var))->___k_ButtonColorDark = L_4;
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:269>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:269>
 		Color_tD001788D726C3A7F1379BEED0260B9591F440C1F L_5;
 		memset((&L_5), 0, sizeof(L_5));
 		Color__ctor_mCD6889CDE39F18704CD6EA8E2EFBFA48BA3E13B0_inline((&L_5), (0.894117653f), (0.894117653f), (0.894117653f), NULL);
 		((XRDeviceSimulatorUI_t83558A12FEB0C923A821ED77A9214E829ABA8E53_StaticFields*)il2cpp_codegen_static_fields_for(XRDeviceSimulatorUI_t83558A12FEB0C923A821ED77A9214E829ABA8E53_il2cpp_TypeInfo_var))->___k_ButtonColorLight = L_5;
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:285>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:285>
 		Color_tD001788D726C3A7F1379BEED0260B9591F440C1F L_6;
 		memset((&L_6), 0, sizeof(L_6));
 		Color__ctor_m3786F0D6E510D9CFA544523A955870BD2A514C8C_inline((&L_6), (0.333333343f), (0.333333343f), (0.333333343f), (0.5f), NULL);
 		((XRDeviceSimulatorUI_t83558A12FEB0C923A821ED77A9214E829ABA8E53_StaticFields*)il2cpp_codegen_static_fields_for(XRDeviceSimulatorUI_t83558A12FEB0C923A821ED77A9214E829ABA8E53_il2cpp_TypeInfo_var))->___k_DisabledButtonColorDark = L_6;
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:286>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:286>
 		Color_tD001788D726C3A7F1379BEED0260B9591F440C1F L_7;
 		memset((&L_7), 0, sizeof(L_7));
 		Color__ctor_m3786F0D6E510D9CFA544523A955870BD2A514C8C_inline((&L_7), (0.894117653f), (0.894117653f), (0.894117653f), (0.5f), NULL);
 		((XRDeviceSimulatorUI_t83558A12FEB0C923A821ED77A9214E829ABA8E53_StaticFields*)il2cpp_codegen_static_fields_for(XRDeviceSimulatorUI_t83558A12FEB0C923A821ED77A9214E829ABA8E53_il2cpp_TypeInfo_var))->___k_DisabledButtonColorLight = L_7;
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:302>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:302>
 		Color_tD001788D726C3A7F1379BEED0260B9591F440C1F L_8;
 		memset((&L_8), 0, sizeof(L_8));
 		Color__ctor_mCD6889CDE39F18704CD6EA8E2EFBFA48BA3E13B0_inline((&L_8), (0.309803933f), (0.396078438f), (0.498039216f), NULL);
 		((XRDeviceSimulatorUI_t83558A12FEB0C923A821ED77A9214E829ABA8E53_StaticFields*)il2cpp_codegen_static_fields_for(XRDeviceSimulatorUI_t83558A12FEB0C923A821ED77A9214E829ABA8E53_il2cpp_TypeInfo_var))->___k_SelectedColorDark = L_8;
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:303>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:303>
 		Color_tD001788D726C3A7F1379BEED0260B9591F440C1F L_9;
 		memset((&L_9), 0, sizeof(L_9));
 		Color__ctor_mCD6889CDE39F18704CD6EA8E2EFBFA48BA3E13B0_inline((&L_9), (0.588235319f), (0.764705896f), (0.984313726f), NULL);
 		((XRDeviceSimulatorUI_t83558A12FEB0C923A821ED77A9214E829ABA8E53_StaticFields*)il2cpp_codegen_static_fields_for(XRDeviceSimulatorUI_t83558A12FEB0C923A821ED77A9214E829ABA8E53_il2cpp_TypeInfo_var))->___k_SelectedColorLight = L_9;
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:319>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:319>
 		Color_tD001788D726C3A7F1379BEED0260B9591F440C1F L_10;
 		L_10 = Color_get_black_mB50217951591A045844C61E7FF31EEE3FEF16737_inline(NULL);
 		((XRDeviceSimulatorUI_t83558A12FEB0C923A821ED77A9214E829ABA8E53_StaticFields*)il2cpp_codegen_static_fields_for(XRDeviceSimulatorUI_t83558A12FEB0C923A821ED77A9214E829ABA8E53_il2cpp_TypeInfo_var))->___k_BackgroundColorDark = L_10;
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:320>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:320>
 		Color_tD001788D726C3A7F1379BEED0260B9591F440C1F L_11;
 		memset((&L_11), 0, sizeof(L_11));
 		Color__ctor_mCD6889CDE39F18704CD6EA8E2EFBFA48BA3E13B0_inline((&L_11), (0.713725507f), (0.713725507f), (0.713725507f), NULL);
 		((XRDeviceSimulatorUI_t83558A12FEB0C923A821ED77A9214E829ABA8E53_StaticFields*)il2cpp_codegen_static_fields_for(XRDeviceSimulatorUI_t83558A12FEB0C923A821ED77A9214E829ABA8E53_il2cpp_TypeInfo_var))->___k_BackgroundColorLight = L_11;
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:336>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:336>
 		Color_tD001788D726C3A7F1379BEED0260B9591F440C1F L_12;
 		memset((&L_12), 0, sizeof(L_12));
 		Color__ctor_mCD6889CDE39F18704CD6EA8E2EFBFA48BA3E13B0_inline((&L_12), (0.431372553f), (0.431372553f), (0.431372553f), NULL);
 		((XRDeviceSimulatorUI_t83558A12FEB0C923A821ED77A9214E829ABA8E53_StaticFields*)il2cpp_codegen_static_fields_for(XRDeviceSimulatorUI_t83558A12FEB0C923A821ED77A9214E829ABA8E53_il2cpp_TypeInfo_var))->___k_DeviceColorDark = L_12;
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:337>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:337>
 		Color_tD001788D726C3A7F1379BEED0260B9591F440C1F L_13;
 		memset((&L_13), 0, sizeof(L_13));
 		Color__ctor_mCD6889CDE39F18704CD6EA8E2EFBFA48BA3E13B0_inline((&L_13), (0.894117653f), (0.894117653f), (0.894117653f), NULL);
 		((XRDeviceSimulatorUI_t83558A12FEB0C923A821ED77A9214E829ABA8E53_StaticFields*)il2cpp_codegen_static_fields_for(XRDeviceSimulatorUI_t83558A12FEB0C923A821ED77A9214E829ABA8E53_il2cpp_TypeInfo_var))->___k_DeviceColorLight = L_13;
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:353>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:353>
 		Color_tD001788D726C3A7F1379BEED0260B9591F440C1F L_14;
 		memset((&L_14), 0, sizeof(L_14));
 		Color__ctor_mCD6889CDE39F18704CD6EA8E2EFBFA48BA3E13B0_inline((&L_14), (0.345098048f), (0.345098048f), (0.345098048f), NULL);
 		((XRDeviceSimulatorUI_t83558A12FEB0C923A821ED77A9214E829ABA8E53_StaticFields*)il2cpp_codegen_static_fields_for(XRDeviceSimulatorUI_t83558A12FEB0C923A821ED77A9214E829ABA8E53_il2cpp_TypeInfo_var))->___k_DisabledDeviceColorDark = L_14;
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:354>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:354>
 		Color_tD001788D726C3A7F1379BEED0260B9591F440C1F L_15;
 		memset((&L_15), 0, sizeof(L_15));
 		Color__ctor_m3786F0D6E510D9CFA544523A955870BD2A514C8C_inline((&L_15), (0.635294139f), (0.635294139f), (0.635294139f), (0.5f), NULL);
@@ -10276,7 +10276,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void Vector3__ctor_m376936E6B999E
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Sprite_tAFF74BC83CD68037494CB0B4F28CBDF8971CAB99* XRDeviceSimulatorUI_get_keyboardSprite_m3A43AAFB3F31DDF61E398E6C39AD06909F3B02F4_inline (XRDeviceSimulatorUI_t83558A12FEB0C923A821ED77A9214E829ABA8E53* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:63>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:63>
 		Sprite_tAFF74BC83CD68037494CB0B4F28CBDF8971CAB99* L_0 = __this->___m_KeyboardSprite;
 		return L_0;
 	}
@@ -10303,7 +10303,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR InputActionReference_t64730C6B412
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Sprite_tAFF74BC83CD68037494CB0B4F28CBDF8971CAB99* HandExpressionUI_get_sprite_m02DA9002C80B580908B081989EB1F471E6BD4F49_inline (HandExpressionUI_tE9AE042B2CBC3FF2ACD826C99B43C0B6BDAE2CDA* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorHandsUI.cs:30>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorHandsUI.cs:30>
 		Sprite_tAFF74BC83CD68037494CB0B4F28CBDF8971CAB99* L_0 = __this->___m_Sprite;
 		return L_0;
 	}
@@ -10534,7 +10534,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR InputDevice_t8BCF67533E872A75779C
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR bool XRDeviceSimulatorUI_get_isMenuOpen_m7BF140ABDA90813062F19E0387E03CEC3FB824FF_inline (XRDeviceSimulatorUI_t83558A12FEB0C923A821ED77A9214E829ABA8E53* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:35>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:35>
 		bool L_0 = __this->___m_IsMenuOpen;
 		return L_0;
 	}
@@ -10552,7 +10552,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t XRDeviceSimulator_get_dev
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Sprite_tAFF74BC83CD68037494CB0B4F28CBDF8971CAB99* XRDeviceSimulatorUI_get_mouseSprite_m555D8F18EEB48C7D1FBD596960855E2C4A08FE9E_inline (XRDeviceSimulatorUI_t83558A12FEB0C923A821ED77A9214E829ABA8E53* __this, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:67>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:67>
 		Sprite_tAFF74BC83CD68037494CB0B4F28CBDF8971CAB99* L_0 = __this->___m_MouseSprite;
 		return L_0;
 	}
@@ -10561,10 +10561,10 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Sprite_tAFF74BC83CD68037494CB0B4F
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void XRDeviceSimulatorUI_set_isMenuOpen_m839BAEEDE92E048CA2EF33ADEF1950C54A4B3A05_inline (XRDeviceSimulatorUI_t83558A12FEB0C923A821ED77A9214E829ABA8E53* __this, bool ___0_value, const RuntimeMethod* method) 
 {
 	{
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:40>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:40>
 		bool L_0 = ___0_value;
 		__this->___m_IsMenuOpen = L_0;
-		//<source_info:/Users/chuanzhefu/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:44>
+		//<source_info:/Users/jackchen/ComputerScience/COMP0113Group3/Assets/Samples/XR Interaction Toolkit/3.0.7/XR Device Simulator/Scripts/XRDeviceSimulatorUI.cs:44>
 		return;
 	}
 }
