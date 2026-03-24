@@ -72,7 +72,7 @@ public class AssignSeats : MonoBehaviour
             started = true;
             var i = MoveToSeats();
             ShowOccupationUIFor3Seconds(i);
-            bgmManager?.PlayMainGamePlaylist();
+            bgmManager?.PlayMainGameSong();
             context.SendJson(new Message(true));
         }
     }
@@ -85,7 +85,7 @@ public class AssignSeats : MonoBehaviour
             started = m.start;
             var i = MoveToSeats();
             ShowOccupationUIFor3Seconds(i);
-            bgmManager?.PlayMainGamePlaylist();
+            bgmManager?.PlayMainGameSong();
         }
     }
 

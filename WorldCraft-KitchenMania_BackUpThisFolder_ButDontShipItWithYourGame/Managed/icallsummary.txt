@@ -1864,7 +1864,6 @@ UnityEngine.Rigidbody::get_angularVelocity_Injected
 UnityEngine.Rigidbody::get_linearVelocity_Injected
 UnityEngine.Rigidbody::get_position_Injected
 UnityEngine.Rigidbody::get_rotation_Injected
-UnityEngine.Rigidbody::get_worldCenterOfMass_Injected
 UnityEngine.Rigidbody::set_angularDamping_Injected
 UnityEngine.Rigidbody::set_angularVelocity_Injected
 UnityEngine.Rigidbody::set_collisionDetectionMode_Injected

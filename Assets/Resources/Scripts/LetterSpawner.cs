@@ -63,7 +63,6 @@ public class LetterSpawner : MonoBehaviour
 
             if (index < 0 || index >= letterPrefabs.prefabs.Count || !letterPrefabs.prefabs[index])
             {
-                Debug.LogWarning($"Missing prefab for {word[i]}");
                 continue;
             }
 

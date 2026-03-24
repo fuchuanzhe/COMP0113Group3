@@ -2,20 +2,14 @@ using UnityEngine;
 
 public class FireworkController : MonoBehaviour
 {
-    [Header("Flight")]
     public float launchHeight = 6f;
     public float launchDuration = 1.2f;
     public AnimationCurve heightCurve = AnimationCurve.EaseInOut(0, 0, 1, 1);
 
-    [Header("Particles")]
     public ParticleSystem rocketTrail;
     public ParticleSystem explosion;
 
-    [Header("Colour")]
-    public bool randomiseColour = true;
     public Gradient fireworkGradient;
-
-    [Header("Cleanup")]
     public float destroyDelayAfterExplode = 3f;
 
     private Vector3 startPos;
@@ -50,7 +44,7 @@ public class FireworkController : MonoBehaviour
 
     void ApplyColour()
     {
-        if (!randomiseColour || explosion == null) return;
+        if (explosion == null) return;
 
         Color chosenColor = fireworkGradient != null
             ? fireworkGradient.Evaluate(Random.value)

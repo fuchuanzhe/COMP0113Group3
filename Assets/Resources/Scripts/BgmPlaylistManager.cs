@@ -1,11 +1,9 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 [RequireComponent(typeof(AudioSource))]
 public class BgmPlaylistManager : MonoBehaviour
 {
-    public enum PlaylistType
+    public enum SongType
     {
         None,
         WaitingRoom,
@@ -15,19 +13,16 @@ public class BgmPlaylistManager : MonoBehaviour
     [Header("References")]
     public AudioSource source;
 
-    [Header("Playlists")]
-    public AudioClip[] waitingRoomPlaylist;
-    public AudioClip[] mainGamePlaylist;
+    [Header("Tracks")]
+    public AudioClip waitingRoomClip;
+    public AudioClip mainGameClip;
 
     [Header("Behavior")]
     public bool playWaitingRoomOnStart = true;
-    public bool avoidImmediateRepeat = true;
 
-    private PlaylistType currentPlaylist = PlaylistType.None;
-    private Coroutine playRoutine;
-    private int lastClipId = -1;
+    private SongType currentSong = SongType.None;
 
-    public PlaylistType CurrentPlaylist => currentPlaylist;
+    public SongType CurrentSong => currentSong;
 
     void Reset()
     {
@@ -37,7 +32,7 @@ public class BgmPlaylistManager : MonoBehaviour
     void Awake()
     {
         if (!source) source = GetComponent<AudioSource>();
-        source.loop = false;
+        source.loop = true;
         source.spatialBlend = 0f;
         source.playOnAwake = false;
     }
@@ -45,83 +40,39 @@ public class BgmPlaylistManager : MonoBehaviour
     void Start()
     {
         if (playWaitingRoomOnStart)
-            PlayWaitingRoomPlaylist();
+            PlayWaitingRoomSong();
     }
 
     void OnDisable()
     {
-        if (playRoutine != null)
-        {
-            StopCoroutine(playRoutine);
-            playRoutine = null;
-        }
+        if (source != null)
+            source.Stop();
     }
 
-    public void PlayWaitingRoomPlaylist()
+    public void PlayWaitingRoomSong()
     {
-        SwitchPlaylist(PlaylistType.WaitingRoom);
+        PlaySong(SongType.WaitingRoom);
     }
 
-    public void PlayMainGamePlaylist()
+    public void PlayMainGameSong()
     {
-        SwitchPlaylist(PlaylistType.MainGame);
+        PlaySong(SongType.MainGame);
     }
 
-    void SwitchPlaylist(PlaylistType target)
+    void PlaySong(SongType target)
     {
-        if (currentPlaylist == target && playRoutine != null)
+        if (currentSong == target && source != null && source.isPlaying)
             return;
 
-        currentPlaylist = target;
+        currentSong = target;
 
-        if (playRoutine != null)
-        {
-            StopCoroutine(playRoutine);
-            playRoutine = null;
-        }
+        if (source == null)
+            return;
 
         source.Stop();
-        playRoutine = StartCoroutine(PlayLoopRoutine(target));
-    }
+        source.clip = target == SongType.MainGame ? mainGameClip : waitingRoomClip;
 
-    IEnumerator PlayLoopRoutine(PlaylistType playlist)
-    {
-        while (currentPlaylist == playlist)
-        {
-            var clips = BuildValidClipList(playlist);
-            if (clips.Count == 0)
-            {
-                yield return new WaitForSeconds(1f);
-                continue;
-            }
-
-            int pick = Random.Range(0, clips.Count);
-            if (avoidImmediateRepeat && clips.Count > 1 && pick == lastClipId)
-            {
-                pick = (pick + Random.Range(1, clips.Count)) % clips.Count;
-            }
-
-            lastClipId = pick;
-            source.clip = clips[pick];
+        if (source.clip != null)
             source.Play();
-
-            while (currentPlaylist == playlist && source.isPlaying)
-                yield return null;
-        }
-    }
-
-    List<AudioClip> BuildValidClipList(PlaylistType playlist)
-    {
-        var src = playlist == PlaylistType.MainGame ? mainGamePlaylist : waitingRoomPlaylist;
-        var list = new List<AudioClip>();
-        if (src == null) return list;
-
-        for (int i = 0; i < src.Length; i++)
-        {
-            if (src[i] != null)
-                list.Add(src[i]);
-        }
-
-        return list;
     }
 }

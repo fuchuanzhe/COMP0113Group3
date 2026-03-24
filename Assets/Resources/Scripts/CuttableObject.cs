@@ -2,15 +2,11 @@ using UnityEngine;
 
 public class CuttableObject : MonoBehaviour
 {
-    [Header("Spawn Halves")]
     public GameObject halfPrefabA;
     public GameObject halfPrefabB;
     public float spawnOffset = 0.01f;
-    public bool addRigidbodyIfMissing = true;
-    public bool destroyOriginal = true;
 
     public bool IsCut { get; private set; }
-
     public string word { get; private set; }
 
     void Awake()
@@ -26,21 +22,15 @@ public class CuttableObject : MonoBehaviour
 
         if (!halfPrefabA || !halfPrefabB)
         {
-            Debug.LogWarning($"[CuttableObject] Missing half prefabs on {name}. Will destroy/deactivate without spawning halves.");
-
             LetterSpawner.Instance?.SpawnWord(word, cutCenter);
             if (networkObj != null)
             networkObj.BroadcastActiveSelf(false);
 
-            if (destroyOriginal) Destroy(gameObject);
-            else gameObject.SetActive(false);
+            Destroy(gameObject);
             return;
         }
 
-        // 让两半沿“切割面法线”分开一点点，避免重叠抖动
         Vector3 offset = planeNormal.normalized * spawnOffset;
-
-        // 旋转：可以让 halves 面向切割面（可选）
         Quaternion rot = transform.rotation;
 
         var a = Instantiate(halfPrefabA, cutCenter + offset, rot);
@@ -53,8 +43,7 @@ public class CuttableObject : MonoBehaviour
         if (networkObj != null)
             networkObj.BroadcastActiveSelf(false);
 
-        if (destroyOriginal) Destroy(gameObject);
-        else gameObject.SetActive(false);
+        Destroy(gameObject);
     }
 
     void SetupHalf(GameObject go, Vector3 vel)
@@ -62,7 +51,7 @@ public class CuttableObject : MonoBehaviour
         if (!go) return;
 
         var rb = go.GetComponent<Rigidbody>();
-        if (!rb && addRigidbodyIfMissing) rb = go.AddComponent<Rigidbody>();
+        if (!rb) rb = go.AddComponent<Rigidbody>();
         if (rb)
         {
             rb.linearVelocity = vel;

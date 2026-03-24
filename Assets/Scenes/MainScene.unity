@@ -1122,7 +1122,7 @@ MonoBehaviour:
   halfPrefabA: {fileID: 0}
   halfPrefabB: {fileID: 0}
   spawnOffset: 0.01
-  addRigidbodyIfMissing: 0
+  addRigidbodyIfMissing: 1
   destroyOriginal: 1
 --- !u!114 &65159507
 MonoBehaviour:
@@ -1524,12 +1524,6 @@ MonoBehaviour:
   grab: {fileID: 75423324}
   tearDistance: 0.25
   armDelay: 0.08
-  spawnHalves: 0
-  HalfPrefabA: {fileID: 0}
-  HalfPrefabB: {fileID: 0}
-  spawnOffset: 0.02
-  throwSpeed: 0.8
-  addRigidbodyIfMissing: 1
   clip: {fileID: 8300000, guid: d2e6c160f65894821a88cff5cf0ae045, type: 3}
 --- !u!114 &75423323
 MonoBehaviour:
@@ -2172,12 +2166,6 @@ MonoBehaviour:
   grab: {fileID: 97965532}
   tearDistance: 0.25
   armDelay: 0.08
-  spawnHalves: 0
-  HalfPrefabA: {fileID: 0}
-  HalfPrefabB: {fileID: 0}
-  spawnOffset: 0.02
-  throwSpeed: 0.8
-  addRigidbodyIfMissing: 1
   clip: {fileID: 8300000, guid: d2e6c160f65894821a88cff5cf0ae045, type: 3}
 --- !u!114 &97965531
 MonoBehaviour:
@@ -2524,12 +2512,6 @@ MonoBehaviour:
   grab: {fileID: 103240313}
   tearDistance: 0.25
   armDelay: 0.08
-  spawnHalves: 0
-  HalfPrefabA: {fileID: 0}
-  HalfPrefabB: {fileID: 0}
-  spawnOffset: 0.02
-  throwSpeed: 0.8
-  addRigidbodyIfMissing: 1
   clip: {fileID: 8300000, guid: d2e6c160f65894821a88cff5cf0ae045, type: 3}
 --- !u!114 &103240312
 MonoBehaviour:
@@ -2835,12 +2817,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BgmPlaylistManager
   source: {fileID: 105052437}
-  waitingRoomPlaylist:
-  - {fileID: 8300000, guid: a78f74b5fcf27449abe20b9a52383279, type: 3}
-  mainGamePlaylist:
-  - {fileID: 8300000, guid: 2ee5e2e3ac4b64a59824214626d0bb91, type: 3}
+  waitingRoomClip: {fileID: 8300000, guid: a78f74b5fcf27449abe20b9a52383279, type: 3}
+  mainGameClip: {fileID: 8300000, guid: 2ee5e2e3ac4b64a59824214626d0bb91, type: 3}
   playWaitingRoomOnStart: 1
-  avoidImmediateRepeat: 1
 --- !u!1 &105940333
 GameObject:
   m_ObjectHideFlags: 0
@@ -3058,12 +3037,6 @@ MonoBehaviour:
   grab: {fileID: 125167894}
   tearDistance: 0.25
   armDelay: 0.08
-  spawnHalves: 0
-  HalfPrefabA: {fileID: 0}
-  HalfPrefabB: {fileID: 0}
-  spawnOffset: 0.02
-  throwSpeed: 0.8
-  addRigidbodyIfMissing: 1
   clip: {fileID: 8300000, guid: d2e6c160f65894821a88cff5cf0ae045, type: 3}
 --- !u!114 &125167893
 MonoBehaviour:
@@ -3875,12 +3848,6 @@ MonoBehaviour:
   grab: {fileID: 167861969}
   tearDistance: 0.25
   armDelay: 0.08
-  spawnHalves: 0
-  HalfPrefabA: {fileID: 0}
-  HalfPrefabB: {fileID: 0}
-  spawnOffset: 0.02
-  throwSpeed: 0.8
-  addRigidbodyIfMissing: 1
   clip: {fileID: 8300000, guid: d2e6c160f65894821a88cff5cf0ae045, type: 3}
 --- !u!114 &167861968
 MonoBehaviour:
@@ -4167,12 +4134,6 @@ MonoBehaviour:
   grab: {fileID: 177468100}
   tearDistance: 0.25
   armDelay: 0.08
-  spawnHalves: 0
-  HalfPrefabA: {fileID: 0}
-  HalfPrefabB: {fileID: 0}
-  spawnOffset: 0.02
-  throwSpeed: 0.8
-  addRigidbodyIfMissing: 1
   clip: {fileID: 8300000, guid: d2e6c160f65894821a88cff5cf0ae045, type: 3}
 --- !u!114 &177468099
 MonoBehaviour:
@@ -5864,12 +5825,6 @@ MonoBehaviour:
   grab: {fileID: 252529541}
   tearDistance: 0.25
   armDelay: 0.08
-  spawnHalves: 0
-  HalfPrefabA: {fileID: 0}
-  HalfPrefabB: {fileID: 0}
-  spawnOffset: 0.02
-  throwSpeed: 0.8
-  addRigidbodyIfMissing: 1
   clip: {fileID: 8300000, guid: d2e6c160f65894821a88cff5cf0ae045, type: 3}
 --- !u!114 &252529544
 MonoBehaviour:
@@ -6294,12 +6249,6 @@ MonoBehaviour:
   grab: {fileID: 263803416}
   tearDistance: 0.25
   armDelay: 0.08
-  spawnHalves: 0
-  HalfPrefabA: {fileID: 0}
-  HalfPrefabB: {fileID: 0}
-  spawnOffset: 0.02
-  throwSpeed: 0.8
-  addRigidbodyIfMissing: 1
   clip: {fileID: 8300000, guid: d2e6c160f65894821a88cff5cf0ae045, type: 3}
 --- !u!114 &263803419
 MonoBehaviour:
@@ -6835,12 +6784,6 @@ MonoBehaviour:
   grab: {fileID: 316978042}
   tearDistance: 0.25
   armDelay: 0.08
-  spawnHalves: 0
-  HalfPrefabA: {fileID: 0}
-  HalfPrefabB: {fileID: 0}
-  spawnOffset: 0.02
-  throwSpeed: 0.8
-  addRigidbodyIfMissing: 1
   clip: {fileID: 8300000, guid: d2e6c160f65894821a88cff5cf0ae045, type: 3}
 --- !u!114 &316978045
 MonoBehaviour:
@@ -7810,12 +7753,6 @@ MonoBehaviour:
   grab: {fileID: 390187415}
   tearDistance: 0.25
   armDelay: 0.08
-  spawnHalves: 0
-  HalfPrefabA: {fileID: 0}
-  HalfPrefabB: {fileID: 0}
-  spawnOffset: 0.02
-  throwSpeed: 0.8
-  addRigidbodyIfMissing: 1
   clip: {fileID: 8300000, guid: d2e6c160f65894821a88cff5cf0ae045, type: 3}
 --- !u!114 &390187414
 MonoBehaviour:
@@ -8952,7 +8889,7 @@ MonoBehaviour:
   halfPrefabA: {fileID: 0}
   halfPrefabB: {fileID: 0}
   spawnOffset: 0.01
-  addRigidbodyIfMissing: 0
+  addRigidbodyIfMissing: 1
   destroyOriginal: 1
 --- !u!114 &415034904
 MonoBehaviour:
@@ -9263,12 +9200,6 @@ MonoBehaviour:
   grab: {fileID: 420617563}
   tearDistance: 0.25
   armDelay: 0.08
-  spawnHalves: 0
-  HalfPrefabA: {fileID: 0}
-  HalfPrefabB: {fileID: 0}
-  spawnOffset: 0.02
-  throwSpeed: 0.8
-  addRigidbodyIfMissing: 1
   clip: {fileID: 8300000, guid: d2e6c160f65894821a88cff5cf0ae045, type: 3}
 --- !u!114 &420617562
 MonoBehaviour:
@@ -9615,12 +9546,6 @@ MonoBehaviour:
   grab: {fileID: 427431516}
   tearDistance: 0.25
   armDelay: 0.08
-  spawnHalves: 0
-  HalfPrefabA: {fileID: 0}
-  HalfPrefabB: {fileID: 0}
-  spawnOffset: 0.02
-  throwSpeed: 0.8
-  addRigidbodyIfMissing: 1
   clip: {fileID: 8300000, guid: d2e6c160f65894821a88cff5cf0ae045, type: 3}
 --- !u!114 &427431515
 MonoBehaviour:
@@ -11481,12 +11406,6 @@ MonoBehaviour:
   grab: {fileID: 553401314}
   tearDistance: 0.25
   armDelay: 0.08
-  spawnHalves: 0
-  HalfPrefabA: {fileID: 0}
-  HalfPrefabB: {fileID: 0}
-  spawnOffset: 0.02
-  throwSpeed: 0.8
-  addRigidbodyIfMissing: 1
   clip: {fileID: 8300000, guid: d2e6c160f65894821a88cff5cf0ae045, type: 3}
 --- !u!114 &553401313
 MonoBehaviour:
@@ -12737,12 +12656,6 @@ MonoBehaviour:
   grab: {fileID: 583761296}
   tearDistance: 0.25
   armDelay: 0.08
-  spawnHalves: 0
-  HalfPrefabA: {fileID: 0}
-  HalfPrefabB: {fileID: 0}
-  spawnOffset: 0.02
-  throwSpeed: 0.8
-  addRigidbodyIfMissing: 1
   clip: {fileID: 8300000, guid: d2e6c160f65894821a88cff5cf0ae045, type: 3}
 --- !u!114 &583761299
 MonoBehaviour:
@@ -12776,12 +12689,6 @@ MonoBehaviour:
   grab: {fileID: 585034488}
   tearDistance: 0.25
   armDelay: 0.08
-  spawnHalves: 0
-  HalfPrefabA: {fileID: 0}
-  HalfPrefabB: {fileID: 0}
-  spawnOffset: 0.02
-  throwSpeed: 0.8
-  addRigidbodyIfMissing: 1
   clip: {fileID: 8300000, guid: d2e6c160f65894821a88cff5cf0ae045, type: 3}
 --- !u!114 &585034487
 MonoBehaviour:
@@ -13824,12 +13731,6 @@ MonoBehaviour:
   grab: {fileID: 613847474}
   tearDistance: 0.25
   armDelay: 0.08
-  spawnHalves: 0
-  HalfPrefabA: {fileID: 0}
-  HalfPrefabB: {fileID: 0}
-  spawnOffset: 0.02
-  throwSpeed: 0.8
-  addRigidbodyIfMissing: 1
   clip: {fileID: 8300000, guid: d2e6c160f65894821a88cff5cf0ae045, type: 3}
 --- !u!114 &613847473
 MonoBehaviour:
@@ -16448,12 +16349,6 @@ MonoBehaviour:
   grab: {fileID: 725093972}
   tearDistance: 0.25
   armDelay: 0.08
-  spawnHalves: 0
-  HalfPrefabA: {fileID: 0}
-  HalfPrefabB: {fileID: 0}
-  spawnOffset: 0.02
-  throwSpeed: 0.8
-  addRigidbodyIfMissing: 1
   clip: {fileID: 8300000, guid: d2e6c160f65894821a88cff5cf0ae045, type: 3}
 --- !u!1001 &728493252
 PrefabInstance:
@@ -16579,12 +16474,6 @@ MonoBehaviour:
   grab: {fileID: 728493259}
   tearDistance: 0.25
   armDelay: 0.08
-  spawnHalves: 0
-  HalfPrefabA: {fileID: 0}
-  HalfPrefabB: {fileID: 0}
-  spawnOffset: 0.02
-  throwSpeed: 0.8
-  addRigidbodyIfMissing: 1
   clip: {fileID: 8300000, guid: d2e6c160f65894821a88cff5cf0ae045, type: 3}
 --- !u!114 &728493258
 MonoBehaviour:
@@ -16881,12 +16770,6 @@ MonoBehaviour:
   grab: {fileID: 751820300}
   tearDistance: 0.25
   armDelay: 0.08
-  spawnHalves: 0
-  HalfPrefabA: {fileID: 0}
-  HalfPrefabB: {fileID: 0}
-  spawnOffset: 0.02
-  throwSpeed: 0.8
-  addRigidbodyIfMissing: 1
   clip: {fileID: 8300000, guid: d2e6c160f65894821a88cff5cf0ae045, type: 3}
 --- !u!114 &751820299
 MonoBehaviour:
@@ -17918,12 +17801,6 @@ MonoBehaviour:
   grab: {fileID: 816403616}
   tearDistance: 0.25
   armDelay: 0.08
-  spawnHalves: 0
-  HalfPrefabA: {fileID: 0}
-  HalfPrefabB: {fileID: 0}
-  spawnOffset: 0.02
-  throwSpeed: 0.8
-  addRigidbodyIfMissing: 1
   clip: {fileID: 8300000, guid: d2e6c160f65894821a88cff5cf0ae045, type: 3}
 --- !u!114 &816403615
 MonoBehaviour:
@@ -18219,12 +18096,6 @@ MonoBehaviour:
   grab: {fileID: 839293980}
   tearDistance: 0.25
   armDelay: 0.08
-  spawnHalves: 0
-  HalfPrefabA: {fileID: 0}
-  HalfPrefabB: {fileID: 0}
-  spawnOffset: 0.02
-  throwSpeed: 0.8
-  addRigidbodyIfMissing: 1
   clip: {fileID: 8300000, guid: d2e6c160f65894821a88cff5cf0ae045, type: 3}
 --- !u!114 &839293979
 MonoBehaviour:
@@ -18762,12 +18633,6 @@ MonoBehaviour:
   grab: {fileID: 867055438}
   tearDistance: 0.25
   armDelay: 0.08
-  spawnHalves: 0
-  HalfPrefabA: {fileID: 0}
-  HalfPrefabB: {fileID: 0}
-  spawnOffset: 0.02
-  throwSpeed: 0.8
-  addRigidbodyIfMissing: 1
   clip: {fileID: 8300000, guid: d2e6c160f65894821a88cff5cf0ae045, type: 3}
 --- !u!114 &867055437
 MonoBehaviour:
@@ -19829,7 +19694,7 @@ MonoBehaviour:
   halfPrefabA: {fileID: 0}
   halfPrefabB: {fileID: 0}
   spawnOffset: 0.01
-  addRigidbodyIfMissing: 0
+  addRigidbodyIfMissing: 1
   destroyOriginal: 1
 --- !u!1 &951162021 stripped
 GameObject:
@@ -19851,12 +19716,6 @@ MonoBehaviour:
   grab: {fileID: 951162024}
   tearDistance: 0.25
   armDelay: 0.08
-  spawnHalves: 0
-  HalfPrefabA: {fileID: 0}
-  HalfPrefabB: {fileID: 0}
-  spawnOffset: 0.02
-  throwSpeed: 0.8
-  addRigidbodyIfMissing: 1
   clip: {fileID: 8300000, guid: d2e6c160f65894821a88cff5cf0ae045, type: 3}
 --- !u!114 &951162023
 MonoBehaviour:
@@ -20039,12 +19898,6 @@ MonoBehaviour:
   grab: {fileID: 952109092}
   tearDistance: 0.25
   armDelay: 0.08
-  spawnHalves: 0
-  HalfPrefabA: {fileID: 0}
-  HalfPrefabB: {fileID: 0}
-  spawnOffset: 0.02
-  throwSpeed: 0.8
-  addRigidbodyIfMissing: 1
   clip: {fileID: 8300000, guid: d2e6c160f65894821a88cff5cf0ae045, type: 3}
 --- !u!114 &952109091
 MonoBehaviour:
@@ -20915,12 +20768,6 @@ MonoBehaviour:
   grab: {fileID: 984546708}
   tearDistance: 0.25
   armDelay: 0.08
-  spawnHalves: 0
-  HalfPrefabA: {fileID: 0}
-  HalfPrefabB: {fileID: 0}
-  spawnOffset: 0.02
-  throwSpeed: 0.8
-  addRigidbodyIfMissing: 1
   clip: {fileID: 8300000, guid: d2e6c160f65894821a88cff5cf0ae045, type: 3}
 --- !u!114 &984546707
 MonoBehaviour:
@@ -21286,12 +21133,6 @@ MonoBehaviour:
   grab: {fileID: 1019094145}
   tearDistance: 0.25
   armDelay: 0.08
-  spawnHalves: 0
-  HalfPrefabA: {fileID: 0}
-  HalfPrefabB: {fileID: 0}
-  spawnOffset: 0.02
-  throwSpeed: 0.8
-  addRigidbodyIfMissing: 1
   clip: {fileID: 8300000, guid: d2e6c160f65894821a88cff5cf0ae045, type: 3}
 --- !u!114 &1019094144
 MonoBehaviour:
@@ -21793,12 +21634,6 @@ MonoBehaviour:
   grab: {fileID: 1032993610}
   tearDistance: 0.25
   armDelay: 0.08
-  spawnHalves: 0
-  HalfPrefabA: {fileID: 0}
-  HalfPrefabB: {fileID: 0}
-  spawnOffset: 0.02
-  throwSpeed: 0.8
-  addRigidbodyIfMissing: 1
   clip: {fileID: 8300000, guid: d2e6c160f65894821a88cff5cf0ae045, type: 3}
 --- !u!114 &1032993609
 MonoBehaviour:
@@ -22327,7 +22162,7 @@ MonoBehaviour:
   halfPrefabA: {fileID: 0}
   halfPrefabB: {fileID: 0}
   spawnOffset: 0.01
-  addRigidbodyIfMissing: 0
+  addRigidbodyIfMissing: 1
   destroyOriginal: 1
 --- !u!1 &1072740207 stripped
 GameObject:
@@ -22788,12 +22623,6 @@ MonoBehaviour:
   grab: {fileID: 1082803227}
   tearDistance: 0.25
   armDelay: 0.08
-  spawnHalves: 0
-  HalfPrefabA: {fileID: 0}
-  HalfPrefabB: {fileID: 0}
-  spawnOffset: 0.02
-  throwSpeed: 0.8
-  addRigidbodyIfMissing: 1
   clip: {fileID: 8300000, guid: d2e6c160f65894821a88cff5cf0ae045, type: 3}
 --- !u!114 &1082803226
 MonoBehaviour:
@@ -23009,7 +22838,7 @@ Transform:
   m_GameObject: {fileID: 1085467395}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.90132, y: 1.42828, z: -10.848}
+  m_LocalPosition: {x: 0.90132, y: 1.42828, z: -10.87}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -23428,12 +23257,6 @@ MonoBehaviour:
   grab: {fileID: 1113469850}
   tearDistance: 0.25
   armDelay: 0.08
-  spawnHalves: 0
-  HalfPrefabA: {fileID: 0}
-  HalfPrefabB: {fileID: 0}
-  spawnOffset: 0.02
-  throwSpeed: 0.8
-  addRigidbodyIfMissing: 1
   clip: {fileID: 8300000, guid: d2e6c160f65894821a88cff5cf0ae045, type: 3}
 --- !u!114 &1113469849
 MonoBehaviour:
@@ -24169,7 +23992,7 @@ MonoBehaviour:
   halfPrefabA: {fileID: 0}
   halfPrefabB: {fileID: 0}
   spawnOffset: 0.01
-  addRigidbodyIfMissing: 0
+  addRigidbodyIfMissing: 1
   destroyOriginal: 1
 --- !u!1 &1161079644 stripped
 GameObject:
@@ -25670,12 +25493,6 @@ MonoBehaviour:
   grab: {fileID: 1239110616}
   tearDistance: 0.25
   armDelay: 0.08
-  spawnHalves: 0
-  HalfPrefabA: {fileID: 0}
-  HalfPrefabB: {fileID: 0}
-  spawnOffset: 0.02
-  throwSpeed: 0.8
-  addRigidbodyIfMissing: 1
   clip: {fileID: 8300000, guid: d2e6c160f65894821a88cff5cf0ae045, type: 3}
 --- !u!114 &1239110615
 MonoBehaviour:
@@ -26139,12 +25956,6 @@ MonoBehaviour:
   grab: {fileID: 1272294933}
   tearDistance: 0.25
   armDelay: 0.08
-  spawnHalves: 0
-  HalfPrefabA: {fileID: 0}
-  HalfPrefabB: {fileID: 0}
-  spawnOffset: 0.02
-  throwSpeed: 0.8
-  addRigidbodyIfMissing: 1
   clip: {fileID: 8300000, guid: d2e6c160f65894821a88cff5cf0ae045, type: 3}
 --- !u!114 &1272294932
 MonoBehaviour:
@@ -27101,12 +26912,6 @@ MonoBehaviour:
   grab: {fileID: 1330214745}
   tearDistance: 0.25
   armDelay: 0.08
-  spawnHalves: 0
-  HalfPrefabA: {fileID: 0}
-  HalfPrefabB: {fileID: 0}
-  spawnOffset: 0.02
-  throwSpeed: 0.8
-  addRigidbodyIfMissing: 1
   clip: {fileID: 8300000, guid: d2e6c160f65894821a88cff5cf0ae045, type: 3}
 --- !u!114 &1330214748
 MonoBehaviour:
@@ -27577,12 +27382,6 @@ MonoBehaviour:
   grab: {fileID: 1369447471}
   tearDistance: 0.25
   armDelay: 0.08
-  spawnHalves: 0
-  HalfPrefabA: {fileID: 0}
-  HalfPrefabB: {fileID: 0}
-  spawnOffset: 0.02
-  throwSpeed: 0.8
-  addRigidbodyIfMissing: 1
   clip: {fileID: 8300000, guid: d2e6c160f65894821a88cff5cf0ae045, type: 3}
 --- !u!114 &1369447470
 MonoBehaviour:
@@ -27881,12 +27680,6 @@ MonoBehaviour:
   grab: {fileID: 1373085339}
   tearDistance: 0.25
   armDelay: 0.08
-  spawnHalves: 0
-  HalfPrefabA: {fileID: 0}
-  HalfPrefabB: {fileID: 0}
-  spawnOffset: 0.02
-  throwSpeed: 0.8
-  addRigidbodyIfMissing: 1
   clip: {fileID: 8300000, guid: d2e6c160f65894821a88cff5cf0ae045, type: 3}
 --- !u!114 &1373085338
 MonoBehaviour:
@@ -30803,7 +30596,7 @@ MonoBehaviour:
   halfPrefabA: {fileID: 0}
   halfPrefabB: {fileID: 0}
   spawnOffset: 0.01
-  addRigidbodyIfMissing: 0
+  addRigidbodyIfMissing: 1
   destroyOriginal: 1
 --- !u!1 &1463718026
 GameObject:
@@ -31301,12 +31094,6 @@ MonoBehaviour:
   grab: {fileID: 1465068236}
   tearDistance: 0.25
   armDelay: 0.08
-  spawnHalves: 0
-  HalfPrefabA: {fileID: 0}
-  HalfPrefabB: {fileID: 0}
-  spawnOffset: 0.02
-  throwSpeed: 0.8
-  addRigidbodyIfMissing: 1
   clip: {fileID: 8300000, guid: d2e6c160f65894821a88cff5cf0ae045, type: 3}
 --- !u!1 &1470725805 stripped
 GameObject:
@@ -31466,12 +31253,6 @@ MonoBehaviour:
   grab: {fileID: 1479179313}
   tearDistance: 0.25
   armDelay: 0.08
-  spawnHalves: 0
-  HalfPrefabA: {fileID: 0}
-  HalfPrefabB: {fileID: 0}
-  spawnOffset: 0.02
-  throwSpeed: 0.8
-  addRigidbodyIfMissing: 1
   clip: {fileID: 8300000, guid: d2e6c160f65894821a88cff5cf0ae045, type: 3}
 --- !u!114 &1479179312
 MonoBehaviour:
@@ -31930,12 +31711,6 @@ MonoBehaviour:
   grab: {fileID: 1481402373}
   tearDistance: 0.25
   armDelay: 0.08
-  spawnHalves: 0
-  HalfPrefabA: {fileID: 0}
-  HalfPrefabB: {fileID: 0}
-  spawnOffset: 0.02
-  throwSpeed: 0.8
-  addRigidbodyIfMissing: 1
   clip: {fileID: 8300000, guid: d2e6c160f65894821a88cff5cf0ae045, type: 3}
 --- !u!1001 &1489771358
 PrefabInstance:
@@ -32211,12 +31986,6 @@ MonoBehaviour:
   grab: {fileID: 1489771361}
   tearDistance: 0.25
   armDelay: 0.08
-  spawnHalves: 0
-  HalfPrefabA: {fileID: 0}
-  HalfPrefabB: {fileID: 0}
-  spawnOffset: 0.02
-  throwSpeed: 0.8
-  addRigidbodyIfMissing: 1
   clip: {fileID: 8300000, guid: d2e6c160f65894821a88cff5cf0ae045, type: 3}
 --- !u!1 &1490870593 stripped
 GameObject:
@@ -32238,12 +32007,6 @@ MonoBehaviour:
   grab: {fileID: 1490870596}
   tearDistance: 0.25
   armDelay: 0.08
-  spawnHalves: 0
-  HalfPrefabA: {fileID: 0}
-  HalfPrefabB: {fileID: 0}
-  spawnOffset: 0.02
-  throwSpeed: 0.8
-  addRigidbodyIfMissing: 1
   clip: {fileID: 8300000, guid: d2e6c160f65894821a88cff5cf0ae045, type: 3}
 --- !u!114 &1490870595
 MonoBehaviour:
@@ -32647,12 +32410,6 @@ MonoBehaviour:
   grab: {fileID: 1497497864}
   tearDistance: 0.25
   armDelay: 0.08
-  spawnHalves: 0
-  HalfPrefabA: {fileID: 0}
-  HalfPrefabB: {fileID: 0}
-  spawnOffset: 0.02
-  throwSpeed: 0.8
-  addRigidbodyIfMissing: 1
   clip: {fileID: 8300000, guid: d2e6c160f65894821a88cff5cf0ae045, type: 3}
 --- !u!114 &1497497863
 MonoBehaviour:
@@ -33195,12 +32952,6 @@ MonoBehaviour:
   grab: {fileID: 1505774592}
   tearDistance: 0.25
   armDelay: 0.08
-  spawnHalves: 0
-  HalfPrefabA: {fileID: 0}
-  HalfPrefabB: {fileID: 0}
-  spawnOffset: 0.02
-  throwSpeed: 0.8
-  addRigidbodyIfMissing: 1
   clip: {fileID: 8300000, guid: d2e6c160f65894821a88cff5cf0ae045, type: 3}
 --- !u!114 &1505774591
 MonoBehaviour:
@@ -34426,12 +34177,6 @@ MonoBehaviour:
   grab: {fileID: 1561412190}
   tearDistance: 0.25
   armDelay: 0.08
-  spawnHalves: 0
-  HalfPrefabA: {fileID: 0}
-  HalfPrefabB: {fileID: 0}
-  spawnOffset: 0.02
-  throwSpeed: 0.8
-  addRigidbodyIfMissing: 1
   clip: {fileID: 8300000, guid: d2e6c160f65894821a88cff5cf0ae045, type: 3}
 --- !u!114 &1561412193
 MonoBehaviour:
@@ -35808,12 +35553,6 @@ MonoBehaviour:
   grab: {fileID: 1622597664}
   tearDistance: 0.25
   armDelay: 0.08
-  spawnHalves: 0
-  HalfPrefabA: {fileID: 0}
-  HalfPrefabB: {fileID: 0}
-  spawnOffset: 0.02
-  throwSpeed: 0.8
-  addRigidbodyIfMissing: 1
   clip: {fileID: 8300000, guid: d2e6c160f65894821a88cff5cf0ae045, type: 3}
 --- !u!114 &1622597663
 MonoBehaviour:
@@ -36259,12 +35998,6 @@ MonoBehaviour:
   grab: {fileID: 1648972940}
   tearDistance: 0.25
   armDelay: 0.08
-  spawnHalves: 0
-  HalfPrefabA: {fileID: 0}
-  HalfPrefabB: {fileID: 0}
-  spawnOffset: 0.02
-  throwSpeed: 0.8
-  addRigidbodyIfMissing: 1
   clip: {fileID: 8300000, guid: d2e6c160f65894821a88cff5cf0ae045, type: 3}
 --- !u!114 &1648972939
 MonoBehaviour:
@@ -36746,12 +36479,6 @@ MonoBehaviour:
   grab: {fileID: 1649764318}
   tearDistance: 0.25
   armDelay: 0.08
-  spawnHalves: 0
-  HalfPrefabA: {fileID: 0}
-  HalfPrefabB: {fileID: 0}
-  spawnOffset: 0.02
-  throwSpeed: 0.8
-  addRigidbodyIfMissing: 1
   clip: {fileID: 8300000, guid: d2e6c160f65894821a88cff5cf0ae045, type: 3}
 --- !u!114 &1649764317
 MonoBehaviour:
@@ -38151,12 +37878,6 @@ MonoBehaviour:
   grab: {fileID: 1721869299}
   tearDistance: 0.25
   armDelay: 0.08
-  spawnHalves: 0
-  HalfPrefabA: {fileID: 0}
-  HalfPrefabB: {fileID: 0}
-  spawnOffset: 0.02
-  throwSpeed: 0.8
-  addRigidbodyIfMissing: 1
   clip: {fileID: 8300000, guid: d2e6c160f65894821a88cff5cf0ae045, type: 3}
 --- !u!114 &1721869298
 MonoBehaviour:
@@ -38573,12 +38294,6 @@ MonoBehaviour:
   grab: {fileID: 1739895690}
   tearDistance: 0.25
   armDelay: 0.08
-  spawnHalves: 0
-  HalfPrefabA: {fileID: 0}
-  HalfPrefabB: {fileID: 0}
-  spawnOffset: 0.02
-  throwSpeed: 0.8
-  addRigidbodyIfMissing: 1
   clip: {fileID: 8300000, guid: d2e6c160f65894821a88cff5cf0ae045, type: 3}
 --- !u!114 &1739895689
 MonoBehaviour:
@@ -39004,7 +38719,7 @@ MonoBehaviour:
   halfPrefabA: {fileID: 0}
   halfPrefabB: {fileID: 0}
   spawnOffset: 0.01
-  addRigidbodyIfMissing: 0
+  addRigidbodyIfMissing: 1
   destroyOriginal: 1
 --- !u!114 &1757618993
 MonoBehaviour:
@@ -39478,12 +39193,6 @@ MonoBehaviour:
   grab: {fileID: 1767680555}
   tearDistance: 0.45
   armDelay: 0.08
-  spawnHalves: 0
-  HalfPrefabA: {fileID: 0}
-  HalfPrefabB: {fileID: 0}
-  spawnOffset: 0.02
-  throwSpeed: 0.8
-  addRigidbodyIfMissing: 1
   clip: {fileID: 8300000, guid: d2e6c160f65894821a88cff5cf0ae045, type: 3}
 --- !u!114 &1767680554
 MonoBehaviour:
@@ -39825,12 +39534,6 @@ MonoBehaviour:
   grab: {fileID: 1782239883}
   tearDistance: 0.25
   armDelay: 0.08
-  spawnHalves: 0
-  HalfPrefabA: {fileID: 0}
-  HalfPrefabB: {fileID: 0}
-  spawnOffset: 0.02
-  throwSpeed: 0.8
-  addRigidbodyIfMissing: 1
   clip: {fileID: 8300000, guid: d2e6c160f65894821a88cff5cf0ae045, type: 3}
 --- !u!114 &1782239886
 MonoBehaviour:
@@ -39988,12 +39691,6 @@ MonoBehaviour:
   grab: {fileID: 1803249746}
   tearDistance: 0.25
   armDelay: 0.08
-  spawnHalves: 0
-  HalfPrefabA: {fileID: 0}
-  HalfPrefabB: {fileID: 0}
-  spawnOffset: 0.02
-  throwSpeed: 0.8
-  addRigidbodyIfMissing: 1
   clip: {fileID: 8300000, guid: d2e6c160f65894821a88cff5cf0ae045, type: 3}
 --- !u!114 &1803249745
 MonoBehaviour:
@@ -40308,12 +40005,6 @@ MonoBehaviour:
   grab: {fileID: 1805090727}
   tearDistance: 0.25
   armDelay: 0.08
-  spawnHalves: 0
-  HalfPrefabA: {fileID: 0}
-  HalfPrefabB: {fileID: 0}
-  spawnOffset: 0.02
-  throwSpeed: 0.8
-  addRigidbodyIfMissing: 1
   clip: {fileID: 8300000, guid: d2e6c160f65894821a88cff5cf0ae045, type: 3}
 --- !u!114 &1805090727
 MonoBehaviour:
@@ -40650,7 +40341,7 @@ MonoBehaviour:
   halfPrefabA: {fileID: 0}
   halfPrefabB: {fileID: 0}
   spawnOffset: 0.01
-  addRigidbodyIfMissing: 0
+  addRigidbodyIfMissing: 1
   destroyOriginal: 1
 --- !u!1 &1808238353
 GameObject:
@@ -41234,12 +40925,6 @@ MonoBehaviour:
   grab: {fileID: 1829644257}
   tearDistance: 0.25
   armDelay: 0.08
-  spawnHalves: 0
-  HalfPrefabA: {fileID: 0}
-  HalfPrefabB: {fileID: 0}
-  spawnOffset: 0.02
-  throwSpeed: 0.8
-  addRigidbodyIfMissing: 1
   clip: {fileID: 8300000, guid: d2e6c160f65894821a88cff5cf0ae045, type: 3}
 --- !u!114 &1829644256
 MonoBehaviour:
@@ -41422,12 +41107,6 @@ MonoBehaviour:
   grab: {fileID: 1829814203}
   tearDistance: 0.25
   armDelay: 0.08
-  spawnHalves: 0
-  HalfPrefabA: {fileID: 0}
-  HalfPrefabB: {fileID: 0}
-  spawnOffset: 0.02
-  throwSpeed: 0.8
-  addRigidbodyIfMissing: 1
   clip: {fileID: 8300000, guid: d2e6c160f65894821a88cff5cf0ae045, type: 3}
 --- !u!114 &1829814202
 MonoBehaviour:
@@ -42209,7 +41888,7 @@ MonoBehaviour:
   halfPrefabA: {fileID: 0}
   halfPrefabB: {fileID: 0}
   spawnOffset: 0.01
-  addRigidbodyIfMissing: 0
+  addRigidbodyIfMissing: 1
   destroyOriginal: 1
 --- !u!114 &1836314995
 MonoBehaviour:
@@ -42758,12 +42437,6 @@ MonoBehaviour:
   grab: {fileID: 1852133663}
   tearDistance: 0.25
   armDelay: 0.08
-  spawnHalves: 0
-  HalfPrefabA: {fileID: 0}
-  HalfPrefabB: {fileID: 0}
-  spawnOffset: 0.02
-  throwSpeed: 0.8
-  addRigidbodyIfMissing: 1
   clip: {fileID: 8300000, guid: d2e6c160f65894821a88cff5cf0ae045, type: 3}
 --- !u!114 &1852133662
 MonoBehaviour:
@@ -43341,12 +43014,6 @@ MonoBehaviour:
   grab: {fileID: 1874012148}
   tearDistance: 0.25
   armDelay: 0.08
-  spawnHalves: 0
-  HalfPrefabA: {fileID: 0}
-  HalfPrefabB: {fileID: 0}
-  spawnOffset: 0.02
-  throwSpeed: 0.8
-  addRigidbodyIfMissing: 1
   clip: {fileID: 8300000, guid: d2e6c160f65894821a88cff5cf0ae045, type: 3}
 --- !u!114 &1874012147
 MonoBehaviour:
@@ -43678,12 +43345,6 @@ MonoBehaviour:
   grab: {fileID: 1879025674}
   tearDistance: 0.25
   armDelay: 0.08
-  spawnHalves: 0
-  HalfPrefabA: {fileID: 0}
-  HalfPrefabB: {fileID: 0}
-  spawnOffset: 0.02
-  throwSpeed: 0.8
-  addRigidbodyIfMissing: 1
   clip: {fileID: 8300000, guid: d2e6c160f65894821a88cff5cf0ae045, type: 3}
 --- !u!114 &1879025677
 MonoBehaviour:
@@ -44300,12 +43961,6 @@ MonoBehaviour:
   grab: {fileID: 1917708359}
   tearDistance: 0.25
   armDelay: 0.08
-  spawnHalves: 0
-  HalfPrefabA: {fileID: 0}
-  HalfPrefabB: {fileID: 0}
-  spawnOffset: 0.02
-  throwSpeed: 0.8
-  addRigidbodyIfMissing: 1
   clip: {fileID: 8300000, guid: d2e6c160f65894821a88cff5cf0ae045, type: 3}
 --- !u!114 &1917708358
 MonoBehaviour:
@@ -45009,12 +44664,6 @@ MonoBehaviour:
   grab: {fileID: 1942415520}
   tearDistance: 0.25
   armDelay: 0.08
-  spawnHalves: 0
-  HalfPrefabA: {fileID: 0}
-  HalfPrefabB: {fileID: 0}
-  spawnOffset: 0.02
-  throwSpeed: 0.8
-  addRigidbodyIfMissing: 1
   clip: {fileID: 8300000, guid: d2e6c160f65894821a88cff5cf0ae045, type: 3}
 --- !u!114 &1942415519
 MonoBehaviour:
@@ -45358,7 +45007,7 @@ MonoBehaviour:
   halfPrefabA: {fileID: 0}
   halfPrefabB: {fileID: 0}
   spawnOffset: 0.01
-  addRigidbodyIfMissing: 0
+  addRigidbodyIfMissing: 1
   destroyOriginal: 1
 --- !u!1001 &1945187116
 PrefabInstance:
@@ -46422,12 +46071,6 @@ MonoBehaviour:
   grab: {fileID: 2002228644}
   tearDistance: 0.25
   armDelay: 0.08
-  spawnHalves: 0
-  HalfPrefabA: {fileID: 0}
-  HalfPrefabB: {fileID: 0}
-  spawnOffset: 0.02
-  throwSpeed: 0.8
-  addRigidbodyIfMissing: 1
   clip: {fileID: 8300000, guid: d2e6c160f65894821a88cff5cf0ae045, type: 3}
 --- !u!114 &2002228643
 MonoBehaviour:
@@ -46757,12 +46400,6 @@ MonoBehaviour:
   grab: {fileID: 2012273817}
   tearDistance: 0.25
   armDelay: 0.08
-  spawnHalves: 0
-  HalfPrefabA: {fileID: 0}
-  HalfPrefabB: {fileID: 0}
-  spawnOffset: 0.02
-  throwSpeed: 0.8
-  addRigidbodyIfMissing: 1
   clip: {fileID: 8300000, guid: d2e6c160f65894821a88cff5cf0ae045, type: 3}
 --- !u!114 &2012273816
 MonoBehaviour:
@@ -47368,12 +47005,6 @@ MonoBehaviour:
   grab: {fileID: 2043249216}
   tearDistance: 0.25
   armDelay: 0.08
-  spawnHalves: 0
-  HalfPrefabA: {fileID: 0}
-  HalfPrefabB: {fileID: 0}
-  spawnOffset: 0.02
-  throwSpeed: 0.8
-  addRigidbodyIfMissing: 1
   clip: {fileID: 8300000, guid: d2e6c160f65894821a88cff5cf0ae045, type: 3}
 --- !u!114 &2043249215
 MonoBehaviour:
@@ -48045,12 +47676,6 @@ MonoBehaviour:
   grab: {fileID: 2076731855}
   tearDistance: 0.25
   armDelay: 0.08
-  spawnHalves: 0
-  HalfPrefabA: {fileID: 0}
-  HalfPrefabB: {fileID: 0}
-  spawnOffset: 0.02
-  throwSpeed: 0.8
-  addRigidbodyIfMissing: 1
   clip: {fileID: 8300000, guid: d2e6c160f65894821a88cff5cf0ae045, type: 3}
 --- !u!114 &2076731854
 MonoBehaviour:
@@ -48442,12 +48067,6 @@ MonoBehaviour:
   grab: {fileID: 2079356454}
   tearDistance: 0.25
   armDelay: 0.08
-  spawnHalves: 0
-  HalfPrefabA: {fileID: 0}
-  HalfPrefabB: {fileID: 0}
-  spawnOffset: 0.02
-  throwSpeed: 0.8
-  addRigidbodyIfMissing: 1
   clip: {fileID: 8300000, guid: d2e6c160f65894821a88cff5cf0ae045, type: 3}
 --- !u!114 &2079356453
 MonoBehaviour:
@@ -50308,12 +49927,6 @@ MonoBehaviour:
   grab: {fileID: 2143563770}
   tearDistance: 0.25
   armDelay: 0.08
-  spawnHalves: 0
-  HalfPrefabA: {fileID: 0}
-  HalfPrefabB: {fileID: 0}
-  spawnOffset: 0.02
-  throwSpeed: 0.8
-  addRigidbodyIfMissing: 1
   clip: {fileID: 8300000, guid: d2e6c160f65894821a88cff5cf0ae045, type: 3}
 --- !u!114 &2143563769
 MonoBehaviour:
@@ -50778,6 +50391,10 @@ PrefabInstance:
       propertyPath: m_LocalPosition.x
       value: 3.352
       objectReference: {fileID: 0}
+    - target: {fileID: 400541060474127704, guid: ce18fb1bfda024936973ca895c2667f2, type: 3}
+      propertyPath: destroyOriginal
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 920771031410391865, guid: ce18fb1bfda024936973ca895c2667f2, type: 3}
       propertyPath: m_LocalPosition.x
       value: -3.23
@@ -51176,6 +50793,14 @@ PrefabInstance:
     - target: {fileID: 6363707536336780837, guid: ce18fb1bfda024936973ca895c2667f2, type: 3}
       propertyPath: m_HorizontalAlignment
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6514812362661150424, guid: ce18fb1bfda024936973ca895c2667f2, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 7.854
+      objectReference: {fileID: 0}
+    - target: {fileID: 6514812362661150424, guid: ce18fb1bfda024936973ca895c2667f2, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -10.082
       objectReference: {fileID: 0}
     - target: {fileID: 6625197760985344343, guid: ce18fb1bfda024936973ca895c2667f2, type: 3}
       propertyPath: m_LocalScale.x
