@@ -58,6 +58,7 @@ public class KnifeCutter : MonoBehaviour
         var halfExtents = b.extents;
         var rot = bladeVolume.transform.rotation;
 
+        // Detect overlapping cuttable objects
         int count = Physics.OverlapBoxNonAlloc(center, halfExtents, _overlaps, rot, cuttableLayers, queryTriggerInteraction);
         var touchedThisFrame = new List<CuttableObject>(Mathf.Min(count, 16));
 
@@ -117,6 +118,7 @@ public class KnifeCutter : MonoBehaviour
         _hasLastBladePos = true;
     }
 
+     // Compute the speed of knife movement
     float KnifeSpeed(Vector3 bladeCenter)
     {
         if (_rb) return _rb.linearVelocity.magnitude;

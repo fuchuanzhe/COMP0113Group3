@@ -32,6 +32,7 @@ public class BgmPlaylistManager : MonoBehaviour
     void Awake()
     {
         if (!source) source = GetComponent<AudioSource>();
+        // Looping the background music
         source.loop = true;
         source.spatialBlend = 0f;
         source.playOnAwake = false;
@@ -61,17 +62,15 @@ public class BgmPlaylistManager : MonoBehaviour
 
     void PlaySong(SongType target)
     {
+
         if (currentSong == target && source != null && source.isPlaying)
             return;
-
         currentSong = target;
-
         if (source == null)
             return;
 
         source.Stop();
         source.clip = target == SongType.MainGame ? mainGameClip : waitingRoomClip;
-
         if (source.clip != null)
             source.Play();
     }

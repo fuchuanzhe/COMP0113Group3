@@ -44,6 +44,7 @@ public class LetterSpawner : MonoBehaviour
 
         if (cameraTransform)
         {
+            // Face the camera using yaw only
             Vector3 toCam = cameraTransform.position - spawnPos;
             toCam.y = 0f;
 
@@ -54,7 +55,6 @@ public class LetterSpawner : MonoBehaviour
         }
 
         rot *= Quaternion.Euler(0f, 180f, 0f);
-
         Vector3 basePos = spawnPos + Vector3.up * liftY;
 
         for (int i = 0; i < n; i++)

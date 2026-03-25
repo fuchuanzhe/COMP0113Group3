@@ -12,6 +12,7 @@ public class CuttableObject : MonoBehaviour
 
     void Awake()
     {
+        // Extract uppercase letters from object name
         word = Regex.Replace(gameObject.name.ToUpperInvariant(), "[^A-Z]", "");
     }
 

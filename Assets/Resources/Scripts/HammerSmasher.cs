@@ -51,6 +51,7 @@ public class HammerSmasher : MonoBehaviour
         var halfExtents = b.extents;
         var rot = headVolume.transform.rotation;
 
+        // Detect smashable objects overlapping with the head volume
         int count = Physics.OverlapBoxNonAlloc(center, halfExtents, _overlaps, rot, smashableLayers, queryTriggerInteraction);
         var currTouching = ListPool<SmashableObject>.Get();
 
@@ -70,6 +71,7 @@ public class HammerSmasher : MonoBehaviour
             float speed = HeadSpeed(center);
             if (speed < minHeadSpeed)
                 continue;
+            // Compute impact point
             Vector3 hitPoint = col.ClosestPoint(center);
 
             if (smashSound != null)
@@ -98,7 +100,8 @@ public class HammerSmasher : MonoBehaviour
         _lastHeadPos = headVolume.bounds.center;
         _hasLast = true;
     }
-
+    
+    // Compute the speed of hammer head movement
     float HeadSpeed(Vector3 headCenter)
     {
         if (_rb) return _rb.linearVelocity.magnitude;

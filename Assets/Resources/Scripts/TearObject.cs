@@ -23,6 +23,7 @@ public class TearObject : MonoBehaviour
     void Awake()
     {
         if (!grab) grab = GetComponent<UnityEngine.XR.Interaction.Toolkit.Interactables.XRGrabInteractable>();
+        // Extract uppercase letters from object name
         word = Regex.Replace(gameObject.name.ToUpperInvariant(), "[^A-Z]", "");
     }
 
@@ -61,12 +62,11 @@ public class TearObject : MonoBehaviour
         return t ? t.position : interactor.transform.position;
     }
 
-    void DoTear(
-        UnityEngine.XR.Interaction.Toolkit.Interactors.IXRSelectInteractor a,
-        UnityEngine.XR.Interaction.Toolkit.Interactors.IXRSelectInteractor b,
-        Vector3 posA,
-        Vector3 posB
-    )
+    // Tear the object apart
+    void DoTear(UnityEngine.XR.Interaction.Toolkit.Interactors.IXRSelectInteractor a,
+                UnityEngine.XR.Interaction.Toolkit.Interactors.IXRSelectInteractor b,
+                Vector3 posA,
+                Vector3 posB)
     {
         isTeared = true;
         tearCenter = (posA + posB) * 0.5f;

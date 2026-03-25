@@ -46,6 +46,7 @@ public class FireworkController : MonoBehaviour
     {
         if (explosion == null) return;
 
+        // Random color of firework
         Color chosenColor = fireworkGradient != null
             ? fireworkGradient.Evaluate(Random.value)
             : Random.ColorHSV(0f, 1f, 0.8f, 1f, 0.8f, 1f);
@@ -64,6 +65,7 @@ public class FireworkController : MonoBehaviour
         if (explosion != null)
             explosion.Play();
 
+        // Destroy the firework object after explosion with a delay
         Destroy(gameObject, destroyDelayAfterExplode);
     }
 }
