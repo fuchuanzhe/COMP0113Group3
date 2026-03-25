@@ -33,11 +33,6 @@ public class WordValidator : MonoBehaviour
                 }
             }
 
-            Debug.Log($"Dictionary Loaded! Count: {_dictionary.Count}");
-        }
-        else
-        {
-            Debug.LogError("Dictionary load failed: " + www.error);
         }
     }
 

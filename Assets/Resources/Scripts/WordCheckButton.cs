@@ -8,11 +8,10 @@ public class WordCheckButton : MonoBehaviour
     {
         if (wordScanManager == null)
         {
-            Debug.LogWarning("WordScanManager not assigned.");
+            // WordScanManager not assigned.
             return;
         }
 
-        Debug.Log("Word check triggered");
         wordScanManager.ScanWords();
     }
 }
