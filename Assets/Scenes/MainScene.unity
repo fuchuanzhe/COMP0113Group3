@@ -26928,7 +26928,7 @@ MonoBehaviour:
   scoreManager: {fileID: 476100037}
   player1FireworkSpawner: {fileID: 70787264}
   player2FireworkSpawner: {fileID: 932994645}
-  matchDuration: 300
+  matchDuration: 480
   targetScore: 100
   timerTextTeam1: {fileID: 261439564}
   timerTextTeam2: {fileID: 781946344}
