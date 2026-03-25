@@ -32,12 +32,6 @@ public class SceneObjectValidator : MonoBehaviour
                     _dictionary.Add(word.Trim().ToLower());
                 }
             }
-
-            Debug.Log($"Scene object dictionary loaded! Count: {_dictionary.Count}");
-        }
-        else
-        {
-            Debug.LogError("Scene object dictionary load failed: " + www.error);
         }
     }
 

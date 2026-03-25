@@ -52,7 +52,6 @@ public class GameManager : MonoBehaviour
                 remainingTime = m.remainingTime;
                 matchStarted = true;
                 UpdateTimerUI();
-                Debug.Log("Match started from network message.");
             }
         }
 
@@ -66,7 +65,6 @@ public class GameManager : MonoBehaviour
                 UpdateTimerUI();
 
                 ApplyWinnerResult(m.winner);
-                Debug.Log($"Match ended from network message. Winner = {m.winner}");
             }
         }
     }
@@ -136,8 +134,6 @@ public class GameManager : MonoBehaviour
         int p1 = scoreManager != null ? scoreManager.GetPlayer1Score() : 0;
         int p2 = scoreManager != null ? scoreManager.GetPlayer2Score() : 0;
 
-        Debug.Log($"Game Over! Player1={p1}, Player2={p2}");
-
         int winner = 0;
         if (p1 > p2) winner = 1;
         else if (p2 > p1) winner = 2;
@@ -167,8 +163,6 @@ public class GameManager : MonoBehaviour
         matchStarted = true;
         UpdateTimerUI();
 
-        Debug.Log("Match started!");
-
         context.SendJson(new Message(true, false, 0, remainingTime));
     }
 
@@ -176,11 +170,12 @@ public class GameManager : MonoBehaviour
     {
         return gameEnded;
     }
+
+    // show winner
     void ApplyWinnerResult(int winner)
     {
         if (winner == 1)
         {
-            Debug.Log("Player 1 wins!");
             if (resultText != null) resultText.text = "Player 1 Wins!";
             if(player.transform.position.z < 0 && winSound != null && loseSound != null)
             {
@@ -194,7 +189,6 @@ public class GameManager : MonoBehaviour
         }
         else if (winner == 2)
         {
-            Debug.Log("Player 2 wins!");
             if (resultText != null) resultText.text = "Player 2 Wins!";
             if(player.transform.position.z > 0 && winSound != null && loseSound != null)
             {
@@ -208,7 +202,6 @@ public class GameManager : MonoBehaviour
         }
         else
         {
-            Debug.Log("Draw!");
             if (resultText != null) resultText.text = "Draw!";
         }
     }

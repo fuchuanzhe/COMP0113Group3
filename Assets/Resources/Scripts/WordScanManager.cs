@@ -61,13 +61,13 @@ public class WordScanManager : MonoBehaviour
     {
         if (gameManager != null && gameManager.IsGameEnded())
         {
-            Debug.Log("Game already ended. Scan ignored.");
+            // Game already ended. Scan ignored.
             return;
         }
 
         if (tableZone == null || validator == null || sceneObjectValidator == null || detectionZone == null)
         {
-            Debug.LogWarning("WordScanManager: references not assigned.");
+            // WordScanManager: references not assigned.
             return;
         }
 
@@ -128,13 +128,7 @@ public class WordScanManager : MonoBehaviour
             {
                 cellMap.Add(cell, letter);
             }
-            else
-            {
-                Debug.LogWarning($"Duplicate letters found in same cell {cell}, ignoring extra one: {letter.name}");
-            }
         }
-
-        Debug.Log($"[WordScanManager] Letters inside grid: {cellMap.Count}");
 
         HashSet<LetterTile> processed = new HashSet<LetterTile>();
 
@@ -187,10 +181,9 @@ public class WordScanManager : MonoBehaviour
 
             string word = string.Concat(wordTiles.Select(t => t.GetLetter())).ToLower();
 
+            // scene objects
             if (sceneObjectValidator.CheckWord(word))
             {
-                Debug.Log($"<color=yellow>Scene object word:</color> {word}");
-
                 foreach (var tile in wordTiles)
                 {
                     tile.SetSceneObjectYellow();
@@ -206,10 +199,9 @@ public class WordScanManager : MonoBehaviour
                     AudioSource.PlayClipAtPoint(failSound, transform.position);
                 }
             }
+            // valid words
             else if (validator.CheckWord(word))
             {
-                Debug.Log($"<color=green>Valid word:</color> {word}");
-
                 int points = CalculatePoints(word);
 
                 if (scoreManager != null)
@@ -238,10 +230,9 @@ public class WordScanManager : MonoBehaviour
                     AudioSource.PlayClipAtPoint(successSound, transform.position);
                 }
             }
+            // invalid words
             else
             {
-                Debug.Log($"<color=red>Invalid word:</color> {word}");
-
                 foreach (var tile in wordTiles)
                 {
                     tile.SetInvalidRed();

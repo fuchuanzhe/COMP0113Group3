@@ -55,3 +55,7 @@ soda
 wine
 cocktail
 pizzabox
+word
+craft
+kitchen
+mania
