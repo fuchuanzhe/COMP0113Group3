@@ -2811,8 +2811,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BgmPlaylistManager
   source: {fileID: 105052437}
-  waitingRoomClip: {fileID: 8300000, guid: a78f74b5fcf27449abe20b9a52383279, type: 3}
-  mainGameClip: {fileID: 8300000, guid: 2ee5e2e3ac4b64a59824214626d0bb91, type: 3}
+  waitingRoomClip: {fileID: 8300000, guid: f4c011a4574db44dcb566ab8f5b5e1b6, type: 3}
+  mainGameClip: {fileID: 8300000, guid: 84c96305ae4924903b1f4f16f5e675cc, type: 3}
   playWaitingRoomOnStart: 1
 --- !u!1 &105940333
 GameObject:

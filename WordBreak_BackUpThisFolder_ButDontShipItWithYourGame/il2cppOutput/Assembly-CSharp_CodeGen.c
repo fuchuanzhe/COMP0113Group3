@@ -235,20 +235,6 @@ extern void TableSnapZone_Unmark_m0F25F968ECCA4B654D5CD8AA73CAF3CD2317FAF2 (void
 extern void TableSnapZone_OnDrawGizmosSelected_m86B14D90FA68209F53A57541B64134E6C2F8E0F6 (void);
 extern void TableSnapZone__ctor_m2082887F9BEC4582068E24D6F8AC28420B5B235D (void);
 extern void TableSnapZone_U3COnDrawGizmosSelectedU3Eg__OriginToWorldU7C26_0_mCF37949CF2113422C85CE234ECA7ED6E40AA21EF (void);
-extern void TearColliderSwitcher_Reset_mBF6BC540EB81268D5F8C9E0782E81097FC56A908 (void);
-extern void TearColliderSwitcher_Awake_mE34E0767F00261C2334DDCEDC7801DD6FD25A34D (void);
-extern void TearColliderSwitcher_OnEnable_m8AE873180ED8C97FA1BADE1837FC37AD68839003 (void);
-extern void TearColliderSwitcher_OnDisable_m3F38A047541497E394C4CA50D78786CD5E889D97 (void);
-extern void TearColliderSwitcher_SubscribeGrabEvents_m92D87D9D21A842BB2EC99C8707A32E2EB1423041 (void);
-extern void TearColliderSwitcher_UnsubscribeGrabEvents_mD73C6AEDC4D6675971A99DDCCAE948DC08B89208 (void);
-extern void TearColliderSwitcher_OnGrabEnter_m0030DB8F4057A181E30E2CB1E7D9936600C30742 (void);
-extern void TearColliderSwitcher_OnGrabExit_m1032FCB4E88BB8E067ADEA6207A5C8AB97B79E60 (void);
-extern void TearColliderSwitcher_ApplyNormalMode_mAA42FBF71DE41C274B309746490905EF7073F572 (void);
-extern void TearColliderSwitcher_ApplyGrabMode_m0DB6742F09CC0334502FADF60739C19D6119E711 (void);
-extern void TearColliderSwitcher_ApplyTearMode_m504B62905F3FFE735BAE651FF4F8B7F736CF0426 (void);
-extern void TearColliderSwitcher_SetNormalCollidersEnabled_m8D250C93E0B86985E886251E4A8F2BD613810D24 (void);
-extern void TearColliderSwitcher_HasNormalColliders_mF2233B2E4AF87C1F15F8F859FE0FECC165F1FC10 (void);
-extern void TearColliderSwitcher__ctor_m9B19B64132FECA59052D5F2EED493187F9548FEB (void);
 extern void TearObject_get_isTeared_m43F9C2F2C7DF17A6F8FBDDBB212948A863777959 (void);
 extern void TearObject_set_isTeared_m25B62A297D5EA698ADCA5676A6EB4ABC4134AE42 (void);
 extern void TearObject_get_tearCenter_m4C604DA94DBE476FD5A6D0B3E5197CF31B66429F (void);
@@ -284,7 +270,7 @@ extern void U3CLoadLocalDictionaryU3Ed__2_System_Collections_IEnumerator_Reset_m
 extern void U3CLoadLocalDictionaryU3Ed__2_System_Collections_IEnumerator_get_Current_mF1AC9350A43BFBC9D4A69336B71FF925408A4784 (void);
 extern void UnitySourceGeneratedAssemblyMonoScriptTypes_v1_Get_mBEB95BEB954BB63E9710BBC7AD5E78C4CB0A0033 (void);
 extern void UnitySourceGeneratedAssemblyMonoScriptTypes_v1__ctor_mE70FB23ACC1EA12ABC948AA22C2E78B2D0AA39B1 (void);
-static Il2CppMethodPointer s_methodPointers[283] = 
+static Il2CppMethodPointer s_methodPointers[269] = 
 {
 	AssignSeats_Start_m356359995EC02405407AA056466DA69551574EB6,
 	AssignSeats_GameStart_mABAD26CC92479977AF583FE12B7BABCF3EB416B9,
@@ -520,20 +506,6 @@ static Il2CppMethodPointer s_methodPointers[283] =
 	TableSnapZone_OnDrawGizmosSelected_m86B14D90FA68209F53A57541B64134E6C2F8E0F6,
 	TableSnapZone__ctor_m2082887F9BEC4582068E24D6F8AC28420B5B235D,
 	TableSnapZone_U3COnDrawGizmosSelectedU3Eg__OriginToWorldU7C26_0_mCF37949CF2113422C85CE234ECA7ED6E40AA21EF,
-	TearColliderSwitcher_Reset_mBF6BC540EB81268D5F8C9E0782E81097FC56A908,
-	TearColliderSwitcher_Awake_mE34E0767F00261C2334DDCEDC7801DD6FD25A34D,
-	TearColliderSwitcher_OnEnable_m8AE873180ED8C97FA1BADE1837FC37AD68839003,
-	TearColliderSwitcher_OnDisable_m3F38A047541497E394C4CA50D78786CD5E889D97,
-	TearColliderSwitcher_SubscribeGrabEvents_m92D87D9D21A842BB2EC99C8707A32E2EB1423041,
-	TearColliderSwitcher_UnsubscribeGrabEvents_mD73C6AEDC4D6675971A99DDCCAE948DC08B89208,
-	TearColliderSwitcher_OnGrabEnter_m0030DB8F4057A181E30E2CB1E7D9936600C30742,
-	TearColliderSwitcher_OnGrabExit_m1032FCB4E88BB8E067ADEA6207A5C8AB97B79E60,
-	TearColliderSwitcher_ApplyNormalMode_mAA42FBF71DE41C274B309746490905EF7073F572,
-	TearColliderSwitcher_ApplyGrabMode_m0DB6742F09CC0334502FADF60739C19D6119E711,
-	TearColliderSwitcher_ApplyTearMode_m504B62905F3FFE735BAE651FF4F8B7F736CF0426,
-	TearColliderSwitcher_SetNormalCollidersEnabled_m8D250C93E0B86985E886251E4A8F2BD613810D24,
-	TearColliderSwitcher_HasNormalColliders_mF2233B2E4AF87C1F15F8F859FE0FECC165F1FC10,
-	TearColliderSwitcher__ctor_m9B19B64132FECA59052D5F2EED493187F9548FEB,
 	TearObject_get_isTeared_m43F9C2F2C7DF17A6F8FBDDBB212948A863777959,
 	TearObject_set_isTeared_m25B62A297D5EA698ADCA5676A6EB4ABC4134AE42,
 	TearObject_get_tearCenter_m4C604DA94DBE476FD5A6D0B3E5197CF31B66429F,
@@ -587,7 +559,7 @@ static Il2CppTokenAdjustorThunkPair s_adjustorThunks[7] =
 	{ 0x060000C4, Message__ctor_m99540459A60C891E65502A4536F361625DE443AC_AdjustorThunk },
 	{ 0x060000DE, Message__ctor_m914D3F1A31D77B966BAFB22E29788FAC80BE134D_AdjustorThunk },
 };
-static const int32_t s_InvokerIndices[283] = 
+static const int32_t s_InvokerIndices[269] = 
 {
 	22162,
 	22162,
@@ -823,20 +795,6 @@ static const int32_t s_InvokerIndices[283] =
 	22162,
 	22162,
 	3749,
-	22162,
-	22162,
-	22162,
-	22162,
-	22162,
-	22162,
-	16964,
-	16964,
-	22162,
-	22162,
-	22162,
-	16710,
-	21645,
-	22162,
 	21645,
 	16710,
 	22151,
@@ -925,7 +883,7 @@ IL2CPP_EXTERN_C const Il2CppCodeGenModule g_AssemblyU2DCSharp_CodeGenModule;
 const Il2CppCodeGenModule g_AssemblyU2DCSharp_CodeGenModule = 
 {
 	"Assembly-CSharp.dll",
-	283,
+	269,
 	s_methodPointers,
 	7,
 	s_adjustorThunks,
